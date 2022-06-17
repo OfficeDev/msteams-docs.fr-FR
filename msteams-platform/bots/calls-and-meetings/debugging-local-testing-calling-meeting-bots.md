@@ -1,16 +1,15 @@
 ---
 title: Déboguer votre robot d’appel et de réunion localement
-description: Découvrez comment utiliser ngrok pour développer des appels et des bots de réunion en ligne sur votre PC local.
+description: Dans ce module, découvrez comment utiliser ngrok pour développer des appels et des bots de réunion en ligne sur votre PC local.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: tunnel ngrok de développement local
 ms.date: 11/18/2018
-ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 518d0b846737eca7f4c182dba032b2c85366cee6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757114"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143815"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Développer des bots d’appel et de réunion en ligne sur votre PC local
 

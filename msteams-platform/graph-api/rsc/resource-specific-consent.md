@@ -1,17 +1,16 @@
 ---
 title: Activer le consentement spécifique à la ressource dans Teams
-description: Décrit le consentement spécifique à la ressource dans Teams et comment en tirer parti.
-ms.localizationpriority: high
+description: Dans ce module, découvrez le consentement spécifique aux ressources dans Microsoft Teams et comment en tirer parti.
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: OAuth SSO d’autorisation teams Azure AD rsc Graph
-ms.openlocfilehash: 8a90d1280f94de099543d879028a84d538c588ac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f311723aa6bdb9fc95207169b7ab55434d246509
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111506"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144354"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 

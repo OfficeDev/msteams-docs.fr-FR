@@ -1,15 +1,14 @@
 ---
 title: Choix d’une configuration pour tester et déboguer votre application
-description: Décrit les options de test et de débogage des applications Microsoft Teams dans un environnement local et hébergé dans le cloud.
-keywords: les équipes exécutent des applications de débogage sur un hôte hébergé dans le cloud local
+description: Dans ce module, découvrez les options de test et de débogage Microsoft Teams applications dans un environnement hébergé localement et dans le cloud.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 38259c31f9c6d29ffae22217a17ccf173b5ced59
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757009"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143416"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Choisissez une configuration pour tester et déboguer votre application Microsoft Teams
 
@@ -59,10 +58,12 @@ Pour utiliser ngrok dans votre projet en fonction des fonctionnalités que vous 
 Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point de terminaison de messagerie du bot pour utiliser ce nouveau point de terminaison ngrok. Par exemple : `https://2d1224fb.ngrok.io/api/messages`. Vous pouvez vérifier que ngrok fonctionne en testant la réponse du bot dans la fenêtre de conversation Test du portail Bot Framework. Là encore, comme l’émulateur, ce test ne vous permet pas d’accéder à Teams fonctionnalité spécifique.
 
 > [!NOTE]
+>
 > * Pour mettre à jour le point de terminaison de messagerie d’un bot, vous devez utiliser le Bot Framework. Sélectionnez votre bot dans [votre liste de bots dans Bot Framework](https://dev.botframework.com/bots). Vous n’avez pas besoin de migrer votre bot vers Microsoft Azure. Vous pouvez également mettre à jour votre point de terminaison de messagerie via [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 > [!WARNING]
-> * Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
+>
+> * Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
 
 ## <a name="cloud-hosted"></a>Hébergé dans le cloud
 

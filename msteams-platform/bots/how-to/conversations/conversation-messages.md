@@ -1,16 +1,15 @@
 ---
 title: Messages dans les conversations des robots
-description: Décrit les façons d’avoir une conversation avec un bot Microsoft Teams. Découvrez Teams données de canal, la notification à votre message, les messages image, les cartes adaptatives à l’aide d’exemples de code.
+description: Découvrez comment avoir une conversation avec un bot Teams et Teams données de canal, notification à votre message, messages image, cartes adaptatives à l’aide d’exemples de code
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033014"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142450"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -242,10 +241,10 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 
 | Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
-| Images  | ✔                | ✔                | Maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
-| Cartes     | ✖                | ✔                | Consultez la [référence de carte Teams](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes prises en charge. |
-| Emojis    | ✔                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, comme U+1F600 pour le visage grinçant. |
+| Texte enrichi  | ✔️                | ✔️                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
+| Images  | ✔️                | ✔️                | Maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
+| Cartes     | ❌                | ✔️                | Consultez la [référence de carte Teams](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes prises en charge. |
+| Emojis    | ✔️                | ✔️                | Teams prend actuellement en charge les emojis via UTF-16, comme U+1F600 pour le visage grinçant. |
 
 ## <a name="notifications-to-your-message"></a>Notifications à votre message
 
@@ -335,7 +334,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -387,7 +386,7 @@ Le message d’achèvement du formulaire s’affiche dans les cartes adaptatives
      Vous pouvez sélectionner **Fermer** ou changer de conversation pour ignorer le message.
 
      Si vous ne souhaitez pas afficher le message de réussite, définissez l’attribut `hide` `true` sur la `msTeams` `feedback` propriété. Voici un exemple :
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -406,7 +405,6 @@ Le message d’achèvement du formulaire s’affiche dans les cartes adaptatives
             ]
         } 
      ```
-    
 
 Pour plus d’informations sur les cartes et les cartes dans les bots, consultez la documentation sur les [cartes](~/task-modules-and-cards/what-are-cards.md).
 

@@ -1,16 +1,16 @@
 ---
 title: Recherche en saisie semi-automatique dans les Cartes adaptatives
 author: Rajeshwari-v
-description: Décrit la recherche en tête de type avec le contrôle Input.ChoiceSet dans les cartes adaptatives
+description: Dans ce module, découvrez ce qu’est la recherche en tête de type dans les cartes adaptatives avec le contrôle Input.ChoiceSet et implémentez la recherche de typeahead
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 205da5ca0171182047ccd06f7f2926f731ceb94d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103438"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143892"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Recherche en saisie semi-automatique dans les Cartes adaptatives
 
@@ -42,7 +42,7 @@ La recherche dynamique en tête de type est utile pour rechercher et sélectionn
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-Les clients mobiles Android et iOS prennent en charge la recherche en tête de type dans les cartes adaptatives.
+Android et les clients mobiles iOS prennent en charge la recherche en tête de type dans les cartes adaptatives.
 
 **Scénario**
 

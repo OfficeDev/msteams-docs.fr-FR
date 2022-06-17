@@ -1,17 +1,17 @@
 ---
 title: manifeste d’application Teams dans Teams Toolkit
 author: zyxiaoyuer
-description: manifeste d’application Teams
+description: Dans ce module, découvrez comment modifier, afficher un aperçu et personnaliser Teams manifeste d’application dans l’environnement différent.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123653"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143871"
 ---
 # <a name="edit-teams-app-manifest"></a>Modifier Teams manifeste d’application
 
@@ -33,7 +33,7 @@ Vous pouvez afficher un aperçu du fichier manifeste dans des environnements loc
 * [Fichier manifeste d’aperçu dans un environnement local](#preview-manifest-file-in-local-environment)
 * [Fichier manifeste d’aperçu dans un environnement distant](#preview-manifest-file-in-remote-environment)
 
-### <a name="preview-manifest-file-in-local-environment"></a>Fichier manifeste d’aperçu dans un environnement local
+## <a name="preview-manifest-file-in-local-environment"></a>Fichier manifeste d’aperçu dans un environnement local
 
 Pour afficher un aperçu du fichier manifeste dans un environnement local, vous pouvez appuyer sur **F5** pour exécuter le débogage local. Il génère les paramètres locaux par défaut pour vous, puis le package d’application et l’aperçu du manifeste sont générés sous le dossier `build/appPackage`.
 
@@ -47,7 +47,7 @@ L’aperçu local s’affiche comme indiqué dans l’image :
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Aperçu":::
 
-### <a name="preview-manifest-file-in-remote-environment"></a>Fichier manifeste d’aperçu dans un environnement distant
+## <a name="preview-manifest-file-in-remote-environment"></a>Fichier manifeste d’aperçu dans un environnement distant
 
 **Pour afficher un aperçu du fichier manifeste dans un environnement distant**
 
@@ -112,7 +112,7 @@ Vous pouvez également déclencher **Teams : Mettre à jour le manifeste pour Te
 > [!NOTE]
 > La modification est mise à jour vers le portail de développement. Toutes les mises à jour manuelles dans le portail de développement sont remplacées.
 
-Si le fichier manifeste est obsolète en raison d’une modification du fichier de configuration ou d’un changement de modèle, sélectionnez l’une des actions suivantes :
+Si le fichier manifeste est obsolète en raison d’un changement de fichier de configuration ou d’un changement de modèle, sélectionnez l’une des actions suivantes :
 
 * **Aperçu uniquement** : le fichier manifeste local est remplacé en fonction de la configuration actuelle.
 * **Aperçu et mise à jour** : le fichier manifeste local est remplacé en fonction de la configuration actuelle et mis à jour vers Teams plateforme.
@@ -150,7 +150,7 @@ La liste suivante fournit les espaces réservés pris en charge dans `manifest.t
      }
      ```
 
-2. Vous pouvez accéder au fichier de configuration en sélectionnant l’un des espaces réservés de configuration **Go to config file** or **View the state file** in `manifest.template.json`.
+2. Vous pouvez accéder au fichier de configuration en sélectionnant l’un des espaces réservés de configuration **. Accédez au fichier de configuration** ou **affichez le fichier d’état** dans `manifest.template.json`.
 
 ### <a name="validate-manifest"></a>Valider le manifeste
 

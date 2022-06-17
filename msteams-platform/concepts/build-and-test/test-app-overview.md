@@ -1,15 +1,14 @@
 ---
 title: Vue d’ensemble de Tester votre application
-description: Décrit le processus de test et de débogage de votre application personnalisée Teams dans Microsoft 365
+description: Dans ce module, découvrez le processus de test et de débogage de votre application personnalisée Teams dans Microsoft 365 et ajoutez des données de test à votre locataire Microsoft 365
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configurer le client Microsoft 365 Teams qui charge l’application de test
-ms.openlocfilehash: 98c00ece54e1654570556bac122e6760b283b73f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111527"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144382"
 ---
 # <a name="test-your-app"></a>Tester votre application
 

@@ -1,14 +1,14 @@
 ---
 title: Travailler avec les actions universelles pour les cartes adaptatives
-description: Apprenez à utiliser les actions universelles pour Cartes adaptatives, notamment le schéma pour universalactions pour les cartes adaptatives, le modèle d’actualisation et la compatibilité descendante à l’aide d’exemples de code.
+description: Apprenez à utiliser les actions universelles pour les cartes adaptatives, notamment le schéma pour universalactions pour les cartes adaptatives, le modèle d’actualisation et la compatibilité descendante
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 768458b1bd7cad77288d1e8e0be5b231fd331891
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 17dd7fd611c593c3f5de0237e0aa61885ac630c0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110273"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143878"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Travailler avec les actions universelles pour les cartes adaptatives
 
@@ -25,7 +25,7 @@ Les actions universelles pour Cartes adaptatives permettent d’implémenter des
 2. Ajoutez une clause `refresh` à votre carte adaptative, si vous souhaitez utiliser le modèle d’actualisation automatique ou si votre scénario nécessite des vues spécifiques à l’utilisateur.
 
     >[!NOTE]
-    > Spécifiez la propriété `userIds` à identifier, quels utilisateurs reçoivent les mises à jour automatiques.
+    > Spécifiez la `userIds` propriété pour identifier les utilisateurs qui reçoivent des mises à jour automatiques.
 
 3. Gérez `adaptiveCard/action` appeler des requêtes dans votre bot.
 4. Utilisez le contexte de la demande d’appel pour répondre avec des cartes créées pour un utilisateur.
@@ -68,7 +68,7 @@ Voici les fonctionnalités des UserIds en cours d’actualisation :
 
 * UserIds est un tableau de MRIS utilisateur, qui fait partie de la propriété `refresh` dans Cartes adaptatives.
 
-* Si la propriété de liste `userIds` est spécifiée comme `userIds: []` dans la section Actualiser de la carte, la carte n’est pas automatiquement actualisée. Au lieu de cela, une option **Actualiser la carte** s’affiche pour l’utilisateur dans le menu à trois points sur le web ou le Bureau, et dans le menu contextuel longue pression sur mobile, c’est-à-dire Android ou iOS pour actualiser manuellement la carte.
+* Si la propriété de liste `userIds` est spécifiée comme `userIds: []` dans la section Actualiser de la carte, la carte n’est pas automatiquement actualisée. Au lieu de cela, une option **Actualiser la carte** s’affiche pour l’utilisateur dans le menu à points triples de Teams client web ou de bureau et dans le menu contextuel longue pression dans Teams mobile, c’est-à-dire Android ou iOS pour actualiser manuellement la carte. Vous pouvez également choisir d’ignorer `userIds` complètement la propriété d’actualisation au cas où le scénario impliquerait <=60 membres dans Teams conversations ou canaux de groupe. Le client Teams appelle automatiquement les appels d’actualisation pour tous les utilisateurs si le groupe ou le canal a <=60 utilisateurs.
 
 * La propriété UserIds est ajoutée, car les canaux dans Teams peuvent inclure un grand nombre de membres. Si tous les membres consultent le canal en même temps, une actualisation automatique inconditionnelle entraîne de nombreux appels simultanés au bot. La propriété `userIds` doit toujours être incluse pour identifier les utilisateurs qui doivent recevoir une actualisation automatique avec un maximum de *60 (soixante) MRI utilisateur*.
 
@@ -116,7 +116,7 @@ Pour plus d’informations, voir [Considérations relatives à la compatibilité
 |Exemple de nom | Description | . NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot de traiteur Teams | Créez un bot qui accepte la commande de nourriture à l’aide de Cartes adaptatives. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| N’est pas encore disponible. |
-| Flux de travail séquentiels Cartes adaptatives | Montrez comment implémenter des flux de travail séquentiels, des vues spécifiques à l’utilisateur et des Cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Flux de travail séquentiels Cartes adaptatives | Montrez comment implémenter des flux de travail séquentiels, des vues spécifiques à l’utilisateur et des Cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Affichage](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) .|
 
 ## <a name="see-also"></a>Voir aussi
 

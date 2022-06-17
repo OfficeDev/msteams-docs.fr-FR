@@ -1,23 +1,23 @@
 ---
 title: Collaborer sur Project TeamsFx à l’aide de Teams Toolkit
 author: yanjiang
-description: Collaborer sur Project TeamsFx à l’aide de Teams Toolkit
+description: Dans cet article, découvrez comment collaborer sur TeamsFx Project à l’aide de Teams Toolkit et collaborer avec d’autres développeurs.
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 099820252fd83a2d916e8d61f3b83b63291695e9
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0f81990603b3e0275a057c489d7fac44ee0127cc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124017"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142058"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Collaborer sur un projet Teams à l'aide de Teams Toolkit
 
 Plusieurs développeurs peuvent collaborer pour déboguer, approvisionner et déployer pour le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations appropriées pour Teams application et Microsoft Azure Active Directory (Azure AD). Teams Toolkit prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs au projet TeamsFx à déboguer, approvisionner et déployer le même projet TeamsFx.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 * Abonnement Microsoft 365
 * Azure avec un abonnement valide

@@ -1,16 +1,15 @@
 ---
 title: Envoi et réception de fichiers à partir d’un bot
-description: Découvrez comment envoyer et recevoir des fichiers via le bot à l’aide d’API Graph pour les étendues personnelles, de canal et de groupchat. Utilisez Teams API de bot à l’aide d’exemples de code basés sur le Kit de développement logiciel (SDK) Bot Framework v3.
-keywords: équipes bots fichiers envoyer recevoir
+description: Découvrez comment envoyer et recevoir des fichiers via le bot à l’aide d’API Graph pour les étendues de conversation personnelle, de canal et de groupe.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755901"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143367"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Envoyez et recevez des fichiers à travers votre bot
 
@@ -165,7 +164,7 @@ De même, si l’utilisateur refuse le fichier, votre bot reçoit l’événemen
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Notification à l’utilisateur d’un fichier chargé
 
-Après avoir chargé un fichier dans le OneDrive de l’utilisateur, que vous utilisiez le mécanisme décrit ci-dessus ou OneDrive API déléguées par l’utilisateur, vous devez envoyer un message de confirmation à l’utilisateur. Ce message doit contenir une pièce jointe `FileCard` sur laquelle l'utilisateur peut cliquer, soit pour la prévisualiser, soit pour l'ouvrir dans OneDrive, soit pour la télécharger localement.
+Après avoir chargé un fichier dans le OneDrive de l’utilisateur, que vous utilisiez le mécanisme décrit ci-dessus ou OneDrive API déléguées par l’utilisateur, vous devez envoyer un message de confirmation à l’utilisateur. Ce message doit contenir une `FileCard` pièce jointe que l’utilisateur peut sélectionner pour l’afficher en préversion, l’ouvrir dans OneDrive ou le télécharger localement.
 
 ```json
 {

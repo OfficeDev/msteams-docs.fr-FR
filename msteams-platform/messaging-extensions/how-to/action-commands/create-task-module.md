@@ -1,16 +1,16 @@
 ---
 title: Créer et envoyer le module de tâches
 author: surbhigupta
-description: Apprenez à gérer l'action initiale d'invocation et à répondre avec un module de tâche à partir d'une commande d'extension de messagerie d'action à l'aide d'exemples de code et d'échantillons.
+description: Dans ce module, découvrez comment gérer l’action d’appel initiale et répondre avec un module de tâche à partir d’une commande d’extension de messagerie d’action
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 207355a797b6a52caad634981208c9314ea38401
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: de592d2d37beb07d493d5a004fa94b6ae815bff6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297000"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143171"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 

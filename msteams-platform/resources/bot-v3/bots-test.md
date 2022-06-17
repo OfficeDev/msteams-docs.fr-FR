@@ -1,16 +1,15 @@
 ---
 title: Tester et déboguer votre bot
-description: Cet article explique comment tester des bots dans Microsoft Teams
-keywords: tests des bots teams
+description: Dans cet article, vous saurez comment tester et déboguer vos bots dans Microsoft Teams et tester votre bot sans le charger dans Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123453"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143696"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Tester et déboguer votre bot Microsoft Teams
 
@@ -26,7 +25,7 @@ Il existe deux méthodes pour charger votre application. Vous pouvez utiliser [A
 
 ## <a name="debug-your-bot-locally"></a>Déboguer votre bot localement
 
-Si vous hébergez votre bot localement pendant le développement, vous devez utiliser un service de tunneling comme [ngrok](https://ngrok.com/) afin de tester votre bot. Une fois que vous avez téléchargé et installé ngrok, exécutez la commande ci-dessous pour démarrer le service de tunneling. Vous devrez peut-être ajouter ngrok à votre chemin d’accès.
+Si vous hébergez votre bot localement pendant le développement, vous devez utiliser un service de tunneling comme [ngrok](https://ngrok.com/) pour tester votre bot. Une fois que vous avez téléchargé et installé ngrok, exécutez la commande ci-dessous pour démarrer le service de tunneling. Vous devrez peut-être ajouter ngrok à votre chemin d’accès.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -70,7 +69,7 @@ Votre bot recevra l’événement `conversationUpdate` comme les bots ajoutés �
 
 ## <a name="blocking-a-bot-in-personal-chat"></a>Blocage d’un bot dans une conversation personnelle
 
-Notez que les utilisateurs peuvent choisir d’empêcher votre bot d’envoyer des messages de conversation personnels. Ils peuvent activer/désactiver cette option en cliquant avec le bouton droit sur votre bot dans le canal de conversation et en choisissant **bloquer la conversation du bot**. Cela signifie que vos bots continueront d’envoyer des messages, mais que l’utilisateur ne recevra pas ces messages.
+Les utilisateurs peuvent choisir d’empêcher votre bot d’envoyer des messages de conversation personnels. Ils peuvent activer/désactiver cette option en cliquant avec le bouton droit sur votre bot dans le canal de conversation et en choisissant **bloquer la conversation du bot**. Cela signifie que vos bots continueront d’envoyer des messages, mais que l’utilisateur ne recevra pas ces messages.
 
   :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blocage d’un bot"border="true":::
 
@@ -86,7 +85,7 @@ Pour arrêter votre bot de recevoir des messages, accédez à votre tableau de b
 
 ## <a name="deleting-a-bot-from-teams"></a>Suppression d’un bot de Teams
 
-Pour supprimer complètement votre bot de Teams, accédez à votre tableau de bord du bot et modifiez le canal Microsoft Teams. Choisissez le bouton **Supprimer** en bas. Cela empêche les utilisateurs de découvrir, d’ajouter ou d’interagir avec votre bot. Notez que cela ne supprime pas le bot des instances Teams d’autres utilisateurs, même s’il cessera également de fonctionner pour eux.
+Pour supprimer complètement votre bot de Teams, accédez à votre tableau de bord du bot et modifiez le canal Microsoft Teams. Choisissez le bouton **Supprimer** en bas. Cela empêche les utilisateurs de découvrir, d’ajouter ou d’interagir avec votre bot. Cela ne supprime pas le bot des instances Teams d’autres utilisateurs, bien qu’il cesse également de fonctionner pour eux.
 
 ## <a name="removing-your-bot-from-appsource"></a>Suppression de votre bot d’AppSource
 

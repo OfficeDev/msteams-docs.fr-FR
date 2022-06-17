@@ -5,24 +5,23 @@ description: Découvrez comment concevoir des applications dans Teams réunions 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: Étape de réunion partagée du modèle de kit d’interface utilisateur dans la réunion
-ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122998"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142681"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
 Vous pouvez créer des applications pour rendre les réunions plus productives. Par exemple, demandez aux personnes de répondre à une enquête pendant une réunion ou d’envoyer un rappel rapide qui n’interrompt pas le flux de la réunion.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
 Vous trouverez des instructions de conception plus complètes, notamment des éléments que vous pouvez récupérer et modifier en fonction des besoins, dans le kit d’interface utilisateur Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Ajouter une extension de réunion
 
@@ -187,11 +186,11 @@ La taille des boîtes de dialogue en réunion peut varier pour tenir compte de d
 
 Vous pouvez autoriser les utilisateurs à partager et à interagir avec tout ou partie du contenu de votre application pendant la phase de réunion. Voici des exemples de la façon dont les utilisateurs peuvent utiliser cette fonctionnalité lors d’une réunion :
 
-* Modification d’un document
+* Modification d’un document.
 * Tableau blanc
-* Examen d’un tableau de bord
-* Regarder une vidéo
-* Jouer à un jeu
+* Examen d’un tableau de bord.
+* Regarder une vidéo.
+* Jouer à un jeu.
 
 Les applications partagées dans la phase de réunion occupent le même espace qu’un écran partagé. La scène se réoriente également pour tous les participants à la réunion.
 

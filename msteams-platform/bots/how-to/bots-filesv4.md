@@ -1,16 +1,15 @@
 ---
 title: Envoyez et recevez des fichiers par le biais du robot
-description: Apprenez à envoyer et à recevoir des fichiers par le biais du robot en utilisant les API graphiques pour les scopes personnels, de canal et de discussion de groupe. Utilisez les API des robots Teams à l'aide d'échantillons de code basés sur le SDK v4 du cadre des robots.
-keywords: équipes robots fichiers envoyer recevoir
+description: Apprenez à envoyer et à recevoir des fichiers par le biais du robot en utilisant les API graphiques pour les scopes personnels, de canal et de discussion de groupe.
 ms.date: 05/20/2019
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 102bdeb2cd05882266299f7962a6b69b1ecfa37c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111212"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142926"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyez et recevez des fichiers par le biais du robot
 

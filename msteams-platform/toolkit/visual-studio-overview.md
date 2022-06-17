@@ -1,17 +1,16 @@
 ---
 title: Créer des applications avec le Teams Toolkit et Visual Studio
-description: Commencez à créer de superbes applications personnalisées directement dans Visual Studio avec le Microsoft Teams Toolkit. Apprenez à configurer votre application dans Visual Studio, à la valider et à la publier à partir de Visual Studio et du Developer Portal.
-keywords: kit d'outils de visual studio pour les équipes
+description: Découvrez comment créer des applications personnalisées directement dans Visual Studio avec Teams Toolkit et comment configurer votre application dans Visual Studio, valider votre application, etc.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: aa7fdaad1d56966031eb13b6b05f145c8e734988
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756456"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142044"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Extension de kit de ressources Teams pour Visual Studio
 

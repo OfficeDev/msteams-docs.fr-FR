@@ -1,16 +1,16 @@
 ---
 title: Processus de conception des applications
 author: heath-hamilton
-description: Obtenez une idée générale de comment et quand vous pouvez utiliser les outils et ressources Microsoft pour concevoir une application Microsoft Teams efficace.
+description: Découvrez comment et quand vous pouvez utiliser les outils et ressources Microsoft pour concevoir une application Microsoft Teams efficace.
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297218"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144375"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processus de conception des applications Microsoft Teams
 

@@ -1,17 +1,16 @@
 ---
 title: Concevoir votre application - Comprendre la structure de l’application
-description: Découvrez ce que vous pouvez et ne pouvez pas personnaliser dans Microsoft Teams lors de la conception de votre application.
+description: Dans ce module, découvrez ce que vous pouvez et ne pouvez pas personnaliser dans Microsoft Teams lors de la conception de votre structure d’application.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: extensions de message de conversation de canal filaire bureau mobile
-ms.openlocfilehash: 5bda408a015c646f993fe2c70efa0b7904b64842
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111380"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144396"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprendre la structure de l’application Microsoft Teams
 

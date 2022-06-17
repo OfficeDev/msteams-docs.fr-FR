@@ -1,15 +1,14 @@
 ---
 title: Appels multimédias en temps réel et réunions en ligne avec Microsoft Teams
-description: Comprendre les concepts clés de la création d’un bot qui peut effectuer des appels audio et vidéo en temps réel et des réunions en ligne. En savoir plus sur les sessions multimédias, la fréquence d’images, le format audio/vidéo et la référence aux ressources du développeur
+description: Découvrez les concepts clés de la création d’un bot qui peut effectuer des appels audio et vidéo en temps réel et des réunions en ligne.
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: diffusion audio vidéo en continu audio/vidéo appelant un média en temps réel hébergé par une application multimédia hébergée par un service multimédia
-ms.openlocfilehash: 0e5343567be3843c457885fcf506446b20b6dcf7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b1ff14a0229483312c0de6fdb33836ee205f1e14
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111989"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143787"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Appels et réunions multimédias en temps réel avec Microsoft Teams
 

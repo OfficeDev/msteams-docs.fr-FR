@@ -1,15 +1,15 @@
 ---
 title: Cartes et modules de tâche
-description: Découvrez les types de cartes pris en charge dans les bots pour Teams, telles que les cartes adaptatives, les bannières, les cartes miniatures et bien plus encore. Découvrez les actions de carte et l’appel de modules de tâche dans des canaux, des bots ou des liens profonds.
+description: Découvrez les types de cartes prises en charge dans les bots pour Teams, telles que les cartes adaptatives, de héros et de miniatures, ainsi que ses actions.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d68e45608d445e30a4d6b5ea8f5b662cfc22b116
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 4f2f964307c4cc8dbd3033b52af88a9b2c38d474
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756575"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143934"
 ---
 # <a name="cards-and-task-modules"></a>Cartes et modules de tâche
 
@@ -34,9 +34,9 @@ Vous pouvez mettre en forme le texte d’une carte à l’aide d’un sous-ensem
 
 Vous pouvez ajouter et répondre aux actions de carte qui effectuent l’action suivante :
 
-* Ouvrir une URL
-* Envoyer des messages et une charge utile au bot
-* Lancer le flux OAuth
+* Ouvrez une URL.
+* Envoyer des messages et une charge utile au bot.
+* Lancer le flux OAuth.
 
 Vous pouvez fournir une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) au sein d’un jeu de données volumineux à l’aide du contrôle type-ahead dans les cartes adaptatives et effectuer une recherche statique type-ahead dans un nombre limité de choix. Invoke the task modules in channel or personal tabs, bots, or deep links. L’expérience de votre utilisateur pour tous les flux de travail qui nécessite une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir de bots Teams en utilisant des boutons sur les cartes adaptatives et les cartes Bot Framework.
 

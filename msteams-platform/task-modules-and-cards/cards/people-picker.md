@@ -1,17 +1,16 @@
 ---
 title: Sélectionneur de personnes dans les Cartes adaptatives
-description: Décrit comment utiliser le contrôle Sélecteur de personnes dans les cartes adaptatives
+description: Dans ce module, découvrez comment utiliser le contrôle Sélecteur de personnes dans les cartes adaptatives, ses scénarios et implémenter le sélecteur de personnes.
 localization_priority: Medium
-keywords: Sélecteur de personnes cartes adaptatives
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111632"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144165"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Sélectionneur de personnes dans les Cartes adaptatives
 
@@ -59,9 +58,9 @@ L’image suivante montre le scénario de réaffectation :
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
 > [!NOTE]
-> Actuellement, cette fonctionnalité est disponible en [préversion publique des développeurs](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) uniquement.
+> Actuellement, cette fonctionnalité est disponible dans [préversion publique des développeurs](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) uniquement.
 
-Les clients mobiles Android et iOS prennent en charge le sélecteur de personnes dans les cartes adaptatives. Vous pouvez utiliser le sélecteur de personnes dans le mobile pour rechercher et sélectionner un utilisateur afin d’améliorer l’expérience utilisateur. L’expérience de recherche est similaire à toute autre expérience de sélection d’utilisateur dans le mobile.
+Android et les clients mobiles iOS prennent en charge people picker dans les cartes adaptatives. Vous pouvez utiliser le sélecteur de personnes dans le mobile pour rechercher et sélectionner un utilisateur afin d’améliorer l’expérience utilisateur. L’expérience de recherche est similaire à toute autre expérience de sélection d’utilisateur dans le mobile.
 
 ### <a name="reassignment-scenario-example"></a>Exemple de scénario de réaffectation
 

@@ -1,16 +1,15 @@
 ---
 title: Exigences et considérations relatives aux bots multimédias hébergés par des applications
-description: Comprendre les exigences et considérations importantes, ainsi que les considérations relatives à l’extensibilité et aux performances liées à la création de bots multimédias hébergés par des applications pour Microsoft Teams à l’aide d’exemples de code et d’exemples.
+description: Découvrez les exigences et considérations importantes, ainsi que les considérations relatives à l’extensibilité et aux performances liées à la création de bots multimédias hébergés par l’application pour Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: machine virtuelle Windows Server Azure multimédia hébergée par une application
 ms.date: 11/16/2018
-ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756610"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142485"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Exigences et considérations relatives aux bots multimédias hébergés par des applications
 

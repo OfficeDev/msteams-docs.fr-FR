@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 2e00991f42b85e0e053fd94e68298c819a14a730
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: dc987718233801a6855fd534d561fe2f3d964aa7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124003"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143297"
 ---
 # <a name="add-api-connection-to-teams-app"></a>Ajouter une connexion d’API à l’application Teams
 
@@ -94,7 +94,7 @@ La commande de base de cette fonctionnalité est `teamsfx add api-connection [au
 
 2. Ajouter `@microsoft/teamsfx` un package à `package.json`. Le package prend en charge les méthodes d’authentification d’API courantes.
 
-3. Ajoutez des variables d’environnement à `.env.teamsfx.local`. Il s’agit des configurations pour le type d’authentification sélectionné. Le code généré lit les valeurs des variables d’environnement.
+3. Ajoutez des variables d’environnement à `.env.teamsfx.local`. Ce sont les configurations pour le type d’authentification sélectionné. Le code généré lit les valeurs des variables d’environnement.
 
 ## <a name="test-api-connection-in-local-environment"></a>Tester la connexion d’API dans un environnement local
 

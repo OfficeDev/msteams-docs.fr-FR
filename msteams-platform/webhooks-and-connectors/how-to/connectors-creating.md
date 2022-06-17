@@ -1,17 +1,16 @@
 ---
 title: Créer des connecteurs Office 365
 author: laujan
-description: Décrit comment bien démarrer avec les Connecteurs Office 365 dans Microsoft Teams
-keywords: connecteur Office365 teams
+description: Dans ce module, découvrez comment bien démarrer avec les connecteurs Office 365 et ajouter un connecteur à Teams application dans Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 2d711821d2b76b4cc2fd93a6d28cd5061129222e
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 53f5f6d9f360c465175b18d8b1b5eab9020d3ccf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032951"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143556"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 

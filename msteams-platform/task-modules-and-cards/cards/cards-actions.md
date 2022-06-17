@@ -1,15 +1,14 @@
 ---
 title: Ajouter des actions de carte dans un bot
-description: Décrit les actions de carte dans Microsoft Teams et comment les utiliser dans vos bots
+description: Dans ce module, découvrez les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: actions de cartes de bots teams
-ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756484"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144172"
 ---
 # <a name="card-actions"></a>Actions de carte
 

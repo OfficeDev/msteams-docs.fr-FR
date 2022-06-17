@@ -1,15 +1,14 @@
 ---
 title: Authentification en mode silencieux
-description: Décrit l’authentification silencieuse, l’authentification unique Azure AD pour les onglets
+description: Dans ce module, découvrez comment effectuer l’authentification silencieuse, l’authentification unique et Azure AD pour les onglets et comment il fonctionne
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Onglet Azure AD silencieux de l’authentification unique Teams
-ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033021"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144242"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 

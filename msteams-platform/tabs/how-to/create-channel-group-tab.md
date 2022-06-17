@@ -1,17 +1,17 @@
 ---
 title: Créer un canal ou un onglet de groupe
 author: laujan
-description: Guide de démarrage rapide sur la création d’un canal et d’un onglet de groupe avec yeoman Generator pour Microsoft Teams, y compris l’examen du code source avec des exemples de code.
+description: Dans ce module, découvrez comment créer un canal et un onglet de groupe avec le générateur Yeoman pour Microsoft Teams, notamment en examinant le code source avec des exemples de code.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672949"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142674"
 ---
 # <a name="channel-or-group-tab"></a>Onglets de canal ou de groupe
 
@@ -664,7 +664,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [onglets Teams](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)

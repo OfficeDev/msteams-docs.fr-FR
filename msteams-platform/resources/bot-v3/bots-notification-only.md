@@ -1,25 +1,24 @@
 ---
 title: Bots avec notification seulement
-description: Décrit les bots de notification uniquement dans Microsoft Teams
-keywords: notification des bots teams
+description: Dans ce module, découvrez les bots de notification uniquement dans Microsoft Teams, le manifeste de l’application et ses meilleures pratiques et limitations
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 1ee009fb76a52bcebdd3fe24c7a672f1ed455b42
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 547ef73cfd036efe566afe15e4f50701a275c2cd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111478"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144298"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Bots de notification uniquement dans Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Si le seul objectif de votre bot est de remettre une notification aux utilisateurs et qu’il n’est pas conversationnel, vous pouvez activer le champ `isNotificationOnly` dans le manifeste de votre application. Cette action génère les modifications suivantes :
+Si le seul objectif de votre bot est de fournir une notification aux utilisateurs et qu’il n’est pas conversationnel, vous pouvez activer le champ dans le `isNotificationOnly` manifeste de votre application. Cette action génère les modifications suivantes :
 
 * Les utilisateurs ne peuvent pas envoyer de message à votre bot de notification uniquement.
-* Les utilisateurs ne peuvent pas @mentionner le bot.
+* Les utilisateurs ne peuvent pas @mention le bot.
 
 > [!NOTE]
 > Les bots de notification uniquement apparaissent dans la barre d’état des applications personnelles dans les deux cas : `isNotificationOnly: true` ou `isNotificationOnly: false`.

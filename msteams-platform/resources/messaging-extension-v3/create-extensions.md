@@ -1,17 +1,16 @@
 ---
-title: Lancer des actions avec des extensions de message
-description: Créer des extensions de message basées sur des actions pour permettre aux utilisateurs de déclencher des services externes
+title: Lancer des actions avec des extensions de messagerie
+description: Dans ce module, découvrez comment créer des extensions de message basées sur des actions pour permettre aux utilisateurs de déclencher des services externes.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams message extensions message extensions search
-ms.openlocfilehash: a29d1a5b49845d930ac4efbdd3967bd6b4446891
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104366"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143675"
 ---
-# <a name="initiate-actions-with-message-extensions"></a>Lancer des actions avec des extensions de message
+# <a name="initiate-actions-with-message-extensions"></a>Lancer des actions avec des extensions de messagerie
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
@@ -309,7 +308,7 @@ Tout comme dans le flux de carte adaptative, votre service envoie un `fetchTask`
 }
 ```
 
-### <a name="request-to-install-your-conversational-bot"></a>Demande d’installation de votre bot conversationnel
+### <a name="request-to-install-your-conversational-bot"></a>Demande d'installation de votre robot conversationnel
 
 Si votre application contient un bot de conversation, vérifiez qu’il est installé dans la conversation avant de charger votre module de tâche. Cela peut être utile dans les situations où vous devez obtenir un contexte supplémentaire pour votre module de tâche. Par exemple, vous devrez peut-être récupérer la liste pour remplir un contrôle sélecteur de personnes ou la liste des canaux d’une équipe.
 

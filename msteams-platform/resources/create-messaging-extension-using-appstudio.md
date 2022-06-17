@@ -5,12 +5,12 @@ description: Découvrez comment créer une extension de messagerie Microsoft Tea
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032780"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142338"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -19,11 +19,11 @@ ms.locfileid: "66032780"
 
 À un niveau élevé, vous devez effectuer les étapes suivantes pour créer une extension de messagerie.
 
-1. Préparer votre environnement de développement
-2. Créer et déployer votre service web (lors du développement, utilisez un service de tunneling comme ngrok pour l’exécuter localement)
-3. Inscrivez votre service web à l’aide de Bot Framework
-4. Créer votre package d’application
-5. Télécharger votre package dans Microsoft Teams
+1. Préparez votre environnement de développement.
+2. Créez et déployez votre service web (lors du développement, utilisez un service de tunneling comme ngrok pour l’exécuter localement).
+3. Inscrivez votre service web auprès de Bot Framework.
+4. Créez votre package d’application.
+5. Télécharger votre package dans Microsoft Teams.
 
 La création de votre service web, la création de votre package d’application et l’inscription de votre service web auprès de Bot Framework peuvent être effectuées dans n’importe quel ordre. Étant donné que ces trois pièces sont si liées, quel que soit l’ordre dans lequel vous les faites, vous aurez besoin de revenir pour mettre à jour les autres. Votre inscription a besoin du point de terminaison de messagerie de votre service web déployé, et votre service web a besoin de l’ID et du mot de passe créés à partir de votre inscription. Votre manifeste d’application a également besoin de cet ID pour connecter Teams à votre service web.
 

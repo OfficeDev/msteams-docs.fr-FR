@@ -1,15 +1,14 @@
 ---
 title: Formats multimédias pris en charge pour les bots
-description: Les bots sur Microsoft Teams prennent en charge uniquement les formats multimédias suivants pour le contenu audio et vidéo.
+description: Dans ce module, découvrez les bots sur Microsoft Teams ne prennent en charge que les formats multimédias suivants pour le contenu audio et vidéo.
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: équipes robots formats médias
-ms.openlocfilehash: cf8939b6fd8e2a3d759488b45c4171dbc27f36bf
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: b202b02388e97e61904c83286932c07c518db8e0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757338"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143668"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formats multimédias pris en charge pour les bots
 

@@ -5,12 +5,12 @@ description: Découvrez les composants d’interface utilisateur utilisés pour 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ae2dee58bf19b5400fa162c06a0c73e6137626c2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1c83eea2a16234d869ee031f1a1856d26ba48a25
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123667"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142415"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur Fluent de base
 
@@ -18,12 +18,12 @@ Vous pouvez créer votre application Teams à partir de zéro avec les composant
 
 Les illustrations de cette page montrent à quoi ressemblent les composants dans Teams thèmes par défaut (clair) et sombre.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
 Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent’interface utilisateur</a>, le kit d’interface utilisateur Microsoft Teams inclut des composants et des modèles conçus spécifiquement pour la création d’applications Teams. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
 
 > [!div class="nextstepaction"]
-> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenez le kit d’interface utilisateur Microsoft Teams (Figma).](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerte
 

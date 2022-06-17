@@ -1,16 +1,16 @@
 ---
 title: Planifier teams mobiles
 author: surbhigupta
-description: Guide de planification de la création d’une application sur teams mobile
+description: Avec ce module d’apprentissage, vous allez apprendre à planifier la création d’une application sur Teams mobile et à comprendre différentes étapes pour créer une application.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 16eada349d2a6adc5b45e89f075107838594eeeb
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111723"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143185"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
 
@@ -61,9 +61,9 @@ Dans la première étape, vous pouvez implémenter l’expérience de consommati
 
 Vous pouvez afficher les informations suivantes :
 
-* Tableaux de bord et résumés
-* Visuels de données, cartes et infographies
-* Graphiques, graphiques et tableaux
+* Tableaux de bord et résumés.
+* Visuels de données, cartes et infographies.
+* Graphiques, graphiques et tableaux.
 
 ![Consommation des applications de tableau de bord et de visualisation des données](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -71,9 +71,9 @@ Actions rapides :
 
 Dans la deuxième étape, les utilisateurs peuvent travailler sur les graphiques et visuels existants à partir de l’expérience de bureau. Vous pouvez présenter les actions suivantes :
 
-* Contenu de la recherche
-* Filtrer les données
-* Créer des signets
+* Rechercher du contenu.
+* Filtrer les données.
+* Créez des signets.
 
 ![Actions rapides des applications de tableau de bord et de visualisation des données](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
@@ -83,9 +83,9 @@ Dans la troisième étape, permettre aux utilisateurs de créer du contenu tel q
 
 Vous pouvez fournir l’accès suivant aux utilisateurs :
 
-* Modifier le titre et la description
-* Insérer des éléments de données pour créer des visualisations
-* Partager des visualisations dans un canal ou une conversation de groupe
+* Modifiez le titre et la description.
+* Insérez des éléments de données pour créer des visualisations.
+* Partagez des visualisations dans un canal ou une conversation de groupe.
 
 ![Activation des applications de tableau de bord et de visualisation des données](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -111,12 +111,12 @@ Actions rapides :
 
 Dans la deuxième étape, vous pouvez fournir l’accès à l’application suivant aux utilisateurs :
 
-* Créer des tâches ou des éléments avec les champs obligatoires pour réduire la charge cognitive des utilisateurs
-* Modifier le type ou la vue du tableau
-* Passer en revue les tâches en développant la vue
-* Utiliser des modules de tâche pour afficher une vue détaillée
-* Déplacer les tâches dans différentes catégories
-* Partager des tâches pertinentes dans des conversations et des canaux via des e-mails et un flux d’activité
+* Créez des tâches ou des éléments avec les champs obligatoires pour réduire la charge cognitive des utilisateurs.
+* Modifiez le type ou la vue du tableau.
+* Passez en revue les tâches en développant la vue.
+* Utilisez les modules de tâches pour afficher une vue détaillée.
+* Déplacez les tâches dans différentes catégories.
+* Partagez les tâches pertinentes dans les conversations et les canaux par le biais d’e-mails et de flux d’activité.
 
 ![Actions rapides d’intégration de tâches d’applications](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -124,9 +124,9 @@ Activation :
 
 Dans la troisième étape, vous pouvez activer l’expérience des utilisateurs avec les activités suivantes :
 
-* Ajouter de nouveaux projets et tableaux
-* Ajoutez et modifiez différentes catégories, telles que **Proposée**, **Active** et **Bouclée**
-* Configurer les tâches pour les commentaires, les pièces jointes et d’autres fonctionnalités complexes
+* Ajoutez de nouveaux projets et tableaux.
+* Ajoutez et modifiez différentes catégories, telles que **Proposé**, **Actif** et **Fermé**.
+* Configurez les tâches pour les commentaires, les pièces jointes et d’autres fonctionnalités complexes.
 
 ![Activation des applications d’intégration de tâche](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -145,9 +145,9 @@ Consommation:
 
 Dans la première étape, vous pouvez envisager l’expérience de bureau pour afficher le contenu et les ressources dans votre application.  Vous pouvez afficher les fonctions suivantes :
 
-* Commentaires ou commentaires
-* Effectuer un zoom avant ou arrière
-* Étape actuelle ou progression d’un document en attente
+* Commentaires ou commentaires.
+* Zoom avant ou arrière.
+* Étape ou progression actuelle d’un document en attente.
 
 ![Utilisation des applications de co-écriture et création de tableau blanc](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -155,9 +155,9 @@ Actions rapides :
 
 Dans la deuxième étape, vous pouvez introduire les actions suivantes :
 
-* Créer un tableau pour la collaboration ou de nouveaux documents pour la signature
-* Partager des tableaux en interne et avec des invités
-* Configurer les autorisations d’administrateur
+* Créez un tableau pour la collaboration ou de nouveaux documents pour la signature.
+* Partagez des tableaux en interne et également avec des invités.
+* Configurez les autorisations d’administrateur.
 
 > [!TIP]
 > Vous exposez des actions qui peuvent être affichées facilement sur les petits écrans.
@@ -168,10 +168,10 @@ Activation :
 
 Dans la troisième étape, fournissez une expérience complète à vos utilisateurs. Vous pouvez activer l’expérience des utilisateurs avec les activités suivantes :
 
-* Ajout de texte, de formes et de notes rapides
-* Naviguer dans le contenu
-* Ajouter des couches et des filtres
-* Opérations de suppression, d’annulation et de rétablissement
+* Ajout de texte, de formes et de notes rapides.
+* Parcourez le contenu.
+* Ajoutez des couches et des filtres.
+* Opérations de suppression, d’annulation et de restauration.
 * Accédez à la caméra et au microphone à l’aide des API du Kit de développement logiciel (SDK) JS. Pour plus d’informations sur les fonctionnalités des appareils, consultez [vue d’ensemble des fonctionnalités des appareils](../device-capabilities/device-capabilities-overview.md).
 
 ![Activation des applications de co-création et de tableau blanc](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)

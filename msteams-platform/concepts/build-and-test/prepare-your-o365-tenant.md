@@ -1,15 +1,14 @@
 ---
 title: Préparer votre client Microsoft Office 365
-description: Prise en main de Teams dans Microsoft 365
+description: Dans ce module, découvrez comment bien démarrer avec Teams dans Microsoft 365 et créer votre environnement de développement
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configurer le chargement Teams client Microsoft 365
-ms.openlocfilehash: 9e9972a41b6b210b99e7a5ac16fc3665132c3757
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111394"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144389"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 

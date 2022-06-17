@@ -1,16 +1,16 @@
 ---
 title: Canal et conversations de groupe avec un bot
 author: surbhigupta
-description: Comment envoyer, recevoir et gérer des messages pour un bot dans un canal ou une conversation de groupe. En savoir plus sur les instructions de conception, la création de threads de conversation, l’utilisation de @mentions à l’aide d’exemples de code
+description: Découvrez comment envoyer, recevoir et gérer des messages pour un bot dans un canal ou une conversation de groupe. Découvrez les instructions de conception et bien plus encore.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757177"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144410"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 

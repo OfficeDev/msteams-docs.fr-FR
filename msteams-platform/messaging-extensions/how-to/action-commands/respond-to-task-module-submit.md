@@ -1,16 +1,16 @@
 ---
 title: Répondre à l’action d’envoi du module de tâche
 author: surbhigupta
-description: Décrit comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de messagerie avec un message proactif, un autre module de tâche, un bot de carte adaptative, etc. à l’aide d’exemples de code.
+description: Dans ce module, découvrez comment répondre au module de tâche en soumettant une action à partir d’une commande d’action d’extension de messagerie avec un message proactif et bien plus encore.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757562"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144025"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
@@ -32,10 +32,10 @@ Pour l’authentification ou la configuration, une fois que l’utilisateur a te
 
 |Type de réponse | Composition | Barre de commandes | Message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Réponse de la carte | ✔ | ✔ | ✔ |
-|Un autre module de tâche | ✔ | ✔ | ✔ |
-|Bot avec carte adaptative | ✔ | x | ✔ |
-| Aucune réponse | ✔ | ✔ | ✔ |
+|Réponse de la carte | ✔️ | ✔️ | ✔️ |
+|Un autre module de tâche | ✔️ | ✔️ | ✔️ |
+|Bot avec carte adaptative | ✔️ | ❌ | ✔️ |
+| Aucune réponse | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

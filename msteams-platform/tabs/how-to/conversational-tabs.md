@@ -1,17 +1,16 @@
 ---
 title: Créer des onglets de conversation
 author: surbhigupta
-description: Apprenez à créer une conversation de sous-entité conversationnelle pour vos onglets de canal, afin de gérer les conversations à l’aide d’exemples de code
-keywords: Canal des onglets Teams configurable
+description: Dans ce module, apprenez à créer une conversation de sous-entité conversationnelle pour vos onglets de canal, afin de gérer les conversations à l’aide d’exemples de code
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111653"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142079"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -103,8 +102,8 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="see-also"></a>Voir aussi
 
-* [onglets Teams](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Créer un canal ou un onglet de groupe](~/tabs/how-to/create-channel-group-tab.md)
+* [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)

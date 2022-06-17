@@ -1,17 +1,17 @@
 ---
 title: Ajouter l’authentification unique à vos applications Teams
 author: zyxiaoyuer
-description: Décrit l’ajout de l’authentification unique de Teams Toolkit
+description: Dans ce module, découvrez comment ajouter l’authentification unique (SSO) de Teams Toolkit, activer la prise en charge de l’authentification unique, mettre à jour votre application pour utiliser l’authentification unique
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123446"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144130"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Ajouter l'authentification unique à l'application Teams
 
@@ -325,7 +325,7 @@ Pour afficher votre application Azure AD dans le portail Azure, consultez [Affic
 
 ## <a name="sso-authentication-concepts"></a>Concepts d’authentification unique
 
-Les concepts suivants vous aident à effectuer l’authentification unique :
+Les concepts suivants vous aident pour l’authentification unique :
 
 ### <a name="working-of-sso-in-teams"></a>Fonctionnement de l’authentification unique dans Teams
 

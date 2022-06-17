@@ -1,17 +1,16 @@
 ---
 title: Gestionnaire d'activité du robot
 author: surbhigupta
-description: Comprendre les gestionnaires d’activité de bot dans Teams.
+description: Dans cet article, découvrez les gestionnaires d’activité de bot, les frameworks, les gestionnaires d’activités Teams et la logique de bot dans Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: événement de canal de consentement de la carte de bot du gestionnaire d’activités
-ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032920"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143836"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 

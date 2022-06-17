@@ -1,14 +1,14 @@
 ---
 title: Vue d’ensemble des actions universelles pour les cartes adaptatives
-description: Vue d’ensemble rapide des actions universelles pour les cartes adaptatives, telles que les vues spécifiques à l’utilisateur, la prise en charge séquentielle des flux de travail, etc. pour les environnements de bureau et mobiles
+description: Découvrez les actions universelles pour les cartes adaptatives, telles que les vues spécifiques à l’utilisateur, la prise en charge des flux de travail séquentiels et bien plus encore pour les environnements de bureau et mobiles
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756470"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142086"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Actions universelles pour les cartes adaptatives
 
@@ -109,7 +109,7 @@ Vous pouvez maintenant comprendre comment les cartes adaptatives peuvent être t
 
 Les cartes adaptatives sont une combinaison de contenus, tels que du texte et des graphiques, ainsi que des actions qui peuvent être effectuées par un utilisateur. Pour plus d’informations, voir [Cartes adaptatives](http://adaptivecards.io/). Les nouvelles actions universelles pour les cartes adaptatives permettent une gestion commune des actions de carte adaptative entre les plateformes et les applications. Pour plus d’informations, consultez [Le modèle d’action universelle](/adaptive-cards/authoring-cards/universal-action-model).
 
-Vous pouvez commencer par mettre à jour des scénarios à l’aide du [guide de démarrage rapide](Work-with-universal-actions-for-adaptive-cards.md) et tirer parti des actions universelles.
+Vous pouvez commencer par mettre à jour des scénarios à l’aide du [guide de démarrage rapide]. (Work-with-universal-actions-for-adaptive-cards.md) et tirer parti des actions universelles.
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -121,4 +121,4 @@ Vous pouvez commencer par mettre à jour des scénarios à l’aide du [guide de
 * [Qu’est-ce que les bots ?](~/bots/what-are-bots.md)
 * [Vue d’ensemble des cartes adaptatives](~/task-modules-and-cards/what-are-cards.md)
 * [Cartes adaptatives @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Cartes adaptatives @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [Cartes adaptatives @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).

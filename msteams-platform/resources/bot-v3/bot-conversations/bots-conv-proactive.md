@@ -1,15 +1,14 @@
 ---
 title: Messagerie proactive pour les bots
-description: Découvrez comment utiliser la messagerie proactive pour les bots dans Microsoft Teams
+description: Dans ce module, découvrez comment utiliser la messagerie proactive pour les bots et les meilleures pratiques pour la messagerie proactive dans Microsoft Teams
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: scénarios teams - Bot de conversation de messagerie proactive
-ms.openlocfilehash: 12c6f9ad79d7e28f31e3985930557339e75ccbbf
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ee193cd7dfcfec20f501483eabc3a485cff0caab
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111485"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143129"
 ---
 # <a name="proactive-messaging-for-bots"></a>Messagerie proactive pour les bots
 
@@ -17,11 +16,10 @@ ms.locfileid: "65111485"
 
 Un message proactif est un message envoyé par un bot pour démarrer une conversation. Vous voudrez peut-être que votre bot démarre une conversation pour diverses raisons, notamment :
 
-* L’envoi de messages de bienvenue pour les conversations personnelles par bot
-* Les réponses aux sondages
-* Les notifications d’événements externes
-
-L’envoi d’un message pour démarrer un nouveau thread de conversation est différent de l’envoi d’un message en réponse à une conversation existante : lorsque votre bot démarre une nouvelle conversation, il n’existe aucune conversation préexistante dans laquelle publier le message. Pour envoyer un message proactif, vous devez :
+* Messages de bienvenue pour les conversations de bot personnel.
+* Réponses aux sondages.
+* Notifications d’événements externes.
+L’envoi d’un message pour démarrer un nouveau thread de conversation est différent de l’envoi d’un message en réponse à une conversation existante : lorsque votre bot démarre une nouvelle conversation, il n’existe aucune conversation préexistante à laquelle publier le message. Pour envoyer un message proactif, vous devez :
 
 1. [Décidez de ce que vous allez dire](#best-practices-for-proactive-messaging)
 1. [Obtenir l’ID unique et l’ID de locataire de l’utilisateur](#obtain-necessary-user-information)
@@ -71,7 +69,7 @@ Parfois, il peut être nécessaire d’envoyer des messages proactifs aux utilis
 
 Vous pouvez uniquement installer des applications qui se trouvent dans votre catalogue d’applications d’organisation ou dans l’App Store Teams.
 
-Pour plus d’informations, consultez [Installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) dans la documentation Graph. Il existe également un [exemple de dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Pour plus d’informations, consultez [Installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) dans la documentation Graph. Il existe également un [exemple dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Exemples
 

@@ -1,16 +1,16 @@
 ---
 title: Formatez vos messages robots.
 author: surbhigupta
-description: Ajoutez une mise en forme enrichie à vos messages de bot, telle qu’un barré, une liste ordonnée et non triée, un lien hypertexte, un lien image et bien plus encore.
+description: Dans ce module, découvrez comment ajouter une mise en forme enrichie à vos messages de bot, comme la barre d’accès, la liste ordonnée et non triée, le lien hypertexte, le lien image, etc.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d8697cf25b0cc08f880f8849ea152d1c30d4c146
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111827"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143479"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
@@ -44,17 +44,17 @@ Certains styles ne sont actuellement pas pris en charge sur toutes les plateform
 
 | Style                     | Messages texte uniquement | Cartes enrichies : XML uniquement |
 | ---                       | :---: | :---: |
-| Gras                      | ✔ | ✖ |
-| Italic                    | ✔ | ✔ |
-| En-tête (niveaux 1&ndash;3) | ✖ | ✔ |
-| Barré             | ✖ | ✔ |
-| Règle horizontale           | ✖ | ✖ |
-| Liste non triée            | ✖ | ✔ |
-| Liste triée              | ✖ | ✔ |
-| Texte préformaté         | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
-| Lien d’image                | ✔ | ✖ |
+| Gras                      | ✔️️ | ❌ |
+| Italic                    | ✔️ | ✔️ |
+| En-tête (niveaux 1&ndash;3) | ❌ | ✔️ |
+| Barré             | ❌ | ✔️ |
+| Règle horizontale           | ❌ | ❌ |
+| Liste non triée            | ❌ | ✔️ |
+| Liste triée              | ❌ | ✔️ |
+| Texte préformaté         | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ |
+| Lien d’image                | ✔️ | ❌ |
 
 Une fois la prise en charge multiplateforme effectuée, vérifiez que la prise en charge par des plateformes individuelles est également disponible.
 
@@ -68,17 +68,17 @@ Le tableau suivant fournit la liste des styles pris en charge sur des ordinateur
 
 | Style                     | Ordinateur de bureau | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| Gras                      | ✔ | ✔ | ✔ |
-| Italic                    | ✔ | ✔ | ✔ |
-| En-tête (niveaux 1&ndash;3) | ✖ | ✖ | ✖ |
-| Barré             | ✔ | ✔ | ✖ |
-| Règle horizontale           | ✖ | ✖ | ✖ |
-| Liste non triée            | ✔ | ✖ | ✖ |
-| Liste triée              | ✔ | ✖ | ✖ |
-| Texte préformaté         | ✔ | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
-| Lien d’image                | ✔ | ✔ | ✔ |
+| Gras                      | ✔️ | ✔️ | ✔️ |
+| Italic                    | ✔️ | ✔️ | ✔️ |
+| En-tête (niveaux 1&ndash;3) | ❌ | ❌ | ❌ |
+| Barré             | ✔️ | ✔️ | ❌ |
+| Règle horizontale           | ❌ | ❌ | ❌ |
+| Liste non triée            | ✔️ | ❌ | ❌ |
+| Liste triée              | ✔️ | ❌ | ❌ |
+| Texte préformaté         | ✔️ | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ | ✔️ |
+| Lien d’image                | ✔️ | ✔️ | ✔️ |
 
 ### <a name="cards"></a>Cartes
 

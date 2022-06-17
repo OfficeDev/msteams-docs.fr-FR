@@ -1,15 +1,14 @@
 ---
 title: Authentification des utilisateurs de l’application
-description: Décrit l’authentification dans Teams et comment l’utiliser dans les applications
+description: Dans ce module, découvrez l’authentification dans Teams et comment l’utiliser dans les applications, le flux d’authentification web et le flux OAuthPrompt pour les bots conversationnels
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Microsoft Azure Active Directory DSO OAuth d’authentification teams (Azure AD)
-ms.openlocfilehash: db1a16959755668ec9aa298ed355ef657503ca03
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 0ea8813d8428036521cc4488668a30d82470a8d0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887733"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143465"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 
@@ -17,7 +16,7 @@ L’authentification consiste à valider les utilisateurs d’applications et à
 
 Choisissez d’ajouter l’authentification pour votre application de l’une des deux manières suivantes :
 
-- Activer l’authentification **unique (SSO) dans une application Teams** : l’authentification unique dans Teams est une méthode d’authentification qui utilise l’identité Teams d’un utilisateur d’application pour lui fournir l’accès à votre application. Un utilisateur qui s’est connecté à Teams n’a pas besoin de se reconnecter à votre application dans l’environnement Teams. Avec seulement un consentement requis de l’utilisateur de l’application, l’application Teams récupère les détails d’accès pour eux à partir d’Azure Active Directory (AD). Une fois que l’utilisateur de l’application a donné son consentement, il peut accéder à l’application même à partir d’autres appareils sans avoir à être à nouveau validé.
+- Activer l’authentification **unique (SSO) dans une application Teams** : l’authentification unique dans Teams est une méthode d’authentification qui utilise l’identité Teams d’un utilisateur d’application pour lui fournir l’accès à votre application. Un utilisateur qui s’est connecté à Teams n’a pas besoin de se reconnecter à votre application dans l’environnement Teams. Avec seulement un consentement requis de l’utilisateur de l’application, l’application Teams récupère les détails d’accès pour eux à partir de Azure Active Directory (AD). Une fois que l’utilisateur de l’application a donné son consentement, il peut accéder à l’application même à partir d’autres appareils sans avoir à être à nouveau validé.
 
 - **Activer l’authentification à l’aide d’un fournisseur OAuth tiers** : vous pouvez utiliser un fournisseur d’identité OAuth tiers pour authentifier les utilisateurs de votre application. L’utilisateur de l’application est inscrit auprès du fournisseur d’identité, qui a une relation d’approbation avec votre application. Lorsque l’utilisateur tente de se connecter, le fournisseur d’identité valide l’utilisateur de l’application et lui donne accès à votre application. Azure AD est l’un de ces fournisseurs OAuth tiers. Vous pouvez utiliser d’autres fournisseurs, tels que Google, Facebook, GitHub ou tout autre fournisseur.
 

@@ -5,23 +5,23 @@ description: Découvrez les Teams composants de l’interface utilisateur, tels 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123418"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143423"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur avancés
 
 Les composants suivants sont une combinaison de [composants d’interface utilisateur de base](~/concepts/design/design-teams-app-basic-ui-components.md) que vous pouvez utiliser pour les situations courantes de conception Teams, telles que la navigation.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
 Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent’interface utilisateur</a>, le kit d’interface utilisateur Microsoft Teams inclut des composants et des modèles conçus spécifiquement pour la création d’applications Teams. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
 
 > [!div class="nextstepaction"]
-> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Barre de navigation
 
@@ -104,9 +104,9 @@ Une barre d’outils est un conteneur permettant de regrouper un ensemble de con
 
 ### <a name="top-use-cases"></a>Principaux cas d’usage
 
-* Actions contextuelles sur le contenu de l’application
-* Filtre contextuel et recherche
-* Navigation et navigation
+* Actions contextuelles sur le contenu de l’application.
+* Filtre contextuel et recherche.
+* Navigation et navigation.
 
 ### <a name="mobile"></a>Mobile
 

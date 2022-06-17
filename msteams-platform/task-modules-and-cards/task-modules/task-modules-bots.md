@@ -1,15 +1,14 @@
 ---
 title: Utiliser des modules de tâches dans les bots Microsoft Teams
-description: Comment utiliser des modules de tâches avec des bots Microsoft Teams, notamment des cartes Bot Framework, des cartes adaptatives et des liens profonds.
+description: Découvrez comment utiliser des modules de tâches avec des bots Microsoft Teams, notamment des cartes Bot Framework, des cartes adaptatives et des liens profonds.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: modules de tâche teams bots liens profonds carte adaptative
-ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e7bed83d9f13913b9a72997ac3679f844db3034a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756715"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142982"
 ---
 # <a name="use-task-modules-from-bots"></a>Utiliser des modules de tâches à partir de bots
 

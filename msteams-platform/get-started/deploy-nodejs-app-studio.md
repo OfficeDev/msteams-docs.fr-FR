@@ -6,17 +6,17 @@ ms.custom: scenarios:getting-started; languages:ASP,Node.js
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 7f423cfd33fdca9d40f2adfe32b59ace26d39adc
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: 15b5837fb8155d8b34b2c337a550ecbaaae9d86a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737221"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142520"
 ---
 # <a name="update-nodejs-app-package-in-app-studio"></a>Mettre à jour Node.js package d’application dans App Studio
 
 > [!TIP]
-> **Essayez le portail des développeurs** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail des développeurs](https://dev.teams.microsoft.com/).
+> **Essayez le portail des développeurs** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec la nouvelle [Developer Portal](https://dev.teams.microsoft.com/).
 
 App Studio est une application Teams que vous pouvez installer à partir du magasin Teams. Elle simplifie la création et l’inscription d’une application.
 
@@ -214,16 +214,16 @@ Si vous exécutez l’application à l’aide de ngrok, vous devez configurer de
 }
 ```
 
-Où :
+Emplacement :
 
 * Les informations d’identification d’autorisation de votre bot sont les suivantes :
-  * MICROSOFT_APP_ID est ID
-  * MICROSOFT_APP_PASSWORD est un mot de passe
+  * MICROSOFT_APP_ID est ID.
+  * MICROSOFT_APP_PASSWORD est un mot de passe.
 * NODE_DEBUG vous montrer ce qui se passe dans votre bot dans la console de débogage Visual Studio Code
 * NODE_CONFIG_DIR pointe vers le répertoire à la racine du référentiel (par défaut, lorsque l’application est exécutée localement, elle recherche le répertoire racine dans le `src` dossier).
 
 > [!Note]
-> Si vous n’avez pas arrêté npm plus tôt dans le didacticiel, vous devez `npm stop` exécuter pour que Visual Studio Code de récupérer correctement vos variables de configuration de lancement.
+> Si vous n’avez pas arrêté npm plus tôt dans le didacticiel, vous devez `npm stop` exécuter pour que Visual Studio Code collecte correctement vos variables de configuration de lancement.
 
 <a name="ConfigureTheAppTab"></a>
 

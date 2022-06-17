@@ -1,16 +1,16 @@
 ---
 title: Références API des applications de réunion
 author: surbhigupta
-description: Identifiez les références d’API d’applications de réunion avec des exemples et des exemples de code, Teams applications rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle de participant utilisateur.
+description: Découvrez comment identifier les références d’API d’applications de réunion avec des exemples et des exemples de code, Teams applications rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle utilisateur.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032787"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142947"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 

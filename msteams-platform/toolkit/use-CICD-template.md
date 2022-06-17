@@ -1,17 +1,17 @@
 ---
-title: Découvrez comment utiliser des modèles de pipeline CI/CD dans GitHub, Azure DevOps et Jenkins pour les développeurs d’applications Teams
+title: Modèles CI/CD
 author: MuyangAmigo
-description: Modèles CI/CD
+description: Dans ce module, découvrez comment utiliser des modèles de pipeline CI/CD dans GitHub, Azure DevOps et Jenkins pour Teams modèles Application DevelopersCI/CD
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: c39ad23fe42fd9cfd97ae2fcf49390cf19fac4a2
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: db263d3c8cf7eff085e237e884ef5baafc200230
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938932"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142597"
 ---
 # <a name="set-up-cicd-pipelines"></a>Mettre en place des pipelines CI/CD
 
@@ -19,7 +19,7 @@ TeamsFx permet d’automatiser votre flux de travail de développement lors de l
 
 |Outils et modèles | Description |
 |---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|Action GitHub qui s’intègre à l’interface CLI TeamsFx.|
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action qui s’intègre à l’interface CLI TeamsFx.|
 |[Teams Toolkit dans Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Extension Visual Studio Code qui vous aide à développer une application Teams et des flux de travail d’automatisation pour GitHub, Azure DevOps et Jenkins. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Outil en ligne de commande qui vous aide à développer une application Teams et des flux de travail d’automatisation pour GitHub, Azure DevOps et Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Modèles de script pour l’automatisation en dehors de GitHub, Azure DevOps ou Jenkins. |
@@ -51,7 +51,7 @@ Vous pouvez créer les modèles de flux de travail suivants avec GitHub :
 **Teams Toolkit dans Visual Studio Code**
 
 1. Créez un projet d’application Teams à l’aide du Kit de ressources Teams.
-1. Sélectionnez :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="l’icône d’api"::: d’icône du **Kit de ressources Teams** dans la barre de navigation de gauche.
+1. Sélectionnez :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Teams’icône d’api"::: **toolkit** dans la barre de navigation de gauche.
 1. Sélectionnez **Add CI/CD Workflows**.
 1. Sélectionnez un environnement à partir de l’invite de commandes.
 1. Sélectionnez **GitHub** comme fournisseur CI/CD.
@@ -98,7 +98,7 @@ Vous pouvez créer les modèles de flux de travail suivants avec Azure DevOps :
 **Teams Toolkit dans Visual Studio Code**
 
 1. Créez un projet d’application Teams à l’aide du Kit de ressources Teams.
-2. Sélectionnez :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="l’icône d’api"::: d’icône du **Kit de ressources Teams** dans la barre de navigation de gauche.
+2. Sélectionnez :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Teams’icône d’api"::: **toolkit** dans la barre de navigation de gauche.
 3. Sélectionnez **Add CI/CD Workflows**.
 4. Sélectionnez un environnement à partir de l’invite de commandes.
 5. Sélectionnez **Azure DevOps** en tant que fournisseur CI/CD.
@@ -151,7 +151,7 @@ Vous pouvez créer les modèles de flux de travail suivants avec Jenkins :
 **Teams Toolkit dans Visual Studio Code**
 
 1. Créez un projet d’application Teams à l’aide du Kit de ressources Teams.
-2. Sélectionnez :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="l’icône d’api"::: d’icône du **Kit de ressources Teams** dans la barre de navigation de gauche.
+2. Sélectionnez :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="Teams’icône d’api"::: **toolkit** dans la barre de navigation de gauche.
 3. Sélectionnez **Add CI/CD Workflows**.
 4. Sélectionnez un environnement à partir de l’invite de commandes.
 5. Sélectionnez **Jenkins** en tant que fournisseur CI/CD.

@@ -1,17 +1,16 @@
 ---
 title: Ajouter l’authentification à votre bot Teams
 author: surbhigupta
-description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams à l’aide de Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots prenant en charge l’authentification.
+description: Découvrez comment ajouter l’authentification OAuth à un bot dans Teams à l’aide de Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots prenant en charge l’authentification.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: déploiement du manifeste de bot Azure d’inscription de bot de groupe de ressources
-ms.openlocfilehash: 9594723f671f69a5dc4cb99f0ab48385603e3394
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756946"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142562"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -629,6 +628,15 @@ Dans l’étape de dialogue suivante, vérifiez la présence d’un jeton dans l
 [!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
+
+## <a name="code-sample"></a>Exemple de code
+
+Cette section fournit un exemple de Kit de développement logiciel (SDK) d’authentification de bot v3.
+
+| **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Authentification du bot | Cet exemple montre comment prendre en main l’authentification dans un bot pour Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Authentification unique Tab, Bot and Message Extension (ME) | Cet exemple montre l’authentification unique pour Tab, Bot et ME – recherche, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Non disponible |
 
 ## <a name="see-also"></a>Voir aussi
 

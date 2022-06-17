@@ -1,16 +1,16 @@
 ---
 title: Tester et déboguer votre bot localement
 author: surbhigupta
-description: Découvrez comment tester et déboguer votre bot localement avec un IDE dans l’environnement Teams via le chargement indépendant, en dehors de Teams à l’aide de l’émulateur de bot et en communiquant directement avec votre bot.
+description: En savoir plus sur le test et le débogage de votre bot localement avec un IDE dans Teams environnement via le chargement indépendant et bien plus encore
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c0c2124c12e9ab13bf72008e8dda0846f35d768
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757597"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142891"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 

@@ -4,12 +4,12 @@ description: Dans ce module, apprenez à démarrer avec Live Share SDK et à cr�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8dad224b74ff8a6d1252c4d1d27900f3bb5c6962
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668297"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143563"
 ---
 ---
 
@@ -101,7 +101,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Rejoindre un conteneur Fluid
 
-Toutes les vues de vos applications n'auront pas besoin d'être collaboratives. La `stage`vue _a toujours besoin_ de fonctionnalités collaboratives, la `content`vue _peut avoir_ besoin de fonctionnalités collaboratives, et la `config`vue ne devrait _jamais_ avoir besoin de fonctionnalités collaboratives. Pour les vues qui nécessitent des fonctions de collaboration, vous devrez rejoindre un conteneur Fluid associé à la réunion en cours.
+Toutes les vues de vos applications n'auront pas besoin d'être collaboratives. La `stage`vue *a toujours besoin* de fonctionnalités collaboratives, la `content`vue *peut avoir* besoin de fonctionnalités collaboratives, et la `config`vue ne devrait *jamais* avoir besoin de fonctionnalités collaboratives. Pour les vues qui nécessitent des fonctions de collaboration, vous devrez rejoindre un conteneur Fluid associé à la réunion en cours.
 
 Pour rejoindre le conteneur de la réunion, il suffit de créer un nouveau [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) et d'appeler sa méthode [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer).  Lors d'une exécution locale, vous devrez passer une configuration de connexion personnalisée avec un spécial, `LOCAL_MODE_TENANT_ID`mais autrement, joindre un conteneur local est la même chose que joindre un conteneur dans Teams.
 
@@ -192,15 +192,15 @@ La prochaine modification à apporter est de changer la `updateDice`fonction pou
 
 ### <a name="handle-remote-changes"></a>Gérer les changements à distance
 
-Les valeurs renvoyées ne `diceMap` sont qu'un instantané dans le temps. Pour que les données restent à jour au fur et à mesure de leur modification, un gestionnaire d'événement doit être défini sur `diceMap`l'appel`updateDice` à chaque fois`valueChanged` que l'événement est envoyé. Pour obtenir une liste des événements déclenchés et des valeurs transmises à ces événements, voir [SharedMap](https://fluidframework.com/docs/data-structures/map/). 
+Les valeurs renvoyées ne `diceMap` sont qu'un instantané dans le temps. Pour que les données restent à jour au fur et à mesure de leur modification, un gestionnaire d'événement doit être défini sur `diceMap`l'appel`updateDice` à chaque fois`valueChanged` que l'événement est envoyé. Pour obtenir une liste des événements déclenchés et des valeurs transmises à ces événements, voir [SharedMap](https://fluidframework.com/docs/data-structures/map/).
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>Écrire la vue du panneau latéral
 
-La vue du panneau latéral, chargée par l'intermédiaire de l'onglet `contentUrl`avec le`sidePanel` contexte du cadre, est affichée à l'utilisateur dans un panneau latéral lorsqu'il ouvre votre application dans une réunion. L'objectif de cette vue est de permettre à l'utilisateur de sélectionner le contenu de l'application avant de la partager avec la scène de réunion. Pour les applications SDK Live Share, la vue du panneau latéral peut également être utilisée comme expérience complémentaire pour l'application. L'appel de [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) à partir de la vue du panneau latéral permet de se connecter au même conteneur Fluid que celui auquel la vue de la scène est connectée. Ce conteneur peut ensuite être utilisé pour communiquer avec la vue de la scène. Assurez-vous que vous communiquez avec la vue de la scène _et_ du panneau latéral de chacun.
+La vue du panneau latéral, chargée par l'intermédiaire de l'onglet `contentUrl`avec le`sidePanel` contexte du cadre, est affichée à l'utilisateur dans un panneau latéral lorsqu'il ouvre votre application dans une réunion. L'objectif de cette vue est de permettre à l'utilisateur de sélectionner le contenu de l'application avant de la partager avec la scène de réunion. Pour les applications SDK Live Share, la vue du panneau latéral peut également être utilisée comme expérience complémentaire pour l'application. L'appel de [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) à partir de la vue du panneau latéral permet de se connecter au même conteneur Fluid que celui auquel la vue de la scène est connectée. Ce conteneur peut ensuite être utilisé pour communiquer avec la vue de la scène. Assurez-vous que vous communiquez avec la vue de la scène *et* du panneau latéral de chacun.
 
 La vue du panneau latéral de l'échantillon invite l'utilisateur à sélectionner le bouton «Partager sur scène».
 

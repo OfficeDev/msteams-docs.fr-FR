@@ -1,17 +1,16 @@
 ---
 title: Conditions préalables
 author: surbhigupta
-description: Chaque onglet de Microsoft Teams doit respecter ces exigences.
-keywords: canal de groupe des onglets Teams configurable
+description: Dans ce module, découvrez les conditions requises pour chaque onglet de Microsoft Teams devez respecter et les outils pour créer des onglets.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672928"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142618"
 ---
 # <a name="prerequisites"></a>Configuration requise
 

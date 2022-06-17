@@ -2,16 +2,15 @@
 title: Concevoir votre application - Comprendre le système de conception
 description: Découvrez les concepts de base de la conception de votre application Microsoft Teams, notamment les avatars, la disposition, les icônes, le modèle de couleurs, etc.
 author: heath-hamilton
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-keywords: icônes d’avatars de grille de disposition segoe typographie d’interface utilisateur
-ms.openlocfilehash: d4b8d610de0575024db5d7140c0452b00655ef91
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111296"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142884"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Système de conception d’applications Microsoft Teams
 

@@ -1,16 +1,15 @@
 ---
 title: Créer un bot
-description: Décrit comment créer des bots dans Microsoft Teams
+description: Dans ce module, découvrez comment créer un bot à l’aide de la Microsoft Bot Framework et être prêt à travailler dans Microsoft Teams
 ms.topic: how-to
-keywords: création de bots Teams
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 92d4593290d1332b86b370a49b20daaf43868a51
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0b39593917585db73eccd36492bcbb7b9fdd6dfd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757387"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144011"
 ---
 # <a name="create-a-bot"></a>Créer un bot
 
