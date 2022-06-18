@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 2df7bf928109c1616bebf99d895c953c4a420e9a
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795132"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123544"
 ---
 # <a name="the-teams-solution"></a>La solution Teams
 
@@ -71,7 +71,7 @@ De la conception à la création et à la distribution d’une application Teams
 1. Planifiez votre projet et déterminez l’exigence.
 1. Concevez l’application. Utilisez le Kit d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir l’interface utilisateur des onglets.
 1. Créez l’application avec JavaScript à l’aide du Kit de ressources Teams.
-1. Étendez les fonctionnalités en ajoutant des fonctionnalités Teams et des données M365 avec Microsoft Graph.
+1. Étendez les fonctionnalités en ajoutant davantage de fonctionnalités Teams et de données Microsoft 365 avec Microsoft Graph.
 1. Testez l’application sur un locataire de développeur avec des exemples de données utilisateur.
 1. Déployez l’application sur Azure.
 1. Gérez et publiez les applications dans le Store avec Developer Portal. Monétisez votre application avec des options, telles que les offres SaaS, les achats in-app et bien plus encore.

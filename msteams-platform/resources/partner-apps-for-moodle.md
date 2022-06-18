@@ -1,15 +1,15 @@
 ---
 title: Applications partenaires pour Moodle
-description: Présentation des applications partenaires
+description: Découvrez les applications partenaires pour Moodle, les principaux avantages des applications partenaires pour Moodle, les offres Saas et mConnect. Activez l'authentification unique pour les utilisateurs de Teams.
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ee6840193d0b2ecaf1eab2a7e466bcd61382e06f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757002"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123390"
 ---
 # <a name="partner-apps-for-moodle"></a>Applications partenaires pour Moodle
 
@@ -26,9 +26,9 @@ Le tableau suivant présente les avantages de l’utilisation d’applications p
 
 ## <a name="mconnect"></a>mConnect
 
-L’application mConnect intègre les cours et activités Moodle dans Teams pour améliorer l’expérience d’apprentissage des utilisateurs. 
+L’application mConnect intègre les cours et activités Moodle dans Teams pour améliorer l’expérience d’apprentissage des utilisateurs.
 
-Skooler, un partenaire Microsoft Gold approuvé dans le domaine de l’éducation, a développé l’application mConnect et fournit le support nécessaire. 
+Skooler, un partenaire Microsoft Gold approuvé dans le domaine de l’éducation, a développé l’application mConnect et fournit le support nécessaire.
 
 mConnect permet aux administrateurs Moodle de configurer automatiquement le cours Teams pour Moodle et de rendre toutes les fonctionnalités disponibles pour chaque cours dans Moodle.
 
