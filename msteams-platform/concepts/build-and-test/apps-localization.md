@@ -4,12 +4,12 @@ description: Découvrez les considérations relatives à la localisation de votr
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 9c8e073f646bbd99f07725bee734e727103f6eb3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122893"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150665"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
@@ -155,7 +155,7 @@ Si vous fournissez des versions localisées de votre application, les utilisateu
 
 | Exemple de nom | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| Localisation d’application | Localisation des applications Microsoft Teams à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| Localisation d’application | Teams localisation d’application à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

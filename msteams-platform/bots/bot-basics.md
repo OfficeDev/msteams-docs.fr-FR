@@ -5,18 +5,18 @@ description: Dans cet article, découvrez les gestionnaires d’activité de bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143836"
+ms.locfileid: "66150861"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
 Ce document s’appuie sur l’article sur le [fonctionnement des bots](https://aka.ms/how-bots-work) dans la [documentation principale de Bot Framework](https://aka.ms/azure-bot-service-docs). La principale différence entre les bots développés pour Microsoft Teams et le framework bot principal réside dans les fonctionnalités fournies dans Teams.
 
-Pour organiser la logique conversationnelle de votre bot, un gestionnaire d’activités est utilisé. Les activités sont gérées de deux manières à l’aide de gestionnaires d’activités Teams et de logique de bot. Le gestionnaire d’activités Teams ajoute la prise en charge des événements et interactions spécifiques à Microsoft Teams. L’objet bot contient le raisonnement conversationnel ou la logique d’un tour et expose un gestionnaire de tours, qui est la méthode qui peut accepter les activités entrantes de l’adaptateur de bot.
+Pour organiser la logique conversationnelle de votre bot, un gestionnaire d’activités est utilisé. Les activités sont gérées de deux manières à l’aide de gestionnaires d’activités Teams et de logique de bot. Le gestionnaire d’activités Teams ajoute la prise en charge des événements et interactions spécifiques à Teams. L’objet bot contient le raisonnement conversationnel ou la logique d’un tour et expose un gestionnaire de tours, qui est la méthode qui peut accepter les activités entrantes de l’adaptateur de bot.
 
 ## <a name="teams-activity-handlers"></a>Gestionnaires d’activités Microsoft Teams
 

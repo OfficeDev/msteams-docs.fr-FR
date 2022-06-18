@@ -5,18 +5,18 @@ description: Découvrez comment intégrer des fonctionnalités d’appareil nati
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130429"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150672"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
 La plateforme Microsoft Teams améliore en permanence les fonctionnalités de développement en s’alignant sur les expériences internes intégrées. La plateforme Teams améliorée permet aux partenaires d’intégrer des fonctionnalités d’appareil, telles que l’appareil photo, la QR ou le scanneur de codes-barres, la galerie de photos, le microphone et l’emplacement avec leurs applications web. Cette intégration réduit la barrière au développement d’applications, accélère le cycle de développement et crée de nouveaux scénarios ou cas d’usage pour la communauté des développeurs.
 
-Les autorisations d’appareil sont différentes dans le navigateur. Auparavant, le navigateur gérait la façon d’accorder des autorisations d’accès et ces autorisations sont désormais gérées dans Microsoft Teams. Pour plus d'informations, consultez la section [Autorisations du périphérique de navigation](browser-device-permissions.md).
+Les autorisations d’appareil sont différentes dans le navigateur. Auparavant, le navigateur gérait l’octroi d’autorisations d’accès et ces autorisations sont désormais gérées dans Teams. Pour plus d'informations, consultez la section [Autorisations du périphérique de navigation](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Fonctionnalités natives de l’appareil
 
@@ -50,4 +50,4 @@ En outre, vous pouvez intégrer le [contrôle de sélecteur de personnes](people
 
 | Exemple de nom           | Description | Node.js    |
 |:---------------------|:--------------|:---------|
-|Autorisations de l’appareil | Décrit comment illustrer Microsoft Teams’exemple d’application onglet pour les autorisations d’appareil. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Autorisations de l’appareil | Décrit comment illustrer Teams’exemple d’application onglet pour les autorisations d’appareil. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment ajouter une mise en forme enrich
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143479"
+ms.locfileid: "66150785"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
@@ -36,7 +36,7 @@ Actuellement, les limitations suivantes s’appliquent à la mise en forme :
 * Les cartes enrichies prennent uniquement en charge la mise en forme dans la propriété de texte, et non dans les propriétés de titres ou de sous-titres.
 * Les cartes enrichies ne prennent pas en charge la mise en forme de tables ou Markdown.
 
-Une fois votre contenu texte mis en forme, vérifiez que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Microsoft Teams.
+Après avoir mis en forme du contenu texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Teams.
 
 ## <a name="cross-platform-support"></a>Prise en charge multiplateforme
 

@@ -1,14 +1,14 @@
 ---
 title: Prise en main de App Studio dans Microsoft Teams
-description: Dans ce module, découvrez comment créer et gérer vos applications avec App Studio pour Microsoft Teams et l’installation d’App Studio.
+description: Dans cet article, vous allez apprendre à créer et gérer vos applications avec App Studio pour Microsoft Teams et l’installation d’App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3cfef6db34c9754ac42b2af3ce153ba9374fdff1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143451"
+ms.locfileid: "66150700"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 
@@ -52,9 +52,9 @@ C’est l’endroit où vous pouvez voir à quoi ressemblent les [cartes de visi
 
 ### <a name="manifest-editor"></a>Éditeur de manifeste
 
-Comme indiqué précédemment, la partie la plus importante d’un package d’application Microsoft Teams est son fichier manifest.json. Ce fichier, qui doit être conforme au [schéma de l’application Teams](~/resources/schema/manifest-schema.md), contient des métadonnées qui permettent à Teams de présenter correctement votre application aux utilisateurs.
+Comme mentionné précédemment, la partie la plus importante d’un package d’application Teams est son fichier manifest.json. Ce fichier, qui doit être conforme au [schéma d’application Teams](~/resources/schema/manifest-schema.md), contient des métadonnées, ce qui permet à Teams de présenter correctement votre application aux utilisateurs.
 
-L’onglet Éditeur de manifeste d’App Studio simplifie la création du manifeste, ce qui vous permet de décrire l’application, de charger vos icônes, d’ajouter des fonctionnalités d’application et de produire un fichier .zip, qui peut facilement être chargé dans Teams à des fins de test ou distribué à d’autres utilisateurs. Notez qu’App Studio ne produit pas de code fonctionnel pour votre application ou n’héberge pas votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement de l’application aboutisse à une application fonctionnelle.
+L’onglet Éditeur de manifeste d’App Studio simplifie la création du manifeste, ce qui vous permet de décrire l’application, de charger vos icônes, d’ajouter des fonctionnalités d’application et de produire un fichier .zip, qui peut facilement être chargé dans Teams à des fins de test ou distribué à d’autres utilisateurs. App Studio ne produit pas de code fonctionnel pour votre application, ni n’héberge votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement de l’application aboutisse à une application fonctionnelle.
 
 #### <a name="details"></a>Détails
 
@@ -75,11 +75,11 @@ La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fon
 
   Vous devez également fournir d'autres domaines à partir desquels l'onglet doit être chargé ou lié.
 
-* **Onglets personnels.** Cette section vous permet de définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle (expérience qu’un utilisateur a avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir desquels l’onglet s’attend à être chargé ou vers lesquels établir un lien.
+* **Onglets personnels.** Vous pouvez définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle (expérience qu’un utilisateur a avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir desquels l’onglet s’attend à être chargé ou vers lesquels établir un lien.
 
 ##### <a name="bots"></a>Bots
 
-Cette section vous permet d’ajouter un [bot conversation](~/bots/what-are-bots.md) à votre application. Si vous avez déjà inscrit un bot auprès de Bot Framework, vous pouvez ajouter ce bot en cliquant sur *Configurer* et en fournissant le nom du bot, l’ID Bot Framework, et en définissant les étendues dans lesquelles le bot fonctionne.
+Cette section vous permet d’ajouter un [bot conversation](~/bots/what-are-bots.md) à votre application. Si vous *disposez* déjà d’un bot inscrit auprès de Bot Framework, vous pouvez l’ajouter en cliquant sur Configurer et en fournissant le nom du bot, l’ID Bot Framework, et en définissant les étendues dans lesquelles le bot fonctionne.
 
 Si vous n’avez pas encore inscrit de bot auprès de Bot Framework, **sélectionnez Inscrire** pour en créer un. Une fois que vous avez inscrit votre bot, revenez à cette section de l’Éditeur manifeste pour entrer son nom et l’ID Bot Framework.
 
@@ -94,7 +94,7 @@ Cette section vous permet d’ajouter un connecteur à votre application. Si vou
 
 ##### <a name="message-extensions"></a>Message Extensions
 
-[Les extensions de message](~/messaging-extensions/what-are-messaging-extensions.md) sont un moyen puissant pour les utilisateurs d’interagir avec votre application dans Microsoft Teams. Les utilisateurs peuvent interroger les informations de votre service et publier ces informations sous forme de cartes, directement dans le canal ou la conversation instantanée.
+[Les extensions de message](~/messaging-extensions/what-are-messaging-extensions.md) sont un moyen puissant pour les utilisateurs d’interagir avec votre application dans Teams. Les utilisateurs peuvent interroger les informations de votre service et publier ces informations sous forme de cartes, directement dans le canal ou la conversation instantanée.
 
 Les extensions de message sont alimentées par des bots Bot Framework. Elles nécessitent donc un bot configuré pour fonctionner. Si vous avez le nom et l’ID Bot Framework du bot que vous souhaitez activer l’extension de message, entrez-le. Sinon, **sélectionnez Inscrire** pour en créer un et entrez les informations par la suite. Indiquez si la configuration d’une extension de message peut être mise à jour par l’utilisateur.
 
@@ -115,11 +115,11 @@ Une fois que vous avez terminé de définir votre application, la section Test e
 
 ##### <a name="publish-your-app-to-teams"></a>Publier votre application sur Teams
 
-Sur la page d’accueil de votre projet, vous pouvez télécharger votre application dans une équipe, l’envoyer sur le magasin d’applications personnalisé de votre entreprise pour les utilisateurs de votre organisation ou envoyer votre application à la source de l’application pour tous les utilisateurs Teams. Votre administrateur informatique examine ces envois. Vous pouvez revenir à la page *Publier* pour vérifier l’état de votre envoi et savoir si votre application a été approuvée ou refusée par votre administrateur informatique. C’est également ici que vous pouvez envoyer des mises à jour à votre application ou annuler les envois en cours.
+Sur la page d’accueil de votre projet, vous pouvez télécharger votre application dans une équipe, l’envoyer sur le magasin d’applications personnalisé de votre entreprise pour les utilisateurs de votre organisation ou envoyer votre application à la source de l’application pour tous les utilisateurs Teams. Votre administrateur informatique examine ces soumissions. Vous pouvez revenir à la page *Publier* pour vérifier l’état de votre envoi et savoir si votre application a été approuvée ou refusée par votre administrateur informatique. C’est également ici que vous pouvez envoyer des mises à jour à votre application ou annuler les envois en cours.
 
 ### <a name="card-editor"></a>Éditeur de carte
 
-Une carte est un conteneur pour des éléments d’informations courts ou associés. Microsoft Teams prend en charge les cartes, qui peuvent avoir plusieurs propriétés et pièces jointes. Les cartes sont un moyen clé pour les bots et les connecteurs de relayer des informations utilisables pour les utilisateurs.
+Une carte est un conteneur pour des éléments d’informations courts ou associés. Teams prend en charge les cartes, qui peuvent avoir plusieurs propriétés et pièces jointes. Les cartes sont un moyen clé pour les bots et les connecteurs de relayer des informations utilisables pour les utilisateurs.
 
 Pour faciliter et rendre ce processus moins sujet aux erreurs, l’onglet Éditeur de carte vous permet de créer des cartes héros ou des cartes miniatures à l’aide d’un formulaire et de vérifier et de tester la carte obtenue (exactement comme un utilisateur le voit) par le biais d’un bot. Elle fournit également le code JSON, C# ou Node.js correspondant pour la carte que vous pouvez copier/coller dans le code source de votre application.
 

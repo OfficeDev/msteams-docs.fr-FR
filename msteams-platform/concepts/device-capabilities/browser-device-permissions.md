@@ -4,12 +4,12 @@ keywords: autorisations des fonctionnalités des applications teams
 description: Rétablir en toute sécurité la prise en charge des autorisations d’appareil pour les applications dans notre client web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756743"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150812"
 ---
 # <a name="device-permissions-for-the-browser"></a>Autorisations de périphérique pour le navigateur
 
@@ -29,7 +29,7 @@ Une fois l’option **Autorisations d’application** sélectionnée, une fenêt
 Un utilisateur doit activer ces autorisations dans le navigateur pour qu’elles prennent effet. Une fois que l’utilisateur a modifié les autorisations d’appareil de l’application dans le navigateur, il est invité à recharger l’application dans Teams.
 
 > [!IMPORTANT]
-> Vous devez informer les utilisateurs de l’emplacement où accéder pour activer ces **Autorisations d’application** dans Microsoft Teams.
+> Vous devez informer les utilisateurs de l’endroit où aller pour activer ces **autorisations d’application** dans Teams.
 
 ## <a name="recommendation"></a>Recommandation
 
@@ -46,7 +46,7 @@ Teams application qui nécessite des autorisations d’appareil dans le navigate
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 
-Suivez le [guide pas à pas](../../sbs-tab-device-permissions.yml) pour accorder l’autorisation d’appareil de l’onglet dans Microsoft Teams.
+Suivez le [guide pas à pas](../../sbs-tab-device-permissions.yml) pour accorder l’autorisation d’appareil tabulation dans Teams.
 
 ## <a name="see-also"></a>Voir aussi
 

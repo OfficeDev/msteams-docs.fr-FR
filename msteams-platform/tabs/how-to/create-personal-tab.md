@@ -1,18 +1,17 @@
 ---
 title: Créer un onglet personnel
 author: laujan
-description: Guide de démarrage rapide pour créer un onglet personnel avec yeoman Generator, ASP.NET Core ou ASP.NET Core MVC pour Microsoft Teams à l’aide de Node.js et mettre à jour le manifeste de l’application.
+description: Dans ce module, découvrez comment créer un onglet personnel avec Générateur Yeoman, ASP.NET Core ou ASP.NET Core MVC pour Microsoft Teams à l’aide de Node.js et mettre à jour le manifeste de l’application.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET magasin d’autorisations de domaine de conversation appmanifest de package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673019"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143990"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -296,10 +295,10 @@ Voici les étapes à suivre pour créer un onglet personnel :
 
 1. Dans Visual Studio, sélectionnez **F5** ou choisissez **Démarrer le débogage** dans le menu **Déboguer** de votre application pour vérifier si l’application s’est correctement chargée. Dans un navigateur, accédez aux URL suivantes :
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Examiner le code source</b></summary>
@@ -449,10 +448,10 @@ Voici les étapes à suivre pour créer un onglet personnel :
 
 1. Dans Visual Studio, sélectionnez **F5** ou choisissez **Démarrer le débogage** dans le menu **Déboguer** de votre application pour vérifier si l’application s’est correctement chargée. Dans un navigateur, accédez aux URL suivantes :
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Examiner le code source</b></summary>

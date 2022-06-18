@@ -1,16 +1,16 @@
 ---
 title: Conception de votre bot
-description: Découvrez comment concevoir un bot Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
+description: Dans ce module, découvrez comment concevoir et ajouter un bot Teams et ses cas d’utilisation, et obtenir le Kit d’interface utilisateur Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602298"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143591"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 

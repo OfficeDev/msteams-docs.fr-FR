@@ -5,12 +5,12 @@ description: En savoir plus sur le test et le débogage de votre bot localement 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142891"
+ms.locfileid: "66150805"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -57,11 +57,11 @@ Pour plus d’informations, consultez [instructions complètes sur le Bot Framew
 > [!Important]
 > La communication avec votre bot par ID est destinée uniquement à des fins de test de base. Les fonctionnalités spécifiques à Teams que vous avez ajoutées à votre bot ne fonctionnent pas.
 
-Lancez une conversation avec votre bot à l’aide de son ID. Lorsqu’un bot est ajouté via l’une de ces méthodes, il n’est pas adressable dans les conversations de canal et vous ne pouvez pas tirer parti des autres fonctionnalités de l’application Microsoft Teams, telles que les onglets ou les extensions de message. Lancez une conversation de l’une des manières suivantes :
+Lancez une conversation avec votre bot à l’aide de son ID. Lorsqu’un bot est ajouté via l’une de ces méthodes, il n’est pas adressable dans les conversations de canal et vous ne pouvez pas tirer parti d’autres fonctionnalités d’application Teams telles que les onglets ou les extensions de message. Lancez une conversation de l’une des manières suivantes :
 
-* Dans la page [tableau de bord du bot](https://dev.botframework.com/bots) pour votre bot, sous **Canaux**, sélectionnez **Ajouter à Microsoft Teams**. Microsoft Teams lance une conversation personnelle avec votre bot.
+* Dans la page [tableau de bord du bot](https://dev.botframework.com/bots) pour votre bot, sous **Canaux**, sélectionnez **Ajouter à Microsoft Teams**. Teams lance une conversation personnelle avec votre bot.
 
-* Référencez directement l’ID d’application de votre bot à partir de Microsoft Teams :
+* Référencez directement l’ID d’application de votre bot à partir de Teams :
    1. Dans la page du [tableau de bord du bot](https://dev.botframework.com/bots) pour votre bot, sous **Détails**, copiez **l’ID d’application Microsoft** pour votre bot.
   
       ![Obtention de l’AppID pour le bot](~/assets/images/bots_appid_botframework.png)
@@ -73,10 +73,10 @@ Lancez une conversation avec votre bot à l’aide de son ID. Lorsqu’un bot es
       L’ID d’application doit correspondre au nom de votre bot.
 
    3. Sélectionnez votre bot et envoyez un message pour lancer une conversation.
-      Vous pouvez également coller l’ID d’application de votre bot dans la zone de recherche en haut à gauche dans Microsoft Teams. Dans la page des résultats de recherche, accédez à l’onglet **Personnes** pour voir votre bot et commencer à discuter avec lui.
+      Vous pouvez également coller l’ID d’application de votre bot dans la zone de recherche en haut à gauche dans Teams. Dans la page des résultats de recherche, accédez à l’onglet **Personnes** pour voir votre bot et commencer à discuter avec lui.
 
 > [!Note]
-> Pour que Microsoft Teams fasse référence à l’ID d’application de votre bot, activez [chargement indépendant des applications](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Pour Teams faire référence à l’ID d’application de votre bot, activez le [chargement indépendant des applications](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 Votre bot reçoit l’événement `conversationUpdate` lorsque vous ajoutez les bots à une équipe, sans les informations de l’équipe dans l’objet `channelData`.
 

@@ -3,12 +3,12 @@ title: Bots d’appels et de réunions en ligne
 description: Dans ce module, découvrez comment vos applications Microsoft Teams peuvent interagir avec les utilisateurs à l’aide de la voix et de la vidéo à l’aide des API Microsoft Graph pour les appels et les réunions en ligne, et découvrez les flux multimédias en temps réel.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bbeca082a561386d6c64d08e1d303975f9746f0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143850"
+ms.locfileid: "66150826"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots d’appels et de réunions en ligne
 
@@ -51,7 +51,7 @@ Voici les différents types d’appels et autorisations requis pour l’appel :
 * Un utilisateur peut lancer un appel pair à pair avec votre bot ou inviter votre bot dans un appel multipartie existant. L’appel multipartie n’est pas encore activé dans l’interface utilisateur Teams.
 
     > [!NOTE]
-    > Les appels lancés par l’utilisateur à un bot ne sont actuellement pas pris en charge sur la plateforme mobile Microsoft Teams.
+    > Les appels lancés par l’utilisateur à un bot ne sont actuellement pas pris en charge sur Teams plateforme mobile.
 
 * Les autorisations Graph ne sont pas nécessaires pour qu’un utilisateur lance un appel d’égal à égal avec votre bot. Des autorisations supplémentaires sont nécessaires pour que votre bot participe à un appel en plusieurs parties ou pour que votre bot lance un appel pair à pair avec un utilisateur.
 * Un appel peut commencer comme pair à pair et devenir un appel multipartie. Votre bot peut lancer des appels en plusieurs parties en invitant d’autres personnes, à condition que votre bot dispose des autorisations appropriées. Si votre bot ne dispose pas des autorisations nécessaires pour participer aux appels de groupe et si un participant ajoute un autre participant à l’appel, votre bot est supprimé de l’appel.

@@ -4,12 +4,12 @@ description: Découvrez les exigences et considérations importantes, ainsi que 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142485"
+ms.locfileid: "66150788"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Exigences et considérations relatives aux bots multimédias hébergés par des applications
 
@@ -39,7 +39,7 @@ La section suivante fournit des détails sur l’emplacement des appels multimé
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
 
-Les appels multimédias en temps réel restent sur l’ordinateur sur lequel ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle qui a accepté ou démarré l’appel. Les médias d’un appel ou d’une réunion Microsoft Teams circulent vers cette instance de machine virtuelle, et les médias que le bot renvoie à Microsoft Teams doivent également provenir de cette machine virtuelle. S’il existe des appels multimédias en temps réel en cours lorsque la machine virtuelle est arrêtée, ces appels sont soudainement arrêtés. Si le bot a connaissance préalablement de l’arrêt de la machine virtuelle en attente, il peut mettre fin aux appels.
+Les appels multimédias en temps réel restent sur l’ordinateur sur lequel ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle qui a accepté ou démarré l’appel. Le média d’un appel Teams ou d’une réunion est envoyé à cette instance de machine virtuelle, et le média que le bot renvoie à Teams doit également provenir de cette machine virtuelle. S’il existe des appels multimédias en temps réel en cours lorsque la machine virtuelle est arrêtée, ces appels sont soudainement arrêtés. Si le bot a connaissance préalablement de l’arrêt de la machine virtuelle en attente, il peut mettre fin aux appels.
 
 La section suivante fournit des détails sur l’accessibilité des bots multimédias hébergés par l’application.
 
