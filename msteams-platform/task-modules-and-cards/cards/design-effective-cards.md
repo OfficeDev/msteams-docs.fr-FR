@@ -1,15 +1,15 @@
 ---
 title: Conception de Cartes adaptatives pour votre application
-description: Découvrez comment concevoir des Cartes adaptatives pour Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
+description: Dans ce module, découvrez comment concevoir des Cartes adaptatives pour votre application Teams et obtenir le Kit d’interface utilisateur Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103901"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142660"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 
@@ -398,7 +398,7 @@ Voici le code pour l’implémentation de l’exemple de conception que vous dev
 
 # <a name="design"></a>[Concevoir](#tab/design)
 
-Lorsque la taille d’un affichage n’a pas besoin de changer, définissez les colonnes sur une largeur de pixel spécifique. Cet exemple montre la taille de la colonne de gauche à 50 pixels, tandis que les descriptions en dessous des miniatures étendent la longueur de la carte.
+Lorsque la taille d’un affichage n’a pas besoin de changer, définissez les colonnes sur une largeur de pixel spécifique. Cet exemple montre la colonne gauche dimensionnée à 50 pixels, tandis que les descriptions situées à côté des miniatures s'étendent sur toute la longueur de la carte.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="L’image montre comment définir la largeur de colonne dans les cartes adaptatives.":::
 
