@@ -1,16 +1,16 @@
 ---
 title: Vue d’ensemble de monétiser votre application
-description: Découvrez comment monétiser votre application Microsoft Teams.
+description: Découvrez comment monétiser votre application Microsoft Teams en choisissant un modèle de tarification avec l’offre Saas.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6c1847b700bf3771314dd01b95b5927b9e3e4820
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 6dfa80b40eb53c5d552ab4a3ffc9a6cefd7cda0a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501976"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123054"
 ---
 # <a name="monetize-your-app"></a>Monétiser votre application
 
