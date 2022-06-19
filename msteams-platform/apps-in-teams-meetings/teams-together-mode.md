@@ -3,12 +3,12 @@ title: Scènes personnalisées en mode Ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736871"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150644"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -24,7 +24,7 @@ Le processus suivant donne une vue d'ensemble de la création d'une application 
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créer une application de scène uniquement" border="false":::
 
-Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio de scène gère la création de package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
+Une application de scène uniquement est toujours une application dans Teams. Le studio de scène gère la création de package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
 
 > [!NOTE]
 > Toutefois, quand un utilisateur rejoint une réunion via mobile et que le mode Ensemble est allumé à partir du bureau, les utilisateurs mobiles qui ont allumé la vidéo apparaissent en mode Ensemble sur le bureau.
@@ -34,7 +34,7 @@ Une application de scène uniquement est toujours une application dans Microsoft
 Vous devez avoir une connaissance de base des éléments suivants pour utiliser des scènes personnalisées du mode Ensemble :
 
 * Définir une scène et des sièges dans une scène.
-* Vous devez disposer d’un compte de développeur Microsoft et être familier avec le [portail des développeurs](../concepts/build-and-test/teams-developer-portal.md) Microsoft Teams et App Studio.
+* Vous devez disposer d’un compte de développeur Microsoft et être familier avec le [portail des développeurs](../concepts/build-and-test/teams-developer-portal.md) Teams et App Studio.
 * Comprendre le [concept de chargement indépendant d’application.](../concepts/deploy-and-publish/apps-upload.md)
 * Assurez-vous que l’administrateur a accordé l’autorisation de [**Charger une application personnalisée**](../concepts/deploy-and-publish/apps-upload.md) et de sélectionner tous les filtres dans le cadre de la configuration de l’application et des stratégies de réunion, respectivement.
 
@@ -50,7 +50,7 @@ Prenons les pratiques suivantes pour une expérience de création de scène :
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Créer une scène à l’aide du studio de scène
 
-Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Celui-ci est disponible sur [Éditeur de scènes : portail des développeurs Teams.](https://dev.teams.microsoft.com/scenes) Ce document fait référence au studio de scène situé dans le portail des développeurs Microsoft Teams. L’interface et les fonctionnalités sont identiques dans Le Concepteur de scène App Studio.
+Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Celui-ci est disponible sur [Éditeur de scènes : portail des développeurs Teams.](https://dev.teams.microsoft.com/scenes) Ce document fait référence au studio de scène situé dans le portail des développeurs Teams. L’interface et les fonctionnalités sont identiques dans Le Concepteur de scène App Studio.
 
 Une scène dans le contexte du studio de scène est un artefact qui contient les éléments suivants :
 
@@ -106,9 +106,9 @@ Pour créer une scène à l'aide du studio de scène, procédez comme suit :
 
     ![Affecter un emplacement](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Pour tester rapidement votre scène dans Microsoft Teams, sélectionnez **Enregistrer** et sélectionner **Afficher dans Teams**.
+1. Pour tester rapidement votre scène dans Teams, sélectionnez **Enregistrer** et sélectionner **Afficher dans Teams**.
 
-    * La sélection de **Affichage dans Teams** crée automatiquement une application Microsoft Teams qui peut être affichée dans la page **Applications** dans le portail des développeurs Teams.
+    * La sélection de **Affichage dans Teams** crée automatiquement une application Teams qui peut être affichée dans la page **Applications** dans le portail des développeurs Teams.
     * La sélection de **Affichage dans Teams** crée automatiquement un package d’application qui est appmanifest.json derrière la scène. Vous pouvez accéder aux **applications** à partir du menu et accéder au package d’application créé automatiquement.
     * Pour supprimer une scène que vous avez créée, sélectionnez **Supprimer une scène** dans la barre supérieure.
 
@@ -217,7 +217,7 @@ Pour sélectionner des scènes et activer des scènes personnalisées en mode En
 1. Créez une réunion de test.
 
     >[!NOTE]
-    > Lorsque vous sélectionnez **Aperçu** dans le studio de scène, la scène est installée en tant qu’application dans Microsoft Teams. Il s'agit du modèle permettant à un développeur de tester et d'essayer les scènes du studio de scène. Une fois qu’une scène est livrée en tant qu’application, les utilisateurs voient ces scènes dans la galerie de scène.
+    > Lorsque vous sélectionnez **Aperçu** dans le studio de scène, la scène est installée en tant qu’application dans Teams. Il s'agit du modèle permettant à un développeur de tester et d'essayer les scènes du studio de scène. Une fois qu’une scène est livrée en tant qu’application, les utilisateurs voient ces scènes dans la galerie de scène.
 
 1. Dans la liste déroulante **Galerie** dans le coin supérieur gauche, sélectionnez **Mode ensemble**. La boîte de dialogue du **Sélecteur** s’affiche et la scène ajoutée est disponible.
 

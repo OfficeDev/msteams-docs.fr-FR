@@ -5,12 +5,12 @@ description: Avec ce parcours d’apprentissage, commencez à utiliser des bots 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143710"
+ms.locfileid: "66150840"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
@@ -18,7 +18,7 @@ Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’un
 
 > [!IMPORTANT]
 > Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD).
-> 
+>
 > Les applications Bot dans Microsoft Teams sont disponibles dans GCC-High par le biais d’[Azure Bot Service](/azure/bot-service/channel-connect-teams).
 
 Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web à l’aide de texte, de cartes interactives et de modules de tâche.
@@ -43,9 +43,9 @@ Votre bot a besoin d’informations contextuelles, telles que les détails du pr
 
 Vous pouvez envoyer et recevoir des fichiers via le bot à l’aide des API Graph ou des API de bot Teams. Consultez [Envoyer et recevoir des fichiers via un bot](~/bots/how-to/bots-filesv4.md).
 
-La limitation de débit permet d’optimiser les bots utilisés pour l’application Teams. Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de débit pour les demandes entrantes. Voir [optimiser votre bot avec une limite de débit dans Teams](~/bots/how-to/rate-limit.md).
+La limitation de débit permet d’optimiser les bots utilisés pour l’application Teams. Pour protéger Teams et ses utilisateurs, les API de bot fournissent une limite de débit pour les demandes entrantes. Voir [optimiser votre bot avec une limite de débit dans Teams](~/bots/how-to/rate-limit.md).
 
-Avec Microsoft Graph API pour les appels et les réunions en ligne, les applications Microsoft Teams peuvent désormais interagir avec les utilisateurs à l’aide de la voix et de la vidéo. Consultez [les bots d’appels et de réunions](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+Avec les API Microsoft Graph pour les appels et les réunions en ligne, les applications Teams peuvent désormais interagir avec les utilisateurs à l’aide de la voix et de la vidéo. Voir [les bots d’appels et de réunions.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 
 Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour les membres d’une conversation ou d’une équipe. Consultez [les modifications apportées aux API de bot Teams pour récupérer les membres de l’équipe ou de la conversation](~/resources/team-chat-member-api-changes.md).
 

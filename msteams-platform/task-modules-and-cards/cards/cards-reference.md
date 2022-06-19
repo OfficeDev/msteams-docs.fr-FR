@@ -1,15 +1,14 @@
 ---
 title: Types de cartes
-description: Décrit toutes les cartes et actions de carte disponibles pour les bots dans Teams
+description: Dans ce module, découvrez les cartes et les actions de carte disponibles pour les bots dans Teams et créez un héros, une miniature et des cartes adaptatives
 ms.localizationpriority: high
-keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032988"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142625"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -63,13 +62,13 @@ Vous pouvez identifier et utiliser différents types de cartes en fonction des b
 
 | Type de carte | Bots | Aperçus de l’extension de message | Résultats de l’extension de message | Modules de tâche | Webhooks sortants | Webhooks entrants | Connecteurs Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Carte adaptative | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Carte Connecteur Office 365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Carte de bannière | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Carte miniature | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Carte de liste | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| Carte de réception | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Carte de connexion | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Carte adaptative | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Carte Connecteur Office 365 | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Carte de bannière | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Carte miniature | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Carte de liste | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| Carte de réception | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| Carte de connexion | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > Pour les cartes adaptatives dans les webhooks entrants, tous les éléments de schéma de carte adaptative native, à l’exception de `Action.Submit`, sont entièrement pris en charge. Les actions prises en charge sont [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html),et [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) et [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -121,7 +120,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -304,7 +303,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="properties-of-a-hero-card"></a>Propriétés d’une carte de bannière
 
@@ -371,7 +370,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### <a name="properties-of-a-list-card"></a>Propriétés d’une carte de liste
 
@@ -449,7 +448,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Propriétés de la carte Connecteur Office 365
 
@@ -571,7 +570,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge des carte
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="example-of-a-receipt-card"></a>Exemple de carte de réception
 
@@ -645,7 +644,7 @@ Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge 
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### <a name="additional-information-on-signin-cards"></a>Informations supplémentaires sur les cartes de connexion
 
@@ -664,7 +663,7 @@ Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge 
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="carte miniature":::
 
@@ -747,7 +746,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les colle
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > Un carrousel peut afficher un maximum de dix cartes par message.
@@ -941,7 +940,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les colle
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### <a name="example-of-a-list-collection"></a>Exemple de collection de listes
 

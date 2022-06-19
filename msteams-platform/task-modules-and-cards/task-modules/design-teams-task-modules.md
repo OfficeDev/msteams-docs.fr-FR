@@ -1,16 +1,16 @@
 ---
 title: Conception de modules de tâches
 author: heath-hamilton
-description: Découvrez comment concevoir des modules de tâches pour les applications Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
+description: Dans ce module, découvrez comment concevoir des modules de tâches pour vos applications Teams et obtenez le Kit d’interface utilisateur Microsoft Teams.
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1514ed8e3101065efd482ced45de98b8b0f58ab8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104132"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143017"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâches pour votre application Microsoft Teams
 

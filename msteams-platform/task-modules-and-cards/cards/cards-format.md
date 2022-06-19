@@ -1,16 +1,15 @@
 ---
 title: Mise en forme du texte dans les cartes
-description: Décrit la mise en forme du texte de la carte dans Microsoft Teams
-keywords: format des cartes de bots teams
+description: Dans ce module, découvrez ce qu’est la mise en forme du texte de carte dans Microsoft Teams et mettez en forme des cartes avec Markdown.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103950"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144207"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 

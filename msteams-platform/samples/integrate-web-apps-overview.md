@@ -5,12 +5,12 @@ description: Dans cet article, vous allez commencer à intégrer des application
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123537"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144268"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
@@ -33,8 +33,8 @@ Pour une intégration efficace, veillez à mieux comprendre les conditions préa
 
 Les plateformes à faible code offrent une approche intuitive du développement de logiciels et nécessitent peu ou pas de codage pour créer des applications et des processus. Vous pouvez créer facilement des applications personnalisées avec des plateformes à faible code. Ces plateformes se composent d’une interface visuelle, de connecteurs pour back end services et d’un système intégré de gestion du cycle de vie des applications pour générer, déboguer, déployer et gérer des applications. Microsoft fournit les passerelles innovantes suivantes pour créer rapidement des applications compatibles avec Teams à l’aide d’attributs de code faible :
 
-* Microsoft Power Platform
-* modèles d’application Microsoft Teams
+* Plateforme Microsoft Power.
+* Modèles d’application Microsoft Teams.
 
 ## <a name="microsoft-power-platform"></a>Microsoft Power Platform
 

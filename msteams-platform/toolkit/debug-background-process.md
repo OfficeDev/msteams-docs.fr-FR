@@ -1,17 +1,17 @@
 ---
 title: Déboguer les processus en arrière-plan
 author: zyxiaoyuer
-description: Fonctionnement du code Visual studio et du Teams Toolkit pendant le débogage local
+description: Dans ce module, découvrez le fonctionnement du Visual Studio Code et du Kit de ressources Teams pendant le débogage local, puis enregistrez et configurez votre application Teams.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: d692f3f6869767e4b9948b36e521a56d799ebe4b
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938925"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143584"
 ---
 # <a name="debug-background-processes"></a>Déboguer les processus en arrière-plan
 

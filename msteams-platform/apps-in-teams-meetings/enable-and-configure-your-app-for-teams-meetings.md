@@ -1,15 +1,15 @@
 ---
 title: Créer des applications pour les réunions Teams > Activer et configurer vos applications pour les réunions Teams
 author: surbhigupta
-description: Activez et configurez vos applications pour les réunions Teams et différents scénarios de réunion, mettez à jour le manifeste de l'application, configurez des fonctionnalités telles que le dialogue en réunion, la scène de réunion partagée, le panneau latéral de la réunion, etc.
+description: Découvrez comment activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer les fonctionnalités, etc.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 20253da4688009baabb746f3e71d0af47b2455d6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111317"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142590"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Créer des applications pour les réunions Teams > Activer et configurer vos applications pour les réunions Teams
 
@@ -37,10 +37,10 @@ Les fonctionnalités de l’application de réunions sont déclarées dans le ma
 
 > [!NOTE]
 >
-> * Vous devez mettre à jour le manifeste de votre application avec le [schéma de manifeste](../resources/schema/manifest-schema-dev-preview.md).
 > * Les applications dans les réunions nécessitent une `groupchat` étendue. L’étendue `team` fonctionne uniquement pour les onglets dans les canaux.
+> * Les applications dans les réunions peuvent utiliser les contextes suivants : `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` et `meetingStage`.
 
-Le manifeste de l’application doit inclure l’extrait de code suivant :
+L’extrait de code suivant est un exemple d’onglet configurable utilisé dans une application pour les réunions Teams :
 
 ```json
 
@@ -114,8 +114,9 @@ Pour ajouter un bot à une réunion :
 Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots**.
 
 > [!NOTE]
+>
 > * La boîte de dialogue en réunion affiche une boîte de dialogue dans une réunion et publie simultanément une carte adaptative dans la conversation de réunion auxquelles les utilisateurs peuvent accéder. La carte adaptative dans la conversation de réunion aide les utilisateurs lors de la participation à la réunion ou si l’application Teams est réduite.
-> * L’identité de l’utilisateur doit être confirmée à l’aide de [l’authentification unique des onglets](../tabs/how-to/authentication/auth-aad-sso.md). Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de l’API `GetParticipant` .
+> * L’identité de l’utilisateur doit être confirmée à l’aide de [l’authentification unique des onglets](../tabs/how-to/authentication/tab-sso-overview.md). Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de l’API `GetParticipant` .
 > * En fonction du rôle d’utilisateur, l’application peut fournir des expériences spécifiques au rôle. Par exemple, une application d’interrogation autorise uniquement les organisateurs et les présentateurs à créer un sondage.
 > * Les attributions de rôles peuvent être modifiées pendant qu’une réunion est en cours. Pour plus d’informations, consultez [Partager du contenu dans une réunion Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -184,6 +185,7 @@ Les participants peuvent partager des parties spécifiques de l'application vers
 Pour partager des parties spécifiques de l'application sur scène, vous devez invoquer les API correspondantes dans la bibliothèque SDK du client Teams. Pour plus d'informations, consultez la [référence de l’API](API-references.md).
 
 > [!NOTE]
+>
 > * Pour partager des parties spécifiques de l’application à mettre en scène, utilisez Teams manifeste version 1.12 ou ultérieure.
 > * Le partage de parties spécifiques de l’application à l’étape est pris en charge pour Teams clients de bureau uniquement.
 

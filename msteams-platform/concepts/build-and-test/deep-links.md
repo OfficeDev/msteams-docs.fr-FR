@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Découvrez comment créer des liens profonds et comment les utiliser et les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123716"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150679"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -91,7 +91,7 @@ Vous pouvez également générer des liens profonds par programmation, en utilis
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Utiliser un lien profond à partir d’un onglet
 
-Lors de la navigation vers un lien profond, Microsoft Teams navigue simplement vers l'onglet et fournit un mécanisme via la bibliothèque JavaScript de Microsoft Teams pour récupérer l'ID de la sous-page s'il existe.
+Lors de la navigation vers un lien profond, Microsoft Teams navigue simplement vers l'onglet et fournit un mécanisme via la bibliothèque JavaScript de Teams pour récupérer l'ID de la sous-page s'il existe.
 
 L’appel [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) (`microsoftTeams.getContext()`) dans TeamsJS v1 retourne une promesse qui sera résolue avec le contexte qui inclut la `subPageId` propriété (subEntityId pour TeamsJS v1) si l’onglet est parcouru via un lien profond. Pour plus d'informations, voir [Interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -109,7 +109,7 @@ Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Si le bot envoie un message contenant un `TextBlock` avec un lien profond, un nouvel onglet de navigateur est ouvert lorsque l’utilisateur sélectionne le lien. Cela se produit dans Chrome et dans l’application de bureau Microsoft Teams, tous deux exécutés sur Linux.
+> Si le bot envoie un message contenant un `TextBlock` avec un lien profond, un nouvel onglet de navigateur est ouvert lorsque l’utilisateur sélectionne le lien. Cela se produit dans Chrome et dans l’application de bureau Teams, tous deux exécutés sur Linux.
 > Si le bot envoie la même URL de lien profond dans un `Action.OpenUrl`, l’onglet Teams est ouvert dans l’onglet du navigateur actuel lorsque l’utilisateur sélectionne le lien. Aucun nouvel onglet de navigateur n’est ouvert.
 
 <!--- TBD: Edit this article.
@@ -245,7 +245,7 @@ Bien qu’il soit recommandé d’utiliser les API fortement typées de TeamsJS,
 Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 > [!NOTE]
-> Les paramètres de recherche ne prennent pas en charge le signal `+` à la place des espaces (``). Vérifiez que votre code d’encodage d’URI retourne `%20`for spaces, par exemple, `?subject=test%20subject` est correct, mais `?subject=test+subject` est incorrect.
+> Les paramètres de recherche ne prennent pas en charge`+` le signal à la place de l’espace blanc (``). Vérifiez que votre code d’encodage d’URI retourne `%20`for spaces, par exemple, `?subject=test%20subject` est correct, mais `?subject=test+subject` est incorrect.
 
 Les paramètres de requête sont les suivants :
 
@@ -446,7 +446,7 @@ Voici les paramètres de requête :
 
 | Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|ID de sous-entité consommateur de liens profonds  |Exemple d'application Microsoft Teams pour la démonstration d'un lien profond entre une conversation bot et un onglet consommant un ID de sous-entité.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|ID de sous-entité consommateur de liens profonds  | Exemple d'application Teams pour la démonstration d'un lien profond entre une conversation bot et un onglet consommant un ID de sous-entité.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Voir aussi
 

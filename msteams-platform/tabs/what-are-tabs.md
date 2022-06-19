@@ -1,16 +1,16 @@
 ---
 title: Onglets Microsoft Teams
 author: surbhigupta
-description: Une vue d’ensemble des onglets personnalisés sur la plateforme Teams
+description: Dans ce module, découvrez comment créer des onglets personnalisés sur la plateforme Teams, les fonctionnalités des onglets et les scénarios d’utilisation onglets
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 42d03b988268f9042bd6f6e84d180c8d4b0b2209
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130416"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143647"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
 

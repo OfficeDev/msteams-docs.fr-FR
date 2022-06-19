@@ -1,16 +1,16 @@
 ---
 title: Présentation des cas d’utilisation et des fonctionnalités Teams de votre application
 author: heath-hamilton
-description: Dans cet article, découvrez les fonctionnalités de l’application Microsoft Teams, planifiez votre application Teams, comprenez l’utilisateur de votre application et ses besoins, comprenez les problèmes utilisateur que votre application Teams résoudrait, planifiez l’authentification des utilisateurs et leur expérience d’intégration.
+description: Dans cet article, vous découvrirez les fonctionnalités de l’application Microsoft Teams, planifierez et comprendrez l’application et les fonctionnalités Teams, ainsi que les problèmes utilisateur que l’application Teams résoudrait.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: c2fc61024a9f0c2d9bcf21b549e226b0d264305d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104377"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142471"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 

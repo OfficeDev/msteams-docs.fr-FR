@@ -5,12 +5,12 @@ description: Présentez les éléments de la planification d’une application, 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142422"
+ms.locfileid: "66150686"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -91,7 +91,7 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 | Chargement indépendant d’applications | ✔️ | ❌ | ❌ |
 | Connecteurs personnalisés | ❌ | ❌ | ❌ |
 
-****Interface utilisateur de conformité*** : en autorisant les communications avec des tiers, les clients acceptent que ces communications soient traitées par le tiers et non par Microsoft. Le client est seul responsable de l’atténuation des risques associés à la connexion de bots tiers dans ses services. Microsoft n’approuve pas et ne donne aucune garantie, expresse ou implicite, concernant la sécurité des tiers que le client autorise à se connecter à son service. L’activation des bots étend votre limite système au-delà de ce client en fonction du bot dont vous choisissez de tirer parti. Il est de votre responsabilité de vous assurer que cela répond à vos exigences de conformité, notamment FedRAMP, DFARS, ITAR, etc. Il est de votre responsabilité d’évaluer le risque et la conformité de tout point de terminaison et URL auxquels vous vous connectez.
+****Interface utilisateur de conformité*** : en autorisant les communications avec des tiers, les clients acceptent que ces communications soient traitées par le tiers et non par Microsoft. Le client est seul responsable de l’atténuation des risques associés à la connexion de bots tiers dans ses services. Microsoft Corporation n’approuve pas et ne donne aucune garantie, expresse ou implicite, concernant la sécurité des tiers que le client autorise à se connecter à son service. L’activation des bots étend votre limite système au-delà de ce client en fonction du bot dont vous choisissez de tirer parti. Il est de votre responsabilité de vous assurer que cela répond à vos exigences de conformité, notamment FedRAMP, DFARS, ITAR, etc. Il est de votre responsabilité d’évaluer le risque et la conformité de tout point de terminaison et URL auxquels vous vous connectez.
 
 La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :
 

@@ -1,15 +1,14 @@
 ---
 title: Activer l’authentification à l’aide d’un fournisseur OAuth tiers
-description: Décrit le flux d’authentification dans les onglets, OAuth par Azure AD, et fournit un exemple de code
+description: Dans cet article, découvrez le flux d’authentification Teams dans les onglets, le fournisseur OAuth tiers, OAuth par Azure AD et les exemples de code d’authentification.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: onglets de flux d’authentification teams fournisseur OAuth tiers
-ms.openlocfilehash: 4ad7a765632a451880d8d8bb5342240478e6f6da
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 2edd52d80428e47a8586ec27de4b1595d872df8c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887799"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144249"
 ---
 # <a name="enable-authentication-using-third-party-oauth-provider"></a>Activer l’authentification à l’aide d’un fournisseur OAuth tiers
 
