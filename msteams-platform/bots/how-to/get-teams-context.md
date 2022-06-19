@@ -1,16 +1,16 @@
 ---
 title: Obtenir le contexte spécifique à Teams pour votre bot
 author: surbhigupta
-description: Découvrez comment obtenir le contexte spécifique de Teams pour votre bot, y compris la liste de conversations, les détails d’un membre ou d’une équipe, la liste des canaux, les exemples de code.
+description: Comment obtenir le contexte spécifique de Microsoft Team pour votre bot, y compris la liste de conversations, les détails d’un seul membre ou d’une équipe, la liste des canaux, les exemples de code.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: fc138a66bd5a489133c11db8a24b2a9d6d06634d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143759"
+ms.locfileid: "66150693"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir le contexte spécifique à Teams pour votre bot
 
@@ -208,7 +208,7 @@ Response body
 
 * * *
 
-Une fois que vous avez obtenu les détails d’un seul membre, vous pouvez obtenir les détails de l’équipe. Actuellement, pour récupérer des informations pour une équipe, utilisez les API de bot Microsoft Teams `TeamsInfo.GetMemberDetailsAsync` pour C# ou `TeamsInfo.getTeamDetails` pour TypeScript.
+Une fois que vous avez obtenu les détails d’un seul membre, vous pouvez obtenir les détails de l’équipe. Actuellement, pour récupérer des informations pour une équipe, utilisez les API de bot Teams `TeamsInfo.GetMemberDetailsAsync` pour C# ou `TeamsInfo.getTeamDetails` pour TypeScript.
 
 ## <a name="get-teams-details"></a>Obtenir les détails de l’équipe
 
@@ -283,7 +283,7 @@ Response body
 
 * * *
 
-Une fois que vous avez obtenu les détails de l’équipe, vous pouvez obtenir la liste des canaux dans une équipe. Actuellement, pour récupérer les informations d’une liste de canaux dans une équipe, utilisez les API de bot Microsoft Teams `TeamsInfo.GetTeamChannelsAsync` pour C# ou `TeamsInfo.getTeamChannels` pour les API TypeScript.
+Une fois que vous avez obtenu les détails de l’équipe, vous pouvez obtenir la liste des canaux dans une équipe. Actuellement, pour récupérer les informations d’une liste de canaux dans une équipe, utilisez les API de bot Teams `TeamsInfo.GetTeamChannelsAsync` pour C# ou `TeamsInfo.getTeamChannels` pour les API TypeScript.
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>Obtenir la liste des canaux dans une équipe
 
