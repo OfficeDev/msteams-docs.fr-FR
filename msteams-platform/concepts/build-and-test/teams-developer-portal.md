@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment configurer, distribuer et gérer
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 391d6c671bf7c34a734eed3202df50ebdc4f9eae
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142366"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164240"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Gérer vos applications Teams à l’aide du portail des développeurs
 
@@ -21,6 +21,31 @@ ms.locfileid: "66142366"
 >
 > * Actuellement, Developer Portal n’est pas disponible pour les locataires Cloud de la communauté du secteur public (GCC), GCC-High ou department of Defense (DOD).
 > * Toutefois, vous pouvez utiliser un locataire standard pour créer une application dans le Developer Portal, télécharger l’application et charger l’application à l’aide de [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) dans un cloud national. Pour plus d’informations, consultez [Déploiements cloud nationaux](/graph/deployments).
+
+> [!IMPORTANT]
+> Si vous effectuez une migration d’App Studio vers le portail des développeurs, le tableau suivant fournit les informations détaillées sur les fonctionnalités prises en charge dans le portail des développeurs :
+
+| Fonctionnalités | App Studio | Portail des développeurs |
+| --- | --- | --- |
+| Analyse des applications* | ❌ | ✔️ |
+| Fonctionnalités de l’application - Bots | ✔️ | ✔️ |
+| Fonctionnalités de l’application - Connecteurs | ✔️ | ✔️ |
+| Fonctionnalités de l’application - Extension de messagerie | ✔️ | ✔️ |
+| Fonctionnalités de l’application - Extension réunion | ❌ | ✔️ |
+| Fonctionnalités de l’application - Applications personnelles | ✔️ | ✔️ |
+| Fonctionnalités de l’application - Onglets | ✔️ | ✔️ |
+| Environnements d’application | ❌ | ✔️ |
+| Langues de l’application | ✔️ | ✔️ |
+| Aperçu et téléchargement du manifeste d’application | ✔️ | ✔️ |
+| Plans d’application et tarification | ❌ | ✔️ |
+| Publication d’applications | ✔️ | ✔️ |
+| Autorisations d’application | ❌ | ✔️ |
+| Partage d’applications avec les co-développeurs | ❌ | ✔️ |
+| Validation d’application | ✔️ | ✔️ |
+| Créer une application | ✔️ | ✔️ |
+| Transmettre un package zip | ✔️ | ✔️ |
+
+\**L’analytique des applications sera bientôt disponible en disponibilité générale.*
 
 ## <a name="register-an-app"></a>Inscrire une application
 
@@ -161,7 +186,7 @@ Le tableau **de bord Mon application** affiche les données R30 les plus récent
 
 Vous pouvez sélectionner chacun de ces **noms de métriques** pour afficher les tendances au fil du temps.
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Application":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="application":::
 
 ## <a name="use-tools-to-create-app-features"></a>Utiliser des outils pour créer des fonctionnalités d’application
 
