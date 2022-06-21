@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment commencer à développer des bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 6c57371e0df5739d800fc07e46a014aeb3836bc8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142359"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189743"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Ajouter des bots aux applications Microsoft Teams
 
@@ -34,11 +34,11 @@ Un bot se comporte différemment en fonction du type de conversation dans lequel
 
 Pour plus d’informations, consultez [Avoir une conversation avec un bot Microsoft Teams](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Avec les applications Microsoft Teams, vous pouvez faire du bot l’étoile de votre expérience, ou simplement un outil d’assistance. Les bots sont distribués dans le cadre de votre package d’application plus large, qui peut inclure d’autres fonctionnalités telles que les [onglets](~/tabs/what-are-tabs.md) ou les [extensions de message](~/messaging-extensions/what-are-messaging-extensions.md).
+Avec Teams applications, vous pouvez faire du bot l’étoile de votre expérience, ou simplement un assistance. Les bots sont distribués dans le cadre de votre package d’application plus large, qui peut inclure d’autres fonctionnalités telles que les [onglets](~/tabs/what-are-tabs.md) ou les [extensions de message](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="bot-apis"></a>API de bot
 
-Microsoft Teams prend en charge la plupart des [Microsoft Bot Framework](https://dev.botframework.com/). (Si vous disposez déjà d’un bot basé sur le Bot Framework, vous pouvez facilement l’adapter pour travailler dans Microsoft Teams.) Nous vous recommandons d’utiliser C# ou Node.js pour tirer parti de nos kits [SDK](/microsoftteams/platform/#pivot=sdk-tools). Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) Bot Builder :
+Teams prend en charge la plupart des [Microsoft Bot Framework](https://dev.botframework.com/). (Si vous disposez déjà d’un bot basé sur Bot Framework, vous pouvez facilement l’adapter pour fonctionner dans Teams.) Nous vous recommandons d’utiliser C# ou Node.js pour tirer parti de nos [kits SDK](/microsoftteams/platform/#pivot=sdk-tools). Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) Bot Builder :
 
 * Utilisation de types de cartes spécialisés tels que la carte connecteur Office 365.
 * Utilisation et définition de données de canal spécifiques à Teams sur les activités.

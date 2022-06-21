@@ -11,16 +11,30 @@ metadata:
   nextTutorialTitle: En savoir plus pour activer et configurer des applications pour les réunions
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 41735b81077ede0b1481efbcd6157cc612d7970f
-  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+  ms.openlocfilehash: 44fbfad1f477ec0fe11124b1937eb73d5eaeebd1
+  ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/16/2022
-  ms.locfileid: "66123376"
+  ms.lasthandoff: 06/21/2022
+  ms.locfileid: "66189306"
 items:
 - durationInMinutes: 1
-  content: "Partager la phase de réunion dans Teams permet d’activer et de configurer vos applications pour Teams réunions. Il aide les utilisateurs à partager la phase de réunion, permet aux participants à la réunion d’ajouter des détails d’état des tâches passées, présentes et futures, ce qui améliore Teams expérience de réunion.\n\n**Fonctionnalités clés de la phase de réunion de partage dans Teams**\n\n* Ajouter des détails d’état dans le panneau latéral\n* Ajouter des détails pour la collaboration \n\nCe guide pas à pas vous aide à partager la phase de réunion dans Teams pour ajouter des détails d’état pour la collaboration. La sortie suivante s’affiche :\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"vue d’étape des réunions\" border=\"true\":::\n"
-- title: Conditions préalables
+  content: >
+    Partager la phase de réunion dans Teams permet d’activer et de configurer vos applications pour Teams réunions. Il aide les utilisateurs à partager la phase de réunion, permet aux participants à la réunion d’ajouter des détails d’état des tâches passées, présentes et futures, ce qui améliore Teams expérience de réunion.
+
+
+    **Fonctionnalités clés de la phase de réunion de partage dans Teams**
+
+
+    * Ajoutez les détails de l’état dans le panneau latéral.
+
+    * Ajoutez des détails pour la collaboration.
+
+
+    Ce guide pas à pas vous aide à partager la phase de réunion dans Teams pour ajouter des détails d’état pour la collaboration. La sortie suivante s’affiche :
+
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="vue d’étape des réunions" border="true":::
+- title: Configuration requise
   durationInMinutes: 1
   content: "\nVeillez à installer les outils suivants et à configurer votre environnement de développement :\n\n* [Microsoft Teams](https://teams.microsoft.com/) avec un compte valide\n* [Dernière version de Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [Dernière version de nodejs](https://nodejs.org/en/download/) \n* [Dernière version de ngrok](https://ngrok.com/download) (uniquement pour le test de devbox) ou toute solution de tunneling équivalente\n\n  > [!NOTE]\n  > Après avoir téléchargé ngrok, inscrivez-vous et installez [authtoken](https://ngrok.com/download).\n\n Vous devez avoir une connaissance pratique des technologies suivantes :\n\n* [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [Dernière version de ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) \n* [Dernière version de React.JS](https://reactjs.org/tutorial/tutorial.html) \n"
 - title: Configurer un environnement local
@@ -31,7 +45,7 @@ items:
   content: "Utilisez ngrok ou l’invite de commandes pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web local. Exécutez la commande suivante dans ngrok :\n\n ```bash\n ngrok http -host-header=localhost 3978\n ``` \n   > [!TIP]\n   > Si vous rencontrez **ERR_NGROK_4018**, suivez les étapes, comme indiqué dans l’invite de commandes pour vous inscrire et authentifier ngrok. Exécutez ensuite la commande `ngrok http -host-header=localhost 3978`.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png\" alt-text=\"tunnel à l’aide de l’invite de commandes\" border=\"true\":::\n"
 - title: Configurer le fichier manifeste
   durationInMinutes: 1
-  content: "1. Accédez à **manifest.json** dans node.js dossier du référentiel cloné.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png\" alt-text=\"chemin d’accès pour manifest.json\" border=\"true\":::\n\n1. Ouvrez **manifest.json** dans Visual Studio et apportez les modifications suivantes :\n\n     * Remplacer `<<App-ID>>` par **l’ID d’application Microsoft** de votre bot\n     * Remplacer `<<BASE-URL>>` par le nom de domaine complet de votre ngrok\n     * Remplacer par `<<VALID DOMAIN>>` votre nom de domaine ngrok complet\n     \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png\" alt-text=\"fichier manifeste\" border=\"true\":::   \n"
+  content: "1. Accédez à **manifest.json** dans node.js dossier du référentiel cloné.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png\" alt-text=\"chemin d’accès pour manifest.json\" border=\"true\":::\n\n1. Ouvrez **manifest.json** dans Visual Studio et apportez les modifications suivantes :\n\n     * Remplacez par `<<App-ID>>` **l’ID d’application Microsoft** de votre bot.\n     * Remplacez-le `<<BASE-URL>>` par le nom de domaine ngrok complet.\n     * Remplacez par `<<VALID DOMAIN>>` votre nom de domaine ngrok complet.\n     \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png\" alt-text=\"fichier manifeste\" border=\"true\":::   \n"
 - title: Créer et exécuter une application cliente à l’aide de npm
   durationInMinutes: 1
   content: "1. Dans votre référentiel cloné, accédez aux **exemples** > **meetings-stage-view** > **nodejs**.\n\n1. Copiez le chemin **du dossier nodejs** .\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png\" alt-text=\"chemin d’accès au dossier\" border=\"true\":::\n\n1. Ouvrez une nouvelle fenêtre **d’invite de commandes** , remplacez le répertoire actuel par le chemin **d’accès nodejs** copié.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png\" alt-text=\"chemin d’accès pour nodejs\" border=\"true\":::\n\n1. Exécutez la commande suivante dans **l’invite de commandes** pour télécharger les packages et les dépendances :\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. Exécutez la commande suivante dans **l’invite de commandes** pour démarrer l’application :\n\n   ```Command-Prompt\n   npm start\n   ```\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png\" alt-text=\"générer et exécuter\" border=\"true\":::\n   \n"

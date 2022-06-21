@@ -3,12 +3,12 @@ title: Support de l'identification unique pour les robots
 description: Découvrez comment obtenir un jeton utilisateur et qu’un développeur de bots peut utiliser une carte de connexion ou le service de bot Azure avec la prise en charge de la carte OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 37c7fcd62c6b85c2220e9db57060da03437d79da
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144144"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189724"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Support de l'identification unique pour les robots
 
@@ -16,6 +16,11 @@ L'authentification par authentification unique dans Microsoft Azure Active Direc
 
 >[!NOTE]
 > OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base du flux d’octroi implicite OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans les onglets Microsoft Teams.
+
+Consultez la vidéo suivante pour en savoir plus sur la prise en charge de l’authentification unique (SSO) pour les bots :
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+<br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot SSO au moment de l’exécution
 

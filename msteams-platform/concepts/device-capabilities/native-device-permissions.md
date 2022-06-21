@@ -1,15 +1,14 @@
 ---
 title: Demander des autorisations d’appareil pour votre application Microsoft Teams
-keywords: Les fonctionnalités des applications Teams autorisent l’appareil à analyser l’image audio du code-barres qr en mode natif
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès à des fonctionnalités natives qui nécessitent le consentement de l’utilisateur, telles que les fonctionnalités QR d’analyse, de code-barres, d’image, d’audio et de vidéo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c39673bd03d18c0aabb98e218bf13c41ce1eab9f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150819"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189459"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Demander des autorisations d’appareil pour votre application Teams
 
@@ -127,7 +126,7 @@ Tirez parti de l’API HTML5 ou Teams appropriée pour afficher une invite d’o
 > * Prise en charge de `camera`, `gallery`et `microphone` est activée via [**l’API selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Utilisez [**l’API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) pour une capture d’image unique.
 > * La prise en charge de `location` est activée via [**API getLocation**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Vous devez l’utiliser `getLocation API` pour l’emplacement, car l’API de géolocalisation HTML5 n’est actuellement pas entièrement prise en charge sur Teams bureau.
 
-Par exemple :
+Par exemple :
 
 * Pour inviter l’utilisateur à accéder à son emplacement, vous devez appeler `getCurrentPosition()`:
 

@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment ajouter un déploiement de lien 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142814"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190001"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
@@ -26,6 +26,11 @@ Ce document vous guide sur la façon d’ajouter un déploiement de lien à votr
 L’extension de message Azure DevOps utilise le déploiement de liens pour rechercher les URL collées dans la zone de message de composition pointant vers un élément de travail. Dans l’image suivante, un utilisateur a collé une URL pour un élément dans Azure DevOps que l’extension de message a résolue dans une carte :
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemple de déploiement de lien":::
+
+Consultez la vidéo suivante pour en savoir plus sur le déploiement de liens :
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+<br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Ajouter un déploiement de lien au manifeste de votre application
 

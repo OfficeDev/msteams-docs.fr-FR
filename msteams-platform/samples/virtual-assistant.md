@@ -3,12 +3,12 @@ title: Créer un assistant virtuel
 description: Découvrez comment créer Virtual Assistant bot pour Teams à l’aide d’exemples de code et d’extraits de code avec des fonctionnalités telles que les cartes adaptatives, la gestion des interruptions, etc.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 4b1dc7168cc67cd455182dddd4dd2d14a0cf9c3d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123061"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189515"
 ---
 # <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
@@ -263,7 +263,11 @@ L’extrait de code du fichier manifeste d’une compétence est illustré dans 
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 L’extrait de code de fichier manifeste de l’assistant virtuel correspondant est illustré dans la section suivante :
@@ -277,7 +281,11 @@ L’extrait de code de fichier manifeste de l’assistant virtuel correspondant 
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 Une fois les commandes appelées par un utilisateur, l’assistant virtuel peut identifier une compétence associée en analysant l’ID de commande, en mettant à jour l’activité en supprimant le suffixe `:<skill_id>` supplémentaire de l’ID de commande et en le transférant à la compétence correspondante. Le code d’une compétence n’a pas besoin de gérer le suffixe supplémentaire. Ainsi, les conflits entre les ID de commande entre les compétences sont évités. Avec cette approche, toutes les commandes de recherche et d’action d’une compétence dans tous les contextes, telles que **la composition**, **la boîte de commandes** et le **message**, sont optimisées par un assistant virtuel.
@@ -334,7 +342,7 @@ Certaines activités d’extension de message n’incluent pas l’ID de command
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment convertir le modèle d'application Book-a-room en une compétence d'assistant virtuel : Book-a-room est une application Microsoft Teams qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pour 30, 60 ou 90 minutes à partir de l'heure actuelle. La durée par défaut est de 30 minutes. Le bot Book-a-room s’applique aux conversations personnelles ou 1:1.
+L’exemple suivant montre comment convertir le modèle d’application Book-a-room en une compétence Virtual Assistant : Book-a-room est un Teams qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pendant 30, 60 ou 90 minutes à partir de l’heure actuelle. La durée par défaut est de 30 minutes. Le bot Book-a-room s’applique aux conversations personnelles ou 1:1.
 L’image suivante affiche un assistant virtuel avec un **livre une compétence de salle** :
 
 ![L’assistant virtuel avec une compétence « réserver une salle »](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -343,7 +351,7 @@ Voici les modifications delta introduites pour la convertir en compétence attac
 
 ### <a name="skill-manifest"></a>Manifeste de compétence
 
-Un manifeste de compétence est un fichier JSON qui expose le point de terminaison de messagerie, l’ID, le nom et d’autres métadonnées pertinentes d’une compétence. Ce manifeste est différent du manifeste utilisé pour charger de manière indépendante une application dans Microsoft Teams. Une assistant virtuel nécessite un chemin d’accès à ce fichier comme entrée pour attacher une compétence. Nous avons ajouté le manifeste suivant au dossier wwwroot du bot.
+Un manifeste de compétence est un fichier JSON qui expose le point de terminaison de messagerie, l’ID, le nom et d’autres métadonnées pertinentes d’une compétence. Ce manifeste est différent du manifeste utilisé pour charger de manière indépendante une application dans Teams. Une assistant virtuel nécessite un chemin d’accès à ce fichier comme entrée pour attacher une compétence. Nous avons ajouté le manifeste suivant au dossier wwwroot du bot.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

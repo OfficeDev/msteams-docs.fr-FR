@@ -1,17 +1,16 @@
 ---
 title: Installer Moodle LMS
-description: Comment installer et configurer l’application d’intégration Moodle pour Microsoft Teams
-keywords: plug-ins d’intégration d’application Teams Moodle
+description: Dans cet article, vous allez découvrir comment installer et configurer l’application d’intégration Moodle pour Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0c19d8bc4e3919fe49f6594c8ec738bafc1c76d3
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66049003"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189634"
 ---
 # <a name="install-moodle-lms"></a>Installer Moodle LMS
 
@@ -30,7 +29,7 @@ Dans cet article, vous allez apprendre à installer moodle LMS.
 >
 > Pour en savoir plus sur les fonctionnalités fournies par cette intégration, consultez [Microsoft Teams et Moodle](https://education.microsoft.com/resource/3dffb3a8).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Voici les conditions préalables à l’installation de Moodle :
 
@@ -131,12 +130,12 @@ Utilisez la page de configuration des plug-ins Moodle générée `AppID` et `Key
 
 1. Ensuite, vous devez ajouter les `AppID` plug-ins `Key` Moodle Microsoft 365. Revenez à la page d’administration des plug-ins, Administration du site > Plug-ins > Microsoft 365 Intégration.
 
-1. Sous l’onglet **Installation** , ajoutez les `AppID` `Key` éléments que vous avez copiés précédemment, puis **sélectionnez Enregistrer les modifications**. Une fois la page actualisée, vous pouvez voir une nouvelle section **Choisir la méthode de connexion**.
+1. Sous l’onglet **Installation** , ajoutez les `AppID` éléments que `Key` vous avez copiés précédemment, puis **sélectionnez Enregistrer les modifications**. Une fois la page actualisée, vous pouvez voir une nouvelle section **Choisir la méthode de connexion**.
 
 1. Dans la **méthode Choisir la connexion**, cochez la case intitulée **Par défaut**, puis réélectionnez **Enregistrer les modifications** .
 
-1. Une fois la page actualisée, vous pouvez voir un autre **nouveau consentement de l’administrateur de section & des informations supplémentaires**.
-    1. Sélectionnez **Le lien Fournir le consentement de l’administrateur**, entrez vos informations d’identification d’administrateur général Microsoft 365, puis **acceptez** d’accorder les autorisations.
+1. Une fois la page actualisée, vous pouvez voir une autre nouvelle section **Administration consentement & des informations supplémentaires**.
+    1. Sélectionnez **Fournir Administration lien De consentement**, entrez vos informations d’identification d’administrateur général Microsoft 365, puis **Acceptez** d’accorder les autorisations.
     1. En regard du champ **Locataire Azure AD** , sélectionnez le bouton **Détecter** .
     1. En regard de **l’URL OneDrive Entreprise**, sélectionnez le bouton **Détecter**.
     1. Une fois les champs renseignés, sélectionnez à nouveau le bouton **Enregistrer les modifications** .
@@ -239,7 +238,7 @@ Une fois le déploiement des ressources terminé sur Azure, vous devez configure
 
 1. Dans Moodle, ouvrez la page **Team Paramètres** de vos plug-ins Moodle Microsoft 365.
 
-1. Dans le champ **Bot Endpoint** , collez l’URL que vous venez de copier et remplacez les *messages* word par *webhook*. L’URL doit apparaître comme suit : `https://botname.azurewebsites.net/api/webhook`
+1. Dans le champ **Bot Endpoint** , collez l’URL que vous avez copiée et remplacez les *messages* word par *webhook*. L’URL doit apparaître comme suit : `https://botname.azurewebsites.net/api/webhook`
 
 1. Sélectionnez **Enregistrer les modifications**.
 
@@ -249,7 +248,7 @@ Une fois le déploiement des ressources terminé sur Azure, vous devez configure
 
 Une fois votre bot déployé sur Azure et configuré pour communiquer avec votre serveur Moodle, vous devez déployer votre application Microsoft Teams. Pour ce faire, vous devez charger le fichier manifeste de l’application que vous avez téléchargé à partir de la page Paramètres Microsoft 365 Moodle Plugins Team à l’étape précédente.
 
-Avant d’installer l’application, vous devez vous assurer d’activer les applications externes et de charger des applications. Pour plus d’informations, consultez [Préparer votre locataire Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md).
+Avant d’installer l’application, vous devez vous assurer d’activer les applications externes et le chargement des applications. Pour plus d’informations, consultez [Préparer votre locataire Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md).
 
 Pour déployer votre application :
 
@@ -274,7 +273,7 @@ Pour autoriser la création automatique d’onglets Moodle :
 
 1. Ouvrir Microsoft Teams.
 
-1. Sélectionnez l’icône Applications dans la zone inférieure gauche de la barre de navigation.
+1. Sélectionnez l’icône Applications dans le volet inférieur gauche.
 
 1. Recherchez **l’application Moodle** chargée > sélectionnez l’icône **d’options** > sélectionner **le lien copier**.
 
@@ -284,7 +283,7 @@ Pour autoriser la création automatique d’onglets Moodle :
 
 1. Collez l’ID de l’application Microsoft Teams dans le champ ID de l’application Moodle, puis enregistrez les modifications.
 
-Lorsqu’un cours Moodle est synchronisé, Microsoft Teams installe automatiquement l’application Moodle dans l’équipe, crée un onglet Moodle dans le canal Général de Teams et la configure pour contenir la page de cours du cours Moodle à partir duquel il est synchronisé. Vous pouvez maintenant commencer à utiliser vos cours Moodle directement à partir de Microsoft Teams.
+Lorsqu’un cours Moodle est synchronisé, Teams installe automatiquement l’application Moodle dans l’équipe, crée un onglet Moodle dans le canal Général de Teams et la configure pour contenir la page de cours du cours Moodle à partir duquel il est synchronisé. Vous pouvez maintenant commencer à utiliser vos cours Moodle directement à partir de Teams.
 
 > [!NOTE]
 > Pour partager des demandes de fonctionnalités ou des commentaires avec nous, visitez notre [page User Voice](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).

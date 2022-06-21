@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment définir des commandes d’actio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143430"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189621"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -23,6 +23,12 @@ Avant de créer la commande d’action, vous devez décider des facteurs suivant
 1. [D’où la commande d’action peut-elle être déclenchée ?](#select-action-command-invoke-locations)
 1. [Comment le module de tâche sera-t-il créé ?](#select-how-to-create-your-task-module)
 1. [Le message final ou la carte sera-t-il envoyé au canal à partir d’un bot, ou le message ou la carte sera-t-il inséré dans la zone de composition de message que l’utilisateur doit envoyer ?](#select-how-the-final-message-is-sent)
+
+Consultez la vidéo suivante pour découvrir comment définir des commandes d’action d’extension de message :
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## <a name="select-action-command-invoke-locations"></a>Sélectionner des emplacements d’appel de commande d’action
 
@@ -185,7 +191,7 @@ La section suivante est un exemple d’objet `composeExtensions` définissant de
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -212,7 +218,7 @@ La section suivante est un exemple d’objet `composeExtensions` définissant de
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

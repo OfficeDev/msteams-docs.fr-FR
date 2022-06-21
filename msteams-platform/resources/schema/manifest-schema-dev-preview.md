@@ -4,12 +4,12 @@ description: Découvrez l’exemple de fichier manifeste et la description de to
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142736"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189874"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
 
@@ -477,7 +477,7 @@ L’objet est un tableau (maximum 1 élément) avec tous les éléments de type 
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Votre extension de message doit déclarer une ou plusieurs commandes. Chaque commande apparaît dans Microsoft Teams en tant qu’interaction potentielle à partir du point d’entrée basé sur l’IU. Il y a un maximum de 10 commandes.
+Votre extension de message doit déclarer une ou plusieurs commandes. Chaque commande apparaît dans Teams en tant qu’interaction potentielle à partir du point d’entrée basé sur l’interface utilisateur. Il y a un maximum de 10 commandes.
 
 Chaque élément de commande est un objet avec la structure suivante :
 

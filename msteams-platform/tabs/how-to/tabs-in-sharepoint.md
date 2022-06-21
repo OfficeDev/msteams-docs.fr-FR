@@ -5,12 +5,12 @@ description: Découvrez comment déployer votre onglet Teams existant sur ShareP
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f889a4e1932feb02eeb502ab2f85f051093a5b58
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123646"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189472"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Ajouter l'onglet Teams à SharePoint
 
@@ -67,7 +67,7 @@ Avec SharePoint Framework v.1.7, vous pouvez héberger vos onglets Teams dans Sh
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint Framework dans Teams
 
-Vous pouvez également implémenter des onglets Microsoft Teams à l’aide de SharePoint Framework. Les composants WebPart SharePoint Framework sont hébergés dans SharePoint sans passer par des services externes tels qu’Azure. Pour les développeurs SharePoint, cela simplifie considérablement le processus de développement pour les onglets Teams. Pour plus d’informations sur SharePoint Framework dans Teams, voir [Comment utiliser SharePoint Framework dans Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+Vous pouvez également implémenter vos onglets Teams à l’aide de SharePoint Framework. Les composants WebPart SharePoint Framework sont hébergés dans SharePoint sans passer par des services externes tels qu’Azure. Pour les développeurs SharePoint, cela simplifie considérablement le processus de développement pour les onglets Teams. Pour plus d’informations sur SharePoint Framework dans Teams, voir [Comment utiliser SharePoint Framework dans Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Introduction
 

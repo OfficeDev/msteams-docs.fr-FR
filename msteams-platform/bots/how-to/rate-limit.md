@@ -3,12 +3,12 @@ title: Optimisez votre robot grâce à la limitation du débit dans Teams
 description: En savoir plus sur la gestion de la limite de débit pour les bots avec une limite par bot par thread et par limite pour tous les bots à l’aide d’exemples de code
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143731"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190245"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
@@ -176,3 +176,7 @@ Le tableau suivant fournit la limite par thread pour tous les bots :
 
 > [!div class="nextstepaction"]
 > [Bots d’appels et réunions](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Gérer une opération de longue durée](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

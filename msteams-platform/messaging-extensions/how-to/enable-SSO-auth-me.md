@@ -1,16 +1,16 @@
 ---
 title: Prise en charge de l’authentification unique pour vos extensions de messages
 author: KirtiPereira
-description: Dans ce module, découvrez comment activer la prise en charge de l’authentification unique (SSO) pour vos extensions de messagerie avec des exemples de code.
+description: Dans cet article, vous allez apprendre à activer la prise en charge de l’authentification unique (SSO) pour vos extensions de messagerie avec des exemples de code.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a0130f2730289c3e45dfa3aa4585e62bd430a48a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e891e147d4cc3216b6c2acb686505dd03353b385
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142849"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189857"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Prise en charge de l’authentification unique pour les extensions de messages
 
@@ -123,8 +123,8 @@ Cette section fournit un exemple de Kit de développement logiciel (SDK) d’aut
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Authentification du bot | Cet exemple montre comment prendre en main l’authentification dans un bot pour Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Authentification unique Tab, Bot and Message Extension (ME) | Cet exemple montre l’authentification unique pour Tab, Bot et ME – recherche, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Non disponible |
+| Authentification du bot | Cet exemple montre comment commencer à utiliser l’authentification dans un bot pour Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Authentification unique Tab, Bot and Message Extension (ME) | Cet exemple montre l’authentification unique pour Tab, Bot et ME : recherche, action, déploiement de liens. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Non disponible |
 
 ## <a name="see-also"></a>Voir aussi
 

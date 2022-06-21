@@ -4,12 +4,12 @@ description: Dans ce module, découvrez les détails de la mise en forme des mes
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 9121573dfa6f5c7a96f04ed16bcb0d41de0b5c34
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9e331a17940ee482a0c2adcb81b57a17823ab668
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143332"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190168"
 ---
 # <a name="message-formatting-for-bots"></a>Mise en forme des messages pour les bots
 
@@ -27,7 +27,7 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu du texte
 
-Microsoft Teams prend en charge un sous-ensemble de balises de mise en forme Markdown et XML (HTML).
+Teams prend en charge un sous-ensemble de balises de mise en forme Markdown et XML (HTML).
 
 Actuellement, les limitations suivantes s’appliquent :
 
@@ -37,7 +37,7 @@ Actuellement, les limitations suivantes s’appliquent :
 
 ## <a name="cross-platform-support"></a>Prise en charge multiplateforme
 
-Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Microsoft Teams, n’oubliez pas que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
+Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Teams, n’oubliez pas que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
 
 | Style                     | Messages texte uniquement | Cartes enrichies (XML uniquement) |
 | ---                       | :---: | :---: |

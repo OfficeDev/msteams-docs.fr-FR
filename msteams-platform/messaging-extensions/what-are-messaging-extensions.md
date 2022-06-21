@@ -5,16 +5,16 @@ description: Dans ce module, découvrez les extensions de messagerie et les scé
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144319"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189797"
 ---
 # <a name="message-extensions"></a>Extensions de messages
 
-Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez ensuite renvoyer les résultats de cette interaction au client Microsoft Teams, généralement sous la forme d’une carte avec mise en forme enrichie.
+Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez renvoyer les résultats de cette interaction au client Teams sous la forme d’une carte richement mise en forme.
 
 > [!IMPORTANT]
 > Les extensions de message sont disponibles dans les environnements Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) et GCC-High, mais pas dans l’environnement du ministère de la Défense (DoD).
@@ -38,12 +38,12 @@ L’image suivante affiche les emplacements à partir desquels les extensions de
 
 ## <a name="understand-how-message-extensions-work"></a>Comprendre le fonctionnement des extensions de message
 
-Une extension de message se compose d'un service Web que vous hébergez et d'un manifeste d'application, qui définit l'endroit où votre service Web est invoqué dans le client Microsoft Teams. Le service web tire parti du schéma de messagerie et du protocole de communication sécurisé du Bot Framework. Vous devez donc enregistrer votre service web en tant que bot dans le Bot Framework.
+Une extension de message se compose d’un service web que vous hébergez et d’un manifeste d’application, qui définit l’emplacement d’appel de votre service web dans le client Teams. Le service web tire parti du schéma de messagerie et du protocole de communication sécurisé du Bot Framework. Vous devez donc enregistrer votre service web en tant que bot dans le Bot Framework.
 
 > [!NOTE]
 > Bien que vous puissiez créer le service web manuellement, utilisez le [Kit de développement logiciel (SDK) Bot Framework](https://github.com/microsoft/botframework-sdk) pour utiliser le protocole.
 
-Dans le manifeste de l’application pour Microsoft Teams application, une extension de message unique est définie avec jusqu’à dix commandes différentes. Chaque commande définit un type, tel que l’action ou la recherche, ainsi que les emplacements dans le client à partir desquels il est appelé. Les emplacements d’appel sont la zone de message de composition, la barre de commandes et le message. Lors de l’appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l’interaction suivante à activer.
+Dans le manifeste de l’application pour Teams application, une extension de message unique est définie avec jusqu’à dix commandes différentes. Chaque commande définit un type, tel que l’action ou la recherche, ainsi que les emplacements dans le client à partir desquels il est appelé. Les emplacements d’appel sont la zone de message de composition, la barre de commandes et le message. Lors de l’appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l’interaction suivante à activer.
 
 ## <a name="types-of-message-extension-commands"></a>Types de commandes d’extension de message
 
@@ -71,7 +71,7 @@ L'image suivante affiche le module de tâches de la commande de recherche d'exte
 
 ## <a name="link-unfurling"></a>Déploiement de lien
 
-Un service web est appelé lorsqu’une URL est collée dans la zone de composition du message. Cette fonctionnalité est appelée déploiement de liens. Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, en fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter le client Microsoft Teams.
+Un service web est appelé lorsqu’une URL est collée dans la zone de composition du message. Cette fonctionnalité est appelée déploiement de liens. Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, en fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter le client Teams.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu’un lien est collé dans l’extension de message :
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="déployer le lien":::

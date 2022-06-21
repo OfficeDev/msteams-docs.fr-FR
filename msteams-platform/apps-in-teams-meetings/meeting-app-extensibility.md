@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez Teams cycle de vie des réunions et l’expérience de réunion des utilisateurs sur les ordinateurs de bureau et mobiles, les types d’utilisateurs, l’intégration de bots et l’extension de message dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4bc4609f2fdf6bba8b170088d214846c35d45486
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142576"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189361"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -226,3 +226,4 @@ Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctio
 * [Bot](../bots/what-are-bots.md)
 * [Extension de message](../messaging-extensions/what-are-messaging-extensions.md)
 * [Concevoir votre application](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Rapports de présence aux réunions Microsoft Teams](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)

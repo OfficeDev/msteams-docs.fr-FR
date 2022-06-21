@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 2c7637f8ec3bd161827a2bd79f73b7374378e55b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a65fa1fdbf854749bf21a4d4ab395af74211fc5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142723"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189356"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -197,7 +197,7 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
                     ],
                     "description": "Command Description; e.g., Add a customer",
                     "initialRun": true,
-                    "fetchTask": true,
+                    "fetchTask": false ,
                     "parameters": [
                         {
                             "name": "custinfo",
@@ -578,7 +578,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameters.title`|string|32 caractères|✔️|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true`. Un des éléments suivants`text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: false`. Un des éléments suivants`text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour le `choiceset`. Utilisez uniquement lorsque `parameter.inputType` est `choiceset`.|
 |`parameters.choices.title`|string|128 caractères|✔️|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔️|Valeur du choix.|
@@ -750,7 +750,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties

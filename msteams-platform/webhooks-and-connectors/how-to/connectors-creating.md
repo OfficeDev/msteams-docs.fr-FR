@@ -5,16 +5,23 @@ description: Dans ce module, découvrez comment bien démarrer avec les connecte
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 53f5f6d9f360c465175b18d8b1b5eab9020d3ccf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143556"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189329"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
 Avec les applications Microsoft Teams, vous pouvez ajouter votre Connecteur Office 365 existant ou en créer un nouveau dans Teams. Pour plus d'informations, consultez la section [Construire votre propre connecteur](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+
+Consultez la vidéo suivante pour découvrir comment créer un connecteur Office 365 :
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+<br>
+
 
 ## <a name="add-a-connector-to-teams-app"></a>Ajouter un connecteur à l’application Teams
 
@@ -22,7 +29,7 @@ Vous pouvez créer un [package](~/concepts/build-and-test/apps-package.md) et [p
 
 Pour distribuer votre connecteur, inscrivez-le dans le [Tableau de bord du développeur des connecteurs](https://aka.ms/connectorsdashboard).
 
-Pour qu’un connecteur fonctionne uniquement dans Microsoft Teams, suivez les instructions pour envoyer le connecteur dans l’article [Publier votre application dans le store Microsoft Teams.](~/concepts/deploy-and-publish/appsource/publish.md). Sinon, un connecteur inscrit fonctionne dans tous les produits Office 365 qui prennent en charge les applications, y compris les Outlook et Teams.
+Pour qu’un connecteur fonctionne uniquement dans Teams, suivez les instructions pour envoyer le connecteur dans [la publication de votre application dans l’article Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md). Sinon, un connecteur inscrit fonctionne dans tous les produits Office 365 qui prennent en charge les applications, y compris les Outlook et Teams.
 
 > [!IMPORTANT]
 > Votre connecteur est inscrit après avoir sélectionné **Enregistrer** dans le tableau de bord du développeur des connecteurs. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions dans [Publier votre application Microsoft Teams sur AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si vous ne souhaitez pas publier votre application dans AppSource, distribuez-la directement à l’organisation. Après la publication des connecteurs pour votre organisation, aucune action supplémentaire n’est requise sur le tableau de bord du connecteur.
@@ -40,7 +47,7 @@ Les utilisateurs peuvent effectuer l’intégralité de l’expérience de confi
     > * Le code peut traiter l’événement d’enregistrement en récupérant les paramètres du webhook. Votre code stocke le webhook pour publier des événements ultérieurement.
     > * L’expérience de configuration est chargée en ligne dans Teams.
 
-Vous pouvez réutiliser votre expérience de configuration web existante ou créer une version distincte à héberger spécifiquement dans Teams. Votre code doit inclure le Kit de développement logiciel (SDK) JavaScript Microsoft Teams. Cela permet à votre code d’accéder aux API pour effectuer des opérations courantes, telles que l’obtention du contexte utilisateur, de canal ou d’équipe actuel et l’initialisation des flux d’authentification.
+Vous pouvez réutiliser votre expérience de configuration web existante ou créer une version distincte à héberger spécifiquement dans Teams. Votre code doit inclure le SDK JavaScript Teams. Cela permet à votre code d’accéder aux API pour effectuer des opérations courantes, telles que l’obtention du contexte utilisateur, de canal ou d’équipe actuel et l’initialisation des flux d’authentification.
 
 Pour intégrer l’expérience de configuration :
 
@@ -136,7 +143,7 @@ Le tableau suivant fournit les paramètres et les détails des propriétés de r
 | `configName`  | Nom de configuration, tel que défini par votre code lors de l’appel vers `setSettings()`. |
 | `contentUrl` | URL de la page de configuration, définie par votre code lors de l’appel vers `setSettings()`. |
 | `webhookUrl` | URL de webhook créée pour le connecteur. Utilisez l’URL de webhook pour publier le code JSON structuré afin d’envoyer des cartes au canal. Le `webhookUrl` est retourné uniquement lorsque l’application retourne des données. |
-| `appType` | Les valeurs renvoyées peuvent être `mail`, `groups` ou `teams` correspondant à la messagerie Office 365, aux groupes Office 365 ou à Microsoft Teams. |
+| `appType` | Les valeurs retournées peuvent être `mail`respectivement , `groups`ou `teams` correspondre au Office 365 Mail, Office 365 Groups ou Teams. |
 | `userObjectId` | ID unique correspondant à l’utilisateur Office 365 qui a lancé la configuration du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365, qui a configuré la configuration dans votre service. |
 
 #### <a name="handle-edits"></a>Gérer les modifications
@@ -214,11 +221,11 @@ Une fois que vous avez téléchargé l’application, ouvrez la liste des connec
 ![Capture d’écran d’une section chargée dans la boîte de dialogue du connecteur](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> Le flux se produit entièrement dans Microsoft Teams en tant qu’expérience hébergée.
+> Le flux se produit entièrement dans Teams en tant qu’expérience hébergée.
 
 Pour vérifier que l’`HttpPOST`action fonctionne correctement, [envoyez des messages à votre connecteur](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Suivez le [guide pas à pas](../../sbs-teams-connectors.yml) pour créer et tester les connecteurs dans votre Microsoft Teams.
+Suivez le [guide pas à pas](../../sbs-teams-connectors.yml) pour créer et tester les connecteurs dans votre Teams.
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuer le webhook et le connecteur
 

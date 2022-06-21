@@ -3,12 +3,12 @@ title: Ajouter des actions de carte dans un bot
 description: Dans ce module, découvrez les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144172"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189758"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -556,6 +556,16 @@ Le code suivant montre un exemple de Cartes adaptatives avec l’action `invoke`
   }
 }
 ```
+
+## <a name="code-samples"></a>Exemples de code
+
+|S.no|Carte| description|.NET|Javascript|Python|Java|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
+|1|Utilisation de cartes|Présente tous les types de cartes, y compris la miniature, l’audio, le média, etc. S’appuie sur Welcomeing user + multi-prompt bot en présentant une carte avec des boutons dans le message de bienvenue qui routent vers la boîte de dialogue appropriée.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Cartes adaptatives|Montre comment la boîte de dialogue à plusieurs tours peut utiliser une carte pour obtenir une entrée utilisateur pour le nom et l’âge.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+
+> [!NOTE]
+> Les éléments multimédias ne sont pas pris en charge pour la carte adaptative dans Teams
 
 ## <a name="next-step"></a>Étape suivante
 

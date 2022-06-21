@@ -4,12 +4,12 @@ description: Dans ce module, découvrez le scénario de bout en bout d’une con
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142779"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190182"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversations par chat de canal et de groupe avec un robot Microsoft Teams
 
@@ -25,7 +25,7 @@ Les bots ajoutés à une équipe deviennent un autre membre de l’équipe et pe
 
 Un bot d’un groupe ou d’un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Bien que votre bot puisse certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations avec lui sont visibles par tout le monde. Par conséquent, un bot de qualité dans un groupe ou un canal doit ajouter de la valeur à tous les utilisateurs et certainement pas partager par inadvertance des informations plus appropriées à une conversation en tête à tête.
 
-Votre bot, tout comme il est, peut être entièrement pertinent dans toutes les étendues sans nécessiter plus de travail. Dans Microsoft Teams, il n’est pas prévu que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre bot fournit la valeur utilisateur dans la ou les étendues que vous choisissez de prendre en charge. Pour plus d’informations sur les étendues, consultez [Applications dans Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Votre bot, tout comme il est, peut être entièrement pertinent dans toutes les étendues sans nécessiter plus de travail. Dans Teams, il n’est pas prévu que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre bot fournit la valeur utilisateur dans la ou les étendues que vous choisissez de prendre en charge. Pour plus d’informations sur les étendues, consultez [Applications dans Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 Le développement d’un bot qui fonctionne dans des groupes ou des canaux utilise la plupart des mêmes fonctionnalités que les conversations personnelles. Des événements et des données supplémentaires dans la charge utile fournissent des informations de groupe et de canal Teams. Ces différences, ainsi que les principales différences de fonctionnalités courantes, sont décrites dans les sections suivantes.
 

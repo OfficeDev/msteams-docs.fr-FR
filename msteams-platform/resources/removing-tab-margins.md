@@ -5,16 +5,16 @@ description: Dans ce module, découvrez comment la suppression des marges de tab
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143318"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190143"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
-Ce document décrit comment la suppression des marges autour de tous les onglets dans Microsoft Teams améliore l’expérience de création d’applications. Il s’agit d’une amélioration introduite dans Microsoft Teams en 2021.
+Ce document décrit comment la suppression des marges autour de tous les onglets dans Microsoft Teams améliore l’expérience de création d’applications. Il s’agit d’une amélioration introduite dans Teams en 2021.
 Vous pouvez créer des applications qui semblent plus natives pour Teams en supprimant les marges autour de tous les onglets. Les onglets avec marges supprimées s’alignent sur les [conceptions du kit](~/tabs/design/tabs.md) d’interface utilisateur de Microsoft Teams. La plupart des applications présentent une apparence améliorée sans marges.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Esprit tabulation et sans marges" border="false":::

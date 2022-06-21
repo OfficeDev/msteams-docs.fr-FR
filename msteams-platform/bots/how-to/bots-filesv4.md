@@ -4,12 +4,12 @@ description: Apprenez à envoyer et à recevoir des fichiers par le biais du rob
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142926"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189645"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyez et recevez des fichiers par le biais du robot
 
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>Exemple de base en C#
+### <a name="basic-example-in-c"></a>Exemple de base en C #
 
 Le code suivant montre un exemple de la façon de gérer les téléchargements de fichiers et d'envoyer des demandes de consentement de fichiers dans le dialogue du robot :
 
@@ -332,3 +332,7 @@ Suivez le [guide étape par étape](../../sbs-file-handling-in-bot.yml) pour té
 
 > [!div class="nextstepaction"]
 > [Optimisez votre robot grâce à la limitation du débit dans Teams](~/bots/how-to/rate-limit.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[API protégées dans Microsoft Teams](/graph/teams-protected-apis)

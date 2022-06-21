@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757443"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189881"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement spécifiques aux ressources dans Teams
 
@@ -28,7 +28,7 @@ Vérifiez que vous vérifiez les modifications de manifeste d’application suiv
 
 <details>
 
-<summary><b>Autorisations RSC pour le manifeste d’application version 1.12</b></summary>
+<summary><b>Autorisations RSC pour le manifeste d’application version 1.12 et ultérieure</b></summary>
 
 Ajoutez une clé [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) au manifeste de votre application avec les valeurs suivantes :
 
@@ -194,7 +194,7 @@ Exemple pour RSC dans une conversation
 
 <details>
 
-<summary><b>Autorisations RSC pour le manifeste d’application version 1.11 ou antérieure</b></summary>
+<summary><b>Autorisations RSC pour le manifeste d’application version 1.11 et antérieure</b></summary>
 
 Ajoutez une clé [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) au manifeste de votre application avec les valeurs suivantes :
 

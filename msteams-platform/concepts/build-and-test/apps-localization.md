@@ -4,12 +4,12 @@ description: Découvrez les considérations relatives à la localisation de votr
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cfb425bef1b09540c1049a3769c87d8def272314
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150665"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189590"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
@@ -46,6 +46,9 @@ Les images que vous chargez avec la langue anglaise sont utilisées dans AppSour
 Utilisez le schéma d’application Microsoft Teams `v1.5` et versions ultérieures pour localiser votre application. Pour ce faire, définissez l’attribut `$schema` de votre fichier manifest.json sur `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` ou version ultérieure et mettez à jour la classe `manifestVersion` propriété à `$schema` version (`1.5` dans ce cas).
 
 Ajoutez la propriété `localizationInfo` avec la langue par défaut prise en charge par votre application. La langue par défaut est utilisée comme langue de secours finale si les paramètres client de l’utilisateur ne correspondent à aucune de vos langues supplémentaires.
+
+> [!NOTE]
+> La version du manifeste doit être identique pour les fichiers manifest.json et localization.json.
 
 ### <a name="example-manifestjson-change"></a>Exemple de modification de manifest.json
 

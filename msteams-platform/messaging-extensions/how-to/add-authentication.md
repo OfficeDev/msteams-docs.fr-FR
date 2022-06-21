@@ -1,16 +1,16 @@
 ---
 title: Ajouter une authentification à votre extension de messagerie
 author: surbhigupta
-description: Dans ce module, découvrez comment ajouter l’authentification à une extension de messagerie à l’aide d’exemples de code et d’exemples
+description: Dans cet article, vous allez apprendre à ajouter l’authentification à une extension de messagerie à l’aide d’exemples de code et d’exemples
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143542"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190272"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -41,11 +41,11 @@ Si votre service requiert l’authentification de l’utilisateur, les utilisate
 1. Une fois que l’utilisateur s’est connecté, vous devez fermer votre fenêtre et envoyer un **code d’authentification** au client Teams.
 1. Le client Teams publie ensuite la requête à sur votre service, qui inclut le code d’authentification passé à l’étape 5.
 
-Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5. Cela garantit qu’un utilisateur malveillant n’essaie pas d’usurper ou de compromettre le flux de connexion. Cela « ferme la boucle » pour terminer la séquence d’authentification sécurisée.
+Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à l’étape 5. Les étapes garantissent qu’un utilisateur malveillant n’essaie pas d’usurper ou de compromettre le flux de connexion. Le flux « ferme la boucle » pour terminer la séquence d’authentification sécurisée.
 
 ### <a name="respond-with-a-sign-in-action"></a>Répondre avec une action de connexion
 
-Pour inviter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type `openUrl` qui inclut l’URL d’authentification.
+Pour demander à un utilisateur non authentifié de se connecter, répondez avec une action suggérée de type `openUrl` qui inclut l’URL d’authentification.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de connexion
 

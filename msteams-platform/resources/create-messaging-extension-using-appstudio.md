@@ -5,12 +5,12 @@ description: Découvrez comment créer une extension de messagerie Microsoft Tea
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f222f52a4eea3b59e6caf15e77b006a58a426d2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142338"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190027"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "66142338"
 2. Créez et déployez votre service web (lors du développement, utilisez un service de tunneling comme ngrok pour l’exécuter localement).
 3. Inscrivez votre service web auprès de Bot Framework.
 4. Créez votre package d’application.
-5. Télécharger votre package dans Microsoft Teams.
+5. Télécharger votre package à Teams.
 
 La création de votre service web, la création de votre package d’application et l’inscription de votre service web auprès de Bot Framework peuvent être effectuées dans n’importe quel ordre. Étant donné que ces trois pièces sont si liées, quel que soit l’ordre dans lequel vous les faites, vous aurez besoin de revenir pour mettre à jour les autres. Votre inscription a besoin du point de terminaison de messagerie de votre service web déployé, et votre service web a besoin de l’ID et du mot de passe créés à partir de votre inscription. Votre manifeste d’application a également besoin de cet ID pour connecter Teams à votre service web.
 
@@ -56,7 +56,7 @@ Vous pouvez utiliser App Studio pour créer votre manifeste d’application ou l
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>Créer votre manifeste d’application à l’aide d’App Studio
 
-Vous pouvez utiliser l’application App Studio à partir du client Microsoft Teams pour créer votre manifeste d’application.
+Vous pouvez utiliser l’application App Studio à partir du client Teams pour créer votre manifeste d’application.
 
 1. Dans le client Teams, ouvrez App Studio à partir du menu **...** dépassement sur le rail de navigation gauche. S’il n’est pas déjà installé, vous pouvez le faire en le recherchant.
 2. Sous l’onglet **Éditeur de manifeste** , sélectionnez **Créer une application** (ou si vous ajoutez une extension de messagerie à une application existante, vous pouvez importer votre package d’application)
@@ -71,7 +71,7 @@ Vous pouvez utiliser l’application App Studio à partir du client Microsoft Te
 
 ### <a name="create-your-app-manifest-manually"></a>Créer votre manifeste d’application manuellement
 
-Comme avec les bots et les onglets, vous mettez à jour le [manifeste d’application](~/resources/schema/manifest-schema.md#composeextensions) de votre application pour inclure les propriétés de l’extension de messagerie. Ces propriétés régissent l’apparence et le comportement de votre extension de messagerie dans le client Microsoft Teams. Les extensions de messagerie sont prises en charge à partir de la version 1.0 du manifeste.
+Comme avec les bots et les onglets, vous mettez à jour le [manifeste d’application](~/resources/schema/manifest-schema.md#composeextensions) de votre application pour inclure les propriétés de l’extension de messagerie. Ces propriétés régissent la façon dont votre extension de messagerie apparaît et se comporte dans le client Teams. Les extensions de messagerie sont prises en charge à partir de la version 1.0 du manifeste.
 
 #### <a name="declare-your-messaging-extension"></a>Déclarer votre extension de messagerie
 
@@ -248,7 +248,7 @@ Une fois qu’une réunion commence, Teams participants peuvent interagir direct
 * [Créer les commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Déploiement de lien](~/messaging-extensions/how-to/link-unfurling.md)
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 Essayez-le dans un guide de démarrage rapide :
 

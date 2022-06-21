@@ -1,17 +1,16 @@
 ---
 title: Intégrer les fonctionnalités médias
 author: Rajeshwari-v
-description: Découvrez comment utiliser Teams SDK client JavaScript pour activer les fonctionnalités multimédias à l’aide d’exemples de code.
-keywords: fonctionnalités du microphone d’image de caméra api multimédia d’autorisations natives d’appareil
+description: Découvrez comment utiliser Teams kit de développement logiciel (SDK) client JavaScript pour activer les fonctionnalités multimédias à l’aide d’exemples de code et découvrir l’avantage de l’intégration des fonctionnalités multimédias.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 586db765ff94449a137e131cd788cbc1732d55f2
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130525"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190235"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias
 

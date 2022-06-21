@@ -1,17 +1,16 @@
 ---
 title: Intégrer la fonctionnalité de scanneur QR ou code-barres
 author: Rajeshwari-v
-description: Comment utiliser kit de développement logiciel (SDK) client JavaScript Teams pour tirer parti de la fonctionnalité QR ou du détecteur de codes-barres
-keywords: camera media qr code qrcode bar code code-barres détecteur analyse fonctionnalités native appareil autorisations
+description: Découvrez comment utiliser Teams kit de développement logiciel (SDK) client JavaScript pour tirer parti de la fonctionnalité de QR ou de scanneur de codes-barres et connaître les avantages de l’intégration de la fonctionnalité de QR ou de scanneur de codes-barres.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d9dc35002398be047f4cd84d7600b3d149677bd3
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130500"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189629"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Intégrer la fonctionnalité de scanneur QR ou code-barres
 

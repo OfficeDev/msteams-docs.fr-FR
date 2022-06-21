@@ -1,16 +1,16 @@
 ---
 title: Étendre une application onglet personnel Teams sur Microsoft 365
-description: Étendre une application onglet personnel Teams sur Microsoft 365
+description: Découvrez comment étendre une application d’onglet personnel Teams sur Microsoft 365 en mettant à jour l’onglet personnel pour qu’il s’exécute à la fois dans Outlook et dans Office.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 957ad3e30ffc2a798f5737e031339fd2e5ebc21b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4e313e300e577ba18d3ca3f388333681ed751948
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144074"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189344"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -24,7 +24,7 @@ La mise à jour de votre application personnelle pour qu’elle s’exécute dan
 > * Mettez à jour les références de votre Kit de développement logiciel (SDK) TeamsJS.
 > * Modifiez vos en-têtes de stratégie de sécurité du contenu.
 > * Mettez à jour l’inscription de votre application Microsoft Azure Active Directory (Azure AD) pour l’authentification unique (SSO).
-> * Chargez de manière indépendante votre application mise à jour dans Teams.
+> * Chargez une version test de votre application mise à jour dans Teams.
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre onglet personnel dans d’autres applications Microsoft 365.
 
@@ -139,11 +139,10 @@ Si votre application utilise des en-têtes de stratégie [de sécurité de conte
     |--|--|
     |Teams bureau, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
     |Web Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Office web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Version de bureau d’Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-    |Version de bureau d’Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-    |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |bureau Outlook, mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
 
 ## <a name="sideload-your-app-in-teams"></a>Charger une version test de votre application dans Teams
 
