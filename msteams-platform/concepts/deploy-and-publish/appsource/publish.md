@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124031"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189926"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
 Vous pouvez distribuer votre application directement dans le Store au sein de Microsoft Teams et atteindre des millions d’utilisateurs dans le monde entier. Si votre application est également proposée dans le Store, vous pouvez atteindre instantanément les clients potentiels.
 
-Les applications publiées dans le magasin Teams sont également automatiquement répertoriées sur [Microsoft AppSource](https://appsource.microsoft.com), qui est la place de marché officielle pour Microsoft 365 applications et solutions.
+Les applications publiées dans le magasin Teams sont également automatiquement répertoriées sur la [Place de marché commerciale Microsoft](https://appsource.microsoft.com), qui est la place de marché officielle pour les applications et solutions Microsoft 365.
 
 ## <a name="understand-the-publishing-process"></a>Comprendre le processus de publication
 
@@ -76,7 +76,7 @@ Si votre application est prête pour la production, vous pouvez commencer le pro
 
   Une fois que vous avez examiné la liste des problèmes, corrigez tous les problèmes signalés et partagez le package d’application mis à jour par e-mail pour que l’équipe de validation valide votre application à nouveau. Si vous avez des requêtes liées aux problèmes signalés, contactez l’équipe de validation à [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
-  S’il reste des problèmes ou des problèmes de régression observés dans votre application, l’équipe de validation partagera un rapport de validation mis à jour avec vous. Si votre application avait des bloqueurs, vous pouvez voir de nouveaux problèmes signalés lorsque votre application est validée une fois les blocages résolus. Parfois, l’équipe de validation a également remarqué des problèmes de régression dans les applications après le déploiement de correctifs. Il faut quelques soumissions pour fermer tous les problèmes d’une application qui se compose de bogues et l’approuver pour qu’elle soit publiée dans le magasin Teams.
+  S’il reste des problèmes ou des problèmes de régression observés dans votre application, l’équipe de validation partagera un rapport de validation mis à jour avec vous. Si votre application avait des bloqueurs, vous pouvez voir de nouveaux problèmes signalés lorsque votre application est validée une fois les blocages résolus. Parfois, l’équipe de validation a également remarqué des problèmes de régression dans les applications après le déploiement de correctifs. Il faut quelques nouvelles soumissions pour fermer tous les problèmes d’une application qui se compose de bogues et l’approuver pour qu’elle soit publiée dans le magasin Teams.
 
   Une fois que tous les problèmes signalés sont fermés et que la soumission finale est effectuée dans le Espace partenaires, l’équipe de validation approuve et publie votre application. Autorisez au moins un jour ouvré pour que l’application soit disponible dans le Magasin Teams.
 
@@ -96,7 +96,7 @@ Si votre application est prête pour la production, vous pouvez commencer le pro
 
   1. [Créez votre compte Espace partenaires](prepare/create-partner-center-dev-account.md) bien à l’avance. Si vous rencontrez des difficultés avec votre compte [Espace partenaires](prepare/create-partner-center-dev-account.md), créez un [ticket de support](/azure/marketplace/partner-center-portal/support).
 
-  1. Passez à nouveau en revue les [instructions de validation du magasin](prepare/teams-store-validation-guidelines.md) pour vous assurer que votre application est conforme aux exigences du Store. Cela permet de réduire le nombre de problèmes observés dans votre application et, par conséquent, le temps nécessaire pour approuver votre application.
+  1. Passez à nouveau en revue les [instructions de validation du magasin](prepare/teams-store-validation-guidelines.md) pour vous assurer que votre application est conforme aux exigences du Store. La vérification permet de réduire le nombre de problèmes observés dans votre application et, par conséquent, le temps nécessaire pour approuver votre application.
 
   1. Testez et retestez votre application :
 

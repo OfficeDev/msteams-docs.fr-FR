@@ -1,16 +1,16 @@
 ---
 title: Étendre une extension de message Teams dans Microsoft 365
-description: Voici comment mettre à jour votre extension de message Teams basée sur la recherche pour qu’elle s’exécute dans Outlook
+description: Découvrez comment mettre à jour l’extension de message Teams basée sur la recherche pour qu’elle s’exécute dans Outlook en mettant à jour le manifeste de l’application, en ajoutant un canal Outlook et en chargeant l’application mise à jour.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142100"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190204"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Étendre une extension de message Teams dans Microsoft 365
 
@@ -106,9 +106,9 @@ Pour que les utilisateurs interagissent avec votre extension de message à parti
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Cliquez sur Outlook, sélectionnez l'onglet Extensions de message, puis cliquez sur Enregistrer":::.
 
-1. Vérifiez que votre canal Outlook est répertorié avec Microsoft Teams dans le volet **Canaux** de votre bot.
+1. Vérifiez que votre canal Outlook est répertorié avec Teams dans le volet **Canaux** de votre bot.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Le volet Azure Bot Channels répertorie les canaux Microsoft Teams et Outlook. ":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Le volet Azure Bot Channels répertorie les canaux Teams et Outlook":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Mettre à jour l’inscription d’application Microsoft Azure Active Directory (Azure AD) pour l’authentification unique
 
@@ -133,7 +133,7 @@ L’authentification unique (SSO) Azure Active Directory (AD) pour les extension
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Charger une version test de votre extension de message mise à jour dans Teams
 
-La dernière étape consiste à charger une version test de votre extension de message mise à jour ([package d’application](/microsoftteams/platform/concepts/build-and-test/apps-package)) dans Microsoft Teams. Une fois l’opération terminée, votre extension de message s’affiche dans votre *Apps* installée à partir de la zone de rédaction du message.
+La dernière étape consiste à charger une version test de votre extension de message mise à jour ([package d’application](/microsoftteams/platform/concepts/build-and-test/apps-package)) dans Teams. Une fois l’opération terminée, votre extension de message s’affiche dans votre *Apps* installée à partir de la zone de rédaction du message.
 
 1. Empaquetez votre application Teams ([icônes](/microsoftteams/platform/resources/schema/manifest-schema#icons) de manifeste et d’application) dans un fichier zip. Si vous avez utilisé le Kit de ressources Teams pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **Package de métadonnées Zip Teams** dans le menu *Déploiement* du Kit de ressources Teams.
 

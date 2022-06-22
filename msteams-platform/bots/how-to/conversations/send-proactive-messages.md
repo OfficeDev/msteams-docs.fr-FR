@@ -4,12 +4,12 @@ description: Apprenez à envoyer des messages proactifs avec votre robot Teams, 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4344a1c1a3d58d8bb3c06105b05a1b370b55e259
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143507"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190136"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -25,8 +25,9 @@ Un message proactif est un message envoyé par un bot qui n'est pas en réponse 
 > Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD).
 >
 > Pour les messages proactifs, les bots doivent utiliser les points de terminaison suivants pour les environnements cloud gouvernementaux :
->    * Cloud de la communauté du secteur public : `https://smba.infra.gcc.teams.microsoft.com/gcc`.
->    * GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`.
+>
+> * Cloud de la communauté du secteur public : `https://smba.infra.gcc.teams.microsoft.com/gcc`.
+> * GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Pour que votre bot envoie un message proactif à un utilisateur, une conversation de groupe ou d’équipe, il doit disposer d’accès pour envoyer le message. Pour une conversation de groupe ou d’équipe, l’application contenant votre bot doit d’abord être installée à cet emplacement.
 Vous pouvez [installer votre application de manière proactive à l’aide de Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une [stratégie d’application](/microsoftteams/teams-custom-app-policies-and-settings) pour la transmettre aux équipes et utilisateurs de votre client. Pour les utilisateurs, votre application doit être installée pour l’utilisateur ou votre utilisateur doit faire partie d’une équipe au sein de laquelle votre application est installée.
@@ -64,7 +65,9 @@ Une fois que vous disposez des informations de l’utilisateur ou du canal, vous
 
 Vous devez créer la conversation si elle est inexistante ou si vous ne connaissez pas le `conversationId`. Vous ne devez créer la conversation qu’une seule fois et stocker la valeur `conversationId` ou l’objet `conversationReference`.
 
-Une fois la conversation créée, vous devez obtenir l’identification de la conversation.
+Vous pouvez obtenir la conversation lorsque l’application est installée pour la première fois. Une fois la conversation créée, vous devez obtenir l’identification de la conversation. `conversationId` est disponible dans les événements de mise à jour de conversation.
+
+Si vous n’avez pas `conversationId`, vous pouvez [Installer votre application de manière proactive à l’aide de Graph](#proactively-install-your-app-using-graph) pour obtenir le `conversationId`.
 
 ## <a name="get-the-conversation-id"></a>Obtenir l’identification de la conversation
 
@@ -77,6 +80,13 @@ Une fois les informations d’adresse appropriées reçues, vous pouvez envoyer 
 Maintenant que vous avez les bonnes informations relatives à l’adresse, vous pouvez envoyer votre message. Si vous utilisez le Kit de développement logiciel (SDK), vous devez utiliser la méthode `continueConversation`, ainsi que `conversationId` et `tenantId` pour effectuer un appel d’API direct. Vous devez correctement définir `conversationParameters` pour envoyer votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code](#code-sample).
 
 Maintenant que vous avez envoyé le message proactif, vous devez suivre ces meilleures pratiques lors de l’envoi de messages proactifs pour améliorer l’échange d’informations entre les utilisateurs et le bot.
+
+Visionnez la vidéo suivante pour découvrir comment envoyer des messages proactifs à partir de bots :
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 

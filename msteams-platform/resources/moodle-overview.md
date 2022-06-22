@@ -4,12 +4,12 @@ description: Découvrez l’intégration de Moodle LMS à Teams, la gestion de l
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 62e52835e63f6fd40633ca2c99097746ee7ab2e5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143304"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189444"
 ---
 # <a name="moodle-learning-management-system"></a>Système de gestion des formations Moodle
 
@@ -33,7 +33,7 @@ This content is modified as per the requirement.-->
 
 Le système de gestion des formations Moodle permet aux utilisateurs d’accéder aux applications suivantes :
 
-* **Plug-ins Microsoft 365** : les plug-ins Microsoft 365 sont conçus pour garantir une intégration entre les sites Moodle et Microsoft Teams. Ces plug-ins peuvent être utilisés individuellement ou ensemble pour répondre aux besoins distincts d’un utilisateur. Pour plus d'informations, consultez [Plug-ins Microsoft 365](m365-plugins/m365-plugins-overview.md).
+* **Plug-ins Microsoft 365** : les plug-ins Microsoft 365 sont conçus pour garantir une intégration entre les sites Moodle et Teams. Ces plug-ins peuvent être utilisés individuellement ou ensemble pour répondre aux besoins distincts d’un utilisateur. Pour plus d'informations, consultez [Plug-ins Microsoft 365](m365-plugins/m365-plugins-overview.md).
 
 * **Applications partenaires pour Moodle** : tous les ensembles d’applications partenaires Moodle et Teams sont disponibles dans le Microsoft Store. Pour plus d’informations, voir [Applications partenaires pour Moodle](partner-apps-for-moodle.md).
 

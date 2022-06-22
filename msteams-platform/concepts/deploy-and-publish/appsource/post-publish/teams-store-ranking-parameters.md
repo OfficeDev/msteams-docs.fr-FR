@@ -5,16 +5,16 @@ ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 61be6f8d85b5b98e9c96d4dec7301dea18ea55bc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123849"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190004"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Paramètres de classement du store Microsoft Teams
 
-Les informations contenues dans cette déclaration s'appliquent au store Microsoft Teams dans lequel Microsoft met des applications tierces à la disposition des utilisateurs. Le store Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs. Les paramètres de classement répertoriés ne sont pas exhaustifs et sont destinés à fournir à notre communauté d'éditeurs une compréhension de haut niveau des principaux paramètres utilisés par la vitrine dans les déterminations de classement. Tous les termes définis utilisés dans le présent document, mais qui ne sont pas autrement définis, auront la signification qui leur est attribuée dans le contrat Microsoft Publisher.
+Les informations contenues dans cette déclaration s'appliquent au store Microsoft Teams dans lequel Microsoft met des applications tierces à la disposition des utilisateurs. Le store Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs. Les paramètres de classement énumérés ne sont pas exhaustifs et sont destinés à fournir à notre communauté d'éditeurs une compréhension de niveau supérieur des principaux paramètres que la vitrine utilise pour déterminer le classement. Tous les termes définis utilisés dans le présent document, mais qui ne sont pas autrement définis, auront la signification qui leur est attribuée dans le contrat Microsoft Publisher.
 
 L’équipe éditoriale du store Microsoft Teams Store détermine l’importance et l’emplacement d’une application dans les sections éditoriales telles que la bannière promotionnelle sur le store Microsoft Teams en fonction des paramètres de classement. Ces critères objectifs sont appliqués de la même manière à toutes les applications du store Microsoft Teams, y compris les applications de Microsoft et celles des développeurs tiers. Voici les principaux paramètres utilisés pour déterminer le placement des applications :
 

@@ -4,12 +4,12 @@ author: laujan
 description: Dans ce module, découvrez comment utiliser les connecteurs Office 365 et créer et envoyer un message actionnable dans Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143262"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190100"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -168,7 +168,7 @@ Pour publier un message dans le webhook avec cURL, procédez comme suit :
     > [!NOTE]
     > Si la publication réussit, vous devriez voir un simple **1** sortie par `curl`.
 
-1. Vérifiez le client Microsoft Teams pour la nouvelle carte publiée.
+1. Vérifiez le client Teams pour la nouvelle carte publiée.
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -185,7 +185,7 @@ Pour publier un message sur le webhook avec PowerShell, procédez comme suit :
     > [!NOTE]
     > Si la publication réussit, vous devriez voir un simple **1** sortie par `Invoke-RestMethod`.
 
-1. Vérifiez le canal Microsoft Teams associé à l’URL de webhook. Vous pouvez voir la nouvelle carte publiée sur le canal. Avant d’utiliser le connecteur pour tester ou publier votre application, vous devez effectuer les opérations suivantes :
+1. Vérifiez le canal Teams associé à l’URL du webhook. Vous pouvez voir la nouvelle carte publiée sur le canal. Avant d’utiliser le connecteur pour tester ou publier votre application, vous devez effectuer les opérations suivantes :
 
     * [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
     * Modifiez la `icons` partie du manifeste sur les noms de fichier des icônes au lieu des URL.

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795160"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189609"
 ---
 # <a name="teams-app-that-fits"></a>Application Teams adaptée
 
@@ -39,7 +39,7 @@ Vous pouvez créer des applications avec la plateforme de développeurs Teams en
 
 ## <a name="build-apps-with-microsoft-teams-platform"></a>Créer des applications avec la plateforme Microsoft Teams
 
-Les applications Microsoft Teams permettent à votre espace de travail collaboratif d’être plus productif en apportant des informations clés, des outils communs et des processus de confiance où les contacts se rassemblent, apprennent et travaillent de plus en plus. Les applications vous permettent d’étendre les fonctionnalités de la plateforme Team pour qu’elles correspondent à vos besoins. Créez quelque chose de nouveau ou intégrez une application existante pour tirer parti des avantages de la plateforme Microsoft Teams pour vos besoins professionnels particuliers.
+Les applications Teams aident votre espace de travail collaboratif à être plus productif en apportant des informations clés, des outils courants et des processus approuvés là où les personnes se rassemblent, apprennent et travaillent de plus en plus. Les applications vous permettent d’étendre les fonctionnalités de la plateforme Team pour qu’elles correspondent à vos besoins. Créez quelque chose de nouveau ou intégrez une application existante pour tirer parti des avantages de la plateforme Teams pour vos besoins professionnels particuliers.
 
 Les avantages de la création d’applications s’étendent de la réunion des objectifs organisationnels à l’augmentation de la productivité interne.
 
@@ -75,7 +75,7 @@ Voici pourquoi Teams est la solution la mieux adaptée à vos besoins en matièr
 
 - **Applications personnelles avec des onglets et des bots**
 
-    Les bots de conversation individuelle sont l’une des fonctionnalités les plus ouvertes de Microsoft Teams. La conversation se trouve juste entre le bot et votre utilisateur. Vous avez la possibilité d’inclure des modules de tâche pour simplifier des ensembles complexes d’informations.
+    Les bots de conversation individuelle sont l’une des fonctionnalités les plus ouvertes de Teams. La conversation se trouve juste entre le bot et votre utilisateur. Vous avez la possibilité d’inclure des modules de tâche pour simplifier des ensembles complexes d’informations.
 
     Par exemple, si votre application est un outil de conception avec plusieurs collaborateurs, un bot partagé qui avertit tous les utilisateurs contribue à renforcer l’implication des utilisateurs.
 

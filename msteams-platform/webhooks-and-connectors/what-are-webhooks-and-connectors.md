@@ -5,16 +5,16 @@ description: Dans ce module, découvrez comment les webhooks et les connecteurs 
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 604f4bce563957afb477a58d47ef8235e4b5c30d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fc65046c0bcbecb6ed4c0f15ea81beac77195256
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142177"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190034"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
 
-Les webhooks et les connecteurs permettent de connecter les services web aux canaux et aux équipes Microsoft Teams. Les webhooks sont des rappels HTTP définis par l’utilisateur qui informent les utilisateurs de toute action qui a eu lieu dans un canal Microsoft Teams. C’est un moyen pour une application d’obtenir des données en temps réel. Les connecteurs permettent aux utilisateurs de s’abonner pour recevoir les notifications et les messages de vos services web. Ils exposent un point de terminaison HTTPS pour que votre service publie des messages sous forme de cartes.
+Les webhooks et les connecteurs permettent de connecter les services web aux canaux et aux équipes Microsoft Teams. Les webhooks sont des rappels HTTP définis par l’utilisateur qui informent les utilisateurs de toute action qui a eu lieu dans un canal Teams. C’est un moyen pour une application d’obtenir des données en temps réel. Les connecteurs permettent aux utilisateurs de s’abonner pour recevoir les notifications et les messages de vos services web. Ils exposent un point de terminaison HTTPS pour que votre service publie des messages sous forme de cartes.
 
 ## <a name="outgoing-webhooks"></a>Webhooks sortants
 

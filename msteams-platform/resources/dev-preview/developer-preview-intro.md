@@ -3,19 +3,19 @@ title: Aperçu public pour les développeurs de Microsoft Teams
 description: Dans cet article, découvrez les fonctionnalités qui figurent dans la préversion préliminaire publique pour les développeurs de Microsoft Teams et le manifeste d’application de la préversion préliminaire pour les développeurs.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 6efc0681ad15add36ddaf94d3ca89ef931e9f30e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143983"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190253"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Aperçu public pour les développeurs de Microsoft Teams
 
 >[!NOTE]
 >Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
 
-L’aperçu pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non publiées de Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre application Microsoft Teams. Nous sommes également heureux de recevoir des [commentaires](~/feedback.md) sur toute fonctionnalité de l’aperçu pour les développeurs. L’aperçu pour les développeurs est activé pour chaque client Microsoft Teams. Vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
+L’aperçu pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non publiées de Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre application Teams. Nous sommes également heureux de recevoir des [commentaires](~/feedback.md) sur toute fonctionnalité de l’aperçu pour les développeurs. L’aperçu pour les développeurs est activé pour chaque client Microsoft Teams. Vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
 
 ## <a name="developer-preview-app-manifest"></a>Manifeste de l’application de l’aperçu pour les développeurs
 

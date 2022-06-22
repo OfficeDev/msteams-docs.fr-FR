@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment créer un Webhook sortant dans M
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 5c86fd5e3885fd859d02489c81f81aa0502b965a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143283"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189896"
 ---
 # <a name="create-outgoing-webhook"></a>Créer des webhooks sortants
 
@@ -25,6 +25,12 @@ Le webhook sortant agit comme un bot et recherche des messages dans les canaux �
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
+
+Consultez la vidéo suivante pour découvrir comment créer des webhooks sortants :
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+<br>
 
 ## <a name="key-features-of-outgoing-webhook"></a>Principales fonctionnalités du webhook sortant
 
@@ -109,7 +115,7 @@ Votre code doit toujours valider la signature HMAC incluse dans la demande comme
 
 **Créer une méthode pour envoyer une réponse de réussite ou d’échec**
 
-Les réponses de vos webhooks sortants s’affichent dans la même chaîne de réponse que le message d’origine. Lorsque l’utilisateur effectue une requête, Microsoft Teams envoie une demande HTTP synchrone à votre service et votre code obtient cinq secondes pour répondre au message avant que la connexion n’arrive à terme et ne se termine.
+Les réponses de vos webhooks sortants apparaissent dans la même chaîne de réponse que le message d’origine. Lorsque l’utilisateur effectue une requête, Teams envoie une demande HTTP synchrone à votre service et votre code obtient cinq secondes pour répondre au message avant que la connexion n’arrive à terme et ne se termine.
 
 ### <a name="example-response"></a>Exemple de réponse
 
@@ -232,7 +238,7 @@ var responseMsg = JSON.stringify({
 
 |**Exemple de nom** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Webhooks sortants | Exemples pour créer des bots personnalisés à utiliser dans Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Webhooks sortants | Exemples pour créer des bots personnalisés à utiliser dans Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 

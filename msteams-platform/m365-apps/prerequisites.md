@@ -1,15 +1,15 @@
 ---
 title: Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
-description: Voici les conditions préalables à l’extension de vos applications Teams dans Microsoft 365
+description: Découvrez les conditions préalables requises pour exécuter des builds en préversion pour étendre vos applications Teams dans Microsoft 365.
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: c0a1b265d4bc1aeb71232717ebc363d1b046da81
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668024"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189312"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
 
