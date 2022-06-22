@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Dans ce module, découvrez le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144214"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189510"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams
 
@@ -235,7 +235,7 @@ Le nom de l’hôte dans lequel votre application s’exécute est exposé en ta
 * **Ne partez pas** du principe que certaines fonctionnalités sont ou ne sont pas disponibles dans un hôte en fonction de la valeur de la propriété *hostName*. Au lieu de cela, recherchez la prise en charge des fonctionnalités (`isSupported`).
 * **N’utilisez** pas *hostName* pour contrôler les appels d’API. Au lieu de cela, recherchez la prise en charge des fonctionnalités (`isSupported`).
 * **Utilisez***hostName* pour différencier le thème de votre application en fonction de l’hôte dans lequel elle s’exécute. Par exemple, vous pouvez utiliser Microsoft Teams violet comme couleur d’accentuation principale lors de l’exécution dans Teams, et Outlook bleu lors de l’exécution dans Outlook.
-* **Utilisez** *hostName* pour différencier les messages affichés à l’utilisateur en fonction de l’hôte dans lequel il s’exécute. Par exemple, affichez *Gérer vos tâches dans Office* lors de l’exécution dans Office sur le web, et *Gérer vos tâches dans Teams* lors de l’exécution dans Microsoft Teams.
+* **Utilisez** *hostName* pour différencier les messages affichés à l’utilisateur en fonction de l’hôte dans lequel il s’exécute. Par exemple, affichez *Gérer vos tâches dans Office* lors de l’exécution dans Office sur le web, et *Gérer vos tâches dans Teams* lors de l’exécution dans Teams.
 
 #### <a name="namespaces"></a>Espaces de noms
 
@@ -243,7 +243,7 @@ Le nom de l’hôte dans lequel votre application s’exécute est exposé en ta
 
 ##### <a name="app-namespace"></a>Espace de noms *d’application*
 
-L’espace de noms`app` contient les API de niveau supérieur requises pour l’utilisation globale des applications, sur Microsoft Teams, Office et Outlook. Toutes les API de différents autres espaces de noms TeamsJS ont été déplacées vers l’espace de noms `app` à partir de TeamsJS v.2.0 :
+L’espace de noms`app` contient les API de niveau supérieur requises pour l’utilisation globale des applications, sur Teams, Office et Outlook. Toutes les API de différents autres espaces de noms TeamsJS ont été déplacées vers l’espace de noms `app` à partir de TeamsJS v.2.0 :
 
 | Espace de noms d’origine `global (window)` | Nouvel espace de noms `app` |
 | - | - |
