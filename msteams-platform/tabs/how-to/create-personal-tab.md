@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143990"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189466"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Charger votre application dans Teams
 
-1. Accédez à Microsoft Teams et sélectionnez **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Accédez à Teams et sélectionnez **Applications**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Sélectionnez **Gérer vos applications** et **Charger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip, puis choisissez **Ouvrir**.
 
@@ -335,7 +335,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * Icône de contour transparent mesurant 32 x 32 pixels.
 * Un fichier `manifest.json` qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Microsoft Teams charge le `contentUrl` spécifié dans votre manifeste, l’incorpore dans un <iframe\> et le restitue dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Teams charge le `contentUrl` spécifié dans votre manifeste, l’incorpore dans un <iFrame \>, restitue dans votre onglet.
 
 #### <a name="csproj"></a>.csproj
 
@@ -484,7 +484,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * **Icône de contour transparent** mesurant 32 x 32 pixels.
 * Un fichier `manifest.json` qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Microsoft Teams charge le `contentUrl` spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Teams charge le `contentUrl` spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
 
 #### <a name="csproj"></a>.csproj
 
