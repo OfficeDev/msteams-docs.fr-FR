@@ -3,17 +3,17 @@ title: Prise en main de App Studio dans Microsoft Teams
 description: Dans cet article, vous allez apprendre à créer et gérer vos applications avec App Studio pour Microsoft Teams et l’installation d’App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
-ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
+ms.openlocfilehash: 6ec2e1dfc064302de096cb356641a773e7dceb35
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2022
-ms.locfileid: "66164268"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485705"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 
 > [!WARNING]
-> **Essayez le portail des développeurs** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec la nouvelle [Developer Portal](https://dev.teams.microsoft.com/). <br> App Studio sera déconseillé d’ici le 30 juin 2022.
+> **Essayez le portail des développeurs** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec la nouvelle [Developer Portal](https://dev.teams.microsoft.com/). <br> App Studio sera déconseillé d’ici le 1er août 2022.
 
 App Studio vous permet de créer et d’intégrer facilement vos propres applications Microsoft Teams, que vous développiez des applications personnalisées pour votre entreprise ou des applications SaaS pour des équipes du monde entier, en rationalisant la création du manifeste et du package pour votre application et en fournissant des outils utiles comme l'éditeur de cartes et une bibliothèque de contrôle React.
 
@@ -26,7 +26,7 @@ App Studio vous permet de créer et d’intégrer facilement vos propres applica
 
 ## <a name="installing-app-studio"></a>Installation de App Studio
 
-App Studio est une application Teams, qui se trouve dans le magasin Teams. Suivez ce lien pour télécharger directement [App Studio](https://aka.ms/InstallTeamsAppStudio). Vous pouvez également trouver l’application dans l’App Store.
+App Studio est une application Teams, qui se trouve dans le Magasin Teams. Suivez ce lien pour télécharger directement [App Studio](https://aka.ms/InstallTeamsAppStudio). Vous pouvez également trouver l’application dans l’App Store.
 
 Dans le Store, recherchez App Studio.
 
@@ -52,9 +52,9 @@ C’est l’endroit où vous pouvez voir à quoi ressemblent les [cartes de visi
 
 ### <a name="manifest-editor"></a>Éditeur de manifeste
 
-Comme mentionné précédemment, la partie la plus importante d’un package d’application Teams est son fichier manifest.json. Ce fichier, qui doit être conforme au [schéma d’application Teams](~/resources/schema/manifest-schema.md), contient des métadonnées, ce qui permet à Teams de présenter correctement votre application aux utilisateurs.
+Comme mentionné précédemment, la partie la plus importante d’un package d’application Teams est son fichier manifest.json. Ce fichier, qui doit être conforme au [schéma d’application Teams](~/resources/schema/manifest-schema.md), contient des métadonnées qui permettent à Teams de présenter correctement votre application aux utilisateurs.
 
-L’onglet Éditeur de manifeste d’App Studio simplifie la création du manifeste, ce qui vous permet de décrire l’application, de charger vos icônes, d’ajouter des fonctionnalités d’application et de produire un fichier .zip, qui peut facilement être chargé dans Teams à des fins de test ou distribué à d’autres utilisateurs. App Studio ne produit pas de code fonctionnel pour votre application, ni n’héberge votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement de l’application aboutisse à une application fonctionnelle.
+L’onglet Éditeur de manifeste dans App Studio simplifie la création du manifeste, ce qui vous permet de décrire l’application, de charger vos icônes, d’ajouter des fonctionnalités d’application et de produire un fichier .zip, qui peut facilement être chargé dans Teams à des fins de test ou distribué à d’autres utilisateurs. App Studio ne produit pas de code fonctionnel pour votre application, ni n’héberge votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement de l’application aboutisse à une application fonctionnelle.
 
 #### <a name="details"></a>Détails
 
@@ -69,13 +69,13 @@ La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fon
 
 ##### <a name="tabs"></a>Onglets
 
-* **Onglets d’équipe.** Un onglet d’équipe devient un canal et permet d’accéder rapidement aux informations et ressources de l’équipe. Par exemple, l’onglet Planificateur d’un canal contient un seul plan. L’onglet Power BI correspond à un rapport spécifique. Les utilisateurs peuvent accéder au contexte approprié, mais ils ne doivent pas pouvoir naviguer en dehors de l’onglet. L’onglet Power BI, par exemple, n’active pas la navigation vers d’autres rapports Power BI, mais il active le bouton *Accéder au site web* qui lance le rapport dans le site web principal Power BI.
+* **Onglets d’équipe.** Un onglet d’équipe devient un canal et permet d’accéder rapidement aux informations et ressources de l’équipe. Par exemple, l’onglet Planificateur d’un canal contient un seul plan. L’onglet Power BI correspond à un rapport spécifique. Les utilisateurs peuvent accéder au contexte approprié, mais ils ne doivent pas pouvoir naviguer en dehors de l’onglet. L’onglet Power BI, par exemple, n’active pas la navigation vers d’autres rapports Power BI, mais il active le bouton *Accéder au site web* qui lance le rapport dans le site web Power BI principal.
 
   Pour les onglets d’équipe, vous devez fournir une *URL de configuration* pour présenter les options et collecter les informations nécessaires pour que les utilisateurs personnalisent le contenu et l’expérience de votre onglet. Cette page HTML iframée s’affiche lorsqu’un utilisateur ajoute l’onglet pour la première fois à un canal.
 
   Vous devez également fournir d'autres domaines à partir desquels l'onglet doit être chargé ou lié.
 
-* **Onglets personnels.** Vous pouvez définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle (expérience qu’un utilisateur a avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir desquels l’onglet s’attend à être chargé ou vers lesquels établir un lien.
+* **Onglets personnels.** Vous pouvez définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle (expérience qu’un utilisateur a avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec les onglets Teams, fournissez tous les domaines supplémentaires à partir desquels l’onglet s’attend à être chargé ou vers lesquels établir un lien.
 
 ##### <a name="bots"></a>Bots
 
@@ -128,9 +128,9 @@ Si vous avez déjà une carte que vous voulez vérifier dans Teams, vous pouvez 
 ### <a name="react-control-library"></a>Bibliothèque de contrôles React
 
 >[!Note]
-> Cette bibliothèque de contrôles React est déconseillée à l’avenir. Envisagez d’utiliser les [contrôles react Fluent-UI comme alternative](https://microsoft.github.io/fluent-ui-react/) précédemment Stardust UI.
+> Cette bibliothèque de contrôles React est déconseillée à l’avenir. Envisagez d’utiliser les [contrôles React Fluent-UI comme alternative](https://microsoft.github.io/fluent-ui-react/) précédemment stardust UI.
 
-La création d’une application qui suit les meilleures pratiques de Teams est un excellent moyen de donner à votre application une apparence qui s’adapte parfaitement à l’expérience cliente de Teams. Les contrôles d’interface utilisateur sont essentiels pour atteindre cet objectif. Pour faciliter la création d’une interface utilisateur cohérente, App Studio fournit plusieurs catégories de contrôles d’interface utilisateur, qui suivent Teams principes de conception.
+La création d’une application qui suit les meilleures pratiques de Teams est un excellent moyen de donner à votre application une apparence qui s’adapte parfaitement à l’expérience cliente de Teams. Les contrôles d’interface utilisateur sont essentiels pour atteindre cet objectif. Pour faciliter la création d’une interface utilisateur cohérente, App Studio fournit plusieurs catégories de contrôles d’interface utilisateur, qui suivent les principes de conception teams.
 
 Des exemples de contrôles et de composants React correspondants sont fournis et prêts à être utilisés pour la création de votre application.
 

@@ -1,17 +1,18 @@
 ---
-title: Envoi et réception de fichiers à partir d’un bot
-description: Découvrez comment envoyer et recevoir des fichiers via le bot à l’aide d’API Graph pour les étendues de conversation personnelle, de canal et de groupe.
+title: Envoyer et recevoir des fichiers à partir d’un bot
+description: Découvrez comment envoyer et recevoir des fichiers via le bot à l’aide d’API Graph pour les étendues personnelles, de canal et de groupchat. Utilisez Teams API de bot à l’aide d’exemples de code basés sur le Kit de développement logiciel (SDK) Bot Framework v3.
+keywords: équipes bots fichiers envoyer recevoir
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143367"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503584"
 ---
-# <a name="send-and-receive-files-through-your-bot"></a>Envoyez et recevez des fichiers à travers votre bot
+# <a name="send-and-receive-files-using-bots"></a>Envoyer et recevoir des fichiers à l’aide de bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -187,7 +188,7 @@ Le tableau suivant décrit les propriétés du contenu de la pièce jointe :
 | `uniqueId` | ID d’élément de lecteur OneDrive/SharePoint |
 | `fileType` | Type de fichier, tel que pdf ou docx. |
 
-### <a name="basic-example-in-c"></a>Exemple de base en C#
+### <a name="basic-example-in-c"></a>Exemple de base en C #
 
 L’exemple suivant montre comment gérer les chargements de fichiers et envoyer des demandes de consentement de fichier dans la boîte de dialogue de votre bot :
 
@@ -266,3 +267,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## <a name="see-also"></a>Voir aussi
+
+[Travailler avec des fichier dans Microsoft Graph](/graph/api/resources/onedrive)

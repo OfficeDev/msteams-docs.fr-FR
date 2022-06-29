@@ -1,16 +1,16 @@
 ---
 title: Personnaliser votre application Teams
 author: heath-hamilton
-description: Dans ce module, découvrez comment Teams administrateurs peuvent personnaliser votre application Teams pour leur organisation et masquer Teams application jusqu’à ce que l’administrateur approuve.
+description: Dans ce module, découvrez comment les administrateurs Teams peuvent personnaliser votre application Teams pour leur organisation et masquer l’application Teams jusqu’à ce que l’administrateur approuve.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143199"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503444"
 ---
 # <a name="customize-your-teams-app"></a>Personnaliser votre application Teams
 
@@ -44,7 +44,7 @@ Pour améliorer l’expérience d’application Teams, vous pouvez masquer une a
 
 Pour masquer l’application, dans le fichier manifeste de l’application, définissez la propriété `defaultBlockUntilAdminAction` sur `true`. Lorsque la propriété est définie sur `true`, dans le Centre d’administration Teams > **Gérer les applications**, **bloqué par l’éditeur** apparaît dans l’**État** de l’application :
 
-![Gérer les applications bloquées par l’éditeur](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Gérer les applications bloquées par l’éditeur.":::
 
 L’administrateur obtient une demande d’action avant qu’un utilisateur puisse accéder à l’application. Sous **Gérer les applications**, les administrateurs peuvent sélectionner **Autoriser** pour autoriser l’application avec **bloqué par l’état** de l’éditeur :
 

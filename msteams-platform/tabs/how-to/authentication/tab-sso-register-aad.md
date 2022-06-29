@@ -3,15 +3,15 @@ title: Inscrire votre application onglet auprès d’Azure AD
 description: Décrit l’inscription de votre application onglet auprès d’Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) - Étendue de l’authentification unique du jeton d’accès
-ms.openlocfilehash: e508e80f4e2c881e848f628a12392e6ced5e6f4b
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Onglets d’authentification Teams Microsoft Azure Active Directory (Azure AD) l’étendue de l’authentification unique du jeton d’accès
+ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888047"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503521"
 ---
-# <a name="register-your-app-in-azure-ad"></a>Inscrire votre application dans Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Inscrire votre application onglet dans Azure AD
 
 Azure AD fournit l’accès à votre application onglet en fonction de l’identité Teams de l’utilisateur de l’application. Vous devez inscrire votre application onglet auprès d’Azure AD afin que l’utilisateur de l’application qui s’est connecté à Teams puisse avoir accès à votre application onglet.
 
@@ -25,7 +25,7 @@ Créez une inscription d’application dans Azure AD et exposez son API (web) à
 
 Vous devrez peut-être également configurer des détails supplémentaires, tels que l’authentification des utilisateurs d’application sur la plateforme ou l’appareil sur lequel vous souhaitez cibler votre application onglet.
 
-Les autorisations de l’API Graph au niveau de l’utilisateur sont prises en charge, c’est-à-dire, e-mail, profil, offline_access et OpenId. Si vous avez besoin d’accéder à des étendues Graph supplémentaires, par `User.Read` `Mail.Read`exemple, consultez [Obtenir un jeton d’accès avec des autorisations Graph](tab-sso-graph-api.md).
+Les autorisations de API Graph au niveau de l’utilisateur sont prises en charge, c’est-à-dire l’e-mail, le profil, offline_access et OpenId. Si vous avez besoin d’accéder à des étendues Graph supplémentaires, par `User.Read` `Mail.Read`exemple, consultez [Obtenir un jeton d’accès avec des autorisations Graph](tab-sso-graph-api.md).
 
 La configuration d’Azure AD active l’authentification unique pour votre application onglet dans Teams. Il répond avec un jeton d’accès pour valider l’utilisateur de l’application.
 
@@ -57,14 +57,14 @@ Inscrivez une nouvelle application dans Azure AD et configurez la location et la
 
 ### <a name="to-register-a-new-app-in-azure-ad"></a>Pour inscrire une nouvelle application dans Azure AD
 
-1. Ouvrez le [portail Azure](https://ms.portal.azure.com/) sur votre navigateur web.
-   La page portail Microsoft Azure AD s’ouvre.
+1. Ouvrez le [Portail Azure](https://ms.portal.azure.com/) sur votre navigateur web.
+   La page Microsoft Azure AD Portal s’ouvre.
 
-2. Sélectionnez l’icône **Inscriptions d’applications** .
+2. Sélectionnez l’icône **inscriptions d'applications**.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Page portail Azure AD." border="true":::
 
-   La page **Inscriptions d’applications** s’affiche.
+   La page **inscriptions d'applications** s’affiche.
 
 3. Sélectionnez **+ Nouvelle icône d’inscription** .
 
@@ -83,8 +83,8 @@ Inscrivez une nouvelle application dans Azure AD et configurez la location et la
 
     | Option | Sélectionnez cette option pour... |
     | --- | --- |
-    | Comptes dans cet annuaire organisationnel uniquement (Microsoft uniquement - Locataire unique) | Créez une application pour une utilisation uniquement par les utilisateurs (ou les invités) dans votre locataire. <br> Souvent appelée application métier, cette application est une application monolocataire dans la plateforme d’identités Microsoft. |
-    | Comptes dans n’importe quel annuaire organisationnel (répertoire Azure AD - Multilocataire) | Permettre aux utilisateurs de n’importe quel locataire Azure AD d’utiliser votre application. Cette option est appropriée si, par exemple, vous créez une application SaaS et que vous envisagez de la mettre à la disposition de plusieurs organisations. <br> Ce type d’application est connu sous le nom d’application mutualisée dans la plateforme d’identités Microsoft.|
+    | Comptes dans cet annuaire organisationnel uniquement (Microsoft uniquement - Locataire unique) | Créez une application pour une utilisation uniquement par les utilisateurs (ou les invités) dans votre locataire. <br> Souvent appelée application métier, cette application est une application monolocataire dans le Plateforme d'identités Microsoft. |
+    | Comptes dans n’importe quel annuaire organisationnel (répertoire Azure AD - Multilocataire) | Permettre aux utilisateurs de n’importe quel locataire Azure AD d’utiliser votre application. Cette option est appropriée si, par exemple, vous créez une application SaaS et que vous envisagez de la mettre à la disposition de plusieurs organisations. <br> Ce type d’application est appelé application mutualisée dans le Plateforme d'identités Microsoft.|
     | Comptes dans n’importe quel annuaire organisationnel (annuaire Azure AD - Multilocataire) et comptes Microsoft personnels | Ciblez l’ensemble de clients le plus large. <br> En sélectionnant cette option, vous inscrivez une application mutualisée qui peut également aider les utilisateurs d’applications disposant de comptes Microsoft personnels. |
     | Comptes Microsoft personnels uniquement | Créez une application uniquement pour les utilisateurs disposant de comptes Microsoft personnels. |
 
@@ -185,7 +185,7 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
     1. Entrez le nom de l’étendue. Ce champ est obligatoire.
     2. Sélectionnez l’utilisateur qui peut donner son consentement pour cette étendue. L’option par défaut est **Admins uniquement**.
-    3. Entrez le **nom d’affichage du consentement administrateur**. Ce champ est obligatoire.
+    3. Entrez le **nom d’affichage Administration consentement**. Ce champ est obligatoire.
     4. Entrez la description du consentement de l’administrateur. Ce champ est obligatoire.
     5. Entrez le **nom d’affichage du consentement de l’utilisateur**.
     6. Entrez la description de la description du consentement de l’utilisateur.
@@ -272,6 +272,6 @@ Félicitations ! Vous avez terminé la configuration de l’application dans Az
 
 - [Location dans Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [Étendre l’application onglet avec des autorisations et une étendue Microsoft Graph](tab-sso-graph-api.md)
-- [Démarrage rapide : Inscrire une application auprès de la plateforme d’identités Microsoft](/azure/active-directory/develop/quickstart-register-app)
+- [Démarrage rapide : Inscrire une application auprès du Plateforme d'identités Microsoft](/azure/active-directory/develop/quickstart-register-app)
 - [Démarrage rapide : Configurer une application pour exposer une API web](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [Flux de code d’autorisation OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

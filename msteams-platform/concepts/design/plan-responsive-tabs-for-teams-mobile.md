@@ -5,12 +5,12 @@ description: Avec ce module d’apprentissage, vous allez apprendre à planifier
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143185"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483999"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
 
@@ -65,7 +65,7 @@ Vous pouvez afficher les informations suivantes :
 * Visuels de données, cartes et infographies.
 * Graphiques, graphiques et tableaux.
 
-![Consommation des applications de tableau de bord et de visualisation des données](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Afficher les données sous la forme d’une visualisation.":::
 
 Actions rapides :
 
@@ -75,7 +75,7 @@ Dans la deuxième étape, les utilisateurs peuvent travailler sur les graphiques
 * Filtrer les données.
 * Créez des signets.
 
-![Actions rapides des applications de tableau de bord et de visualisation des données](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Actions rapides sur le graphique et les visuels existants.":::
 
 Activation : 
 
@@ -87,7 +87,7 @@ Vous pouvez fournir l’accès suivant aux utilisateurs :
 * Insérez des éléments de données pour créer des visualisations.
 * Partagez des visualisations dans un canal ou une conversation de groupe.
 
-![Activation des applications de tableau de bord et de visualisation des données](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Permettre aux utilisateurs de créer du contenu tel que des graphiques graphiques.":::
 
 <br>
 
@@ -105,7 +105,7 @@ Consommation:
 
 Dans la première étape, votre application peut afficher la liste des tâches à l’utilisateur dans une pile verticale. S’il existe plusieurs catégories de tâches, telles que **Proposée** , **Active** et **Bouclée**, fournissez des filtres pour afficher les tâches groupées ou en tant qu’en-têtes pour afficher les tâches groupées.
 
-![Consommation des applications d’intégration de tâches](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Affiche la liste des tâches dans une pile verticale.":::
 
 Actions rapides :
 
@@ -118,7 +118,7 @@ Dans la deuxième étape, vous pouvez fournir l’accès à l’application suiv
 * Déplacez les tâches dans différentes catégories.
 * Partagez les tâches pertinentes dans les conversations et les canaux par le biais d’e-mails et de flux d’activité.
 
-![Actions rapides d’intégration de tâches d’applications](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Créez des tâches pour réduire la charge cognitive des utilisateurs.":::
 
 Activation : 
 
@@ -128,7 +128,8 @@ Dans la troisième étape, vous pouvez activer l’expérience des utilisateurs 
 * Ajoutez et modifiez différentes catégories, telles que **Proposé**, **Actif** et **Fermé**.
 * Configurez les tâches pour les commentaires, les pièces jointes et d’autres fonctionnalités complexes.
 
-![Activation des applications d’intégration de tâche](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Activez l’expérience utilisateur en ajoutant des projets et des tableaux.":::
+
 <br>
 
 </details>
@@ -149,7 +150,7 @@ Dans la première étape, vous pouvez envisager l’expérience de bureau pour a
 * Zoom avant ou arrière.
 * Étape ou progression actuelle d’un document en attente.
 
-![Utilisation des applications de co-écriture et création de tableau blanc](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Affiche le contenu et les ressources dans l’expérience de bureau.":::
 
 Actions rapides :
 
@@ -162,7 +163,7 @@ Dans la deuxième étape, vous pouvez introduire les actions suivantes :
 > [!TIP]
 > Vous exposez des actions qui peuvent être affichées facilement sur les petits écrans.
 
-![Actions rapides des applications de co-écriture et création de tableau blanc](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Présente la création d’un tableau pour la collaboration.":::
 
 Activation : 
 
@@ -174,7 +175,7 @@ Dans la troisième étape, fournissez une expérience complète à vos utilisate
 * Opérations de suppression, d’annulation et de restauration.
 * Accédez à la caméra et au microphone à l’aide des API du Kit de développement logiciel (SDK) JS. Pour plus d’informations sur les fonctionnalités des appareils, consultez [vue d’ensemble des fonctionnalités des appareils](../device-capabilities/device-capabilities-overview.md).
 
-![Activation des applications de co-création et de tableau blanc](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Activez l’expérience utilisateur en ajoutant des formes de texte, des notes rapides et d’autres fonctionnalités.":::
 
 <br>
 

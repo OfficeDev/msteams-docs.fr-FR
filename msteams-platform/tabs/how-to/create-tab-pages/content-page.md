@@ -5,14 +5,14 @@ description: Dans ce module, découvrez comment créer une page de contenu pour 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 646e7f1a1177330fdb4db64b7e6cd1bde0df5db5
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 21cc2559b7a6751981156deac1d2373f7ce0dfbe
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142205"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503353"
 ---
-# <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
+# <a name="create-a-content-page"></a>Créer une page de contenu
 
 Une page de contenu est une page web qui est affichée dans le client Teams, qui fait partie des éléments suivants :
 
@@ -28,7 +28,7 @@ Cet article est spécifique à l’utilisation de pages de contenu sous forme d�
 
 L’objectif global de votre onglet est de fournir l’accès au contenu significatif et attrayant qui a une valeur pratique et un objectif évident. 
 
-Vous devez vous concentrer sur le nettoyage de la conception de votre onglet, l’intuitive de navigation et l’immersif de contenu. Pour plus d’informations, consultez [les instructions de conception de l’onglet](~/tabs/design/tabs.md) et [Microsoft Teams les instructions de validation du magasin](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Vous devez vous concentrer sur le nettoyage de la conception de votre onglet, l’intuitive de navigation et l’immersif de contenu. Pour plus d’informations, consultez [les instructions de conception de l’onglet et les](~/tabs/design/tabs.md) [instructions de validation du Magasin Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Intégrer votre code à Teams
 
@@ -115,9 +115,9 @@ Pour afficher l’indicateur de chargement :
 
 1. Ajoutez `"showLoadingIndicator": true` à votre manifeste.
 1. Appel `app.initialize();`.
-1. Comme étape **obligatoire**, appelez `app.notifySuccess()` pour notifier aux équipes que votre application a été chargée avec succès. Ensuite, Teams masque l’indicateur de chargement, le cas échéant. S’il `notifySuccess` n’est pas appelé dans les 30 secondes, Teams suppose que votre application a expiré et affiche un écran d’erreur avec une option de nouvelle tentative.
+1. Comme étape **obligatoire**, appelez `app.notifySuccess()` pour notifier aux équipes que votre application a été chargée avec succès. Ensuite, Teams masque l’indicateur de chargement, le cas échéant. S’il `notifySuccess`  n’est pas appelé dans les 30 secondes, Teams suppose que votre application a expiré et affiche un écran d’erreur avec une option de nouvelle tentative.
 1. Si vous êtes prêt à imprimer à l’écran et souhaitez charger **tardivement** le reste du contenu de votre application, vous pouvez masquer l’indicateur de chargement manuellement en appelant `app.notifyAppLoaded();`.
-1. Si votre application ne se charge pas, vous pouvez appeler `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` pour informer Teams de l’échec et, éventuellement, fournir un message d’échec. Un écran d’erreur s’affiche pour l’utilisateur. Le code suivant montre l’énumération qui définit les raisons possibles pour lesquelles vous pouvez indiquer l’échec du chargement de l’application :
+1. Si votre application ne se charge pas, vous pouvez appeler `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` Teams pour l’informer de l’échec et, éventuellement, fournir un message d’échec. Un écran d’erreur s’affiche pour l’utilisateur. Le code suivant montre l’énumération qui définit les raisons possibles pour lesquelles vous pouvez indiquer l’échec du chargement de l’application :
 
     ```typescript
     /* List of failure reasons */

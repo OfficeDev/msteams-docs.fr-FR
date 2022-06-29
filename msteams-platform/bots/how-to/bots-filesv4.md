@@ -1,17 +1,17 @@
 ---
-title: Envoyez et recevez des fichiers par le biais du robot
+title: Envoyer et recevoir des fichiers à l’aide d’un bot
 description: Apprenez à envoyer et à recevoir des fichiers par le biais du robot en utilisant les API graphiques pour les scopes personnels, de canal et de discussion de groupe.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189645"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503878"
 ---
-# <a name="send-and-receive-files-through-the-bot"></a>Envoyez et recevez des fichiers par le biais du robot
+# <a name="send-and-receive-files-using-bot"></a>Envoyer et recevoir des fichiers à l’aide d’un bot
 
 > [!IMPORTANT]
 > Les articles de ce document sont basés sur le Bot Framework SDK v4.

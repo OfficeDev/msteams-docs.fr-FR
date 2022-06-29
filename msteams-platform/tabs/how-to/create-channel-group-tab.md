@@ -1,19 +1,19 @@
 ---
-title: Créer un canal ou un onglet de groupe
+title: Créer un onglet de canal
 author: laujan
 description: Dans ce module, découvrez comment créer un canal et un onglet de groupe avec le générateur Yeoman pour Microsoft Teams, notamment en examinant le code source avec des exemples de code.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189601"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503647"
 ---
-# <a name="channel-or-group-tab"></a>Onglets de canal ou de groupe
+# <a name="create-a-channel-tab"></a>Créer un onglet de canal
 
 Les onglets de canal ou de groupe offrent du contenu aux canaux et aux conversations de groupe, et sont un excellent moyen de créer des espaces de collaboration autour de contenu web dédié.
 
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Charger votre application dans Teams
 
-1. Accédez à Teams et sélectionnez **Applications**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Accédez à Teams et sélectionnez **Applications**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Sélectionnez **Gérer vos applications** et **Charger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
 
@@ -394,7 +394,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec Developer Portal
 
-1. Allez à Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
+1. Accédez à Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
 
 1. Accédez à [**Portail des développeurs**](https://dev.teams.microsoft.com/home).
 
@@ -617,7 +617,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec Developer Portal
 
-1. Allez à Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
+1. Accédez à Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
 
 1. Accédez à [**Portail des développeurs**](https://dev.teams.microsoft.com/home).
 

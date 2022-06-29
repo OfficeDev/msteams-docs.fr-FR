@@ -1,24 +1,24 @@
 ---
 title: Concevoir votre application avec des composants d’interface utilisateur avancés
 author: heath-hamilton
-description: Découvrez les Teams composants de l’interface utilisateur, tels que la barre de navigation, la barre de notification, l’affichage intermédiaire, ainsi que les cas d’utilisation pertinents.
+description: Découvrez les composants de l’interface utilisateur Teams, tels que la barre de navigation, la barre de notification, l’affichage intermédiaire, ainsi que les cas d’utilisation pertinents.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143423"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485721"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur avancés
 
-Les composants suivants sont une combinaison de [composants d’interface utilisateur de base](~/concepts/design/design-teams-app-basic-ui-components.md) que vous pouvez utiliser pour les situations courantes de conception Teams, telles que la navigation.
+Les composants suivants sont une combinaison de [composants d’interface utilisateur de base](~/concepts/design/design-teams-app-basic-ui-components.md) que vous pouvez utiliser pour les situations de conception Teams courantes, telles que la navigation.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent’interface utilisateur</a>, le kit d’interface utilisateur Microsoft Teams inclut des composants et des modèles conçus spécifiquement pour la création d’applications Teams. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
+Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>, le Kit d’interface utilisateur Microsoft Teams inclut des composants et des modèles conçus spécifiquement pour la création d’applications Teams. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -36,7 +36,7 @@ Les barres de navigation sont une aide à la navigation qui transmet la hiérarc
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="L’exemple montre un modèle de navigation sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="L’exemple montre un modèle de navigation sur le bureau." border="false":::
 
@@ -53,7 +53,7 @@ Utilisez la navigation de gauche pour parcourir plusieurs pages dans votre ongle
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur le bureau." border="false":::
 
@@ -61,11 +61,11 @@ Utilisez la navigation de gauche pour parcourir plusieurs pages dans votre ongle
 
 Une barre de notification est une zone dédiée pour afficher un bref message important qui ne nécessite pas que l’utilisateur prenne des mesures immédiates. Des couleurs et des icônes d’arrière-plan spécifiques sont associées à des types de messages spécifiques (voir ci-dessous).
 
-Vous pouvez implémenter une barre de notification à l’aide du composant [d’alerte Fluent’interface utilisateur](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition).
+Vous pouvez implémenter une barre de notification à l’aide du composant [d’alerte](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) Fluent UI.
 
 ### <a name="top-use-cases"></a>Principaux cas d’usage
 
-* Messages critiques, erreurs et avertissements
+* Messages critiques, erreurs et avertissements.
 * Messages de réussite
 * Messages d’information ou promotionnels
 
@@ -73,19 +73,19 @@ Vous pouvez implémenter une barre de notification à l’aide du composant [d�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="L’exemple montre un modèle d’interface utilisateur de barre de notification sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="L’exemple montre des modèles d’interface utilisateur de barre de notification sur le bureau." border="false":::
 
 ## <a name="stage-view"></a>vue des étapes
 
-L’affichage intermédiaire permet aux utilisateurs de voir du contenu(comme une image, un fichier ou un site web) sur une grande surface dans Teams sans changer de contexte. Ce composant est principalement destiné à l’affichage du contenu. Ne l’utilisez pas pour des interactions complexes.
+L’affichage intermédiaire permet aux utilisateurs de voir du contenu, comme une image, un fichier ou un site web, sur une grande surface dans Teams sans changer de contexte. Ce composant est principalement destiné à l’affichage du contenu. Ne l’utilisez pas pour des interactions complexes.
 
 Découvrez comment implémenter la [vue d’étape](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Principaux cas d’usage
 
-* Afficher du contenu dans une grande surface dans Teams au lieu d’une autre application ou navigateur
+* Affichez du contenu dans une grande surface dans Teams au lieu d’une autre application ou navigateur.
 * Média à la une ou tout autre contenu enrichi
 
 ### <a name="mobile"></a>Mobile
@@ -94,7 +94,7 @@ Votre application peut lancer une étape à partir d’une carte adaptative, d�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Exemple montrant un modèle d’étape sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur le bureau." border="false":::
 
@@ -112,6 +112,6 @@ Une barre d’outils est un conteneur permettant de regrouper un ensemble de con
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="L’exemple montre un modèle de barre d’outils sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="L’exemple montre un modèle de barre d’outils sur le bureau." border="false":::

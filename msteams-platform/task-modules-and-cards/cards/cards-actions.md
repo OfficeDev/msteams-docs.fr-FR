@@ -3,12 +3,12 @@ title: Ajouter des actions de carte dans un bot
 description: Dans ce module, découvrez les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189758"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483969"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -429,7 +429,9 @@ Cartes adaptatives prendre en charge quatre types d’actions :
 Vous pouvez également modifier la charge utile `Action.Submit` carte adaptative pour prendre en charge les actions de Bot Framework existantes à l’aide d’une propriété `msteams` dans l’objet `data` de `Action.Submit`. La section suivante fournit des détails sur l’utilisation des actions Bot Framework existantes avec des cartes adaptatives.
 
 > [!NOTE]
-> L’ajout de `msteams` aux données avec une action Bot Framework ne fonctionne pas avec un module de tâche de carte adaptative.
+>* L’ajout de `msteams` aux données avec une action Bot Framework ne fonctionne pas avec un module de tâche de carte adaptative.
+> 
+>* Principal ou désélectionné `ActionStyle` n’est pas pris en charge dans Microsoft Teams. 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartes adaptatives avec l’action messageBack
 

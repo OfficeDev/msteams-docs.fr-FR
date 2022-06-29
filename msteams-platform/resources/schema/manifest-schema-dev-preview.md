@@ -4,14 +4,14 @@ description: Découvrez l’exemple de fichier manifeste et la description de to
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189874"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503472"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste en préversion publique pour les développeurs pour Teams
 
 Pour plus d’informations sur l’activation de la préversion des développeurs, consultez [Aperçu publique des développeurs pour Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -547,7 +547,7 @@ L’objet est un tableau avec tous les éléments du type `string`.
 
 Facultatif :
 
-Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et Graph informations pour aider les utilisateurs à se connecter en toute transparence à votre application Azure AD.
+Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et les informations Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Azure AD.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -779,7 +779,7 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |---|---|
     |`InAppPurchase.Allow.User`|Permet à l’application d’afficher les offres marketplace de l’utilisateur et d’effectuer les achats de l’utilisateur au sein de l’application, au nom de l’utilisateur connecté.|
 
-* **Autorisations spécifiques aux ressources pour Teams partage en direct**
+* **Autorisations spécifiques aux ressources pour le partage en direct Teams**
 
    |Nom| Description |
    | ----- | ----- |

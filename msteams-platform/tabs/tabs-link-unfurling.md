@@ -1,16 +1,16 @@
 ---
 title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez comment déployer un lien, ouvrir le mode Étape et épingler un onglet avec Teams application. Apprenez à l’appeler à l’aide d’une carte adaptative à l’aide de l’exemple de code et de l’exemple.
+description: Découvrez comment déployer un lien, ouvrir la vue des étapes et épingler un onglet avec l'application Microsoft Teams. Découvrez la vue des étapes et son utilisation en utilisant la carte adaptative à l'aide d'un exemple de code et d'un échantillon.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122907"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484927"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -87,7 +87,7 @@ Voici le processus d’appel de la vue d’étape :
 * Le robot répond avec un `200` code.
 
 > [!NOTE]
-> Sur Teams clients mobiles, l’appel de la vue d’étape pour les applications distribuées via [votre application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md) et l’absence d’expérience optimisée pour Moblie ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l'URL spécifié dans le `websiteUrl`paramètre de `TabInfo`l'objet.
+> Sur les clients mobiles de Teams, l'invocation de l’Affichage étendu pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur web par défaut de l'appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 

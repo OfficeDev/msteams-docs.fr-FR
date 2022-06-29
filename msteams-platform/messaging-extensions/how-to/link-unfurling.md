@@ -5,14 +5,14 @@ description: Dans ce module, découvrez comment ajouter un déploiement de lien 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190001"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503612"
 ---
-# <a name="link-unfurling"></a>Déploiement de lien
+# <a name="add-link-unfurling"></a>Ajouter un déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -50,7 +50,7 @@ Pour ajouter un déploiement de lien à votre manifeste d’application, ajoutez
 ### <a name="add-link-unfurling-manually"></a>Ajouter le déploiement manuel du lien
 
 > [!NOTE]
-> Si l’authentification est ajoutée via Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+> Si l’authentification est ajoutée via Azure AD, [déploiez des liens dans Teams à l’aide du bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 Pour permettre à votre extension de message d’interagir avec des liens, vous devez d’abord ajouter le tableau `messageHandlers` au manifeste de votre application. L’exemple suivant explique comment ajouter manuellement un déploiement de lien :
 

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189609"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485326"
 ---
 # <a name="teams-app-that-fits"></a>Application Teams adaptée
 
@@ -51,7 +51,7 @@ Voici pourquoi Teams est la solution la mieux adaptée à vos besoins en matièr
 
 - **Interactions sociales**
 
-    Teams est une plateforme sociale. Les applications personnalisées axées sur les réseaux sociaux encouragent votre équipe à étendre la culture de votre entreprise dans votre espace de collaboration. Utilisez des applications pour envoyer des sondages, permettre aux gens de partager leurs commentaires entre eux, favoriser la connexion et la communication.
+    Teams est une plateforme sociale. Les applications personnalisées axées sur les réseaux sociaux encouragent votre équipe à étendre la culture de votre entreprise dans votre espace de collaboration. Utilisez des applications pour envoyer des sondages, permettre aux utilisateurs de partager des commentaires les uns avec les autres, d’activer la connexion et la communication.
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Application Teams pour la création d’une culture d’équipe" border="false":::
 

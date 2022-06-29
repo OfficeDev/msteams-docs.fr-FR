@@ -1,16 +1,16 @@
 ---
 title: Bots et kits de développement
 author: surbhigupta
-description: Dans cet article, découvrez les outils et les kits de développement logiciel (SDK) pour créer Microsoft Teams bots et bots avec le Microsoft Bot Framework.
+description: Dans cet article, découvrez les outils et les kits de développement logiciel (SDK) pour la création de bots et de bots Microsoft Teams avec le Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189336"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485684"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -186,9 +186,10 @@ Dans les cas où les bots fonctionnent mieux dans un canal, ils fonctionnent ég
 Les bots de conversation interagissent traditionnellement de cette façon avec les utilisateurs. Voici quelques exemples de bots conversationnels un-à-un :
 
 * Questions et réponses Un bot
-* bots qui lancent des workflows dans d’autres systèmes
-* bots qui décrivent des rires
-* bots qui prennent des notes Avant de créer des chatbots un-à-un, déterminez si une interface basée sur une conversation est la meilleure façon de présenter vos fonctionnalités.
+* bots qui lancent des workflows dans d’autres systèmes.
+* bots qui racontent des blagues.
+* bots qui prennent des notes.
+Avant de créer des chatbots un-à-un, déterminez si une interface basée sur une conversation est la meilleure façon de présenter vos fonctionnalités.
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 

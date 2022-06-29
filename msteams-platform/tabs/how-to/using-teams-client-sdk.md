@@ -1,18 +1,18 @@
 ---
-title: Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams
+title: Kit de développement logiciel client JavaScript Teams
 author: heath-hamilton
 ms.author: surbhigupta
 description: Dans ce module, découvrez le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189510"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503920"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams
+# <a name="teams-javascript-client-sdk"></a>Kit de développement logiciel client JavaScript Teams
 
 Le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams peut vous aider à créer des expériences hébergées dans Teams, Office et Outlook, où le contenu de votre application est hébergé dans un [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). Le Kit de développement logiciel (SDK) est utile pour développer des applications avec les fonctionnalités Teams suivantes :
 
@@ -42,7 +42,7 @@ Le tableau suivant répertorie les onglets et boîtes de dialogue Teams (modules
 | appInitialization| | Déconseillé. Remplacé par `app` un espace de noms. |
 | appInstallDialog | Équipes||
 | authentification | Teams, Outlook, Office | |
-| calendrier | Teams, Outlook ||
+| calendrier | Outlook ||
 | appeler | Équipes||
 | conversation |Équipes||
 | fenêtre de dialogue | Teams, Outlook, Office | Espace de noms représentant des dialogues (anciennement *nommés modules de tâches*. Consultez les notes sur [les boîtes de dialogue](#dialogs). |

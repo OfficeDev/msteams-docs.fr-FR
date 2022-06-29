@@ -1,16 +1,16 @@
 ---
 title: Ajouter l’authentification à votre bot Teams
 author: surbhigupta
-description: Découvrez comment ajouter l’authentification OAuth à un bot dans Teams à l’aide de Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots prenant en charge l’authentification.
+description: Découvrez comment ajouter l’authentification OAuth à un bot dans Teams à l’aide d’Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots prenant en charge l’authentification.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c66425550bdb989d8e0cb55d806a5e6b8fc92d6a
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 297307657905a1492abc68fde7d69cfbc0702497
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150763"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484970"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -27,7 +27,7 @@ Pour plus d’informations sur la façon dont Azure Bot Service gère l’authen
 Voici les titres des sections de cet article :
 
 - **Comment créer un bot prenant en charge l’authentification**. Vous allez utiliser [cs-auth-sample][teams-auth-bot-cs] pour gérer les informations d’identification de connexion utilisateur et la génération du jeton d’authentification.
-- **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émet un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder aux ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, consultez [Microsoft Teams flux d’authentification pour les bots](auth-flow-bot.md).
+- **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émet un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder aux ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, consultez  [le flux d’authentification Microsoft Teams pour les bots](auth-flow-bot.md).
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous connecter et échanger des messages avec lui dans une conversation.
 
 ## <a name="prerequisites"></a>Configuration requise
@@ -119,7 +119,7 @@ Pour créer une clé secrète client :
 
 1. En regard de **l’ID d’application Microsoft**, **sélectionnez Gérer**.
 
-    ![Gérer le bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="gérer le bot":::
 
 1. Dans la section **Secrets client** , sélectionnez **Nouvelle clé secrète client**. **Une fenêtre de clé secrète client** s’affiche.
 
@@ -268,7 +268,7 @@ Une fois les paramètres préliminaires terminés, concentrons-nous sur la créa
 
 1. Cloner [cs-auth-sample][teams-auth-bot-cs]
 1. Lancez Visual Studio.
-1. Dans la barre d’outils, sélectionnez **Fichier -> Ouvrir -> Project/Solution** et ouvrez le projet de bot.
+1. Dans la barre d’outils, sélectionnez **Fichier -> Ouvrir -> Projet/Solution** et ouvrez le projet de bot.
 1. En C#, mettez à jour **appsettings.json** comme suit :
 
     - Définissez `ConnectionName` le nom de la connexion du fournisseur d’identité que vous avez ajoutée à l’inscription du bot. Le nom que nous avons utilisé dans cet exemple est *BotTeamsAuthADv1*.
@@ -452,7 +452,7 @@ L’assistant de l’importation de tâche s’affiche.
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Test du bot localement dans Teams
 
-Teams est un produit entièrement basé sur le cloud, il nécessite que tous les services accessibles soient disponibles à partir du cloud à l’aide de points de terminaison HTTPS. Par conséquent, pour permettre au bot (notre exemple) de fonctionner dans Teams, vous devez soit publier le code dans le cloud de votre choix, soit rendre une instance en cours d’exécution localement accessible en externe via un outil **de tunneling**. Nous vous recommandons  [ngrok](https://ngrok.com/download), qui crée une URL adressable en externe pour un port que vous ouvrez localement sur votre ordinateur.
+Teams est un produit entièrement basé sur le cloud. Tous les services accessibles doivent être disponibles à partir du cloud à l’aide de points de terminaison HTTPS. Par conséquent, pour permettre au bot (notre exemple) de fonctionner dans Teams, vous devez soit publier le code dans le cloud de votre choix, soit rendre une instance en cours d’exécution localement accessible en externe via un outil **de tunneling**. Nous vous recommandons  [ngrok](https://ngrok.com/download), qui crée une URL adressable en externe pour un port que vous ouvrez localement sur votre ordinateur.
 Pour configurer ngrok en vue de l’exécution locale de votre application Teams, procédez comme suit :
 
 1. Dans une fenêtre de terminal, accédez au répertoire où vous avez `ngrok.exe` installé. Nous vous suggérons de définir le chemin de *la variable d’environnement* pour qu’il pointe vers celui-ci.

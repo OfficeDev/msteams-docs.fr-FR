@@ -4,14 +4,14 @@ description: Découvrez comment spécifier les options d’installation par déf
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 9055b765c30f83c4031ad0e2ba5f18f4e747ac3f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 75ea4dbae2379e6d6e7e2cc707314207cd7186ca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122900"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503451"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurer les options d’installation par défaut pour votre application Microsoft Teams
+# <a name="configure-default-install-options-for-teams-app"></a>Configurer les options d’installation par défaut pour l’application Teams
 
 Il est courant qu’une application prenne en charge plusieurs scénarios dans Teams, mais vous l’avez peut-être conçue avec une étendue et une fonctionnalité spécifiques à l’esprit. Par exemple, si votre application est principalement destinée à une utilisation d’équipe ou de canal, vous pouvez vous assurer que la première option d’installation que les utilisateurs voient dans le Store est **Ajouter à une équipe**.
 

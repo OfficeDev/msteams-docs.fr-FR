@@ -3,14 +3,14 @@ title: Support de l'identification unique pour les robots
 description: Découvrez comment obtenir un jeton utilisateur et qu’un développeur de bots peut utiliser une carte de connexion ou le service de bot Azure avec la prise en charge de la carte OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189724"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503654"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a>Support de l'identification unique pour les robots
+# <a name="use-sso-authentication-for-bots"></a>Utiliser l’authentification unique pour les bots
 
 L'authentification par authentification unique dans Microsoft Azure Active Directory (Azure AD) rafraîchit silencieusement le jeton d'authentification afin de réduire le nombre de fois où les utilisateurs doivent saisir leurs informations d'identification. Si les utilisateurs acceptent d'utiliser votre application, ils n'ont pas besoin de donner à nouveau leur consentement sur un autre appareil car ils sont automatiquement connectés. Les onglets et les bots ont un flux similaire pour la prise en charge de l’authentification unique. Mais le bot [demande des jetons](#request-a-bot-token) et [reçoit des réponses](#receive-the-bot-token) avec un protocole différent.
 
@@ -19,7 +19,7 @@ L'authentification par authentification unique dans Microsoft Azure Active Direc
 
 Consultez la vidéo suivante pour en savoir plus sur la prise en charge de l’authentification unique (SSO) pour les bots :
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot SSO au moment de l’exécution
@@ -100,7 +100,7 @@ Les étapes d’inscription de votre application via le portail Azure AD sont si
    >
    > Vous devez connaître les restrictions importantes suivantes :
    >
-   > * Seules les autorisations Microsoft API Graph au niveau de l’utilisateur, telles que l’e-mail, le profil, offline_access et OpenId, sont prises en charge. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph, telles que `User.Read` ou `Mail.Read`, consultez [Étendre l’application onglet avec les autorisations et l’étendue Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Seules les autorisations Microsoft API Graph au niveau de l’utilisateur, telles que l’e-mail, le profil, offline_access et OpenId, sont prises en charge. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph, telles que `User.Read` ou `Mail.Read`, consultez [Étendre l’application onglet avec des autorisations et une étendue Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Le nom de domaine de votre application doit être le même que le nom de domaine que vous avez enregistré pour votre application Azure AD.
    > * Les domaines multiples par application ne sont actuellement pas pris en charge.
    > * Les applications qui utilisent le `azurewebsites.net` domaine ne sont pas prises en charge, car elles sont courantes et peuvent constituer un risque pour la sécurité.
@@ -362,7 +362,7 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne déclenche 
 
 ### <a name="update-the-auth-sample"></a>Mettre à jour l’exemple d’authentification
 
-Ouvrez [Teams exemple d’authentification](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), puis effectuez les étapes suivantes pour le mettre à jour :
+Ouvrez [l’exemple d’authentification Teams](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), puis effectuez les étapes suivantes pour le mettre à jour :
 
 1. Mettez à jour TeamsBot pour gérer la déduplication de la requête entrante en incluant le code suivant :
 

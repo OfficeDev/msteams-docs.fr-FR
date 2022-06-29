@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123047"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484844"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
@@ -75,7 +75,7 @@ Pour arrêter la distribution d’une application une fois que vous l’avez pub
 1. Dans la page **Vue d’ensemble du produit**, **sélectionnez Arrêter la vente**. Elle supprime l’application de Microsoft AppSource.
 1. Pour lancer la suppression de la liste de l’application, dans **Espace partenaires**, sélectionnez la page **Vue d’ensemble**, puis **Arrêtez la vente**.
 
-Après avoir arrêté la distribution d’une application, vous pouvez toujours la voir dans Espace partenaires avec un état **Non disponible** . Si vous décidez de répertorier à nouveau l’application, suivez les instructions pour [publier votre application dans le Microsoft Teams Store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
+Après avoir arrêté la distribution d’une application, vous pouvez toujours la voir dans Espace partenaires avec un état **Non disponible** . Si vous décidez de répertorier à nouveau l’application, suivez les instructions pour [publier votre application dans le Microsoft Teams Store](../publish.md).
 
 ## <a name="see-also"></a>Voir aussi
 

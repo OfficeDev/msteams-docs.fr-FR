@@ -1,16 +1,16 @@
 ---
 title: Conception de votre extension de réunion
 author: heath-hamilton
-description: Découvrez comment concevoir des applications dans Teams réunions et obtenir le kit d’interface utilisateur Microsoft Teams, l’onglet en réunion, les cas d’usage, le comportement réactif, la phase de réunion partagée, le thème et la navigation.
+description: Découvrez comment concevoir des extensions de réunion pour vos applications dans les réunions Teams. Utilisez les modèles d’interface utilisateur du Kit d’interface utilisateur Microsoft Teams pour vous aider à concevoir votre onglet de réunion.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142681"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484660"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -18,14 +18,14 @@ Vous pouvez créer des applications pour rendre les réunions plus productives. 
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions de conception plus complètes, notamment des éléments que vous pouvez récupérer et modifier en fonction des besoins, dans le kit d’interface utilisateur Microsoft Teams.
+Vous trouverez des instructions de conception plus complètes, notamment des éléments que vous pouvez récupérer et modifier en fonction des besoins, dans le Kit d’interface utilisateur Microsoft Teams.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Ajouter une extension de réunion
 
-Les utilisateurs peuvent ajouter une extension de réunion avant et pendant les réunions. Ils peuvent également ajouter une application pour une réunion spécifique directement à partir du magasin Teams.
+Les utilisateurs peuvent ajouter une extension de réunion avant et pendant les réunions. Ils peuvent également ajouter une application pour une réunion spécifique directement à partir du Magasin Teams.
 
 ### <a name="add-before-a-meeting"></a>Ajouter avant une réunion
 
@@ -41,7 +41,7 @@ Une fois l’application ajoutée (par exemple, sur le bureau), les utilisateurs
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemple montrant comment ajouter une extension de réunion pendant une réunion sur un appareil mobile." border="false":::
 
-#### <a name="desktop"></a>Ordinateur de bureau
+#### <a name="desktop"></a>Bureau
 
 Dans une réunion, les utilisateurs peuvent sélectionner **Plus** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **d’ajouter une application** et sélectionner l’application souhaitée.
 
@@ -90,7 +90,7 @@ Les personnes peuvent utiliser l’onglet in-meeting pour :
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="L’exemple montre comment présenter le contenu d’un sondage dans un onglet de réunion sur mobile." border="false":::
 
-#### <a name="desktop"></a>Ordinateur de bureau
+#### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="L’exemple montre comment présenter le contenu d’un sondage dans un onglet de réunion." border="false":::
 
@@ -131,22 +131,22 @@ Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vou
 
 ## <a name="use-an-in-meeting-dialog"></a>Utiliser une boîte de dialogue en réunion
 
-Les dialogues en réunion s’affichent sur la Teams phase de réunion. Ils nécessitent l’attention, la confirmation ou l’interaction d’un utilisateur, mais sont subtils et n’interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés tâches.
+Les dialogues en réunion s’affichent sur la phase de réunion Teams. Ils nécessitent l’attention, la confirmation ou l’interaction d’un utilisateur, mais sont subtils et n’interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés tâches.
 
 ### <a name="use-cases"></a>Cas d’utilisation
 
 Les dialogues en réunion sont déclenchés par un utilisateur (tel que l’organisateur de la réunion) qui peut souhaiter que les participants :
 
-* Fournir de brefs commentaires
-* Effectuer une courte enquête ou sondage
-* Envoyer des approbations
-* Obtenir des rappels
+* Fournissez de brefs commentaires.
+* Effectuez une courte enquête ou sondage.
+* Envoyez des approbations.
+* Obtenez des rappels.
 
 ### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="L’exemple montre comment utiliser une boîte de dialogue en réunion sur un appareil mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Exemple montrant comment utiliser une boîte de dialogue en réunion." border="false":::
 
@@ -391,7 +391,7 @@ Nous vous recommandons de positionner l’action la plus lourde visuellement à 
 
 #### <a name="dont-left-or-center-align-actions"></a>Ne pas : actions d’alignement à gauche ou au centre
 
-Cela s’écarte du modèle de Teams standard pour le placement du contrôle dans une boîte de dialogue et peut entrer en conflit avec un dialogue situé derrière le premier.
+Cela s’écarte du modèle Teams standard pour le placement du contrôle dans une boîte de dialogue et peut entrer en conflit avec un dialogue situé derrière le premier.
 
    :::column-end:::
 :::row-end:::
@@ -407,7 +407,7 @@ Cela s’écarte du modèle de Teams standard pour le placement du contrôle dan
 
 #### <a name="do-scroll-vertically"></a>À faire : faire défiler verticalement
 
-Les utilisateurs s’attendent à un défilement vertical dans Teams (et ailleurs). Cela peut ne pas s’appliquer si vous disposez d’un canevas créatif, tel qu’un tableau blanc, que les utilisateurs peuvent panoramiquer sur les axes x et y.
+Les utilisateurs attendent un défilement vertical dans Teams (et ailleurs). Cela peut ne pas s’appliquer si vous disposez d’un canevas créatif, tel qu’un tableau blanc, que les utilisateurs peuvent panoramiquer sur les axes x et y.
 
    :::column-end:::
    :::column span="":::
@@ -455,7 +455,7 @@ Les dialogues en réunion sont destinés à de brèves interactions.
 
 #### <a name="do-focus-on-dark-theme"></a>À faire : Concentrez-vous sur le thème sombre
 
-Teams réunions sont optimisées pour le thème sombre afin de réduire le bruit visuel et cognitif afin que les utilisateurs puissent se concentrer sur la discussion et le contenu partagé. Gardez à l’esprit que certains types d’applications (par exemple, le tableau blanc et la modification de documents) n’ont pas besoin d’un canevas foncé.
+Les réunions Teams sont optimisées pour le thème sombre afin de réduire le bruit visuel et cognitif afin que les utilisateurs puissent se concentrer sur la discussion et le contenu partagé. Gardez à l’esprit que certains types d’applications (par exemple, le tableau blanc et la modification de documents) n’ont pas besoin d’un canevas foncé.
 
    :::column-end:::
    :::column span="":::
@@ -466,7 +466,7 @@ Teams réunions sont optimisées pour le thème sombre afin de réduire le bruit
 
 #### <a name="dont-use-unfamiliar-colors"></a>Ne pas : utiliser des couleurs inconnues
 
-Les couleurs qui entrent en conflit avec l’environnement de réunion peuvent être distrayantes et paraître moins natives pour Teams. Découvrez la rampe de [couleurs](https://developer.microsoft.com/fluentui#/styles/web/colors/products) Teams, y compris les neutres de thème d’appel.
+Les couleurs qui entrent en conflit avec l’environnement de réunion peuvent être distrayantes et paraître moins natives pour Teams. Découvrez la [rampe de couleurs](https://developer.microsoft.com/fluentui#/styles/web/colors/products) Teams, y compris les neutres de thème d’appel.
 
    :::column-end:::
 :::row-end:::

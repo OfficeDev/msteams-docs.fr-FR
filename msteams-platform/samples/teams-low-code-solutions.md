@@ -5,14 +5,14 @@ description: Découvrez les solutions Microsoft low et no code disponibles avec 
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 04fc4537969d3866e31e9c35e8484326b0ccbb56
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 74dd4eb094c31510319932ec96cbb0db34a1fca5
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123173"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503311"
 ---
-# <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à faible code pour Microsoft Teams
+# <a name="create-low-code-custom-apps-for-teams"></a>Créer des applications personnalisées à faible code pour Teams
 
 Microsoft Teams est extensible et adaptatif. Cela signifie que vous pouvez créer des applications personnalisées pour Teams qui répondent aux besoins distincts de vos utilisateurs. Les applications personnalisées à faible code économisent du temps, fournissent des solutions rapides et répondent à la même demande que les applications créées à partir de zéro. Ce document donne une vue d’ensemble des Microsoft Power Platform, Power Virtual Agents chatbot et Virtual Assistant.
 

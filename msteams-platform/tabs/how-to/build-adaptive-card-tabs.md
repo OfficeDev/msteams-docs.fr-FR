@@ -5,12 +5,12 @@ description: Dans ce module, apprenez à créer des onglets en utilisant les car
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c71c8199e1606a7d36f2cdbd553ac5232b9a7926
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c42ea356e3654453d20f59a8be33412b1e608939
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143997"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485241"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -355,7 +355,7 @@ Dans les sections précédentes, vous avez vu que la plupart des paradigmes de d
 
 L'image suivante donne une vue d'ensemble du fonctionnement du flux de données d'authentification pour une `tab/fetch`invocation.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Exemple de flux d'authentification de l'onglet Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Exemple de flux d'authentification de l'onglet Carte adaptative." border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
 
 **`tab/fetch`Exemple de flux d'authentification de l'onglet Carte adaptative.**
 

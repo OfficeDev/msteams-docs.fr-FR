@@ -1,16 +1,16 @@
 ---
 title: Créer des connecteurs Office 365
 author: laujan
-description: Dans ce module, découvrez comment bien démarrer avec les connecteurs Office 365 et ajouter un connecteur à Teams application dans Microsoft Teams
+description: Dans ce module, découvrez comment bien démarrer avec les connecteurs Office 365 et ajouter un connecteur à l’application Teams dans Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189329"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485344"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
@@ -29,7 +29,7 @@ Vous pouvez créer un [package](~/concepts/build-and-test/apps-package.md) et [p
 
 Pour distribuer votre connecteur, inscrivez-le dans le [Tableau de bord du développeur des connecteurs](https://aka.ms/connectorsdashboard).
 
-Pour qu’un connecteur fonctionne uniquement dans Teams, suivez les instructions pour envoyer le connecteur dans [la publication de votre application dans l’article Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md). Sinon, un connecteur inscrit fonctionne dans tous les produits Office 365 qui prennent en charge les applications, y compris les Outlook et Teams.
+Pour qu’un connecteur fonctionne uniquement dans Teams, suivez les instructions pour envoyer le connecteur dans [la publication de votre application dans l’article du Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) . Sinon, un connecteur inscrit fonctionne dans tous les produits Office 365 qui prennent en charge les applications, y compris les Outlook et Teams.
 
 > [!IMPORTANT]
 > Votre connecteur est inscrit après avoir sélectionné **Enregistrer** dans le tableau de bord du développeur des connecteurs. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions dans [Publier votre application Microsoft Teams sur AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si vous ne souhaitez pas publier votre application dans AppSource, distribuez-la directement à l’organisation. Après la publication des connecteurs pour votre organisation, aucune action supplémentaire n’est requise sur le tableau de bord du connecteur.
@@ -47,7 +47,7 @@ Les utilisateurs peuvent effectuer l’intégralité de l’expérience de confi
     > * Le code peut traiter l’événement d’enregistrement en récupérant les paramètres du webhook. Votre code stocke le webhook pour publier des événements ultérieurement.
     > * L’expérience de configuration est chargée en ligne dans Teams.
 
-Vous pouvez réutiliser votre expérience de configuration web existante ou créer une version distincte à héberger spécifiquement dans Teams. Votre code doit inclure le SDK JavaScript Teams. Cela permet à votre code d’accéder aux API pour effectuer des opérations courantes, telles que l’obtention du contexte utilisateur, de canal ou d’équipe actuel et l’initialisation des flux d’authentification.
+Vous pouvez réutiliser votre expérience de configuration web existante ou créer une version distincte à héberger spécifiquement dans Teams. Votre code doit inclure le Kit de développement logiciel (SDK) JavaScript Teams. Cela permet à votre code d’accéder aux API pour effectuer des opérations courantes, telles que l’obtention du contexte utilisateur, de canal ou d’équipe actuel et l’initialisation des flux d’authentification.
 
 Pour intégrer l’expérience de configuration :
 
@@ -225,7 +225,7 @@ Une fois que vous avez téléchargé l’application, ouvrez la liste des connec
 
 Pour vérifier que l’`HttpPOST`action fonctionne correctement, [envoyez des messages à votre connecteur](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Suivez le [guide pas à pas](../../sbs-teams-connectors.yml) pour créer et tester les connecteurs dans votre Teams.
+Suivez le [guide pas à pas](../../sbs-teams-connectors.yml) pour créer et tester les connecteurs dans teams.
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuer le webhook et le connecteur
 

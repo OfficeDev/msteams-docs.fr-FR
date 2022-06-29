@@ -1,17 +1,17 @@
 ---
 title: Vue d’ensemble du kit de ressources Teams
 author: zyxiaoyuer
-description: Dans ce module, découvrez Teams Toolkit, l’installation de Teams Toolkit et le parcours utilisateur de Teams Toolkit
+description: Dans ce module, découvrez le Kit de ressources Teams, l’installation de Teams Toolkit et le parcours utilisateur du Kit de ressources Teams
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 529d7b6e18bf9ff0f28bb2230358f25f95b9e3db
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142198"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484604"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
 
@@ -21,7 +21,7 @@ Teams Toolkit vous permet de créer, déboguer et déployer votre application Te
 * Identité intégrée
 * Accès au stockage cloud
 * Données de Microsoft Graph
-* Services Azure et Microsoft 365 avec une approche de configuration zéro
+* Services Azure et Microsoft 365 avec une approche de configuration zéro.
 
 Teams Toolkit propose tous les outils nécessaires à la création d’une application Teams au même endroit.
 
@@ -29,7 +29,7 @@ Teams Toolkit propose tous les outils nécessaires à la création d’une appli
 
 Teams Toolkit automatise le travail manuel et offre une excellente intégration des ressources Teams et Azure. L’image suivante montre le parcours utilisateur du Kit de ressources Teams :
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Utilisateur du kit de ressources Teams" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Parcours utilisateur du Kit de ressources Teams" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Les principaux jalons de ce parcours sont les suivants :
 
@@ -46,7 +46,7 @@ Les principaux jalons de ce parcours sont les suivants :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="installer":::
 
-1. Entrez **Teams Toolkit** dans la zone de recherche.
+1. Entrez **le Kit de ressources Teams** dans la zone de recherche.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Kit de ressources":::
 
@@ -63,7 +63,7 @@ Après l’installation du Kit de ressources, l’interface utilisateur du Kit d
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini-fonctions":::
 
-Vous pouvez sélectionner **Prise en main** pour explorer le kit de ressources Teams, ou sélectionner **Créer une application Teams** pour créer un projet Teams. Si vous avez un projet Teams créé par Teams Toolkit ouvert dans Visual Studio Code, vous verrez Teams’interface utilisateur du Kit de ressources avec toutes les fonctionnalités, comme illustré dans l’image suivante :
+Vous pouvez sélectionner **Prise en main** pour explorer le Kit de ressources Teams, ou sélectionner **Créer une application Teams** pour créer un projet Teams. Si vous avez un projet Teams créé par Teams Toolkit ouvert dans Visual Studio Code, vous verrez l’interface utilisateur du Kit de ressources Teams avec toutes les fonctionnalités, comme illustré dans l’image suivante :
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Capture d’écran du kit de ressourcesteams":::
 
@@ -89,11 +89,11 @@ Teams Toolkit vous aide à créer et personnaliser votre projet d’application 
 
 ### <a name="create-a-new-teams-app"></a>Créer une application Teams.
 
-Il vous aide à commencer par Teams développement d’applications en créant un projet Teams à l’aide de Teams Toolkit à l’aide de **Créer un projet** ou **de Démarrer à partir d’un exemple**.
+Il vous aide à démarrer avec le développement d’applications Teams en créant un projet Teams à l’aide du Kit de ressources Teams à l’aide de **Créer un projet** ou **de Démarrer à partir d’un exemple**.
 
 ### <a name="add-features"></a>Ajouter des fonctionnalités
 
-Il vous permet d’ajouter incrémentiellement des fonctionnalités de Teams supplémentaires telles que **Tab** ou **Bot**, ou d’ajouter éventuellement des ressources Azure telles que **Azure SQL Database** ou **Azure Key Vault**, qui correspond à vos besoins de développement à votre application Teams actuelle. Vous pouvez également ajouter **des flux de travail d’authentification unique** ou **CI/CD** pour votre application Teams. 
+Il vous permet d’ajouter incrémentiellement des fonctionnalités Teams supplémentaires telles que **Tab** ou **Bot**, ou éventuellement d’ajouter des ressources Azure telles que **Azure SQL Database** ou **Azure Key Vault**, qui correspond à vos besoins de développement à votre application Teams actuelle. Vous pouvez également ajouter **des flux de travail d’authentification unique** ou **CI/CD** pour votre application Teams.
 
 ### <a name="edit-manifest-file"></a>Modifier le fichier manifeste
 
@@ -105,7 +105,7 @@ Pendant ou après le développement, veillez à provisionner, déployer et publi
 
 ### <a name="provision-in-the-cloud"></a>Provisionner dans le cloud
 
-Il s’intègre à Azure Resource Manager qui vous permet de provisionner des ressources Azure dont votre application a besoin pour l’approche du code.
+Il s’intègre à Azure Resource Manager qui vous permet de provisionner des ressources Azure, dont votre application a besoin pour l’approche du code.
 
 ### <a name="deploy-to-the-cloud"></a>Déployer à partir du cloud
 

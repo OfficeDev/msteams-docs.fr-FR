@@ -1,16 +1,16 @@
 ---
 title: Gestionnaire d'activité du robot
 author: surbhigupta
-description: Dans cet article, découvrez les gestionnaires d’activité de bot, les frameworks, les gestionnaires d’activités Teams et la logique de bot dans Microsoft Teams.
+description: Dans cet article, découvrez les gestionnaires d’activités de bot, les frameworks, les gestionnaires d’activités Teams et la logique de bot dans Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150861"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485572"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
@@ -25,7 +25,7 @@ Teams gestionnaire d’activités est dérivé du gestionnaire d’activités de
 Lorsqu’un bot pour Teams reçoit une activité, il est routée vers les gestionnaires d’activités. Toutes les activités sont routées via un gestionnaire de base appelé gestionnaire de tour. Le gestionnaire de tours appelle le gestionnaire d’activités requis pour gérer le type d’activité reçu. Le bot Teams est dérivé de la `TeamsActivityHandler` classe, qui est dérivée de la classe bot `ActivityHandler` framework.
 
 > [!NOTE]
-> Si le traitement de l’activité du bot prend plus de 15 secondes, Teams envoyer une demande de nouvelle tentative au point de terminaison du bot. Par conséquent, vous verrez des demandes en double dans votre bot.
+> Si le traitement de l’activité du bot prend plus de 15 secondes, Teams envoie une demande de nouvelle tentative au point de terminaison du bot. Par conséquent, vous verrez des demandes en double dans votre bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Les bots sont créés à l’aide de Bot Framework. Si les bots reçoivent une a
 
 Dans la classe de gestionnaire d’activités Teams, il existe deux principaux gestionnaires d’activités Teams, `OnConversationUpdateActivityAsync` et `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`route toutes les activités de mise à jour de conversation et `OnInvokeActivityAsync` route toutes les activités Teams appeler.
 
-Pour implémenter votre logique pour Teams gestionnaires d’activités spécifiques, vous devez remplacer les méthodes de votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces gestionnaires. Par conséquent, vous devez ajouter la logique souhaitée dans votre remplacement.
+Pour implémenter votre logique pour Teams gestionnaires d’activités spécifiques, vous devez remplacer les méthodes de votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces gestionnaires. Par conséquent, ajoutez la logique souhaitée dans votre remplacement.
 
 Extraits de code pour les gestionnaires d’activités Teams :
 
@@ -173,13 +173,13 @@ Les bots sont créés à l’aide de Bot Framework. Si les bots reçoivent une a
 
 Dans la classe de gestionnaire d’activités Teams, il existe deux principaux gestionnaires d’activités Teams, `on_conversation_update_activity` et `on_invoke_activity`. `on_conversation_update_activity`route toutes les activités de mise à jour de conversation et `on_invoke_activity` route toutes les activités Teams appeler.
 
-Pour implémenter votre logique pour Teams gestionnaires d’activités spécifiques, vous devez remplacer les méthodes de votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces gestionnaires. Par conséquent, vous devez ajouter la logique souhaitée dans votre remplacement.
+Pour implémenter votre logique pour Teams gestionnaires d’activités spécifiques, vous devez remplacer les méthodes de votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces gestionnaires. Par conséquent, ajoutez la logique souhaitée dans votre remplacement.
 
 ---
 
 ## <a name="bot-logic"></a>Logique de bot
 
-La logique du bot traite les activités entrantes à partir d’un ou plusieurs de vos canaux de bot et génère en réponse des activités sortantes. C’est toujours vrai pour les bots dérivés de la classe de gestionnaire d’activités Teams, qui vérifie d’abord les activités Teams. Après avoir vérifié Teams activités, elle transmet toutes les autres activités au gestionnaire d’activités de Bot Framework.
+La logique du bot traite les activités entrantes à partir d’un ou plusieurs de vos canaux de bot et génère en réponse des activités sortantes. Cela reste vrai pour les bots dérivés de la classe de gestionnaire d’activités Teams, qui vérifie d’abord les activités Teams. Après avoir vérifié Teams activités, elle transmet toutes les autres activités au gestionnaire d’activités de Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 

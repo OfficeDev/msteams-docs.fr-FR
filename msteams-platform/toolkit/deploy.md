@@ -1,19 +1,19 @@
 ---
 title: Déployer à partir du cloud
 author: MuyangAmigo
-description: Dans ce module, découvrez comment déployer une application dans le cloud, Azure ou SharePoint et déployer des applications Teams à l’aide de Teams Toolkit
+description: Dans ce module, découvrez comment déployer une application dans le cloud, Azure ou SharePoint et déployer des applications Teams à l’aide du Kit de ressources Teams
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142051"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503332"
 ---
-# <a name="deploy-to-the-cloud"></a>Déployer à partir du cloud
+# <a name="deploy-teams-app-to-the-cloud"></a>Déployer l’application Teams dans le cloud
 
 Le Kit de ressources Teams vous aide à déployer ou à charger le code frontal et le code principal de votre application vers vos ressources cloud provisionnées dans Azure.
 

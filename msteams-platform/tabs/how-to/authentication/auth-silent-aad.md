@@ -3,14 +3,14 @@ title: Authentification en mode silencieux
 description: Dans ce module, découvrez comment effectuer l’authentification silencieuse, l’authentification unique et Azure AD pour les onglets et comment il fonctionne
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144242"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503626"
 ---
-# <a name="silent-authentication"></a>Authentification en mode silencieux
+# <a name="use-silent-authentication-in-azure-ad"></a>Utiliser l’authentification silencieuse dans Azure AD
 
 > [!IMPORTANT]
 > Le support et le développement Microsoft pour la bibliothèque d’authentification Active Directory (ADAL), y compris les correctifs de sécurité, se terminent le **30 juin 2022**. Pour continuer à recevoir du support, mettez à jour vos applications pour utiliser la bibliothèque d’authentification Microsoft (MSAL). Consultez [Migrer des applications vers la bibliothèque d’authentification Microsoft (MSAL).](/azure/active-directory/develop/msal-migration)

@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment définir des commandes d’actio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189621"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503934"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -27,7 +27,7 @@ Avant de créer la commande d’action, vous devez décider des facteurs suivant
 Consultez la vidéo suivante pour découvrir comment définir des commandes d’action d’extension de message :
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Sélectionner des emplacements d’appel de commande d’action
@@ -60,7 +60,7 @@ L’image suivante affiche les emplacements à partir desquels la commande d’a
 
 En plus de sélectionner l’emplacement à partir duquel votre commande peut être appelée, vous devez également sélectionner comment remplir le formulaire dans le module de tâche pour vos utilisateurs. Vous disposez des trois options suivantes pour créer le formulaire rendu à l’intérieur du module de tâche :
 
-* **Liste statique des paramètres** : il s’agit de la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application Teams le client s’affiche, mais vous ne pouvez pas contrôler la mise en forme dans ce cas.
+* **Liste statique des paramètres** : il s’agit de la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application rendu par le client Teams, mais vous ne pouvez pas contrôler la mise en forme dans ce cas.
 * **Carte adaptative** : vous pouvez choisir d’utiliser une carte adaptative, qui offre un meilleur contrôle sur l’interface utilisateur, mais vous limite toujours sur les contrôles disponibles et les options de mise en forme.
 * **Vue web incorporée** : vous pouvez choisir d’incorporer une vue web personnalisée dans le module de tâche pour avoir un contrôle total sur l’interface utilisateur et les contrôles.
 

@@ -5,12 +5,12 @@ description: Apprenez à intégrer un chatbot Power Virtual Agents dans la plate
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 0f66a42cecbac25f82980c16e7f979c5d613816d
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 310b7d8a5e04259a205763b45cb2d2315c19c72a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150847"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485201"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Ajouter le chatbot Power Virtual Agents
 
@@ -112,3 +112,4 @@ Ouvrez **Test et distribuez** onglet, puis sélectionnez **Installer** pour ajou
 * [Portail Power Virtual Agents](https://powervirtualagents.microsoft.com)
 * [publier votre de bot Power Virtual Agents](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Sécurité et de la conformité dans Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
+* [Bot Power Virtual Agents des ressources humaines](/power-virtual-agents/teams/fundamentals-get-started-teams)

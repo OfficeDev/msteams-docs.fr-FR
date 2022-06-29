@@ -3,13 +3,13 @@ title: Étendre l’application onglet avec des autorisations Microsoft Graph
 description: Décrit la configuration des autorisations d’API avec Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) Api Graph - Étendue du jeton d’accès délégué à l’autorisation
-ms.openlocfilehash: 76b474f69b31d9c9b9925803ee7c0240f9e5a7c4
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) API Graph étendue du jeton d’accès d’autorisation délégué
+ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888028"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485292"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Étendre l’application onglet avec des autorisations et une étendue Microsoft Graph
 
@@ -29,7 +29,7 @@ Vous pouvez configurer des étendues Graph supplémentaires dans Azure AD pour v
 
 ### <a name="to-configure-api-permissions"></a>Pour configurer des autorisations d’API
 
-1. Ouvrez l’application que vous avez inscrite dans le [portail Azure](https://ms.portal.azure.com/).
+1. Ouvrez l’application que vous avez inscrite dans le [Portail Azure](https://ms.portal.azure.com/).
 
 2. Sélectionnez **Gérer** > **l’autorisation d’API** dans le volet gauche.
 
@@ -37,7 +37,7 @@ Vous pouvez configurer des étendues Graph supplémentaires dans Azure AD pour v
 
     La page **d’autorisations de l’API** s’affiche.
 
-3. Sélectionnez **+ Ajouter des autorisations** pour ajouter des autorisations d’API Microsoft Graph.
+3. Sélectionnez **+ Ajouter des autorisations** pour ajouter des autorisations Microsoft API Graph.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Page Autorisations de l’application." border="true":::
 
@@ -82,7 +82,7 @@ Vous pouvez configurer l’authentification pour plusieurs plateformes tant que 
 
 ### <a name="to-configure-authentication-for-a-platform"></a>Pour configurer l’authentification pour une plateforme
 
-1. Ouvrez l’application que vous avez inscrite dans le [portail Azure](https://ms.portal.azure.com/).
+1. Ouvrez l’application que vous avez inscrite dans le [Portail Azure](https://ms.portal.azure.com/).
 
 1. Sélectionnez **Gérer** > **l’authentification** dans le volet gauche.
 
@@ -198,7 +198,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 Si vous devez accéder aux données Microsoft Graph, configurez votre code côté serveur pour :
 
 1. Validez le jeton d’accès. Pour plus d’informations, voir [Valider le jeton d’accès](tab-sso-code.md#validate-the-access-token).
-1. Lancez le flux OBO OAuth 2.0 avec un appel à la plateforme d’identités Microsoft qui inclut le jeton d’accès, certaines métadonnées sur l’utilisateur et les informations d’identification de l’application onglet (son ID d’application et sa clé secrète client). La plateforme d’identité Microsoft renverra un nouveau jeton d’accès qui peut être utilisé pour accéder à Microsoft Graph.
+1. Lancez le flux OBO OAuth 2.0 avec un appel au Plateforme d'identités Microsoft qui inclut le jeton d’accès, certaines métadonnées relatives à l’utilisateur et les informations d’identification de l’application onglet (son ID d’application et sa clé secrète client). La plateforme d’identité Microsoft renverra un nouveau jeton d’accès qui peut être utilisé pour accéder à Microsoft Graph.
 1. Obtenir des données à partir de Microsoft Graph en utilisant le nouveau jeton.
 1. Utilisez la sérialisation du cache de jetons dans MSAL.NET pour mettre en cache le nouveau jeton d’accès pour plusieurs, si nécessaire.
 
@@ -229,3 +229,4 @@ Vous pouvez demander le consentement à l’aide de l’API d’authentification
 - [Flux On-Behalf-Of OAuth 2.0](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Obtenir l’accès pour MS Graph](/graph/auth-v2-user)
 - [Sérialisation du cache de jetons dans MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
+- [Fournisseur Microsoft Teams MSAL2](/graph/toolkit/providers/teams-msal2)

@@ -5,14 +5,14 @@ description: Dans ce module, découvrez comment créer une page de suppression d
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 81bc5f667d1be301965ccddf0709c8cb02f328e8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142632"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485215"
 ---
-# <a name="create-a-removal-page"></a>Créer une page de suppression
+# <a name="tab-re-configuration-and-removal-page"></a>Page de re-configuration et de suppression de tabulation
 
 Vous pouvez étendre et améliorer l’expérience utilisateur en prenant en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un canal ou un onglet de groupe, et vous pouvez autoriser les utilisateurs à reconfigurer votre onglet après l’installation. En outre, l’expérience de suppression d’onglets offre aux utilisateurs des options de post-suppression permettant de supprimer ou d’archiver du contenu.
 

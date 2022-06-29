@@ -3,12 +3,12 @@ title: Demander des autorisations d’appareil pour votre application Microsoft 
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès à des fonctionnalités natives qui nécessitent le consentement de l’utilisateur, telles que les fonctionnalités QR d’analyse, de code-barres, d’image, d’audio et de vidéo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: c39673bd03d18c0aabb98e218bf13c41ce1eab9f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: a573855b6512cdbfcebb12c305973f8ad23113d6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189459"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484487"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Demander des autorisations d’appareil pour votre application Teams
 
@@ -16,32 +16,32 @@ Vous pouvez enrichir votre application Teams avec des fonctionnalités d’appar
 
 > [!NOTE]
 >
-> * Pour intégrer des fonctionnalités multimédias dans votre Microsoft Teams client web, bureau et mobile, consultez [Intégrer les fonctionnalités multimédias](media-capabilities.md).
+> * Pour intégrer des fonctionnalités multimédias au sein de votre client web Microsoft Teams, de votre bureau et de votre appareil mobile, consultez [Intégrer les fonctionnalités multimédias](media-capabilities.md).
 > * Pour intégrer la fonctionnalité QR ou scanneur de codes-barres dans votre application mobile Microsoft Teams, consultez [Intégrer la QR ou la fonctionnalité de scanneur de codes-barres dans Teams](qr-barcode-scanner-capability.md).
-> * Pour intégrer des fonctionnalités d’emplacement dans votre client web Teams, votre bureau et votre appareil mobile, consultez [Intégrer les fonctionnalités d’emplacement](location-capability.md).
+> * Pour intégrer des fonctionnalités d’emplacement au sein de votre client web Teams, de votre bureau et de votre appareil mobile, consultez [Intégrer les fonctionnalités d’emplacement](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Autorisations d’appareil natifs
 
-Vous devez demander les autorisations d’appareil pour accéder aux fonctionnalités natives de l’appareil. Les autorisations d’appareil fonctionnent de la même façon pour toutes les constructions d’application, telles que les onglets, les modules de tâches ou les extensions de messagerie. L’utilisateur doit accéder à la page Autorisations dans les paramètres Teams pour gérer les autorisations des appareils. Vous pouvez créer des expériences plus riches sur la plateforme Teams à l’aide de fonctionnalités d’appareil, par exemple : vous devez demander les autorisations d’appareil pour accéder aux fonctionnalités natives de l’appareil. Les autorisations d’appareil fonctionnent de la même façon pour toutes les constructions d’application, telles que les onglets, les modules de tâches ou les extensions de message. L’utilisateur doit accéder à la page Autorisations dans les paramètres Teams pour gérer les autorisations des appareils.
+Vous devez demander les autorisations d’appareil pour accéder aux fonctionnalités natives de l’appareil. Les autorisations d’appareil fonctionnent de la même façon pour toutes les constructions d’application, telles que les onglets, les modules de tâches ou les extensions de messagerie. L’utilisateur doit accéder à la page Autorisations dans les paramètres Teams pour gérer les autorisations des appareils. Vous pouvez créer des expériences plus riches sur la plateforme Teams à l’aide de fonctionnalités d’appareil, telles que : Vous devez demander les autorisations d’appareil pour accéder aux fonctionnalités d’appareil natif. Les autorisations d’appareil fonctionnent de la même façon pour toutes les constructions d’application, telles que les onglets, les modules de tâches ou les extensions de message. L’utilisateur doit accéder à la page Autorisations dans les paramètres Teams pour gérer les autorisations des appareils.
 En accédant aux fonctionnalités de l’appareil, vous pouvez créer des expériences plus riches sur la plateforme Teams, par exemple :
 
-* Capturer et afficher des images
-* Analyser QR ou code-barres
-* Enregistrer et partager de courtes vidéos
-* Enregistrer les mémos audio et les enregistrer pour une utilisation ultérieure
-* Utiliser les informations d’emplacement de l’utilisateur pour afficher les informations pertinentes
+* Capturer des photos et des images.
+* Analysez QR ou code-barres.
+* Enregistrez et partagez de courtes vidéos.
+* Enregistrez les mémos audio et enregistrez-les pour une utilisation ultérieure.
+* Utilisez les informations d’emplacement de l’utilisateur pour afficher les informations pertinentes.
 
 > [!NOTE]
 >
 > * Actuellement, Teams ne prend pas en charge les autorisations d’appareil pour les applications multi-fenêtres, les onglets et le panneau côté réunion.
 > * Les autorisations d’appareil sont différentes dans le navigateur. Pour plus d'informations, voir les [autorisations d'appareil de navigation](browser-device-permissions.md).
-> * Actuellement, Teams prend en charge la fonctionnalité de scanneur de code-barres QR uniquement disponible pour les clients mobiles.
+> * Actuellement, Teams prend en charge la fonctionnalité de scanneur de codes-barres QR uniquement disponible pour les clients mobiles.
 
 ## <a name="access-device-permissions"></a>Accéder aux autorisations d’appareil
 
-Le [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) fournit les outils nécessaires à votre application Teams pour accéder aux [autorisations d’appareil](#manage-permissions) de l’utilisateur et créer une expérience plus riche.
+Le Kit de développement logiciel ( [SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) fournit les outils nécessaires à votre application Teams pour accéder aux [autorisations d’appareil](#manage-permissions) de l’utilisateur et créer une expérience plus riche.
 
-Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs web modernes, vous devez informer Teams des fonctionnalités que vous utilisez en mettant à jour le manifeste de votre application. Cette mise à jour vous permet de demander des autorisations pendant que votre application s’exécute sur le bureau Teams.
+Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs web modernes, vous devez informer Teams des fonctionnalités que vous utilisez en mettant à jour le manifeste de votre application. Cette mise à jour vous permet de demander des autorisations pendant l’exécution de votre application sur le bureau Teams.
 
 ## <a name="manage-permissions"></a>Gérer les autorisations
 
@@ -124,7 +124,7 @@ Tirez parti de l’API HTML5 ou Teams appropriée pour afficher une invite d’o
 > [!IMPORTANT]
 >
 > * Prise en charge de `camera`, `gallery`et `microphone` est activée via [**l’API selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Utilisez [**l’API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) pour une capture d’image unique.
-> * La prise en charge de `location` est activée via [**API getLocation**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Vous devez l’utiliser `getLocation API` pour l’emplacement, car l’API de géolocalisation HTML5 n’est actuellement pas entièrement prise en charge sur Teams bureau.
+> * La prise en charge de `location` est activée via [**API getLocation**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Vous devez l’utiliser `getLocation API` pour l’emplacement, car l’API de géolocalisation HTML5 n’est actuellement pas entièrement prise en charge sur le bureau Teams.
 
 Par exemple :
 
@@ -140,7 +140,7 @@ Par exemple :
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
-* Pour capturer les images sur un appareil mobile, Teams mobile demande une autorisation lorsque vous appelez `captureImage()`:
+* Pour capturer les images sur mobile, Teams Mobile vous demande l’autorisation d’appeler `captureImage()`:
 
     ```JavaScript
             function captureImage() {
@@ -167,7 +167,7 @@ Par exemple :
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-* Pour utiliser la caméra ou accéder à la galerie de photos, Teams application demande l’autorisation lorsque vous appelez `selectMedia()`:
+* Pour utiliser la caméra ou accéder à la galerie de photos, l’application Teams demande l’autorisation lorsque vous appelez `selectMedia()`:
 
     ```JavaScript
      function selectMedia() {
@@ -214,7 +214,7 @@ Par exemple :
      }
     ```
 
-* Pour inviter l’utilisateur à partager l’emplacement sur l’interface de carte, Teams’application demande l’autorisation lorsque vous appelez `getLocation()`:
+* Pour inviter l’utilisateur à partager l’emplacement sur l’interface de carte, l’application Teams demande l’autorisation lorsque vous appelez `getLocation()`:
 
     ```JavaScript
      function getLocation() {

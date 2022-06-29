@@ -3,15 +3,15 @@ title: Vue d’ensemble de l’authentification pour les onglets à l’aide de 
 description: Vue d’ensemble de l’authentification unique dans Teams et comment l’utiliser dans des onglets
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) manifeste d’application de jeton d’accès SSO
-ms.openlocfilehash: 3214faec45001dd244115636e0964a56781837a8
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: onglets d’authentification Teams Microsoft Azure Active Directory manifeste d’application de jeton d’accès à l’authentification unique (Azure AD)
+ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888012"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503766"
 ---
-# <a name="enable-single-sign-on-in-a-tab-app"></a>Activer l’authentification unique dans une application onglet
+# <a name="enable-sso-for-tab-app"></a>Activer l’authentification unique (SSO) pour l’application d’onglet
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 

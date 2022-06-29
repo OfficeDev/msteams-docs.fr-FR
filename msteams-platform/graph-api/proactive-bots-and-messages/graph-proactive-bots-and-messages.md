@@ -5,14 +5,14 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 832dfe6ddce7710d506c480fc1195c426b8da0df
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b7893b425618372085e8ef118beff7c12bd2eb15
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189582"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503591"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
+# <a name="send-proactive-installation-messages"></a>Envoyer des messages d’installation proactifs 
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans Teams
 
@@ -247,3 +247,4 @@ server.get('/api/notify', async (req, res) => {
 
 * [Gérer les stratégies de mise en application dans Teams](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Envoyer des notifications proactives aux utilisateurs SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [Envoyer des notifications de flux d’activité aux utilisateurs dans Microsoft Teams](/graph/teams-send-activityfeednotifications)

@@ -1,15 +1,15 @@
 ---
 title: Créer un bot
-description: Dans ce module, découvrez comment créer un bot à l’aide de la Microsoft Bot Framework et être prêt à travailler dans Microsoft Teams
+description: Dans ce module, découvrez comment créer un bot à l’aide de la Microsoft Bot Framework et prêt à travailler dans Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: a669b11baef8dc31a662ea2ad178ad3488f2d69e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189524"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485285"
 ---
 # <a name="create-a-bot"></a>Créer un bot
 
@@ -25,12 +25,12 @@ Pour plus d’informations, consultez [la documentation bot framework](/azure/bo
 
 1. Créez le bot à l’aide de [Bot Framework](https://dev.botframework.com/bots/new). **Veillez à ajouter Microsoft Teams sous la forme d’un canal à partir de la liste de chaînes proposées après avoir créé votre bot.** N’hésitez pas à réutiliser tout ID d’application Microsoft que vous avez généré si vous avez déjà créé votre package d’application/manifeste.
 
-   ![Page d’inscription de Bot Framework](~/assets/images/bots/bfregister.png)
+   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Page d’inscription de Bot Framework":::
 
 > [!NOTE]
 > Si vous ne souhaitez pas créer votre bot dans Azure, vous **devez** utiliser ce lien pour créer un bot : [Bot Framework](https://dev.botframework.com/bots/new). Si vous cliquez sur **Créer un bot** dans le portail Bot Framework à la place, vous [allez créer votre bot dans Microsoft Azure](#bots-and-microsoft-azure) à la place.
 
-2. Générez le bot à l’aide du package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet, du [Kit de développement logiciel (SDK) Bot Framework](https://github.com/microsoft/botframework-sdk) ou de l’API [Bot Connector](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
+2. Générez le bot à l’aide du package NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) , du  [Kit de développement logiciel (SDK) Bot Framework](https://github.com/microsoft/botframework-sdk) ou de l’API [Bot Connector](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
 
 3. Testez le bot à l’aide de la [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
@@ -44,15 +44,15 @@ Pour plus d’informations, consultez [la documentation bot framework](/azure/bo
 >
 > * Le canal Microsoft Teams pour les bots inscrits sur Azure est gratuit. Les messages envoyés sur le canal Teams ne sont pas comptabilisés dans les messages consommés pour le bot.
 > * Bien qu’il soit possible de [créer un bot Bot Framework](https://dev.botframework.com/bots/new) sans utiliser Azure, vous devez utiliser [créer un bot Bot Framework](https://dev.botframework.com/bots/new), qui n’est plus exposé dans le portail Bot Framework.
-> * Lorsque vous modifiez les propriétés d’un bot existant dans la [liste de vos bots dans Bot Framework](https://dev.botframework.com/bots), comme son « point de terminaison de messagerie », ce qui est courant lors du premier développement d’un bot, en particulier si vous utilisez [ngrok](https://ngrok.com), vous verrez la colonne « État de la migration » et un bouton bleu « Migrer » qui vous amènera dans le portail Microsoft Azure. Ne cliquez pas sur le bouton « Migrer », sauf si c’est ce que vous voulez faire ; Cliquez plutôt sur le nom du bot et vous pouvez modifier ses propriétés :</br>
+> * Lorsque vous modifiez les propriétés d’un bot existant dans la [liste de vos bots dans Bot Framework](https://dev.botframework.com/bots), comme son « point de terminaison de messagerie », ce qui est courant lors du premier développement d’un bot, en particulier si vous utilisez [ngrok](https://ngrok.com), vous verrez la colonne « État de la migration » et un bouton bleu « Migrer » qui vous amènera dans microsoft Portail Azure. Ne cliquez pas sur le bouton « Migrer », sauf si c’est ce que vous voulez faire ; Cliquez plutôt sur le nom du bot et vous pouvez modifier ses propriétés :</br>
    ![Modifier les propriétés du bot](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * Si vous inscrivez votre bot à l’aide de Microsoft Azure, votre code de bot n’a pas besoin d’être *hébergé* sur Microsoft Azure.
-> * Si vous inscrivez un bot à l’aide de Portail Azure, vous devez disposer d’un compte Microsoft Azure. Vous pouvez [en créer un gratuitement](https://azure.microsoft.com/free/). Pour vérifier votre identité lorsque vous en créez une, vous devez fournir une carte de crédit, mais elle ne sera pas facturée; il est toujours libre de créer et d’utiliser des bots avec Teams.
+> * Si vous inscrivez un bot à l’aide de Portail Azure, vous devez disposer d’un compte Microsoft Azure. Vous pouvez [en créer un gratuitement](https://azure.microsoft.com/free/). Pour vérifier votre identité lorsque vous en créez une, vous devez fournir une carte de crédit, mais elle ne sera pas facturée; il est toujours gratuit de créer et d’utiliser des bots avec Teams.
 > * Vous pouvez maintenant utiliser App Studio pour inscrire/mettre à jour les informations d’application et de bot directement dans Teams. Vous devez uniquement utiliser le Portail Azure pour ajouter ou configurer d’autres canaux Bot Framework tels que Direct Line, Chat Web, Skype et Facebook Messenger.
 
 > [!WARNING]
 >
->* Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
+>* Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 1er août 2022.
 
 ## <a name="see-also"></a>Voir aussi
 

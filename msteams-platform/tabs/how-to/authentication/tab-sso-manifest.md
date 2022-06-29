@@ -3,15 +3,15 @@ title: Mettre à jour le manifeste pour activer l’authentification unique pour
 description: Décrit la mise à jour du manifeste pour l’activation de l’authentification unique pour les onglets
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Onglets d’authentification Teams - API Graph Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 0bc50b61d5beac45ae11ec1264cd6fc4861e0738
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) API Graph
+ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888104"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503479"
 ---
-# <a name="update-app-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste d’application pour l’authentification unique et l’application en préversion
+# <a name="update-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste pour l’authentification unique et l’application en préversion
 
 Avant de mettre à jour le manifeste de l’application Teams, vérifiez que vous avez configuré le code pour activer l’authentification unique dans votre application onglet.
 
@@ -153,8 +153,6 @@ Pour afficher un aperçu de votre application onglet dans Teams :
     Les options de chargement d’une application s’affichent.
 
 1. Sélectionnez **Charger une application personnalisée** pour charger l’application onglet dans Teams.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Charger une version test de l’application onglet dans Teams":::
 
 1. Sélectionnez votre fichier zip de package d’application, puis sélectionnez **Ajouter**.
 

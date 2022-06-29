@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: af546bb888cf5a3e35b7c241eba927e2d144bdd0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189914"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484865"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
@@ -44,7 +44,7 @@ Les autorisations RSC granulaires spécifiques à Teams définissent ce qu’une
 |TeamMember.Read.Group|Obtenez les membres de cette équipe. |
 |TeamsActivity.Send.Group|Créer des notifications dans les flux d’activité des utilisateurs de cette équipe. |
 
-Pour plus d’informations, consultez [autorisations de consentement spécifiques aux ressources de l’équipe](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+Pour plus d’informations, consultez [autorisations de consentement spécifiques aux ressources de l’équipe](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Autorisations spécifiques aux ressources pour une conversation
 
@@ -66,6 +66,7 @@ Le tableau suivant fournit des autorisations spécifiques aux ressources pour un
 | Calls.AccessMedia.Chat         | Accéder aux flux multimédias dans les appels associés à cette conversation ou réunion                                    |
 | Calls.JoinGroupCalls.Chat         | Participer aux appels associés à cette conversation ou réunion                                    |
 | TeamsActivity.Send.Chat         | Créer des notifications dans les flux d’activité des utilisateurs de cette conversation. |
+| OnlineMeetingTranscript.Read.Chat | Lisez les transcriptions de la réunion associée à cette conversation. |
 
 Pour plus d’informations, consultez [autorisations de consentement spécifiques à la ressource de conversation](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 

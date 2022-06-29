@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cd28dc6be82b37223268d526c9673c0545f0bca9
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143591"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485621"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
@@ -190,7 +190,7 @@ Utilisez un dictionnaire des synonymes et demandez à des personnes issues d'hor
 
 ### <a name="extract-intent-and-data-from-messages"></a>Extraire l’intention et les données des messages
 
-Concevez votre bot pour reconnaître l'intention, c'est-à-dire ce que quelqu'un attend d'un bot en réponse à un message ou une requête. L'intention classe un message ou une requête comme une action unique avec un ou plusieurs objets de données affectés par l'action. 
+Concevez votre bot pour reconnaître l'intention, c'est-à-dire ce que quelqu'un attend d'un bot en réponse à un message ou une requête. L'intention classe un message ou une requête comme une action unique avec un ou plusieurs objets de données affectés par l'action.
 
 Les exemples suivants décrivent l’intention de l’utilisateur et les données dans les messages envoyés à des bots :
 

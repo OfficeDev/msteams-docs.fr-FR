@@ -4,12 +4,12 @@ description: Découvrez les types de cartes prises en charge dans les bots pour 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2f964307c4cc8dbd3033b52af88a9b2c38d474
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 04cdcfedd98bee67babf63231ffdeae6679f7331
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143934"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485446"
 ---
 # <a name="cards-and-task-modules"></a>Cartes et modules de tâche
 
@@ -38,7 +38,7 @@ Vous pouvez ajouter et répondre aux actions de carte qui effectuent l’action 
 * Envoyer des messages et une charge utile au bot.
 * Lancer le flux OAuth.
 
-Vous pouvez fournir une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) au sein d’un jeu de données volumineux à l’aide du contrôle type-ahead dans les cartes adaptatives et effectuer une recherche statique type-ahead dans un nombre limité de choix. Invoke the task modules in channel or personal tabs, bots, or deep links. L’expérience de votre utilisateur pour tous les flux de travail qui nécessite une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir de bots Teams en utilisant des boutons sur les cartes adaptatives et les cartes Bot Framework.
+Vous pouvez fournir une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) dans un jeu de données volumineux à l’aide du contrôle typeahead dans les cartes adaptatives et effectuer une recherche statique de typeahead dans un nombre limité de choix. Invoke the task modules in channel or personal tabs, bots, or deep links. L’expérience de votre utilisateur pour tous les flux de travail qui nécessite une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir de bots Teams en utilisant des boutons sur les cartes adaptatives et les cartes Bot Framework.
 
 ## <a name="see-also"></a>Voir aussi
 

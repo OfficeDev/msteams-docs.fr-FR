@@ -1,16 +1,16 @@
 ---
 title: Publier des applications Teams à l’aide du Kit de ressources Teams
 author: zyxiaoyuer
-description: Dans ce module, découvrez comment publier Teams applications à l’aide de Teams Toolkit et comment publier sur une étendue ou une autorisation de chargement indépendant
+description: Dans ce module, découvrez comment publier des applications Teams à l’aide du Kit de ressources Teams et publier dans une étendue ou une autorisation de chargement indépendant.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6c0f296549dc325548314e74f1f3ca7017b7aef0
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142604"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485355"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publier des applications Teams à l’aide du Kit de ressources Teams
 
@@ -41,7 +41,7 @@ Effectuez les étapes suivantes pour charger le package d’application :
 
 1. Dans le client Teams, sélectionnez **Apps** dans la barre de gauche.
 2. Sélectionnez **Gérer vos applications**.
-3. Sélectionnez **publier une application**
+3. Sélectionnez **publier une application**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="Publication":::
 
@@ -85,7 +85,7 @@ Après avoir publié l’application, l’état de publication devient publié e
 
 Vous pouvez distribuer votre application directement dans le Store au sein de Microsoft Teams et atteindre des millions d’utilisateurs dans le monde entier. Si votre application est également proposée dans le Store, vous pouvez atteindre instantanément les clients potentiels. Les applications publiées dans le magasin Teams sont également répertoriées automatiquement sur Microsoft AppSource, qui est la place de marché officielle pour Microsoft 365 applications et solutions.
 
-Pour plus d’informations, consultez ([Publier votre application dans le Microsoft Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
+Pour plus d’informations, consultez ([Publier votre application sur le Microsoft Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -2,7 +2,7 @@
 title: Accorder l’autorisation d’appareil onglet
 metadata:
   title: Accorder l’autorisation d’appareil onglet
-  description: Avec ce module d’apprentissage, découvrez comment accorder des autorisations d’appareil d’onglet telles que l’emplacement, l’appareil photo et l’accès au microphone pour Microsoft Teams applications.
+  description: Découvrez comment accorder des autorisations d’appareil de tabulation telles que l’emplacement, l’appareil photo et l’accès au microphone pour les applications Microsoft Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
@@ -11,19 +11,19 @@ metadata:
   nextTutorialTitle: En savoir plus sur les autorisations d’appareil pour le navigateur
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 56e478fb12c1fb815c011ddd27b0af6a49c078d2
-  ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+  ms.openlocfilehash: 277a357c31cc34eed16f5f3cb6f3677b87ae8a1d
+  ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/21/2022
-  ms.locfileid: "66190051"
+  ms.lasthandoff: 06/29/2022
+  ms.locfileid: "66485383"
 items:
 - durationInMinutes: 1
   content: >
-    Teams application qui nécessite des autorisations d’appareil, telles que l’emplacement, l’appareil photo ou l’accès au microphone, exige maintenant que les utilisateurs accordent manuellement l’autorisation dans le navigateur web. Auparavant, le navigateur gérait la façon d’accorder des autorisations d’accès, mais ces autorisations sont désormais gérées dans Microsoft Teams.
+    L’application Teams qui nécessite des autorisations d’appareil, telles que l’emplacement, l’appareil photo ou l’accès au microphone, exige désormais que les utilisateurs accordent manuellement l’autorisation dans le navigateur web. Auparavant, le navigateur gérait la façon d’accorder des autorisations d’accès, mais ces autorisations sont désormais gérées dans Microsoft Teams.
 
 
-    Ce guide pas à pas vous aide à accorder l’autorisation de l’appareil tabulation à Teams. La sortie suivante s’affiche :
+    Ce guide pas à pas vous aide à accorder l’autorisation d’appareil onglet à Teams. La sortie suivante s’affiche :
 
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="sortie finale" border="true":::
 - title: Configuration requise
@@ -35,7 +35,7 @@ items:
 
     * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) avec un compte valide
 
-    * [Microsoft 365 compte de développeur](https://developer.microsoft.com/en-us/microsoft-365/dev-program) ou l’accès à Teams compte avec les autorisations appropriées pour installer une application
+    * [Compte de développeur Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) ou accès au compte Teams avec les autorisations appropriées pour installer une application
 
     * [Dernière version de Visual Studio](https://code.visualstudio.com/Download)
 
@@ -48,7 +48,7 @@ items:
 - title: Configurer un environnement local
   durationInMinutes: 1
   content: >
-    1. Ouvrez [Microsoft Teams exemples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Ouvrez [des exemples Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
 
     1. Sélectionnez **Code**.
@@ -79,4 +79,4 @@ items:
 - title: Relever le défi
   durationInMinutes: 1
   content: "Tu as trouvé quelque chose comme ça ?\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/output1.png\" alt-text=\"location\" border=\"true\":::                   \n"
-- content: Vous avez terminé le didacticiel et vous pouvez maintenant accorder l’autorisation d’appareil tabulation à Teams.
+- content: Vous avez terminé le didacticiel et vous pouvez maintenant accorder l’autorisation d’appareil onglet à Teams.

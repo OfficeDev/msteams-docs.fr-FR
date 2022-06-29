@@ -1,16 +1,16 @@
 ---
-title: Canal et conversations de groupe avec un bot
+title: Créer des bots de conversation pour une conversation de canal ou de groupe
 author: surbhigupta
 description: Découvrez comment envoyer, recevoir et gérer des messages pour un bot dans un canal ou une conversation de groupe. Découvrez les instructions de conception et bien plus encore.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190267"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503605"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -289,4 +289,7 @@ Suivez le [guide pas à pas](../../../sbs-teams-conversation-bot.yml), pour cré
 
 ## <a name="see-also"></a>Voir aussi
 
-[obtenir des de contexte Teams](~/bots/how-to/get-teams-context.md)
+* [obtenir des de contexte Teams](~/bots/how-to/get-teams-context.md)
+* [Créer un canal privé pour le compte de l’utilisateur](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [Connecter un bot à Chat Web canal](/azure/bot-service/bot-service-channel-connect-webchat)
+

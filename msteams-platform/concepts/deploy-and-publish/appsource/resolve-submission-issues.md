@@ -1,18 +1,18 @@
 ---
 title: Résoudre les problèmes liés à l’envoi de votre magasin
-description: Dans cet article, découvrez comment résoudre et corriger les problèmes liés à votre Microsoft Teams stocker l’envoi.
+description: Dans cet article, découvrez comment résoudre et corriger les problèmes liés à la soumission de votre magasin Microsoft Teams.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123208"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503871"
 ---
-# <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec de l’envoi de votre magasin Microsoft Teams
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec de la soumission de votre magasin Teams
 
 Les applications publiées dans le magasin Microsoft Teams doivent respecter les [instructions de validation du magasin Teams et les](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) [stratégies de la Place de marché commerciale](/legal/marketplace/certification-policies).
 
@@ -71,10 +71,10 @@ Si votre soumission dans le Store n’a aucun problème, votre application sera 
 
 L’exécution des opérations suivantes peut aboutir à une soumission réussie :
 
-1. Développez votre application en fonction des [instructions de conception Teams](~/concepts/design/design-teams-app-overview.md).
-1. Assurez-vous que votre application respecte les [instructions de validation Teams store et les](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) stratégies de certification de la [Place de marché commerciale Microsoft](/legal/marketplace/certification-policies).
+1. Développez votre application en fonction [des instructions de conception teams](~/concepts/design/design-teams-app-overview.md).
+1. Assurez-vous que votre application respecte les [instructions de validation du Magasin Teams et les](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) stratégies de certification de la [Place de marché commerciale Microsoft](/legal/marketplace/certification-policies).
 1. Testez votre package d’application avec [l’outil de validation d’application Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html).
-1. [Préparez votre soumission de magasin Teams](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
+1. [Préparez la soumission de votre magasin Teams](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 <br>
 
@@ -102,7 +102,7 @@ Non. Microsoft ne commence pas à valider votre application tant que vous n’av
 
 <details>
 
-<summary><b>J’ai reçu un e-mail de l’Espace partenaires indiquant que mon application a été approuvée pour la publication. Pourquoi mon application n’est-elle pas dans le magasin Teams ?</b></summary>
+<summary><b>J’ai reçu un e-mail de l’Espace partenaires indiquant que mon application a été approuvée pour la publication. Pourquoi mon application n’est-elle pas dans le Magasin Teams ?</b></summary>
 
 Une fois votre application approuvée, la publication prend généralement 1 à 2 jours ouvrables en fonction des fonctionnalités de l’application.Si votre application n’a pas été publiée après deux jours ouvrables, contactez <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 

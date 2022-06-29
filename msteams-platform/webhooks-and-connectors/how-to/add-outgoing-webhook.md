@@ -5,14 +5,14 @@ description: Dans ce module, découvrez comment créer un Webhook sortant dans M
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189896"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503318"
 ---
-# <a name="create-outgoing-webhook"></a>Créer des webhooks sortants
+# <a name="create-outgoing-webhooks"></a>Créer des webhooks sortants
 
 Le webhook sortant agit comme un bot et recherche des messages dans les canaux à l’aide de **@mention**. Il envoie des notifications aux services web externes et répond avec des messages enrichis, qui incluent des cartes et des images. Cela permet d’ignorer le processus de création de bots via le [Microsoft Bot Framework](https://dev.botframework.com/).
 
@@ -107,7 +107,7 @@ Pour vous assurer que votre service reçoit uniquement les appels de clients Tea
 Votre code doit toujours valider la signature HMAC incluse dans la demande comme il suit :
 
 * Générer le jeton HMAC à partir du corps de la demande du message. Il existe des bibliothèques standard pour le faire sur la plupart des plateformes, telles que [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) pour Node.js et [Exemple de webhook pour Teams](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) pour C\#. Microsoft Teams utilise le chiffrement HMAC SHA256 standard. Vous devez convertir le corps en un tableau d’octets en UTF8.
-* Calculez le hachage à partir du tableau d’octets du jeton de sécurité fourni par Teams lorsque vous avez enregistré le webhook sortant dans le client Teams. Voir [Créer un Webhook sortant](#create-outgoing-webhook).
+* Calculez le hachage à partir du tableau d’octets du jeton de sécurité fourni par Teams lorsque vous avez enregistré le webhook sortant dans le client Teams. Voir [Créer un Webhook sortant](#create-outgoing-webhooks).
 * Convertissez le hachage en chaîne à l’aide du codage UTF-8.
 * Comparez la valeur de chaîne du hachage généré à la valeur fournie dans la requête HTTP.
 

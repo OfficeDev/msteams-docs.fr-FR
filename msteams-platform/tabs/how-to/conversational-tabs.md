@@ -5,12 +5,12 @@ description: Dans ce module, apprenez à créer une conversation de sous-entité
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142079"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485662"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -47,7 +47,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 L’image suivante montre le panneau de conversation :
 
-![Sous-entités conversationnelles - Démarrer la conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="démarrer des conversations":::
 
 Si l’utilisateur démarre une conversation, il est important d’écouter le rappel de cet événement pour récupérer et enregistrer l’ID de **conversation** :
 
@@ -65,7 +65,7 @@ Après le démarrage d’une conversation, les appels suivants à `openConversat
 
 L’image suivante montre le panneau de conversation avec la conversation appropriée :
 
-![Sous-entités conversationnelles - Continuer la conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="continuer les conversations":::
 
 ## <a name="enhance-a-conversation"></a>Améliorer une conversation
 
@@ -93,7 +93,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|Onglet Créer une conversation| Microsoft Teams’exemple d’application d’onglet pour illustrer l’onglet Créer une conversation. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Onglet Créer une conversation| Exemple d’application de l’onglet Microsoft Teams pour illustrer l’onglet Créer une conversation. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Étape suivante
 

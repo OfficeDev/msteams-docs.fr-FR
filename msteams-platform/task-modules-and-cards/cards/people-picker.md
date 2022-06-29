@@ -5,17 +5,17 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9802cbc0f78a84db972640ed8f96321a71a82504
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144165"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503486"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Sélectionneur de personnes dans les Cartes adaptatives
 
 >[!NOTE]
-> Actuellement, le sélecteur de personnes dans les cartes adaptatives est disponible en [préversion publique des développeurs](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) uniquement pour les appareils mobiles et en disponibilité générale (GA) pour le bureau.
+> Actuellement, le sélecteur de personnes dans les cartes adaptatives est disponible en [préversion publique pour les développeurs pour Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) uniquement pour les appareils mobiles et en disponibilité générale pour le bureau.
 
 Le sélecteur de personnes permet aux utilisateurs de rechercher et de sélectionner des utilisateurs dans la carte adaptative. Vous pouvez ajouter le sélecteur de personnes en tant que contrôle d’entrée à la carte adaptative, qui fonctionne entre les conversations, les canaux, les modules de tâches et les onglets. People Picker prend en charge les fonctionnalités suivantes :
 
@@ -58,9 +58,9 @@ L’image suivante montre le scénario de réaffectation :
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
 > [!NOTE]
-> Actuellement, cette fonctionnalité est disponible dans [préversion publique des développeurs](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) uniquement.
+> Actuellement, cette fonctionnalité est disponible en  [préversion publique pour les développeurs pour Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) uniquement.
 
-Android et les clients mobiles iOS prennent en charge people picker dans les cartes adaptatives. Vous pouvez utiliser le sélecteur de personnes dans le mobile pour rechercher et sélectionner un utilisateur afin d’améliorer l’expérience utilisateur. L’expérience de recherche est similaire à toute autre expérience de sélection d’utilisateur dans le mobile.
+Les clients mobiles Android et iOS prennent en charge le sélecteur de personnes dans les cartes adaptatives. Vous pouvez utiliser le sélecteur de personnes dans le mobile pour rechercher et sélectionner un utilisateur afin d’améliorer l’expérience utilisateur. L’expérience de recherche est similaire à toute autre expérience de sélection d’utilisateur dans le mobile.
 
 ### <a name="reassignment-scenario-example"></a>Exemple de scénario de réaffectation
 
