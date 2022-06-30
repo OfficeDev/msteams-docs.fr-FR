@@ -1,16 +1,16 @@
 ---
 title: Références API des applications de réunion
 author: surbhigupta
-description: Découvrez comment identifier les références d’API d’applications de réunion avec des exemples et des exemples de code, Teams applications rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle utilisateur.
+description: Apprenez à identifier les références d’API d’applications de réunion avec des exemples et des exemples de code, les applications Teams rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle utilisateur.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189435"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561608"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -125,6 +125,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    },
    "conversation":{
       "id":"<conversation id>",
+      "conversationType": "groupChat", 
       "isGroup":true
    }
 }
@@ -135,7 +136,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nom de la propriété | Objectif |
 |---|---|
 | **user.id** | ID de l’utilisateur. |
-| **user.aadObjectId** | Azure Active Directory ID d’objet de l’utilisateur. |
+| **user.aadObjectId** | ID d’objet Azure Active Directory de l’utilisateur. |
 | **user.name** | Nom de l'utilisateur. |
 | **user.givenName** | Prénom de l’utilisateur.|
 | **user.surname** | Nom de l’utilisateur. |
@@ -346,7 +347,10 @@ Utilisez l’exemple suivant pour configurer la propriété de votre manifeste d
 </details>
 
 > [!NOTE]
-> Le bot peut recevoir automatiquement des événements de début ou de fin de réunion à partir de toutes les réunions créées dans tous les canaux en ajoutant `ChannelMeeting.ReadBasic.Group` au manifeste pour l’autorisation RSC.
+>
+> * Le bot peut recevoir automatiquement des événements de début ou de fin de réunion à partir de toutes les réunions créées dans tous les canaux en ajoutant `ChannelMeeting.ReadBasic.Group` au manifeste pour l’autorisation RSC.
+>
+> * Pour un appel `organizer` en tête-à-tête est l’initiateur de la conversation et pour les appels `organizer` de groupe est l’initiateur de l’appel.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -367,7 +371,11 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Non disponible
+```javascript
+
+Not available
+
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -377,29 +385,108 @@ GET /v1/meetings/{meetingId}
 
 Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant :
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
+* **Réunions planifiées :**
+
+    ```json
+
+    {
+       "details":  { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "Scheduled" 
+         },
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+             }, 
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    } 
+    ```
+
+* **Appels en tête-à-tête :**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "OneToOneCall"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer  ": {
+             "id": "<organizer user ID>",
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
     }
-} 
-```
+    
+    ```
+
+* **Appels de groupe :**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "GroupCall",
+             "joinUrl": "https://teams.microsoft.com/l/xx"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer": {
+             "id": "<organizer user ID>",
+             "objectId": "<organizer object ID>",
+             "aadObjectId": "<AAD object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    }
+    
+    ```
+
+* **Réunions instantanées :**
+
+    ```json
+    { 
+       "details": { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "MeetNow" 
+         }, 
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+         },
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>", 
+             "tenantId": "<Tenant ID>" ,
+             "objectId": "<organizer object ID>"
+         }
+    }
+    
+    ```
 
 ---
 
@@ -411,7 +498,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 | **details.scheduledEndTime** | Heure de fin planifiée de la réunion, au format UTC. |
 | **details.joinUrl** | URL utilisée pour rejoindre la réunion. |
 | **details.title** | Titre de la réunion. |
-| **details.type** | Type de la réunion , par exemple Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | Type de la réunion , par exemple GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
 | **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
 | **conversation.conversationType** | Type de conversation. |
 | **conversation.id** | ID de conversation de réunion. |
@@ -427,11 +514,11 @@ En cas de type de réunion périodique,
 
 ## <a name="send-real-time-captions-api"></a>API Envoyer des légendes en temps réel
 
-L’API envoyer des sous-titres en temps réel expose un point de terminaison POST pour Teams les sous-titres cart (Traduction en temps réel) de l’accès à la communication, les légendes fermées typées par l’homme. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux d’une réunion Teams lorsqu’ils ont des légendes activées.
+L’API envoyer des sous-titres en temps réel expose un point de terminaison POST pour les sous-titres cart (Traduction en temps réel) de l’accès aux communications Teams, sous-titres fermés de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux d’une réunion Teams quand des légendes sont activées.
 
 ### <a name="cart-url"></a>URL CART
 
-Vous pouvez obtenir l’URL CART pour le point de terminaison POST à partir de la page **Options** de réunion dans une réunion Teams. Pour plus d’informations, consultez [les légendes CART dans une réunion Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Vous n’avez pas besoin de modifier l’URL CART pour utiliser des légendes CART.
+Vous pouvez obtenir l’URL CART pour le point de terminaison POST à partir de la page **Options** de réunion d’une réunion Teams. Pour plus d’informations, consultez [les légendes CART dans une réunion Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Vous n’avez pas besoin de modifier l’URL CART pour utiliser des légendes CART.
 
 #### <a name="query-parameter"></a>Paramètre de requête
 
@@ -540,7 +627,7 @@ Le tableau suivant présente les codes de réponse :
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obtenir l’API d’état de partage de l’étape de contenu de l’API
 
-L’API `getAppContentStageSharingState` vous permet d’extraire des informations sur le partage des applications lors de la phase de réunion pour mobile et bureau.
+L’API `getAppContentStageSharingState` vous permet d’extraire des informations sur le partage des applications lors de la phase de réunion.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -618,6 +705,9 @@ Le tableau suivant présente les codes de réponse :
 | **1 000** | L’application ne dispose pas des autorisations nécessaires pour autoriser le partage à être mis en scène.|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>Obtenir l’API d’événements de réunion Teams en temps réel
+
+> [!NOTE]
+> Les événements de réunion Teams en temps réel sont pris en charge uniquement pour les réunions planifiées.
 
 L’utilisateur peut recevoir des événements de réunion en temps réel. Dès qu’une application est associée à une réunion, l’heure de début et de fin de la réunion réelle est partagée avec le bot. L’heure de début et de fin réelle d’une réunion est différente de l’heure de début et de fin planifiée. L’API Détails de la réunion fournit l’heure de début et de fin planifiée. L’événement fournit l’heure de début et de fin réelle.
 
@@ -819,7 +909,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **from.id** | Identification de l'utilisateur qui a envoyé la demande. |
 | **from.aadObjectId** | Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
 | **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
-| **conversation.tenantId** | Azure Active Directory ID de locataire de la conversation ou de la réunion. |
+| **conversation.tenantId** | ID de locataire Azure Active Directory de la conversation ou de la réunion. |
 | **conversation.id** | ID de conversation de réunion. |
 | **recipient.id** | ID de l’utilisateur qui reçoit la demande. |
 | **recipient.name** | Nom de l’utilisateur qui reçoit la demande. |
@@ -841,10 +931,10 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 
 |Exemple de nom | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilité des réunions | Teams exemple d’extensibilité de réunion pour passer des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de bulles de contenu de réunion | Teams exemple d’extensibilité de réunion pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Réunion MeetingSidePanel | Teams exemple d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Onglet Détails de la réunion | Teams exemple d’extensibilité de réunion pour interagir avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Extensibilité des réunions | Exemple d’extensibilité de réunion Teams pour passer des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bot de bulles de contenu de réunion | Exemple d’extensibilité de réunion Teams pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Réunion MeetingSidePanel | Exemple d’extensibilité de réunion Teams pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Onglet Détails de la réunion | Exemple d’extensibilité de réunion Teams pour interagir avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Exemple d’événements de réunion|Exemple d’application pour afficher des événements de réunion Teams en temps réel|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Exemple de recrutement de réunions|Exemple d’application pour afficher l’expérience de réunion pour le scénario de recrutement|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Installation de l’application à l’aide du code QR|Exemple d’application qui génère le code QR et installe l’application à l’aide du code QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|

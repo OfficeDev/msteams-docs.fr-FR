@@ -5,22 +5,41 @@ description: Dans cet article, découvrez comment les applications fonctionnent 
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 07008b23ad9f5df32c61b417ab7f49be6dbfe6e9
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484550"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561597"
 ---
-# <a name="apps-for-teams-meetings"></a>Applications pour les réunions Teams
+# <a name="apps-for-teams-meetings-and-calls"></a>Applications pour les réunions et les appels Teams
 
 Les réunions permettent la collaboration, le partenariat, la communication éclairée et le partage de commentaires. L'application de réunion peut offrir une expérience utilisateur pour chaque étape du cycle de vie de la réunion. Le cycle de vie de la réunion comprend l'expérience de l'application avant, pendant et après la réunion, en fonction du statut du participant.
 
-Les utilisateurs peuvent accéder à des applications pendant les réunions en utilisant la galerie d'onglets de leur calendrier, par exemple :
+> [!Note]
+>
+> Les applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe sont actuellement disponibles uniquement en [préversion publique pour les développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
-* Prévoir un tableau Kanban.
-* Lancez un dialogue pragmatique en réunion.
-* Créez une enquête après la réunion.
+Teams prend en charge l’accès aux applications pendant la réunion pour les types de réunion suivants :
+
+* [**Réunions planifiées**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop) : réunions planifiées via le calendrier Teams.
+* [**Appels en tête-à-tête**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798) : appels lancés dans une conversation en tête-à-tête.
+* [**Appels de groupe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798) : appels lancés dans une conversation de groupe.
+* [**Réunions instantanées**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5) : réunions initiées via le bouton **Réunion maintenant** dans le calendrier Teams.
+
+Les utilisateurs peuvent ajouter des applications à la réunion à l’aide de l’option **+** à partir de leur fenêtre de réunion Teams.
+
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Ajouter une application dans une réunion" border="true":::
+
+Visitez le [magasin Teams](https://go.microsoft.com/fwlink/p/?LinkID=2183121) et explorez les applications conçues spécifiquement pour les réunions.
+
+> [!Note]
+>
+> * Actuellement, l’ajout d’une application n’est pas pris en charge dans le mobile. Toutefois, un utilisateur peut afficher l’application et partager l’application pour la mettre en scène à partir d’un appareil mobile.
+>
+> * Actuellement, lorsqu’une troisième personne est ajoutée à un appel un-à-un, l’appel est élevé à un appel de groupe, ce qui signifie qu’une nouvelle session démarre. Les applications ajoutées à l’appel un-à-un ne sont pas disponibles dans l’appel de groupe. Toutefois, ils peuvent être ajoutés à nouveau.
+>
+> * Actuellement, les expériences d’application ne sont pas prises en charge dans les réunions de canal Teams (réunions planifiées et réunions instantanées).
 
 L'illustration suivante vous donne une idée des caractéristiques d'extensibilité de l'application de réunion :
 

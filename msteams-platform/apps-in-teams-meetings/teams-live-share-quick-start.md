@@ -4,18 +4,18 @@ description: Dans ce module, découvrez comment essayer rapidement l’exemple D
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668264"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484585"
 ---
 ---
 
 # <a name="quick-start-guide"></a>Guide de démarrage rapide
 
-Prise en main du Kit de développement logiciel (SDK) Live Share à l’aide de l’exemple Dice Roller. Cette prise en main est une évolution du [Démarrage rapide d’Infrastructure Fluid](https://fluidframework.com/docs/start/quick-start/) et elle est conçue pour exécuter rapidement un Kit de développement logiciel (SDK) Live Share basé sur un [exemple Dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sur l’hôte local de votre ordinateur.
+Démarrage avec Live Share Kit de développement logiciel (SDK) à l’aide de l’exemple Dice Roller est une évolution du [Démarrage rapide Fluid Framework](https://fluidframework.com/docs/start/quick-start/) et est conçu pour exécuter rapidement un [exemple dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) basé sur le SDK Live Share sur l’hôte local de votre ordinateur.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Exemple DiceRoller":::
 
@@ -24,7 +24,7 @@ Prise en main du Kit de développement logiciel (SDK) Live Share à l’aide de 
 
 ## <a name="set-up-your-development-environment"></a>Configuration de votre environnement de développement
 
-Pour démarrer, installez ce qui suit :
+Pour commencer, installez :
 
 * [Node.js](https://nodejs.org/en/download): le Kit de développement logiciel (SDK) Live Share prend en charge Node.js LTS versions 12.17 et ultérieures.
 * [Dernière version de Visual Studio Code](https://code.visualstudio.com/).

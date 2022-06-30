@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions Teams et l’expérience de réunion des utilisateurs sur les ordinateurs de bureau et mobiles, les types d’utilisateurs, l’intégration de bots et l’extension de message dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a75340e375bdc4eabd386f09b19110312de16538
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4c53567530f0d9d418a6b273200f921517341e7f
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484574"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561622"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -26,7 +26,10 @@ Cet article traite des informations sur le cycle de vie des réunions et sur la 
 Un cycle de vie de réunion consiste en une expérience d'application avant, pendant et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de message à chaque étape du cycle de vie de la réunion.
 
 > [!NOTE]
-> Les extensions de réunion telles que les bots, les cartes, les extensions de message et les actions de message sont prises en charge dans le client web. Toutefois, les expériences hébergées telles que les onglets, les bulles de contenu et les partages intermédiaires ne sont pas actuellement entièrement prises en charge.
+>
+> * Les applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Les extensions de réunion telles que les bots, les cartes, les extensions de message et les actions de message sont prises en charge dans le client web. Toutefois, les expériences hébergées telles que les onglets, les bulles de contenu et les partages intermédiaires ne sont pas actuellement entièrement prises en charge.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Intégrer des onglets dans le cycle de vie de la réunion
 
@@ -37,7 +40,6 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 
 > [!NOTE]
 >
-> * Les réunions planifiées privées prennent uniquement en charge les applications.
 > * L’option Ajouter une application pour l’application d’extension de réunion Teams n’est pas prise en charge dans le client web Teams.
 
 #### <a name="pre-meeting-app-experience"></a>Expérience de l'application avant la réunion
@@ -75,6 +77,8 @@ Après avoir ajouté les onglets à une réunion existante sur mobile, vous pouv
 Avec l'expérience de l'application en réunion, vous pouvez engager les participants pendant la réunion en utilisant des applications et la boîte de dialogue en réunion. Les applications de réunion sont hébergées sur la barre d'outils de la fenêtre de réunion en tant qu'onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter du contenu exploitable aux participants à la réunion. Pour plus d’informations, consultez [Activer et configurer vos applications pour les réunions Teams](enable-and-configure-your-app-for-teams-meetings.md).
 
 Pour les applications mobiles, les applications de réunion sont disponibles à partir **d’applications** > points de suspension &#x25CF;&#x25CF;&#x25CF; de la réunion. Sélectionnez **Applications** pour afficher toutes les applications disponibles dans la réunion.
+
+Pour le bureau, vous pouvez ajouter des applications pendant une réunion à l’aide de l’option **Ajouter une application** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: à partir de la fenêtre de réunion.
 
 Pour utiliser des onglets pendant une réunion :
 
@@ -183,7 +187,7 @@ Après avoir conçu votre application en fonction des rôles de participant d’
 
 ## <a name="user-types-in-a-meeting"></a>Types d’utilisateurs dans une réunion
 
-Les types d’utilisateurs, tels que l’organisateur, le présentateur ou le participant à une réunion, peuvent effectuer l’un des [rôles de participant dans une réunion](#participant-roles-in-a-meeting).
+Les types d’utilisateurs, tels que les utilisateurs in-tenants, invités, fédérés ou externes dans une réunion, peuvent effectuer l’un des [rôles de participant dans une réunion](#participant-roles-in-a-meeting).
 
 > [!NOTE]
 > Le type d’utilisateur n’est pas inclus dans l’API **getParticipantRole** .
@@ -205,15 +209,20 @@ La liste suivante détaille les différents types d’utilisateurs ainsi que leu
     > [!NOTE]
     > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application au niveau de l’utilisateur par défaut. Pour plus d’informations, consultez [Gérer les applications](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-Un utilisateur invité ou anonyme ne peut pas ajouter, supprimer ou désinstaller des applications.
-
-Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctionnalités auxquelles chaque utilisateur peut accéder :
+Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctionnalités auxquelles chaque utilisateur peut accéder dans les réunions planifiées :
 
 | Type d'utilisateur | Onglets | Bots | Extensions de messages | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Non disponible |
 | Invité, partie du locataire Azure AD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Available | Peut démarrer, afficher et interagir avec l’application sur la phase de réunion uniquement sur le client de bureau Teams |
-| Pour plus d’informations, consultez [les utilisateurs fédérés](/microsoftteams/non-standard-users). | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut démarrer, afficher et interagir avec l’application sur la phase de réunion uniquement sur le client de bureau Teams. |
+| Pour plus d’informations, consultez [les utilisateurs fédérés](/microsoftteams/non-standard-users). | L’interaction est autorisée dans les réunions planifiées. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut démarrer, afficher et interagir avec l’application sur la phase de réunion uniquement sur le client de bureau Teams. |
+
+> [!NOTE]
+>
+> Le comportement des différents types d’utilisateurs pour les applications dans les appels est identique à celui des réunions planifiées, à l’exception des éléments suivants :
+>
+> * Les utilisateurs fédérés ne peuvent pas interagir avec les applications onglet dans les appels.
+> * Si des utilisateurs fédérés sont ajoutés à un appel existant avec des utilisateurs clients ou invités, tous les participants perdent la possibilité d’ajouter, de mettre à jour ou de supprimer des applications. Toutefois, seuls les utilisateurs locataires ou invités existants pourraient toujours interagir avec les applications qui ont été ajoutées avant d’inviter des utilisateurs fédérés à l’appel.
 
 ## <a name="next-step"></a>Étape suivante
 
