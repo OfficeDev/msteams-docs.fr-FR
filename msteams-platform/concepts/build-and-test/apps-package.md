@@ -3,12 +3,12 @@ title: Empaqueter votre application
 description: Découvrez comment empaqueter votre application Microsoft Teams avec des icônes pour le test, le téléchargement et la publication dans le Store.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: bf0cff985184a0a0d03a9f2a996182b3ea7365bc
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 670243f3b82408592af944fd2c8ae4fc2c739ebc
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503619"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558561"
 ---
 # <a name="create-teams-app-package"></a>Créer un package d’application Teams
 
@@ -21,7 +21,7 @@ Vous avez besoin d’un package de l’application, mais vous prévoyez de distr
 
 Lorsqu’un utilisateur installe votre application dans Teams, il installe un package d’application qui contient un seul fichier de configuration (également appelé manifeste d’application) et les icônes de votre application. La logique de l’application et le stockage des données sont hébergés ailleurs, par exemple sur localhost pendant le développement et sur Azure Web Services. Teams accède à ces ressources via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration montrant l’hébergement d’applications pour Application Teams" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration montrant l’hébergement d’applications pour Application Teams":::
 
 ## <a name="app-manifest"></a>Manifeste d'application
 
@@ -44,7 +44,7 @@ La version de couleur de votre icône s’affiche dans la plupart des scénarios
 
 Teams rogne automatiquement votre icône pour afficher un carré avec des coins arrondis dans plusieurs scénarios et une forme hexagonale dans les scénarios de bot. Pour rogner le symbole sans perdre de détail, incluez 48 pixels de remplissage autour de votre symbole.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Aide concernant les icônes de couleur et leur conception." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Aide concernant les icônes de couleur et leur conception.":::
 
 ### <a name="outline-icon"></a>Icône de contour
 
@@ -55,13 +55,13 @@ Une icône de contour s’affiche dans deux scénarios :
 
 L’icône doit être de 32 x 32 pixels. Il peut être blanc avec un arrière-plan transparent ou transparent avec un arrière-plan blanc (aucune autre couleur n’est autorisée). L’icône de contour ne doit pas avoir de remplissage supplémentaire autour du symbole.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Aide concernant les icônes de contour et leur conception." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Aide concernant les icônes de contour et leur conception.":::
 
 ### <a name="best-practices"></a>Bonnes pratiques
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Illustration montrant comment concevoir les icônes de votre application." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Illustration montrant comment concevoir les icônes de votre application.":::
 
 #### <a name="do-follow-the-precise-outline-icon-guidelines"></a>À faire : suivez les instructions précises sur les icônes de contour
 
@@ -69,7 +69,7 @@ Les valeurs RVB de blanc utilisées dans votre icône doivent être Rouge : 255
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec les icônes de votre application." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec les icônes de votre application.":::
 
 #### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>À ne pas faire : rogner dans une forme circulaire ou carrée arrondie
 
@@ -88,15 +88,15 @@ Voici comment les icônes d’application apparaissent dans différentes fonctio
 
 #### <a name="personal-app"></a>Application personnelle
 
-:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Exemple montrant l’apparence d’une icône d’application dans une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Exemple montrant l’apparence d’une icône d’application dans une application personnelle.":::
 
 #### <a name="bot-channel"></a>Bot (canal)
 
-:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemple montrant l’apparence d’une icône d’application sur un bot à l’intérieur d’un canal." border="false":::
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemple montrant l’apparence d’une icône d’application sur un bot à l’intérieur d’un canal.":::
 
 #### <a name="message-extension"></a>Extension de message
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texte de remplacement>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texte de remplacement>":::
 
 ## <a name="next-step"></a>Étape suivante
 

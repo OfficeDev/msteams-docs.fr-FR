@@ -5,12 +5,12 @@ description: Présentez les éléments de la planification d’une application, 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150686"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558715"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -28,7 +28,7 @@ Dans cette section, découvrez comment :
 
 Teams en tant que plateforme vous offre des kits de ressources, des bibliothèques et des applications à chaque étape du développement d’applications. Examinons le cycle de vie de création d’applications :
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration montre la planification de votre application" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration montre la planification de votre application":::
 
 * [Avant de créer](#before-you-build)
 * [Pendant la build](#during-build)
@@ -53,7 +53,7 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 
 * **Utiliser Teams en tant que plateforme**: la plateforme Teams vous aide à créer une application unique ou multi-capacité. Votre application Teams est prise en charge par les produits et services intégrés qui renforcent l’expérience de l’application.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams." border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams.":::
 
     Vos applications apparaissent dans Teams sous forme d’onglets, de bots, d’extensions de message, de connecteurs et de webhooks, ou en tant qu’application multi-fonctionnalités. Ces fonctionnalités sont optimisées sur le serveur principal par les applications Azure, Microsoft Graph, SharePoint et Power qui permettent d’automatiser les tâches et les processus.
 

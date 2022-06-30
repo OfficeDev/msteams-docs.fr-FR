@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez comment activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer les fonctionnalités, etc.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503360"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557735"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -141,7 +141,7 @@ La notification en réunion est utilisée pour impliquer les participants pendan
 
 La notification en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans la conversation de la réunion. Une URL de ressource externe est utilisée pour afficher la notification en réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Exemple montrant comment utiliser une boîte de dialogue en réunion." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Exemple montrant comment utiliser une boîte de dialogue en réunion.":::
 
 #### <a name="shared-meeting-stage"></a>Étape de réunion partagée
 

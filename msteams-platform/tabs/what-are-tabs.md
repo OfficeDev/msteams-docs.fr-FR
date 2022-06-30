@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment créer des onglets personnalisé
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1ff0d77f03e98ab2865705ed9a5be3687ee6779a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503892"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558141"
 ---
 # <a name="build-tabs-for-teams"></a>Créer des onglets pour Teams
 
@@ -25,11 +25,11 @@ Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Ce 
 
 L’image suivante montre les onglets personnels :
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Onglet personnel" lightbox="../assets/images/tabs/personaltab.png" border="true":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Onglet personnel" lightbox="../assets/images/tabs/personaltab.png":::
 
 L’image suivante montre les onglets du canal Contoso :
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Onglets de canal ou de groupe" lightbox="../assets/images/tabs/tabs.png" border="true":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Onglets de canal ou de groupe" lightbox="../assets/images/tabs/tabs.png":::
 
 Il existe quelques conditions préalables que vous devez respecter avant de travailler sur des onglets.
 

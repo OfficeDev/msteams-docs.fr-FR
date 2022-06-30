@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123947"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558750"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Conception de votre extension de message Microsoft Teams
 
@@ -35,11 +35,11 @@ Les exemples suivants montrent comment ajouter une extension de message dans un 
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="L’exemple montre comment ajouter une extension de message près de la zone de composition dans un canal sur mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="L’exemple montre comment ajouter une extension de message près de la zone de composition dans un canal sur mobile.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="L’exemple montre comment ajouter une extension de message près de la zone de composition dans un canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="L’exemple montre comment ajouter une extension de message près de la zone de composition dans un canal.":::
 
 ## <a name="set-up-a-message-extension"></a>Configurer une extension de message
 
@@ -49,11 +49,11 @@ Pour assurer la cohérence entre les applications Teams, vous ne pouvez pas pers
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="L’exemple montre l’écran d’installation de l’extension de message avec un bouton de connexion sur mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="L’exemple montre l’écran d’installation de l’extension de message avec un bouton de connexion sur mobile.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="L’exemple montre l’écran d’installation de l’extension de message avec un bouton de connexion." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="L’exemple montre l’écran d’installation de l’extension de message avec un bouton de connexion.":::
 
 ## <a name="types-of-message-extensions"></a>Types d’extensions de message
 
@@ -65,17 +65,17 @@ Avec les commandes de recherche, les utilisateurs peuvent utiliser votre extensi
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="L’exemple montre une extension de message basée sur la recherche lancée à partir de la zone de composition sur mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="L’exemple montre une extension de message basée sur la recherche lancée à partir de la zone de composition sur mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="L’exemple montre une extension de message basée sur la recherche lancée à partir de la zone de composition." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="L’exemple montre une extension de message basée sur la recherche lancée à partir de la zone de composition.":::
 
 #### <a name="compose-box-layout-options"></a>Options de disposition de la zone de rédaction
 
 Vous disposez de certaines options pour afficher les résultats de la recherche d’extension de message, notamment la [liste et les vues de grille](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations montrant les options de disposition pour les résultats de recherche d’extension de message." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations montrant les options de disposition pour les résultats de recherche d’extension de message.":::
 
 ### <a name="action-commands"></a>Commandes d'action
 
@@ -93,11 +93,11 @@ Une fois ajoutés, les utilisateurs peuvent ouvrir votre extension de message en
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir de la zone de composition sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir de la zone de composition sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir de la zone de composition." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir de la zone de composition.":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>À partir d’un message de conversation ou d’un billet de canal
 
@@ -105,11 +105,11 @@ Une fois ajoutés, les utilisateurs peuvent sélectionner l’icône **Plus** ::
 
 #### <a name="chat-message"></a>Message de conversation
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="L’exemple montrant comment ouvrir une extension de messagerie à partir d’un message de conversation." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="L’exemple montrant comment ouvrir une extension de messagerie à partir d’un message de conversation.":::
 
 #### <a name="channel-post"></a>Billet de canal
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir d’un billet de canal sur mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir d’un billet de canal sur mobile.":::
 
 ## <a name="use-a-message-extension"></a>Utiliser une extension de message
 
@@ -121,31 +121,31 @@ Les scénarios suivants montrent les principales façons dont les utilisateurs u
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Exemple montrant un utilisateur recherchant du contenu à insérer à partir de la zone de rédaction sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Exemple montrant un utilisateur recherchant du contenu à insérer à partir de la zone de rédaction sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Exemple montrant un utilisateur recherchant du contenu à insérer à partir de la zone de rédaction." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Exemple montrant un utilisateur recherchant du contenu à insérer à partir de la zone de rédaction.":::
 
 **2. Insérer le contenu**. Une fois publiés, d’autres utilisateurs peuvent répondre ou sélectionner le contenu pour afficher plus d’informations dans votre application.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Exemple montrant un utilisateur publiant du contenu dans une conversation de canal sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Exemple montrant un utilisateur publiant du contenu dans une conversation de canal sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Exemple montrant un utilisateur publiant du contenu dans une conversation de canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Exemple montrant un utilisateur publiant du contenu dans une conversation de canal.":::
 
 ### <a name="take-action-on-a-message"></a>Effectuez des actions sur un message
 
 **1. Sélectionner une extension de message**. Votre application peut inclure une ou plusieurs commandes d’action.
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="L’exemple montre un utilisateur qui sélectionne une commande d’action d’extension de message." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="L’exemple montre un utilisateur qui sélectionne une commande d’action d’extension de message.":::
 
 **2. Terminer l'action**. Votre application peut recevoir et traiter le contenu ou les données envoyés par l’action de message. Les utilisateurs terminent l’action dans votre application tout en restant dans leur conversation.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Exemple sur la façon d’agir sur un message." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Exemple sur la façon d’agir sur un message.":::
 
 ### <a name="preview-links"></a>Liens d’aperçu
 
@@ -155,21 +155,21 @@ Les extensions de message vous permettent également d’insérer des liens enri
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Exemple montrant un utilisateur collant un lien dans la zone de rédaction sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Exemple montrant un utilisateur collant un lien dans la zone de rédaction sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Exemple montrant un utilisateur collant un lien dans la zone de rédaction." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Exemple montrant un utilisateur collant un lien dans la zone de rédaction.":::
 
 **2. Insérer le contenu**. Si votre application reconnaît l’URL dans la zone de composition, elle affiche le lien sous la forme d’une carte qui fournit un aperçu riche en contenu du contenu web. (Pour plus d’informations, consultez les [Instructions de conception de cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md) .)
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Exemple montrant comment l'URL, étant donné qu'elle est reconnue par votre application, inclut un contenu enrichi dans la zone de rédaction sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Exemple montrant comment l'URL, étant donné qu'elle est reconnue par votre application, inclut un contenu enrichi dans la zone de rédaction sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Exemple montrant comment l'URL, étant donné qu'elle est reconnue par votre application, inclut un contenu enrichi dans la zone de rédaction." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Exemple montrant comment l'URL, étant donné qu'elle est reconnue par votre application, inclut un contenu enrichi dans la zone de rédaction.":::
 
 ## <a name="manage-a-message-extension"></a>Gérer une extension de message
 
@@ -183,7 +183,7 @@ Les exemples suivants montrent une extension de message ouverte à partir de la 
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une extension de message dans la zone de composition sur mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une extension de message dans la zone de composition sur mobile.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -196,7 +196,7 @@ Les exemples suivants montrent une extension de message ouverte à partir de la 
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une extension de message dans la zone de composition." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une extension de message dans la zone de composition.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -211,7 +211,7 @@ Les exemples suivants montrent une extension de message ouverte à partir de la 
 
 ### <a name="message-extension-management-menu"></a>Menu de gestion des extensions de message
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu de gestion des extensions de message." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu de gestion des extensions de message.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -226,7 +226,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Exemple sur l’installation et l’utilisation générale." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Exemple sur l’installation et l’utilisation générale.":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>À faire : intégrer avec l’authentification unique
 
@@ -234,7 +234,7 @@ L’authentification unique facilite, accélère et sécurise le processus de co
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Exemple d’intégration avec l’authentification unique." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Exemple d’intégration avec l’authentification unique.":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>À ne pas faire : retirer les utilisateurs de la conversation
 
@@ -251,7 +251,7 @@ Les extensions de message ne sont pas toujours faciles à trouver. Incluez des c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemple sur la création de modèles." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemple sur la création de modèles.":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>À faire : permettre à Teams de gérer une partie du travail de conception si possible
 
@@ -259,7 +259,7 @@ Si cela est pertinent pour vos cas d’usage, envisagez de créer une extension 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Exemple de gestion du travail de conception." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Exemple de gestion du travail de conception.":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>À ne pas faire : incorporer l’intégralité de votre application dans un module de tâche
 
@@ -272,7 +272,7 @@ Si votre extension de message nécessite des commandes d’action, gardez le mod
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Exemple sur les thèmes." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Exemple sur les thèmes.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
 
@@ -280,7 +280,7 @@ Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquemen
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Exemple sur les jetons de couleur." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Exemple sur les jetons de couleur.":::
 
 #### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur du code dur
 
@@ -293,7 +293,7 @@ Si vous n’utilisez pas de jetons de couleur Teams, vos conceptions seront moin
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Exemple sur les actions." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Exemple sur les actions.":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>À faire : inclure des commandes d’action qui ont du sens dans le contexte
 
@@ -301,7 +301,7 @@ Les actions de message doivent être liées à ce qu’un utilisateur examine. P
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Exemple sur les commandes d’action." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Exemple sur les commandes d’action.":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>À ne pas faire : inclure des commandes d’actions qui ne sont pas contextuelles
 

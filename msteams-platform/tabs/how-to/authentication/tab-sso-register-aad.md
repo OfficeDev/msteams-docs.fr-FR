@@ -4,14 +4,14 @@ description: Décrit l’inscription de votre application onglet auprès d’Azu
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Onglets d’authentification Teams Microsoft Azure Active Directory (Azure AD) l’étendue de l’authentification unique du jeton d’accès
-ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 01cb6cd54cf150af05b54617aec3159e9483d260
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503521"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558596"
 ---
-# <a name="register-your-tab-app-in-azure-ad"></a>Inscrire votre application onglet dans Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Inscrire votre application d’onglet dans Azure AD
 
 Azure AD fournit l’accès à votre application onglet en fonction de l’identité Teams de l’utilisateur de l’application. Vous devez inscrire votre application onglet auprès d’Azure AD afin que l’utilisateur de l’application qui s’est connecté à Teams puisse avoir accès à votre application onglet.
 
@@ -19,7 +19,7 @@ Azure AD fournit l’accès à votre application onglet en fonction de l’ident
 
 L’inscription de votre application onglet dans Azure AD et son activation pour l’authentification unique nécessitent la création de configurations d’application, telles que la génération d’ID d’application, la définition de l’étendue de l’API et la pré-autorisation des ID clients pour les applications approuvées.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurer Azure AD pour envoyer un jeton d’accès à l’application cliente Teams" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurer Azure AD pour envoyer un jeton d’accès à l’application cliente Teams":::
 
 Créez une inscription d’application dans Azure AD et exposez son API (web) à l’aide d’étendues (autorisations). Configurez une relation d’approbation entre l’API exposée sur Azure AD et votre application. Cela permet au client Teams d’obtenir un jeton d’accès pour le compte de votre application et de l’utilisateur connecté. Vous pouvez ajouter des ID clients pour les applications mobiles, de bureau et web approuvées que vous souhaitez pré-autoriser.
 
@@ -62,19 +62,19 @@ Inscrivez une nouvelle application dans Azure AD et configurez la location et la
 
 2. Sélectionnez l’icône **inscriptions d'applications**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Page portail Azure AD." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Page portail Azure AD.":::
 
    La page **inscriptions d'applications** s’affiche.
 
 3. Sélectionnez **+ Nouvelle icône d’inscription** .
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nouvelle page d’inscription sur le portail Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nouvelle page d’inscription sur le portail Azure AD.":::
 
     La page **Inscrire une application** s’affiche.
 
 4. Entrez le nom de votre application que vous souhaitez afficher à l’utilisateur de l’application. Vous pouvez modifier ce nom ultérieurement, si vous le souhaitez.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Page d’inscription d’application sur le portail Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Page d’inscription d’application sur le portail Azure AD.":::
 
 5. Sélectionnez le type de compte d’utilisateur qui peut accéder à votre application. Vous pouvez choisir parmi les options monolocataire ou multilocataire, ou un compte Microsoft privé.
 
@@ -96,11 +96,11 @@ Inscrivez une nouvelle application dans Azure AD et configurez la location et la
 7. Sélectionnez **Inscrire**.
     Un message s’affiche sur le navigateur indiquant que l’application a été créée.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Inscrire une application sur le portail Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Inscrire une application sur le portail Azure AD.":::
 
     La page avec l’ID d’application et d’autres configurations s’affiche.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="L’inscription de l’application réussit." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="L’inscription de l’application réussit.":::
 
 8. Notez et enregistrez l’ID d’application à partir de **l’ID d’application (client**). Vous en aurez besoin pour mettre à jour le manifeste de l’application Teams ultérieurement.
 
@@ -120,19 +120,19 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
 1. Sélectionnez **Gérer** > **exposer une API** dans le volet gauche.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Exposer une option de menu API." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Exposer une option de menu API.":::
 
     La page **Exposer une API s’affiche** .
 
 1. Sélectionnez **Définir** pour générer l’URI d’ID d’application sous la forme .`api://{AppID}`
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Définir l’URI d’ID d’application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Définir l’URI d’ID d’application":::
 
     La section relative à la définition de l’URI d’ID d’application s’affiche.
 
 1. Entrez l’URI d’ID d’application au format expliqué ici.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="URI d’ID d’application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="URI d’ID d’application":::
 
     - **L’URI d’ID** d’application est prérempli avec l’ID d’application (GUID) au format `api://{AppID}`.
     - Le format d’URI de l’ID d’application doit être : `api://fully-qualified-domain-name.com/{AppID}`.
@@ -163,11 +163,11 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
     Un message s’affiche sur le navigateur indiquant que l’URI de l’ID d’application a été mis à jour.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Message d’URI d’ID d’application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Message d’URI d’ID d’application":::
 
     L’URI d’ID d’application s’affiche sur la page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="URI d’ID d’application mis à jour" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="URI d’ID d’application mis à jour":::
 
 1. Notez et enregistrez l’URI d’ID d’application. Vous en aurez besoin pour mettre à jour le manifeste de l’application Teams ultérieurement.
 
@@ -175,13 +175,13 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
 1. Sélectionnez **+ Ajouter une étendue** dans les **étendues définies par cette section d’API** .
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Sélectionner l’étendue" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Sélectionner l’étendue":::
 
     La page **Ajouter une étendue** s’affiche.
 
 1. Entrez les détails de la configuration de l’étendue.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Ajouter des détails d’étendue" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Ajouter des détails d’étendue":::
 
     1. Entrez le nom de l’étendue. Ce champ est obligatoire.
     2. Sélectionnez l’utilisateur qui peut donner son consentement pour cette étendue. L’option par défaut est **Admins uniquement**.
@@ -194,23 +194,23 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
     Un message s’affiche sur le navigateur indiquant que l’étendue a été ajoutée.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Message ajouté à l’étendue" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Message ajouté à l’étendue":::
 
     La nouvelle étendue que vous avez définie s’affiche sur la page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Étendue ajoutée et affichée" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Étendue ajoutée et affichée":::
 
 ### <a name="to-configure-authorized-client-application"></a>Pour configurer une application cliente autorisée
 
 1. Parcourez la page **Exposer une API** dans la section **Application cliente autorisée** , puis sélectionnez **+ Ajouter une application cliente**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Application cliente autorisée" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Application cliente autorisée":::
 
     La page **Ajouter une application cliente** s’affiche.
 
 1. Entrez l’ID client approprié pour le client Teams pour les applications que vous souhaitez autoriser pour l’application web de votre application.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Ajouter une application cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Ajouter une application cliente":::
 
     > [!NOTE]
     >
@@ -230,11 +230,11 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
     Un message s’affiche sur le navigateur indiquant que l’application cliente autorisée a été ajoutée.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Message ajouté à l’application cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Message ajouté à l’application cliente":::
 
     L’ID client s’affiche sur la page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Application cliente ajoutée et affichée" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Application cliente ajoutée et affichée":::
 
 > [!NOTE]
 > Vous pouvez autoriser plusieurs applications clientes. Répétez les étapes de cette procédure pour configurer une autre application cliente autorisée.
@@ -247,13 +247,13 @@ Vous devez définir la version du jeton d’accès acceptable pour votre applica
 
 1. Sélectionnez **Gérer** >  le **manifeste** dans le volet gauche.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Manifeste du portail Azure AD" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Manifeste du portail Azure AD":::
 
     Le manifeste de l’application Azure AD s’affiche.
 
 1. Entrez **2** comme valeur pour la `accessTokenAcceptedVersion` propriété.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Valeur de la version du jeton d’accès accepté" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Valeur de la version du jeton d’accès accepté":::
 
 1. Sélectionnez **Enregistrer**.
 

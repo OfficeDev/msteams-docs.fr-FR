@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 32877d96f3867e15c156bf97e727c158b68f9190
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142212"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558015"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Préparer des comptes pour créer des applications Teams
 
@@ -77,7 +77,7 @@ Si vous souhaitez héberger les ressources associées à votre application ou ac
     3. Sélectionnez **Comptes** et connectez-vous à votre compte Microsoft 365.
     4. Vérifiez si vous pouvez afficher l’option **Chargement indépendant activé** comme illustré dans l’image suivante :
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Activer le chargement indépendant" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Activer le chargement indépendant":::
 
 * **Vérifier l’autorisation de chargement indépendant à l’aide du client Teams**
 
@@ -85,11 +85,11 @@ Si vous souhaitez héberger les ressources associées à votre application ou ac
     2. Sélectionnez **Applications** dans le panneau gauche.
     3. Sélectionnez **Publier une application**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publier une application" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publier une application":::
 
     4. Vérifiez si vous pouvez voir l’option **Charger une application personnalisée** comme illustré dans l’image suivante :
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Charger une application personnalisée" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Charger une application personnalisée":::
 
         Si vous ne parvenez pas à afficher l’option **Charger une application personnalisée**, cela indique que vous n’avez pas l’autorisation requise pour le chargement indépendant.
 
@@ -107,7 +107,7 @@ Si vous souhaitez héberger les ressources associées à votre application ou ac
 
   2. Sélectionnez **Afficher tout** > **Teams**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="afficher tout" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="afficher tout":::
 
      > [!Note]
      > L’affichage de l’option **Teams** peut prendre **jusqu’à** 24 heures. Vous pouvez [charger votre application personnalisée dans un environnement Teams](/microsoftteams/upload-custom-apps) à des fins de test et de validation.

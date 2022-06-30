@@ -5,12 +5,12 @@ description: Avec ce parcours d’apprentissage, commencez à utiliser des bots 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503759"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558316"
 ---
 # <a name="build-bots-for-teams"></a>Créer des bots pour Teams
 
@@ -33,7 +33,7 @@ Les bots de conversation sont extrêmement flexibles. Les bots peuvent gérer qu
 
 Utilisez la bonne combinaison de cartes, de texte et de modules de tâche pour créer un bot utile. L’image suivante montre un utilisateur qui discute avec un bot dans une conversation privée à l’aide de texte et de cartes interactives.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Exemple de bot FAQ" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Exemple de bot FAQ":::
 
 Chaque interaction entre l’utilisateur et le bot est représentée comme une activité. Lorsqu’un bot reçoit une activité, il la transmet à ses gestionnaires d’activité. Voir [les gestionnaires d’activité du bot](~/bots/bot-basics.md).
 

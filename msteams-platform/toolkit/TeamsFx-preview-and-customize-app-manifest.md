@@ -1,23 +1,23 @@
 ---
-title: manifeste d’application Teams dans Teams Toolkit
+title: Manifeste d’application Teams dans le Kit de ressources Teams
 author: zyxiaoyuer
-description: Dans ce module, découvrez comment modifier, afficher un aperçu et personnaliser Teams manifeste d’application dans l’environnement différent.
+description: Dans ce module, découvrez comment modifier, afficher un aperçu et personnaliser le manifeste d’application Teams dans l’environnement différent.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143871"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558001"
 ---
-# <a name="edit-teams-app-manifest"></a>Modifier Teams manifeste d’application
+# <a name="edit-teams-app-manifest"></a>Modifier le manifeste de l’application Teams
 
-Le fichier de modèle de manifeste `manifest.template.json` est disponible sous `templates/appPackage` dossier après la génération de modèles automatiques. Le fichier de modèle avec des espaces réservés et les valeurs réelles sont résolus par Teams Toolkit à l’aide de fichiers sous `.fx/configs` et `.fx/states` pour différents environnements.
+Le fichier de modèle de manifeste `manifest.template.json` est disponible sous `templates/appPackage` dossier après la génération de modèles automatiques. Le fichier modèle avec des espaces réservés et les valeurs réelles sont résolus par le Kit de ressources Teams à l’aide de fichiers sous `.fx/configs` et `.fx/states` pour différents environnements.
 
-**Pour afficher un aperçu du manifeste avec du contenu réel, Teams Toolkit génère des fichiers manifeste en préversion sous le `build/appPackage` dossier** :
+**Pour afficher un aperçu du manifeste avec du contenu réel, le Kit de ressources Teams génère un aperçu des fichiers manifeste sous le `build/appPackage` dossier** :
 
 ```text
 └───build
@@ -41,7 +41,7 @@ Vous pouvez également afficher un aperçu du fichier manifeste local en suivant
 
 1. Sélectionnez **Aperçu** dans le codelens du `manifest.template.json` fichier, puis sélectionnez **local**.
 2. Sélectionnez **Le fichier manifeste d’aperçu** dans la barre de menus du `manifest.template.json` fichier.
-3. Sélectionnez **Zip Teams package de métadonnées** dans Treeview, puis sélectionnez **local**.
+3. Sélectionnez **le package de métadonnées Zip Teams** dans Treeview, puis **local**.
 
 L’aperçu local s’affiche comme indiqué dans l’image :
 
@@ -51,16 +51,16 @@ L’aperçu local s’affiche comme indiqué dans l’image :
 
 **Pour afficher un aperçu du fichier manifeste dans un environnement distant**
 
-* Sélectionnez **Provisionner dans le cloud** sous **DÉVELOPPEMENT** dans Teams extension toolkit ou
-* Déclencheur **Teams : provisionnement dans le cloud à** partir de la palette de commandes.
+* Sélectionnez **Provisionner dans le cloud** sous **DÉVELOPPEMENT** dans l’extension Teams Toolkit ou
+* Déclencher **Teams : provisionner dans le cloud à** partir de la palette de commandes.
 
-Il génère la configuration de l’application Teams distante et génère un package et un manifeste d’aperçu sous le `build/appPackage` dossier.
+Il génère la configuration de l’application Teams distante et génère le package et le manifeste d’aperçu sous le `build/appPackage` dossier.
 
 Vous pouvez également afficher un aperçu du fichier manifeste dans un environnement distant en procédant comme suit :
 
 1. Sélectionnez **Aperçu** dans le codelens du `manifest.template.json` fichier.
 2. Sélectionnez **Le fichier manifeste d’aperçu** dans la barre de menus du `manifest.template.json` fichier.
-3. Sélectionnez **Zip Teams package de métadonnées** dans Treeview.
+3. Sélectionnez **le package de métadonnées Zip Teams** dans Treeview.
 4. Sélectionnez votre environnement.
 
 > [!NOTE]
@@ -72,9 +72,9 @@ Vous pouvez également afficher un aperçu du fichier manifeste dans un environn
 
 Après avoir prévisualisé le fichier manifeste, vous pouvez synchroniser vos modifications locales avec le portail de développement des manières suivantes :
 
-1. Déployer Teams manifeste d’application.
+1. Déployer le manifeste de l’application Teams.
 
-   Vous pouvez déployer Teams manifeste d’application de l’une des manières suivantes :
+   Vous pouvez déployer le manifeste de l’application Teams de l’une des manières suivantes :
 
    * Accédez au `manifest.template.json` fichier, puis cliquez avec le bouton droit pour le sélectionner `Deploy Teams app manifest` dans le menu contextuel.
 
@@ -84,22 +84,22 @@ Après avoir prévisualisé le fichier manifeste, vous pouvez synchroniser vos m
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Déployer à partir de la palette de commandes":::
 
-2. Mise à jour vers Teams plateforme.
+2. Mise à jour vers la plateforme Teams.
 
-   Vous pouvez effectuer une mise à jour vers Teams plateforme de l’une des manières suivantes :
+   Vous pouvez effectuer une mise à jour vers la plateforme Teams de l’une des manières suivantes :
 
-   * Sélectionnez **Mettre à jour vers Teams plateforme** dans le coin supérieur gauche de `manifest.{env}.json`.
+   * Sélectionnez **Mettre à jour vers la plateforme Teams** dans le coin supérieur gauche de `manifest.{env}.json`.
 
-   * Déclencher **Teams : mettre à jour le manifeste pour Teams plateforme** dans la barre de menus de `manifest.{env}.json`.
+   * Déclencher **Teams : mettre à jour le manifeste vers la plateforme Teams** dans la barre de menus de `manifest.{env}.json`.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Mise à jour vers les équipes":::
 
-Vous pouvez également déclencher **Teams : Mettre à jour le manifeste pour Teams plateforme à** partir de la palette de commandes :
+Vous pouvez également déclencher **Teams : Mettre à jour le manifeste vers la plateforme Teams à** partir de la palette de commandes :
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="arborescence":::
 
 > [!NOTE]
-> Le déclencheur à partir du codelens de l’éditeur ou de la barre de menus met à jour le fichier manifeste actuel vers Teams plateforme. Le déclencheur à partir de la palette de commandes nécessite la sélection de l’environnement cible.
+> Le déclencheur à partir du codelens de l’éditeur ou de la barre de menus met à jour le fichier manifeste actuel vers la plateforme Teams. Le déclencheur à partir de la palette de commandes nécessite la sélection de l’environnement cible.
 
  Commande CLI :
 
@@ -115,10 +115,10 @@ Vous pouvez également déclencher **Teams : Mettre à jour le manifeste pour Te
 Si le fichier manifeste est obsolète en raison d’un changement de fichier de configuration ou d’un changement de modèle, sélectionnez l’une des actions suivantes :
 
 * **Aperçu uniquement** : le fichier manifeste local est remplacé en fonction de la configuration actuelle.
-* **Aperçu et mise à jour** : le fichier manifeste local est remplacé en fonction de la configuration actuelle et mis à jour vers Teams plateforme.
+* **Aperçu et mise à jour** : le fichier manifeste local est remplacé en fonction de la configuration actuelle et également mis à jour vers la plateforme Teams.
 * **Annuler** : aucune action n’est effectuée.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="Pre" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="Pre":::
 
 ## <a name="customize-teams-app-manifest"></a>Personnaliser le manifeste de l’application Teams
 
@@ -127,7 +127,7 @@ Le kit de ressources Teams se compose des fichiers de modèles de manifeste suiv
 * `manifest.template.json`
 * `templates/appPackage`
 
-Pendant le débogage ou l’approvisionnement local, Teams Toolkit charge le manifeste à partir de `manifest.template.json`, avec les configurations de `state.{env}.json`, `config.{env}.json`et crée Teams application dans le [portail de développement](https://dev.teams.microsoft.com/apps).
+Pendant le débogage ou l’approvisionnement local, Teams Toolkit charge le manifeste à partir de `manifest.template.json`, avec les configurations de `state.{env}.json`, `config.{env}.json`et crée l’application Teams dans le [portail de développement](https://dev.teams.microsoft.com/apps).
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>Espaces réservés pris en charge dans manifest.template.json
 
@@ -154,7 +154,7 @@ La liste suivante fournit les espaces réservés pris en charge dans `manifest.t
 
 ### <a name="validate-manifest"></a>Valider le manifeste
 
-Lors d’opérations telles que **zip Teams package de métadonnées**, Teams Toolkit valide le manifeste par rapport à son schéma. La liste suivante fournit différentes façons de valider le manifeste :
+Pendant les opérations telles que le **package de métadonnées Zip Teams**, Teams Toolkit valide le manifeste par rapport à son schéma. La liste suivante fournit différentes façons de valider le manifeste :
 
 * Dans VSC, déclenchez `Teams: Validate manifest file` à partir de la palette de commandes :
 

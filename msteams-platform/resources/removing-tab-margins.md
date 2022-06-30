@@ -5,19 +5,19 @@ description: Dans ce module, découvrez comment la suppression des marges de tab
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190143"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558281"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
 Ce document décrit comment la suppression des marges autour de tous les onglets dans Microsoft Teams améliore l’expérience de création d’applications. Il s’agit d’une amélioration introduite dans Teams en 2021.
-Vous pouvez créer des applications qui semblent plus natives pour Teams en supprimant les marges autour de tous les onglets. Les onglets avec marges supprimées s’alignent sur les [conceptions du kit](~/tabs/design/tabs.md) d’interface utilisateur de Microsoft Teams. La plupart des applications présentent une apparence améliorée sans marges.
+Vous pouvez créer des applications qui semblent plus natives pour Teams en supprimant les marges autour de tous les onglets. Les onglets avec les marges supprimées s’alignent sur les [conceptions du kit d’interface utilisateur](~/tabs/design/tabs.md) de Microsoft Teams. La plupart des applications présentent une apparence améliorée sans marges.
 
-:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Esprit tabulation et sans marges" border="false":::
+:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Esprit tabulation et sans marges":::
 
 > [!NOTE]
 > Cette fonctionnalité n’est pas applicable aux clients mobiles, car les onglets affichés dans les clients mobiles n’ont pas de marges.
@@ -30,13 +30,13 @@ La suppression des marges de tabulation affecte vos applications Teams qui utili
 
 **Est-il possible que le chrome d’application, tel que la barre d’en-tête ou la barre des tâches, touche les bords de nos conceptions ?**
 
-Oui, c’est bien et Teams encourage une telle conception. Cela permet à l’application de se sentir native.
+Oui, c’est correct et Teams encourage ce type de conception. Cela permet à l’application de se sentir native.
 
 **Est-il possible que le contenu de l’application, tel que le texte, les logos et les images, touche les bords gauche et droit de nos conceptions ?**
 
 Non, vous devez fournir votre propre remplissage ou marges à gauche et à droite de tout le contenu de l’application pour vous assurer qu’il ne touche pas les bords de votre interface utilisateur. Vous pouvez également ajouter des marges en haut de votre onglet, si nécessaire.
 
-**Quelle est la taille des marges de tabulation qui Teams appliquées précédemment ?**
+**Quelle est la taille des marges d’onglet que Teams a appliquées précédemment ?**
 
 * Gauche et droite : 20 px
 * Haut : 16 px

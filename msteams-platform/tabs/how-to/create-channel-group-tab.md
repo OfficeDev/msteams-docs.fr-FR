@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503647"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558575"
 ---
 # <a name="create-a-channel-tab"></a>Créer un onglet de canal
 
@@ -173,11 +173,11 @@ gulp build
 
 1. Entrez `http://localhost:3007/<yourDefaultAppNameTab>/` dans votre navigateur pour afficher la page d’accueil de votre application.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut":::
 
 1. Pour afficher la page de configuration de votre onglet, accédez à `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Les éléments suivants sont affichés :
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Page de configuration de l’onglet" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Page de configuration de l’onglet":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
@@ -196,7 +196,7 @@ gulp ngrok-serve
 1. Sélectionnez **Gérer vos applications** et **Charger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet de canal chargé" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet de canal chargé":::
 
 1. Sélectionnez **Ajouter** dans la boîte de dialogue. Votre onglet est chargé dans Teams.
 
@@ -213,7 +213,7 @@ gulp ngrok-serve
 1. Suivez les instructions pour ajouter un onglet. Il existe une boîte de dialogue de configuration personnalisée pour votre canal ou onglet de groupe.
 1. Sélectionnez **Enregistrer** et votre onglet est ajouté à la barre d’onglets du canal.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Onglet Canal chargé" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Onglet Canal chargé":::
 
     Vous avez créé et ajouté votre canal ou onglet de groupe dans Teams.
 
@@ -433,7 +433,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Sélectionnez **Ajouter à l’équipe** pour configurer l’onglet dans une équipe. Configurez votre onglet et sélectionnez **Enregistrer**. Votre onglet est désormais disponible dans Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Onglet Canal ASPNET chargé" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Onglet Canal ASPNET chargé":::
 
     Vous avez créé et ajouté votre canal ou onglet de groupe dans Teams.
 
@@ -651,7 +651,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Sélectionnez **Ajouter à l’équipe** pour configurer l’onglet dans une équipe. Configurez votre onglet et sélectionnez **Enregistrer**. Votre onglet est désormais disponible dans Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="ASPNET MVC de l’onglet de canal chargé" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="ASPNET MVC de l’onglet de canal chargé":::
 
     Vous avez créé et ajouté votre canal ou onglet de groupe dans Teams.
 

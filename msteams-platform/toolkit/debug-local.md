@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 3b6d9ee830fcf1cb50e02138cf3b9b8ca952225f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142226"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557882"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
@@ -70,29 +70,29 @@ Effectuez les étapes suivantes pour déboguer votre application après avoir cr
 
 1. **Sélectionnez Déboguer Edge** **ou Déboguer Chrome** à partir des **paramètres Exécuter et Déboguer** dans la barre d’activité.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Option de navigateur" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Option de navigateur":::
 
 1. **Sélectionnez Démarrer le débogage (F5)** ou **Exécuter** pour exécuter votre application Teams en mode débogage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Démarrer le débogage" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Démarrer le débogage":::
 
 3. Sélectionnez **Comptes** et connectez-vous à votre compte Microsoft 365.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Connexion" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Connexion":::
 
    > [!TIP]
    > Vous pouvez sélectionner **En savoir plus pour** en savoir plus sur Microsoft 365 programme pour les développeurs. Votre navigateur web par défaut s’ouvre pour vous laisser vous Microsoft 365 à l’aide de vos informations d’identification.
 
 4. Sélectionnez **Installer** pour installer le certificat de développement pour localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Certificat" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Certificat":::
 
    > [!TIP]
    > Vous pouvez sélectionner **En savoir plus** sur le certificat de développement.
 
 5. Sélectionnez **Oui** si la boîte de dialogue suivante s’affiche :
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Autorité de certification" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Autorité de certification":::
 
 Toolkit lance une nouvelle instance du navigateur Edge ou Chrome en fonction de votre sélection et ouvre une page web pour charger le client Teams.  
 
@@ -100,29 +100,29 @@ Toolkit lance une nouvelle instance du navigateur Edge ou Chrome en fonction de 
 
 1. **Sélectionnez Déboguer Edge** **ou Déboguer Chrome** à partir des **paramètres Exécuter et Déboguer** dans la barre d’activité.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Listes des navigateurs" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Listes des navigateurs":::
 
 1. **Sélectionnez Démarrer le débogage (F5)** ou **Exécuter** pour exécuter votre application Teams en mode débogage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Déboguer votre application" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Déboguer votre application":::
 
 3. Sélectionnez **Comptes** et connectez-vous à votre compte Microsoft 365.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Se connectee au compte M365" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Se connectee au compte M365":::
 
    > [!TIP]
    > Vous pouvez sélectionner **En savoir plus pour** en savoir plus sur Microsoft 365 programme pour les développeurs. Votre navigateur web par défaut s’ouvre pour vous laisser vous Microsoft 365 à l’aide de vos informations d’identification.
 
 4. Sélectionnez **Installer** pour installer le certificat de développement pour localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Certificat" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Certificat":::
 
    > [!TIP]
    > Vous pouvez sélectionner **En savoir plus** sur le certificat de développement.
 
 5. Entrez votre **nom d’utilisateur** et votre **mot de passe**, puis sélectionnez **Mettre les paramètres à jour** dans la boîte de dialogue suivante :
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="se connecter à mac" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="se connecter à mac":::
 
 Shared Computer Toolkit lance une nouvelle instance de navigateur Edge ou Chrome en fonction de votre sélection et ouvre une page web pour charger Teams client.
 
@@ -179,7 +179,7 @@ Le tableau suivant répertorie les noms et les types de configuration de déboga
 
 La configuration **Attacher au bot frontal** ou **de lancement** lance une nouvelle instance de navigateur Edge ou Chrome et ouvre une page web pour charger Teams client. Une fois le client Teams chargé, Teams sideload l'application Teams contrôlée par l'URL sideload définie dans les configurations de lancement [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). Lorsque Teams client se charge dans le navigateur web, sélectionnez **Ajouter** ou sélectionner un client dans la liste de listes.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="débogage local" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="débogage local":::
 
    Votre application est ajoutée à Teams !
 

@@ -5,18 +5,18 @@ description: Dans ce module, découvrez comment concevoir des modules de tâches
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143017"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558113"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâches pour votre application Microsoft Teams
 
 Vous pouvez créer des expériences modales de menu contextuel dans votre application Teams avec des modules de tâches. Utilisez cette fonctionnalité pour afficher des informations et des médias enrichis ou effectuer une tâche complexe.
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="L’exemple montre un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="L’exemple montre un module de tâches.":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
@@ -43,7 +43,7 @@ Ils peuvent également être créés avec l’infrastructure de [Cartes adaptati
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâches sur mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâches sur mobile.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -55,7 +55,7 @@ Ils peuvent également être créés avec l’infrastructure de [Cartes adaptati
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâches.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -82,11 +82,11 @@ Les listes fonctionnent parfaitement dans un module de tâches, car elles sont f
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Exemple de liste dans un module de tâches sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Exemple de liste dans un module de tâches sur un mobile.":::
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâches.":::
 
 ### <a name="form"></a>Formulaire
 
@@ -94,11 +94,11 @@ Les modules de tâches sont un excellent emplacement pour afficher des formulair
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Exemple de formulaire dans un module de tâches sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Exemple de formulaire dans un module de tâches sur un mobile.":::
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/form.png" alt-text="Exemple de formulaire dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Exemple de formulaire dans un module de tâches.":::
 
 ### <a name="sign-in"></a>Connexion
 
@@ -106,11 +106,11 @@ Créez une ouverture de session prioritaire ou un flux de connexion avec une sé
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Exemple d’expérience d’ouverture de session dans un module de tâches sur mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Exemple d’expérience d’ouverture de session dans un module de tâches sur mobile.":::
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d’expérience de signature dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d’expérience de signature dans un module de tâches.":::
 
 ### <a name="media"></a>Élément multimédias
 
@@ -118,11 +118,11 @@ Incorporez du contenu multimédia dans un module de tâches pour une expérience
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Exemple de contenu multimédia dans un module de tâches sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Exemple de contenu multimédia dans un module de tâches sur un mobile.":::
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâches.":::
 
 ### <a name="empty-state"></a>État vide
 
@@ -130,11 +130,11 @@ Incorporez du contenu multimédia dans un module de tâches pour une expérience
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Exemple d’état vide dans un module de tâches sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Exemple d’état vide dans un module de tâches sur un mobile.":::
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d’état vide dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d’état vide dans un module de tâches.":::
 
 ### <a name="image-gallery"></a>Bibliothèque d'images
 
@@ -142,11 +142,11 @@ Incorporez un carrousel de bibliothèque dans un IFrame (bureau) ou un affichage
 
 ##### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Exemple de bibliothèque d'images dans un module de tâches sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Exemple de bibliothèque d'images dans un module de tâches sur un mobile.":::
 
 ##### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de bibliothèque d'images dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de bibliothèque d'images dans un module de tâches.":::
 
 ### <a name="poll"></a>Sondage
 
@@ -154,11 +154,11 @@ Cet exemple montre les résultats de sondages lancés à partir d’une carte ad
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Exemple de sondage dans un module de tâches sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Exemple de sondage dans un module de tâches sur un mobile.":::
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple de sondage dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple de sondage dans un module de tâches.":::
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -168,7 +168,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (un module de tâches à la fois)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (un module de tâches à la fois).":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>À faire : utiliser un module de tâches à la fois
 
@@ -176,7 +176,7 @@ L’objectif est de concentrer l’utilisateur sur l’exécution d’une tâche
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (afficher une boîte de dialogue au-dessus d’un module de tâches)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (afficher une boîte de dialogue au-dessus d’un module de tâches).":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>À ne pas faire : afficher une boîte de dialogue au-dessus d’un module de tâches
 
@@ -189,7 +189,7 @@ Cela crée une expérience utilisateur non ciblée et confuse.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemple montrant une meilleure pratique de module de tâches (vérifiez que le contenu est réactif)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemple montrant une meilleure pratique de module de tâches (vérifiez que le contenu est réactif).":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>À faire : vérifier que le contenu est réactif
 
@@ -197,7 +197,7 @@ Bien que les cartes adaptatives hébergées dans un module de tâches autorisent
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (n’utilisez pas de barres de défilement horizontales)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (n’utilisez pas de barres de défilement horizontales).":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>À ne pas faire : utiliser des barres de défilement horizontales
 
@@ -210,7 +210,7 @@ Il est préférable de garder le contenu ciblé et pas trop long. Si un défilem
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (restez concis)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (restez concis).":::
 
 #### <a name="do-keep-it-short"></a>À faire : rester concis
 
@@ -218,7 +218,7 @@ Vous pouvez facilement créer un Assistant en plusieurs étapes, mais cela ne si
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (sans interactions longues)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (sans interactions longues).":::
 
 #### <a name="dont-have-long-interactions"></a>À ne pas faire : avoir de longues interactions
 
@@ -231,7 +231,7 @@ Essayez de maintenir vos interactions courtes et directes.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (utiliser des messages d’erreur en ligne)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (utiliser des messages d’erreur en ligne).":::
 
 #### <a name="do-use-inline-error-messages"></a>À faire : utiliser les messages d’erreur en ligne
 
@@ -239,7 +239,7 @@ Consultez le modèle d’interface utilisateur de formulaires pour obtenir des i
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (placer des messages d’erreur dans des boîtes de dialogue)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Exemple montrant la meilleure pratique d’un module de tâches (placer des messages d’erreur dans des boîtes de dialogue).":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>À ne pas faire : placer des messages d’erreur dans des boîtes de dialogue
 

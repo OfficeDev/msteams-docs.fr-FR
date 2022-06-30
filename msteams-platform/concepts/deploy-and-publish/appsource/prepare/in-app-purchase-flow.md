@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 8bbfac3f72fb9ddbfb21d36f4a1ad2516af52b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073299"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558057"
 ---
 # <a name="in-app-purchases"></a>Achats dans l'application
 
@@ -87,21 +87,21 @@ L’exemple suivant montre aux utilisateurs d’acheter des plans d’abonnement
 
 1. Dans la boîte de dialogue Détails de l’application, **sélectionnez Acheter un abonnement** ou **Ajouter pour moi**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Achat de l’abonnement pour l’application sélectionnée." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Achat de l’abonnement pour l’application sélectionnée.":::
 
 1. **Add for me** propose une version d’essai gratuite de l’application, puis la **met à niveau** vers une version payante.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Mise à niveau vers l’abonnement pour l’application sélectionnée." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Mise à niveau vers l’abonnement pour l’application sélectionnée." lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. Dans la boîte de dialogue **Choisir un plan d’abonnement** , choisissez le plan et sélectionnez **Validation de l’achat**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Sélection du plan d’abonnement approprié" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Sélection du plan d’abonnement approprié" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. Terminez la transaction et **sélectionnez Configurer maintenant** pour configurer votre abonnement.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configuration de l’abonnement" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configuration de l’abonnement" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement" lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement" lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## <a name="next-step"></a>Étape suivante
 

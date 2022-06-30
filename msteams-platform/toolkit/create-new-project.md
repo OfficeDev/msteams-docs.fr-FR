@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1737c55598d5963a77317a0b37869275f96a902d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6665884f4606e90c82ba0c5806641f84beded0e
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503752"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557742"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Créer une application Teams à l’aide du Kit de ressources Teams 
 
@@ -23,7 +23,7 @@ Pour créer une application Teams à l’aide du Kit de ressources Teams, vous p
 ## <a name="create-a-new-teams-app"></a>Créer une application Teams
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’icône :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: du kit de ressources Teams dans la barre latérale Visual Studio Code.
+1. Sélectionnez l’icône :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: du kit de ressources Teams dans la barre latérale Visual Studio Code.
 1. Sélectionnez **Créer une application Teams**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Barre latérale du kit de ressources Teams":::

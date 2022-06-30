@@ -3,38 +3,38 @@ title: Partager vers Teams à partir d’applications web
 description: Découvrez comment ajouter le bouton Partager dans Teams incorporé sur votre site web, avec un aperçu du site web, à l’aide d’exemples de code
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190020"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558477"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Partager vers Teams à partir d’applications web
 
-Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des boutons Partager dans Teams sur leurs pages web. Lorsque vous sélectionnez Partager pour Teams bouton, il lance l’expérience Partager pour Teams dans une fenêtre contextuelle. Cela vous permet de partager un lien directement vers n’importe quelle personne ou Microsoft Teams canal sans changer de contexte.
+Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des boutons Partager dans Teams sur leurs pages web. Lorsque vous sélectionnez le bouton Partager vers Teams, il lance l’expérience Partager vers Teams dans une fenêtre contextuelle. Cela vous permet de partager un lien directement vers n’importe quelle personne ou Microsoft Teams canal sans changer de contexte.
 
-L’image suivante affiche la fenêtre contextuelle pour Partager pour Teams expérience d’aperçu :
+L’image suivante affiche la fenêtre contextuelle pour l’expérience share to Teams en préversion :
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Fenêtre contextuelle De partage à Teams" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Fenêtre contextuelle Partager vers Teams":::
 
 > [!NOTE]
 >
 > * Seules les versions de bureau de Microsoft&nbsp;Edge et Google Chrome sont prises en charge.
 > * L’utilisation de Freemium ou de comptes invités n’est pas prise en charge.
 
-Vous pouvez également ajouter un déploiement de liens pour les liens partagés via Partager vers Teams bouton hébergé dans l’application web, l’application personnelle ou l’onglet. Pour plus d’informations, consultez [le déploiement du lien](~/messaging-extensions/how-to/link-unfurling.md).
+Vous pouvez également ajouter un déploiement de liens pour les liens partagés via le bouton Partager vers Teams hébergé dans l’application web, l’application personnelle ou l’onglet. Pour plus d’informations, consultez [le déploiement du lien](~/messaging-extensions/how-to/link-unfurling.md).
 
 L’image suivante affiche l’expérience de déploiement de lien via le bouton Partager vers Teams :
 
-:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Déploiement du lien de partage à Teams" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Déploiement de liens share-to-Teams":::
 
 > [!NOTE]
-> Le déploiement de liens dans le partage vers Teams est actuellement disponible uniquement en préversion publique pour les développeurs.
+> Le déploiement de liens dans le partage vers Teams est actuellement disponible uniquement en préversion publique des développeurs.
 
-Cet article vous guide dans la création et l’incorporation d’un bouton Partager vers Teams pour votre site web, créer la préversion de votre site web et étendre Share à Teams pour l'éducation.
+Cet article vous guide sur la création et l’incorporation d’un bouton Partager dans Teams pour votre site web, la création de la préversion de votre site web et l’extension de Share à Teams pour l'éducation.
 
-Consultez la vidéo suivante pour découvrir comment incorporer un partage à Teams bouton :
+Consultez la vidéo suivante pour découvrir comment incorporer le bouton Partager dans Teams :
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
@@ -59,9 +59,9 @@ Consultez la vidéo suivante pour découvrir comment incorporer un partage à Te
 
     Une fois cette opération terminée, l’icône Teams est ajoutée à votre site web. L’image suivante montre l’icône Partager dans Teams :
 
-    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Icône Partager dans Teams" border="true":::
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Icône Partager dans Teams":::
 
-1. Sinon, si vous souhaitez une taille d’icône différente pour le bouton Partager pour Teams, utilisez l’attribut`data-icon-px-size`.
+1. Sinon, si vous souhaitez une taille d’icône différente pour le bouton Partager vers Teams, utilisez l’attribut `data-icon-px-size` .
 
     ```html
     <div
@@ -115,7 +115,7 @@ Vous pouvez utiliser les versions HTML par défaut ou la version Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Partager dans Teams pour l’Éducation
 
-Pour les enseignants qui utilisent le bouton Partager pour Teams, il existe une option `Create an Assignment` supplémentaire qui vous permet de créer rapidement un devoir dans l’équipe choisie, en fonction du lien partagé. L’image suivante affiche Partager dans Teams pour l’Éducation :
+Pour les enseignants qui utilisent le bouton Partager vers Teams, il existe une option `Create an Assignment` supplémentaire qui vous permet de créer rapidement un devoir dans l’équipe choisie, en fonction du lien partagé. L’image suivante affiche Partager dans Teams pour l’Éducation :
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Éducation contextuelle Partager dans Teams":::
 

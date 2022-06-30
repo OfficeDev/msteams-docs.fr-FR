@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485326"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558428"
 ---
 # <a name="teams-app-that-fits"></a>Application Teams adaptée
 
@@ -27,7 +27,7 @@ Les organisations l’utilisent pour communiquer avec leurs clients, fournir des
 
 Examinons certains domaines où une application aide à répondre à un besoin professionnel.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Pourquoi créer des applications Teams ?" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Pourquoi créer des applications Teams ?":::
 
 | **Options de développement** | **Opportunités commerciales** |
 | --- | --- |
@@ -53,7 +53,7 @@ Voici pourquoi Teams est la solution la mieux adaptée à vos besoins en matièr
 
     Teams est une plateforme sociale. Les applications personnalisées axées sur les réseaux sociaux encouragent votre équipe à étendre la culture de votre entreprise dans votre espace de collaboration. Utilisez des applications pour envoyer des sondages, permettre aux utilisateurs de partager des commentaires les uns avec les autres, d’activer la connexion et la communication.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Application Teams pour la création d’une culture d’équipe" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Application Teams pour la création d’une culture d’équipe":::
 
 - **Processus d’entreprise courants**
 
@@ -61,7 +61,7 @@ Voici pourquoi Teams est la solution la mieux adaptée à vos besoins en matièr
 
     En plus d’automatiser les flux de travail répétitifs, vous pouvez utiliser des applications pour vous aider à faire face à des problèmes de communication. Un bot de conversation remplace facilement les messages électroniques et les appels téléphoniques adressés aux services informatiques ou aux RH.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Application Teams pour une utilisation interne" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Application Teams pour une utilisation interne":::
 
 - **Avantage Teams Store**
 
@@ -71,7 +71,7 @@ Voici pourquoi Teams est la solution la mieux adaptée à vos besoins en matièr
 
     Si vous disposez d’une application web existante, d’un site SharePoint (ou d’une extension SPFx), de PowerApp ou d’une autre application web, il peut être judicieux d’en activer une partie ou la totalité dans Teams. L’extension des applications existantes et le portage de fonctionnalités interactives Teams vous permet d’accroître la base d’utilisateurs et l’implication des utilisateurs pour votre application.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="Portage d’un site SharePoint sous forme d’un onglet Teams" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="Portage d’un site SharePoint sous forme d’un onglet Teams":::
 
 - **Applications personnelles avec des onglets et des bots**
 

@@ -5,12 +5,12 @@ description: Dans ce module, apprenez à créer des onglets en utilisant les car
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c42ea356e3654453d20f59a8be33412b1e608939
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485241"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558176"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -31,7 +31,7 @@ Vous pouvez créer vos onglets à l'aide de modules d'interface utilisateur prê
 
 L'image suivante montre des onglets de construction avec les cartes adaptatives sur le bureau et le mobile :
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Exemple de carte adaptative rendue dans les onglets." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Exemple de carte adaptative rendue dans les onglets.":::
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -233,7 +233,7 @@ Avec l'introduction de l'onglet Carte adaptative, la façon dont le robot répon
 
 ### <a name="invoke-taskfetch"></a>Invoquer `task/fetch`
 
-Le code suivant fournit des exemples de`task/fetch` demande et de réponse :
+Le code suivant fournit des exemples de `task/fetch`demande et de réponse :
 
 **`task/fetch` demande**
 
@@ -355,7 +355,7 @@ Dans les sections précédentes, vous avez vu que la plupart des paradigmes de d
 
 L'image suivante donne une vue d'ensemble du fonctionnement du flux de données d'authentification pour une `tab/fetch`invocation.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Exemple de flux d'authentification de l'onglet Carte adaptative." border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Exemple de flux d'authentification de l'onglet Carte adaptative.":::
 
 **`tab/fetch`Exemple de flux d'authentification de l'onglet Carte adaptative.**
 

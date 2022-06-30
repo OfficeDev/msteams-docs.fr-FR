@@ -4,12 +4,12 @@ description: Décrit la mise à jour du manifeste pour l’activation de l’aut
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) API Graph
-ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503479"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558736"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste pour l’authentification unique et l’application en préversion
 
@@ -24,7 +24,7 @@ Vous avez inscrit votre application onglet dans Azure AD et obtenu un ID d’app
 
 Configurez la `webApplicationInfo` propriété dans le fichier manifeste de l’application Teams. Cette propriété permet à l’authentification unique pour votre application d’aider les utilisateurs de l’application à accéder à votre application onglet en toute transparence.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuration du manifeste de l’application Teams" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuration du manifeste de l’application Teams":::
 
 `webApplicationInfo` a deux éléments, `id` et `resource`.
 
@@ -138,7 +138,7 @@ Pour plus d’informations, consultez [webApplicationInfo](../../../resources/sc
 
 Vous avez configuré l’application onglet pour activer l’authentification unique dans Azure AD, dans le code de l’application et dans le fichier manifeste Teams. Vous pouvez maintenant charger une version test de votre application onglet dans Teams et la prévisualiser dans l’environnement Teams.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Application SSO" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Application SSO":::
 
 Pour afficher un aperçu de votre application onglet dans Teams :
 
@@ -160,17 +160,17 @@ Pour afficher un aperçu de votre application onglet dans Teams :
 
 1. Cliquez sur **Continuer**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Boîte de dialogue Teams indiquant les autorisations supplémentaires requises" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Boîte de dialogue Teams indiquant les autorisations supplémentaires requises":::
 
     La boîte de dialogue de consentement Azure AD s’affiche.
 
 1. Sélectionnez **Accepter** pour donner son consentement pour les étendues open-id.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Boîte de dialogue de consentement Azure AD" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Boîte de dialogue de consentement Azure AD":::
 
     Teams ouvre l’application onglet et vous pouvez l’utiliser.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Exemple d’application onglet Teams avec l’authentification unique activée" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Exemple d’application onglet Teams avec l’authentification unique activée":::
 
     Félicitations ! Vous avez activé l’authentification unique pour votre application onglet.
 

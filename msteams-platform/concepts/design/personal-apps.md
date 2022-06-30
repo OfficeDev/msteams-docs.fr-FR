@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a939217f31feb957cc9f3205a99d8b235de56d8e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7dda8dd7e68e7452da164c8ec45d3352909f45ed
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142401"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558337"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Concevoir votre application personnelle pour Microsoft Teams
 
@@ -29,7 +29,7 @@ Vous trouverez des instructions de conception d’applications personnelles comp
 
 Les utilisateurs peuvent ajouter une application personnelle à partir du menu volant du magasin ou de l’application Teams en sélectionnant l’icône **Plus** sur le côté gauche de Teams (illustré dans l’exemple suivant).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Exemple montre comment ajouter une application personnelle à partir du menu volant de l’application." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Exemple montre comment ajouter une application personnelle à partir du menu volant de l’application.":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Utiliser une application personnelle (espace de travail privé)
 
@@ -41,7 +41,7 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu d
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Exemple montre l’anatomie des composants de l’onglet personnel.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -50,7 +50,7 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu d
 |C|**Plus de menu**: inclut des options et des informations supplémentaires sur l’application.|
 |D|**Navigation principale**: fournit la navigation à votre application à d’autres fonctionnalités principales de Teams.|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Exemple montre l’anatomie structurelle de l’onglet personnel.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -59,7 +59,7 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu d
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Cet exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Cet exemple montre l’anatomie des composants de l’onglet personnel.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -68,7 +68,7 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu d
 |C|**Affichage contextuel** : fait passer le contenu de votre application d'une fenêtre parent à une fenêtre enfant autonome.|
 |D|**Plus de menu**: inclut des options et des informations supplémentaires sur l’application. (Vous pouvez également créer **Paramètres** un onglet.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Cet exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Cet exemple montre l’anatomie structurelle de l’onglet personnel.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -94,7 +94,7 @@ Les applications personnelles peuvent inclure un bot pour les conversations en t
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Exemple montre l’anatomie du composant de bot personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Exemple montre l’anatomie du composant de bot personnel.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -105,7 +105,7 @@ Les applications personnelles peuvent inclure un bot pour les conversations en t
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemple montre l’anatomie du composant de bot personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemple montre l’anatomie du composant de bot personnel.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -117,7 +117,7 @@ Les applications personnelles peuvent inclure un bot pour les conversations en t
 
 Sur le côté gauche de Teams, les utilisateurs peuvent cliquer avec le bouton droit sur l’application personnelle pour épingler, supprimer et configurer d’autres options d’application.
 
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Exemple montre les options de gestion d’une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Exemple montre les options de gestion d’une application personnelle.":::
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -129,13 +129,13 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 Avec un dimensionnement réactif, les onglets à droite peuvent être tronqués ou hors vue.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Exemple montre une application personnelle affichant le contenu le plus pertinent dans le premier onglet." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Exemple montre une application personnelle affichant le contenu le plus pertinent dans le premier onglet.":::
 
 #### <a name="dont-lead-with-secondary-content-or-metadata"></a>Ne pas : diriger avec du contenu ou des métadonnées secondaires
 
 À l’instar d’une application web standard, la navigation par tabulation doit progresser dans un ordre qui vous aide à comprendre les principales fonctionnalités de votre application.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Exemple montre une application personnelle avec un contenu ou des métadonnées secondaires." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Exemple montre une application personnelle avec un contenu ou des métadonnées secondaires.":::
 
 ### <a name="tab-hierarchy"></a>Hiérarchie de tabulation
 
@@ -143,13 +143,13 @@ Avec un dimensionnement réactif, les onglets à droite peuvent être tronqués 
 
 Vos onglets doivent catégoriser les principales fonctionnalités et le contenu de votre application. Avec un dimensionnement réactif, le contenu à droite peut être tronqué ou hors vue.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Exemple montre une application personnelle avec des onglets de hiérarchie égale." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Exemple montre une application personnelle avec des onglets de hiérarchie égale.":::
 
 #### <a name="dont-include-different-levels-of-hierarchy"></a>Ne pas : inclure différents niveaux de hiérarchie
 
 Votre contenu doit progresser dans un ordre logique qui aide les utilisateurs à le comprendre. Si vous avez deux onglets étroitement liés, envisagez de les combiner en un seul onglet.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Exemple montre une application personnelle avec différents niveaux de hiérarchie." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Exemple montre une application personnelle avec différents niveaux de hiérarchie.":::
 
 ### <a name="first-run-experience"></a>Première expérience d’utilisation
 
@@ -157,15 +157,15 @@ Votre contenu doit progresser dans un ordre logique qui aide les utilisateurs à
 
 Il doit y avoir au moins un écran d’accueil la première fois que vous utilisez une application personnelle. Pour les bots, décrivez ce que votre bot peut faire et fournissez des actions rapides, telles qu’un bouton de connexion.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="exemple montre ce qu’il faut faire lors de la première exécution d’une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="exemple montre ce qu’il faut faire lors de la première exécution d’une application personnelle.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Un autre exemple montre ce qu’il faut faire lors de la première exécution d’une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Un autre exemple montre ce qu’il faut faire lors de la première exécution d’une application personnelle.":::
 
 #### <a name="dont-start-with-a-blank-screen"></a>Ne pas : commencer avec un écran vide
 
 Les utilisateurs peuvent être confondus si rien ne s’affiche la première fois qu’ils exécutent votre application.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="exemple montre ce qu’il ne faut pas faire lors de la première exécution d’une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="exemple montre ce qu’il ne faut pas faire lors de la première exécution d’une application personnelle.":::
 
 ### <a name="personalized-content"></a>Contenu personnalisé
 
@@ -173,17 +173,17 @@ Les utilisateurs peuvent être confondus si rien ne s’affiche la première foi
 
 Qu’il s’agisse d’un onglet personnel ou d’un bot, affichez du contenu lié uniquement à l’activité d’un utilisateur dans votre application.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Exemple montre ce qu’il faut faire avec une application personnelle et du contenu personnalisé." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Exemple montre ce qu’il faut faire avec une application personnelle et du contenu personnalisé.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Un autre exemple montre ce qu’il faut faire avec une application personnelle et du contenu personnalisé." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Un autre exemple montre ce qu’il faut faire avec une application personnelle et du contenu personnalisé.":::
 
 #### <a name="dont-show-unrelated-or-overly-broad-content"></a>Ne pas : afficher du contenu non lié ou trop large
 
 Dans les contextes personnels, n’affichez pas de contenu pour les équipes dont un utilisateur ne fait pas partie. Le contenu du bot personnel doit se concentrer sur l’individu et non sur un groupe.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Exemple montre ce qu’il ne faut pas faire avec une application personnelle et du contenu personnalisé." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Exemple montre ce qu’il ne faut pas faire avec une application personnelle et du contenu personnalisé.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Un autre exemple montre ce qu’il ne faut pas faire avec une application personnelle et du contenu personnalisé." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Un autre exemple montre ce qu’il ne faut pas faire avec une application personnelle et du contenu personnalisé.":::
 
 ### <a name="complex-app-features"></a>Fonctionnalités d’application complexes
 
@@ -191,13 +191,13 @@ Dans les contextes personnels, n’affichez pas de contenu pour les équipes don
 
 Votre application doit se concentrer sur les tâches principales dans Teams, mais vous pouvez toujours afficher l’application autonome complète dans un navigateur.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Exemple montre comment gérer des fonctionnalités d’application complexes avec une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Exemple montre comment gérer des fonctionnalités d’application complexes avec une application personnelle.":::
 
 #### <a name="dont-include-your-entire-app"></a>Ne pas : inclure l’intégralité de votre application
 
 Sauf si vous avez créé votre application spécifiquement pour Teams, vous disposez probablement de fonctionnalités qui n’ont pas de sens dans un outil de collaboration.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Exemple montre comment ne pas gérer les fonctionnalités d’application complexes avec une application personnelle." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Exemple montre comment ne pas gérer les fonctionnalités d’application complexes avec une application personnelle.":::
 
 ## <a name="see-also"></a>Voir aussi
 

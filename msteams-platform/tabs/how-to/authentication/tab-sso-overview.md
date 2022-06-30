@@ -4,12 +4,12 @@ description: Vue d’ensemble de l’authentification unique dans Teams et comme
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: onglets d’authentification Teams Microsoft Azure Active Directory manifeste d’application de jeton d’accès à l’authentification unique (Azure AD)
-ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503766"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557721"
 ---
 # <a name="enable-sso-for-tab-app"></a>Activer l’authentification unique (SSO) pour l’application d’onglet
 
@@ -27,7 +27,7 @@ Voici ce que vous allez apprendre dans cette section :
 
 Les utilisateurs de l’application se connectent à Teams à l’aide d’un compte Microsoft personnel ou d’un compte Microsoft 365. Vous pouvez en tirer parti et utiliser l’authentification unique pour authentifier et autoriser les utilisateurs de l’application.
 
-&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Expérience utilisateur de l’authentification unique dans une application onglet Teams" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Expérience utilisateur de l’authentification unique dans une application onglet Teams":::
 
 - Teams authentifie et stocke l’identité de son utilisateur d’application.
 - Votre application onglet utilise l’identité stockée de l’utilisateur de l’application qui est déjà validé par Teams.
@@ -60,7 +60,7 @@ Obtenez l’authentification unique dans une application onglet en obtenant un j
 
 L’image suivante montre le fonctionnement de l’authentification unique lorsqu’un utilisateur d’application Teams tente d’accéder à l’application onglet :
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Diagramme de l’authentification unique Tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Diagramme de l’authentification unique Tab" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | Interaction | Que se passe-t-il |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ Cette section décrit les tâches impliquées dans l’implémentation de l’au
 
 Pour activer l’authentification unique pour une application onglet :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Étapes pour activer l’authentification unique pour l’onglet" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Étapes pour activer l’authentification unique pour l’onglet" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **S’inscrire auprès d’Azure AD** : créez une application Azure AD pour générer un ID d’application et un URI d’ID d’application. Pour générer un jeton d’accès, vous configurez des étendues et autorisez les applications clientes approuvées.
 2. **Mettre à jour le code** : ajoutez le code pour gérer le jeton d’accès, en appelant `getAuthToken()` lorsqu’un utilisateur d’application accède à votre application onglet, en envoyant ce jeton au code serveur de votre application dans l’en-tête d’autorisation et en validant le jeton d’accès lorsqu’il est reçu.

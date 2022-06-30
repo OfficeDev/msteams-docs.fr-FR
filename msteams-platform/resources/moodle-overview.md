@@ -4,12 +4,12 @@ description: Découvrez l’intégration de Moodle LMS à Teams, la gestion de l
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 62e52835e63f6fd40633ca2c99097746ee7ab2e5
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 90086d307cc7ac71b39173087b1cf8b05da641f3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189444"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557707"
 ---
 # <a name="moodle-learning-management-system"></a>Système de gestion des formations Moodle
 
@@ -27,7 +27,7 @@ This content is modified as per the requirement.-->
  <!--The following image demonstrates Moodle LMS:
   Query on this image about what is meant by section
 
-:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::-->
+:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart":::-->
 
 ## <a name="moodle-lms-accessibility"></a>Accès au système de gestion des formations Moodle
 

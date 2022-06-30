@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f06772cc6ba7975d0434e1c7c1c1c510ce760f6c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189466"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558393"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -58,7 +58,7 @@ Voici les étapes à suivre pour créer un onglet personnel :
 
 1. Fournissez vos valeurs à une série de questions posées par le générateur d’applications Microsoft Teams pour mettre à jour votre fichier `manifest.json`.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Générateur Teams" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Générateur Teams":::
 
     <details>
     <summary><b>Série de questions pour mettre à jour votre fichier manifest.json</b></summary>
@@ -230,11 +230,11 @@ gulp build
 
 1. Entrez `http://localhost:3007/<yourDefaultAppNameTab>/` dans votre navigateur pour afficher la page d’accueil de votre application.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut":::
 
 1. Parcourez `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` pour afficher votre onglet personnel.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Onglet HTML par défaut" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Onglet HTML par défaut":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
@@ -253,11 +253,11 @@ gulp ngrok-serve
 1. Sélectionnez **Gérer vos applications** et **Charger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip, puis choisissez **Ouvrir**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Ajouter votre onglet personnel" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Ajouter votre onglet personnel":::
 
 1. Sélectionnez **Ajouter** dans la boîte de dialogue. Votre onglet est chargé dans Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Onglet Personnel chargé" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Onglet Personnel chargé":::
 
 1. Dans le volet gauche de Teams, sélectionnez des points de suspension &#x25CF;&#x25CF;&#x25CF; puis choisissez votre application chargée pour afficher votre onglet personnel.
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Sélectionnez **Ajouter** pour charger l’onglet dans Teams. Votre onglet est désormais disponible dans Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Onglet par défaut" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Onglet par défaut":::
 
    Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
   
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Sélectionnez **Ajouter** pour charger l’onglet dans Teams. Votre onglet est désormais disponible dans Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Onglet personnel" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Onglet personnel":::
   
    Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
 

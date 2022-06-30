@@ -1,20 +1,20 @@
 ---
 title: Intégrer les fonctionnalités médias
 author: Rajeshwari-v
-description: Découvrez comment utiliser Teams kit de développement logiciel (SDK) client JavaScript pour activer les fonctionnalités multimédias à l’aide d’exemples de code et découvrir l’avantage de l’intégration des fonctionnalités multimédias.
+description: Découvrez comment utiliser le Kit de développement logiciel (SDK) client JavaScript Teams pour activer les fonctionnalités multimédias à l’aide d’exemples de code et découvrir l’avantage de l’intégration des fonctionnalités multimédias.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: a2ee4843f5330ab9102540ea1c5dcb87bd8dc19c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190235"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558708"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias
 
-Vous pouvez intégrer des fonctionnalités d’appareil natif, telles que la caméra et le microphone, à votre application Teams. Pour l’intégration, vous pouvez utiliser [Microsoft Teams kit de développement logiciel (SDK) client JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) qui fournit les outils nécessaires à votre application pour accéder aux [autorisations d’un utilisateur sur l’appareil](native-device-permissions.md). Utilisez les API de fonctionnalité multimédia appropriées pour intégrer les fonctionnalités de l’appareil, telles que l’appareil photo et le microphone, à la plateforme Teams dans votre application Microsoft Teams, et créez une expérience plus riche. La fonctionnalité multimédia est disponible pour Teams client web, de bureau et mobile. Pour intégrer les fonctionnalités multimédias, vous devez mettre à jour le fichier manifeste de l’application et appeler les API de fonctionnalité multimédia.
+Vous pouvez intégrer des fonctionnalités d’appareil natif, telles que la caméra et le microphone, à votre application Teams. Pour l’intégration, vous pouvez utiliser le Kit de développement logiciel ( [SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) qui fournit les outils nécessaires à votre application pour accéder aux [autorisations d’un utilisateur sur l’appareil](native-device-permissions.md). Utilisez les API de fonctionnalité multimédia appropriées pour intégrer les fonctionnalités de l’appareil, telles que la caméra et le microphone à la plateforme Teams au sein de votre application Microsoft Teams, et créez une expérience plus riche. La fonctionnalité multimédia est disponible pour le client web Teams, le bureau et les appareils mobiles. Pour intégrer les fonctionnalités multimédias, vous devez mettre à jour le fichier manifeste de l’application et appeler les API de fonctionnalité multimédia.
 
 Pour une intégration efficace, vous devez avoir une bonne compréhension des [extraits de code](#code-snippets) pour appeler les API respectives, qui vous permettent d'utiliser les capacités des médias natifs. Il est important de vous familiariser avec les [erreurs de réponse d’API](#error-handling) pour gérer les erreurs dans votre application Teams.
 
@@ -22,7 +22,7 @@ Pour une intégration efficace, vous devez avoir une bonne compréhension des [e
 
 Le principal avantage de l’intégration des fonctionnalités d’appareil dans vos applications Teams est qu’il tire parti des contrôles Teams natifs pour offrir une expérience riche et immersive à vos utilisateurs. Les scénarios suivants présentent les avantages des fonctionnalités multimédias :
 
-* Permettre à l’utilisateur de capturer les maquettes approximatives dessinées sur un tableau blanc physique via le téléphone cellulaire et d’utiliser les images capturées comme options de sondage dans Teams conversation de groupe.
+* Permettre à l’utilisateur de capturer les maquettes approximatives dessinées sur un tableau blanc physique via le téléphone cellulaire et d’utiliser les images capturées comme options de sondage dans la conversation de groupe Teams.
 
 * Autoriser l’utilisateur à enregistrer le message audio et à l’attacher à un ticket d’incident.
 
@@ -32,7 +32,7 @@ Le principal avantage de l’intégration des fonctionnalités d’appareil dans
 >
 > * Actuellement, Teams ne prend pas en charge les autorisations d’appareil dans la fenêtre de conversation contextuelle, les onglets et le panneau côté réunion.</br>
 > * Les autorisations d’appareil sont différentes dans le navigateur. Pour plus d'informations, voir les [autorisations d'appareil de navigation](browser-device-permissions.md).
-> * L’invite d’autorisations de demande s’affiche automatiquement sur un appareil mobile lorsqu’une API Teams pertinente est lancée. Pour plus d'informations, reportez-vous à la section [Demander les autorisations de l'appareil](native-device-permissions.md).
+> * L’invite d’autorisations de demande s’affiche automatiquement sur mobile lorsqu’une API Teams appropriée est lancée. Pour plus d'informations, reportez-vous à la section [Demander les autorisations de l'appareil](native-device-permissions.md).
 
 ## <a name="update-manifest"></a>Mise à jour du manifeste
 
@@ -75,21 +75,21 @@ Le tableau suivant répertorie un ensemble d’API pour activer les fonctionnali
 
 L’image suivante illustre l’expérience d’application web de l’API `selectMedia` pour la fonctionnalité d’image :
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration montrant la fonctionnalité d’image pour mobile." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration montrant la fonctionnalité d’image pour mobile.":::
 
 > [!NOTE]
 >
-> Sur les appareils avec Android version inférieure à 7, l’API `selectMedia` lance l’expérience de caméra native Android au lieu de l’expérience de caméra native Teams.
+> Sur les appareils avec android version inférieure à 7, l’API `selectMedia` lance l’expérience de caméra Android native au lieu de l’expérience de caméra Teams native.
 
 L’image suivante illustre l’expérience d’application web de l’API `selectMedia` pour la fonctionnalité de microphone :
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration montrant la fonctionnalité de microphone pour mobile." border="true":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration montrant la fonctionnalité de microphone pour mobile.":::
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 L’image suivante illustre l’expérience d’application web de l’API `selectMedia` pour la fonctionnalité d’image :
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration montrant la fonctionnalité multimédia pour le bureau." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration montrant la fonctionnalité multimédia pour le bureau.":::
 
 ---
 

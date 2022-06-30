@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6a409accc5f55aa0a9c245aa061efde5b67d81f3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144396"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558757"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprendre la structure de l’application Microsoft Teams
 
@@ -34,13 +34,13 @@ Les applications personnelles fournissent un canevas volumineux pour héberger l
 
 Le canevas est une vue web qui vous permet de personnaliser complètement l’expérience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur mobile.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
 Le canevas est un iframe qui vous permet de personnaliser complètement l’expérience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur le bureau.":::
 
 ## <a name="tabs"></a>Onglets
 
@@ -52,13 +52,13 @@ Les onglets fournissent un canevas volumineux pour héberger le contenu de votre
 
 Le canevas est une vue web qui vous permet de personnaliser complètement l’expérience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur les appareils mobiles." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur les appareils mobiles.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
 Le canevas est un iframe qui vous permet de personnaliser complètement l’expérience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur le bureau.":::
 
 ## <a name="bots"></a>Bots
 
@@ -68,11 +68,11 @@ Les bots sont des applications conversationnelles qui s’intègrent aux fonctio
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur mobile.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur le bureau.":::
 
 ## <a name="message-extensions"></a>Extensions de messages
 
@@ -82,11 +82,11 @@ Les extensions de message sont des raccourcis permettant d’insérer du contenu
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de message sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de message sur mobile.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de message sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de message sur le bureau.":::
 
 ## <a name="meeting-extensions"></a>Extensions de réunion
 
@@ -98,10 +98,10 @@ Les extensions de réunion sont des applications permettant d’améliorer les r
 
 La surface est une vue web qui vous permet de personnaliser l’expérience, mais gardez à l’esprit que pendant les réunions, ces applications utilisent un thème sombre.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur mobile.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
 La surface est un iframe, ce qui vous permet de personnaliser l’expérience, mais gardez à l’esprit que pendant les réunions, ces applications utilisent un thème sombre et sont étroite.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur le bureau.":::

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3f1caf4605766c16a51272a8d4c30436930c7100
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190118"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558673"
 ---
 # <a name="the-teams-solution"></a>La solution Teams
 
@@ -32,19 +32,19 @@ Collez et mappez les exigences aux fonctionnalités Teams :
 | Besoins de l’application utilisateur | Vérifier les prévisions | Notification avant le voyage | Utilisateur inscrit |
 | --- |:---:|:---:|:---:|
 | **Fonctionnalité** | Bot | &nbsp; | &nbsp; |
-| **Intégration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, API Météo |
+| **Intégration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph, API Météo |
 | **Scope** | &nbsp; | Application personnelle | &nbsp; |
 | **Point d'intégration** | &nbsp; | Conversation | &nbsp; |
 
 La **solution d’application Teams** : un *bot de conversation personnelle* de l’application Teams qui vérifie et *envoie des notifications de prévision* à *des utilisateurs inscrits* avant leur date de voyage.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Un développeur d’une agence de voyages crée un bot pour Teams qui envoie des prévisions météorologiques aux clients afin qu’ils puissent planifier leurs dates de voyage" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Un développeur d’une agence de voyages crée un bot pour Teams qui envoie des prévisions météorologiques aux clients afin qu’ils puissent planifier leurs dates de voyage":::
 
 Teams offre ces fonctionnalités et bien d’autres pour offrir à vos utilisateurs une solution d’application riche en fonctionnalités. Pour développer cette application :
 
 1. Créez une application de bot de conversation personnelle.
 1. Intégrez-la à une API de prévisions météorologiques externe pour vous connecter et demander des prévisions pour une date et un emplacement spécifiques.
-1. Intégrez avec :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph pour les utilisateurs inscrits.
+1. Intégrez avec :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph pour les utilisateurs inscrits.
 1. Vérifiez et envoyez les détails des prévisions en fonction de la date et de l’emplacement du voyage de l’utilisateur.
 
 ## <a name="choose-what-suits-you"></a>Choisissez ce qui vous convient
@@ -53,7 +53,7 @@ Vous pouvez créer une application Teams conformément aux exigences de votre ap
 
 Une application Teams vous offre la flexibilité de choisir votre environnement de build. Il inclut des outils, des infrastructures et des langues pour aborder le développement de votre application.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Besoin commercial de l’application" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Besoin commercial de l’application":::
 
 Créez votre application Teams dans l’environnement qui convient à vos besoins particuliers. Vous pouvez même sélectionner une combinaison.
 
@@ -65,14 +65,14 @@ Une application Teams offre à vos utilisateurs les avantages d’un espace de t
 
 En tant que plateforme de création d’applications, Teams offre la gamme complète d’applications et de kits de ressources. La plateforme Teams vous prend en charge à chaque étape, de la planification de votre application à sa distribution.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Description d’un cycle de vie du développement d’applications Teams. Planifier, concevoir, générer, étendre, tester, déployer, distribuer. Détails affichés dans une liste à puces ci-dessous." border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Description d’un cycle de vie du développement d’applications Teams. Planifier, concevoir, générer, étendre, tester, déployer, distribuer. Détails affichés dans une liste à puces ci-dessous.":::
 
 De la conception à la création et à la distribution d’une application Teams, vous pouvez utiliser différents outils et services. Voici un exemple de flux de développement :
 
 1. Planifiez votre projet et déterminez l’exigence.
 1. Concevez l’application. Utilisez le Kit d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir l’interface utilisateur des onglets.
 1. Créez l’application avec JavaScript à l’aide du Kit de ressources Teams.
-1. Étendez les fonctionnalités en ajoutant des fonctionnalités Teams et des données M365 avec :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph.
+1. Étendez les fonctionnalités en ajoutant des fonctionnalités Teams et des données M365 avec :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph.
 1. Testez l’application sur un locataire de développeur avec des exemples de données utilisateur.
 1. Déployez l’application sur Azure.
 1. Gérez et publiez les applications dans le Store avec Developer Portal. Monétisez votre application avec des options, telles que les offres SaaS, les achats in-app et bien plus encore.

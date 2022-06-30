@@ -3,12 +3,12 @@ title: Démarrage - Vue d’ensemble
 description: Dans ce module, découvrez comment prendre en main la documentation des développeurs Microsoft Teams qui vous présente les outils courants, les concepts fondamentaux et les fonctionnalités avancées.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 4a53466aab1a896e99b91210dbc93d8467df52d1
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 050e4a7bbf078686fa400858c684c6500ca71c1c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503899"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558701"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -24,7 +24,7 @@ Voici une idée de ce que vous allez apprendre :
 
 Examinons rapidement les options d’environnement de build parmi lesquelles vous pouvez choisir, ainsi que la feuille de route pour créer et déployer une application Teams.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration montrant les étapes de base pour créer et déployer une application Teams" border="true":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration montrant les étapes de base pour créer et déployer une application Teams":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Fonctionnalités d’application et outils de développement
 

@@ -16,11 +16,11 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
 1. Sélectionnez **Provisionner dans le cloud**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Capture d’écran montrant les commandes d’approvisionnement" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Capture d’écran montrant les commandes d’approvisionnement":::
 
 1. Sélectionnez un abonnement à utiliser pour les ressources Azure.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Capture d’écran montrant les ressources pour l’approvisionnement" border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Capture d’écran montrant les ressources pour l’approvisionnement":::
 
    > [!NOTE]
    > Certaines ressources Azure sont toujours utilisées pour héberger votre application.
@@ -29,21 +29,21 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
 1. Sélectionnez **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Capture d’écran de la boîte de dialogue d’approvisionnement." border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Capture d’écran de la boîte de dialogue d’approvisionnement.":::
 
    Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela peut prendre un certain temps. Vous pouvez surveiller la progression en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet.":::
 
     Si vous le souhaitez, vous pouvez afficher les ressources approvisionnées. Pour ce didacticiel, vous n’avez pas besoin d’afficher les ressources.
 
     La ressource approvisionnée apparaît dans la section **Environnement** .
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet.":::
 
 1. Sélectionnez **Déployer dans le cloud dans** le panneau **Déploiement** une fois l’approvisionnement terminé.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Capture d’écran montrant où cliquer pour déployer dans le cloud." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Capture d’écran montrant où cliquer pour déployer dans le cloud.":::
 
    Comme pour le provisionnement, le déploiement prend un certain temps. Vous pouvez surveiller le processus en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, un avis d’achèvement s’affiche.
 
@@ -80,13 +80,13 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
 1. Sélectionnez **Lancer à distance (Edge)** dans la liste déroulante de configuration de lancement.
 1. Sélectionnez le bouton **Démarrer le débogage (F5)** pour lancer votre application à partir d’Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Capture d’écran montrant l’application de lancement à distance." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Capture d’écran montrant l’application de lancement à distance.":::
 
 1. Sélectionnez **Ajouter** lorsque vous êtes invité à charger l’application sur Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Capture d’écran montrant l’application en cours d’installation.":::
 
     Félicitations, votre première application onglet s’exécute dans votre environnement Azure !
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement" border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement":::
  

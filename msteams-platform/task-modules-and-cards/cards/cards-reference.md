@@ -3,12 +3,12 @@ title: Types de cartes
 description: Dans ce module, découvrez les cartes et les actions de carte disponibles pour les bots dans Teams et créez un héros, une miniature et des cartes adaptatives
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142625"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558582"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -131,7 +131,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 
 ### <a name="example-of-adaptive-card"></a>Exemple de carte adaptative
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Exemple d’une carte adaptative" border="true":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Exemple d’une carte adaptative":::
 
 Le code suivant montre un exemple de carte adaptative :
 

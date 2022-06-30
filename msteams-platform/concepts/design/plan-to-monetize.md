@@ -4,12 +4,12 @@ description: Dans ce module d’apprentissage, vous découvrirez comment planifi
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 94ed62968cc2d6fc31086616b1d6e9c05f90e54b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bb6f33d568b16d5f8f2aeb4d900b3d658d2bd6bb
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144368"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558134"
 ---
 # <a name="plan-to-monetize-your-app"></a>Planifier la monétisation de votre application
 
@@ -20,7 +20,7 @@ Envisagez de publier votre application sur le Magasin Teams pour offrir à votre
 :::row:::
     :::column span="":::
 
-        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monétiser des applications" border="false":::
+        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monétiser des applications":::
     :::column-end:::
     :::column span="":::
         Les méthodes les plus courantes pour monétiser votre application sont :

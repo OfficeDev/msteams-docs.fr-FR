@@ -4,12 +4,12 @@ description: Dans cet article, récupérez les réponses à certaines questions 
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c617b3db7982e192db6cde9375be751e2cf2bf26
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143101"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558295"
 ---
 # <a name="moodle-faq"></a>FAQ sur Moodle
 
@@ -53,9 +53,9 @@ Utilisez l’option **Restriction de création d’utilisateur** pour spécifier
 
 L’image suivante montre les options de restrictions de création d’utilisateur :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="synchro" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="synchro":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD":::
 
 <br>
 
@@ -71,11 +71,11 @@ Par défaut, seuls les administrateurs Moodle peuvent configurer la synchronisat
 
 L’image suivante montre l’option **Autoriser la configuration de la synchronisation de cours dans le cours** :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="administrateur" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="administrateur":::
 
 L’image suivante illustre la synchronisation des cours :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronisation" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronisation":::
 
 <br>
 
@@ -123,11 +123,11 @@ Les utilisateurs qui n’ont pas pu se connecter au démarrage doivent signaler 
 
 L'image suivante montre le message d'erreur reçu lorsque l'utilisateur signe en utilisant ses informations d'identification Microsoft 365 :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="signaler un problème" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="signaler un problème":::
 
 L'image suivante montre l'erreur dans le portail Azure :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Portail Azure" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Portail Azure":::
 
 Si la **clé secrète du client** a expiré, l’utilisateur doit en générer une nouvelle **clé secrète** et mettre à jour la configuration trouvée sur la page. Les utilisateurs peuvent se reconnecter après la mise à jour de la **clé secrète du client**, ce qui peut prendre jusqu’à 24 heures.
 
@@ -143,7 +143,7 @@ Les administrateurs peuvent modifier l’instance d’équipe associée à un co
 
 L'image suivante montre l'instance des équipes :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="instance des équipes" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="instance des équipes":::
 
 <br>
 
@@ -160,7 +160,7 @@ L'utilisateur peut être confronté à un problème de réunion Atto Teams si la
 
 Les images suivantes montrent l’icône de la barre d’outils après ajustement de la configuration de la barre d’outils :
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="barre d’outils" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="barre d’outils":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="icône liens":::
 

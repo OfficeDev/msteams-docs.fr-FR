@@ -4,12 +4,12 @@ description: Dans cet article, découvrez comment utiliser le Kit de développem
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130444"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557728"
 ---
 # <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
@@ -53,7 +53,7 @@ Le contrôle d’entrée Sélecteur de personnes permet à l’utilisateur de re
 1. Tapez le nom de la personne que vous voulez inviter. La liste s’affiche avec des suggestions de nom.
 1. Sélectionnez le nom de la personne requise dans la liste.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="S’il s’est s’il est mobile" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="S’il s’est s’il est mobile":::
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/Sampledesktop)
 
@@ -62,7 +62,7 @@ Le contrôle People Picker sur le web ou le bureau est lancé dans une fenêtre 
 1. Tapez le nom de la personne que vous voulez inviter. La liste s’affiche avec des suggestions de nom.
 1. Sélectionnez le nom de la personne requise dans la liste.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Sélecteur de personnes par nom bureau" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Sélecteur de personnes par nom bureau":::
 
 ---
 

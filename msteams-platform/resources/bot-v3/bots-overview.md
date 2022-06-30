@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment commencer à développer des bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189743"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558610"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Ajouter des bots aux applications Microsoft Teams
 
@@ -18,9 +18,9 @@ ms.locfileid: "66189743"
 Créez et connectez des bots intelligents pour interagir naturellement avec les utilisateurs de Microsoft Teams par le biais d’une conversation. Ou fournissez un bot simple basé sur des commandes, à utiliser comme votre « ligne de commande » pour votre expérience d’application Teams plus large. Vous pouvez créer un bot de notification uniquement, qui peut envoyer (push) des informations pertinentes à vos utilisateurs directement dans un canal ou un message direct. Vous pouvez même apporter votre bot basé sur Bot Framework existant et ajouter une prise en charge spécifique à Teams pour améliorer votre expérience.
 
 > [!IMPORTANT]
-> Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) et GCC-High, mais pas dans le ministère de la Défense (DOD).
+> Actuellement, les bots sont disponibles dans government community cloud (GCC) et GCC-High, mais pas dans le ministère de la Défense (DOD).
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="Exemple de bot aidant un utilisateur" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Exemple de bot aidant un utilisateur":::
 
 ## <a name="what-you-need-to-know-bots"></a>Ce que vous devez savoir : bots
 
@@ -34,7 +34,7 @@ Un bot se comporte différemment en fonction du type de conversation dans lequel
 
 Pour plus d’informations, consultez [Avoir une conversation avec un bot Microsoft Teams](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Avec Teams applications, vous pouvez faire du bot l’étoile de votre expérience, ou simplement un assistance. Les bots sont distribués dans le cadre de votre package d’application plus large, qui peut inclure d’autres fonctionnalités telles que les [onglets](~/tabs/what-are-tabs.md) ou les [extensions de message](~/messaging-extensions/what-are-messaging-extensions.md).
+Avec les applications Teams, vous pouvez faire du bot l’étoile de votre expérience, ou simplement un assistance. Les bots sont distribués dans le cadre de votre package d’application plus large, qui peut inclure d’autres fonctionnalités telles que les [onglets](~/tabs/what-are-tabs.md) ou les [extensions de message](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="bot-apis"></a>API de bot
 

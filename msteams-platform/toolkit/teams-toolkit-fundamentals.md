@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: fe9bbbb7a6d3668f43c31322ad8099bf994051b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484604"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558330"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
 
@@ -29,7 +29,7 @@ Teams Toolkit propose tous les outils nécessaires à la création d’une appli
 
 Teams Toolkit automatise le travail manuel et offre une excellente intégration des ressources Teams et Azure. L’image suivante montre le parcours utilisateur du Kit de ressources Teams :
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Parcours utilisateur du Kit de ressources Teams" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Parcours utilisateur du Kit de ressources Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Les principaux jalons de ce parcours sont les suivants :
 

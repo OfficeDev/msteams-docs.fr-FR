@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment concevoir des Cartes adaptatives
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142660"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558155"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 
@@ -17,7 +17,7 @@ Une carte adaptative contient un corps libre d’éléments de carte et un ensem
 
 L’infrastructure de carte adaptative est utilisée dans de nombreux produits Microsoft, y compris Teams. Vous pouvez envoyer des cartes dans des messages aux utilisateurs via des bots ou des extensions de message. Les utilisateurs peuvent également effectuer des actions sur les cartes lorsqu’ils sont présents.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemple de vue d’ensemble d’une carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemple de vue d’ensemble d’une carte adaptative.":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
@@ -41,11 +41,11 @@ Notre carte la plus grande. À utiliser pour partager des articles ou des scéna
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Exemple montrant une carte de bannière de Carte adaptative sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Exemple montrant une carte de bannière de Carte adaptative sur un mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Exemple montrant une carte de bannière de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Exemple montrant une carte de bannière de Carte adaptative.":::
 
 ### <a name="thumbnail"></a>Miniature
 
@@ -53,11 +53,11 @@ Permet d’envoyer un message actionnable simple.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Exemple montrant une carte miniature de Carte adaptative sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Exemple montrant une carte miniature de Carte adaptative sur un mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Exemple montrant une carte miniature de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Exemple montrant une carte miniature de Carte adaptative.":::
 
 ### <a name="list"></a>Répertorier
 
@@ -65,11 +65,11 @@ Utilisez-le dans les scénarios où vous souhaitez que l’utilisateur choisisse
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Exemple montrant une carte de liste de Carte adaptative sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Exemple montrant une carte de liste de Carte adaptative sur un mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Exemple montrant une carte de liste de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Exemple montrant une carte de liste de Carte adaptative.":::
 
 ### <a name="digest"></a>Digérer
 
@@ -77,11 +77,11 @@ Utilisez-le dans les scénarios où vous souhaitez que l’utilisateur choisisse
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="L’exemple montre une carte de condensé de Carte adaptative sur mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="L’exemple montre une carte de condensé de Carte adaptative sur mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="L’exemple montre une carte de condensé de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="L’exemple montre une carte de condensé de Carte adaptative.":::
 
 ### <a name="media"></a>Médias
 
@@ -89,11 +89,11 @@ Utilisez-le dans les scénarios où vous souhaitez que l’utilisateur choisisse
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Exemple montrant une carte média de Carte adaptative sur mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Exemple montrant une carte média de Carte adaptative sur mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Exemple montrant une carte média de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Exemple montrant une carte média de Carte adaptative.":::
 
 ### <a name="people"></a>Personnes
 
@@ -101,11 +101,11 @@ Meilleure utilisation lorsque vous communiquez efficacement les personnes impliq
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Exemple montrant une carte de contacts de Carte adaptative sur mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Exemple montrant une carte de contacts de Carte adaptative sur mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Exemple montrant une carte de personnes de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Exemple montrant une carte de personnes de Carte adaptative.":::
 
 ### <a name="request-ticket"></a>Ticket de demande
 
@@ -113,11 +113,11 @@ Permet d’obtenir des entrées rapides d’un utilisateur pour créer automatiq
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Exemple montrant une carte de ticket de demande de Carte adaptative sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Exemple montrant une carte de ticket de demande de Carte adaptative sur un mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Exemple montrant une carte de ticket de demande de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Exemple montrant une carte de ticket de demande de Carte adaptative.":::
 
 ### <a name="imageset"></a>ImageSet
 
@@ -125,11 +125,11 @@ Permet d’envoyer plusieurs miniatures d’image.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Exemple montrant une carte de jeu d’image de Carte adaptative sur un mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Exemple montrant une carte de jeu d’image de Carte adaptative sur un mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Exemple montrant une carte de jeu d’image de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Exemple montrant une carte de jeu d’image de Carte adaptative.":::
 
 ### <a name="actionset"></a>Exemple pour ActionSet
 
@@ -137,11 +137,11 @@ Utilisez cette option lorsque vous souhaitez que l’utilisateur sélectionne un
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Exemple montrant une carte de jeu d’action de Carte adaptative sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Exemple montrant une carte de jeu d’action de Carte adaptative sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Exemple montrant une carte de jeu d’action de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Exemple montrant une carte de jeu d’action de Carte adaptative.":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
@@ -149,11 +149,11 @@ Permet de collecter plusieurs entrées de l’utilisateur.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Exemple montrant une carte d’ensemble de choix de Carte adaptative sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Exemple montrant une carte d’ensemble de choix de Carte adaptative sur un appareil mobile.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Exemple montrant une carte d’ensemble de choix de Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Exemple montrant une carte d’ensemble de choix de Carte adaptative.":::
 
 ## <a name="anatomy"></a>Anatomie
 
@@ -161,7 +161,7 @@ Les cartes adaptatives ont une grande flexibilité. Mais au minimum, nous vous s
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Exemple illustrant l'anatomie de la Carte adaptative sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Exemple illustrant l'anatomie de la Carte adaptative sur un appareil mobile.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -171,7 +171,7 @@ Les cartes adaptatives ont une grande flexibilité. Mais au minimum, nous vous s
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Exemple illustrant l'anatomie de la Carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Exemple illustrant l'anatomie de la Carte adaptative.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -655,7 +655,7 @@ Suivez ces instructions lorsque vous insérez des images dans vos cartes.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Meilleure pratique concernant la façon dont vous ne devez inclure qu’un petit jeu d’actions sur une carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Meilleure pratique concernant la façon dont vous ne devez inclure qu’un petit jeu d’actions sur une carte adaptative.":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>À faire : utiliser jusqu’à six actions principales
 
@@ -663,7 +663,7 @@ Bien que Cartes adaptatives puisse prendre en charge six actions principales, la
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Meilleure pratique pour ne pas surcharger les utilisateurs avec un trop grand nombre d’actions sur une carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Meilleure pratique pour ne pas surcharger les utilisateurs avec un trop grand nombre d’actions sur une carte adaptative.":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>À ne pas faire : utiliser plus de six actions principales
 
@@ -674,7 +674,7 @@ Les cartes adaptatives doivent présenter un contenu rapide et exploitable. Un t
 
 ### <a name="frequency"></a>Fréquence
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Meilleure pratique concernant la fréquence des cartes adaptatives." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Meilleure pratique concernant la fréquence des cartes adaptatives.":::
 
 #### <a name="do-be-concise"></a>À faire : être concis
 

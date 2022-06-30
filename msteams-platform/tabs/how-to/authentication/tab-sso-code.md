@@ -3,13 +3,13 @@ title: Configuration du code pour l’activation de l’authentification unique 
 description: Décrit la configuration du code pour l’activation de l’authentification unique pour les onglets
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Onglets d’authentification Teams - API Graph Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 3f095f3e2b0737b7afcdfe3bdcc96bd36d2f3847
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) API Graph
+ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888000"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558729"
 ---
 # <a name="add-code-to-enable-sso"></a>Ajouter du code pour activer l’authentification unique
 
@@ -20,7 +20,7 @@ Avant d’ajouter du code pour activer l’authentification unique, vérifiez qu
 
 Vous devez configurer le code côté client de votre application onglet pour obtenir un jeton d’accès auprès d’Azure AD. Le jeton d’accès est émis pour le compte de l’application onglet. Si votre application onglet nécessite des autorisations Microsoft Graph supplémentaires, vous devez transmettre le jeton d’accès au côté serveur et l’échanger contre le jeton Microsoft Graph.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configurer le code pour la gestion du jeton d’accès" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configurer le code pour la gestion du jeton d’accès":::
 
 Cette section traite des sujets suivants :
 
@@ -212,5 +212,5 @@ Voici une charge utile d?cod?e typique de token.
 - [Revendication facultative Active Directory](/azure/active-directory/develop/active-directory-optional-claims)
 - [Jetons d’accès](/azure/active-directory/develop/access-tokens)
 - [Vue d’ensemble de la bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview)
-- [Jetons d’ID de plateforme d’identités Microsoft](/azure/active-directory/develop/id-tokens)
+- [jetons d’ID Plateforme d'identités Microsoft](/azure/active-directory/develop/id-tokens)
 - [Jetons d’accès de plateforme d’identité Microsoft](/azure/active-directory/develop/access-tokens#validating-tokens)

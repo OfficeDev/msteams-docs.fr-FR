@@ -4,12 +4,12 @@ description: Dans cet article, vous aurez des plug-ins Microsoft 365, une liste 
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: c09e2e15fd276c2007a989545cc5b5c0b23f2584
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124045"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558589"
 ---
 # <a name="microsoft-365-plugins"></a>Plug-ins Microsoft 365
 
@@ -52,7 +52,7 @@ Le plug-in Connexion OpenID permet aux utilisateurs d’authentifier les sites w
 
 L’image suivante affiche la page de connexion Connexion OpenID :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Se connecter à Connexion OpenID" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Se connecter à Connexion OpenID":::
 
 ## <a name="microsoft-365-integration"></a>Intégration de Microsoft 365
 
@@ -65,7 +65,7 @@ L’intégration Microsoft 365 se compose de plusieurs applications avec de nomb
 
 L’image suivante affiche la page de configuration de l’intégration Microsoft 365 :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Intégration de Microsoft 365" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Intégration de Microsoft 365":::
 
 ### <a name="user-functions"></a>Fonctions utilisateur
 
@@ -87,7 +87,7 @@ Le référentiel Microsoft 365 permet à l’utilisateur de l’utiliser en tant
 
 L’image suivante affiche le référentiel de fichiers Microsoft 365 :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="Référentiel M365"  border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="Référentiel M365" :::
 
 ## <a name="teams-meetings"></a>Réunions Teams
 
@@ -100,7 +100,7 @@ Une fois le plug-in installé, les enseignants et les étudiants peuvent créer 
 
 L’image suivante affiche la page de connexion à une réunion Teams :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="Se connecter à une réunion Teams" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="Se connecter à une réunion Teams":::
 
 ## <a name="microsoft-365-teams-theme"></a>Thème Teams Microsoft 365
 
@@ -115,7 +115,7 @@ Le plug-in de thème offre aux utilisateurs une expérience améliorée unifiée
 
 L’image suivante affiche le thème Teams configuré par l’utilisateur :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Thème Microsoft Teams" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Thème Microsoft Teams":::
 
 ## <a name="onenote-integration"></a>Intégration OneNote
 
@@ -145,7 +145,7 @@ Le bloc Microsoft améliore l’expérience utilisateur en fournissant une inter
 
 L’image suivante illustre l’interface utilisateur du bloc Microsoft :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="bloc microsoft" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="bloc microsoft":::
 
 ## <a name="oembed-filter"></a>Filtre oEmbed
 
@@ -158,7 +158,7 @@ Le plug-in de filtre oEmbed simplifie et améliore l’expérience utilisateur e
 
 L’image suivante illustre l’inclusion de contenu HTML externe dans Moodle :
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="Page de filtre oEmbed" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="Page de filtre oEmbed":::
 
 ## <a name="see-also"></a>Voir aussi
 

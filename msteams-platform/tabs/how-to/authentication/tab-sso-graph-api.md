@@ -4,12 +4,12 @@ description: Décrit la configuration des autorisations d’API avec Microsoft G
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) API Graph étendue du jeton d’accès d’autorisation délégué
-ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 474d02c5b5f90e58bfc57f72ab6ce095a0323b62
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485292"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558253"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Étendre l’application onglet avec des autorisations et une étendue Microsoft Graph
 
@@ -33,39 +33,39 @@ Vous pouvez configurer des étendues Graph supplémentaires dans Azure AD pour v
 
 2. Sélectionnez **Gérer** > **l’autorisation d’API** dans le volet gauche.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="Option de menu Autorisations d’application." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="Option de menu Autorisations d’application.":::
 
     La page **d’autorisations de l’API** s’affiche.
 
 3. Sélectionnez **+ Ajouter des autorisations** pour ajouter des autorisations Microsoft API Graph.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Page Autorisations de l’application." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Page Autorisations de l’application.":::
 
     La page **Demander des autorisations d’API** s’affiche.
 
 4. Sélectionnez **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Page Demander des autorisations d’API." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Page Demander des autorisations d’API.":::
 
     Les options d’affichage des autorisations Graph.
 
 5. Sélectionnez **Autorisations déléguées** pour afficher la liste des autorisations.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Autorisations déléguées." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Autorisations déléguées.":::
 
 6. Sélectionnez les autorisations appropriées pour votre application, puis sélectionnez **Ajouter des autorisations**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Sélectionnez les autorisations." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Sélectionnez les autorisations.":::
 
     Vous pouvez également entrer le nom d’autorisation dans la zone de recherche pour le trouver.
 
     Un message s’affiche sur le navigateur indiquant que les autorisations ont été mises à jour.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Message de mise à jour des autorisations." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Message de mise à jour des autorisations.":::
 
     Les autorisations ajoutées sont affichées dans la page **d’autorisations de l’API** .
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="Les autorisations d’API sont configurées." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="Les autorisations d’API sont configurées.":::
 
     Vous avez configuré votre application avec des autorisations Microsoft Graph.
 
@@ -86,19 +86,19 @@ Vous pouvez configurer l’authentification pour plusieurs plateformes tant que 
 
 1. Sélectionnez **Gérer** > **l’authentification** dans le volet gauche.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="S’authentifier pour les plateformes" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="S’authentifier pour les plateformes":::
 
     La page **Configurations de la plateforme** s’affiche.
 
 1. Sélectionnez **+ Ajouter une plateforme**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Ajouter une plateforme" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Ajouter une plateforme":::
 
     La page **Configurer les plateformes** s’affiche.
 
 1. Sélectionnez la plateforme que vous souhaitez configurer pour votre application onglet. Vous pouvez choisir le type de plateforme à partir du web ou de spa.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Sélectionner la plateforme web" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Sélectionner la plateforme web":::
 
     Vous pouvez configurer plusieurs plateformes pour un type de plateforme particulier. Vérifiez que l’URI de redirection est unique pour chaque plateforme que vous configurez.
 
@@ -109,7 +109,7 @@ Vous pouvez configurer l’authentification pour plusieurs plateformes tant que 
 
 1. Entrez les détails de configuration de la plateforme.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configurer la plateforme web" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configurer la plateforme web":::
 
     1. Entrez l’URI de redirection. L’URI doit être unique.
     2. Entrez l’URL de déconnexion du canal frontal.

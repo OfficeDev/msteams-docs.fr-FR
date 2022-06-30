@@ -5,12 +5,12 @@ description: Apprenez à concevoir votre application plus rapidement avec des co
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c4a8b0b626092e4980ccac95f98148829dc06ccd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484819"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558722"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Conception de votre application Microsoft Teams avec des modèles d’interface utilisateur
 
@@ -20,7 +20,7 @@ Concevez votre application Microsoft Teams plus rapidement avec des modèles d�
 
 Les ressources suivantes peuvent vous aider à concevoir et développer votre application à l’aide de modèles d’interface utilisateur.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
 Récupérez des modèles d’interface utilisateur pour la conception de votre application à partir du Kit d’interface utilisateur Microsoft Teams, qui inclut également des informations détaillées sur l’utilisation, l’anatomie, l’accessibilité et les meilleures pratiques.
 
@@ -53,12 +53,12 @@ Dans Teams, un calendrier est l’endroit où un utilisateur affiche, planifie e
 ### <a name="top-use-cases"></a>Principaux cas d’usage
 
 * Planifier des réunions et des événements
-* Obtenez des rappels de réunions et d’événements à venir.
+* Obtenir des rappels de réunions et d’événements à venir
 * Afficher les planifications
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="L’exemple montre un modèle d’interface utilisateur de calendrier sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="L’exemple montre un modèle d’interface utilisateur de calendrier sur le bureau.":::
 
 ## <a name="dashboard"></a>Tableau de bord
 
@@ -68,15 +68,15 @@ Un tableau de bord affiche différents types de contenu dans un emplacement cent
 
 * Analyser les données
 * Métriques de rapport
-* Organisez différentes informations au même endroit.
+* Organiser différentes informations à un seul endroit
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de tableau de bord sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de tableau de bord sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de tableau de bord sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de tableau de bord sur le bureau.":::
 
 ## <a name="data-visualization"></a>Visualisation de données
 
@@ -84,16 +84,16 @@ Vous pouvez utiliser différentes tailles de carte (unique, double et complète)
 
 ### <a name="top-use-cases"></a>Principaux cas d’usage
 
-* Afficher des informations complexes.
-* Créez un tableau de bord.
+* Afficher des informations complexes
+* Créer un tableau de bord
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Exemple montrant un modèle d’interface utilisateur de visualisation des données sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Exemple montrant un modèle d’interface utilisateur de visualisation des données sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple montre un modèle d’interface utilisateur de visualisation des données sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple montre un modèle d’interface utilisateur de visualisation des données sur le bureau.":::
 
 ## <a name="empty-state"></a>État vide
 
@@ -102,17 +102,17 @@ Le modèle d’état vide peut être utilisé pour de nombreux scénarios, notam
 ### <a name="top-use-cases"></a>Principaux cas d’usage
 
 * Connexion
-* Messages de bienvenue et expériences de première exécution.
+* Messages d’accueil et expériences de première exécution
 * Messages de réussite
 * Messages d’erreur
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’état vide sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’état vide sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’état vide sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’état vide sur le bureau.":::
 
 ## <a name="filter"></a>Filtre
 
@@ -123,11 +123,11 @@ Un filtre vous permet de réduire les informations que vous voyez en fonction de
 Organisation du contenu dans :
 
 * Listes
-* Tables
+* Tableaux
 * Tableaux de bord
 * Visualisation de données
 
-:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="L’exemple montre un modèle de filtre." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="L’exemple montre un modèle de filtre.":::
 
 ## <a name="form"></a>Formulaire
 
@@ -142,13 +142,13 @@ Les formulaires sont utilisés pour collecter, valider et envoyer des entrées u
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur le bureau." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur le bureau.":::
 
-## <a name="list"></a>Liste
+## <a name="list"></a>Répertorier la liste
 
 Vous pouvez utiliser une liste pour afficher les éléments associés dans un formatcannable et permettre aux utilisateurs d’effectuer des actions sur une liste entière ou des éléments individuels.
 
@@ -159,11 +159,11 @@ Vous pouvez utiliser une liste pour afficher les éléments associés dans un fo
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="L’exemple montre un modèle d’interface utilisateur de liste sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="L’exemple montre un modèle d’interface utilisateur de liste sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="L’exemple montre un modèle d’interface utilisateur de liste sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="L’exemple montre un modèle d’interface utilisateur de liste sur le bureau.":::
 
 ## <a name="sign-in"></a>Connexion
 
@@ -175,11 +175,11 @@ Vous pouvez concevoir des flux de connexion d’application pour différents con
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="L’exemple montre un modèle d’interface utilisateur de connexion sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="L’exemple montre un modèle d’interface utilisateur de connexion sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="L’exemple montre un modèle d’interface utilisateur de connexion sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="L’exemple montre un modèle d’interface utilisateur de connexion sur le bureau.":::
 
 ## <a name="settings"></a>Paramètres
 
@@ -189,7 +189,7 @@ Les écrans de paramètres permettent aux utilisateurs de configurer leurs préf
 
 * Gérer les fonctionnalités de l’application
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="L’exemple montre un modèle de paramètres." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="L’exemple montre un modèle de paramètres.":::
 
 ## <a name="task-board"></a>Tableau des tâches
 
@@ -203,11 +203,11 @@ Un tableau de tâches, parfois appelé tableau kanban ou couloirs de nage, est u
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Exemple montrant un modèle d’interface utilisateur de tableau des tâches sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Exemple montrant un modèle d’interface utilisateur de tableau des tâches sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="L’exemple montre un modèle d’interface utilisateur de tableau des tâches sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="L’exemple montre un modèle d’interface utilisateur de tableau des tâches sur le bureau.":::
 
 ## <a name="wizard"></a>Assistant
 
@@ -221,11 +221,11 @@ Un Assistant guide un utilisateur à travers plusieurs écrans pour effectuer un
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de l’Assistant sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de l’Assistant sur mobile.":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de l’Assistant sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemple montrant un modèle d’interface utilisateur de l’Assistant sur le bureau.":::
 
 ## <a name="see-also"></a>Voir aussi
 

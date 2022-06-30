@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142884"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558834"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Système de conception d’applications Microsoft Teams
 
@@ -29,7 +29,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Image conceptuelle de la disposition Teams." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Image conceptuelle de la disposition Teams.":::
    :::column-end:::
 
 :::row-end:::
@@ -47,7 +47,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Image conceptuelle des avatars Teams." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Image conceptuelle des avatars Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -68,7 +68,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Image conceptuelle d’icônes Teams." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Image conceptuelle d’icônes Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -87,7 +87,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Typographie Teams de l’image conceptuelle." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Typographie Teams de l’image conceptuelle.":::
 
    :::column-end:::
 :::row-end:::
@@ -105,7 +105,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Image conceptuelle de Teams colors." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Image conceptuelle de Teams colors.":::
    :::column-end:::
 
 :::row-end:::
@@ -124,7 +124,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptuel de la forme et de l’élévation." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptuel de la forme et de l’élévation.":::
 
    :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Image conceptuelle de copie et de contenu." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Image conceptuelle de copie et de contenu.":::
 
    :::column-end:::
 :::row-end:::

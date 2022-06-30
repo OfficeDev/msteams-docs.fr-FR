@@ -5,12 +5,12 @@ description: Découvrez comment créer et tester des offres d’aperçu SaaS pou
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123702"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558743"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Aperçu du test pour les applications monétisées
 
@@ -26,11 +26,11 @@ Vous pouvez générer l’ID d’offre d’aperçu à partir du lien **d’aper�
 1. Ajoutez une [audience d’aperçu](/azure/marketplace/create-new-saas-offer-preview) pour votre offre SaaS.
 1. **Sélectionnez le lien** d’aperçu AppSource sous **Go Live** pour trouver l’ID d’offre d’aperçu dans la barre d’adresses du navigateur avec *le format publisherId.offerId-preview*.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="ID de l’offre d’aperçu" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="ID de l’offre d’aperçu" :::
 
 1. Copiez l’ID de l’offre d’aperçu à partir de la barre d’adresses du navigateur.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID de l’offre d’aperçu" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID de l’offre d’aperçu" :::
 
     > [!NOTE]
     > Contrairement à un ID d’offre publique, l’ID d’offre en préversion peut être reconnu avec le suffixe *-preview*. Par exemple, **publisherId.offerId-preview**.
@@ -68,7 +68,7 @@ Après avoir configuré votre application avec l'ID de l'offre de prévisualisat
 
 Si l’offre d’aperçu est spécifiée dans le manifeste de l’application et que l’audience d’aperçu est définie dans l’Espace partenaires de l’offre, l’utilisateur peut voir le bouton **Acheter un abonnement** .
 
-Consultez :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Acheter un abonnement" border="true":::.
+Consultez :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Acheter un abonnement":::.
 
 ### <a name="error-scenarios"></a>Scénarios d’erreur
 
@@ -76,13 +76,13 @@ Consultez :::image type="content" source="../../../../assets/images/apps-in-meet
 
   Aucun plan trouvé avec **-preview**. Assurez-vous que vous êtes dans l’audience d’aperçu.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="pas d’audience de pré-audience" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="pas d’audience de pré-audience" :::
 
 * Si l'ID de l'offre spécifié dans le manifeste de l'application n'est pas une offre d'aperçu, l'application affiche le message d'avertissement suivant à l'utilisateur et le chargement latéral est désactivé :
   
   Il ne s’agit pas d’une offre d’aperçu. Assurez-vous d'ajouter le mot **-preview** à l'ID de l'offre.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" :::
 
 ## <a name="see-also"></a>Voir aussi
 

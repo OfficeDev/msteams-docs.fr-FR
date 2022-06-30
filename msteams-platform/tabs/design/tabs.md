@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144333"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558323"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevoir votre onglet pour Microsoft Teams
 
@@ -35,13 +35,13 @@ Vous pouvez ajouter un onglet à partir du Store Teams (AppSource) ou dans l’u
 
 Les utilisateurs peuvent accéder aux onglets en sélectionnant le bouton **Plus** dans le canal (exemple ci-dessous) ou la conversation dans laquelle ils ont été ajoutés.
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="L’exemple illustre l’ajout d’un onglet mobile dans un canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="L’exemple illustre l’ajout d’un onglet mobile dans un canal.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
 L’exemple suivant montre comment les utilisateurs peuvent ajouter un onglet dans un canal.
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="L’exemple montre l’ajout d’un onglet dans un canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="L’exemple montre l’ajout d’un onglet dans un canal.":::
 
 ## <a name="set-up-a-tab"></a>Configurer un onglet
 
@@ -49,11 +49,11 @@ Il existe un bref processus de configuration pour ajouter une application en tan
 
 ### <a name="tab-configuration-dialog"></a>Boîte de dialogue de configuration d’onglet
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemple de configuration modale d’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemple de configuration modale d’onglet.":::
 
 #### <a name="anatomy-tab-configuration-dialog"></a>Anatomie : boîte de dialogue de configuration d’onglet
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une configuration modale d’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une configuration modale d’onglet.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -70,7 +70,7 @@ Il existe un bref processus de configuration pour ajouter une application en tan
 
 Vous pouvez ajouter une étape dans laquelle les utilisateurs doivent d’abord se connecter avec leurs informations d’identification Microsoft. Cette méthode d’authentification est appelée authentification unique (SSO).
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemple d’écran d’authentification de l’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemple d’écran d’authentification de l’onglet.":::
 
 ### <a name="design-a-tab-setup-with-ui-templates"></a>Concevoir une configuration d’onglet avec des modèles d’interface utilisateur
 
@@ -86,17 +86,17 @@ Les onglets offrent une expérience web en plein écran dans Teams où vous pouv
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="L’exemple montre un onglet mobile avec un tableau des tâches." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="L’exemple montre un onglet mobile avec un tableau des tâches.":::
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L’exemple montre un onglet avec un tableau des tâches." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L’exemple montre un onglet avec un tableau des tâches.":::
 
 ### <a name="anatomy-tab"></a>Anatomie : onglet
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -106,7 +106,7 @@ Les onglets offrent une expérience web en plein écran dans Teams où vous pouv
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Cette illustration montre l’anatomie de l’interface utilisateur d’un onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Cette illustration montre l’anatomie de l’interface utilisateur d’un onglet.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -136,11 +136,11 @@ Les utilisateurs peuvent publier automatiquement sur un canal ou une conversatio
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="L’exemple montre un onglet mobile abordé dans un thread de canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="L’exemple montre un onglet mobile abordé dans un thread de canal.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="L’exemple montre un onglet étant évoqué dans un thread de canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="L’exemple montre un onglet étant évoqué dans un thread de canal.":::
 
 ### <a name="tab-chat"></a>Conversation par onglets
 
@@ -148,11 +148,11 @@ Les utilisateurs peuvent avoir une conversation en regard du contenu de l’ongl
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet mobile avec une zone de conversation en contexte." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet mobile avec une zone de conversation en contexte.":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet avec une conversation ouverte sur le côté droit." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet avec une conversation ouverte sur le côté droit.":::
 
 ### <a name="permissions-and-role-based-views"></a>Autorisations et affichages en fonction du rôle
 
@@ -166,7 +166,7 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu onglet mobile." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu onglet mobile.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -178,7 +178,7 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu d’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu d’onglet.":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -203,7 +203,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration montrant comment procéder avec la conception de navigation d’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration montrant comment procéder avec la conception de navigation d’onglet.":::
 
 #### <a name="do-facilitate-conversation"></a>À faire : faciliter la conversation
 
@@ -211,7 +211,7 @@ Incluez le contenu et les composants dont les utilisateurs peuvent parler. S’i
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="L’exemple montre ce qu’il ne faut pas faire avec la conception de navigation par onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="L’exemple montre ce qu’il ne faut pas faire avec la conception de navigation par onglets.":::
 
 #### <a name="dont-treat-your-tab-like-any-other-webpage"></a>À ne pas faire : traiter votre onglet comme n’importe quelle autre page web
 
@@ -224,7 +224,7 @@ Un onglet n’est pas une page web que quelqu’un peut afficher une seule fois.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Exemple montrant comment procéder avec la conception de navigation par onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Exemple montrant comment procéder avec la conception de navigation par onglets.":::
 
 #### <a name="do-limit-tasks-and-data"></a>À faire : limiter les tâches et les données
 
@@ -232,7 +232,7 @@ Les onglets fonctionnent mieux lorsqu’ils s’adressent à des besoins spécif
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de navigation par onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de navigation par onglets.":::
 
 #### <a name="dont-embed-your-entire-app"></a>À ne pas faire : incorporer l’intégralité de votre application
 
@@ -245,7 +245,7 @@ L’utilisation d’un onglet pour afficher l’ensemble d’une application ave
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration montrant ce qu’il faut faire avec la conception de la configuration de l’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration montrant ce qu’il faut faire avec la conception de la configuration de l’onglet.":::
 
 #### <a name="do-keep-it-simple"></a>À faire : rester simple
 
@@ -253,7 +253,7 @@ Si votre application nécessite une authentification, essayez d’intégrer l’
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de la configuration de l’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de la configuration de l’onglet.":::
 
 #### <a name="dont-have-too-many-steps"></a>À ne pas faire : trop d’étapes
 
@@ -266,7 +266,7 @@ Supprimez les étapes inutiles pour ajouter un onglet.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration montrant ce qu’il faut faire avec les thèmes d’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration montrant ce qu’il faut faire avec les thèmes d’onglet.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
 
@@ -274,7 +274,7 @@ Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquemen
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec les onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec les onglets.":::
 
 #### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur du code en dur
 

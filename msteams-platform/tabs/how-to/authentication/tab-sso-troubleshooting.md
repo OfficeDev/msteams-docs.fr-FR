@@ -4,12 +4,12 @@ description: Résolution des problèmes d’authentification unique dans Teams e
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Questions sur les erreurs d’authentification unique des onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: d738c992b008028456dc9318b2a0720178f6f66f
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 93365732ee284cd8cb903f7535d2770d0154d417
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503724"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558421"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Résoudre les problèmes d’authentification unique dans Teams
 
@@ -101,7 +101,7 @@ Une erreur générique peut apparaître quand une ou plusieurs configurations d�
 
 L’image suivante montre un exemple des détails de l’application configurés dans Azure AD.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valeurs de configuration d’application dans Azure AD" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valeurs de configuration d’application dans Azure AD":::
 
 Vérifiez que les valeurs suivantes correspondent entre Azure AD, le code côté client et le manifeste de l’application Teams :
 

@@ -5,12 +5,12 @@ description: Questions à prendre en compte lorsque vous planifiez votre applica
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123110"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558127"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 
@@ -129,7 +129,7 @@ Suggestion : des options qui permettent de déterminer le meilleur modèle de di
 
 Teams n’héberge pas votre application. Lorsqu’un utilisateur installe votre application dans Teams, il installe un package d’application qui contient un seul fichier de configuration (également appelé manifeste d’application) et les icônes de votre application. La logique de l’application et le stockage des données sont hébergés ailleurs, par exemple sur localhost pendant le développement et sur Azure Web Services. Teams accède à ces ressources via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration montrant l’hébergement d’applications pour Application Teams" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration montrant l’hébergement d’applications pour Application Teams":::
 
 ## <a name="plan-beyond-app-building"></a>Planifier au-delà de la création d’applications
 
