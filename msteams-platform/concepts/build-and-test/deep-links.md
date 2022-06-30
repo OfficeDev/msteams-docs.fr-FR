@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Découvrez comment créer des liens profonds et comment les utiliser et les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: afa3ea185247ab4edb5ada3b657c4d1259674bc5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150679"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485677"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -40,8 +40,8 @@ Le SDK client JavaScript de Microsoft Teams (TeamsJS) simplifie le processus de 
 >
 >Le comportement de navigation d'une application Teams étendue à Microsoft 365 (Outlook/Office) dépend de deux facteurs :
 >
-> * Cible vers laquelle pointe le lien profond
-> * Hôte sur lequel l’application Teams s’exécute
+> * Cible vers laquelle pointe le lien profond.
+> * Hôte sur lequel l’application Teams s’exécute.
 >
 > Si l'application Teams est exécutée dans l'hôte où le lien profond est ciblé, votre application s'ouvrira directement dans l'hôte. Toutefois, si l'application Teams est exécutée sur un hôte différent de celui où le lien profond est ciblé, l'application s'ouvrira d'abord dans le navigateur.
 
@@ -207,29 +207,12 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### <a name="open-a-scheduling-dialog"></a>Ouvrir une boîte de dialogue
 
-Vous pouvez ouvrir une boîte de dialogue de planification à partir de votre application Teams, comme indiqué dans le code suivant. Cela est particulièrement utile si votre application aide l’utilisateur à effectuer le calendrier ou à planifier les tâches associées.
-
-# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
-
-```javascript
-// Open a scheduling dialog from your tab
-if(calendar.isSupported()) {
-   const calendarPromise = calendar.composeMeeting({
-      attendees: ["joe@contoso.com", "bob@contoso.com"],
-      content: "test content",
-      endTime: "2018-10-24T10:30:00-07:00"
-      startTime: "2018-10-24T10:00:00-07:00"
-      subject: "test subject"});
-   calendarPromise.
-      then((result) => {/*Successful operation*/}).
-      catch((error) => {/*Unsuccessful operation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
+> [!NOTE]
+> Pour ouvrir la boîte de dialogue de planification dans Teams, les développeurs doivent continuer d’utiliser la méthode basée sur l’URL de lien profond d’origine, car Teams ne prend pas encore en charge la fonctionnalité de calendrier.
 
 Pour plus d’informations sur l’utilisation du calendrier, consultez l’espace de noms de [calendrier](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) dans la documentation de référence de l’API.
 
-# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+### <a name="tabteams-js-v1"></a>tab/Teams JS v1
 
 ```javascript
 // Open a scheduling dialog from your tab
