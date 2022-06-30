@@ -3,12 +3,12 @@ title: Scènes personnalisées en mode Ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150644"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484776"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -22,7 +22,7 @@ Dans les scènes personnalisées du mode Ensemble, la scène est un artefact. La
 
 Le processus suivant donne une vue d'ensemble de la création d'une application de scène uniquement :
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créer une application de scène uniquement" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créez une application de scène uniquement.":::
 
 Une application de scène uniquement est toujours une application dans Teams. Le studio de scène gère la création de package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
 
@@ -83,7 +83,7 @@ Pour créer une scène à l'aide du studio de scène, procédez comme suit :
 
 1. Sélectionnez **Ajouter des images** pour ajouter l’image dans l’environnement :
 
-    ![Ajouter des images dans l’environnement](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Ajouter des images dans l’environnement":::
 
     >[!NOTE]
     >Vous pouvez télécharger [ fichiersSampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) et [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) avec les images.
@@ -104,7 +104,7 @@ Pour créer une scène à l'aide du studio de scène, procédez comme suit :
 
 1. Sélectionnez le rôle **Organisateur de réunion** ou **Présentateur** pour le participant. Dans une réunion, le rôle d’organisateur d’une réunion doit être attribué à un participant :
 
-    ![Affecter un emplacement](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Attribuez une place au participant.":::
 
 1. Pour tester rapidement votre scène dans Teams, sélectionnez **Enregistrer** et sélectionner **Afficher dans Teams**.
 

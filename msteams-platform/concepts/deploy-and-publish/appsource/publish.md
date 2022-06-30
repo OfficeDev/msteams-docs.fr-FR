@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189926"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485733"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -120,7 +120,7 @@ Si votre application est prête pour la production, vous pouvez commencer le pro
 
         1. Instructions de configuration si votre application nécessite davantage de configuration pour accéder aux fonctionnalités de l’application. Sinon, si votre application nécessite une configuration complexe, vous pouvez également fournir un [client de démonstration approvisionné](/office/developer-program/microsoft-365-developer-program-get-started) avec un accès administrateur afin que nos validateurs puissent ignorer les étapes de configuration.
 
-        1. Lien vers une vidéo de démonstration enregistrant un flux d’utilisateur clé pour votre application. Cette action est vivement recommandée.
+        1. Lien vers une vidéo de démonstration qui illustre le flux utilisateur clé pour votre application. Ceci est vivement recommandé.
 
 * **Après la soumission de l’application**
 
