@@ -3,14 +3,14 @@ title: Aperçu public pour les développeurs de Microsoft Teams
 description: Dans cet article, découvrez les fonctionnalités qui figurent dans la préversion préliminaire publique pour les développeurs de Microsoft Teams et le manifeste d’application de la préversion préliminaire pour les développeurs.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190253"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503913"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Aperçu public pour les développeurs de Microsoft Teams
+# <a name="public-developer-preview-for-teams"></a>Aperçu public pour les développeurs de Microsoft Teams
 
 >[!NOTE]
 >Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.

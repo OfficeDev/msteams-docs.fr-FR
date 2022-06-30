@@ -4,12 +4,12 @@ description: Dans ce module, apprenez à démarrer avec Live Share SDK et à cr�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143563"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484627"
 ---
 ---
 
@@ -103,7 +103,7 @@ start().catch((error) => console.error(error));
 
 Toutes les vues de vos applications n'auront pas besoin d'être collaboratives. La `stage`vue *a toujours besoin* de fonctionnalités collaboratives, la `content`vue *peut avoir* besoin de fonctionnalités collaboratives, et la `config`vue ne devrait *jamais* avoir besoin de fonctionnalités collaboratives. Pour les vues qui nécessitent des fonctions de collaboration, vous devrez rejoindre un conteneur Fluid associé à la réunion en cours.
 
-Pour rejoindre le conteneur de la réunion, il suffit de créer un nouveau [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) et d'appeler sa méthode [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer).  Lors d'une exécution locale, vous devrez passer une configuration de connexion personnalisée avec un spécial, `LOCAL_MODE_TENANT_ID`mais autrement, joindre un conteneur local est la même chose que joindre un conteneur dans Teams.
+Joindre le conteneur pour la réunion est aussi simple que de créer un [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient), puis d’appeler sa méthode [joinContainer().](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer)   Lors d'une exécution locale, vous devrez passer une configuration de connexion personnalisée avec un spécial, `LOCAL_MODE_TENANT_ID`mais autrement, joindre un conteneur local est la même chose que joindre un conteneur dans Teams.
 
 ```js
 async function joinContainer() {

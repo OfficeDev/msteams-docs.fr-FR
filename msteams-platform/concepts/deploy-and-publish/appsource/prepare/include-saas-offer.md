@@ -5,14 +5,14 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 0fdfb097def9b39e099536c2054cfaab21610770
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 7a5647c940f6f20babf4f0704b5b7781f4d065c4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123639"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503325"
 ---
-# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Inclure une offre SaaS avec votre application Microsoft Teams
+# <a name="include-a-saas-offer-with-your-teams-app"></a>Inclure une offre SaaS avec votre application Teams
 
 :::row:::
    :::column span="3":::
@@ -47,7 +47,7 @@ Pour obtenir des conseils complets, consultez [comment planifier une offre SaaS 
 
 Lors de la planification de la monétisation de votre application Teams, voici quelques éléments à prendre en compte :
 
-* Déterminez votre modèle d’abonnement. Une offre SaaS pouvant effectuer des transactions peut inclure plusieurs offres d’abonnement. Les offres d’abonnement publics disponibles pour tout le monde sont les plus courantes, mais vous pouvez également cibler des clients spécifiques avec des offres dédiées. Pour plus d’informations, consultez [offres privées dans la place de marché commerciale Microsoft](/azure/marketplace/private-offers).
+* Déterminez votre modèle d’abonnement. Une offre SaaS pouvant effectuer des transactions peut inclure plusieurs offres d’abonnement. Les offres d’abonnement publics disponibles pour tout le monde sont les plus courantes, mais vous pouvez également cibler des clients spécifiques avec des offres dédiées. Pour plus d’informations, consultez [plans privés dans la place de marché commerciale Microsoft](/azure/marketplace/private-plans).
 * Découvrez [*Vendre via Microsoft* comme option de référencement](/azure/marketplace/plan-saas-offer#listing-options) pour votre offre SaaS, qui est requise si vous souhaitez que les utilisateurs souscrivent à des offres d’abonnement pour votre application directement via le magasin Teams.
 * Découvrez comment [l’authentification unique (SSO) Azure Active Directory](/azure/marketplace/azure-ad-saas) permet à vos clients de acheter et de gérer des abonnements. (L’authentification unique Microsoft Azure Active Directory (Azure AD) est requise pour les applications Teams avec des offres SaaS.)
 * Comprenez que vous êtes responsable de la gestion et du paiement de l’infrastructure requise pour prendre en charge l’utilisation de votre offre SaaS par vos clients.

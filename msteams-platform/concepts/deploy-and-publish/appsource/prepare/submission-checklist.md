@@ -5,21 +5,21 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 29f98b024330c562e82722ddefffe68e94543bf6
-ms.sourcegitcommit: 46a2955f89b6a0e72449732eaa2bfea274191f67
+ms.openlocfilehash: 568c3017327126697834d1fdc27ffb1c69997670
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2022
-ms.locfileid: "66163491"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503745"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission au Microsoft Teams store
+# <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 
 Vous avez conçu, créé et testé votre application Microsoft Teams. Vous êtes maintenant prêt à la répertorier afin que les utilisateurs puissent découvrir et commencer à utiliser votre application.
 
 Regardez la vidéo suivante pour en savoir plus sur la publication de votre application dans l’App Store Microsoft Teams :
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Avant de soumettre votre application à [Espace partenaires](/office/dev/store/use-partner-center-to-submit-to-appsource), vérifiez que vous avez effectué les opérations suivantes.

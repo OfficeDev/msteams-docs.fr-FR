@@ -5,14 +5,14 @@ description: Dans ce module, découvrez comment créer des onglets personnalisé
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143647"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503892"
 ---
-# <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
+# <a name="build-tabs-for-teams"></a>Créer des onglets pour Teams
 
 Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Ce sont de balises HTML `<iframe\>` simples qui pointent vers des domaines déclarés dans le manifeste de l’application et peuvent être ajoutées dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur individuel. Vous pouvez inclure des onglets personnalisés avec votre application pour incorporer votre propre contenu web dans Teams ou ajouter des fonctionnalités Teams spécifiques à votre contenu web. Pour plus d’informations, consultez [Kit de développement logiciel (SDK) client JavaScript Teams](/javascript/api/overview/msteams-client).
 
@@ -25,11 +25,11 @@ Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Ce 
 
 L’image suivante montre les onglets personnels :
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Onglet personnel" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Onglet personnel" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 L’image suivante montre les onglets du canal Contoso :
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Onglets de canal ou de groupe" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Onglets de canal ou de groupe" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 Il existe quelques conditions préalables que vous devez respecter avant de travailler sur des onglets.
 
