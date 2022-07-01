@@ -3,12 +3,12 @@ title: Nouveautés pour les développeurs dans Teams
 description: Dans ce parcours d’apprentissage, découvrez les nouvelles fonctionnalités de développement et les améliorations apportées à ces fonctionnalités dans Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c11cf1d18c07693cb04b186b5f810ffca833590b
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 3ab4c771bb0bf0cab1fb7c71f2995d18af7b4289
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558568"
+ms.locfileid: "66561615"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -266,6 +266,7 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+| 30/06/2022 | Applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe| Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 06/16/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web| Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Mettre à jour les événements de conversation et d’installation dans votre bot Teams |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Collaboration améliorée avec Live Share SDK |  Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
