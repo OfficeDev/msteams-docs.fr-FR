@@ -297,7 +297,7 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Ajouter un déploiement de lien
       href: messaging-extensions/how-to/link-unfurling.md
-- name: Créer des applications pour les réunions Teams
+- name: Créer des applications pour les réunions et les appels Teams
   items:
     - name: Vue d'ensemble
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
