@@ -3,12 +3,12 @@ title: Support de l'identification unique pour les robots
 description: Découvrez comment obtenir un jeton utilisateur et qu’un développeur de bots peut utiliser une carte de connexion ou le service de bot Azure avec la prise en charge de la carte OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
+ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503654"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611498"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Utiliser l’authentification unique pour les bots
 
@@ -19,7 +19,7 @@ L'authentification par authentification unique dans Microsoft Azure Active Direc
 
 Consultez la vidéo suivante pour en savoir plus sur la prise en charge de l’authentification unique (SSO) pour les bots :
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot SSO au moment de l’exécution
