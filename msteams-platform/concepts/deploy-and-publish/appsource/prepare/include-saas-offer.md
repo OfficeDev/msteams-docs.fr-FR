@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 366902d242ece8a60e601361d4e9257defd7a836
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: d920b4f90ac71f2b470dbda9e6ba863872f59f2a
+ms.sourcegitcommit: c98dececb706d235bfb306852a9f29a387f3858b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558190"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611869"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Inclure une offre SaaS avec votre application Teams
 
@@ -224,4 +224,5 @@ Si vous dissociez une offre SaaS incluse dans la liste de votre magasin Teams, v
 
 ## <a name="see-also"></a>Voir aussi
 
-[Maintenance et prise en charge de votre application publiée](../post-publish/overview.md)
+* [Maintenance et prise en charge de votre application publiée](../post-publish/overview.md)
+* [Instructions de validation pour les applications liées à l’offre SaaS](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
