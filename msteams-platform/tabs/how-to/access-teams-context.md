@@ -3,12 +3,12 @@ title: Obtenir un contexte Teams pour votre onglet
 description: Dans ce module, découvrez comment obtenir le contexte utilisateur dans vos onglets, le contexte utilisateur et les informations de contexte Access
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142310"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658925"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -27,7 +27,7 @@ Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être p
 * Vous créez ou associez des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
 * Vous lancez un flux d’authentification à partir d’Microsoft Azure Active Directory (Azure AD) ou d’un autre fournisseur d’identité, et vous n’avez pas besoin que l’utilisateur entre à nouveau son nom d’utilisateur.
 
-Pour plus d’informations, consultez [l’authentification d’un utilisateur dans votre Microsoft Teams](~/concepts/authentication/authentication.md).
+Pour plus d’informations, consultez [authentifier un utilisateur dans votre Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Bien que ces informations utilisateur puissent vous aider à fournir une expérience utilisateur fluide, vous ne devez pas les utiliser comme preuve d’identité.  Par exemple, un attaquant peut charger votre page dans un navigateur et afficher des informations ou des demandes dangereuses.
@@ -37,7 +37,7 @@ Pour plus d’informations, consultez [l’authentification d’un utilisateur d
 Vous pouvez accéder aux informations de contexte de deux façons :
 
 * Insérer des valeurs d’espace réservé d’URL.
-* Utilisez le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client).
+* Utilisez le Kit de développement logiciel ( [SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client).
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obtenir le contexte en insérant des valeurs d’espace réservé d’URL
 
@@ -69,7 +69,7 @@ Quand ils configurent l’onglet, Teams appelle l’URL suivante :
 
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obtenir le contexte à l’aide de la bibliothèque JavaScript Microsoft Teams
 
-git-issue-clarify-the-full-set-of-values-any-context-object-property-can-take Vous pouvez également récupérer les informations répertoriées ci-dessus à l’aide du [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })`.
+Vous pouvez également extraire les informations mentionnées ci-dessus à l’aide du client [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 Le code suivant fournit un exemple de variable de contexte :
 
@@ -114,7 +114,7 @@ Le code suivant fournit un exemple de variable de contexte :
 }
 ```
 
-Vous pouvez également récupérer les informations répertoriées ci-dessus à l’aide du [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) en appelant la `app.getContext()` fonction. Pour plus d’informations, consultez les propriétés de [l’interface contextuel](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
+Vous pouvez également récupérer les informations répertoriées ci-dessus à l’aide du Kit de développement logiciel ( [SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) en appelant la `app.getContext()` fonction. Pour plus d’informations, consultez les propriétés de [l’interface contextuel](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
 
 
 ## <a name="retrieve-context-in-private-channels"></a>Récupérer le contexte dans des canaux privés
@@ -126,7 +126,7 @@ Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans 
 * `groupId`: Non défini pour les canaux privés
 * `teamId`: défini sur le threadId du canal privé
 * `teamName`: définir sur le nom du canal privé
-* `teamSiteUrl`: défini sur l’URL d’un site SharePoint distinct et unique pour le canal privé
+* `teamSiteUrl`: définir sur l’URL d’un site SharePoint distinct et unique pour le canal privé
 * `teamSitePath`: définir le chemin d’accès d’un site SharePoint distinct et unique pour le canal privé
 * `teamSiteDomain`: défini sur le domaine d’un domaine de site SharePoint distinct et unique pour le canal privé
 
@@ -156,7 +156,7 @@ En plus de ces modifications de champ, deux nouveaux champs sont disponibles pou
 Si votre page utilise l’une de ces valeurs, la valeur du `channelType` champ doit être `Shared` de déterminer si votre page est chargée dans un canal partagé et peut répondre de manière appropriée.
 
 > [!NOTE]
-> Chaque fois qu’un utilisateur redémarre ou recharge le Teams client de bureau ou web, un nouvel ID de session est créé, suivi par Teams session, tandis qu’un utilisateur quitte les applications Teams et le recharge dans Teams plateforme, un nouvel ID de session d’application est créé, suivi par session d’application.
+> Chaque fois qu’un utilisateur redémarre ou recharge le bureau ou le client web Teams, un ID de session est créé, suivi par la session Teams, tandis qu’un utilisateur quitte les applications Teams et le recharge dans la plateforme Teams, un ID de session d’application est créé, suivi par session d’application.
 
 ## <a name="handle-theme-change"></a>Gérer la modification du thème
 

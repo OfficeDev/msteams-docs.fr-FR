@@ -2,23 +2,23 @@
 title: Mettre à jour le manifeste pour activer l’authentification unique pour les onglets
 description: Décrit la mise à jour du manifeste pour l’activation de l’authentification unique pour les onglets
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD) API Graph
-ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
+ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558736"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658962"
 ---
-# <a name="update-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste pour l’authentification unique et l’application en préversion
+# <a name="update-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste d’application pour l’authentification unique et l’application en préversion
 
 Avant de mettre à jour le manifeste de l’application Teams, vérifiez que vous avez configuré le code pour activer l’authentification unique dans votre application onglet.
 
 > [!div class="nextstepaction"]
 > [Configurer le code](tab-sso-code.md)
 
-Vous avez inscrit votre application onglet dans Azure AD et obtenu un ID d’application. Vous avez également configuré votre code pour appeler `getAuthToken()` et gérer le jeton d’accès. À présent, vous devez mettre à jour le manifeste de l’application Teams pour activer l’authentification unique pour votre application onglet. Le manifeste de l’application Teams décrit comment une application s’intègre à Teams.
+Vous avez inscrit votre application onglet dans Azure AD et obtenu un ID d’application. Vous avez également configuré votre code pour appeler `getAuthToken()` et gérer le jeton d’accès. À présent, vous devez mettre à jour le manifeste de l’application Teams pour activer l’authentification unique pour votre application onglet. Le manifeste de l’application Teams décrit comment l’application s’intègre au produit Microsoft Teams.
 
 ## <a name="webapplicationinfo-property"></a>webApplicationInfo, propriété
 
@@ -34,20 +34,20 @@ Configurez la `webApplicationInfo` propriété dans le fichier manifeste de l’
 | ressource | Entrez l’URI de sous-domaine de votre application et l’URI d’ID d’application que vous avez créé dans Azure AD lors de la création de l’étendue. Vous pouvez le copier à partir de la section **Exposer une API** **Azure AD** > . |
 
 > [!NOTE]
-> Utilisez le manifeste version 1.5 ou ultérieure pour implémenter la `webApplicationInfo` propriété.
+> Vous devez utiliser la version 1.5 ou supérieure du manifeste pour implémenter le `webApplicationInfo` champ.
 
 L’URI d’ID d’application que vous avez inscrit dans Azure AD est configuré avec l’étendue de l’API que vous avez exposée. Configurez l’URI `resource` de sous-domaine de votre application pour vous assurer que la demande d’authentification utilisée `getAuthToken()` est du domaine fourni dans le manifeste de l’application Teams.
 
-Pour plus d’informations, consultez [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
+Pour plus d'informations, voir [webApplicationInfo .](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="to-configure-teams-app-manifest"></a>Pour configurer le manifeste de l’application Teams
 
 1. Ouvrez le projet d’application d’onglet.
-2. Ouvrez le dossier du manifeste.
+2. Ouvrez le dossier :
 
   > [!NOTE]
   >
-  > - Le dossier de manifeste doit se trouver à la racine de votre projet. Pour plus d’informations, consultez [Créer un package d’application Microsoft Teams](../../../concepts/build-and-test/apps-package.md).
+  > - Le dossier de manifeste doit se trouver à la racine de votre projet. Pour plus d’informations, consultez [Créer un robot pour Microsoft Teams](../../../concepts/build-and-test/apps-package.md).
   > - Pour plus d’informations sur la création d’un manifeste.json, consultez [Référence : Schéma de manifeste pour Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Ouvrir le fichier manifest.json
@@ -142,9 +142,9 @@ Vous avez configuré l’application onglet pour activer l’authentification un
 
 Pour afficher un aperçu de votre application onglet dans Teams :
 
-1. Créez un package d’application.
+1. Créer un package d’application Teams
 
-   Le package d’application est un fichier zip qui contient le fichier manifeste de l’application et les icônes d’application.
+   Un package d’application est un fichier zip qui contient un manifeste d’application et des icônes d’application.
 
 1. Ouvrir Teams.
 
@@ -166,7 +166,7 @@ Pour afficher un aperçu de votre application onglet dans Teams :
 
 1. Sélectionnez **Accepter** pour donner son consentement pour les étendues open-id.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Boîte de dialogue de consentement Azure AD":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Capture d’écran de la boîte de dialogue de consentement Azure AD":::
 
     Teams ouvre l’application onglet et vous pouvez l’utiliser.
 
@@ -176,6 +176,6 @@ Pour afficher un aperçu de votre application onglet dans Teams :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Schéma de manifeste pour Microsoft Teams](../../../resources/schema/manifest-schema.md)
+- [Référence : schéma de manifeste pour Microsoft Teams](../../../resources/schema/manifest-schema.md)
 - [Format du schéma de manifeste](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
 - [Créer un package de l’application Microsoft Teams](../../../concepts/build-and-test/apps-package.md)

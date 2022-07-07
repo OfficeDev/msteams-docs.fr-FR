@@ -5,12 +5,12 @@ description: Dans cet article, vous allez apprendre à activer la prise en charg
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 674d8870989c42c25a121dc1f3a67616da5f57c1
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 750b101a1a084d6ee409a663f9ee8ae2b4876dfe
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503948"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658916"
 ---
 # <a name="enable-sso-for-message-extensions"></a>Activer l’authentification unique pour les extensions de messagerie
 
@@ -125,7 +125,7 @@ Cette section fournit un exemple de Kit de développement logiciel (SDK) d’aut
 |---------------|------------|------------|-------------|---------------|
 | Authentification du bot | Cet exemple montre comment commencer à utiliser l’authentification dans un bot pour Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Authentification unique Tab, Bot and Message Extension (ME) | Cet exemple montre l’authentification unique pour Tab, Bot et ME : recherche, action, déploiement de liens. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | N/A |
-|Extension Tab, Bot et Message| Cet exemple montre comment vérifier l’authentification dans l’extension Bot, Tab et Messaging avec l’authentification unique | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | N/A |
+|Extension Tab, Bot et Message| Cet exemple montre comment vérifier l’authentification dans l’extension Bot, Tab et Message avec l’authentification unique | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | N/A |
 
 ## <a name="see-also"></a>Voir aussi
 
