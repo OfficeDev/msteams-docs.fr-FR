@@ -1,14 +1,14 @@
 ---
 title: Nouveautés et mises à jour pour les développeurs dans Teams
-description: Quelles sont les nouvelles fonctionnalités de développement de Microsoft Teams introduites et les mises à jour apportées à ces fonctionnalités.
+description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 52a8c9744fdc00b5e1305575f177883cb6c9ead4
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
+ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658960"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66680677"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
