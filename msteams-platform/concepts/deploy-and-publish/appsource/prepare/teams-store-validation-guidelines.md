@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558120"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659038"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
-Le respect de ces directives augmente les chances que votre application réussisse le processus de soumission du magasin Microsoft Teams. Les directives spécifiques aux équipes complètent les [politiques de certification du marché commercial](/legal/marketplace/certification-policies) Microsoft et sont mises à jour fréquemment pour refléter les nouvelles fonctionnalités, les commentaires des utilisateurs et les modifications des règles métier.
+Le respect de ces directives augmente les chances que votre application réussisse le processus de soumission du magasin Microsoft Teams. Les directives spécifiques aux équipes complètent les [politiques de certification du marché commercial](/legal/marketplace/certification-policies#1140-teams) Microsoft et sont mises à jour fréquemment pour refléter les nouvelles fonctionnalités, les commentaires des utilisateurs et les modifications des règles métier.
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ Si votre application authentifie les utilisateurs avec un service externe, suive
   * Les applications qui nécessitent que l'administrateur du locataire effectue une configuration unique doivent appeler la dépendance à l'administrateur du locataire pour configurer l'application (avant qu'un autre utilisateur du locataire ne puisse installer et utiliser l'application).  
   La dépendance doit être indiquée dans le manifeste de l'application, la description longue AppSource, tous les points de contact de la première exécution (message de bienvenue du bot, configuration de l'onglet ou page de configuration), le texte d'aide considéré comme nécessaire dans le cadre de la réponse du bot, de l'extension de composition ou du contenu de l'onglet statique.
   
-* **Expériences de partage de contenu**: les applications qui nécessitent une authentification auprès d’un service externe pour partager du contenu dans les canaux Teams doivent clairement indiquer dans la documentation d’aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’annuler le partage de contenu doit être présente dans votre application Teams.
+* **Expériences de partage de contenu** : les applications qui nécessitent une authentification auprès d'un service externe pour partager du contenu dans les canaux Teams doivent indiquer clairement dans la documentation d'aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’annuler le partage de contenu doit être présente dans votre application Teams.
 
 </details>
 
