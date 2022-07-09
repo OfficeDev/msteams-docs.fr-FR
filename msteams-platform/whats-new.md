@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
-ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
+ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66680677"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695291"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -47,6 +47,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 08/07/2022| Mises à jour pour envoyer l’ID de canal sélectionné par l’utilisateur pendant l’installation de l’application aux bots via des événements de mise à jour de conversation et d’installation |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 06/16/2022 | Fonctionnalités multimédias mises à jour pour prendre en charge le bureau et les appareils mobiles| Intégrer des fonctionnalités d’appareil > [Intégrer des fonctionnalités multimédias](concepts/device-capabilities/media-capabilities.md)|
 | 08/06/2022 | Commentaires de carte facultatifs pour le message de réussite| Créer des bots > conversations de bot > [messages dans les conversations de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03/06/2022 | Mise à jour du module Ajouter l’authentification pour activer le l’authentification unique (SSO) sur l'application d'onglet avec une nouvelle structure et de nouvelles procédures. | Ajouter l’authentification > Onglets > [Activer l’authentification unique dans une application d’onglet](tabs/how-to/authentication/tab-sso-overview.md) |
@@ -268,7 +269,6 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 | -------- | --------- | ------------------ |
 | 30/06/2022 | Applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe| Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 06/16/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web| Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 06/06/2022| Mettre à jour les événements de conversation et d’installation dans votre bot Teams |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Collaboration améliorée avec Live Share SDK |  Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07/02/2022 | Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
