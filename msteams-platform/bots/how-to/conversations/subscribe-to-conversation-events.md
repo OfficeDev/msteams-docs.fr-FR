@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction au message du canal du bot d’événements
-ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906279"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695326"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -409,7 +409,7 @@ Un événement ajouté à un membre est envoyé à votre bot dans les scénarios
 
 1. Lorsque le bot, lui-même, est installé et ajouté à une conversation
 
-   > Dans le contexte de l’équipe, le conversation.id de l’activité est défini sur le `id` canal sélectionné par l’utilisateur pendant l’installation de l’application ou sur le canal à partir duquel le bot a été installé (actuellement disponible en [préversion du développeur public](../../../resources/dev-preview/developer-preview-intro.md)).
+   > Dans le contexte de l’équipe, le conversation.id de l’activité est défini sur le `id` canal sélectionné par l’utilisateur pendant l’installation de l’application ou le canal sur lequel le bot a été installé.
 
 2. Lorsqu’un utilisateur est ajouté à une conversation où le bot est installé
 
@@ -1335,7 +1335,7 @@ Dans cet exemple, les `conversation.id` activités et `installationUpdate` les `
 ![Créer un canal sélectionné](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> L’ID de canal sélectionné est défini uniquement lors `installationUpdate` de *l’ajout* d’événements envoyés lorsqu’une application est installée dans une équipe (actuellement disponible en [préversion du développeur public](../../../resources/dev-preview/developer-preview-intro.md)).
+> L’ID de canal sélectionné est défini uniquement lors de *l’ajout* `installationUpdate` d’événements envoyés lorsqu’une application est installée dans une équipe.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 

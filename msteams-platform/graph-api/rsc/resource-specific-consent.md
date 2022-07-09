@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484865"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695308"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
@@ -75,9 +75,9 @@ Pour plus d’informations, consultez [autorisations de consentement spécifique
 
 ## <a name="enable-rsc-in-your-application"></a>Activer RSC dans votre application
 
-1. [Configurer les paramètres de consentement dans le portail Azure AD](#configure-consent-settings-in-the-azure-ad-portal).
-    1. [Configurer les paramètres de consentement du propriétaire du groupe pour RSC dans une équipe](#configure-group-owner-consent-settings-for-rsc-in-a-team).
-    1. [Configurer les paramètres de consentement utilisateur pour RSC dans une conversation](#configure-user-consent-settings-for-rsc-in-a-chat).
+1. [Configurez les paramètres de consentement](#configure-consent-settings).
+    1. [Configurez les paramètres de consentement du propriétaire du groupe pour RSC dans une équipe à l’aide du portail Azure AD](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal).
+    1. [Configurez les paramètres de consentement du propriétaire de conversation pour RSC dans une conversation à l’aide des API Microsoft Graph](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis).
 1. [Inscrire votre application auprès de la plateforme d’identités Microsoft à l’aide du portail Azure AD](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
 1. [Passez en revue les autorisations de votre application dans le portail Azure AD](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtenez un jeton d’accès à partir de la plateforme d’identités](#obtain-an-access-token-from-the-microsoft-identity-platform).
@@ -87,9 +87,9 @@ Pour plus d’informations, consultez [autorisations de consentement spécifique
     1. [Vérifiez que votre application a ajouté des autorisations RSC dans une équipe](#check-your-app-for-added-rsc-permissions-in-a-team).
     1. [Vérifiez que votre application a ajouté des autorisations RSC dans une conversation](#check-your-app-for-added-rsc-permissions-in-a-chat).
 
-## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>Configurer les paramètres de consentement dans le portail Azure AD
+## <a name="configure-consent-settings"></a>Configurer les paramètres de consentement
 
-### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>Configurer les paramètres de consentement du propriétaire du groupe pour RSC dans une équipe
+### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal"></a>Configurer les paramètres de consentement du propriétaire du groupe pour RSC dans une équipe à l’aide du portail Azure AD
 
 Vous pouvez activer ou désactiver [le consentement du propriétaire du groupe](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directement dans le Portail Microsoft Azure :
 
@@ -101,17 +101,13 @@ Vous pouvez activer ou désactiver [le consentement du propriétaire du groupe](
 
 En outre, vous pouvez activer ou désactiver le consentement du propriétaire du groupe à l’aide de PowerShell. Suivez les étapes décrites dans [configurer le consentement du propriétaire du groupe à l’aide de PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
-### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Configurer les paramètres de consentement de l’utilisateur pour RSC dans une conversation
+### <a name="configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis"></a>Configurer les paramètres de consentement du propriétaire de conversation pour RSC dans une conversation à l’aide des API Microsoft Graph
 
-Vous pouvez activer ou désactiver le[consentement de l’utilisateur](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directement dans le Portail Azure :
+Vous pouvez activer ou désactiver RSC pour les conversations à l’aide de API Graph. La propriété `isChatResourceSpecificConsentEnabled` dans [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) détermine si chat RSC est activé dans le locataire.
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com) en tant qu’administrateur général [ou administrateur d’entreprise](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
-1. Sélectionnez **Azure Active Directory** > **Applications d’entreprise** > **Consentement et autorisations** > [**Paramètres de consentement utilisateur**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Activez, désactivez ou limitez le consentement de l’utilisateur avec le contrôle étiqueté **Consentement de l’utilisateur pour les applications**. La valeur par défaut est **Autoriser le consentement de l’utilisateur pour les applications**. Pour qu’un membre de conversation installe une application à l’aide de RSC, le consentement de l’utilisateur doit être activé pour cet utilisateur.
+   ![Configuration de l’équipe RSC Graph](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
-    ![Configuration de conversation Azure RSC](../../assets/images/azure-rsc-chat-configuration.png)
-
-En outre, vous pouvez activer ou désactiver le consentement de l’utilisateur à l’aide de PowerShell. Suivez les étapes décrites dans [configurer le consentement de l’utilisateur à l’aide de PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
+>  La valeur par défaut de la propriété **isChatResourceSpecificConsentEnabled** est basée sur l’activation ou la désactivation [des paramètres de consentement de l’utilisateur](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) dans le locataire lorsque RSC pour les conversations est utilisé pour la première fois. Cela peut être la première fois a) récupérer [**teamsAppSettings**](/graph/api/teamsappsettings-get) ou b) installer une application Teams avec des autorisations spécifiques aux ressources dans une conversation/réunion.
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Inscrire votre application auprès de la plateforme d’identités Microsoft à l’aide du portail Azure AD
 
