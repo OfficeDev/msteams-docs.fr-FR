@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment créer et gérer un menu de comm
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 65cf1506e6851dd6662ea4637cfb53179532798a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6252531565693f318550398967db16297bfd40c0
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503507"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737418"
 ---
 # <a name="create-a-commands-menu"></a>Créer un menu commandes
 
@@ -41,7 +41,7 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 1. Ouvrez Teams et sélectionnez **Apps** dans le volet gauche. Dans la page **applications**, recherchez **App Studio**, puis sélectionnez **Ouvrir**.
 
    > [!WARNING]
-   > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
+   > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 1er août 2022.
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 

@@ -3,12 +3,12 @@ title: Choix d’une configuration pour tester et déboguer votre application
 description: Dans ce module, découvrez les options de test et de débogage des applications Microsoft Teams dans un environnement local et hébergé dans le cloud.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503885"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737390"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Choisir une configuration de test et déboguer votre application Teams
 
@@ -63,7 +63,7 @@ Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point 
 
 > [!WARNING]
 >
-> * Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
+> * Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 1er août 2022.
 
 ## <a name="cloud-hosted"></a>Hébergé dans le cloud
 

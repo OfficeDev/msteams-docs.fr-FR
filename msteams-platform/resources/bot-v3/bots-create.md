@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment créer un bot à l’aide de la 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485285"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737411"
 ---
 # <a name="create-a-bot"></a>Créer un bot
 
@@ -25,7 +25,7 @@ Pour plus d’informations, consultez [la documentation bot framework](/azure/bo
 
 1. Créez le bot à l’aide de [Bot Framework](https://dev.botframework.com/bots/new). **Veillez à ajouter Microsoft Teams sous la forme d’un canal à partir de la liste de chaînes proposées après avoir créé votre bot.** N’hésitez pas à réutiliser tout ID d’application Microsoft que vous avez généré si vous avez déjà créé votre package d’application/manifeste.
 
-   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Page d’inscription de Bot Framework":::
+   ![Page d’inscription de Bot Framework](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
 > Si vous ne souhaitez pas créer votre bot dans Azure, vous **devez** utiliser ce lien pour créer un bot : [Bot Framework](https://dev.botframework.com/bots/new). Si vous cliquez sur **Créer un bot** dans le portail Bot Framework à la place, vous [allez créer votre bot dans Microsoft Azure](#bots-and-microsoft-azure) à la place.
@@ -52,7 +52,7 @@ Pour plus d’informations, consultez [la documentation bot framework](/azure/bo
 
 > [!WARNING]
 >
->* Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 1er août 2022.
+>* Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 1er août 2022
 
 ## <a name="see-also"></a>Voir aussi
 
