@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: ca310712a8fc6912b68ba6538044d504e46e00a2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485607"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792829"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Ajouter l'authentification unique à l'application Teams
 
@@ -33,7 +33,7 @@ Teams Toolkit vous aide à ajouter l’authentification unique aux fonctionnalit
 Les étapes suivantes vous aident à ajouter l’authentification unique à l’aide du Kit de ressources Teams dans Visual Studio Code
 
 1. Ouvrez **Microsoft Visual Studio Code**.
-2. Sélectionnez Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
+2. Sélectionnez Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
 3. Sélectionnez **Ajouter des fonctionnalités** sous **DÉVELOPPEMENT**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::

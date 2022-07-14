@@ -5,12 +5,12 @@ description: Découvrez comment ajouter l’authentification OAuth à un bot dan
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558855"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792969"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -123,7 +123,7 @@ Pour créer une clé secrète client :
 
 1. Dans la section **Secrets client** , sélectionnez **Nouvelle clé secrète client**. **Une fenêtre de clé secrète client** s’affiche.
 
-    ![Nouvelle clé secrète client](~/assets/images/adaptive-cards/new-client-secret.png)
+    ![Nouvelle clé secrète client](~/assets/images/meetings-side-panel/newclientsecret.png)
 
 1. Entrez **Description** , puis **sélectionnez Ajouter**.
 
@@ -143,7 +143,7 @@ Pour ajouter le canal Microsoft Teams :
 
 1. Sélectionnez **Canaux** dans le volet gauche, puis **sélectionnez Microsoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Teams de canal":::
+    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Sélectionner Teams dans les canaux":::
 
 1. Cochez la case pour accepter les conditions d’utilisation, puis **sélectionnez Accepter**.</br>
 

@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des extensions de réunion pour vos ap
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558085"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792836"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -358,7 +358,7 @@ Le contenu dense ou trop structuré peut être distrayant et écrasant, en parti
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Exemple montrant une disposition d’onglet à une seule colonne.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Exemple montrant une disposition d’onglet à une seule colonne.":::
 
 #### <a name="do-use-a-one-column-tab"></a>À faire : utiliser un onglet à une colonne
 

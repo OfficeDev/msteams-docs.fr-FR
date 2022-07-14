@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: da5da86bf5e96989cf962d88105c47affa899f6e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 13b9f640c57168858ee7c48a8f9dfc83b005c05a
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485649"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66793046"
 ---
 # <a name="manage-multiple-environments"></a>Gérer plusieurs environnements
 
@@ -42,7 +42,7 @@ Après avoir créé un projet, le Kit de ressources Teams crée par défaut :
 
 **Pour ajouter un autre** d’environnement distant :
 
-1. Sélectionnez l’option **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: dans la barre de navigation gauche.
+1. Sélectionnez l’option **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: dans la barre de navigation gauche.
 2. Sélectionnez **+Teams : Créez un environnement** sous la section **Environnement** , comme illustré dans l’image suivante :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="créer":::
@@ -78,7 +78,7 @@ Le tableau suivant répertorie les scénarios courants pour l’approvisionnemen
 
 | Scénarios | Emplacement| Description |
 | --- | --- | --- |
-| Personnaliser une ressource Azure | <ul> <li>Fichiers Bicep sous `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [personnaliser les paramètres et modèles ARM](provision.md#customize-arm-parameters-and-templates) |
+| Personnaliser une ressource Azure | <ul> <li>Fichiers Bicep sous `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [personnaliser les paramètres et modèles ARM](provision.md#customize-arm-template-files) |
 | Réutiliser l’application Azure AD existante pour l’application Teams | <ul> <li>`auth`section dans`.fx/config.<envName>.json`</li> </ul> |  [Utiliser une application Azure AD existante pour votre application Teams](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Réutiliser l’application Azure AD existante pour le bot | <ul> <li>`bot`section dans`.fx/config.<envName>.json`</li> </ul> | [Utiliser une application Azure AD existante pour votre bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Ignorer l’ajout d’un utilisateur lors de l’approvisionnement de SQL | <ul> <li>`skipAddingSqlUser`Propriété dans`.fx/config.<envName>.json`</li> </ul> | [Ignorer l’ajout d’un utilisateur pour la base de données SQL](provision.md#skip-adding-user-for-sql-database) |

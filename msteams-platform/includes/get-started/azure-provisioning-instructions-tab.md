@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>Déployer votre application vers Azure
 
 Le déploiement se compose de deux étapes.  Tout d’abord, les ressources cloud nécessaires sont créées (également appelées approvisionnement). Ensuite, le code de votre application est copié dans les ressources cloud créées. Pour ce didacticiel, vous allez déployer l’application onglet.
-<br> 
+<br>
 <br>
 <details>
 <summary>Quelle est la différence entre provisionnement et déploiement ?</summary>
@@ -33,7 +33,7 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
    Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela peut prendre un certain temps. Vous pouvez surveiller la progression en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet.":::
 
     Si vous le souhaitez, vous pouvez afficher les ressources approvisionnées. Pour ce didacticiel, vous n’avez pas besoin d’afficher les ressources.
 
