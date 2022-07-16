@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557987"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830791"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Ajouter des fonctionnalités aux applications Teams
 
@@ -61,7 +61,7 @@ La liste suivante fournit des limitations pour ajouter d’autres fonctionnalit�
    1. Entrez **Teams :Ajouter des fonctionnalités**.
    1. Appuyez sur **Entrée**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="fonctionnalité d’équipe":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="Pour ajouter des fonctionnalités à l’aide de la palette de commandes.":::
 
    1. Dans la fenêtre contextuelle, sélectionnez la fonctionnalité à ajouter à votre projet.
 
@@ -88,7 +88,7 @@ Le tableau suivant répertorie les fonctionnalités disponibles à ajouter à vo
 
 |Fonctionnalités existantes|Autres fonctionnalités prises en charge|
 |--------------------|--------------------|
-|Onglet SPFx |Aucune|
+|Onglet SPFx |Aucun|
 |Onglet SSO activé |Onglet SSO, bot de notification, bot de commandes, bot, extension de message|
 |Bot de notification |Onglet SSO activé, onglet|
 |Bot de commandes |Onglet SSO activé, onglet|

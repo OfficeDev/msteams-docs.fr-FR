@@ -1,20 +1,20 @@
 ---
 title: Formatez vos messages robots.
 author: surbhigupta
-description: Dans ce module, découvrez comment ajouter une mise en forme enrichie à vos messages de bot, comme la barre d’accès, la liste ordonnée et non triée, le lien hypertexte, le lien image, etc.
+description: Dans ce module, découvrez comment ajouter une mise en forme et des styles enrichis à vos messages de bot, tels que la barre d’accès, la liste ordonnée et non triée, le lien hypertexte, le lien d’image, etc.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150785"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830798"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
-La mise en forme des messages vous permet de tirer le meilleur parti des messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui sont des pièces jointes qui contenant des éléments interactifs, tels que des boutons, du texte, des images, de l’audio, de la vidéo, etc.
+La mise en forme des messages vous permet de tirer le meilleur parti des messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies sous forme de pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l’audio, de la vidéo, etc.
 
 ## <a name="format-text-content"></a>Mettre en forme le contenu de texte
 
@@ -34,7 +34,7 @@ Actuellement, les limitations suivantes s’appliquent à la mise en forme :
 
 * Les messages texte uniquement ne prennent pas en charge la mise en forme des tables.
 * Les cartes enrichies prennent uniquement en charge la mise en forme dans la propriété de texte, et non dans les propriétés de titres ou de sous-titres.
-* Les cartes enrichies ne prennent pas en charge la mise en forme de tables ou Markdown.
+* Les cartes enrichies ne prennent pas en charge la mise en forme markdown ou table.
 
 Après avoir mis en forme du contenu texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Teams.
 
@@ -53,8 +53,8 @@ Certains styles ne sont actuellement pas pris en charge sur toutes les plateform
 | Liste triée              | ❌ | ✔️ |
 | Texte préformaté         | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ |
-| Lien d’image                | ✔️ | ❌ |
+| Lien hypertexte                 | ✔️ | ✔️ |
+| Lien d’image                | ❌ | ❌ |
 
 Une fois la prise en charge multiplateforme effectuée, vérifiez que la prise en charge par des plateformes individuelles est également disponible.
 
@@ -77,8 +77,8 @@ Le tableau suivant fournit la liste des styles pris en charge sur des ordinateur
 | Liste triée              | ✔️ | ❌ | ❌ |
 | Texte préformaté         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Lien d’image                | ✔️ | ✔️ | ✔️ |
+| Lien hypertexte                 | ✔️ | ✔️ | ✔️ |
+| Lien d’image                | ❌ | ❌ | ❌ |
 
 ### <a name="cards"></a>Cartes
 
