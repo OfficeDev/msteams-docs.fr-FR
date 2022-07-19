@@ -3,12 +3,12 @@ title: Demander des autorisations d’appareil pour votre application Microsoft 
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès à des fonctionnalités natives qui nécessitent le consentement de l’utilisateur, telles que les fonctionnalités QR d’analyse, de code-barres, d’image, d’audio et de vidéo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9950dc43bf4d2c5dcdda26a489a2c7b661739f6b
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557714"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841728"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Demander des autorisations d’appareil pour votre application Teams
 
@@ -131,7 +131,7 @@ Par exemple :
 * Pour inviter l’utilisateur à accéder à son emplacement, vous devez appeler `getCurrentPosition()`:
 
     ```JavaScript
-    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
     ```
 
 * Pour inviter l’utilisateur à accéder à son appareil photo sur le bureau ou le web, vous devez appeler `getUserMedia()`:
@@ -216,6 +216,17 @@ Par exemple :
 
 * Pour inviter l’utilisateur à partager l’emplacement sur l’interface de carte, l’application Teams demande l’autorisation lorsque vous appelez `getLocation()`:
 
+    # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+    ```JavaScript
+     function getLocation() {
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+            let currentLocation = JSON.stringify(location);
+     }).catch((error) => { /*Error getting location*/ })} 
+    ```
+
+    # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
     ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -223,6 +234,10 @@ Par exemple :
      });
      } 
     ```
+
+    ***
+
+Voici comment les invites d’autorisations d’appareil apparaissent aux utilisateurs sur les appareils mobiles et de bureau.
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 

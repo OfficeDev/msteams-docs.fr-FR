@@ -5,12 +5,13 @@ description: Découvrez comment concevoir des extensions de réunion pour vos ap
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.date: 04/07/2022
+ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792836"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842037"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -105,7 +106,7 @@ Les personnes peuvent utiliser l’onglet in-meeting pour :
 |3|**En-tête** : inclut le nom de votre application.|
 |4|**Bouton Fermer** : ignore l’onglet. Utilisez toujours l’icône de fermeture supérieure droite au lieu d’une action dans le pied de page.|
 |5|**Barre de notification** : les alertes d’erreur s’affichent directement sous l’en-tête et poussent le reste de votre contenu iframe vers le bas de 20 pixels.|
-|6 |**IFrame** : affiche le contenu de votre application.|
+|6|**IFrame** : affiche le contenu de votre application.|
 
 ### <a name="spacing"></a>Espacement
 

@@ -1,18 +1,18 @@
 ---
 title: Tutoriel de code de partage en direct
+author: surbhigupta
 description: Dans ce module, apprenez à démarrer avec Live Share SDK et à créer un échantillon de lanceur de dés à l'aide de Live Share SDK.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484627"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841798"
 ---
----
-
 # <a name="dice-roller-code-tutorial"></a>Tutoriel de code pour le lanceur de dés
 
 Dans l'application modèle du lanceur de dés, les utilisateurs voient un dé avec un bouton pour le lancer. Lorsque le dé est lancé, le kit SDK de partage en direct utilise le Fluid Framework pour synchroniser les données entre les clients, de sorte que tout le monde voit le même résultat. Pour synchroniser les données, effectuez les étapes suivantes dans le [fichier](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) app.js :

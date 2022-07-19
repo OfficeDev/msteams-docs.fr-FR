@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment créer une page de configuration
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143955"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841700"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -20,7 +20,7 @@ Une page de configuration est un type particulier de [page de contenu](content-p
 * Une [extension du message](~/messaging-extensions/what-are-messaging-extensions.md).
 * Un [connecteur Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un onglet de canal ou de groupe de conversation
 
@@ -38,15 +38,15 @@ Le code suivant est un exemple de code correspondant à la page de configuration
 
 ```html
 <head>
-    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
-</head>
+    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script>
-        app.initialize();
+    <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
         let saveGray = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
@@ -214,7 +214,7 @@ Une fois votre page téléchargée, Teams met à jour les espaces réservés aux
 
 ```html
 <script>
-   app.initialize();
+   await app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -255,7 +255,8 @@ Le code suivant fournit un exemple d'ajout de cette fonction à la page de confi
 
 <span id="user"></span>
 ...
-<script>
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
     const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
@@ -293,11 +294,12 @@ Authentifiez-vous avant de permettre à un utilisateur de configurer votre appli
 
 Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier, reconfigurer ou renommer un canal ou un onglet de groupe. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (anciennement`setSettings()`) configuration de la page de suppression :
+Configuration de Microsoft Teams `setConfig()` (anciennement `setSettings()`) pour la page de suppression :
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
+import { pages } from "@microsoft/teams-js";
 const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",

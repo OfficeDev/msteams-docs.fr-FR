@@ -3,27 +3,16 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: a358652f361dc080d916c4d548363776e7c092a4
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830805"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842030"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
 Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont généralement disponibles (GA) et dans l'aperçu du développeur. Vous pouvez désormais obtenir les dernières mises à jour de la plateforme Teams en vous abonnant au flux de[![ téléchargement RSS](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Pour plus d'informations, voir [Configurer le flux RSS](#get-latest-updates).
-
-## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png"
-
-| Date | Fonctionnalité | Trouvez-le ici |
-| --- | --- | --- |
-| 24/05/2022| [*Aperçu pour les développeurs*] <br> Collaboration améliorée avec Live Share SDK |  Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
-|24/05/2022| Envoyer vos applications Outlook et Office dans le store Teams | Étendre votre application à Microsoft 365 > [Vue d’ensemble](m365-apps/overview.md) |
-|24/05/2022| Conseils sur les applications et nouveautés de la version 2.0.0 de TeamsJS| Outils et kits de développement logiciel (SDK) > [Kit de développement logiciel (SDK) du client JavaScript Teams](tabs/how-to/using-teams-client-sdk.md)  |
-| 24/05/2022 | La version 4.0.0 du kit de ressources de Teams pour Visual Studio Code est désormais en disponibilité générale | Outils et kits de développement logiciel (SDK) > Kit de ressources de Teams pour Visual Studio Code > <br> • [Vue d’ensemble du kit de ressources Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Créer un bot de commandes avec JavaScript](toolkit/add-capability.md) <br> • [Créer un bot de notification avec JavaScript](toolkit/add-capability.md) <br> • [Afficher un aperçu et personnaliser le manifeste de l’application Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Connecter aux API existantes](toolkit/add-API-connection.md) <br> • [Ajouter des fonctionnalités à vos applications Teams](toolkit/add-capability.md) <br> • [Ajouter une expérience d’authentification unique](toolkit/add-single-sign-on.md) <br> • [Ajouter des ressources cloud à l’application Teams](toolkit/add-resource.md) |
-| 24/05/2022 | Introduction de la version 1.13 du manifeste d’application | Manifeste d’application > [schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md) |
-| 24/05/2022 | Bots et extensions de message dans GCC et GCCH | • Planifier votre application > [Vue d’ensemble](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Création de bots > [Vue d’ensemble](bots/what-are-bots.md) </br> • Build d’extensions de messages > [Vue d’ensemble](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)

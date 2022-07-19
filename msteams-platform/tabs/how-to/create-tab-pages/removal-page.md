@@ -5,14 +5,14 @@ description: Dans ce module, découvrez comment créer une page de suppression d
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485215"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841973"
 ---
-# <a name="tab-re-configuration-and-removal-page"></a>Page de re-configuration et de suppression de tabulation
+# <a name="create-a-removal-page"></a>Créer une page de suppression
 
 Vous pouvez étendre et améliorer l’expérience utilisateur en prenant en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un canal ou un onglet de groupe, et vous pouvez autoriser les utilisateurs à reconfigurer votre onglet après l’installation. En outre, l’expérience de suppression d’onglets offre aux utilisateurs des options de post-suppression permettant de supprimer ou d’archiver du contenu.
 
@@ -36,7 +36,7 @@ Lorsque votre onglet est chargé dans un canal ou une conversation de groupe, Te
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Créer une page de suppression d’onglet pour votre application
 
-La page de suppression facultative est une page HTML que vous hébergez et qui s’affiche lorsque l’onglet est supprimé. L’URL de la page de suppression est désignée par la `setConfig()` méthode (anciennement `setSettings()`) dans votre page de configuration. Comme pour toutes les pages de votre application, la page de suppression doit respecter [conditions préalables de l’onglet Teams](../../../tabs/how-to/tab-requirements.md).
+La page de suppression facultative est une page HTML que vous hébergez et qui s’affiche lorsque l’onglet est supprimé. L’URL de la page de suppression est désignée par la `setConfig()` méthode (ou `setSettings()` avant TeamsJS v.2.0.0) dans votre page de configuration. Comme pour toutes les pages de votre application, la page de suppression doit respecter [conditions préalables de l’onglet Teams](../../../tabs/how-to/tab-requirements.md).
 
 ### <a name="register-a-remove-handler"></a>Inscrire un gestionnaire de suppression
 
@@ -58,7 +58,7 @@ Vous pouvez utiliser `getContext()` pour obtenir le contexte actuel dans lequel 
 
 #### <a name="include-authentication"></a>Inclure l’authentification
 
-L’authentification est requise avant de permettre à un utilisateur de supprimer le contenu de l’onglet. Les informations de contexte peuvent être utilisées pour aider à construire des demandes d’authentification et des URL de page d’autorisation. Consultez [flux d’authentification Microsoft Teams pour les onglets](~/tabs/how-to/authentication/auth-flow-tab.md). Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le tableau `manifest.json``validDomains`.
+L’authentification est requise avant de permettre à un utilisateur de supprimer le contenu de l’onglet. Les informations de contexte peuvent être utilisées pour aider à construire des demandes d’authentification et des URL de page d’autorisation. Consultez [flux d’authentification Microsoft Teams pour les onglets](~/tabs/how-to/authentication/auth-flow-tab.md). Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `validDomains` tableau du manifeste de votre application.
 
 Voici un exemple de bloc de code de suppression d’onglet :
 
@@ -67,8 +67,9 @@ Voici un exemple de bloc de code de suppression d’onglet :
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

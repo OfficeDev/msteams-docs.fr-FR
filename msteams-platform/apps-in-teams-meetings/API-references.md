@@ -5,12 +5,13 @@ description: Apprenez à identifier les références d’API d’applications de
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.date: 04/07/2022
+ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561608"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841953"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -32,9 +33,9 @@ Le tableau suivant fournit la liste des API disponibles sur les kits SDK Microso
 |[**Envoyer une notification en réunion**](#send-an-in-meeting-notification)| Fournissez des signaux de réunion à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot et permet de notifier l’action de l’utilisateur qui affiche une notification en réunion. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Obtenir les détails de la réunion**](#get-meeting-details-api)| Obtenez les métadonnées statiques d’une réunion. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Envoyer des légendes en temps réel**](#send-real-time-captions-api)| Envoyez des sous-titres en temps réel à une réunion en cours. | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Partager le contenu de l’application à l’étape**](#share-app-content-to-stage-api)| Partagez des parties spécifiques de l’application à la phase de réunion à partir du panneau côté application dans une réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**Obtenir l’état de partage de la phase de contenu de l’application**](#get-app-content-stage-sharing-state-api)| Récupérez des informations sur l’état de partage de l’application lors de la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
-|[**Obtenir les fonctionnalités de partage de phase de contenu d’application**](#get-app-content-stage-sharing-capabilities-api)| Récupérez les fonctionnalités de l’application pour le partage dans la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**Partager le contenu de l’application à l’étape**](#share-app-content-to-stage-api)| Partagez des parties spécifiques de l’application à la phase de réunion à partir du panneau côté application dans une réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Obtenir l’état de partage de la phase de contenu de l’application**](#get-app-content-stage-sharing-state-api)| Récupérez des informations sur l’état de partage de l’application lors de la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+|[**Obtenir les fonctionnalités de partage de phase de contenu d’application**](#get-app-content-stage-sharing-capabilities-api)| Récupérez les fonctionnalités de l’application pour le partage dans la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Obtenir des événements de réunion Teams en temps réel**](#get-real-time-teams-meeting-events-api)|Récupérez les événements de réunion en temps réel, tels que l’heure de début et de fin réelle.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obtenir l’API de contexte utilisateur
@@ -508,9 +509,9 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 
 En cas de type de réunion périodique,
 
-**startDate** : spécifie la date de début de l’application du modèle. La valeur de startDate doit correspondre à la valeur de date de la propriété start sur la ressource d’événement. Notez que la première occurrence de la réunion peut ne pas se produire si celle-ci ne correspond pas à la fréquence définie.
+**startDate** : spécifie la date de début de l’application du modèle. La valeur de startDate doit correspondre à la valeur de date de la propriété start sur la ressource d’événement. Notez que la première occurrence de la réunion peut ne pas se produire à cette date si elle ne correspond pas au modèle.
 
-**endDate** : spécifie la date à laquelle arrêter l’application du modèle. Notez que la dernière occurrence de la réunion peut ne pas avoir lieu à cette date si celle-ci ne correspond pas à la fréquence définie.
+**endDate** : spécifie la date à laquelle arrêter l’application du modèle. Notez que la dernière occurrence de la réunion peut ne pas se produire à cette date si elle ne correspond pas au modèle.
 
 ## <a name="send-real-time-captions-api"></a>API Envoyer des légendes en temps réel
 

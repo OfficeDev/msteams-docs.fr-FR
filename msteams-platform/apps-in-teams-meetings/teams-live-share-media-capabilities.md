@@ -1,18 +1,18 @@
 ---
 title: Fonctionnalités média de Live Share
+author: surbhigupta
 description: Dans ce module, découvrez-en plus sur les fonctionnalités multimédias Live Share, les suspensions et les points d’attente, l’abaissement audio et la synchronisation vidéo et audio.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.date: 04/07/2022
+ms.openlocfilehash: bf9d7c071a337a56373a9c58879d23a8d2638af7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142478"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841874"
 ---
----
-
 # <a name="live-share-media-capabilities"></a>Fonctionnalités média de Live Share
 
 La vidéo et l’audio sont des parties instrumentales du monde moderne et du lieu de travail. Nous avons entendu de nombreux commentaires indiquant que nous pouvons faire davantage pour améliorer la qualité, l’accessibilité et la protection des licences pour regarder ensemble des vidéos lors de réunions.

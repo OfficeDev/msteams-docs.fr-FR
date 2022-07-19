@@ -4,12 +4,12 @@ description: Dans cet article, découvrez comment utiliser le Kit de développem
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 5a45f2c3a7d098bfe95b55620fb5909fb33e3472
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557728"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842002"
 ---
 # <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
@@ -70,8 +70,19 @@ Le contrôle People Picker sur le web ou le bureau est lancé dans une fenêtre 
 
 L’extrait de code suivant affiche l’utilisation des personnes `selectPeople` de l’API à partir d’une liste :
 
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
 ```javascript
-microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+people.selectPeople({ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false, title: true}).then(people) => 
+ {
+    output(" People length: " + people.length + " " + JSON.stringify(people));
+ }).catch((error) => { /*Unsuccessful operation*/ });
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
+```javascript
+people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -88,8 +99,10 @@ microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: micr
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false, title: true});
 ```
+
+***
 
 ## <a name="error-handling"></a>Gestion des erreurs
 

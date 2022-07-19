@@ -1,9 +1,9 @@
 ### YamlMime:Hub
-title: documentation du développeur Microsoft Teams
+title: Documentation du développeur Microsoft Teams
 summary: Obtenez de la documentation, des exemples de code, des didacticiels et bien plus encore pour vous aider à créer des applications Microsoft Teams personnalisées.
 brand: teams
 metadata:
-  title: documentation du développeur Microsoft Teams Platform
+  title: Documentation pour les développeurs de la plateforme Microsoft Teams
   description: La plateforme de développement Microsoft Teams permet aux développeurs d’intégrer facilement leurs propres applications et services afin d’améliorer la productivité, de prendre des décisions plus rapides, de se concentrer en réduisant le changement de contexte et de créer une collaboration autour du contenu et des flux de travail existants.
   ms.service: msteams
   ms.topic: hub-page
@@ -11,18 +11,18 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 5cff59172c4c29a3d5e4253509cbd4c5be50ee4e
-  ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+  ms.openlocfilehash: 586bb6c57e338a3333c7f525eb98b710ac04c72a
+  ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/25/2022
-  ms.locfileid: "65668003"
+  ms.lasthandoff: 07/19/2022
+  ms.locfileid: "66841995"
 highlightedContent:
   items:
-  - title: 'Microsoft Build 2022 '
+  - title: Quelles sont les nouveautés ?
     itemType: whats-new
     url: /microsoftteams/platform/whats-new
-  - title: "Vous débutez avec Teams développement ? \U0001F680Commencez ici !"
+  - title: "Vous débutez avec le développement Teams ? \U0001F680Commencez ici !"
     itemType: get-started
     url: /microsoftteams/platform/get-started/get-started-overview
   - title: Programmez votre application
@@ -65,7 +65,7 @@ conceptualContent:
       text: Collecter des informations d’entrée et de collecte avec des modules de tâches
     - url: /learn/modules/msteams-webhooks-connectors/
       itemType: learn
-      text: Connecter services web aux canaux et aux équipes avec des webhooks et des connecteurs Office 365
+      text: Connecter des services web à des canaux et des équipes avec des webhooks et des connecteurs Office 365
     - url: /microsoftteams/platform/m365-apps/overview
       itemType: overview
       text: Étendre Teams applications à travers Microsoft 365
@@ -102,7 +102,7 @@ conceptualContent:
       text: Authentification utilisateur et authentification unique
     - url: /microsoftteams/platform/samples/teams-low-code-solutions
       itemType: how-to-guide
-      text: Créer des applications, des bots et des flux à faible code Teams avec Microsoft Power Platform
+      text: Créer des applications, des bots et des flux Teams à faible code avec Microsoft Power Platform
     - url: https://dev.teams.microsoft.com/home
       itemType: reference
       text: Documentation pour les développeurs
@@ -111,7 +111,7 @@ conceptualContent:
       text: Schéma de manifeste pour les applications Teams
     - url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
       itemType: reference
-      text: Créer des scénarios pour les applications Teams
+      text: Scénarios de génération pour les applications Teams
     - url: https://developer.microsoft.com/microsoft-teams/app-development-resources
       itemType: reference
       text: Meilleures pratiques pour les scénarios d’application Teams
@@ -122,7 +122,7 @@ conceptualContent:
       text: Intégrer un chatbot Power Virtual Agents
     - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps
       itemType: reference
-      text: Bouton Intégrer le partage à Teams pour votre site web
+      text: Bouton Intégrer share-to-Teams pour votre site web
     - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
       itemType: reference
       text: Intégrer un onglet Teams à SharePoint
@@ -142,7 +142,7 @@ conceptualContent:
       text: Blog pour les développeurs de Microsoft Teams
     - url: https://aka.ms/microsoftteamscommunitycall
       itemType: overview
-      text: Microsoft Teams appels de la communauté
+      text: Appels de la communauté Microsoft Teams
     - url: https://docs.microsoft.com/teamblog/
       itemType: whats-new
       text: Annonces
@@ -151,7 +151,7 @@ conceptualContent:
       text: Microsoft Teams Developer Community et réponse
     - url: /microsoftteams/platform/resources/teams-contributor-reference
       itemType: overview
-      text: Contribuer à Microsoft Teams documentation
+      text: Contribuer à la documentation Microsoft Teams
   - title: Audience
     links:
     - url: https://developer.microsoft.com/microsoft-teams
@@ -166,10 +166,10 @@ conceptualContent:
 tools:
   title: Outils et kits de développement durable
   items:
-  - title: extension Microsoft Teams Toolkit pour Visual Studio Code
+  - title: Extension du Kit de ressources Microsoft Teams pour Visual Studio Code
     imageSrc: /media/logos/logo_vs-code.svg
     url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-  - title: extension Microsoft Teams Toolkit pour Visual Studio
+  - title: Extension du Kit de ressources Microsoft Teams pour Visual Studio
     imageSrc: /media/logos/logo_vs-ide.svg
     url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: Portail des développeurs

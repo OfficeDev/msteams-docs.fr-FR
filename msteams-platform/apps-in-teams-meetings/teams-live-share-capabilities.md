@@ -1,18 +1,18 @@
 ---
 title: Prise en main de Live Share
+author: surbhigupta
 description: Dans ce module, découvrez-en plus sur les fonctionnalités du Kit de développement logiciel (SDK) Live Share, les autorisations RSC et les structures de données éphémères.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 35d5228ac39dd1a9d58d699d8c989aeeceaf765d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.date: 04/07/2022
+ms.openlocfilehash: 2c60ce362810fdaf4b98342d2250ea34d9fbfbeb
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503346"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841882"
 ---
----
-
 # <a name="live-share-core-capabilities"></a>Fonctionnalités principales de Live Share
 
 Le Kit de développement logiciel (SDK) Live Share peut être ajouté aux contextes `sidePanel` et `meetingStage`  de l’extension de votre réunion avec un minimum d’efforts. Cet article se concentre sur la façon d’intégrer le Kit de développement logiciel (SDK) Live Share dans votre application et les fonctionnalités clés du Kit de développement logiciel (SDK).

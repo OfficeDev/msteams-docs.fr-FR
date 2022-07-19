@@ -5,16 +5,18 @@ description: Découvrez comment déployer un lien, ouvrir la vue des étapes et 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484927"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841988"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
 La vue d’étape est un nouveau composant d’interface utilisateur. Il vous permet d’afficher le contenu qui est ouvert en plein écran dans Teams et épinglé sous forme d’onglet.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="stage-view"></a>Vue des étapes
 
@@ -28,7 +30,7 @@ L’Affichage étendu fournit une expérience plus transparente de l’affichage
 
 |Vue des étapes|Module de tâche|
 |:-----------|:-----------|
-|La vue des étapes est utile lorsque vous avez un contenu riche à afficher aux utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il offre de riches fonctionnalités qui permettent de rendre votre contenu en plein écran.|[Le module de tâches](../task-modules-and-cards/task-modules/task-modules-tabs.md) est particulièrement utile pour afficher des messages qui requièrent l'attention de l'utilisateur, ou pour recueillir les informations nécessaires pour passer à l'étape suivante.|
+|La vue des étapes est utile lorsque vous avez un contenu riche à afficher aux utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il fournit des fonctionnalités enrichies qui permettent d’afficher votre contenu dans le canevas en plein écran.|[Le module de tâches](../task-modules-and-cards/task-modules/task-modules-tabs.md) est particulièrement utile pour afficher des messages qui requièrent l'attention de l'utilisateur, ou pour recueillir les informations nécessaires pour passer à l'étape suivante.|
   
 ## <a name="invoke-stage-view"></a>Invoquer la vue de scène
 
@@ -87,17 +89,18 @@ Voici le processus d’appel de la vue d’étape :
 * Le robot répond avec un `200` code.
 
 > [!NOTE]
+
 > Sur les clients mobiles de Teams, l'invocation de l’Affichage étendu pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur web par défaut de l'appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 
-Pour invoquer la vue des étapes par le biais d'un lien profond depuis votre onglet, vous devez intégrer l'URL du lien profond dans `microsoftTeams.executeDeeplink(url)`l'API. Le lien profond peut également être transmis par une `OpenURL`action dans la carte.
+Pour invoquer la vue des étapes par le biais d'un lien profond depuis votre onglet, vous devez intégrer l'URL du lien profond dans `app.openLink(url)`l'API. Le lien profond peut également être transmis par une `OpenURL`action dans la carte.
 
 ### <a name="syntax"></a>Syntaxe
 
-Voici la syntaxe des liens profonds :
+Voici la syntaxe de lien profond :
 
-<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl »:"contentUrl »,"websiteUrl »:"websiteUrl »,"name »:"Contoso"}
+`<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
 ### <a name="examples"></a>Exemples
 
@@ -109,24 +112,24 @@ Voici des exemples de liens profonds pour invoquer la vue des étapes :
 
 URL non codée :
 
-<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title »:"Quotes: Miscellaneous »,"threadId »:"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+`<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}`
 
 URL codée :
 
-<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>
+`<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>`
 
 **Exemple 2 : URL sans threadId**
 
 URL non codée :
 
-<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={"contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title »:"Quotes: Miscellaneous"}
+`<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}`
 
 Encodé
 
-<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>
+`<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>`
 
 > [!NOTE]
-> Tous les liens profonds doivent être encodés avant de coller l'URL. Nous ne prenons pas en charge les URL non codées.
+> Tous les liens profonds doivent être encodés avant de coller l’URL. Nous ne prenons pas en charge les URL non codées.
 >
 > * Le `name`est facultatif en lien profond. S'il n'est pas inclus, le nom de l'application le remplace.
 > * Le lien profond peut également être transmis par une `OpenURL`action.
