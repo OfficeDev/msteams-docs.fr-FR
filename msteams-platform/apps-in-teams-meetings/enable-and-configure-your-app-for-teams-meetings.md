@@ -3,13 +3,15 @@ title: Créer des applications pour les réunions Teams > Activer et configurer 
 author: surbhigupta
 description: Découvrez comment activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer les fonctionnalités, etc.
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.date: 04/07/2022
+ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557735"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841896"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -126,9 +128,9 @@ Pendant une réunion, vous pouvez utiliser la notification ou la `meetingSidePan
 
 #### <a name="meeting-sidepanel"></a>SidePanel de réunion
 
-Le `meetingSidePanel` vous permet de personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles de vues et d’actions. Dans le manifeste de votre application, vous devez l’ajouter `meetingSidePanel` au tableau de contextes. Dans la réunion et dans tous les scénarios, l’application est affichée dans un onglet de la réunion de 320 pixels de largeur. Pour plus d’informations, consultez [Interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+Le `meetingSidePanel` vous permet de personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles de vues et d’actions. Dans le manifeste de votre application, vous devez l’ajouter `meetingSidePanel` au tableau de contextes. Dans la réunion et dans tous les scénarios, l’application est affichée dans un onglet de la réunion de 320 pixels de largeur. Pour plus d'informations, consultez l'[interface FrameInfo](/javascript/api/@microsoft/teams-js/frameinfo) (connue sous le nom de `FrameContext` avant TeamsJS v.2.0.0).
 
-Pour utiliser l’API `userContext` pour router les demandes, consultez [Teams Kit de développement logiciel (SDK](../tabs/how-to/access-teams-context.md#user-context)). Pour plus d’informations, consultez [Flux d’authentification Teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md). Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Les onglets peuvent donc utiliser OAuth 2.0 directement. Pour plus d'informations, consultez[Plateforme d'identité Microsoft et flux de code d'autorisation OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Vous pouvez [utiliser le contexte de l'utilisateur pour acheminer les requêtes](../tabs/how-to/access-teams-context.md#user-context). Pour plus d’informations, consultez [Flux d’authentification Teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md). Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Les onglets peuvent utiliser OAuth 2.0 directement. Pour plus d'informations, consultez[Plateforme d'identité Microsoft et flux de code d'autorisation OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 L’extension de message fonctionne comme prévu lorsqu’un utilisateur est en mode réunion. L’utilisateur peut publier des cartes d’extension de message de composition. AppNameen réunion est une info-bulle qui indique le nom de l’application dans la barre U de la réunion.
 
