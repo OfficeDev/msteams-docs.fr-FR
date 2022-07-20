@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503731"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895495"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -460,7 +460,7 @@ Utilisé lorsque l’expérience de votre application possède une expérience d
 |`configurationUrl`|string|2 048 caractères|✔️|L’URL https:// à utiliser lors de la configuration de l’onglet.|
 |`scopes`|tableau d’énumération|1|✔️|Actuellement, les onglets configurables ne prennent en charge que les étendues `team` et `groupchat`. |
 |`canUpdateConfiguration`|Boolean|||Une valeur indiquant si une instance de la configuration de l'onglet peut être mise à jour par l'utilisateur après sa création. Valeur par défaut : **vrai**.|
-|`context` |tableau d’énumération|6 ||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |tableau d’énumération|6||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Un chemin de fichier relatif vers une image d'aperçu d'onglet à utiliser dans SharePoint. Taille 1024x768. |
 |`supportedSharePointHosts`|tableau d’énumération|1||Définit la manière dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage`et `sharePointWebPart`  |
 
@@ -505,7 +505,7 @@ L’élément est un tableau (maximum d’un seul élément &mdash; actuellement
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Liste facultative de commandes que votre bot peut recommander aux utilisateurs. L’objet est un tableau (maximum de deux éléments) avec tous les éléments de type `object` ; vous devez définir une liste de commandes distincte pour chaque étendue que votre bot prend en charge. Pour plus d’informations, voir [Menus bot.](~/bots/how-to/create-a-bot-commands-menu.md)
+Une liste de commandes que votre robot peut recommander aux utilisateurs. L’objet est un tableau (maximum de deux éléments) avec tous les éléments de type `object` ; vous devez définir une liste de commandes distincte pour chaque étendue que votre bot prend en charge. Pour plus d’informations, voir [Menus bot.](~/bots/how-to/create-a-bot-commands-menu.md)
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -660,7 +660,10 @@ Indique si l'indicateur de chargement doit être affiché ou non lorsqu'une appl
 Indique si une application personnelle est rendue sans barre d’en-tête d’onglet (mode plein écran). La valeur par défaut est **False**.
 
 > [!NOTE]
-> `isFullScreen` fonctionne uniquement pour les applications publiées dans votre organisation.
+>
+> * `isFullScreen` ne fonctionne que pour les applications publiées dans votre organisation. Les applications tierces intégrées et publiées ne peuvent pas utiliser cette propriété (elle est ignorée).
+>
+> * `isFullScreen=true` supprime la barre d'en-tête et le titre fournis par Teams des applications personnelles et des boîtes de dialogue du module de tâches.
 
 ## <a name="activities"></a>activités
 
@@ -750,7 +753,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
