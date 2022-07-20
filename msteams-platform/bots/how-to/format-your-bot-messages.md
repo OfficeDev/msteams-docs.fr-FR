@@ -5,16 +5,19 @@ description: Dans ce module, découvrez comment ajouter une mise en forme et des
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: 43a64a5ab7d44058831b643f2516839c248e9af1
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830798"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895481"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
 La mise en forme des messages vous permet de tirer le meilleur parti des messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies sous forme de pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l’audio, de la vidéo, etc.
+
+> [!NOTE]
+> La limite de taille des messages du bot est de 40 Ko. Si la limite de taille du message du bot dépasse 40 Ko, le bot reçoit un code d’état `413` (RequestEntityTooLarge), qui contient le code `MessageSizeTooBig`d’erreur. La limite de taille des messages du bot inclut la charge utile de message entière encodée en UTF-16 et n’inclut pas les images encodées en base 64.
 
 ## <a name="format-text-content"></a>Mettre en forme le contenu de texte
 
