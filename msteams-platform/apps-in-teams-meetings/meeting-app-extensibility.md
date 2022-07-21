@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 760b108ac343e6805989c9dc1e709d8f15e3b684
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841903"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919850"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -41,8 +41,7 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 > Si vous avez intégré un onglet à votre réunion, votre application doit suivre le [flux d’authentification unique Teams (SSO) pour les onglets](../tabs/how-to/authentication/tab-sso-overview.md).
 
 > [!NOTE]
->
-> * L’option Ajouter une application pour l’application d’extension de réunion Teams n’est pas prise en charge dans le client web Teams.
+> L’option Ajouter une application pour l’application d’extension de réunion Teams n’est pas prise en charge dans le client web Teams.
 
 #### <a name="pre-meeting-app-experience"></a>Expérience de l'application avant la réunion
 

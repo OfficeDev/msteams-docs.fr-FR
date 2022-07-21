@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841953"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919759"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -134,7 +134,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-| Nom de la propriété | Objectif |
+| Nom de la propriété | Description |
 |---|---|
 | **user.id** | ID de l’utilisateur. |
 | **user.aadObjectId** | ID d’objet Azure Active Directory de l’utilisateur. |
@@ -226,7 +226,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&<completionBotId>=<BOT_APP_ID>"
         }
     },
     "replyToId": "1493070356924"
@@ -235,7 +235,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
-| Nom de la propriété | Objectif |
+| Nom de la propriété | Description |
 |---|---|
 | **type** | Type d’activité. |
 | **text** | Contenu du texte du message. |
@@ -243,6 +243,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Valeur booléenne indiquant si une notification doit être affichée à l’utilisateur pendant une réunion. |
 | **channelData.notification.externalResourceUrl** | Valeur de l’URL de ressource externe de la notification.|
 | **replyToId** | ID du message parent ou racine du thread. |
+| **APP_ID** | ID d’application déclaré dans le manifeste. |
+| **completionBotId** | ID d’application bot |
 
 ### <a name="response-codes"></a>Codes de réponse
 
@@ -491,7 +493,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 
 ---
 
-| Nom de la propriété | Objectif |
+| Nom de la propriété | Description |
 |---|---|
 | **details.id** | ID de la réunion, encodé sous forme de chaîne BASE64. |
 | **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels API Graph MS. |
@@ -899,7 +901,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 }
 ```
 
-| Nom de la propriété | Objectif |
+| Nom de la propriété | Description |
 |---|---|
 | **name** | Nom de l'utilisateur.|
 | **type** | Type d’activité. |

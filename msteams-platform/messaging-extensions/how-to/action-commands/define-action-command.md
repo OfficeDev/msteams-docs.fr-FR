@@ -5,16 +5,19 @@ description: Dans ce module, découvrez comment définir des commandes d’actio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503934"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919843"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> Lorsqu’une action de message est lancée, les détails de la pièce jointe ne sont pas envoyés dans le cadre de l’activité `turncontext` d’appel.
 
 Les commandes d’action vous permettent de présenter à vos utilisateurs une fenêtre contextuelle modale appelée module de tâche dans Teams. Le module de tâche collecte ou affiche des informations, traite l’interaction et les renvoie à Teams. Ce document vous guide sur la façon de sélectionner des emplacements d’appel de commande d’action, de créer votre module de tâche, d’envoyer un message final ou une carte, de créer une commande d’action à l’aide d’App Studio ou de le créer manuellement.
 
@@ -27,7 +30,7 @@ Avant de créer la commande d’action, vous devez décider des facteurs suivant
 Consultez la vidéo suivante pour découvrir comment définir des commandes d’action d’extension de message :
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Sélectionner des emplacements d’appel de commande d’action
@@ -84,7 +87,7 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail des développeurs**.
 
 > [!WARNING]
- > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Developer Portal Developer Portal](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
+ > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio ne sera plus pris en charge à compter du 1er août 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 

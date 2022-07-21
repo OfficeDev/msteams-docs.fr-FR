@@ -5,12 +5,12 @@ description: 'Découvrez comment concevoir des notifications de flux d’activit
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9a17027f7dd68993a118f24bb23cfff0a56651e1
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558008"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919766"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Conception de notifications de flux d’activité pour votre application Microsoft Teams
 
@@ -37,7 +37,7 @@ Le flux d’activité permet aux utilisateurs d’accéder à leurs notification
 |3|**Titre (première ligne) : Acteur + raison** : *Acteur* : nom de l’utilisateur ou de l’application qui a lancé l’activité. *Motif* : décrit l’activité.|
 |4|**Horodatage** : indique quand l’activité s’est produite.|
 |5|**Emplacement (deuxième ligne)** : indique où l’activité s’est produite dans Teams.|
-|6 |**Aperçu du texte (troisième ligne)** : affiche une ligne tronquée à partir du début de la notification.|
+|6|**Aperçu du texte (troisième ligne)** : affiche une ligne tronquée à partir du début de la notification.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Types de cartes de notification de flux d’activité
 
@@ -73,6 +73,10 @@ Chaque activité génère une notification système. Ce qui s’affiche dépend 
 |3|Mac|
 
 ---
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas](../../sbs-graphactivity-feedbroadcast.yml) pour envoyer des notifications de flux d’activité dans Teams.
 
 ## <a name="next-step"></a>Étape suivante
 

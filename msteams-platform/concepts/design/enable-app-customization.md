@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment les administrateurs Teams peuven
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 0a7a98c5d981f35bc60a6099873a445b45caa071
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503444"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919822"
 ---
 # <a name="customize-your-teams-app"></a>Personnaliser votre application Teams
 
@@ -23,7 +23,7 @@ Voici quelques exemples possibles de cette fonctionnalité :
 * Modification de la couleur d’accentuation de l’application pour qu’elle corresponde à la marque d’une organisation.
 * Mise à jour du nom de l’application de *Contoso* vers *Agent Contoso*, qui est le nom que les utilisateurs de l’organisation verront. (Remarque : les utilisateurs qui ajoutent un connecteur à une conversation ou à un canal verront toujours le nom de l’application d’origine, *Contoso*.)
 
-Vous pouvez activer cette fonctionnalité dans le [Portail des développeurs pour Teams](https://dev.teams.microsoft.com/home). Cela configure `configurableProperties`, qui n’est pas disponible dans les versions antérieures à la version 1.10 du manifeste de l’application Teams.
+Vous pouvez activer cette fonctionnalité en définissant les propriétés d’application que vos clients peuvent personnaliser dans la [`configurableProperties` section du manifeste de l’application Teams](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), à compter de la version 1.11. Vous pouvez le faire dans le [portail des développeurs pour Teams](https://dev.teams.microsoft.com/home) si vous avez choisi d’utiliser le portail des développeurs pour modifier le manifeste de votre application.
 
 ### <a name="test-your-app"></a>Tester votre application
 
