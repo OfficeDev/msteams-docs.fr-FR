@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659038"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962474"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -617,7 +617,7 @@ Concevez votre application avec des composants Fluent UI [de base](~/concepts/de
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* Les onglets avec barre d'outils dans le rail gauche doivent laisser un espacement de 20 pixels à partir de la navigation gauche de Teams. [*Correction obligatoire*]
+* Les onglets avec barre d’outils dans le rail gauche doivent laisser un espacement de 20 pixels à partir de la navigation à gauche de Teams. [*Correction obligatoire*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
