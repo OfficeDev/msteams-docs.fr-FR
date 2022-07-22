@@ -4,12 +4,12 @@ description: Dans ce module, découvrez ce qu’est la mise en forme du texte de
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144207"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962432"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -22,7 +22,7 @@ Les cartes prennent uniquement en charge la mise en forme dans la propriété de
 
 La prise en charge du formatage diffère selon les types de cartes. Le rendu de la carte peut différer légèrement entre le client Microsoft Teams de bureau et le client Microsoft Teams mobile, ainsi qu'entre Teams et le navigateur de bureau.
 
-Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Les formats d'image pris en charge sont les formats .png, .jpg ou .gif. Les dimensions ne doivent pas dépasser 1024 x 1024 px et la taille du fichier doit être inférieure à 1 Mo. Les images .gif animées ne sont pas prises en charge. Pour plus d’informations, consultez [types de cartes](./cards-reference.md#inline-card-images).
+Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Les formats d'image pris en charge sont les formats .png, .jpg ou .gif. Les dimensions ne doivent pas dépasser 1024 x 1024 pixels et la taille du fichier doit être inférieure à 1 Mo. Les images .gif animées ne sont pas prises en charge. Pour plus d’informations, consultez [types de cartes](./cards-reference.md#inline-card-images).
 
 Vous pouvez mettre en forme Cartes adaptatives et les cartes connecteur Office 365 avec Markdown qui incluent certains styles pris en charge.
 
