@@ -5,21 +5,24 @@ description: Avec ce parcours d’apprentissage, commencez à utiliser des bots 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
+ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558316"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912260"
 ---
 # <a name="build-bots-for-teams"></a>Créer des bots pour Teams
 
 Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches simples et répétitives effectuées par des utilisateurs tels que le service clientèle ou le personnel de support technique. L’utilisation quotidienne de bots inclut des bots qui fournissent des informations sur la météo, qui effectuent des réservations au restaurant ou qui fournissent des informations concernant les voyages. Les interactions avec les bots peuvent être des questions et réponses rapides ou des conversations complexes.
 
 > [!IMPORTANT]
-> Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD).
 >
-> Les applications Bot dans Microsoft Teams sont disponibles dans GCC-High par le biais d’[Azure Bot Service](/azure/bot-service/channel-connect-teams).
+> * Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD).
+>
+> * Les applications bot au sein de Microsoft Teams sont disponibles dans le Cloud de la communauté du secteur public supérieur via le [Service de bot d’Azure](/azure/bot-service/how-to-deploy-gov-cloud-high) et l’inscription du canal de bot doit être effectuée dans le portail Azure Government.
+>
+> * Les applications dans le Cloud de la communauté du secteur public supérieur prennent uniquement en charge jusqu’à la version de manifeste v1.10. Les URL d’image dans Cartes adaptatives ne sont pas prises en charge dans l’environnement du Cloud de la communauté du secteur public supérieur. Vous pouvez remplacer une URL d’image par un DataUri encodé en Base64.
 
 Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web à l’aide de texte, de cartes interactives et de modules de tâche.
 
