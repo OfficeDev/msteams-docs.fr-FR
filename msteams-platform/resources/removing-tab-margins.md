@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment la suppression des marges de tab
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558281"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962425"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
@@ -38,9 +38,9 @@ Non, vous devez fournir votre propre remplissage ou marges à gauche et à droit
 
 **Quelle est la taille des marges d’onglet que Teams a appliquées précédemment ?**
 
-* Gauche et droite : 20 px
-* Haut : 16 px
-* Bas : 0 px
+* Gauche et droite : 20 pixels
+* Haut : 16 pixels
+* Bas : 0 pixels
 
 > [!IMPORTANT]
 >

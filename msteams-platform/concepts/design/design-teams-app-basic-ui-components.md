@@ -1,20 +1,20 @@
 ---
 title: Concevoir votre application avec des composants Fluent UI de base
 author: heath-hamilton
-description: Découvrez les composants d’interface utilisateur utilisés pour créer des applications Microsoft Teams et obtenir le Kit d’interface utilisateur Teams. En savoir plus sur l’info-bulle pivot du sélecteur de signets de liste déroulante de carte de navigation fluent kit
+description: Découvrez comment concevoir des applications Microsoft Teams à l’aide des composants Fluent UI du Kit d’interface utilisateur Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4f3295036315819413f262e5a224dd2231eb431d
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557756"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962439"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants Fluent UI de base
 
-Vous pouvez créer votre application Teams à partir de zéro avec les composants d’interface utilisateur Fluent de base suivants. Conçus de la manière la plus plate possible, ces composants peuvent fonctionner sur différents cas d’usage, thèmes et tailles d’écran.
+Vous pouvez concevoir et générer votre application Teams à partir de zéro avec les composants d’interface utilisateur Fluent de base suivants. Conçus de la manière la plus plate possible, ces composants peuvent fonctionner sur différents cas d’usage, thèmes et tailles d’écran.
 
 Les illustrations de cette page montrent à quoi ressemblent les composants dans les thèmes teams par défaut (clair) et foncé.
 

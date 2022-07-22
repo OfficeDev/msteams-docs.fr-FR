@@ -5,12 +5,12 @@ description: Dans ce module, apprenez à créer une conversation de sous-entité
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841981"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962418"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -52,9 +52,12 @@ L’image suivante montre le panneau de conversation :
 Si l’utilisateur démarre une conversation, il est important d’écouter le rappel de cet événement pour récupérer et enregistrer l’ID de **conversation** :
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 L’objet `conversationResponse` contient des informations relatives à la conversation qui a été démarrée. Il est recommandé d’enregistrer toutes les propriétés de cet objet de réponse pour une utilisation ultérieure.
@@ -81,12 +84,15 @@ Vous pouvez fermer manuellement l’affichage de conversation en appelant la `cl
 microsoftTeams.conversations.closeConversation();
 ```
 
-Vous pouvez également écouter un événement lorsque l’affichage de conversation est fermé par un utilisateur.
+Vous pouvez également écouter un événement lorsque les utilisateurs sélectionnent **Fermer (X)** dans l’affichage conversation.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## <a name="code-sample"></a>Exemple de code
