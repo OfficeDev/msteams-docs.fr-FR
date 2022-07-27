@@ -3,12 +3,12 @@ title: Authentification en mode silencieux
 description: Dans ce module, découvrez comment effectuer l’authentification silencieuse, l’authentification unique et Azure AD pour les onglets et comment il fonctionne
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503626"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035309"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Utiliser l’authentification silencieuse dans Azure AD
 

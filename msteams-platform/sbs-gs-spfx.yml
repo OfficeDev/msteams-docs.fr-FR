@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Vue d’ensemble de Retour à la prise en main
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: b413dc05a7bc860e75f72af8fb1a965fc7f0cf08
-  ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+  ms.openlocfilehash: 4fcdc3d3631831ddc74c80f62ef42a3ea8fa524a
+  ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/22/2022
-  ms.locfileid: "66962467"
+  ms.lasthandoff: 07/27/2022
+  ms.locfileid: "67035218"
 items:
 - durationInMinutes: 1
   content: "SharePoint Framework (SPFx) est un modèle de développement permettant de créer des solutions côté client pour Microsoft Teams et SharePoint. Votre application SPFx Teams est hébergée sur Microsoft 365. Il fournit une prise en charge complète du développement et de l’hébergement de votre solution SPFx côté client. Vous pouvez intégrer votre solution SharePoint Framework avec :\n\n- Données SharePoint et extension de Microsoft Teams. \n- Vos API métier sont sécurisées avec Azure Active Directory.\n\nPour ce didacticiel, démarrez le développement d’applications Microsoft Teams avec SPFx en créant votre première application avec une fonctionnalité d’onglet.\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png\" alt-text=\"Diagramme montrant que cette application comporte trois fonctionnalités. L’onglet est mis en surbrillance.\":::\n\n> [!NOTE]\n> Actuellement, Teams Toolkit offre uniquement la fonctionnalité Tab dans une application Teams avec Visual Studio Code et SharePoint Framework. Les fonctionnalités bot et extension de message ne sont pas disponibles.\n"

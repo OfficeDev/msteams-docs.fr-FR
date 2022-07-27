@@ -5,19 +5,19 @@ description: Dans ce module, découvrez les extensions de messagerie et les scé
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: af67eb36d89903f22a8479e04ed22134b7741c80
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189797"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035169"
 ---
 # <a name="message-extensions"></a>Extensions de messages
 
 Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez renvoyer les résultats de cette interaction au client Teams sous la forme d’une carte richement mise en forme.
 
 > [!IMPORTANT]
-> Les extensions de message sont disponibles dans les environnements Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) et GCC-High, mais pas dans l’environnement du ministère de la Défense (DoD).
+> Les extensions de message sont disponibles dans les environnements cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans l’environnement du ministère de la Défense (DoD).
 
 Ce document fournit une vue d’ensemble de l’extension de message, des tâches effectuées dans différents scénarios, du fonctionnement de l’extension de message, des commandes d’action et de recherche, et du déploiement de liens.
 
@@ -43,7 +43,7 @@ Une extension de message se compose d’un service web que vous hébergez et d�
 > [!NOTE]
 > Bien que vous puissiez créer le service web manuellement, utilisez le [Kit de développement logiciel (SDK) Bot Framework](https://github.com/microsoft/botframework-sdk) pour utiliser le protocole.
 
-Dans le manifeste de l’application pour Teams application, une extension de message unique est définie avec jusqu’à dix commandes différentes. Chaque commande définit un type, tel que l’action ou la recherche, ainsi que les emplacements dans le client à partir desquels il est appelé. Les emplacements d’appel sont la zone de message de composition, la barre de commandes et le message. Lors de l’appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l’interaction suivante à activer.
+Dans le manifeste de l’application Teams, une extension de message unique est définie avec jusqu’à 10 commandes différentes. Chaque commande définit un type, tel que l’action ou la recherche, ainsi que les emplacements dans le client à partir desquels il est appelé. Les emplacements d’appel sont la zone de message de composition, la barre de commandes et le message. Lors de l’appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l’interaction suivante à activer.
 
 ## <a name="types-of-message-extension-commands"></a>Types de commandes d’extension de message
 
@@ -51,7 +51,7 @@ Il existe deux types de commandes d’extension de message, la commande d’acti
 
 ### <a name="action-commands"></a>Commandes d'action
 
-Les commandes d'action sont utilisées pour présenter aux utilisateurs une fenêtre pop-up modale pour collecter ou afficher des informations. Lorsque l'utilisateur soumet le formulaire, votre service web répond en insérant un message dans la conversation directement ou en insérant un message dans la zone de composition de messages. Après cela, l’utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires ensemble pour des flux de travail plus complexes.
+Les commandes d’action sont utilisées pour présenter aux utilisateurs une fenêtre contextuelle modale pour collecter ou afficher des informations. Lorsque l'utilisateur soumet le formulaire, votre service web répond en insérant un message dans la conversation directement ou en insérant un message dans la zone de composition de messages. Après cela, l’utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires ensemble pour des flux de travail plus complexes.
 
 Les commandes d’action sont déclenchées à partir de la zone de composition de message, de la zone de commande ou d’un message. Lorsque la commande est invoquée à partir d'un message, la charge utile JSON initiale envoyée à votre robot comprend l'intégralité du message à partir duquel elle a été invoquée. L'image suivante affiche le module de tâches de la commande d’action de l'extension de message :
 

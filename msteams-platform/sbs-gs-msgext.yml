@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Vue d’ensemble de Retour à la prise en main
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 0e325ef82c697d4e799f6653852865bfde91f256
-  ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+  ms.openlocfilehash: 67186163c308961f34d3272c1d6c56035e33f0ea
+  ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/22/2022
-  ms.locfileid: "66962453"
+  ms.lasthandoff: 07/27/2022
+  ms.locfileid: "67035281"
 items:
 - durationInMinutes: 1
   content: "Démarrez le développement d’applications Microsoft Teams avec votre première application Teams. Vous allez créer une application Teams d’extension de message. \n\nVotre application dispose d’une fonctionnalité, qui est fournie avec sa propre interface utilisateur et son expérience utilisateur :\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png\" alt-text=\"Diagramme montrant que cette application comporte trois fonctionnalités.\":::\n\n\nDans ce didacticiel, vous allez apprendre :\n\n- Comment configurer un nouveau projet avec le Kit de ressources Teams.\n- Comment créer une application d’extension de message.\n- Comment déployer votre application.\n"

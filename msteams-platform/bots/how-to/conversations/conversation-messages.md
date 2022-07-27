@@ -4,12 +4,12 @@ description: Découvrez comment avoir une conversation avec un bot Teams et des 
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695298"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035194"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -196,6 +196,38 @@ async def on_members_added_activity(
 
 Les messages envoyés entre les utilisateurs et les bots incluent des données de canal internes dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le Kit de développement logiciel (SDK) Bot Builder vous permet de modifier la structure des messages.
 
+## <a name="send-suggested-actions"></a>Envoyer des actions suggérées
+
+Les actions suggérées permettent à votre bot de présenter des boutons que l’utilisateur peut sélectionner pour fournir une entrée. Les actions suggérées améliorent l’expérience utilisateur en permettant à l’utilisateur de répondre à une question ou de faire un choix avec la sélection d’un bouton, plutôt que de taper une réponse avec un clavier. Les boutons restent visibles et accessibles à l’utilisateur dans les cartes enrichies même après que l’utilisateur a effectué une sélection alors que pour les actions suggérées, les boutons ne sont pas disponibles. Cela empêche l’utilisateur de sélectionner des boutons obsolètes dans une conversation.
+
+Pour ajouter des actions suggérées à un message, définissez la `suggestedActions` propriété de l’objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) pour spécifier la liste des objets [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) qui représentent les boutons à présenter à l’utilisateur. Pour plus d’informations, consultez [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+Voici un exemple d’implémentation et d’expérience des actions suggérées :
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Actions suggérées par le bot" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` ne sont pris en charge que pour les bots conversationnels et les messages texte, et non pour les cartes adaptatives ou les pièces jointes.
+> * Actuellement `imBack` , il s’agit du seul type d’action pris en charge et Teams affiche jusqu’à trois actions suggérées.
+
 ## <a name="teams-channel-data"></a>Données du canal Teams
 
 L’objet `channelData` contient des informations spécifiques à Teams et constitue une source définitive pour les ID d’équipe et de canal. Si vous le souhaitez, vous pouvez mettre en cache et utiliser ces ID comme clés pour le stockage local. Le `TeamsActivityHandler` Kit de développement logiciel (SDK) extrait les informations importantes de l’objet `channelData` pour les rendre facilement accessibles. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de l’objet `turnContext` .
@@ -334,7 +366,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.

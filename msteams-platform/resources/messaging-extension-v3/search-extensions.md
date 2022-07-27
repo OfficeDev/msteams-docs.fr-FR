@@ -4,12 +4,12 @@ description: Dans cet article, vous allez apprendre à développer des extension
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 20dbc7c5a65ee44f3b40eda29a20d6d37e8a81f0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190009"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035225"
 ---
 # <a name="search-with-message-extensions"></a>Rechercher avec des extensions de message
 
@@ -94,7 +94,7 @@ Pour ouvrir votre extension de message, accédez à l’une de vos conversations
 
 La plupart de votre travail implique l’événement `onQuery` , qui gère toutes les interactions dans la fenêtre d’extension de message.
 
-Si vous avez la valeur `canUpdateConfiguration` `true` définie dans le manifeste, vous activez l’élément de menu Paramètres pour votre extension de message, et vous devez également gérer `onQuerySettingsUrl` et `onSettingsUpdate`.
+Si vous définissez la `true` valeur `canUpdateConfiguration` sur dans le manifeste, vous activez l’élément de menu Paramètres pour votre extension de message, et devez également gérer `onQuerySettingsUrl` et `onSettingsUpdate`.
 
 ## <a name="handle-onquery-events"></a>Gérer les événements onQuery
 
@@ -110,9 +110,9 @@ Le reste de votre gestionnaire `onQuery` invite l’utilisateur à fournir des i
 
 ## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Gérer les événements onQuerySettingsUrl et onSettingsUpdate
 
-Les `onQuerySettingsUrl` événements et `onSettingsUpdate` les événements fonctionnent ensemble pour activer l’élément **de menu Paramètres**.
+Les `onQuerySettingsUrl` événements et `onSettingsUpdate` les événements fonctionnent ensemble pour activer l’élément de menu **Paramètres** .
 
-![Captures d’écran des emplacements de Paramètres élément de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![Captures d’écran des emplacements de l’élément de menu Paramètres](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 Votre gestionnaire pour `onQuerySettingsUrl` renvoie l’URL de la page de configuration ; une fois la page de configuration fermée, votre gestionnaire accepte `onSettingsUpdate` et enregistre l’état retourné. Il s’agit du seul cas dans lequel `onQuery` la page de configuration ne reçoit *pas* la réponse.
 
@@ -136,7 +136,7 @@ En plus des propriétés standard de l’activité du bot, la charge utile conti
 |`channelData.tenant.id`| ID de locataire Microsoft Azure Active Directory (Azure AD). |
 |`channelData.channel.id`| Identification du canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| Identification de l'équipe (si la demande a été faite dans un canal). |
-|`clientInfo`|Métadonnées facultatives sur le logiciel client utilisé pour envoyer le message d’un utilisateur. L’entité peut contenir deux propriétés :<br>Le `country` champ contient l’emplacement détecté par l’utilisateur.<br>Le `platform` champ décrit la plateforme cliente de messagerie. <br>Pour plus d’informations, *consultez* [Les types d’entités non IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Métadonnées facultatives sur le logiciel client utilisé pour envoyer le message d’un utilisateur. L’entité peut contenir deux propriétés :<br>Le `country` champ contient l’emplacement détecté par l’utilisateur.<br>Le `platform` champ décrit la plateforme cliente de messagerie. <br>Pour plus d’informations, *consultez* [Les types d’entités non IRI ( clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)).|
 
 Les paramètres de requête se trouvent dans l’objet value, qui inclut les propriétés suivantes :
 
@@ -262,7 +262,7 @@ Pour savoir comment utiliser les types de miniatures et de cartes de héros, con
 
 Pour obtenir de la documentation supplémentaire sur la carte de connecteur Office 365, consultez [Utilisation des cartes de connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-La liste des résultats s’affiche dans l’interface utilisateur Microsoft Teams avec un aperçu de chaque élément. La préversion est générée de deux manières :
+La liste des résultats s’affiche dans l’interface utilisateur de Microsoft Teams avec un aperçu de chaque élément. La préversion est générée de deux manières :
 
 * Utilisation de la `preview` propriété dans l’objet `attachment` . La `preview` pièce jointe ne peut être qu’un héros ou une carte miniature.
 * Extrait des propriétés de base `title``text`et `image` de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
@@ -444,7 +444,7 @@ Chaque demande adressée à vos services inclut l’ID masqué de l’utilisateu
 },
 ```
 
-Les `id` valeurs sont `aadObjectId` garanties comme étant celle de l’utilisateur Teams authentifié. Elles peuvent être utilisées comme clés pour rechercher des informations d’identification ou n’importe quel état mis en cache dans votre service. En outre, chaque requête contient l’ID de locataire Microsoft Azure Active Directory (Azure AD) de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
+Les `id` valeurs et `aadObjectId` les valeurs sont garanties comme celles de l’utilisateur Teams authentifié. Elles peuvent être utilisées comme clés pour rechercher des informations d’identification ou n’importe quel état mis en cache dans votre service. En outre, chaque requête contient l’ID de locataire Microsoft Azure Active Directory (Azure AD) de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
 
 ## <a name="authentication"></a>Authentification
 
@@ -457,7 +457,7 @@ La séquence est la suivante :
 3. Si l’utilisateur ne s’est pas authentifié, renvoyez une `auth` réponse avec une `openUrl` action suggérée, y compris l’URL d’authentification.
 4. Le client Microsoft Teams lance une fenêtre contextuelle hébergeant votre page web à l’aide de l’URL d’authentification donnée.
 5. Une fois que l’utilisateur s’est connecté, vous devez fermer votre fenêtre et envoyer un « code d’authentification » au client Teams.
-6. Le client Teams réexécutera ensuite la requête à votre service, ce qui inclut le code d’authentification passé à l’étape 5.
+6. Le client Teams réissue ensuite la requête à votre service, qui inclut le code d’authentification passé à l’étape 5.
 
 Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5, ce qui garantit qu’un utilisateur malveillant n’essaie pas d’usurper ou de compromettre le flux de connexion. Cela « ferme la boucle » pour terminer la séquence d’authentification sécurisée.
 
@@ -491,7 +491,7 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 
 Votre expérience de connexion doit être réactive et tenir dans une fenêtre contextuelle. Il doit s’intégrer au [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client), qui utilise la transmission de messages.
 
-Comme avec d’autres expériences incorporées s’exécutant dans Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler `microsoftTeams.initialize()`. Si votre code exécute un flux OAuth, vous pouvez passer l’ID d’utilisateur Teams dans votre fenêtre, qui peut ensuite le passer à l’URL de connexion OAuth.
+Comme avec d’autres expériences incorporées s’exécutant dans Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler `microsoftTeams.initialize()`. Si votre code exécute un flux OAuth, vous pouvez passer l’ID d’utilisateur Teams dans votre fenêtre, qui peut ensuite le transmettre à l’URL de connexion OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de connexion
 

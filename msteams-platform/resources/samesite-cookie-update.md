@@ -5,12 +5,12 @@ description: Apprenez à connaître les types de cookies, notamment les cookies 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8f61788779d34183f7000271245e683f2750f739
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142730"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035323"
 ---
 # <a name="samesite-cookie-attribute"></a>Attribut de cookie SameSite
 
@@ -60,7 +60,7 @@ Les attributs de cookie SameSite sont les suivants :
 ### <a name="tabs-task-modules-and-message-extensions"></a>Onglets, modules de tâches et extensions de messages
 
 * Les onglets Teams permettent `<iframes>` d'intégrer du contenu affiché à un niveau supérieur ou dans un contexte de première partie.
-* Les modules de tâches vous permettent de créer des expériences de menu contextuel modal dans votre application Teams. À l’instar d’un onglet, une fenêtre modale s’ouvre à l’intérieur de la page active.
+* Les modules de tâches vous permettent de créer des expériences contextuelles modales dans votre application Teams. À l’instar d’un onglet, une fenêtre modale s’ouvre à l’intérieur de la page active.
 * Les extensions de message vous permettent d’insérer du contenu enrichi dans un message de conversation à partir de ressources externes.
 
 Tous les cookies utilisés par le contenu incorporé sont considérés comme tierce partie lorsque le site est affiché dans un `<iframe>`. En outre, si des ressources distantes d’une page s’appuient sur des cookies envoyés avec une requête `<img>` et `<script>` des balises, des polices externes et du contenu personnalisé, vous devez vous assurer que celles-ci sont marquées pour une utilisation intersites, par exemple `SameSite=None; Secure` ou assurez-vous qu’une solution de secours est en place.

@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919836"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035176"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -36,6 +36,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 26/07/2022|Actions suggérées pour les bots| Créer des bots > conversations de bot > [messages dans les conversations de bot](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 21/07/2022 | Introduction d’un guide détaillé pour envoyer des notifications de flux d’activités | Concevez votre application > Composants d’interface utilisateur> Notifications de flux d’activités > [Envoyer une notification de flux d’activités](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Mises à jour pour envoyer l’ID de canal sélectionné par l’utilisateur pendant l’installation de l’application aux bots via des événements de mise à jour de conversation et d’installation |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 06/16/2022 | Fonctionnalités multimédias mises à jour pour prendre en charge le bureau et les appareils mobiles| Intégrer des fonctionnalités d’appareil > [Intégrer des fonctionnalités multimédias](concepts/device-capabilities/media-capabilities.md)|
@@ -223,7 +224,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | 11/11/2018 | Le guide de démarrage pour Node JS et pour .NET/C# a été mis à jour pour utiliser App Studio dans Teams, et une nouvelle section a été ajoutée sur l'hébergement des applications Teams basées sur Node dans Azure. | [Démarrez sur la plateforme Microsoft Teams avec C#/.NET et App Studio](~/get-started/get-started-dotnet-app-studio.md), [Démarrez sur la plateforme Microsoft Teams avec Node JS et App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hébergez votre application Node Teams dans Azure](~/get-started/get-started-nodejs-in-azure.md) |
 | 09/11/2018 | Vous pouvez désormais créer des liens profonds vers des discussions privées entre utilisateurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 a été livré et, avec lui, une nouvelle fonctionnalité permettant d'utiliser l'onglet Microsoft Teams en tant que composant web SharePoint Framework. | [Onglets dans SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 05/11/2018 | La **fonctionnalité de module** de tâches a été lancée. Un module de tâche vous permet de créer des expériences de popup modales dans votre application Teams, à partir de bots et d'onglets. À l'intérieur de la fenêtre contextuelle, vous pouvez exécuter votre propre code HTML/JavaScript personnalisé, afficher un `<iframe>`widget tel qu'une vidéo YouTube ou Microsoft Stream, ou afficher une[ carte adaptative](/adaptive-cards/). | [Aperçu du module de tâches](~/concepts/task-modules/task-modules-overview.md), [module de tâches dans les onglets](~/concepts/task-modules/task-modules-tabs.md), [module de tâches dans les robots](~/concepts/task-modules/task-modules-bots.md).  |
+| 05/11/2018 | La **fonctionnalité de module** de tâches a été lancée. Un module de tâche vous permet de créer des expériences contextuelles modales dans votre application Teams, à partir de bots et d’onglets. Dans la fenêtre contextuelle, vous pouvez exécuter votre propre code HTML/JavaScript personnalisé, afficher un widget basé sur `<iframe>` (une vidéo YouTube ou Microsoft Stream) ou afficher une [carte adaptative](/adaptive-cards/). | [Aperçu du module de tâches](~/concepts/task-modules/task-modules-overview.md), [module de tâches dans les onglets](~/concepts/task-modules/task-modules-tabs.md), [module de tâches dans les robots](~/concepts/task-modules/task-modules-bots.md).  |
 | 05/10/2018 | Le formatage des informations pour les cartes a été mis à jour et testé dans les clients de bureau, iOS et Android pour Teams. | [Cartes](~/concepts/cards/cards.md), [mise en forme de carte](~/concepts/cards/cards-format.md) |
 | 24/09/2018 | Les API d'appels et de réunions en ligne pour Microsoft Graph ont été publiées en version bêta, et les applications Teams peuvent désormais interagir avec les utilisateurs de manière enrichie grâce à la voix et à la vidéo. | [Bots d'appels et de réunions en ligne](~/concepts/calls-and-meetings/registering-calling-bot.md), [concepts de médias en temps réel](~/concepts/calls-and-meetings/real-time-media-concepts.md), [enregistrement d'un robot d'appel](~/concepts/calls-and-meetings/registering-calling-bot.md), [débogage et tests locaux](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [médias hébergés par l'application](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [gestion des notifications d'appels entrants](~/concepts/calls-and-meetings/call-notifications.md).  |
 | 11/09/2018 | Les pages de configuration des onglets sont désormais beaucoup plus grandes. | [Conception d’onglets](tabs/design/tabs.md) |

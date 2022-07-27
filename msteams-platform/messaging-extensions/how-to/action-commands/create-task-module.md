@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment gérer l’action d’appel init
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a7ab29456605f7465dfba24cf58059fc173c883e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503339"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035183"
 ---
 # <a name="create-and-send-task-module"></a>Créer et envoyer un module de tâche
 
@@ -648,7 +648,7 @@ Répondre à la requête invoquée avec un `task`objet qui contient`taskInfo` so
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Peut être soit `continue`pour présenter un formulaire`message`, soit pour une simple popup. |
+|`type`| Peut être `continue` soit pour présenter un formulaire, soit `message` pour une simple fenêtre contextuelle. |
 |`value`| Soit un `taskInfo`objet pour un formulaire`string`, soit un pour un message. |
 
 Le schéma de l'objet taskInfo est le suivant :

@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment ajouter des expériences context
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23d6a0f1645fefe66544c755ddb617eba9ea8f3e
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143598"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035295"
 ---
 # <a name="task-modules"></a>Modules de tâche
 
@@ -26,9 +26,9 @@ Les modules de tâche s’appuient sur les bases des onglets Microsoft Teams. Il
 
 Les modules de tâche peuvent être appelés de trois façons :
 
-* Onglets de canal ou personnels : à l’aide du Kit de développement logiciel (SDK) Tabs Microsoft Teams, vous pouvez appeler des modules de tâche à partir de boutons, de liens ou de menus sous votre onglet. Pour plus d’informations, consultez [l’utilisation de modules de tâches dans des onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* Onglets de canal ou personnels : à l’aide du Kit de développement logiciel (SDK) Onglets Microsoft Teams, vous pouvez appeler des modules de tâches à partir de boutons, de liens ou de menus de votre onglet. Pour plus d’informations, consultez [l’utilisation de modules de tâches dans des onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 * Bots : Utilisation de boutons sur les [cartes](~/task-modules-and-cards/cards/cards-reference.md) envoyées à partir de votre bot. Cela est utile lorsque vous n’avez pas besoin que tous les utilisateurs d’un canal voient ce que vous faites avec un bot. Par exemple, lorsque les utilisateurs répondent à un sondage dans un canal, il n’est pas utile de voir un enregistrement de ce sondage en cours de création. Pour plus d’informations, consultez [l’utilisation de modules de tâches à partir de bots Teams](~/task-modules-and-cards/task-modules/task-modules-bots.md).
-* En dehors de Teams à partir d’un lien profond : vous pouvez également créer des URL pour appeler un module de tâche n’importe où. Pour plus d’informations, consultez [la syntaxe de lien profond du module de tâches](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
+* En dehors de Teams à partir d’un lien profond : vous pouvez également créer des URL pour appeler un module de tâche à partir de n’importe où. Pour plus d’informations, consultez [la syntaxe de lien profond du module de tâches](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
 ## <a name="components-of-a-task-module"></a>Composants d’un module de tâche
 

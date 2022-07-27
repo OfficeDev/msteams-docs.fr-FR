@@ -5,16 +5,16 @@ description: Dans ce module, découvrez comment concevoir des modules de tâches
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 07dd0457d49b167226da2fa10e91d87e6f674b6f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558113"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035267"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâches pour votre application Microsoft Teams
 
-Vous pouvez créer des expériences modales de menu contextuel dans votre application Teams avec des modules de tâches. Utilisez cette fonctionnalité pour afficher des informations et des médias enrichis ou effectuer une tâche complexe.
+Vous pouvez créer des expériences contextuelles modales dans votre application Teams avec des modules de tâches. Utilisez cette fonctionnalité pour afficher des informations et des médias enrichis ou effectuer une tâche complexe.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="L’exemple montre un module de tâches.":::
 
@@ -64,7 +64,7 @@ Ils peuvent également être créés avec l’infrastructure de [Cartes adaptati
 |3|**En-tête** : rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs effectuent.
 |4|**Bouton Fermer** : ferme le module de tâches. Ne pas appliquer de modifications non enregistrées dans le contenu de l’application.|
 |5|**IFrame** : espace réactif qui héberge le contenu de votre application.|
-|6 |**Actions (facultatives)**  : boutons liés au contenu de votre application.|
+|6|**Actions (facultatives)**  : boutons liés au contenu de votre application.|
 
 ## <a name="designing-with-ui-templates"></a>Conception avec des modèles d’interface utilisateur
 

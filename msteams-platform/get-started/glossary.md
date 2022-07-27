@@ -3,12 +3,12 @@ title: Documentation pour développeurs Microsoft Teams – Glossaire
 description: En savoir plus sur les termes utilisés dans Microsoft Teams documentation du développeur
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737383"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035155"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -49,7 +49,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | --- | --- |
 | [Bot d’appel](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bot qui participe à des appels audio ou vidéo et à des réunions en ligne. <br> **Voir aussi :** [Bot de conversation](#c) ; [Bot de réunion](#m) |
 | [Fonctionnalité](../toolkit/add-capability.md) | Une fonctionnalité Teams que vous pouvez intégrer à votre application pour interagir avec les utilisateurs de l’application. Une fonctionnalité d’application est utilisée pour étendre Teams en fonction des besoins de votre application. Une application peut avoir une ou plusieurs fonctionnalités principales, telles que l’onglet, le bot et l’extension de message. <br>**Voir aussi :** [Fonctionnalité de l’appareil](#d) ; [Fonctionnalité multimédia](#m) |
-| [Bot de conversation](../bots/how-to/conversations/conversation-basics.md) | Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches simples et répétitives effectuées par des utilisateurs tels que le service clientèle ou le personnel de support technique. <br> **Voir aussi** : [Bot conversationnel](#c) |
+| [Bot de conversation](../bots/how-to/conversations/conversation-basics.md) | Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches simples et répétitives pour les utilisateurs tels que le service clientèle ou le personnel du support technique. <br> **Voir aussi** : [Bot conversationnel](#c) |
 | Canal | Un emplacement unique où une équipe peut partager des messages, des outils et des fichiers. Vous pouvez utiliser un canal pour le travail d’équipe et la communication. <br>**Voir aussi** : [Conversation](#c) |
 | [Clé secrète client](../bots/how-to/authentication/add-authentication.md) | La clé secrète client/mot de passe ou paire de clés publique ou privée qui est Certificate. Elle n’est pas requise pour les applications natives. <br> **Voir aussi** : [Bot](#b) |
 | [Ressources cloud](../toolkit/add-resource.md) | Service disponible sur le cloud via Internet que votre application Teams peut utiliser. Il peut s’agir de comptes de stockage, d’applications web, de bases de données, etc. |
@@ -71,7 +71,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Fonctionnalités de l’appareil](../concepts/device-capabilities/device-capabilities-overview.md) | Les appareils intégrés, tels que l’appareil photo, le microphone, le scanneur de codes-barres, la galerie de photos, dans un appareil mobile ou de bureau. Vous pouvez accéder aux fonctionnalités d’appareil suivantes sur les appareils mobiles ou de bureau via des API dédiées disponibles dans le Kit de développement logiciel (SDK) client JavaScript de Microsoft Teams. <br>**Voir aussi** : [Fonctionnalité](#c) ; [Fonctionnalité multimédia](#m) ; [Fonctionnalité d’emplacement](#l) |
 | [Autorisation de l’appareil](../concepts/device-capabilities/browser-device-permissions.md) | Un paramètre d’application Teams que vous pouvez configurer dans votre application. Vous l’utilisez pour demander l’autorisation à votre application d’accéder à une fonctionnalité d’appareil native et d’utiliser celle-ci. Vous pouvez gérer les autorisations d’appareil dans les paramètres Teams. <br>**Voir aussi** : [Autorisations d’application](#a) |
 | [Environnement de développement](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Type d’environnement de développement créé par le Kit de ressources Teams par défaut. Il représente les configurations d’environnements distants ou cloud. Un projet peut avoir plusieurs environnements distants. Vous pouvez ajouter d’autres environnements de développement à votre projet à l’aide du Kit de ressources Teams. <br>**Voir aussi** [Environnement](#e) ; [Environnement local](#l) |
-| [DevTools](../tabs/how-to/developer-tools.md) | Les devtools du navigateur permettent d’afficher les journaux de la console, d’afficher ou de modifier les demandes réseau runtime, d’ajouter des points d’arrêt au code (JavaScript) et d’effectuer un débogage interactif pour une application Teams. La fonctionnalité est disponible uniquement pour les clients de bureau et Android après l’activation de la préversion du développeur. |
+| [DevTools](../tabs/how-to/developer-tools.md) | Les DevTools du navigateur permettent d’afficher les journaux de la console, d’afficher ou de modifier les demandes réseau runtime, d’ajouter des points d’arrêt au code (JavaScript) et d’effectuer un débogage interactif pour une application Teams. La fonctionnalité est disponible uniquement pour les clients de bureau et Android après l’activation de la préversion du développeur. |
 | [Recherche dynamique](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | Une fonctionnalité de recherche pour Cartes adaptatives qui est utile pour rechercher et sélectionner des données dans des jeux de données volumineux. Elle permet de filtrer les choix lorsque l’utilisateur entre dans la chaîne de recherche. <br>**Voir aussi** : [Recherche statique](#s) |
 
 ## <a name="e"></a>E

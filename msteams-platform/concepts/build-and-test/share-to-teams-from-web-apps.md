@@ -3,12 +3,12 @@ title: Partager vers Teams à partir d’applications web
 description: Découvrez comment ajouter le bouton Partager dans Teams incorporé sur votre site web, avec un aperçu du site web, à l’aide d’exemples de code
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558477"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035316"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Partager vers Teams à partir d’applications web
 
@@ -16,7 +16,7 @@ Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des bo
 
 L’image suivante affiche la fenêtre contextuelle pour l’expérience share to Teams en préversion :
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Fenêtre contextuelle Partager vers Teams":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Fenêtre contextuelle Share-to-Teams":::
 
 > [!NOTE]
 >
@@ -38,7 +38,6 @@ Consultez la vidéo suivante pour découvrir comment incorporer le bouton Partag
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
-
 
 ## <a name="embed-a-share-to-teams-button"></a>Incorporer bouton Partage dans Teams
 
@@ -117,7 +116,7 @@ Vous pouvez utiliser les versions HTML par défaut ou la version Open Graph.
 
 Pour les enseignants qui utilisent le bouton Partager vers Teams, il existe une option `Create an Assignment` supplémentaire qui vous permet de créer rapidement un devoir dans l’équipe choisie, en fonction du lien partagé. L’image suivante affiche Partager dans Teams pour l’Éducation :
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Éducation contextuelle Partager dans Teams":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Éducation contextuelle Partager vers Teams":::
 
 ## <a name="full-launcherjs-definition"></a>Définition de launcher.js complète
 

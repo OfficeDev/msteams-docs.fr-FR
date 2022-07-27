@@ -3,12 +3,12 @@ title: Ajouter des actions de carte dans un bot
 description: Dans ce module, découvrez les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66483969"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035302"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -29,7 +29,7 @@ Les cartes utilisées par les bots et les extensions de message dans Teams prenn
 >
 >* Teams ne prend pas en charge `CardAction` types non répertoriés dans le tableau précédent.
 >* Teams ne prend pas en charge la propriété `potentialActions`.
->* Les actions de carte sont différentes de [actions suggérées](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans Bot Framework ou Azure Bot Service. Les actions suggérées ne sont pas prises en charge dans Microsoft Teams. Si vous souhaitez que les boutons apparaissent sur un message de bot Teams, utilisez une carte.
+>* Les actions de carte sont différentes de [actions suggérées](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans Bot Framework ou Azure Bot Service.
 >* Si vous utilisez une action de carte dans le cadre d’une extension de message, les actions ne fonctionnent pas tant que la carte n’est pas envoyée au canal. Les actions ne fonctionnent pas lorsque la carte se trouve dans la zone de rédaction du message.
 
 ## <a name="action-type-openurl"></a>Type d’action openUrl
