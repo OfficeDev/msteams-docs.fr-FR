@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035176"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058276"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -36,6 +36,9 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 28/07/2022 | Ajouter l’image d’affichage Teams et la carte contacts pour la notification en réunion| Créer des applications pour les réunions et les appels Teams > Activer et configurer des applications pour les réunions > [Notification en réunion](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 28/07/2022 | Créer des canaux partagés dans Teams | Créer des applications pour les réunions et les appels Teams > [Canaux partagés](concepts/build-and-test/Shared-channels.md) |
+| 28/07/2022|Présentation du manifeste d’application v1.14| Manifeste d’application > [Schéma de manifeste d’application pour Teams](resources/schema/manifest-schema.md)|
 | 26/07/2022|Actions suggérées pour les bots| Créer des bots > conversations de bot > [messages dans les conversations de bot](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 21/07/2022 | Introduction d’un guide détaillé pour envoyer des notifications de flux d’activités | Concevez votre application > Composants d’interface utilisateur> Notifications de flux d’activités > [Envoyer une notification de flux d’activités](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Mises à jour pour envoyer l’ID de canal sélectionné par l’utilisateur pendant l’installation de l’application aux bots via des événements de mise à jour de conversation et d’installation |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |

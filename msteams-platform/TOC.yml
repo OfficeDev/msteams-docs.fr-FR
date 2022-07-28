@@ -307,6 +307,8 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Références API des applications de réunion
       href: apps-in-teams-meetings/API-references.md
+    - name: Générer un canal partagé
+      href: concepts/build-and-test/Shared-channels.md
     - name: Collaboration améliorée avec Live Share
       items:
         - name: Vue d’ensemble

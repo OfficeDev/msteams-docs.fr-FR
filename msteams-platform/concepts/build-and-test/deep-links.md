@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Découvrez comment créer des liens profonds et comment les utiliser et les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841960"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058220"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -17,7 +17,7 @@ Les liens profonds sont un mécanisme de navigation que vous pouvez utiliser pou
 * Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages informant l’utilisateur d’une activité importante. Lorsque l’utilisateur appuie sur la notification, le lien profond accède à l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches de l'utilisateur, comme la création d'une conversation ou la programmation d'une réunion, en préremplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
-Le SDK client JavaScript de Microsoft Teams (TeamsJS) simplifie le processus de navigation. Pour de nombreux scénarios, tels que la navigation vers du contenu et des informations dans votre onglet ou même le lancement d'un dialogue de conversation, le SDK fournit des API fortement typées qui améliorent l'expérience et peuvent remplacer l'utilisation de liens profonds. Ces API sont recommandées pour les applications Teams susceptibles d'être exécutées dans d'autres hôtes (Outlook, Office), car elles permettent également de vérifier que la fonctionnalité utilisée est prise en charge par cet hôte. Les sections suivantes présentent des informations sur les liens profonds, mais soulignent également comment les scénarios qui les nécessitaient ont changé avec la version v2 de TeamsJS.
+Le SDK client JavaScript de Microsoft Teams (TeamsJS) simplifie le processus de navigation. Pour de nombreux scénarios, tels que la navigation vers du contenu et des informations dans votre onglet ou même le lancement d’une boîte de dialogue de conversation, le Kit de développement logiciel (SDK) fournit des API typées qui améliorent l’expérience et peuvent remplacer l’utilisation de liens profonds. Ces API sont recommandées pour les applications Teams susceptibles d'être exécutées dans d'autres hôtes (Outlook, Office), car elles permettent également de vérifier que la fonctionnalité utilisée est prise en charge par cet hôte. Les sections suivantes présentent des informations sur les liens profonds, mais soulignent également comment les scénarios qui les nécessitaient ont changé avec la version v2 de TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -51,7 +51,7 @@ Vous pouvez créer des liens profonds vers des entités dans Teams. Cette métho
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-Pour implémenter cela, vous ajoutez une action **Copier le lien** à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l'utilisateur effectue cette action, appelez [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) pour afficher une boîte de dialogue contenant un lien que l'utilisateur peut copier dans le presse-papiers. Lorsque vous effectuez cet appel, vous transmettez un ID pour votre élément, que vous revenez dans le [contexte](~/tabs/how-to/access-teams-context.md) lorsque le lien est suivi et que votre onglet est rechargé.
+Pour implémenter, ajoutez une action **copier le lien** à chaque élément, de la manière qui convient le mieux à votre interface utilisateur. Lorsque l'utilisateur effectue cette action, appelez [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) pour afficher une boîte de dialogue contenant un lien que l'utilisateur peut copier dans le presse-papiers. Lorsque vous effectuez cet appel, transmettez un ID pour votre élément. Vous le récupérez en [contexte](~/tabs/how-to/access-teams-context.md) lorsque le lien est suivi et que votre onglet est rechargé.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -91,7 +91,7 @@ Vous pouvez également générer des liens profonds par programmation, en utilis
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Utiliser un lien profond à partir d’un onglet
 
-Lors de la navigation vers un lien profond, Microsoft Teams navigue simplement vers l'onglet et fournit un mécanisme via la bibliothèque JavaScript de Teams pour récupérer l'ID de la sous-page s'il existe.
+Lorsque vous accédez à un lien profond, Microsoft Teams accède simplement à l’onglet et fournit un mécanisme via la bibliothèque JavaScript Teams pour récupérer l’ID de sous-page s’il existe.
 
 L’appel [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) (`microsoftTeams.getContext()`) dans TeamsJS v1 retourne une promesse qui sera résolue avec le contexte qui inclut la `subPageId` propriété (subEntityId pour TeamsJS v1) si l’onglet est parcouru via un lien profond. Pour plus d'informations, voir [Interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -128,10 +128,10 @@ Les paramètres de requête sont les suivants :
 | Nom du paramètre | Description | Exemple |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | ID du Centre d’administration Teams. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | ID de l’élément dans l’onglet, que vous avez fourni lors de la [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).|Liste des tâches123|
+| `entityId`&emsp; | ID de l’élément dans l’onglet, que vous avez fourni lors de la [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md). Lors de la génération d’une URL pour la liaison approfondie, continuez à utiliser entityID comme nom de paramètre dans l’URL. Lors de la configuration de l’onglet, l’objet de contexte fait référence à l’entityID en tant que {page.id}. |Liste des tâches123|
 | `entityWebUrl` ou `subEntityWebUrl`&emsp; | Champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet. | `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` |
 | `entityLabel` ou `subEntityLabel`&emsp; | Étiquette de l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond. | Liste des tâches 123 ou » Tâche 456 |
-| `context.subEntityId`&emsp; | ID de l’élément dans l’onglet. |Tâche456 |
+| `context.subEntityId`&emsp; | ID de l’élément dans l’onglet. Lors de la génération d’une URL pour la liaison approfondie, continuez à utiliser subEntityId comme nom de paramètre dans l’URL. Lors de la configuration de l’onglet, l’objet de contexte fait référence à subEntityID en tant que subPageID. |Tâche456 |
 | `context.channelId`&emsp; | ID de canal Microsoft Teams disponible à partir de l’onglet [contexte](~/tabs/how-to/access-teams-context.md). Cette propriété est disponible uniquement dans les onglets configurables avec une étendue d’**équipe**. Il n’est pas disponible dans les onglets statiques, qui ont une étendue **personnelle**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId disponible à partir du [contexte](~/tabs/how-to/access-teams-context.md) d’onglet pour la conversation de groupe et de réunion | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  La conversation est le seul contextType pris en charge pour les réunions | conversation |
@@ -169,7 +169,7 @@ Les paramètres de requête sont les suivants :
 
 ## <a name="navigation-from-your-tab"></a>Navigation à partir de votre onglet
 
-Vous pouvez accéder au contenu dans Teams à partir de votre onglet à l’aide de TeamsJS ou de liens profonds. Ceci est utile si votre onglet doit connecter les utilisateurs à d'autres contenus dans Teams, par exemple à un canal, un message, un autre onglet ou même pour ouvrir un dialogue de planification. Auparavant, la navigation pouvait nécessiter un lien profond, mais elle peut désormais être réalisée dans de nombreux cas à l'aide du SDK. Les sections suivantes présentent les deux méthodes, mais lorsque cela est possible, il est recommandé d'utiliser les capacités fortement typées du SDK.
+Vous pouvez accéder au contenu dans Teams à partir de votre onglet à l’aide de TeamsJS ou de liens profonds. Ceci est utile si votre onglet doit connecter les utilisateurs à d'autres contenus dans Teams, par exemple à un canal, un message, un autre onglet ou même pour ouvrir un dialogue de planification. Auparavant, la navigation pouvait nécessiter un lien profond, mais elle peut désormais être réalisée dans de nombreux cas à l'aide du SDK. Les sections suivantes montrent les deux méthodes, mais l’utilisation possible des fonctionnalités typées du Kit de développement logiciel (SDK) est recommandée.
 
 L'un des avantages de l'utilisation de TeamsJS, en particulier pour les applications Teams susceptibles de fonctionner dans d'autres hôtes (Outlook et Office), est qu'il est possible de vérifier que l'hôte prend en charge la fonctionnalité que vous tentez d'utiliser. Pour vérifier la prise en charge d’une fonctionnalité par un hôte, vous pouvez utiliser la `isSupported()` fonction associée à l’espace de noms de l’API. Le SDK TeamsJS organise les API en capacités au moyen d'espaces de noms. Par exemple, avant l'utilisation d'une API dans `pages`l'espace de noms, vous pouvez vérifier la valeur booléenne renvoyée`pages.isSupported()` et prendre les mesures appropriées dans le contexte de votre application et de son interface utilisateur.  
 
@@ -243,7 +243,7 @@ Vous pouvez également créer manuellement des liens profonds vers la boîte de 
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Générer un lien ciblé vers la boîte de dialogue de planification
 
-Bien qu’il soit recommandé d’utiliser les API fortement typées de TeamsJS, il est possible de créer manuellement des liens profonds vers la boîte de dialogue de planification intégrée Teams. Utilisez le format suivant pour un lien ciblé que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Bien qu’il soit recommandé d’utiliser les API typées de TeamsJS, il est possible de créer manuellement des liens profonds vers la boîte de dialogue de planification intégrée Teams. Utilisez le format suivant pour un lien ciblé que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -307,7 +307,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Bien qu'il soit recommandé d'utiliser les API fortement typées, vous pouvez également utiliser le format suivant pour un lien profond créé manuellement que vous pouvez utiliser dans un robot, un connecteur ou une carte d'extension de message :
+Bien que l’utilisation des API typées soit recommandée, vous pouvez également utiliser le format suivant pour un lien profond créé manuellement que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message :
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -316,7 +316,7 @@ Exemple : `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 Les paramètres de requête sont les suivants :
 
 * `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID d’utilisateur prend en charge Microsoft Azure Active Directory Domain Services (Azure AD) UserPrincipalName, telle qu’une adresse e-mail uniquement.
-* `topicName` : champ facultatif pour le nom complet de la conversation, dans le cas d’une conversation avec au moins trois utilisateurs. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
+* `topicName`: champ facultatif pour le nom d’affichage de la conversation, si une conversation a au moins trois utilisateurs. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
 * `message` : champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est dans un état brouillon.
 
 Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d’URL dans le bouton de votre carte ou appuyez sur l’action via le type `openUrl`action.
@@ -334,7 +334,7 @@ Les paramètres de requête sont les suivants :
 * `channelId` : ID du canal de la conversation. Par exemple : `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
 * `tenantId` : ID de client tel que `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `groupId` : ID de groupe du fichier. Par exemple : `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
-* `parentMessageId` : ID de message parent de la conversation.
+* `parentMessageId`: ID de message parent de la conversation.
 * `teamName` : nom de l’équipe.
 * `channelName` : nom du canal de l’équipe.
 
@@ -408,7 +408,7 @@ Exemple : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fe
 
 ### <a name="navigate-to-an-audio-or-audio-video-call"></a>Lien profond à un appel audio ou audio-vidéo
 
-Vous pouvez lancer des appels audio uniquement ou audio-vidéo à un seul utilisateur ou à un groupe d'utilisateurs, en spécifiant le type d'appel et les participants. Avant de passer l'appel, le client Teams demande une confirmation pour effectuer l'appel. En cas d'appel de groupe, vous pouvez appeler un ensemble d'utilisateurs VoIP et un ensemble d'utilisateurs PSTN dans la même invocation de lien profond.
+Vous pouvez lancer des appels audio uniquement ou audio-vidéo à un seul utilisateur ou à un groupe d'utilisateurs, en spécifiant le type d'appel et les participants. Avant de passer l'appel, le client Teams demande une confirmation pour effectuer l'appel. En cas d’appel de groupe, vous pouvez appeler un ensemble d’utilisateurs VoIP et un ensemble d’utilisateurs RTC dans le même appel de lien profond.
 
 Dans un appel vidéo, le client demande une confirmation et active la vidéo de l’appelant pour l’appel. Le destinataire de l’appel a le choix entre répondre par audio uniquement ou audio et vidéo, via la fenêtre de notification d’appel Teams.
 
@@ -430,7 +430,7 @@ else { /* handle case where capability isn't supported */ }
 
 #### <a name="generate-a-deep-link-to-a-call"></a>Générer un lien profond vers un appel
 
-Bien que l'utilisation des API fortement typées de TeamsJS soit recommandée, vous pouvez également utiliser un lien profond créé manuellement pour lancer un appel.
+Bien que l’utilisation des API typées de TeamsJS soit recommandée, vous pouvez également utiliser un lien profond créé manuellement pour démarrer un appel.
 
 | Lien profond | Format | Exemple |
 |-----------|--------|---------|

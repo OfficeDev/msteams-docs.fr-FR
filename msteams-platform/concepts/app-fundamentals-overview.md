@@ -5,12 +5,12 @@ description: Présentez les éléments de la planification d’une application, 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558715"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058241"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -55,7 +55,7 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams.":::
 
-    Vos applications apparaissent dans Teams sous forme d’onglets, de bots, d’extensions de message, de connecteurs et de webhooks, ou en tant qu’application multi-fonctionnalités. Ces fonctionnalités sont optimisées sur le serveur principal par les applications Azure, Microsoft Graph, SharePoint et Power qui permettent d’automatiser les tâches et les processus.
+    Vos applications apparaissent dans Teams sous forme d’onglets, de bots, d’extensions de messagerie, de connecteurs et de webhooks, ou en tant qu’application multi-fonctionnalités. Ces fonctionnalités sont optimisées sur le serveur principal par les applications Azure, Microsoft Graph, SharePoint et Power qui permettent d’automatiser les tâches et les processus.
 
     Ensemble, ces fonctionnalités donnent vie à votre solution d’application.
 
@@ -66,17 +66,9 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 * Intégrez votre application à Teams et à d’autres applications, telles que Microsoft 365, Microsoft Graph, etc.
 * Utilisez Developer Portal pour configurer, gérer et déployer votre application.
 
-#### <a name="government-community-cloud"></a>Cloud communautaire pour le secteur public
+### <a name="government-community-cloud"></a>Cloud communautaire pour le secteur public
 
 Cloud de la communauté du secteur public (GCC) est une copie axée sur le secteur public de l’environnement commercial. Le Ministère de la défense (DOD) et les sous-traitants fédéral doivent respecter les exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins du DOD et des sous-traitants fédéral. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
-
-Les points de terminaison pour le cloud du secteur public sont les suivants :
-
-| Tenant | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-|Client Teams|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Administrateur Teams |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pour GCC, GCC-High et DOD :
 
@@ -85,13 +77,14 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 | Applications appartenant à Teams comme dans les applications développées en interne | ✔️ L’application est activée si elle a GCC. | ✔️ L’application est activée si elle a GCC-High. | ✔️ L’application est activée si elle possède un DOD. |
 | Applications Microsoft | ✔️ Applications Microsoft conformes à GCC | ✔️ Applications Microsoft conformes à GCC-High | ✔️ Applications Microsoft conformes à DOD |
 | Applications 3p ou tierces | ✔️ Des applications tierces sont disponibles. Désactivées par défaut et l’administrateur client utilise sa propre discrétion pour les activer. | ❌ | ❌ |
-| Applications de tabulation personnalisées ou métier |  ✔️ | ✔️(****Interface utilisateur de conformité**_) | ✔️(_ ***Interface utilisateur de conformité***) |
-| Bots personnalisés ou Lob | ✔️ | ✔️(****Interface utilisateur de conformité***) | ❌ |
-| Extensions de message personnalisées | ✔️ | ✔️ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Applications de tabulation personnalisées ou métier |  ✔️ | ✔️ | ✔️ |
 | Chargement indépendant d’applications | ✔️ | ❌ | ❌ |
+| Bots personnalisés ou Lob | ✔️ | ❌ | ❌ |
+| Extensions de messagerie personnalisées | ❌ | ❌ | ❌ |
 | Connecteurs personnalisés | ❌ | ❌ | ❌ |
 
-****Interface utilisateur de conformité*** : en autorisant les communications avec des tiers, les clients acceptent que ces communications soient traitées par le tiers et non par Microsoft. Le client est seul responsable de l’atténuation des risques associés à la connexion de bots tiers dans ses services. Microsoft Corporation n’approuve pas et ne donne aucune garantie, expresse ou implicite, concernant la sécurité des tiers que le client autorise à se connecter à son service. L’activation des bots étend votre limite système au-delà de ce client en fonction du bot dont vous choisissez de tirer parti. Il est de votre responsabilité de vous assurer que cela répond à vos exigences de conformité, notamment FedRAMP, DFARS, ITAR, etc. Il est de votre responsabilité d’évaluer le risque et la conformité de tout point de terminaison et URL auxquels vous vous connectez.
+**Interface utilisateur de conformité**: en activant les communications tierces, les clients acceptent que ces communications soient traitées par le biais du tiers et non de Microsoft. Le client est seul responsable de l’atténuation des risques associés à la connexion de bots tiers dans ses services. Microsoft Corporation n’approuve pas et ne donne aucune garantie, expresse ou implicite, concernant la sécurité des tiers que le client autorise à se connecter à son service. L’activation des bots étend votre limite système au-delà de ce client en fonction du bot dont vous choisissez de tirer parti. Il est de votre responsabilité de vous assurer que cela répond à vos exigences de conformité, notamment FedRAMP, DFARS, ITAR, etc. Il est de votre responsabilité d’évaluer le risque et la conformité de tout point de terminaison et URL auxquels vous vous connectez.
 
 La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :
 
