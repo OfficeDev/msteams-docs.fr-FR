@@ -4,14 +4,14 @@ description: Découvrez l’exemple de fichier manifeste et la description de to
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503472"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058206"
 ---
-# <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste en préversion publique pour les développeurs pour Teams
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste pour les développeurs publics en préversion pour Teams
 
 Pour plus d’informations sur l’activation de la préversion des développeurs, consultez [Aperçu publique des développeurs pour Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -396,7 +396,7 @@ L’objet est un tableau avec tous les éléments du type `object`. Ce bloc est 
 |`configurationUrl`|Chaîne|2 048 caractères|✔️|L’URL https:// à utiliser lors de la configuration de l’onglet.|
 |`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Par défaut : `true`|
 |`scopes`|Tableau de l’énum|1|✔️|Actuellement, les onglets configurables ne prennent en charge que les étendues `team` et `groupchat`. |
-|`context` |tableau d’énumération|6 ||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut : `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` et `meetingStage`.|
+|`context` |tableau d’énumération|6||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut : `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` et `meetingStage`.|
 |`sharePointPreviewImage`|Chaîne|2048||Un chemin de fichier relatif vers une image d'aperçu d'onglet à utiliser dans SharePoint. Taille 1024x768. |
 |`supportedSharePointHosts`|Tableau de l’énum|1||Définit la façon dont votre onglet sera mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
@@ -667,6 +667,17 @@ Vous pouvez définir l’une des propriétés suivantes :
 * `privacyUrl` : URL HTTPS de la politique de confidentialité du développeur.
 * `termsOfUseUrl` : URL HTTPS des conditions d’utilisation du développeur.
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**Facultatif**— tableau
+
+Active votre application dans des canaux non standard. Si votre application prend en charge une étendue d’équipe et que cette propriété est définie, Teams active votre application dans chaque type de canal en conséquence. Actuellement, les types de canaux privés et partagés sont pris en charge.
+
+> [!NOTE]
+>
+> * Si votre application prend en charge une étendue d’équipe, elle fonctionne dans les canaux standard, quelles que soient les valeurs définies dans cette propriété.
+> * Votre application peut prendre en compte les propriétés uniques de chacun des types de canaux pour fonctionner correctement. Pour activer votre onglet pour les canaux privés et partagés, consultez [récupérer le contexte dans les canaux privés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) et [récupérer le contexte dans les canaux partagés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
 **Facultatif**— chaîne
@@ -713,6 +724,7 @@ Spécifiez la définition de l'extension de réunion. Pour plus d'informations, 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`scenes`|tableau d’objets| 5 éléments||Scènes de réunion prise en charge.|
+|`supportsStreaming`|Boolean|||Valeur qui indique si une application peut diffuser le contenu audio et vidéo de la réunion vers un point de terminaison RTMP (Real-Time Meeting Protocol). La valeur par défaut est **false**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
