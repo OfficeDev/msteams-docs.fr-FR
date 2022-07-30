@@ -1,16 +1,16 @@
 ---
 title: Onglets Microsoft Teams
 author: surbhigupta
-description: Dans ce module, découvrez comment créer des onglets personnalisés sur la plateforme Teams, les fonctionnalités des onglets et les scénarios d’utilisation onglets
+description: Dans ce module, découvrez comment créer des onglets personnalisés sur la plateforme Teams, des fonctionnalités d’onglets et des scénarios d’utilisation d’onglets.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ff0d77f03e98ab2865705ed9a5be3687ee6779a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 38781b844b9aa84c39daa4cae909ec11ad197175
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558141"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058234"
 ---
 # <a name="build-tabs-for-teams"></a>Créer des onglets pour Teams
 
@@ -18,10 +18,6 @@ Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Ce 
 
 > [!IMPORTANT]
 > Actuellement, les onglets personnalisés sont disponibles dans le Cloud de la communauté du secteur public (GCC), Cloud de la communauté du secteur public-High (GCC-High), et le Département de la Défense (DOD).
->
-> Nous vous recommandons d’utiliser le Kit de développement logiciel (SDK) client Teams via [package npm](https://www.npmjs.com/package/@microsoft/teams-js) et de l’associer à votre application, car actuellement le Kit de développement logiciel (SDK) client Teams n’est pas disponible dans le réseau de diffusion de contenu Cloud du secteur public.
-
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 L’image suivante montre les onglets personnels :
 
@@ -35,7 +31,7 @@ Il existe quelques conditions préalables que vous devez respecter avant de trav
 
 Deux types d’onglets sont disponibles dans Teams, personnel et canal ou groupe. [Les onglets personnels](~/tabs/how-to/create-personal-tab.md), ainsi que les bots d’étendue personnelle, font partie des applications personnelles et sont limités à un seul utilisateur. Ils peuvent être épinglés à la barre de navigation de gauche pour faciliter l’accès. [Les onglets de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md) offrent du contenu aux canaux et aux conversations de groupe, et sont un excellent moyen de créer des espaces de collaboration autour de contenu web dédié.
 
-Vous pouvez [créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) dans le cadre d’un onglet personnel, d’un onglet de canal ou de groupe ou d’un module de tâche. Vous pouvez [créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) qui permet aux utilisateurs de configurer une application Microsoft Teams et de l’utiliser pour configurer un onglet de conversation de canal ou de groupe, une extension de messagerie ou un connecteur Office 365. Vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation et de [créer une page de suppression d’onglets](~/tabs/how-to/create-tab-pages/removal-page.md) pour votre application. Lorsque vous créez une application Teams qui inclut un onglet, vous devez tester le [fonctionnement de votre onglet sur les clients de Teams Android et iOS](~/tabs/design/tabs-mobile.md). Votre onglet doit [obtenir le contexte ](~/tabs/how-to/access-teams-context.md)par le biais d’informations de base, de paramètres régionaux et des informations de thèmes, ainsi que `app.Context.page.id` ou `app.Context.page.subPageId` qui identifie ce qui se trouve dans l’onglet.
+Vous pouvez [créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) dans le cadre d’un onglet personnel, d’un onglet de canal ou de groupe ou d’un module de tâche. Vous pouvez [créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) qui permet aux utilisateurs de configurer une application Microsoft Teams et de l’utiliser pour configurer un onglet de conversation de canal ou de groupe, une extension de messagerie ou un connecteur Office 365. Vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation et de [créer une page de suppression d’onglets](~/tabs/how-to/create-tab-pages/removal-page.md) pour votre application. Lorsque vous créez une application Teams qui inclut un onglet, vous devez tester le [fonctionnement de votre onglet sur les clients de Teams Android et iOS](~/tabs/design/tabs-mobile.md). Votre onglet doit [obtenir le contexte ](~/tabs/how-to/access-teams-context.md)par le biais d’informations de base, de paramètres régionaux et des informations de thèmes, ainsi que `entityId` ou `subEntityId` qui identifie ce qui se trouve dans l’onglet.
 
 Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes les fonctionnalités de l’application Teams en éliminant la nécessité d’un autre système principal pour vos bots et onglets. [Vue des étapes](~/tabs/tabs-link-unfurling.md) est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran dans Teams et épinglé sous forme d’onglet. Le service de [déploiement de lien](~/tabs/tabs-link-unfurling.md) existant est mis à jour, de sorte qu’il est utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Vous pouvez [créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md) à l’aide de sous-entités de conversation qui permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier. Vous pouvez modifier les [marges des onglets](~/resources/removing-tab-margins.md) pour améliorer l’expérience du développeur lors de la création d’applications. Vous pouvez faire glisser l’onglet et le placer à la position souhaitée pour échanger les positions de tabulation dans vos applications personnelles et conversations de canal ou de groupe.
 
@@ -74,12 +70,9 @@ Vous pouvez utiliser l’une des méthodes suivantes pour créer des onglets :
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>Déclarer un onglet personnalisé dans le manifeste de l’application
 
-Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page web que vous souhaitez inclure en tant qu’onglet dans votre application, vous définissez une URL et une étendue. En outre, vous pouvez ajouter le [SDK client JavaScript Teams](/javascript/api/overview/msteams-client) à votre page, et appeler `app.initialize()`après le chargement de votre page. Teams affiche votre page et donne accès à des informations spécifiques à Teams, par exemple le client Teams exécute le thème sombre.
+Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page web que vous souhaitez inclure en tant qu’onglet dans votre application, vous définissez une URL et une étendue. En outre, vous pouvez ajouter le [SDK client JavaScript Teams](/javascript/api/overview/msteams-client) à votre page, et appeler `microsoftTeams.initialize()`après le chargement de votre page. Teams affiche votre page et donne accès à des informations spécifiques à Teams, par exemple le client Teams exécute le thème sombre.
 
 Que vous choisissiez d’exposer votre onglet au sein du canal ou du groupe, ou dans une portée personnelle, vous devez présenter une \>[page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) HTML <iframe dans votre onglet. Pour les onglets personnels, l’URL de contenu est définie directement dans le manifeste de votre application Teams par la propriété `contentUrl` du tableau `staticTabs`. Le contenu de votre onglet est le même pour tous les utilisateurs.
-
-> [!Note]
-> L’application Teams ne reconnaît pas les sous-iframes. Par conséquent, elle ne se charge pas s’il existe un iframe dans l’application d’onglet.
 
 Pour les onglets de canal ou de groupe, vous pouvez également créer une page de configuration supplémentaire. Cette page vous permet de configurer l’URL de la page de contenu, généralement à l’aide de paramètres de chaîne de requête d’URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet de canal ou de groupe peut être ajouté à plusieurs conversations d’équipe ou de groupe. À chaque installation ultérieure, vos utilisateurs peuvent configurer l’onglet, ce qui vous permet d’adapter l’expérience selon les besoins. Lorsque les utilisateurs ajoutent ou configurent un onglet, une URL est associée à l’onglet présenté dans l’interface utilisateur Teams. La configuration d’un onglet ajoute simplement des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet Azure Boards, la page de configuration vous permet de choisir le tableau chargé par l’onglet. L’URL de la page de configuration est spécifiée par la `configurationUrl` propriété dans le `configurableTabs`tableau dans le manifeste de votre application.
 
