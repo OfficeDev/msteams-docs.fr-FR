@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 30f5929524e9ae7391fef556d353be6d2461c987
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058248"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232252"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Applications pour les réunions et les appels Teams
 
@@ -48,13 +48,11 @@ L'illustration suivante vous donne une idée des caractéristiques d'extensibili
 
 Cet article fournit une vue d'ensemble de l'extensibilité des applications de réunion, des références API, de l'activation et de la configuration des applications pour les réunions et des scènes personnalisées en mode Ensemble dans Teams.
 
-Améliorez votre expérience de réunion en utilisant la fonction d'extensibilité des réunions. Cette fonctionnalité vous permet d'intégrer vos applications dans les réunions. Il comprend également les différentes étapes du cycle de vie d'une réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messages. Vous pouvez identifier divers rôles de participants et types d'utilisateurs, obtenir des événements de réunion et générer des dialogues en réunion.
-
-Pour personnaliser Teams avec des applications pour les réunions, activez vos applications pour les réunions Teams en mettant à jour le manifeste des applications et configurez également les applications pour les scénarios de réunion.
-
-Personnalisez l’autorisation d’application pour les membres externes dans le canal partagé, si votre application partage des informations importantes. Les autorisations d’application dans [les canaux partagés](../concepts/build-and-test/Shared-channels.md) suivent la liste des applications de l’équipe hôte et la stratégie d’application du locataire hôte.
-
-La nouvelle fonctionnalité de scènes personnalisées en mode ensemble permet aux utilisateurs de collaborer à une réunion avec leur équipe en un seul endroit.
+- **Étendre l’application de réunion** : améliorez votre expérience de réunion à l’aide de la fonctionnalité d’extensibilité de réunion. Cette fonctionnalité vous permet d'intégrer vos applications dans les réunions. Il comprend également les différentes étapes du cycle de vie d'une réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messages. Vous pouvez identifier divers rôles de participants et types d'utilisateurs, obtenir des événements de réunion et générer des dialogues en réunion.
+- **Configurer des applications pour les réunions** : pour personnaliser Teams avec des applications pour les réunions, activez vos applications pour les réunions Teams en mettant à jour le manifeste de l’application et configurez également les applications pour les scénarios de réunion.
+- **Personnaliser avec des scènes en mode ensemble** : la nouvelle fonctionnalité personnalisée de scènes en mode Ensemble permet aux utilisateurs de collaborer dans une réunion avec leur équipe au même endroit.
+- **Personnaliser l’autorisation d’application dans un canal partagé : si votre application partage des informations importantes dans un canal partagé, vous pouvez personnaliser l’autorisation d’application pour les membres externes. Les autorisations d’application dans [les canaux partagés](../concepts/build-and-test/Shared-channels.md) suivent la liste des applications de l’équipe hôte et la stratégie d’application du locataire hôte.
+- **Récupérer les transcriptions de réunion** : vous pouvez accéder aux transcriptions de réunion et les récupérer dans un scénario de post-réunion. Configurez votre application pour obtenir automatiquement les transcriptions d’une réunion planifiée et utilisez-les pour obtenir des insights, une analyse intelligente, etc.
 
 ## <a name="next-step"></a>Étape suivante
 

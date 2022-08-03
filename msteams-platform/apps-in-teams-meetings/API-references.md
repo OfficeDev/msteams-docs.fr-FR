@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919759"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232259"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -37,6 +37,8 @@ Le tableau suivant fournit la liste des API disponibles sur les kits SDK Microso
 |[**Obtenir l’état de partage de la phase de contenu de l’application**](#get-app-content-stage-sharing-state-api)| Récupérez des informations sur l’état de partage de l’application lors de la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Obtenir les fonctionnalités de partage de phase de contenu d’application**](#get-app-content-stage-sharing-capabilities-api)| Récupérez les fonctionnalités de l’application pour le partage dans la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Obtenir des événements de réunion Teams en temps réel**](#get-real-time-teams-meeting-events-api)|Récupérez les événements de réunion en temps réel, tels que l’heure de début et de fin réelle.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**Obtenir le haut-parleur audio entrant**](#get-incoming-audio-speaker) | Permet à une application d’obtenir le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Activer/désactiver l’audio entrant**](#toggle-incoming-audio) | Permet à une application de désactiver le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obtenir l’API de contexte utilisateur
 
@@ -144,7 +146,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | ID de messagerie de l’utilisateur. |
 | **user.userPrincipalName** | UPN de l’utilisateur. |
 | **user.tenantId** | ID du client Azure Active Directory. |
-| **user.userRole** | Rôle de l’utilisateur, par exemple « admin » ou « user ». |
+| **user.userRole** | Rôle de l’utilisateur. Par exemple, « admin » ou « user ». |
 | **meeting.role** | Rôle du participant dans la réunion. Par exemple, « Organisateur » ou « Présentateur » ou « Participant ». |
 | **meeting.inMeeting** | Valeur indiquant si le participant est dans la réunion. |
 | **conversation.id** | ID de conversation de réunion. |
@@ -174,7 +176,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées pa
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
-Le tableau ci-dessous décrit chaque paramètre de chaîne de requête.
+Le tableau suivant inclut le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
@@ -501,7 +503,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 | **details.scheduledEndTime** | Heure de fin planifiée de la réunion, au format UTC. |
 | **details.joinUrl** | URL utilisée pour rejoindre la réunion. |
 | **details.title** | Titre de la réunion. |
-| **details.type** | Type de la réunion , par exemple GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | Type de réunion (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled ou Unknown). |
 | **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
 | **conversation.conversationType** | Type de conversation. |
 | **conversation.id** | ID de conversation de réunion. |
@@ -634,7 +636,7 @@ L’API `getAppContentStageSharingState` vous permet d’extraire des informatio
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
-Le tableau ci-dessous décrit chaque paramètre de chaîne de requête.
+Le tableau suivant inclut le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
@@ -674,7 +676,7 @@ L’API `getAppContentStageSharingCapabilities` vous permet d’extraire les fon
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
-Le tableau ci-dessous décrit chaque paramètre de chaîne de requête.
+Le tableau suivant inclut le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
@@ -922,13 +924,91 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **channelData.tenant.id** | ID du client Azure Active Directory. |
 | **channelData.source** | Nom source à partir duquel l’événement est déclenché ou appelé. |
 | **channelData.meeting.id** | ID par défaut associé à la réunion. |
-| **Valeur. MeetingType** | Type de réunion. |
-| **Valeur. Titre** | Objet de la réunion. |
-| **Valeur. Id** | ID par défaut associé à la réunion. |
-| **Valeur. JoinUrl** | URL de participation de la réunion. |
-| **Valeur. Starttime** | Heure de début de la réunion en UTC. |
-| **Valeur. EndTime** | Heure de fin de la réunion en UTC. |
+| **valeur. MeetingType** | Type de réunion. |
+| **valeur. Titre** | Objet de la réunion. |
+| **valeur. Id** | ID par défaut associé à la réunion. |
+| **valeur. JoinUrl** | URL de participation de la réunion. |
+| **valeur. StartTime** | Heure de début de la réunion en UTC. |
+| **valeur. EndTime** | Heure de fin de la réunion en UTC. |
 | **locale**| Paramètres régionaux du message défini par le client. |
+
+## <a name="get-incoming-audio-speaker"></a>Obtenir le haut-parleur audio entrant
+
+L’API `getIncomingClientAudioState` permet à une application d’obtenir le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion. L’API est disponible via le SDK client Teams.
+
+> [!NOTE]
+> L’API `getIncomingClientAudioState` pour mobile est actuellement disponible uniquement en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
+
+### <a name="query-parameter"></a>Paramètre de requête
+
+Le tableau suivant inclut le paramètre de requête :
+
+|Valeur|Type|Requis|Description|
+|---|---|----|---|
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois la récupération audio réussie. Le *résultat* peut contenir une valeur true ou false lorsque l’extraction audio réussit ou null en cas d’échec de la récupération audio. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false. |
+
+### <a name="example"></a>Exemple
+
+```typescript
+function getIncomingClientAudioState(
+    callback: (error: SdkError | null, result: boolean | null) => void,
+  ): void {
+    if (!callback) {
+      throw new Error('[get incoming client audio state] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('getIncomingClientAudioState', callback);
+  }
+
+```
+
+### <a name="response-codes"></a>Codes de réponse
+
+Le tableau suivant présente les codes de réponse :
+
+|Code de réponse|Description|
+|---|---|
+| **500** | Erreur interne. |
+| **501** | L’API n’est pas prise en charge dans le contexte actuel.|
+| **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à être mis en scène.|
+
+## <a name="toggle-incoming-audio"></a>Activer/désactiver l’audio entrant
+
+L’API `toggleIncomingClientAudio` permet à une application de désactiver le paramètre du haut-parleur audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement. L’API est disponible via le SDK client Teams.
+
+> [!NOTE]
+> L’API `toggleIncomingClientAudio` pour mobile est actuellement disponible uniquement en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
+
+### <a name="query-parameter"></a>Paramètre de requête
+
+Le tableau suivant inclut le paramètre de requête :
+
+|Valeur|Type|Requis|Description|
+|---|---|----|---|
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois le basculement réussi. Le *résultat* peut contenir une valeur true ou false, lorsque le basculement est réussi ou null en cas d’échec du basculement. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false. |
+
+### <a name="example"></a>Exemple
+
+```typescript
+function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+    if (!callback) {
+      throw new Error('[toggle incoming client audio] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('toggleIncomingClientAudio', callback);
+  }
+
+```
+
+### <a name="response-code"></a>Code de réponse
+
+Le tableau suivant présente les codes de réponse :
+
+|Code de réponse|Description|
+|---|---|
+| **500** | Erreur interne. |
+| **501** | L’API n’est pas prise en charge dans le contexte actuel.|
+| **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à être mis en scène.|
 
 ## <a name="code-sample"></a>Exemple de code
 

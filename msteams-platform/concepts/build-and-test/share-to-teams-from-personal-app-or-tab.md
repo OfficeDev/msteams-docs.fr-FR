@@ -1,36 +1,33 @@
 ---
 title: Partager dans Teams à partir d’une application ou d’un onglet personnel
-description: Découvrez comment activer le bouton Partager pour Teams sur votre application ou onglet personnel, les limitations et l’expérience de l’utilisateur final.
+description: Découvrez comment activer le bouton Partager vers Teams sur votre application ou onglet personnel, les limitations et l’expérience de l’utilisateur final.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123933"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232196"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Partager dans Teams à partir d’une application ou d’un onglet personnel
 
-> [!NOTE]
-> Le partage vers Teams est actuellement disponible uniquement en [préversion publique des développeurs](../../resources/dev-preview/developer-preview-intro.md).
+Le partage vers Teams permet aux utilisateurs de partager le contenu à partir d’une application ou d’un onglet personnel vers un autre utilisateur, groupe ou canal dans Teams. Les utilisateurs peuvent sélectionner Partager vers Teams pour lancer l’expérience Partager vers Teams dans une fenêtre contextuelle. La fenêtre contextuelle permet aux utilisateurs d’ajouter un autre utilisateur, groupe ou canal pour partager le contenu.
 
-Partager vers Teams permet aux utilisateurs de partager le contenu de l’application ou de l’onglet personnel à un autre utilisateur, groupe ou canal dans Teams. Les utilisateurs peuvent sélectionner Partager pour Teams pour lancer l’expérience Partager vers Teams dans une fenêtre contextuelle. La fenêtre contextuelle permet aux utilisateurs d’ajouter un autre utilisateur, groupe ou canal pour partager le contenu.
-
-L’image suivante montre la fenêtre contextuelle Partager pour Teams :
+L’image suivante montre la fenêtre contextuelle Partager vers Teams :
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
 
-## <a name="enable-share-to-teams-button"></a>Activer le bouton Partager pour Teams
+## <a name="enable-share-to-teams-button"></a>Bouton Activer partager vers Teams
 
 > [!NOTE]
-> Assurez-vous d’avoir [Microsoft Teams Kit de développement logiciel (SDK) client JavaScript](../../tabs/how-to/using-teams-client-sdk.md) ou Microsoft Teams Kit de développement logiciel ([SDK) client JavaScript v2 (](../../tabs/how-to/using-teams-client-sdk.md)`@microsoft/teams-js@1.11.0-beta.7`ou version ultérieure) pour permettre à Share de Teams pour votre application ou onglet personnel.
+> Vérifiez que vous [disposez du Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](../../tabs/how-to/using-teams-client-sdk.md) ou du [Kit de développement logiciel (SDK) client JavaScript Microsoft Teams v2 (](../../tabs/how-to/using-teams-client-sdk.md)`@microsoft/teams-js@1.11.0-beta.7`ou version ultérieure) pour activer Share to Teams pour votre application ou onglet personnel.
 
-Pour permettre à Share de Teams :
+Pour activer Share to Teams :
 
-1. Créez une application ou un onglet personnel avec **Teams Kit de développement logiciel (SDK) client Javascript**.
+1. Créez une application ou un onglet personnel avec le **Kit de développement logiciel (SDK) client Javascript Teams**.
 
-2. Créez un **bouton Partager pour Teams**.
+2. Bouton Créer un **partage vers Teams** .
 
 3. Sur le bouton Partager vers Teams, appelez `microsoftTeams.sharing.shareWebContent` avec une charge utile de contenu.
 
@@ -85,16 +82,16 @@ Le tableau suivant présente les codes de réponse :
 
 ## <a name="limitations"></a>Limites
 
-Limitations à l’ajout d’un partage à Teams bouton :
+Les limitations pour ajouter le bouton Partager à Teams :
 
 * Le bouton Partager vers Teams peut être hébergé ou incorporé dans une application s’exécutant dans Teams.
-* Vous pouvez ajouter le bouton Partager à Teams à l’application créée à l’aide **Teams Kit de développement logiciel (SDK) client Javascript**.
+* Vous pouvez ajouter le bouton Partager à Teams à l’application créée à l’aide du **Kit de développement logiciel (SDK) client Javascript Teams**.
 
-## <a name="end-user-share-to-teams-experience"></a>Partage d’utilisateurs finaux vers Teams expérience
+## <a name="end-user-share-to-teams-experience"></a>Expérience share to Teams de l’utilisateur final
 
 Une fois que vous avez activé le bouton Partager vers teams sur l’application ou l’onglet personnel, vous pouvez partager le contenu. Pour y accéder, procédez comme suit :
 
-1. Ouvrez une application ou un onglet personnel, puis **sélectionnez Partager pour Teams**.
+1. Ouvrez une application ou un onglet personnel, puis **sélectionnez Partager dans Teams**.
 
     :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 

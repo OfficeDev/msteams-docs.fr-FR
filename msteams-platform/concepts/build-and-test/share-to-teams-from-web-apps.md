@@ -3,12 +3,12 @@ title: Partager vers Teams à partir d’applications web
 description: Découvrez comment ajouter le bouton Partager dans Teams incorporé sur votre site web, avec un aperçu du site web, à l’aide d’exemples de code
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1d7b9b6ae80b224e67f24a589fae5e6af7e7f839
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035316"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232336"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Partager vers Teams à partir d’applications web
 
@@ -28,9 +28,6 @@ Vous pouvez également ajouter un déploiement de liens pour les liens partagés
 L’image suivante affiche l’expérience de déploiement de lien via le bouton Partager vers Teams :
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Déploiement de liens share-to-Teams":::
-
-> [!NOTE]
-> Le déploiement de liens dans le partage vers Teams est actuellement disponible uniquement en préversion publique des développeurs.
 
 Cet article vous guide sur la création et l’incorporation d’un bouton Partager dans Teams pour votre site web, la création de la préversion de votre site web et l’extension de Share à Teams pour l'éducation.
 
