@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058276"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232280"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -36,6 +36,9 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 03/08/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+| 03/08/2022 | Ajout de la fonctionnalité permettant de récupérer les transcriptions de réunion dans le scénario de post-réunion. | Créer des applications pour les réunions et les appels Teams > obtenir des transcriptions de réunions à l’aide des API Graph > [Vue d’ensemble](graph-api/meeting-transcripts/overview-transcripts.md) |
+| 03/08/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web | Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 28/07/2022 | Ajouter l’image d’affichage Teams et la carte contacts pour la notification en réunion| Créer des applications pour les réunions et les appels Teams > Activer et configurer des applications pour les réunions > [Notification en réunion](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 28/07/2022 | Créer des canaux partagés dans Teams | Créer des applications pour les réunions et les appels Teams > [Canaux partagés](concepts/build-and-test/Shared-channels.md) |
 | 28/07/2022|Présentation du manifeste d’application v1.14| Manifeste d’application > [Schéma de manifeste d’application pour Teams](resources/schema/manifest-schema.md)|
@@ -261,10 +264,10 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+| 03/08/2022 | Désactiver et activer le son des API pour les applications dans l’étape de réunion Teams | Créer des applications pour les réunions et les appels Teams > [références d’API Applications de réunion](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
+| 02/08/2022| Contrôles de collaboration pour Teams| Intégrer avec [les contrôles](samples/collaboration-control.md)Teams > Collaboration|
 | 30/06/2022 | Applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe| Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md)|
-| 06/16/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web| Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 |24/05/2022| Collaboration améliorée avec Live Share SDK | Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
-| 06/04/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/02/2022 | Introduction de la version 1.13 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
 | 17/01/2022 | Sélectionneur de personnes en cartes adaptatives pour mobile | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 | 28/10/2021 |Les bots peuvent être activés pour recevoir tous les messages du canal en utilisant le consentement spécifique aux ressources (RSC) | • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) |
