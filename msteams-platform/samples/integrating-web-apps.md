@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations relatives à l’intégration de Teams
-ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123800"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178610"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations relatives à l’intégration de Teams
 
@@ -19,7 +19,7 @@ Vous pouvez rendre les applications web adaptées aux fonctionnalités sociales 
   
 Les différents types d’applications que vous pouvez intégrer à Teams sont les suivants :
 
-* **applications autonomes**: une application autonome est une application à page unique ou volumineuse et complexe. L’utilisateur peut utiliser certains aspects de celui-ci dans Teams.
+* **Applications autonomes** : une application autonome est une application monopage ou volumineuse et complexe. L’utilisateur peut utiliser certains aspects de celui-ci dans Teams.
 * **Applications de collaboration**: une application déjà conçue pour les fonctionnalités sociales et collaboratives inhérentes à Teams.
 * **SharePoint** : page SharePoint que vous souhaitez afficher dans Teams.
 
@@ -30,7 +30,7 @@ Ce document donne une vue d’ensemble des fonctionnalités teams, des exigences
 
 ***scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour utiliser l’intégration d’applications, il est important de se familiariser avec Teams terminologie de développement.
+Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour utiliser l’intégration d’applications, il est important de se familiariser avec la terminologie de développement Teams.
 
 |Fonctionnalités d’application courantes   |Fonctionnalités de la plateforme Teams   |
 |----------|-----------|
@@ -90,7 +90,7 @@ Teams dispose de mécanismes d’authentification unique (SSO) avec Azure AD pou
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (GCC), mais ne sont pas disponibles pour GCC-High et le Ministère de la défense (DOD). Les applications tierces sont désactivées par défaut pour GCC. Pour activer des applications tierces pour GCC, consultez [gérer les stratégies d’autorisation d’application](/microsoftteams/teams-app-permission-policies) et [gérer les applications](/microsoftteams/manage-apps).
 
-Pour SharePoint pages, vous pouvez uniquement utiliser l’authentification unique et ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’authentification unique fonctionne pour une autre application, car l’ID est l’application SharePoint.
+Pour les pages SharePoint, vous pouvez uniquement utiliser l’authentification unique et ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’authentification unique fonctionne pour une autre application, car l’ID est l’application SharePoint.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 
