@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d37acc71ade61f23bbca32257ef7b30578948bcc
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 32aa12e69d32c8b50a05df994021fb9dfcc248b1
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737404"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264161"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 
@@ -29,7 +29,7 @@ Avant de soumettre votre application à [Espace partenaires](/office/dev/store/u
 Bien que votre application fonctionne dans un environnement de test, vous devez vérifier votre package d’application pour éviter de rencontrer des problèmes pendant le processus de soumission.
 
 > [!WARNING]
-> Si vous utilisez App Studio, nous vous recommandons d’essayer le [Developer Portal](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio ne sera plus pris en charge à compter du 1er août 2022.
+> Si vous utilisez App Studio, nous vous recommandons d’essayer le [Developer Portal](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio est déconseillé le 1er août 2022.
 
 L’outil de validation d’application Microsoft Teams vous permet d’identifier et de résoudre les problèmes avant de les soumettre à Espace partenaires. L’outil vérifie automatiquement les configurations de votre application par rapport aux cas de test utilisés lors de la validation du Store.
 
