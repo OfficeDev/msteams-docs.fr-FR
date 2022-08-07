@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment définir des commandes d’actio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035288"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264182"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -87,7 +87,7 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail des développeurs**.
 
 > [!WARNING]
- > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio ne sera plus pris en charge à compter du 1er août 2022.
+ > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio est déconseillé le 1er août 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
