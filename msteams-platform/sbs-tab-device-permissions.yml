@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: En savoir plus sur les autorisations d’appareil pour le navigateur
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: f1c1168cad71729e47eee3cdae8b0783423f8f97
-  ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+  ms.openlocfilehash: 2d78357348ef50c57439ebf8ca2bca7936c61260
+  ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/30/2022
-  ms.locfileid: "66558309"
+  ms.lasthandoff: 08/09/2022
+  ms.locfileid: "67285959"
 items:
 - durationInMinutes: 1
   content: >
@@ -63,7 +63,7 @@ items:
     1. Sélectionnez **Cloner**.
 - title: Configurer le tunnel pour le serveur web local
   durationInMinutes: 1
-  content: "Utilisez ngrok ou l’invite de commandes pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web local. Exécutez la commande suivante dans ngrok :\n\n```bash\nngrok http -host-header=localhost 3000\n``` \n  > [!TIP]\n  > Si vous rencontrez **ERR_NGROK_4018**, suivez les étapes, comme indiqué dans l’invite de commandes pour vous inscrire et authentifier ngrok. Exécutez ensuite la commande `ngrok http -host-header=localhost 3000`.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" tunneling ngrok\":::\n"
+  content: "Utilisez ngrok ou l’invite de commandes pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web local. Exécutez la commande suivante dans ngrok :\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > Si vous rencontrez **ERR_NGROK_4018**, suivez les étapes, comme indiqué dans l’invite de commandes pour vous inscrire et authentifier ngrok. Exécutez ensuite la commande `ngrok http --host-header=localhost 3000`.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" tunneling ngrok\":::\n"
 - title: Configurer le fichier manifeste
   durationInMinutes: 1
   content: "1. Accédez à **manifest.json** dans le référentiel cloné.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"fichier manifeste\":::\n\n1. Ouvrez **manifest.json** dans Visual Studio et apportez les modifications suivantes :\n  \n   Remplacez `<<BASE_URI_DOMAIN>>` par votre point de terminaison http à partir de ngrok, à l’exception de la partie https:// à tous les emplacements.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"mettre à jour ngrok dans Visual Studio\":::\n          \n"

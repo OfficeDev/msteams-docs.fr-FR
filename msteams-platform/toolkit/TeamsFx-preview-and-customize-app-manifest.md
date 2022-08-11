@@ -6,14 +6,14 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558001"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288142"
 ---
-# <a name="edit-teams-app-manifest"></a>Modifier le manifeste de l’application Teams
+# <a name="edit-teams-app-manifest-for-visual-studio"></a>Modifier le manifeste de l’application Teams pour Visual Studio
 
 Le fichier de modèle de manifeste `manifest.template.json` est disponible sous `templates/appPackage` dossier après la génération de modèles automatiques. Le fichier modèle avec des espaces réservés et les valeurs réelles sont résolus par le Kit de ressources Teams à l’aide de fichiers sous `.fx/configs` et `.fx/states` pour différents environnements.
 

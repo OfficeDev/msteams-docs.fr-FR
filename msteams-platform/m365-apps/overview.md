@@ -1,16 +1,16 @@
 ---
 title: Étendre les applications Teams à travers Microsoft 365 (version préliminaire)
-description: Dans ce module, sachez comment créer et mettre à jour vos expériences d’application Teams dans d’autres domaines à utilisation élevée de Microsoft 365.
+description: Dans cet article, découvrez comment créer, mettre à jour et étendre vos expériences d’application Teams et comment créer des applications utilisées dans d’autres domaines à utilisation élevée de Microsoft 365.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ec724b99e69cf496d25984d8dc800040d5817882
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 208843d9d4c46d29b095ffaf7260f28889f8ed45
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919829"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288212"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Étendre Teams applications à travers Microsoft 365
 
@@ -20,7 +20,7 @@ L’extension de votre application Teams dans Microsoft 365 offre un moyen simpl
 
 La plateforme d’applications Teams continue d’évoluer et de se développer de manière holistique dans l’écosystème Microsoft 365. Voici la prise en charge actuelle des éléments de plateforme d’application Teams dans Microsoft 365 (Teams, Outlook et Office en tant qu’hôtes d’applications) :
 
-|          | Élément de manifeste d’application | Prise en charge de Teams |Prise en charge d’Outlook* | Prise en charge d’Office* | Commentaires |
+|          | Élément de manifeste d’application | Prise en charge de Teams |Prise en charge d’Outlook* | Prise en charge d’Office* | Notes |
 |--|--|--|--|--|--|
 | [**Onglets**](../tabs/what-are-tabs.md) (étendue personnelle)    |`staticTabs`  | Web, Bureau, Mobile | Web (version ciblée), Bureau (canal bêta) | Web (version ciblée)| Étendue de canal et de groupe non encore prise en charge pour Microsoft 365. Consultez [les notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Extensions de message**](../messaging-extensions/what-are-messaging-extensions.md) (basées sur la recherche)| `composeExtensions` | Web, Bureau, Mobile| Web (version ciblée), Bureau (canal bêta)| - |Basée sur des actions non encore prises en charge pour Microsoft 365. Consultez [les notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
