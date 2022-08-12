@@ -1,14 +1,14 @@
 ---
 title: Créer des liens plus étroits
-description: Découvrez comment créer des liens profonds et comment les utiliser et les parcourir dans vos applications Microsoft Teams avec des onglets.
+description: Dans cet article, vous allez apprendre à créer des liens profonds et à les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
+ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058220"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "67302464"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -387,7 +387,10 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ### <a name="deep-linking-to-an-app"></a>Liaison profonde à une conversation
 
 Créez un lien profond pour l'application après son inscription dans le magasin Teams. Pour créer un lien pour lancer Teams, ajoutez l’ID d’application à l’URL suivante : `https://teams.microsoft.com/l/app/<your-app-id>`. Une boîte de dialogue s’affiche pour installer l’application.
-  
+
+> [!NOTE]
+> Actuellement, la liaison approfondie à une application n’est pas prise en charge sur la plateforme mobile.
+
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Liaison approfondie pour les onglets SharePoint Framework
 
 Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
