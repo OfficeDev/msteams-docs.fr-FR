@@ -5,12 +5,12 @@ description: Questions à prendre en compte lorsque vous planifiez votre applica
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78dd40e13c3bdac359cc5201bda92a5b1daccfb8
+ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558127"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67286118"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 
@@ -27,12 +27,14 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 <details>
 <summary>Comprendre votre utilisateur</summary>
 
+Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs de la façon dont une application Teams peut vous aider. Créez votre cas d’usage autour du problème, déterminez comment une application peut le résoudre et dessinez une solution. Pour plus d’informations, consultez [comprendre vos cas d’usage](understand-use-cases.md).
+
 | # | Facteurs |
 | --- | --- |
-| 1 | Les utilisateurs sont-ils principalement des employés de première ligne sur des clients mobiles ? |
-| 2 | Vous attendez-vous à ce que de nombreux utilisateurs invités aient besoin d'accéder à votre application ? |
+| 1 | Les utilisateurs sont-ils principalement des employés de première ligne sur des clients mobiles ? |
+| 2 | Vous attendez-vous à ce que de nombreux utilisateurs externes aient besoin d'accéder à votre application ? |
 | 3 | Utilisent-ils des équipes et des canaux ou principalement des conversations de groupe ? |
-| 4 | Quel est le niveau de sophistication technique de vos principaux utilisateurs ? |
+| 4 | Quel est le niveau d’avancé technique de vos principaux utilisateurs ? |
 | 5 | Vous avez besoin d'une expérience d'intégration complète ou quelques conseils peuvent suffire ? |
 
 </details>
@@ -63,10 +65,12 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 <details>
 <summary>Fournir l’authentification</summary>
 
+L’authentification consiste à valider les utilisateurs d’application et à sécuriser les utilisateurs de l’application et de l’application contre un accès injustifié. Vous pouvez utiliser une méthode d’authentification adaptée à votre application pour valider les utilisateurs de l’application qui souhaitent utiliser l’application Teams. Pour plus d’informations, consultez [Authentifier les utilisateurs dans Microsoft Teams](../authentication/authentication.md).
+
 | # | Facteurs|
 |--- | --- |
 | 1 | Les utilisateurs auront-ils accès à différentes affichages des données en fonction de leur rôle ? |
-| 2 | Y a-t-il des informations d’identification personnelle impliquées ? |
+| 2 | Y a-t-il du contenu d’utilisateur impliqué ? |
 | 3 | Les interactions seront-elles également basées sur les rôles des utilisateurs ? |
 | 4 | Des utilisateurs externes auront-ils accès à l'application ? |
 
@@ -74,6 +78,8 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 <br>
 <details>
 <summary>Planifier l’expérience d’intégration</summary>
+
+La création d’une application Teams exceptionnelle consiste à trouver la bonne combinaison de fonctionnalités pour répondre aux besoins de votre utilisateur. Pour offrir à vos utilisateurs une expérience d’intégration transparente, vous pouvez créer un guide pas à pas expliquant comment et quoi faire avec votre application. Par exemple, consultez [créer un bot de conversation Teams](../../sbs-teams-conversation-bot.yml).
 
 | # | Facteurs |
 | --- | --- |
@@ -109,17 +115,23 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 <details>
 <summary>Choisir l’environnement de build</summary>
 
+Avec Teams, vous pouvez choisir l’environnement de génération qui correspond le mieux aux besoins de votre application. Utilisez le Kit de ressources Teams ou d’autres Kits de développement logiciel (SDK), tels que C#, Blazor, Node.js, etc. pour commencer. Pour plus d’informations, consultez [Planifier votre application avec des fonctionnalités Teams](../app-fundamentals-overview.md).
+
 Suggestion : des options permettant de sélectionner l'environnement approprié en fonction des besoins de l'application.
 </details>
 <br>
 <details>
 <summary>Planifier le test de l’application</summary>
 
+Après avoir intégré votre application à Microsoft Teams, vous devez tester votre application avant de la publier. L’objectif final est d'obtenir un maximum d'utilisateurs pour votre application. Veillez donc à tester l'application sur plusieurs appareils que les utilisateurs pourraient utiliser. Pour plus d’informations, afficher [Mise à jour de votre application](../build-and-test/test-app-overview.md).
+
 Suggestion : des options qui permettent de déterminer le meilleur environnement de test pour l’application.
 </details>
 <br>
 <details>
 <summary>Planifier la distribution des applications</summary>
+
+Vous pouvez fournir votre application Microsoft Teams à une personne, une équipe, une organisation ou toute personne qui souhaite l’utiliser. La façon dont vous distribuez dépend de plusieurs facteurs, notamment les besoins des utilisateurs, l’activité, les exigences techniques et vos objectifs pour l’application. Pour plus d’informations, consultez [distribuer votre application Microsoft Teams](../deploy-and-publish/apps-publish-overview.md).
 
 Suggestion : des options qui permettent de déterminer le meilleur modèle de distribution.
 
