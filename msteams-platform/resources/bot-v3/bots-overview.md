@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment commencer à développer des bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: a1563d72ada21810393d7a0118b5a2b94463a27b
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558610"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312211"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Ajouter des bots aux applications Microsoft Teams
 
@@ -51,7 +51,7 @@ Les extensions du Kit de développement logiciel (SDK) installent des dépendanc
 > [!IMPORTANT]
 > Vous pouvez développer des applications Teams dans n’importe quelle autre technologie de programmation web et appeler directement les API REST [Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) , mais vous devez gérer vous-même tous les jetons.
 
-*Teams App Studio* vous aide à créer et à configurer votre manifeste d’application, et à créer votre Bot Framework pour vous. Il contient également une bibliothèque de contrôles React et un générateur de cartes interactif.
+*Le portail des développeurs pour Teams* vous aide à créer et à configurer votre manifeste d’application, et peut créer votre bot Bot Framework pour vous. Il contient également une bibliothèque de contrôles React et un générateur de cartes interactif.
 
 ## <a name="outgoing-webhooks"></a>Webhooks sortants
 

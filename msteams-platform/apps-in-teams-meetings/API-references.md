@@ -1,17 +1,17 @@
 ---
 title: Références API des applications de réunion
 author: surbhigupta
-description: Apprenez à identifier les références d’API d’applications de réunion avec des exemples et des exemples de code, les applications Teams rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle utilisateur.
+description: Dans cet article, découvrez les références d’API d’applications de réunion disponibles pour le client Teams et le Kit de développement logiciel (SDK) Bot Framework avec des exemples, des exemples de code et des codes de réponse.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232259"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311952"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -924,12 +924,12 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **channelData.tenant.id** | ID du client Azure Active Directory. |
 | **channelData.source** | Nom source à partir duquel l’événement est déclenché ou appelé. |
 | **channelData.meeting.id** | ID par défaut associé à la réunion. |
-| **valeur. MeetingType** | Type de réunion. |
-| **valeur. Titre** | Objet de la réunion. |
-| **valeur. Id** | ID par défaut associé à la réunion. |
-| **valeur. JoinUrl** | URL de participation de la réunion. |
-| **valeur. StartTime** | Heure de début de la réunion en UTC. |
-| **valeur. EndTime** | Heure de fin de la réunion en UTC. |
+| **Valeur. MeetingType** | Type de réunion. |
+| **Valeur. Titre** | Objet de la réunion. |
+| **Valeur. Id** | ID par défaut associé à la réunion. |
+| **Valeur. JoinUrl** | URL de participation de la réunion. |
+| **Valeur. Starttime** | Heure de début de la réunion en UTC. |
+| **Valeur. EndTime** | Heure de fin de la réunion en UTC. |
 | **locale**| Paramètres régionaux du message défini par le client. |
 
 ## <a name="get-incoming-audio-speaker"></a>Obtenir le haut-parleur audio entrant
@@ -937,7 +937,9 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 L’API `getIncomingClientAudioState` permet à une application d’obtenir le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion. L’API est disponible via le SDK client Teams.
 
 > [!NOTE]
-> L’API `getIncomingClientAudioState` pour mobile est actuellement disponible uniquement en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
+>
+> * L’API `getIncomingClientAudioState` pour mobile est actuellement disponible en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
+> * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour la version de manifeste 1.11 et les versions antérieures.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -977,7 +979,9 @@ Le tableau suivant présente les codes de réponse :
 L’API `toggleIncomingClientAudio` permet à une application de désactiver le paramètre du haut-parleur audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement. L’API est disponible via le SDK client Teams.
 
 > [!NOTE]
-> L’API `toggleIncomingClientAudio` pour mobile est actuellement disponible uniquement en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
+>
+> * L’API `toggleIncomingClientAudio` pour mobile est actuellement disponible en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
+> * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour la version de manifeste 1.11 et les versions antérieures.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 

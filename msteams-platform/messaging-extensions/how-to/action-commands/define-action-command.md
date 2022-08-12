@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment définir des commandes d’actio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264182"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312000"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -30,7 +30,7 @@ Avant de créer la commande d’action, vous devez décider des facteurs suivant
 Consultez la vidéo suivante pour découvrir comment définir des commandes d’action d’extension de message :
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Sélectionner des emplacements d’appel de commande d’action
@@ -79,71 +79,61 @@ Si l’extension de message est appelée à partir de la zone de composition ou 
 
 Pour ajouter la commande d’action au manifeste de l’application, vous devez ajouter un nouvel objet `composeExtension` au niveau supérieur du manifeste d’application JSON. Vous pouvez utiliser l'un des moyens suivants pour ce faire :
 
-* [Créer une commande d’action à l’aide d’App Studio](#create-an-action-command-using-app-studio)
+* [Créer une commande d’action à l’aide du portail des développeurs](#create-an-action-command-using-developer-portal)
 * [Créer une commande d’action manuellement](#create-an-action-command-manually)
 
-### <a name="create-an-action-command-using-app-studio"></a>Créer une commande d’action à l’aide d’App Studio
+### <a name="create-an-action-command-using-developer-portal"></a>Créer une commande d’action à l’aide du portail des développeurs
 
-Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail des développeurs**.
-
-> [!WARNING]
- > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio est déconseillé le 1er août 2022.
+Vous pouvez créer une commande d’action à l’aide **du portail des développeurs**.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
 > [!NOTE]
 > La configuration requise pour créer une commande d’action est que vous avez déjà créé une extension de message. Pour plus d’informations sur la création d’une extension de message, consultez [créer une extension de message](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**Pour créer une commande d’action**
+Pour créer une commande d’action :
 
-1. Ouvrez **App Studio** à partir du client Microsoft Teams et sélectionnez l’onglet **Éditeur de manifeste**.
-1. Si vous avez déjà créé votre package d’application dans **App Studio**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
-1. Après avoir importé un package d’application, sélectionnez **Extensions de message** sous **Fonctionnalités**. Vous obtenez une fenêtre contextuelle pour configurer l’extension de message.
-1. Sélectionnez **Configurer** dans la fenêtre pour inclure l’extension de message dans votre expérience d’application. L’image suivante affiche la fenêtre de configuration de l’extension de message :
+1. Ouvrez **le portail des développeurs** à partir du client Microsoft Teams et sélectionnez l’onglet **Applications** . Si vous avez déjà créé votre package d’application dans le **portail des développeurs**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Après avoir importé un package d’application, sélectionnez **Extensions de message sous Fonctionnalités** de **l’application**.
+1. Pour créer une extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez **l’option Créer un bot** , donnez un nom au nouveau bot, puis sélectionnez **Créer**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Configuration de l’extension de messagerie":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="La capture d’écran montre comment créer un bot dans le portail des développeurs.":::
 
-1. Pour créer une extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez l’option **Créer un bot**, donnez un nom au nouveau bot, puis sélectionnez **Créer**. L’image suivante affiche la création de bot pour l’extension de message :
+1. Pour utiliser un bot existant, **sélectionnez Sélectionner un bot existant** et choisissez les bots existants dans la liste déroulante ou **entrez un ID de bot** si vous avez déjà créé un ID de bot.
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Créer un bot pour l’extension de messagerie":::
+1. Sélectionnez l’étendue de l’extension de messagerie, puis **sélectionnez Enregistrer**.
 
-1. Pour utiliser un bot existant, sélectionnez **Utiliser le bot existant**, puis **Sélectionnez Sélectionner dans l’un de mes bots existants** pour choisir les bots existants dans la liste déroulante, donnez un **nom de bot**, puis **sélectionnez Enregistrer** ou sélectionner **Connecter à un autre ID de bot** si vous avez déjà créé un ID de bot, donnez un nom de **bot** et sélectionnez **Enregistrer**.
+1. Sélectionnez **Ajouter une commande** dans la section **Commande** pour inclure les commandes, qui déterminent le comportement de l’extension de message.
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Utiliser un bot existant pour l’extension de messagerie":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Capture d’écran montrant comment ajouter une commande pour définir le comportement de l’extension de message.":::
 
-1. Sélectionnez **Ajouter** dans la **section Commande** de la page Extensions de message pour inclure les commandes qui déterminent le comportement de l’extension de message. L'image suivante montre l'ajout de commandes pour l'extension des messages :
+1. Sélectionnez **Action** , puis sélectionnez le type de paramètre.
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Inclure la commande":::
+1. Entrez **l’ID de commande**, **le titre de la commande** et la **description de la commande**.
 
-1. Sélectionnez **Autoriser les utilisateurs à déclencher des actions dans des services externes à l’intérieur de Teams**. L’image suivante affiche la sélection de la commande d’action :
+1. Entrez tous les paramètres et sélectionnez le type d’entrée dans la liste déroulante.
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Sélection de la commande Action":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Capture d’écran montrant comment ajouter un paramètre pour définir votre commande pour l’extension de message.":::
 
-1. Pour utiliser un ensemble statique de paramètres pour créer votre module de tâche, sélectionnez **Définir un ensemble de paramètres statiques pour la commande**.
+1. Sélectionnez **Ajouter un domaine** sous **Liens d’aperçu**.
 
-    L’image suivante affiche la sélection de paramètre statique de commande d’action :
+1. Entrez un domaine valide, puis **sélectionnez Ajouter**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Sélection des paramètres statiques de la commande Action":::
-
-    L’image suivante affiche un exemple de configuration de paramètre statique :
-
-    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Configuration des paramètres statiques de la commande Action":::
-
-    L'image suivante montre un exemple de test de paramètres statiques :
-
-    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Test des paramètres statiques de la commande Action":::
-
-1. Pour utiliser des paramètres dynamiques, sélectionnez pour **Extraire un jeu dynamique de paramètres à partir de votre bot**. L’image suivante affiche la sélection du paramètre de commande d’action :
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Sélection des paramètres dynamiques de la commande Action":::
-
-1. Ajoutez un **ID de commande** et un **titre**.
-1. Sélectionnez l’emplacement à partir duquel vous souhaitez appeler la commande d’action. L’image suivante affiche l’emplacement d’appel de commande d’action :
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Emplacement d’appel de la commande Action":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Capture d’écran montrant comment ajouter un domaine valide à votre extension de messagerie pour les déploiements de liens.":::
 
 1. Sélectionnez **Enregistrer**.
-1. Pour ajouter d’autres paramètres, sélectionnez le bouton **Ajouter** dans la section **Paramètres**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Capture d’écran montrant comment enregistrer tous vos paramètres et paramètres pour votre extension de message.":::
+
+**Pour ajouter des paramètres supplémentaires**
+
+1. Sélectionnez ellipse sous la section de commande, puis **sélectionnez Modifier le paramètre**.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Les captures d’écran montrent comment ajouter des paramètres supplémentaires pour votre extension de message.":::
+
+1. Sélectionnez **Ajouter un paramètre** et entrez tous les paramètres.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Capture d’écran montrant comment ajouter des paramètres supplémentaires pour votre extension de message."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-an-action-command-manually"></a>Créer une commande d’action manuellement
 
@@ -185,43 +175,54 @@ La section suivante est un exemple d’objet `composeExtensions` définissant de
 ...
 "composeExtensions": [
   {
-    "botId": "12a3c29f-1fc5-4d97-a142-12bb662b7b23",
-    "canUpdateConfiguration": true,
+    "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
+    "scopes": [
+      "personal",
+      "groupchat"
+    ],
     "commands": [
       {
-        "id": "addTodo",
-        "description": "Create a To Do item",
-        "title": "Create To Do",
+        "id": "To do",
         "type": "action",
-        "context": ["commandBox", "message", "compose"],
+        "title": "Create To do",
+        "description": "Create a To do",
+        "initialRun": true,
         "fetchTask": false,
+        "context": [
+          "commandBox",
+          "compose"
+        ],
         "parameters": [
           {
             "name": "Name",
-            "description": "To Do Title",
             "title": "Title",
+            "description": "To do Title",
             "inputType": "text"
           },
           {
             "name": "Description",
-            "description": "Description of the task",
             "title": "Description",
+            "description": "Description of the task",
             "inputType": "textarea"
           },
           {
             "name": "Date",
-            "description": "Due date for the task",
             "title": "Date",
+            "description": "Due date for the task",
             "inputType": "date"
           }
         ]
-      },
+      }
+    ],
+    "canUpdateConfiguration": true,
+    "messageHandlers": [
       {
-        "id": "reassignTodo",
-        "description": "Reassign a todo item",
-        "title": "Reassign a todo item",
-        "type": "action",
-        "fetchTask": false,
+        "type": "link",
+        "value": {
+          "domains": [
+            "yourapp.onmicrosoft.com"
+          ]
+        }
       }
     ]
   }

@@ -3,12 +3,12 @@ title: Démarrage - Vue d’ensemble
 description: Dans ce module, découvrez comment prendre en main la documentation des développeurs Microsoft Teams qui vous présente les outils courants, les concepts fondamentaux et les fonctionnalités avancées.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 900d07b581f752b5169681750f209a280902b68d
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264140"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312281"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -40,9 +40,6 @@ Selon les fonctionnalités souhaitées pour votre application, choisissez un ens
 
 Si vous êtes déjà familiarisé avec le workflow Yeoman, vous préférerez peut-être utiliser [Générateur Yeoman yoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) pour créer vos applications.
 
-> [!WARNING]
-> Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams.<br> App Studio est déconseillé le 1er août 2022.
-
 ## <a name="build-your-first-teams-app"></a>Créer votre première application Teams
 
 Nous allons maintenant créer votre première application Teams. Tout d’abord, choisissez votre langage (ou infrastructure) et préparez votre environnement de développement.
@@ -69,5 +66,5 @@ Nous allons maintenant créer votre première application Teams. Tout d’abord,
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Exemples Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Ressources Git et GitHub](/contribute/additional-resources)
+- [Exemples Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Ressources Git et GitHub](/contribute/additional-resources)

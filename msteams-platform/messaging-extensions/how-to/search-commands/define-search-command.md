@@ -5,12 +5,12 @@ description: Dans ce module, découvrez les commandes de recherche d’extension
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503941"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312267"
 ---
 # <a name="define-message-extension-search-commands"></a>Définir des commandes de recherche d’extension de message
 
@@ -42,44 +42,54 @@ L’image suivante affiche les emplacements d’appel de la commande de recherch
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Ajouter la commande de recherche au manifeste de votre application
 
-Pour ajouter la commande de recherche au manifeste de votre application, vous devez ajouter un nouvel `composeExtension` objet au niveau supérieur de votre manifeste d’application JSON. Vous pouvez ajouter la commande de recherche à l’aide d’App Studio ou manuellement.
+Pour ajouter la commande de recherche au manifeste de votre application, vous devez ajouter un nouvel `composeExtension` objet au niveau supérieur de votre manifeste d’application JSON. Vous pouvez ajouter la commande de recherche à l’aide du portail des développeurs ou manuellement.
 
-### <a name="create-a-search-command-using-app-studio"></a>Créer une commande de recherche à l’aide d’App Studio
+### <a name="create-a-search-command-using-developer-portal"></a>Créer une commande de recherche à l’aide du portail des développeurs
 
 La configuration requise pour créer une commande de recherche est que vous devez déjà avoir créé une extension de message. Pour plus d’informations sur la création d’une extension de message, consultez [créer une extension de message](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-Pour créer une commande de recherche :
+**Pour créer une commande d’action**
 
-1. Ouvrez **App Studio** à partir du client Microsoft Teams, puis sélectionnez l’onglet **Éditeur de manifeste**.
-1. Si vous avez déjà créé votre package d’application dans **App Studio**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
-1. Après avoir importé le package d’application, sélectionnez **Extensions de message** sous **Fonctionnalités**. Vous obtenez une fenêtre contextuelle pour configurer l’extension de message.
-1. Sélectionnez **Configurer** dans la fenêtre pour inclure l’extension de message dans votre expérience d’application. L’image suivante affiche la page de configuration de l’extension de message :
+1. Ouvrez **le portail des développeurs** à partir du client Microsoft Teams et sélectionnez l’onglet **Applications** . Si vous avez déjà créé votre package d’application dans le **portail des développeurs**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Après avoir importé un package d’application, sélectionnez **Extensions de message sous Fonctionnalités** de **l’application**.
+1. Pour créer une extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez **l’option Créer un bot** , donnez un nom au nouveau bot, puis sélectionnez **Créer**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Configuration de l’extension de messagerie":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="La capture d’écran montre comment créer un bot dans le portail des développeurs.":::
 
-1. Pour créer l’extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez l’option **Créer un bot**, donnez un nom au nouveau bot, puis sélectionnez **Créer**. L’image suivante affiche la création de bot pour l’extension de message :
+1. Pour utiliser un bot existant, **sélectionnez Sélectionner un bot existant** et choisissez les bots existants dans la liste déroulante, ou **entrez un ID de bot** si vous avez déjà créé un ID de bot.
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Créer un bot pour l’extension de messagerie":::
+1. Sélectionnez l’étendue de l’extension de messagerie, puis **sélectionnez Enregistrer**.
 
-1. Pour utiliser un bot existant, sélectionnez **Utiliser le bot existant**, puis **Sélectionnez Sélectionner dans l’un de mes bots existants** pour choisir les bots existants dans la liste déroulante, donnez un **nom de bot**, puis **sélectionnez Enregistrer** ou sélectionner **Connecter à un autre ID de bot** si vous avez déjà créé un ID de bot, donnez un nom de **bot** et sélectionnez **Enregistrer**.
-
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Utiliser un bot existant pour l’extension de messagerie":::
-
-1. Sélectionnez **Ajouter** dans la **section Commande** de la page Extensions de message pour inclure les commandes qui déterminent le comportement de l’extension de message.
+1. Sélectionnez **Ajouter une commande** dans la section **Commande** pour inclure les commandes, qui déterminent le comportement de l’extension de message.
 L’image suivante affiche l’ajout de commande pour l’extension de message :
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Inclure la commande":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="La capture d’écran montre comment ajouter une commande pour définir le comportement de l’extension de message.":::
 
-1. Sélectionnez **Autoriser les utilisateurs à interroger votre service pour obtenir des informations et à les insérer dans un message**. L’image suivante affiche la sélection du paramètre de commande de recherche :
+1. Sélectionnez **Rechercher** et entrez **l’ID de commande**, **le titre de la commande** et **la description de la commande**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Sélection du paramètre de commande Search":::
+1. Entrez tous les paramètres et sélectionnez le type d’entrée dans la liste déroulante.
 
-1. Ajoutez un **ID de commande** et un **titre**.
-1. Sélectionnez l’emplacement à partir duquel votre commande de recherche doit être appelée. L’image suivante affiche l’emplacement d’appel de la commande de recherche :
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="La capture d’écran montre comment ajouter un paramètre pour définir votre commande pour l’extension de message.":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="La commande Search appelle la sélection d’emplacement":::
+1. Sélectionnez **Ajouter un domaine** sous **Liens d’aperçu**.
 
-1. Ajoutez votre paramètre de recherche, puis **sélectionnez Enregistrer**.
+1. Entrez un domaine valide, puis **sélectionnez Ajouter**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Capture d’écran montrant comment ajouter un domaine valide à votre extension de messagerie pour les déploiements de liens.":::
+
+1. Sélectionnez **Enregistrer**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Capture d’écran montrant comment enregistrer tous vos paramètres et paramètres pour votre extension de message.":::
+
+**Pour ajouter des paramètres supplémentaires**
+
+1. Sélectionnez ellipse sous la section de commande, puis **sélectionnez Modifier le paramètre**.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Les captures d’écran montrent comment ajouter des paramètres supplémentaires pour votre extension de message.":::
+
+1. Sélectionnez **Ajouter un paramètre** et entrez tous les paramètres.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Capture d’écran montrant comment ajouter des paramètres supplémentaires pour votre extension de message."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-a-search-command-manually"></a>Créer une commande de recherche manuellement
 
@@ -94,7 +104,7 @@ Pour ajouter manuellement votre commande de recherche d’extension de message a
 |`initialRun` | Si cette propriété a la valeur **true**, elle indique que cette commande doit être exécutée dès que l’utilisateur sélectionne cette commande dans l’interface utilisateur. | Non | 1.0 |
 | `context` | Cette propriété est un tableau facultatif de valeurs qui définit le contexte dans lequel l’action de recherche est disponible. Les valeurs possibles sont `message`, `compose` ou `commandBox`. La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
 
-Vous devez ajouter les détails du paramètre de recherche, qui définit le texte visible par votre utilisateur dans le client Teams.
+Vous devez ajouter les détails du paramètre de recherche qui définit le texte visible par votre utilisateur dans le client Teams.
 
 | Nom de la propriété | Objectif | Est-ce obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|

@@ -3,12 +3,12 @@ title: Choix d’une configuration pour tester et déboguer votre application
 description: Dans ce module, découvrez les options de test et de débogage des applications Microsoft Teams dans un environnement local et hébergé dans le cloud.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264133"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312190"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Choisir une configuration de test et déboguer votre application Teams
 
@@ -58,12 +58,7 @@ Pour utiliser ngrok dans votre projet en fonction des fonctionnalités que vous 
 Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point de terminaison de messagerie du bot pour utiliser ce nouveau point de terminaison ngrok. Par exemple : `https://2d1224fb.ngrok.io/api/messages`. Vous pouvez vérifier que ngrok fonctionne en testant la réponse du bot dans la fenêtre de conversation Test du portail Bot Framework. Là encore, comme l’émulateur, ce test ne vous permet pas d’accéder aux fonctionnalités spécifiques à Teams.
 
 > [!NOTE]
->
-> * Pour mettre à jour le point de terminaison de messagerie d’un bot, vous devez utiliser le Bot Framework. Sélectionnez votre bot dans [votre liste de bots dans Bot Framework](https://dev.botframework.com/bots). Vous n’avez pas besoin de migrer votre bot vers Microsoft Azure. Vous pouvez également mettre à jour votre point de terminaison de messagerie via [App Studio](~/concepts/build-and-test/app-studio-overview.md).
-
-> [!WARNING]
->
-> * Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio est déconseillé le 1er août 2022.
+> Pour mettre à jour le point de terminaison de messagerie d’un bot, vous devez utiliser le Bot Framework. Sélectionnez votre bot dans [votre liste de bots dans Bot Framework](https://dev.botframework.com/bots). Vous n’avez pas besoin de migrer votre bot vers Microsoft Azure. Vous pouvez également mettre à jour votre point de terminaison de messagerie via le [portail des développeurs pour Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 ## <a name="cloud-hosted"></a>Hébergé dans le cloud
 
@@ -87,3 +82,5 @@ Pour charger et exécuter votre expérience dans Teams, vous devez créer un pac
 ## <a name="see-also"></a>Voir aussi
 
 [Tester et déboguer votre bot localement avec l’IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[DevTools pour les onglets Microsoft Teams](../../tabs/how-to/developer-tools.md)

@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment créer et gérer un menu de comm
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264175"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312303"
 ---
 # <a name="create-a-commands-menu"></a>Créer un menu commandes
 
@@ -30,36 +30,34 @@ Pour définir un ensemble de commandes principales auxquelles votre bot peut ré
 
 ## <a name="create-a-command-menu-for-your-bot"></a>Créer un menu de commandes pour votre bot
 
-Les menus de commande sont définis dans le manifeste de votre application. Vous pouvez utiliser **App Studio** pour les créer ou les ajouter manuellement dans le manifeste de l’application.
+Les menus de commande sont définis dans le manifeste de votre application. Vous pouvez utiliser le **portail des développeurs** pour les créer ou les ajouter manuellement dans le manifeste de l’application.
 
-### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>Créer un menu de commandes pour votre bot à l’aide d’App Studio
+### <a name="create-a-command-menu-for-your-bot-using-developer-portal"></a>Créer un menu de commandes pour votre bot à l’aide du portail des développeurs
 
 Un prérequis pour créer un menu de commande pour votre bot est que vous devez modifier un manifeste d’application existant. Les étapes d’ajout d’un menu de commande sont les mêmes, que vous créiez un nouveau manifeste ou que vous modifiiez un manifeste existant.
 
-**Pour créer un menu de commandes pour votre bot à l’aide d’App Studio**
+Pour créer un menu de commandes pour votre bot à l’aide du portail des développeurs :
 
-1. Ouvrez Teams et sélectionnez **Apps** dans le volet gauche. Dans la page **applications**, recherchez **App Studio**, puis sélectionnez **Ouvrir**.
+1. Ouvrez Teams et sélectionnez **Apps** dans le volet gauche. Dans la page **Applications** , **recherchez le portail des développeurs**, puis sélectionnez **Ouvrir**.
 
-   > [!WARNING]
-   > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio est déconseillé le 1er août 2022.
+   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="Capture d’écran montrant comment ajouter le portail des développeurs dans le client Teams.":::
+  
+1. Dans **le portail des développeurs**, sélectionnez l’onglet **Applications** . Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, consultez [le portail des développeurs pour Teams](../../concepts/build-and-test/teams-developer-portal.md).
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
+1. Sélectionnez l’onglet **Applications** , sélectionnez **Fonctionnalités d’application** dans le volet gauche, puis sélectionnez **Bots**.
 
-2. Dans **App Studio**, sélectionnez l’onglet de **l’éditeur de manifeste**. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, consultez [mettre à jour le package d’application C# dans App Studio](../../get-started/deploy-csharp-app-studio.md).
+1. Sélectionnez **Ajouter une commande** sous la section **Commandes** .
 
-3. Dans le volet gauche de **l’éditeur de manifeste** et dans la section **fonctionnalités**, sélectionnez **Bots**.
+   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="Capture d’écran montrant comment ajouter une commande pour votre bot dans le portail des développeurs.":::
 
-4. Dans le volet droit de **Éditeur de manifeste** et dans la section **commandes**, sélectionnez **Ajouter**. L’écran **Nouvelle commande** s’affiche.
+1. Entrez la **commande** qui s’affiche comme menu de commande pour votre bot.
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="Sélectionnez le package d’application" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
+1. Entrez la **description** qui s’affiche sous le texte de la commande dans le menu. **La description** doit être une brève explication de l’objectif de la commande.
 
-5. Entrez le **texte de la commande** qui doit apparaître comme menu de commande pour votre bot.
+1. Cochez la case **Étendue** , puis **sélectionnez Ajouter**.
+   Cela définit l’endroit où le menu de commande doit apparaître.
 
-6. Entrez le **texte d’aide** qui doit apparaître sous le texte de la commande dans le menu. **texte d’aide** doit être une brève explication de l’objectif de la commande.
-
-7. Activez les cases à cocher **Étendue** pour sélectionner l’emplacement où ce menu de commandes doit apparaître, puis sélectionnez **Enregistrer**.
-
-   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="Bouton de menu Nouvelles commandes d’App Studio "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Capture d’écran montrant comment ajouter une commande, une description et des étendues pour votre bot.":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Créer un menu de commandes pour votre bot en modifiant Manifest.json
 

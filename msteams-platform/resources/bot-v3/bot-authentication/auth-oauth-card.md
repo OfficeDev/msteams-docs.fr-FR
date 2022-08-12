@@ -4,12 +4,12 @@ description: Décrit azure Bot Service OAuthCard et comment il est utilisé pour
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams authentication OAuthCard OAuth card Azure Bot Service
-ms.openlocfilehash: 7731e4d1148e50c748d9c5e1b55371628a78dea7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: efe05320fc6a0b03b530349b5498fa29d36b47b6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143164"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312232"
 ---
 # <a name="using-azure-bot-service-for-authentication-in-teams"></a>Utilisation d’Azure Bot Service pour l’authentification dans Teams
 
@@ -23,7 +23,7 @@ D’autres rubriques de [l’authentification](~/resources/bot-v3/bot-authentica
 
 ## <a name="support-for-the-oauthcard"></a>Prise en charge d’OAuthCard
 
-Il existe actuellement des restrictions quant à l’emplacement où vous pouvez utiliser OAuthCard. Cela inclut ce qui suit :
+Il existe actuellement des restrictions quant à l’emplacement où vous pouvez utiliser OAuthCard. Cela comprend :
 
 * La carte ne fonctionne pas avec [l’accès invité](/MicrosoftTeams/guest-access).
 * Cela ne fonctionnera pas avec [Microsoft Teams gratuit](https://products.office.com/microsoft-teams/free).
@@ -48,12 +48,12 @@ OAuthCard facilite l’authentification des manières suivantes :
 
 ## <a name="when-should-i-implement-my-own-solution"></a>Quand dois-je implémenter ma propre solution ?
 
-Étant donné que les jetons d’accès sont des informations sensibles, vous ne souhaiterez peut-être pas les stocker dans un service externe. Dans ce cas, vous pouvez choisir d’implémenter votre propre système de gestion des jetons et votre expérience de connexion dans Teams, comme décrit dans le reste des rubriques sur [l’authentification](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) Teams.
+Étant donné que les jetons d’accès sont des informations sensibles, vous ne souhaiterez peut-être pas les stocker dans un service externe. Dans ce cas, vous pouvez choisir d’implémenter votre propre système de gestion des jetons et votre expérience de connexion dans Teams, comme décrit dans les autres rubriques sur [l’authentification](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) Teams.
 
-## <a name="getting-started-with-oauthcard-in-teams"></a>Prise en main d’OAuthCard dans Teams
+## <a name="getting-started-with-oauthcard-in-teams"></a>Bien démarrer avec OAuthCard dans Teams
 
 > [!NOTE]
-> Ce guide utilise le Kit de développement logiciel (SDK) Bot Framework v3. Vous trouverez l’implémentation v4 [ici](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). Vous devez toujours créer un manifeste et inclure token.botframework.com dans la `validDomains` section, car sinon, le bouton Connexion n’ouvre pas la fenêtre d’authentification. Utilisez [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour générer votre manifeste.
+> Ce guide utilise le Kit de développement logiciel (SDK) Bot Framework v3. Vous trouverez l’implémentation v4 [ici](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). Vous devez toujours créer un manifeste et inclure token.botframework.com dans la `validDomains` section, car sinon, le bouton Connexion n’ouvre pas la fenêtre d’authentification. Utilisez le [portail des développeurs](~/concepts/build-and-test/teams-developer-portal.md) pour générer votre manifeste.
 
 Vous devez d’abord configurer votre service de bot Azure pour configurer des fournisseurs d’authentification externes. Pour plus [d’informations, consultez Configuration des fournisseurs d’identité](~/concepts/authentication/configure-identity-provider.md) .
 

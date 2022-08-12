@@ -5,18 +5,18 @@ description: Dans ce module, découvrez comment ajouter un déploiement de lien 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503612"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312221"
 ---
 # <a name="add-link-unfurling"></a>Ajouter un déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Ce document vous guide sur la façon d’ajouter un déploiement de lien à votre manifeste d’application à l’aide d’App Studio ou manuellement. Avec le déploiement de liens, votre application peut s’inscrire pour recevoir une activité de `invoke` lorsque les URL d’un domaine particulier sont collées dans la zone de composition des messages. Contient `invoke` l’URL complète collée dans la zone de message de composition. Vous pouvez répondre avec une carte que l’utilisateur peut déployer pour obtenir des informations ou des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l’URL comme terme de recherche.
+Ce document vous guide sur la façon d’ajouter un déploiement de lien à votre manifeste d’application à l’aide du portail des développeurs ou manuellement. Avec le déploiement de liens, votre application peut s’inscrire pour recevoir une activité de `invoke` lorsque les URL d’un domaine particulier sont collées dans la zone de composition des messages. Contient `invoke` l’URL complète collée dans la zone de message de composition. Vous pouvez répondre avec une carte que l’utilisateur peut déployer pour obtenir des informations ou des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l’URL comme terme de recherche.
 
 > [!NOTE]
 >
@@ -34,18 +34,21 @@ Consultez la vidéo suivante pour en savoir plus sur le déploiement de liens :
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Ajouter un déploiement de lien au manifeste de votre application
 
-Pour ajouter un déploiement de lien à votre manifeste d’application, ajoutez un nouveau tableau `messageHandlers` à la section `composeExtensions` de votre manifeste d’application JSON. Vous pouvez ajouter le tableau à l’aide d’App Studio ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine, si vous devez faire correspondre `a.b.example.com`, puis utilisez `*.*.example.com`.
+Pour ajouter un déploiement de lien à votre manifeste d’application, ajoutez un nouveau tableau `messageHandlers` à la section `composeExtensions` de votre manifeste d’application JSON. Vous pouvez ajouter le tableau à l’aide du portail des développeurs ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine, si vous devez faire correspondre `a.b.example.com`, puis utilisez `*.*.example.com`.
 
 > [!NOTE]
 > N’ajoutez pas de domaines qui ne sont pas dans votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont interdits, par exemple, `*.com``*.org`.
 
-### <a name="add-link-unfurling-using-app-studio"></a>Ajouter un déploiement de lien à l’aide d’App Studio
+### <a name="add-link-unfurling-using-developer-portal"></a>Ajouter un déploiement de lien à l’aide du portail des développeurs
 
-1. Ouvrez **App Studio** à partir du client Microsoft Teams, puis sélectionnez l’onglet **Éditeur de manifeste**.
+1. Ouvrez le **portail des développeurs** à partir du client Microsoft Teams, puis sélectionnez l’onglet **Applications** .
 1. Chargez le manifeste de votre application.
-1. Dans la page **Extension de message**, ajoutez le domaine que vous souhaitez rechercher dans la section **Gestionnaires de messages**. L'image suivante explique le processus :
+1. Dans la page **Extension de messagerie** sous **Fonctionnalités de l’application**, sélectionnez un bot existant ou créez-en un.
+1. Sélectionnez **Enregistrer**.
+1. Sélectionnez **Ajouter un domaine** sous la section **Liens d’aperçu** , puis entrez un domaine valide.
+1. Sélectionnez **Ajouter**. L’image suivante explique le processus :
 
-    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Section gestionnaires de messages dans App Studio":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Capture d’écran de la section Gestionnaires de messages dans le portail des développeurs." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### <a name="add-link-unfurling-manually"></a>Ajouter le déploiement manuel du lien
 
