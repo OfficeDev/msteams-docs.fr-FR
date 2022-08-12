@@ -4,12 +4,12 @@ description: Dans ce module, découvrez comment concevoir des Cartes adaptatives
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 669c117ddd344b1ad77dc5983e89fd59e2405a47
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558155"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312082"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 
@@ -61,7 +61,7 @@ Permet d’envoyer un message actionnable simple.
 
 ### <a name="list"></a>Répertorier
 
-Utilisez-le dans les scénarios où vous souhaitez que l’utilisateur choisisse un élément dans une liste, mais que les éléments n’ont pas besoin de beaucoup d’explications.
+À utiliser dans les scénarios où vous souhaitez que l’utilisateur choisisse un élément dans une liste et où les éléments n’ont pas besoin de beaucoup d’explications.
 
 #### <a name="mobile"></a>Mobile
 
@@ -157,7 +157,7 @@ Permet de collecter plusieurs entrées de l’utilisateur.
 
 ## <a name="anatomy"></a>Anatomie
 
-Les cartes adaptatives ont une grande flexibilité. Mais au minimum, nous vous suggérons vivement d’inclure les composants suivants dans chaque carte.
+Cartes adaptatives ont de nombreuses flexibilités. Mais au minimum, nous vous suggérons vivement d’inclure les composants suivants dans chaque carte.
 
 #### <a name="mobile"></a>Mobile
 
@@ -185,14 +185,14 @@ Cartes conçues pour une échelle d’écran étroite sur des écrans plus large
 
 ### <a name="column-layouts"></a>Mises en page des colonnes
 
-Permet [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) de mettre en forme le contenu de votre carte dans un tableau ou une grille. Plusieurs options s’offrent à vous pour la mise en forme de la largeur des colonnes. Ces recommandations vous aident à comprendre quand utiliser chacune d’elles.
+Utilisez [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) pour mettre en forme le contenu de votre carte dans une table ou une grille. Plusieurs options s’offrent à vous pour la mise en forme de la largeur des colonnes. Ces recommandations vous aident à comprendre quand utiliser chacune d’elles.
 
 * `"width": "auto"`: dimensionne chaque colonne de l’application pour qu’elle corresponde au contenu de l’application `ColumnSet` que vous incluez dans cette colonne.
   * **À** faire : utilisez lorsque vous avez un contenu de largeur variable et n’avez pas besoin de hiérarchiser une colonne spécifique.
   * **À faire** : Pour chaque `TextBlock` , définir `"wrap": true` puisque le texte ne s’enveloppe pas par défaut.
   * **À ne pas faire**: définir `"width": "auto"` pour chaque conteneur de colonnes. Par exemple, si vous avez une entrée et un bouton côte à côte, le bouton peut être coupé sur certains écrans. Définissez plutôt la colonne avec des boutons et d’autres contenus qui `auto` doivent toujours être complètement visibles.
 * `"width": "stretch"`: dimensionne les colonnes en fonction de la `ColumnSet` largeur disponible. Lorsque plusieurs colonnes `"stretch"` utilisent la valeur, elles partagent également la largeur disponible.
-  * **À faire** : utilisez avec une colonne si toutes vos autres colonnes ont une largeur statique. Par exemple, vous avez des images miniatures dans une colonne d’une largeur de 50 pixels.
+  * **À faire** : utilisez avec une colonne si toutes vos autres colonnes ont une largeur statique. Par exemple, vous avez des images miniatures dans une colonne qui font toutes 50 pixels de large.
 * `"width": "<number>"`: Dimensionne les colonnes en utilisant une proportion de la largeur `ColumnSet`disponible. Par exemple, si vous définissez trois colonnes avec `"width": "1"`, `"width": "4"`, et `"width": "5"`, les colonnes occuperont 10, 40 et 50 pour cent de la largeur disponible.
 * `"width": "<number>px"`: dimensionne les colonnes à une largeur de pixel spécifique. Cette approche est utile lors de la création de tableaux.
   * **À faire** : utilisez lorsque la largeur de ce que vous affichez n’a pas besoin de changer (par exemple, les nombres et les pourcentages).
@@ -204,11 +204,11 @@ Permet [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) de mettre
 
 **À faire** : dans cet écran, il y a deux colonnes en bas de la carte. La largeur du composant d’entrée est définie sur `stretch`, tandis que la largeur du bouton **Sélectionner** est définie sur `auto` . Cela garantit que le bouton reste entièrement en vue.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="L’image montre comment définir la largeur de colonne dans les cartes adaptatives.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="La capture d’écran montre comment définir la largeur de colonne des Cartes adaptatives.":::
 
 **À ne pas faire**: dans cet écran, les deux colonnes `width` ont été définies sur `auto` . Ainsi, **le bouton Sélectionner** à droite est légèrement coupé par rapport à l’entrée.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="L’image montre comment ne pas définir la largeur de colonne dans les cartes adaptatives.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="La capture d’écran montre comment ne pas définir la largeur de colonne dans les Cartes adaptatives.":::
 
 # <a name="code"></a>[Code](#tab/code)
 
@@ -388,11 +388,11 @@ Voici le code pour l’implémentation de l’exemple de conception que vous dev
 
 **À faire** : les dispositions ont tendance à s’afficher mieux sur les appareils mobiles avec moins de colonnes.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="L’image montre la quantité de colonnes adaptée dans les cartes adaptatives.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="La capture d’écran montre le bon nombre de colonnes dans les Cartes adaptatives.":::
 
 **À ne pas faire** : l’utilisation d’un trop grand nombre de colonnes peut encombrer le contenu de votre carte sur un appareil mobile.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="L’image montre comment un trop grand nombre de colonnes peut avoir une incidence négative sur la disposition de la carte adaptative.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="La capture d’écran montre comment le nombre de colonnes peut affecter négativement la disposition de la carte adaptative.":::
 
 #### <a name="example-fixed-width-has-its-place"></a>Exemple : la largeur fixe a sa place
 
@@ -400,7 +400,7 @@ Voici le code pour l’implémentation de l’exemple de conception que vous dev
 
 Lorsque la taille d’un affichage n’a pas besoin de changer, définissez les colonnes sur une largeur de pixel spécifique. Cet exemple montre la colonne gauche dimensionnée à 50 pixels, tandis que les descriptions situées à côté des miniatures s'étendent sur toute la longueur de la carte.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="L’image montre comment définir la largeur de colonne dans les cartes adaptatives.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="La capture d’écran montre comment définir la largeur des colonnes dans les cartes adaptatives.":::
 
 # <a name="code"></a>[Code](#tab/code)
 
@@ -548,17 +548,17 @@ Voici le code pour implémenter l’exemple de conception.
 
 Que vous utilisiez [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), ou [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), définissez`wrap` la propriété`true` de sorte que le texte de votre carte ne soit pas tronqué sur mobile.
 
-#### <a name="example-making-sure-text-doesnt-truncate"></a>Exemple : s’assurer que le texte n’est pas tronqué
+#### <a name="example-making-sure-text-dont-truncate"></a>Exemple : s’assurer que le texte ne tronque pas
 
 # <a name="design"></a>[Concevoir](#tab/design)
 
 **À faire** : dans cet écran, la carte a une `wrap` propriété définie sur `true`. Cela permet au texte de s’ajuster à n’importe quelle taille d’écran.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="L’image montre comment encapsuler du texte dans des cartes adaptatives.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="La capture d’écran montre comment encapsuler du texte dans les Cartes adaptatives.":::
 
 **N’utilisez pas**: dans cet écran, la carte n’utilise pas la propriété, de sorte que le texte se `wrap` coupe sur un écran mobile.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="L'image montre ce qui peut se passer si vous n'enroulez pas le texte dans les cartes adaptatives.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="La capture d’écran montre ce qui peut se produire si vous n’encapsulez pas le texte dans les Cartes adaptatives.":::
 
 # <a name="code"></a>[Code](#tab/code)
 
@@ -655,7 +655,7 @@ Suivez ces instructions lorsque vous insérez des images dans vos cartes.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Meilleure pratique concernant la façon dont vous ne devez inclure qu’un petit jeu d’actions sur une carte adaptative.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="La capture d’écran montre la meilleure pratique pour inclure uniquement un petit ensemble d’actions sur une carte adaptative.":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>À faire : utiliser jusqu’à six actions principales
 
@@ -663,7 +663,7 @@ Bien que Cartes adaptatives puisse prendre en charge six actions principales, la
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Meilleure pratique pour ne pas surcharger les utilisateurs avec un trop grand nombre d’actions sur une carte adaptative.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="La capture d’écran montre la meilleure pratique pour ne pas surcharger les utilisateurs avec un trop grand nombre d’actions sur une carte adaptative.":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>À ne pas faire : utiliser plus de six actions principales
 
@@ -674,7 +674,7 @@ Les cartes adaptatives doivent présenter un contenu rapide et exploitable. Un t
 
 ### <a name="frequency"></a>Fréquence
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Meilleure pratique concernant la fréquence des cartes adaptatives.":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="La capture d’écran montre les meilleures pratiques relatives à la fréquence des cartes adaptatives.":::
 
 #### <a name="do-be-concise"></a>À faire : être concis
 
