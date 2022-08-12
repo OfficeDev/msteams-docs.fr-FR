@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d54d2ffaa6035778ba195c9e2eba44c2e096892e
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841791"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311966"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -53,7 +53,7 @@ Prenons les pratiques suivantes pour une expérience de création de scène :
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Créer une scène à l’aide du studio de scène
 
-Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Celui-ci est disponible sur [Éditeur de scènes : portail des développeurs Teams.](https://dev.teams.microsoft.com/scenes) Ce document fait référence au studio de scène situé dans le portail des développeurs Teams. L’interface et les fonctionnalités sont identiques dans Le Concepteur de scène App Studio.
+Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Celui-ci est disponible sur [Éditeur de scènes : portail des développeurs Teams.](https://dev.teams.microsoft.com/scenes) Ce document fait référence au studio de scène situé dans le portail des développeurs Teams.
 
 Une scène dans le contexte du studio de scène est un artefact qui contient les éléments suivants :
 

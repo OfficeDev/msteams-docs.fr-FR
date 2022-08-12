@@ -3,12 +3,12 @@ title: Types de cartes
 description: Dans ce module, découvrez les cartes et les actions de carte disponibles pour les bots dans Teams et créez un héros, une miniature et des cartes adaptatives
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558582"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311959"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -18,7 +18,7 @@ Avant d’identifier les différents types de cartes, sachez comment créer une 
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Créer une carte de bannière, une carte miniature ou une carte adaptative
 
-Pour créer une carte de bannière, une carte miniature ou une carte adaptative à partir d’App Studio :
+Pour créer une carte de bannière, une carte miniature ou une carte adaptative à partir de Developer Portal pour Teams :
 
 1. Accédez au [portail des développeurs pour Teams](https://dev.teams.microsoft.com/home).
 1. Sélectionnez **Concevoir et générer des cartes adaptatives**.

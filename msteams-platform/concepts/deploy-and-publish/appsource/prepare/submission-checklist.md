@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 32aa12e69d32c8b50a05df994021fb9dfcc248b1
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: b5197a7fcb3a3309cfec003d8b4c2fc937e59035
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264161"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312246"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 
@@ -19,7 +19,7 @@ Vous avez conçu, créé et testé votre application Microsoft Teams. Vous êtes
 Regardez la vidéo suivante pour en savoir plus sur la publication de votre application dans l’App Store Microsoft Teams :
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Avant de soumettre votre application à [Espace partenaires](/office/dev/store/use-partner-center-to-submit-to-appsource), vérifiez que vous avez effectué les opérations suivantes.
@@ -28,12 +28,9 @@ Avant de soumettre votre application à [Espace partenaires](/office/dev/store/u
 
 Bien que votre application fonctionne dans un environnement de test, vous devez vérifier votre package d’application pour éviter de rencontrer des problèmes pendant le processus de soumission.
 
-> [!WARNING]
-> Si vous utilisez App Studio, nous vous recommandons d’essayer le [Developer Portal](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio est déconseillé le 1er août 2022.
-
 L’outil de validation d’application Microsoft Teams vous permet d’identifier et de résoudre les problèmes avant de les soumettre à Espace partenaires. L’outil vérifie automatiquement les configurations de votre application par rapport aux cas de test utilisés lors de la validation du Store.
 
-1. Accédez à l’[outil de validation d’application Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Remarque : l’outil est également disponible dans [App Studio](../../../build-and-test/app-studio-overview.md).)
+1. Accédez à l’[outil de validation d’application Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Remarque : l’outil est également disponible dans [Developer Portal pour Teams](~/concepts/build-and-test/teams-developer-portal.md)
 1. Chargez votre package d’application pour exécuter les tests automatisés.
 1. Accédez à la **liste de contrôle préliminaire** et passez en revue les cas de test difficiles à automatiser.
 1. [Résoudre les problèmes liés à vos configurations](~/resources/schema/manifest-schema.md) ou application en général. Ces problèmes se produisent si les tests automatisés vous donnent des erreurs ou si vous ne répondez pas à tous les critères de la liste de vérification.

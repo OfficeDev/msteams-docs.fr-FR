@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232280"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312239"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -36,6 +36,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 09/08/2022 | Présentation de Teams Toolkit pour Visual Studio 2022 | Vue d’ensemble des outils et du Kit de développement logiciel (SDK) > Teams pour Visual Studio > [Kit de ressources Teams pour Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Ajout de la fonctionnalité permettant de récupérer les transcriptions de réunion dans le scénario de post-réunion. | Créer des applications pour les réunions et les appels Teams > obtenir des transcriptions de réunions à l’aide des API Graph > [Vue d’ensemble](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03/08/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web | Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
@@ -227,7 +228,6 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Les onglets dans les discussions de groupe sont désormais disponibles dans la version publiée de Teams. Dans le cadre de ce travail, la section des onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | Le guide de démarrage pour Node JS et pour .NET/C# a été mis à jour pour utiliser App Studio dans Teams, et une nouvelle section a été ajoutée sur l'hébergement des applications Teams basées sur Node dans Azure. | [Démarrez sur la plateforme Microsoft Teams avec C#/.NET et App Studio](~/get-started/get-started-dotnet-app-studio.md), [Démarrez sur la plateforme Microsoft Teams avec Node JS et App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hébergez votre application Node Teams dans Azure](~/get-started/get-started-nodejs-in-azure.md) |
 | 09/11/2018 | Vous pouvez désormais créer des liens profonds vers des discussions privées entre utilisateurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 a été livré et, avec lui, une nouvelle fonctionnalité permettant d'utiliser l'onglet Microsoft Teams en tant que composant web SharePoint Framework. | [Onglets dans SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 05/11/2018 | La **fonctionnalité de module** de tâches a été lancée. Un module de tâche vous permet de créer des expériences contextuelles modales dans votre application Teams, à partir de bots et d’onglets. Dans la fenêtre contextuelle, vous pouvez exécuter votre propre code HTML/JavaScript personnalisé, afficher un widget basé sur `<iframe>` (une vidéo YouTube ou Microsoft Stream) ou afficher une [carte adaptative](/adaptive-cards/). | [Aperçu du module de tâches](~/concepts/task-modules/task-modules-overview.md), [module de tâches dans les onglets](~/concepts/task-modules/task-modules-tabs.md), [module de tâches dans les robots](~/concepts/task-modules/task-modules-bots.md).  |
@@ -251,7 +251,6 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | 02/04/2018 | Utilisation de robots pour envoyer des notifications pour votre application. |[Bots avec notification seulement](~/concepts/bots/bots-notification-only.md)|
 | 27/03/2018 | Documentation étendue pour la messagerie proactive. |[Démarrer une conversation](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | Documentation remaniée pour les cartes. |[Cartes,](~/concepts/cards/cards.md) [actions de carte,](~/concepts/cards/cards-actions.md) [mise en forme de carte,](~/concepts/cards/cards-format.md) [référence de carte](~/concepts/cards/cards-reference.md)|
-| 03/03/2018 | Ajout de la documentation Teams App Studio. |[Développer rapidement des applications avec Teams App Studio](~/get-started/get-started-app-studio.md), à l’aide de la bibliothèque de [contrôles dans App Studio](~/get-started/app-studio-component-library.md)|
 | 27/02/2018 | Ajout d'un exemple de code pour démontrer la méthode AsTeamsChannelAccounts(). |[Obtenir un contexte pour votre bot](~/concepts/bots/bots-context.md)|
 | 05/02/2018 | Ajout de rubriques pour commencer à utiliser C#. |[Prise en main de la plateforme Microsoft Teams avec C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 |

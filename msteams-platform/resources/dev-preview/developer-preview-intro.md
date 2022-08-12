@@ -3,12 +3,12 @@ title: Aperçu public pour les développeurs de Microsoft Teams
 description: Dans cet article, découvrez les fonctionnalités qui figurent dans la préversion préliminaire publique pour les développeurs de Microsoft Teams et le manifeste d’application de la préversion préliminaire pour les développeurs.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503913"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312197"
 ---
 # <a name="public-developer-preview-for-teams"></a>Aperçu public pour les développeurs de Microsoft Teams
 
@@ -19,9 +19,9 @@ L’aperçu pour développeurs est un programme public pour les développeurs qu
 
 ## <a name="developer-preview-app-manifest"></a>Manifeste de l’application de l’aperçu pour les développeurs
 
-De nombreuses fonctionnalités activées dans l’aperçu pour les développeurs nécessiteront des modifications du fichier JSON du manifeste de votre application. Pour ce faire, vous devez utiliser le [schéma de manifeste de l’aperçu pour les développeurs.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne pourrez pas utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour effectuer ces modifications, ni pour télécharger votre application à des fins de test. Pour charger votre application, vous devez sélectionner l’icône `More apps` dans la barre de l’application, puis le `Upload a custom app link`. Avec cette méthode, vous ne pouvez télécharger qu’une version compressée du package de votre application.
+De nombreuses fonctionnalités activées dans l’aperçu pour les développeurs nécessiteront des modifications du fichier JSON du manifeste de votre application. Pour ce faire, vous devez utiliser le [schéma de manifeste de l’aperçu pour les développeurs.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne pourrez pas utiliser [Developer Portal pour Teams](~/concepts/build-and-test/teams-developer-portal.md) afin d’apporter ces modifications, ni l’utiliser pour charger votre application à des fins de test. Pour charger votre application, vous devez sélectionner l’icône `More apps` dans la barre de l’application, puis le `Upload a custom app link`. Avec cette méthode, vous ne pouvez télécharger qu’une version compressée du package de votre application.
 
-Il peut être utile d’utiliser App Studio pour créer les parties du package de votre applications qui ne sont pas des aperçus pour les développeurs, puis d’exporter ce package et de modifier manuellement le fichier `manifest.json` afin d’ajouter les fonctionnalités d’aperçu pour les développeurs que vous souhaitez utiliser. Une fois que vous avez ajouté les fonctionnalités de l’aperçu pour les développeurs au fichier `manifest.json`, vous ne pourrez pas réimporter le package dans App Studio.
+Vous trouverez peut-être utile d’utiliser Developer Portal pour Teams afin de créer les parties d’aperçu non développeur de votre package d’application, puis d’exporter ce package et de modifier manuellement le fichier `manifest.json` pour ajouter les fonctionnalités d’aperçu du développeur que vous souhaitez utiliser. Une fois que vous avez ajouté des fonctionnalités d’aperçu développeur au fichier `manifest.json` , vous ne pourrez pas réimporter le package dans Developer Portal for Teams.
 
 ## <a name="enable-developer-preview"></a>Activer l’aperçu pour les développeurs
 
