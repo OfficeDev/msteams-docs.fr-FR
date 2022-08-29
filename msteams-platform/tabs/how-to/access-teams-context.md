@@ -1,14 +1,14 @@
 ---
 title: Obtenir un contexte Teams pour votre onglet
-description: Dans ce module, découvrez comment obtenir le contexte utilisateur dans vos onglets, le contexte utilisateur et les informations de contexte Access
-ms.localizationpriority: medium
+description: Découvrez comment mettre en contexte votre onglet, le contexte de l’utilisateur, de l’équipe ou de l’entreprise, accéder aux informations, récupérer le contexte dans des canaux privés ou partagés et gérer les modifications de thème.
+ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058115"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450386"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 

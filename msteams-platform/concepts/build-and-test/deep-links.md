@@ -3,26 +3,25 @@ title: Créer des liens plus étroits
 description: Dans cet article, vous allez apprendre à créer des liens profonds et à les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302464"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452359"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
 Les liens profonds sont un mécanisme de navigation que vous pouvez utiliser pour connecter les utilisateurs à des informations et des fonctionnalités dans Teams et les applications Teams. Voici quelques scénarios où la création de liens profonds peut être utile :
 
 * Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages informant l’utilisateur d’une activité importante. Lorsque l’utilisateur appuie sur la notification, le lien profond accède à l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
-* Votre application automatise ou simplifie certaines tâches de l'utilisateur, comme la création d'une conversation ou la programmation d'une réunion, en préremplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
+* Votre application automatise ou simplifie certaines tâches utilisateur. Vous pouvez créer une conversation ou planifier une réunion en préremplis les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
-Le SDK client JavaScript de Microsoft Teams (TeamsJS) simplifie le processus de navigation. Pour de nombreux scénarios, tels que la navigation vers du contenu et des informations dans votre onglet ou même le lancement d’une boîte de dialogue de conversation, le Kit de développement logiciel (SDK) fournit des API typées qui améliorent l’expérience et peuvent remplacer l’utilisation de liens profonds. Ces API sont recommandées pour les applications Teams susceptibles d'être exécutées dans d'autres hôtes (Outlook, Office), car elles permettent également de vérifier que la fonctionnalité utilisée est prise en charge par cet hôte. Les sections suivantes présentent des informations sur les liens profonds, mais soulignent également comment les scénarios qui les nécessitaient ont changé avec la version v2 de TeamsJS.
+Le SDK client JavaScript de Microsoft Teams (TeamsJS) simplifie le processus de navigation. Pour de nombreux scénarios, tels que la navigation vers du contenu et des informations dans votre onglet ou le lancement d’une boîte de dialogue de conversation. Le Kit de développement logiciel (SDK) fournit des API typées qui offrent une expérience améliorée et peuvent remplacer l’utilisation de liens profonds. Ces API sont recommandées pour les applications Teams susceptibles d'être exécutées dans d'autres hôtes (Outlook, Office), car elles permettent également de vérifier que la fonctionnalité utilisée est prise en charge par cet hôte. Les sections suivantes présentent des informations sur les liens profonds, mais soulignent également comment les scénarios qui les nécessitaient ont changé avec la version v2 de TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > Le comportement des liens profonds dépend d'un certain nombre de facteurs. La liste suivante décrit le comportement des liens profonds sur les entités Teams.
 >
 > **Onglet** :   
@@ -389,11 +388,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Créez un lien profond pour l'application après son inscription dans le magasin Teams. Pour créer un lien pour lancer Teams, ajoutez l’ID d’application à l’URL suivante : `https://teams.microsoft.com/l/app/<your-app-id>`. Une boîte de dialogue s’affiche pour installer l’application.
 
 > [!NOTE]
-> Actuellement, la liaison approfondie à une application n’est pas prise en charge sur la plateforme mobile.
+> Si votre application a été approuvée pour la plateforme mobile, vous pouvez établir un lien profond vers une application mobile. L’ID d’équipe Apple App Store Connect est également requis pour que le lien approfondi fonctionne sur Teams-iOS. Pour plus d’informations, consultez [la mise à jour de l’ID d’équipe Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Liaison approfondie pour les onglets SharePoint Framework
 
-Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message : `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Lorsqu’un bot envoie un message TextBlock avec un lien ciblé, un nouvel onglet de navigateur s’ouvre lorsque les utilisateurs sélectionnent le lien. Cela se produit dans Chrome et l’application de bureau Microsoft Teams s’exécutant sur Linux.

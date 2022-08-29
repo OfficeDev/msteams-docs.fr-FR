@@ -1,22 +1,22 @@
 ---
 title: Construire des onglets de carte adaptatifs
 author: KirtiPereira
-description: Dans ce module, apprenez à créer des onglets en utilisant les cartes adaptatives avec des exemples de code, y compris l'invocation d'activités, la compréhension du flux de travail des modules de tâches et l'authentification.
+description: Apprenez à créer des onglets à l’aide de cartes adaptatives où le serveur frontal est rendu avec des cartes adaptatives, le serveur principal est alimenté par un bot. Explorez les activités d’appel et gérez les envois.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: c4b0db0f67af2cf28f5930d4ad0b09e51fb11815
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558176"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450463"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
 > [!IMPORTANT]
 >
-> * Les onglets avec des cartes adaptatives ne sont actuellement pris en charge que comme applications personnelles.
+> Les onglets avec des cartes adaptatives ne sont actuellement pris en charge que comme applications personnelles.
 
 Lorsque vous développez un onglet en utilisant la méthode traditionnelle, vous pouvez rencontrer ces problèmes :
 
@@ -282,7 +282,7 @@ Le code suivant fournit des exemples de `task/fetch`demande et de réponse :
 
 ### <a name="invoke-tasksubmit"></a>Invoquer `task/submit`
 
-Le code suivant fournit des exemples de`task/submit` demande et de réponse :
+Le code suivant fournit des exemples de `task/submit`demande et de réponse :
 
 **`task/submit` demande**
 

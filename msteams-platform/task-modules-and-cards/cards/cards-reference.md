@@ -1,14 +1,14 @@
 ---
 title: Types de cartes
-description: Dans ce module, découvrez les cartes et les actions de carte disponibles pour les bots dans Teams et créez un héros, une miniature et des cartes adaptatives
+description: Dans ce module, découvrez les cartes et les actions de carte disponibles pour les bots dans Teams et créez un héros, une miniature et des cartes adaptatives.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311959"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435026"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -71,7 +71,10 @@ Vous pouvez identifier et utiliser différents types de cartes en fonction des b
 | Carte de connexion | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
-> Pour les cartes adaptatives dans les webhooks entrants, tous les éléments de schéma de carte adaptative native, à l’exception de `Action.Submit`, sont entièrement pris en charge. Les actions prises en charge sont [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html),et [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) et [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * Pour les cartes adaptatives dans les webhooks entrants, tous les éléments de schéma de carte adaptative native, à l’exception de `Action.Submit`, sont entièrement pris en charge. Les actions prises en charge sont [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html),et [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) et [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * La carte adaptative prend uniquement en charge le type de connecteur O365 du webhook entrant et non les autres types de connecteurs O365.
 
 ## <a name="common-properties-for-all-cards"></a>Propriétés communes pour toutes les cartes
 
@@ -636,11 +639,11 @@ Référence Bot Framework :
 
 La carte de connexion dans Teams est similaire à la carte de connexion dans Bot Framework, sauf que la carte de connexion dans Teams ne prend en charge que deux actions `signin` et `openUrl` .
 
-L’action de connexion peut être utilisée à partir de n’importe quelle carte dans Teams et pas seulement à partir de la carte de connexion. Pour plus d’informations, consultez [Flux d’authentification Teams pour les bots](~/bots/how-to/authentication/auth-flow-bot.md).
+Le journal en action peut être utilisé à partir de n’importe quelle carte dans Teams, et pas seulement de la carte de connexion. Pour plus d’informations, consultez [Flux d’authentification Teams pour les bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### <a name="support-for-signin-cards"></a>Prise en charge des cartes de connexion
+### <a name="support-for-log-in-cards"></a>Prise en charge des cartes de connexion
 
-Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge des cartes de connexion :
+Le tableau suivant fournit les fonctionnalités qui prennent en charge les cartes de connexion :
 
 | Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
@@ -650,7 +653,7 @@ Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge 
 
 Référence Bot Framework :
 
-* [Carte de connexion Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Se connecter à la carte Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [Carte de connexion C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Carte miniature

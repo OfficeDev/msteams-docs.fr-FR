@@ -3,12 +3,12 @@ title: Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 description: Dans ce module, découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams, créer un bot ou ajouter une fonctionnalité d’appel et ajouter des autorisations de graphe.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143794"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407573"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 
@@ -58,7 +58,7 @@ Le tableau suivant fournit la liste des autorisations d’application pour les a
 |Autorisation    |Chaîne d’affichage   |Description |Autorisation de l’administrateur requise |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Lancer les appels sortants 1:1 depuis l’application aperçu. |Permet à l’application de passer des appels sortants à un seul utilisateur et de transférer des appels à des utilisateurs dans l’annuaire de votre organisation, sans utilisateur connecté.|Oui|
-| Calls.InitiateGroupCall.All |Lancer les appels de groupe sortants 1:1 depuis l’application aperçu. |Permet à l’application de passer des appels sortants à plusieurs utilisateurs et d’ajouter des participants à des réunions dans votre organisation, sans utilisateur connecté.|Oui|
+| Calls.InitiateGroupCall.All |Lancez les appels sortants 1:1 et les appels de groupe à partir de la préversion de l’application. |Permet à l’application de passer des appels sortants à un seul utilisateur, plusieurs utilisateurs, de transférer des appels et d’ajouter des participants aux réunions de votre organisation, sans utilisateur connecté.|Oui|
 | Calls.JoinGroupCall.All |Rejoignez des appels de groupe et des réunions en tant qu’aperçu d’application. |Permet à l’application de rejoindre les appels de groupe et les réunions planifiées dans votre organisation, sans utilisateur connecté. L’application est jointe avec les privilèges d’un utilisateur d’annuaire aux réunions dans votre locataire.|Oui|
 | Calls.JoinGroupCallasGuest.All |Rejoignez des appels de groupe et des réunions en tant qu’aperçu invité. |Permet à l’application de rejoindre anonymement les appels de groupe et les réunions planifiées dans votre organisation, sans utilisateur connecté. L’application est jointe en tant qu’invité aux réunions de votre locataire.|Oui|
 | Calls.AccessMedia.All |Accédez aux flux multimédias dans un appel en tant qu’aperçu d’application. |Permet à l’application d’obtenir un accès direct aux flux multimédias dans un appel, sans utilisateur connecté.|Oui|

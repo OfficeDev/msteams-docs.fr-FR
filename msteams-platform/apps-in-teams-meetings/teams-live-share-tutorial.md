@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 511083fea77c40cec0134e6620c741c3c4da8829
+ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841798"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67425616"
 ---
 # <a name="dice-roller-code-tutorial"></a>Tutoriel de code pour le lanceur de dés
 
@@ -29,8 +29,8 @@ Dans l'application modèle du lanceur de dés, les utilisateurs voient un dé av
 ## <a name="set-up-the-application"></a>Configurer l'application
 
 Commencez par importer les modules nécessaires. L'exemple utilise le [DDS SharedMap](https://fluidframework.com/docs/data-structures/map/) de Fluid Framework et le [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) de Live Share SDK. L'échantillon prend en charge l'extensibilité de la réunion Teams. Nous devrons donc inclure le [SDK client Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Enfin, l'échantillon est conçu pour être exécuté à la fois localement et dans une réunion Teams. Nous devrons donc inclure quelques éléments supplémentaires de Fluid Framework nécessaires pour [tester l'échantillon localement](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
-  
-Les applications créent des conteneurs Fluid à l'aide d'un schéma qui définit un ensemble *d'objets initiaux* qui seront disponibles pour le conteneur. L'exemple utilise un SharedMap pour stocker la valeur la plus récente du dé qui a été lancé. Pour plus d'informations, voir [Modélisation des données](https://fluidframework.com/docs/build/data-modeling/).
+
+Les applications créent des conteneurs Fluid à l'aide d'un schéma qui définit un ensemble _d'objets initiaux_ qui seront disponibles pour le conteneur. L'exemple utilise un SharedMap pour stocker la valeur la plus récente du dé qui a été lancé. Pour plus d'informations, voir [Modélisation des données](https://fluidframework.com/docs/build/data-modeling/).
 
 Les applications de réunion Teams nécessitent plusieurs vues (contenu, configuration et scène). Nous allons créer une `start()` fonction qui nous aidera à identifier la vue à rendre et à effectuer toute initialisation nécessaire. Nous voulons que notre application puisse fonctionner à la fois localement dans un navigateur Web et à partir d'une réunion Teams. `start()`La fonction recherche donc un paramètre de `inTeams=true`requête pour déterminer si elle fonctionne dans Teams. Lors de l'exécution dans Teams, votre application doit appeler avant d'appeler `app.initialize()` toute autre méthode teams-js.
 
@@ -51,7 +51,7 @@ const root = document.getElementById("content");
 const diceValueKey = "dice-value-key";
 
 const containerSchema = {
-  initialObjects: { diceMap: SharedMap }
+  initialObjects: { diceMap: SharedMap },
 };
 
 function onContainerFirstCreated(container) {
@@ -59,36 +59,33 @@ function onContainerFirstCreated(container) {
   container.initialObjects.diceMap.set(diceValueKey, 1);
 }
 
-
 // STARTUP LOGIC
 
 async function start() {
-
   // Check for page to display
-  let view = searchParams.get('view') || 'stage';
+  let view = searchParams.get("view") || "stage";
 
   // Check if we are running on stage.
-  if (!!searchParams.get('inTeams')) {
-
+  if (!!searchParams.get("inTeams")) {
     // Initialize teams app
     await app.initialize();
 
     // Get our frameContext from context of our app in Teams
     const context = await app.getContext();
-    if (context.page.frameContext == 'meetingStage') {
-      view = 'stage';
+    if (context.page.frameContext == "meetingStage") {
+      view = "stage";
     }
   }
 
   // Load the requested view
   switch (view) {
-    case 'content':
+    case "content":
       renderSidePanel(root);
       break;
-    case 'config':
+    case "config":
       renderSettings(root);
       break;
-    case 'stage':
+    case "stage":
     default:
       const { container } = await joinContainer();
       renderStage(container.initialObjects.diceMap, root);
@@ -101,27 +98,29 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Rejoindre un conteneur Fluid
 
-Toutes les vues de vos applications n'auront pas besoin d'être collaboratives. La `stage`vue *a toujours besoin* de fonctionnalités collaboratives, la `content`vue *peut avoir* besoin de fonctionnalités collaboratives, et la `config`vue ne devrait *jamais* avoir besoin de fonctionnalités collaboratives. Pour les vues qui nécessitent des fonctions de collaboration, vous devrez rejoindre un conteneur Fluid associé à la réunion en cours.
+Toutes les vues de vos applications n'auront pas besoin d'être collaboratives. La `stage`vue _a toujours besoin_ de fonctionnalités collaboratives, la `content`vue _peut avoir_ besoin de fonctionnalités collaboratives, et la `config`vue ne devrait _jamais_ avoir besoin de fonctionnalités collaboratives. Pour les vues qui nécessitent des fonctions de collaboration, vous devrez rejoindre un conteneur Fluid associé à la réunion en cours.
 
-Joindre le conteneur pour la réunion est aussi simple que de créer un [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient), puis d’appeler sa méthode [joinContainer().](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer)   Lors d'une exécution locale, vous devrez passer une configuration de connexion personnalisée avec un spécial, `LOCAL_MODE_TENANT_ID`mais autrement, joindre un conteneur local est la même chose que joindre un conteneur dans Teams.
+Joindre le conteneur pour la réunion est aussi simple que de créer un [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient), puis d’appeler sa méthode [joinContainer().](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer)  Lors d'une exécution locale, vous devrez passer une configuration de connexion personnalisée avec un spécial, `LOCAL_MODE_TENANT_ID`mais autrement, joindre un conteneur local est la même chose que joindre un conteneur dans Teams.
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
   let client;
-  if (!!searchParams.get('inTeams')) {
-      // Create client
-      client = new TeamsFluidClient();
+  if (!!searchParams.get("inTeams")) {
+    // Create client
+    client = new TeamsFluidClient();
   } else {
-      // Create client and configure for testing
-      client = new TeamsFluidClient({
-        connection: {
-          tenantId: LOCAL_MODE_TENANT_ID,
-          tokenProvider: new InsecureTokenProvider("", { id: "123", name: "Test User" }),
-          orderer: "http://localhost:7070",
-          storage: "http://localhost:7070",
-        }
-      });
+    // Create client and configure for testing
+    client = new TeamsFluidClient({
+      connection: {
+        type: "local",
+        tokenProvider: new InsecureTokenProvider("", {
+          id: "123",
+          name: "Test User",
+        }),
+        endpoint: "http://localhost:7070",
+      },
+    });
   }
 
   // Join container
@@ -150,19 +149,19 @@ stageTemplate["innerHTML"] = `
     <div class="dice"></div>
     <button class="roll"> Roll </button>
   </div>
-`
+`;
 function renderStage(diceMap, elem) {
-    elem.appendChild(stageTemplate.content.cloneNode(true));
-    const rollButton = elem.querySelector(".roll");
-    const dice = elem.querySelector(".dice");
+  elem.appendChild(stageTemplate.content.cloneNode(true));
+  const rollButton = elem.querySelector(".roll");
+  const dice = elem.querySelector(".dice");
 
-    rollButton.onclick = () => updateDice(Math.floor(Math.random() * 6)+1);
+  rollButton.onclick = () => updateDice(Math.floor(Math.random() * 6) + 1);
 
-    const updateDice = (value) => {
-        // Unicode 0x2680-0x2685 are the sides of a die (⚀⚁⚂⚃⚄⚅).
-        dice.textContent = String.fromCodePoint(0x267f + value);
-    };
-    updateDice(1);
+  const updateDice = (value) => {
+    // Unicode 0x2680-0x2685 are the sides of a die (⚀⚁⚂⚃⚄⚅).
+    dice.textContent = String.fromCodePoint(0x267f + value);
+  };
+  updateDice(1);
 }
 ```
 
@@ -175,7 +174,8 @@ Pour commencer à utiliser Fluid dans l'application, la première chose à chang
 Ce modèle est courant dans Fluid car il permet à la vue de se comporter de la même manière pour les modifications locales et à distance.
 
 ```js
-    rollButton.onclick = () => diceMap.set("dice-value-key", Math.floor(Math.random() * 6)+1);
+rollButton.onclick = () =>
+  diceMap.set("dice-value-key", Math.floor(Math.random() * 6) + 1);
 ```
 
 ### <a name="rely-on-fluid-data"></a>S'appuyer sur les données relatives aux fluides
@@ -183,11 +183,11 @@ Ce modèle est courant dans Fluid car il permet à la vue de se comporter de la 
 La prochaine modification à apporter est de changer la `updateDice`fonction pour qu'elle n'accepte plus une valeur arbitraire. Cela signifie que l'application ne peut plus modifier directement la valeur locale des dés. Au lieu de cela, la valeur est récupérée dans la base de données à `SharedMap`chaque fois`updateDice` qu'elle est appelée.
 
 ```js
-    const updateDice = () => {
-        const diceValue = diceMap.get("dice-value-key");
-        dice.textContent = String.fromCodePoint(0x267f + diceValue);
-    };
-    updateDice();
+const updateDice = () => {
+  const diceValue = diceMap.get("dice-value-key");
+  dice.textContent = String.fromCodePoint(0x267f + diceValue);
+};
+updateDice();
 ```
 
 ### <a name="handle-remote-changes"></a>Gérer les changements à distance
@@ -195,12 +195,12 @@ La prochaine modification à apporter est de changer la `updateDice`fonction pou
 Les valeurs renvoyées ne `diceMap` sont qu'un instantané dans le temps. Pour que les données restent à jour au fur et à mesure de leur modification, un gestionnaire d'événement doit être défini sur `diceMap`l'appel`updateDice` à chaque fois`valueChanged` que l'événement est envoyé. Pour obtenir une liste des événements déclenchés et des valeurs transmises à ces événements, voir [SharedMap](https://fluidframework.com/docs/data-structures/map/).
 
 ```js
-    diceMap.on("valueChanged", updateDice);
+diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>Écrire la vue du panneau latéral
 
-La vue du panneau latéral, chargée par l'intermédiaire de l'onglet `contentUrl`avec le`sidePanel` contexte du cadre, est affichée à l'utilisateur dans un panneau latéral lorsqu'il ouvre votre application dans une réunion. L'objectif de cette vue est de permettre à l'utilisateur de sélectionner le contenu de l'application avant de la partager avec la scène de réunion. Pour les applications SDK Live Share, la vue du panneau latéral peut également être utilisée comme expérience complémentaire pour l'application. L'appel de [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) à partir de la vue du panneau latéral permet de se connecter au même conteneur Fluid que celui auquel la vue de la scène est connectée. Ce conteneur peut ensuite être utilisé pour communiquer avec la vue de la scène. Assurez-vous que vous communiquez avec la vue de la scène *et* du panneau latéral de chacun.
+La vue du panneau latéral, chargée par l'intermédiaire de l'onglet `contentUrl`avec le`sidePanel` contexte du cadre, est affichée à l'utilisateur dans un panneau latéral lorsqu'il ouvre votre application dans une réunion. L'objectif de cette vue est de permettre à l'utilisateur de sélectionner le contenu de l'application avant de la partager avec la scène de réunion. Pour les applications SDK Live Share, la vue du panneau latéral peut également être utilisée comme expérience complémentaire pour l'application. L'appel de [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) à partir de la vue du panneau latéral permet de se connecter au même conteneur Fluid que celui auquel la vue de la scène est connectée. Ce conteneur peut ensuite être utilisé pour communiquer avec la vue de la scène. Assurez-vous que vous communiquez avec la vue de la scène _et_ du panneau latéral de chacun.
 
 La vue du panneau latéral de l'échantillon invite l'utilisateur à sélectionner le bouton «Partager sur scène».
 
@@ -220,7 +220,7 @@ sidePanelTemplate["innerHTML"] = `
 `;
 
 function renderSidePanel(elem) {
-    elem.appendChild(sidePanelTemplate.content.cloneNode(true));
+  elem.appendChild(sidePanelTemplate.content.cloneNode(true));
 }
 ```
 
@@ -228,7 +228,7 @@ function renderSidePanel(elem) {
 
 La vue des paramètres, chargée dans le manifeste de `configurationUrl` votre application, est présentée à l'utilisateur lorsqu'il ajoute pour la première fois votre application à une réunion Teams. Cette vue permet au développeur de configurer `contentUrl` l'onglet qui est épinglé à la réunion en fonction des entrées de l'utilisateur. Cette page est actuellement requise même si aucune entrée utilisateur n'est nécessaire pour définir le `contentUrl`.
 
-> [!Important]
+> [!IMPORTANT]
 > La fonction [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) du kit SDK Live Share n'est pas prise en charge dans le contexte`settings` de l'onglet.
 
 La vue des paramètres de l'échantillon invite l'utilisateur à sélectionner le bouton d'enregistrement.
@@ -249,21 +249,21 @@ settingsTemplate["innerHTML"] = `
 `;
 
 function renderSettings(elem) {
-    elem.appendChild(settingsTemplate.content.cloneNode(true));
+  elem.appendChild(settingsTemplate.content.cloneNode(true));
 
-    // Save the configurable tab
-    pages.config.registerOnSaveHandler(saveEvent => {
-      pages.config.setConfig({
-        websiteUrl: window.location.origin,
-        contentUrl: window.location.origin + '?inTeams=1&view=content',
-        entityId: 'DiceRollerFluidLiveShare',
-        suggestedDisplayName: 'DiceRollerFluidLiveShare'
-      });
-      saveEvent.notifySuccess();
+  // Save the configurable tab
+  pages.config.registerOnSaveHandler((saveEvent) => {
+    pages.config.setConfig({
+      websiteUrl: window.location.origin,
+      contentUrl: window.location.origin + "?inTeams=1&view=content",
+      entityId: "DiceRollerFluidLiveShare",
+      suggestedDisplayName: "DiceRollerFluidLiveShare",
     });
+    saveEvent.notifySuccess();
+  });
 
-    // Enable the Save button in config dialog
-    pages.config.setValidityState(true);
+  // Enable the Save button in config dialog
+  pages.config.setValidityState(true);
 }
 ```
 
@@ -281,11 +281,11 @@ Une fois que vous avez commencé à exécuter votre application localement avec 
 
 1. Utilisez ngrok pour créer un tunnel avec le port 8080. Exécutez la commande suivante :
 
-    ```
-     `ngrok http 8080 --host-header=localhost`
-    ```
+   ```bash
+    ngrok http 8080 --host-header=localhost
+   ```
 
-    Un nouveau terminal ngrok s'ouvre avec une nouvelle url, par exemple `https:...ngrok.io`. La nouvelle URL est le tunnel qui pointe vers votre application, qui doit être mise à jour dans votre application `manifest.json`.
+   Un nouveau terminal ngrok s'ouvre avec une nouvelle url, par exemple `https:...ngrok.io`. La nouvelle URL est le tunnel qui pointe vers votre application, qui doit être mise à jour dans votre application `manifest.json`.
 
 ### <a name="create-the-app-package-to-sideload-into-teams"></a>Créez le paquet d'applications à charger dans Teams.
 
@@ -296,20 +296,21 @@ Une fois que vous avez commencé à exécuter votre application localement avec 
    Remplacez `https://<<BASE_URI_DOMAIN>>` par votre point de terminaison http de ngrok.
 
 1. Vous pouvez mettre à jour les champs suivants :
-   * Définissez `developer.name` votre nom.
-   * Mettez à jour `developer.websiteUrl` avec votre site web.
-   * Mettez à jour `developer.privacyUrl` avec votre stratégie de confidentialité.
-   * Mettez à jour `developer.termsOfUseUrl` avec vos conditions d'utilisation.
+
+   - Définissez `developer.name` votre nom.
+   - Mettez à jour `developer.websiteUrl` avec votre site web.
+   - Mettez à jour `developer.privacyUrl` avec votre stratégie de confidentialité.
+   - Mettez à jour `developer.termsOfUseUrl` avec vos conditions d'utilisation.
 
 1. Zippez le contenu du dossier du manifeste pour créer un fichier `manifest.zip`. Assurez-vous que le `manifest.zip`contient uniquement le `manifest.json`fichier source`color`, l'icône et `outline`l'icône.
 
    1. Sous Windows, sélectionnez tous les fichiers du `.\manifest` répertoire et compressez-les.
-  
+
    > [!NOTE]
    >
-   > * Ne zippez pas le dossier qui le contient.
-   > * Donnez un nom descriptif à votre fichier zip. Par exemple : `DiceRollerLiveShare`.
-  
+   > - Ne zippez pas le dossier qui le contient.
+   > - Donnez un nom descriptif à votre fichier zip. Par exemple : `DiceRollerLiveShare`.
+
    Pour plus d'informations sur le manifeste, visitez la [documentation sur le manifeste Teams](../resources/schema/manifest-schema.md) 
 
 ### <a name="sideload-your-app-into-a-meeting"></a>Chargez votre application dans une réunion
@@ -357,8 +358,8 @@ Lorsque vous êtes prêt à déployer votre code, vous pouvez utiliser [Teams To
 
 ## <a name="code-samples"></a>Exemples de code
 
-| Exemple de nom | Description                                                      | JavaScript                                                                           |
-| :---------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Exemple de nom | Description                                                     | JavaScript                                                                           |
+| :---------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Lanceur de dés | Permettre à tous les clients connectés de lancer un dé et de visualiser le résultat. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## <a name="next-step"></a>Étape suivante
@@ -368,8 +369,8 @@ Lorsque vous êtes prêt à déployer votre code, vous pouvez utiliser [Teams To
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Référentiel GitHub](https://github.com/microsoft/live-share-sdk)
-* [ Documents de référence du kit SDK Live Share](/javascript/api/@microsoft/live-share/)
-* [Documents de référence du kit SDK Live Share Media](/javascript/api/@microsoft/live-share-media/)
-* [FAQ Live Share](teams-live-share-faq.md)
-* [Applications Teams dans les réunions](teams-apps-in-meetings.md)
+- [Référentiel GitHub](https://github.com/microsoft/live-share-sdk)
+- [ Documents de référence du kit SDK Live Share](/javascript/api/@microsoft/live-share/)
+- [Documents de référence du kit SDK Live Share Media](/javascript/api/@microsoft/live-share-media/)
+- [FAQ Live Share](teams-live-share-faq.md)
+- [Applications Teams dans les réunions](teams-apps-in-meetings.md)

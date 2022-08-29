@@ -1,16 +1,16 @@
 ---
 title: Bots et kits de développement
 author: surbhigupta
-description: Dans cet article, découvrez les outils et les kits de développement logiciel (SDK) pour la création de bots et de bots Microsoft Teams avec le Microsoft Bot Framework.
+description: Dans cet article, découvrez les outils et les kits de développement logiciel (SDK) Bot Framework (C#, Python, Java, JavaScript) pour les bots Microsoft Teams, ainsi que ses avantages et inconvénients.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
+ms.openlocfilehash: a3ba6c1ac32b24aefc8d751482bdb7bde53d1a73
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912253"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321186"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 

@@ -1,17 +1,17 @@
 ---
 title: Conception de votre extension de réunion
 author: heath-hamilton
-description: Découvrez comment concevoir des extensions de réunion pour vos applications dans les réunions Teams. Utilisez les modèles d’interface utilisateur du Kit d’interface utilisateur Microsoft Teams pour vous aider à concevoir votre onglet de réunion.
+description: Découvrez comment implémenter les instructions de conception et utiliser les modèles d’interface utilisateur pour concevoir une extension de réunion pour Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842037"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338850"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -42,7 +42,7 @@ Une fois l’application ajoutée (par exemple, sur le bureau), les utilisateurs
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemple montrant comment ajouter une extension de réunion pendant une réunion sur un appareil mobile.":::
 
-#### <a name="desktop"></a>Bureau
+#### <a name="desktop"></a>Ordinateur de bureau
 
 Dans une réunion, les utilisateurs peuvent sélectionner **Plus** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **d’ajouter une application** et sélectionner l’application souhaitée.
 
@@ -79,9 +79,9 @@ Utilisez l’un des modèles d’interface utilisateur Teams suivants pour vous 
 
 L’onglet in-meeting est un canevas permettant d’accroître la collaboration pendant les réunions. Les participants peuvent voir et interagir avec le contenu de l’application dans un espace dédié en dehors de la phase de réunion via des vues partagées ou basées sur des rôles.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
-Les personnes peuvent utiliser l’onglet in-meeting pour :
+Personnes pouvez utiliser l’onglet en réunion pour :
 
 * Fournissez des commentaires détaillés. Par exemple, évaluez un candidat au poste.
 * Créez un sondage, une enquête ou un élément de tâche pour les participants à la réunion.
@@ -91,7 +91,7 @@ Les personnes peuvent utiliser l’onglet in-meeting pour :
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="L’exemple montre comment présenter le contenu d’un sondage dans un onglet de réunion sur mobile.":::
 
-#### <a name="desktop"></a>Bureau
+#### <a name="desktop"></a>Ordinateur de bureau
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="L’exemple montre comment présenter le contenu d’un sondage dans un onglet de réunion.":::
 
@@ -134,7 +134,7 @@ Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vou
 
 Les dialogues en réunion s’affichent sur la phase de réunion Teams. Ils nécessitent l’attention, la confirmation ou l’interaction d’un utilisateur, mais sont subtils et n’interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés tâches.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
 Les dialogues en réunion sont déclenchés par un utilisateur (tel que l’organisateur de la réunion) qui peut souhaiter que les participants :
 
@@ -147,7 +147,7 @@ Les dialogues en réunion sont déclenchés par un utilisateur (tel que l’orga
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="L’exemple montre comment utiliser une boîte de dialogue en réunion sur un appareil mobile.":::
 
-### <a name="desktop"></a>Bureau
+### <a name="desktop"></a>Ordinateur de bureau
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Exemple montrant comment utiliser une boîte de dialogue en réunion.":::
 
@@ -198,7 +198,7 @@ Les applications partagées dans la phase de réunion occupent le même espace q
 > [!NOTE]
 > Actuellement, les utilisateurs mobiles ne peuvent pas partager le contenu de l’application à la phase de réunion. Toutefois, ils peuvent voir le contenu partagé à partir du bureau.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
 La phase de réunion partagée est consacrée à la collaboration et à la participation. Voici quelques exemples de scénarios pour vous aider à commencer.
 

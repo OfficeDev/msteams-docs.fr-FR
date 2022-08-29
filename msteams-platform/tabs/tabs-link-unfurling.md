@@ -1,16 +1,16 @@
 ---
 title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez comment déployer un lien, ouvrir la vue des étapes et épingler un onglet avec l'application Microsoft Teams. Découvrez la vue des étapes et son utilisation en utilisant la carte adaptative à l'aide d'un exemple de code et d'un échantillon.
+description: Découvrez l’affichage intermédiaire, un composant d’interface utilisateur en plein écran appelé pour exposer votre contenu web. Le déploiement de liens est utilisé pour transformer les URL en un onglet à l’aide de cartes adaptatives.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.localizationpriority: high
+ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841988"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450449"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 

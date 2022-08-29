@@ -1,16 +1,16 @@
 ---
 title: Concevoir votre application avec des composants Fluent UI de base
 author: heath-hamilton
-description: Découvrez comment concevoir des applications Microsoft Teams à l’aide des composants Fluent UI du Kit d’interface utilisateur Teams.
+description: Découvrez comment utiliser des composants d’interface utilisateur à partir du kit d’interface utilisateur Teams pour créer des applications Microsoft Teams. Apprenez à utiliser des composants d’interface utilisateur tels qu’un kit Fluent, une barre de navigation, une carte bouton, un carrousel, une liste déroulante et un bouton bascule.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: bf90f0979e8a7b8670af8f8295be9f913b15dc36
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962439"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338787"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants Fluent UI de base
 
@@ -69,7 +69,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="L’exemple montre un composant d’interface utilisateur de liste de groupes.":::
 
-## <a name="hyperlink"></a>Lien hypertexte
+## <a name="hyperlink"></a>Hyperlink
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="Exemple montrant un composant d’interface utilisateur de lien hypertexte.":::
 

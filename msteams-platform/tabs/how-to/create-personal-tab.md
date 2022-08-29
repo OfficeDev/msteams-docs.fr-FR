@@ -1,17 +1,17 @@
 ---
 title: Créer un onglet personnel
 author: laujan
-description: Dans ce module, découvrez comment créer un onglet personnel avec Générateur Yeoman, ASP.NET Core ou ASP.NET Core MVC pour Microsoft Teams à l’aide de Node.js et mettre à jour le manifeste de l’application.
+description: Apprenez à créer un onglet personnel. Sélectionnez l’environnement MVC Node.js, ASP.NET Core ou ASP.NET Core. Générez une application, ajoutez du contenu, créez un package, générez et exécutez l’application.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: dcc000c64068cbcbd24a03da365e799e9dd1c155
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841693"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450400"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 

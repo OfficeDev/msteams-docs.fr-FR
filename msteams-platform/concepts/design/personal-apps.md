@@ -1,16 +1,16 @@
 ---
 title: Conception de votre application personnelle
-description: Découvrez comment concevoir une application personnelle Teams et obtenir le Kit d’interface utilisateur Microsoft Teams, créer des composants, tels que le tableau de bord, le formulaire, le tableau de tâches pour l’expérience Mobile et Bureau.
+description: Découvrez comment implémenter les instructions de conception, notamment les éléments d’interface utilisateur pour concevoir une application personnelle à l’aide du kit d’interface utilisateur Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 7dda8dd7e68e7452da164c8ec45d3352909f45ed
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558337"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338822"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Concevoir votre application personnelle pour Microsoft Teams
 

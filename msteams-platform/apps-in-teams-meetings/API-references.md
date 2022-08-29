@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311952"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435012"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -37,8 +37,8 @@ Le tableau suivant fournit la liste des API disponibles sur les kits SDK Microso
 |[**Obtenir l’état de partage de la phase de contenu de l’application**](#get-app-content-stage-sharing-state-api)| Récupérez des informations sur l’état de partage de l’application lors de la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Obtenir les fonctionnalités de partage de phase de contenu d’application**](#get-app-content-stage-sharing-capabilities-api)| Récupérez les fonctionnalités de l’application pour le partage dans la phase de réunion. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Obtenir des événements de réunion Teams en temps réel**](#get-real-time-teams-meeting-events-api)|Récupérez les événements de réunion en temps réel, tels que l’heure de début et de fin réelle.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Obtenir le haut-parleur audio entrant**](#get-incoming-audio-speaker) | Permet à une application d’obtenir le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Activer/désactiver l’audio entrant**](#toggle-incoming-audio) | Permet à une application de désactiver le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Obtenir l’état audio entrant**](#get-incoming-audio-state) | Permet à une application d’obtenir le paramètre d’état audio entrant pour l’utilisateur de la réunion.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Activer/désactiver l’audio entrant**](#toggle-incoming-audio) | Permet à une application de désactiver le paramètre d’état audio entrant pour l’utilisateur de la réunion du son muet au son ou inversement.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obtenir l’API de contexte utilisateur
 
@@ -932,15 +932,44 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **Valeur. EndTime** | Heure de fin de la réunion en UTC. |
 | **locale**| Paramètres régionaux du message défini par le client. |
 
-## <a name="get-incoming-audio-speaker"></a>Obtenir le haut-parleur audio entrant
+## <a name="get-incoming-audio-state"></a>Obtenir l’état audio entrant
 
-L’API `getIncomingClientAudioState` permet à une application d’obtenir le paramètre de haut-parleur audio entrant pour l’utilisateur de la réunion. L’API est disponible via le SDK client Teams.
+L’API `getIncomingClientAudioState` permet à une application d’obtenir le paramètre d’état audio entrant pour l’utilisateur de la réunion. L’API est disponible via le SDK client Teams.
 
 > [!NOTE]
 >
 > * L’API `getIncomingClientAudioState` pour mobile est actuellement disponible en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
 > * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour la version de manifeste 1.11 et les versions antérieures.
 
+### <a name="manifest"></a>Manifeste
+
+```JSON
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+```
+  
+### <a name="example"></a>Exemple
+
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
 ### <a name="query-parameter"></a>Paramètre de requête
 
 Le tableau suivant inclut le paramètre de requête :
@@ -948,22 +977,7 @@ Le tableau suivant inclut le paramètre de requête :
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
 |**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois la récupération audio réussie. Le *résultat* peut contenir une valeur true ou false lorsque l’extraction audio réussit ou null en cas d’échec de la récupération audio. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false. |
-
-### <a name="example"></a>Exemple
-
-```typescript
-function getIncomingClientAudioState(
-    callback: (error: SdkError | null, result: boolean | null) => void,
-  ): void {
-    if (!callback) {
-      throw new Error('[get incoming client audio state] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('getIncomingClientAudioState', callback);
-  }
-
-```
-
+  
 ### <a name="response-codes"></a>Codes de réponse
 
 Le tableau suivant présente les codes de réponse :
@@ -976,34 +990,51 @@ Le tableau suivant présente les codes de réponse :
 
 ## <a name="toggle-incoming-audio"></a>Activer/désactiver l’audio entrant
 
-L’API `toggleIncomingClientAudio` permet à une application de désactiver le paramètre du haut-parleur audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement. L’API est disponible via le SDK client Teams.
+L’API `toggleIncomingClientAudio` permet à une application de désactiver le paramètre d’état audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement. L’API est disponible via le SDK client Teams.
 
 > [!NOTE]
 >
 > * L’API `toggleIncomingClientAudio` pour mobile est actuellement disponible en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
 > * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour la version de manifeste 1.11 et les versions antérieures.
 
+### <a name="manifest"></a>Manifeste
+
+```JSON
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                "type": "Delegated"
+            }
+        ]
+    }
+}
+```
+ 
+### <a name="example"></a>Exemple
+
+```javascript
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
+```
+  
 ### <a name="query-parameter"></a>Paramètre de requête
 
 Le tableau suivant inclut le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois le basculement réussi. Le *résultat* peut contenir une valeur true ou false, lorsque le basculement est réussi ou null en cas d’échec du basculement. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false. |
-
-### <a name="example"></a>Exemple
-
-```typescript
-function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
-    if (!callback) {
-      throw new Error('[toggle incoming client audio] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('toggleIncomingClientAudio', callback);
-  }
-
-```
-
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois le basculement réussi. Le *résultat* peut contenir une valeur true ou false, lorsque le basculement est réussi ou null en cas d’échec du basculement. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false.
+  
 ### <a name="response-code"></a>Code de réponse
 
 Le tableau suivant présente les codes de réponse :

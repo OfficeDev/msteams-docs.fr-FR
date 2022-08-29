@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment les webhooks et les connecteurs 
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: fc65046c0bcbecb6ed4c0f15ea81beac77195256
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 4381ea978676b4526eb56bfdd1eaeb8157873618
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190034"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337207"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
 
@@ -30,6 +30,27 @@ Les connecteurs permettent aux utilisateurs de s’abonner pour recevoir des not
 ### <a name="incoming-webhooks"></a>Webhooks entrants
 
 Les webhooks entrants vous permettent de publier des messages à partir d’applications Teams. Si les webhooks entrants sont activés pour une équipe dans un canal, ils exposent le point de terminaison HTTPS, qui accepte le format JSON correct et insère les messages dans ce canal. Par exemple, vous pouvez créer un webhook entrant dans votre canal DevOps, configurer votre build et déployer et surveiller simultanément les services pour envoyer des alertes.
+
+#### <a name="notification-bot-or-incoming-webhook---choose-the-right-one"></a>Bot de notification ou webhook entrant : choisissez le bon bot !
+
+Avant de commencer à apprendre à générer des webhooks entrants, vous souhaiterez peut-être également savoir que vous pouvez générer un bot de notification à l’aide du Kit de ressources Teams. Les bots de notification peuvent permettre une expérience plus personnalisable pour répondre à différents scénarios métier.
+
+En savoir plus sur les différences entre le bot de notification et le webhook entrant afin de pouvoir choisir les solutions appropriées pour vos scénarios :
+
+| &nbsp; | Bot de notification |  Webhook entrant |
+| --- | --- | --- |
+| De quoi s’agit-il ? | Une application Teams | Fonctionnalité Teams |
+| Installation requise | Oui | Non |
+| Scénarios appropriés | • Recevoir régulièrement des notifications et des messages, par exemple, recevoir une notification quotidienne des tâches de l’équipe. <br>  • Recevoir des notifications et des messages basés sur des événements réels. Par exemple, une fois que vos collègues chargent des fichiers, vous recevez des notifications. | Communiquez avec des applications externes et recevez des notifications et des messages d’autres applications. |
+| Configuration de l’étendue | • Canal Teams <br> • Conversation de groupe <br> • Conversation personnelle | Canal Teams |
+| Processus de message | Un bot de notification fonctionne comme une application Teams. Vous pouvez définir votre logique métier pour traiter les données et afficher les données dans un format personnalisé. | Le webhook étant une fonctionnalité Teams plutôt qu’une application Teams, il reçoit et affiche uniquement les données sans traitement. |
+| Récupérer le contexte Teams | Notification Bot peut récupérer le contexte Teams, tel que le canal ou les informations utilisateur, les messages, etc. | Non |
+| Envoyer une carte adaptative | Oui | Oui |
+| Envoyer un message de bienvenue | Peut envoyer un message de bienvenue | Aucun message de bienvenue |
+| Déclencheur pris en charge | Tous les déclencheurs pris en charge. Si vous utilisez Teams Toolkit, vous pouvez rapidement obtenir des projets de modèle avec les déclencheurs suivants : <br> • Déclencheur de temps hébergé sur des fonctions Azure. <br> • Restify HTTP trigger hosted on Azure app service <br> • Déclencheur HTTP hébergé sur Azure Functions | Tous les déclencheurs pris en charge |
+| Outils de génération | • [Vue d’ensemble du Kit de ressources Teams pour Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Vue d’ensemble du Kit de ressources Teams pour Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md) <br> • [Bibliothèque TeamsFx](../toolkit/TeamsFx-CLI.md) <br> • [Kit de développement logiciel (SDK) TeamsFx](../toolkit/TeamsFx-SDK.md) | Aucun outil requis |
+| Ressource cloud requise | Azure Bot Framework | Aucune ressource requise |
+| Didacticiel | [Générer un bot de notification avec JavaScript](../sbs-gs-notificationbot.yml) | N/A |
 
 ### <a name="office-365-connectors"></a>Connecteurs Office 365
 
@@ -52,3 +73,5 @@ Les messages actionnables permettent aux utilisateurs d’agir sans quitter leur
 * [Créer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Créer un connecteur Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Créer et envoyer des messages](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Générer un bot de notification avec JavaScript](../sbs-gs-notificationbot.yml)
+* [Créer votre première application de bot à l’aide de JavaScript](../sbs-gs-bot.yml)

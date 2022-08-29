@@ -3,18 +3,18 @@ title: Lancer des actions avec des extensions de messagerie
 description: Dans ce module, découvrez comment créer des extensions de message basées sur des actions pour permettre aux utilisateurs de déclencher des services externes.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143675"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337144"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Lancer des actions avec des extensions de messagerie
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Les extensions de message basées sur des actions permettent à vos utilisateurs de déclencher des actions dans des services externes pendant Teams.
+Les extensions de message basées sur des actions permettent à vos utilisateurs de déclencher des actions dans des services externes dans Teams.
 
 ![Exemple de carte d’extension de message](~/assets/images/compose-extensions/ceexample.png)
 
@@ -25,6 +25,9 @@ Les sections suivantes décrivent comment procéder :
 ## <a name="action-type-message-extensions"></a>Extensions de message de type action
 
 Pour lancer des actions à partir d’une extension de message, définissez le paramètre `action`sur `type` . Voici un exemple de manifeste avec une recherche et une commande create. Une extension de message unique peut avoir jusqu’à 10 commandes différentes. Cela peut inclure plusieurs commandes de recherche et plusieurs commandes basées sur des actions.
+
+ > [!NOTE]
+ >`justInTimeInstall` fonctionne lorsque vous chargez une application dans le catalogue d’applications, mais échoue lorsque vous chargez une application de manière indépendante.
 
 ### <a name="complete-app-manifest-example"></a>Exemple de manifeste d’application complet
 
@@ -236,7 +239,7 @@ Il existe trois façons de collecter des informations auprès d’un utilisateur
 
 ### <a name="static-parameter-list"></a>Liste de paramètres statiques
 
-Dans cette méthode, il vous suffit de définir une liste statique de paramètres dans le manifeste, comme indiqué ci-dessus dans la commande « Créer To Do ». Pour utiliser cette méthode, vérifiez `fetchTask` qu’elle est définie `false` sur et que vous définissez vos paramètres dans le manifeste.
+Dans cette méthode, il vous suffit de définir une liste statique de paramètres dans le manifeste, comme indiqué ci-dessus dans la commande « Créer pour faire ». Pour utiliser cette méthode, vérifiez `fetchTask` qu’elle est définie `false` sur et que vous définissez vos paramètres dans le manifeste.
 
 Lorsqu’un utilisateur choisit une commande avec des paramètres statiques, Teams génère un formulaire dans un module de tâches avec les paramètres définis dans le manifeste. Lorsque vous appuyez sur Submit, un `composeExtension/submitAction` message est envoyé au bot. Pour plus d’informations sur l’ensemble de réponses attendu, consultez [Réponses à soumettre](#responding-to-submit).
 
@@ -445,8 +448,9 @@ Répondez à l’action d’envoi en insérant un message avec une carte adaptat
 
 Pour activer ce flux, votre module de tâche doit répondre comme dans l’exemple ci-dessous, qui présente le message d’aperçu à l’utilisateur.
 
->[!Note]
->Doit `activityPreview` contenir une `message` activité avec exactement 1 pièce jointe de carte adaptative.
+> [!NOTE]
+> Doit `activityPreview` contenir une `message` activité avec exactement 1 pièce jointe de carte adaptative.
+
 
 ```json
 {
@@ -560,7 +564,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Cet exemple montre ce flux à l’aide de [Microsoft.Bot.Connector.Teams Kit de développement logiciel (SDK) (v3).](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
+Cet exemple montre ce flux à l’aide du [Kit de développement logiciel (SDK) Microsoft.Bot.Connector.Teams (v3).](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 public class MessagesController : ApiController

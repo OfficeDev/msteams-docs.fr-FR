@@ -5,12 +5,12 @@ description: Découvrez les solutions Microsoft low et no code disponibles avec 
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 74dd4eb094c31510319932ec96cbb0db34a1fca5
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
+ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503311"
+ms.lasthandoff: 08/19/2022
+ms.locfileid: "67382936"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Créer des applications personnalisées à faible code pour Teams
 
@@ -25,7 +25,11 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Services Power platform":::
 
 > [!NOTE]
-> Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications destinées à être publiées dans la boutique d'applications Teams. Les applications Microsoft Power Platform peuvent être publiées dans l’App Store d’une organisation uniquement.
+>
+> - Si vous souhaitez publier vos applications power dans le Magasin Teams pour les utilisateurs de toutes les organisations, remplissez ce [formulaire](https://go.microsoft.com/fwlink/?linkid=2204468).
+> - Si vous souhaitez publier une application pour une organisation spécifique, consultez les rubriques suivantes :
+>   - Informations complémentaires : [Power Apps et Intégration de Power Apps et Microsoft Teams](/power-apps/teams/overview).
+>   - [Créer des applications dans Microsoft Teams à l’aide de Power Apps](/power-apps/teams/create-apps-overview)
 
 ### <a name="-teams-and-power-bi"></a>✔ Équipes et Power BI
 

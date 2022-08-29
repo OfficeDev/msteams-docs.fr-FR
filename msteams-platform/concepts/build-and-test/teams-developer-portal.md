@@ -4,23 +4,24 @@ description: Dans cet article, découvrez-en plus sur le portail des développeu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 57274333d37edd166c9c5e7bb9484131a31af904
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232293"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417499"
 ---
 # <a name="developer-portal-for-teams"></a>Documentation pour les développeurs
 
 <a href="https://dev.teams.microsoft.com" target="_blank">Portail des développeurs pour Teams</a> est l’outil principal pour configurer, distribuer et gérer vos applications Microsoft Teams. Avec le Developer Portal, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’exécution et bien plus encore.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="capture d’écran montrant la page d’accueil du Developer Portal pour Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="La capture d’écran est un exemple montrant la page d’accueil du portail des développeurs pour Teams.":::
 
 > [!NOTE]
 >
 > * Actuellement, Developer Portal n’est pas disponible pour les locataires Cloud de la communauté du secteur public (GCC), GCC-High ou department of Defense (DOD).
 > * Toutefois, vous pouvez utiliser un locataire standard pour créer une application dans le Developer Portal, télécharger l’application et charger l’application à l’aide de [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) dans un cloud national. Pour plus d’informations, consultez [Déploiements cloud nationaux](/graph/deployments).
+> * Actuellement, dans certains scénarios, le portail des développeurs ne se charge pas dans le navigateur quand AdBlocker est activé. Pour continuer avec le portail des développeurs dans le navigateur, désactivez AdBlocker.
 
 ## <a name="register-an-app"></a>Inscrire une application
 

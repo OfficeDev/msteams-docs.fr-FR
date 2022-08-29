@@ -1,16 +1,16 @@
 ---
 title: Modifications des marges de l’onglet
 author: surbhigupta
-description: Dans ce module, découvrez comment la suppression des marges de tabulation améliore l’expérience de création d’applications.
+description: Découvrez comment supprimer des marges autour des onglets dans Microsoft Teams avec le kit d’interface utilisateur. Connaître l’effet de remplissage supplémentaire, la taille de la marge pour la gauche, la droite, le haut et le bas.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: 715c6b735323e442490de8634384054be565e7a8
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962425"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450442"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 

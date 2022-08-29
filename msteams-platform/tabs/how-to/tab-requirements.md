@@ -1,16 +1,16 @@
 ---
 title: Conditions préalables
 author: surbhigupta
-description: Dans ce module, découvrez les conditions requises pour chaque onglet de Microsoft Teams devez respecter et les outils pour créer des onglets.
-ms.localizationpriority: medium
+description: Dans cet article, découvrez les conditions préalables à la création de l’onglet Personnel, Canal ou Groupe de Microsoft Teams. Connaissez les outils nécessaires à la génération de votre onglet.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142618"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450414"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
@@ -36,7 +36,7 @@ Veillez à respecter les conditions préalables suivantes lors de la création d
 
 * Si vous choisissez d’afficher l’onglet de votre canal ou de votre groupe sur un client mobile Teams, la configuration `setConfig()` doit avoir une valeur pour la propriété `websiteUrl`.
 
-* Microsoft Teams’onglet ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
+* L’onglet Microsoft Teams ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

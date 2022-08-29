@@ -5,12 +5,12 @@ description: Dans ce module, découvrez les commandes de recherche d’extension
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312267"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363472"
 ---
 # <a name="define-message-extension-search-commands"></a>Définir des commandes de recherche d’extension de message
 
@@ -24,7 +24,7 @@ Les commandes de recherche d’extension de message permettent aux utilisateurs 
 Consultez la vidéo suivante pour découvrir comment définir des commandes de recherche d’extension de message :
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Sélectionner des emplacements d’appel de commande de recherche
@@ -113,6 +113,7 @@ Vous devez ajouter les détails du paramètre de recherche qui définit le texte
 | `parameter.description` | Cette propriété décrit les objectifs du paramètre ou l’exemple de la valeur qui doit être fournie. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |
 | `parameter.title` | Cette propriété est un titre ou une étiquette de paramètre convivial court. | Oui | 1.0 |
 | `parameter.inputType` | Cette propriété est définie sur le type de l’entrée requise. Les valeurs possibles sont : `text`, `textarea`, `number``date`, `toggle``time`. La valeur par défaut est `text`. | Non | 1.4 |
+| `parameters.value` | Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge | Non | 1,5 |
 
 #### <a name="example"></a>Exemple
 

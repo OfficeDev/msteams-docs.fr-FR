@@ -1,19 +1,19 @@
 ---
 title: Messages dans les conversations des robots
-description: Découvrez comment avoir une conversation avec un bot Teams et des données de canal Teams, la notification à votre message, les messages image, les cartes adaptatives à l’aide d’exemples de code
+description: Découvrez comment envoyer un message, des actions suggérées, des notifications, des pièces jointes, des images, des cartes adaptatives, des réponses de code d’erreur d’état pour throttle.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035194"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363444"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
-Chaque message d’une conversation est un `Activity` objet de type `messageType: message`. Lorsqu’un utilisateur envoie un message, Teams le publie sur votre bot. Teams envoie un objet JSON au point de terminaison de messagerie de votre bot. Votre bot examine le message pour déterminer son type et répond en conséquence.
+Chaque message d’une conversation est un `Activity` objet de type `messageType: message`. Lorsqu’un utilisateur envoie un message, Microsoft Teams le publie sur votre bot. Teams envoie un objet JSON au point de terminaison de messagerie de votre bot et Teams n’autorise qu’un seul point de terminaison pour la messagerie. Votre bot examine le message pour déterminer son type et répond en conséquence.
 
 Les conversations de base sont gérées via le connecteur Bot Framework, une API REST unique. Cette API permet à votre bot de communiquer avec Teams et d’autres canaux. Le Kit de développement logiciel (SDK) Bot Builder fournit les fonctionnalités suivantes :
 
@@ -198,7 +198,8 @@ Les messages envoyés entre les utilisateurs et les bots incluent des données d
 
 ## <a name="send-suggested-actions"></a>Envoyer des actions suggérées
 
-Les actions suggérées permettent à votre bot de présenter des boutons que l’utilisateur peut sélectionner pour fournir une entrée. Les actions suggérées améliorent l’expérience utilisateur en permettant à l’utilisateur de répondre à une question ou de faire un choix avec la sélection d’un bouton, plutôt que de taper une réponse avec un clavier. Les boutons restent visibles et accessibles à l’utilisateur dans les cartes enrichies même après que l’utilisateur a effectué une sélection alors que pour les actions suggérées, les boutons ne sont pas disponibles. Cela empêche l’utilisateur de sélectionner des boutons obsolètes dans une conversation.
+Les actions suggérées permettent à votre bot de présenter des boutons que l’utilisateur peut sélectionner pour fournir une entrée. Les actions suggérées améliorent l’expérience utilisateur en permettant à l’utilisateur de répondre à une question ou de faire un choix avec la sélection d’un bouton, plutôt que de taper une réponse avec un clavier.
+Les boutons restent visibles et accessibles à l’utilisateur dans les cartes enrichies même après que l’utilisateur a effectué une sélection alors que pour les actions suggérées, les boutons ne sont pas disponibles. Cela empêche l’utilisateur de sélectionner des boutons obsolètes dans une conversation.
 
 Pour ajouter des actions suggérées à un message, définissez la `suggestedActions` propriété de l’objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) pour spécifier la liste des objets [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) qui représentent les boutons à présenter à l’utilisateur. Pour plus d’informations, consultez [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
 
@@ -225,6 +226,7 @@ Voici un exemple d’implémentation et d’expérience des actions suggérées 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Actions suggérées par le bot" border="true":::
 
 > [!NOTE]
+>
 > * `SuggestedActions` ne sont pris en charge que pour les bots conversationnels et les messages texte, et non pour les cartes adaptatives ou les pièces jointes.
 > * Actuellement `imBack` , il s’agit du seul type d’action pris en charge et Teams affiche jusqu’à trois actions suggérées.
 
@@ -366,7 +368,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.

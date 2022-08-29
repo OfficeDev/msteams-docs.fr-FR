@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919850"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417506"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -38,7 +38,7 @@ Un cycle de vie de réunion consiste en une expérience d'application avant, pen
 Les onglets permettent aux membres de l'équipe d'accéder aux services et au contenu d'un espace spécifique au sein d'une réunion. L'équipe travaille directement avec les onglets et a des conversations sur les outils et les données disponibles dans les onglets. Dans la réunion Teams, vous pouvez ajouter un onglet en sélectionnant <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, puis sélectionnez l’application que vous souhaitez installer.
 
 > [!IMPORTANT]
-> Si vous avez intégré un onglet à votre réunion, votre application doit suivre le [flux d’authentification unique Teams (SSO) pour les onglets](../tabs/how-to/authentication/tab-sso-overview.md).
+> Nous vous recommandons de suivre le [flux d’authentification unique Teams pour les onglets](../tabs/how-to/authentication/tab-sso-overview.md), si vous avez intégré une application onglet dans votre réunion.
 
 > [!NOTE]
 > L’option Ajouter une application pour l’application d’extension de réunion Teams n’est pas prise en charge dans le client web Teams.

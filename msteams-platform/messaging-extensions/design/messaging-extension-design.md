@@ -1,16 +1,16 @@
 ---
 title: Conception de votre extension de message
-description: Découvrez comment concevoir une extension de message Teams et obtenir le Kit d’interface utilisateur Microsoft Teams. Décrit les conseils de conception d’équipes pour référencer les conseils sur les extensions de message
+description: Découvrez comment concevoir une extension de message Teams et obtenir le Kit d’interface utilisateur Microsoft Teams. Décrit les instructions de conception Teams pour référencer les conseils relatifs aux extensions de message et les meilleures pratiques.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558750"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338899"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Conception de votre extension de message Microsoft Teams
 
@@ -57,7 +57,7 @@ Pour assurer la cohérence entre les applications Teams, vous ne pouvez pas pers
 
 ## <a name="types-of-message-extensions"></a>Types d’extensions de message
 
-Les extensions de message peuvent avoir des commandes de recherche, des commandes d’action ou les deux. Vos commandes dépendent des fonctionnalités de votre application et de la façon dont elles s’intègrent aux cas d'utilisation Teams.
+Les extensions de message peuvent avoir des commandes de recherche, des commandes d’action ou les deux. Vos commandes dépendent des fonctionnalités de votre application et de la façon dont celles-ci s’intègrent aux cas d’usage Teams.
 
 ### <a name="search-commands"></a>Commandes de recherche
 
@@ -192,7 +192,7 @@ Les exemples suivants montrent une extension de message ouverte à partir de la 
 |3|**Zone de recherche** : permet aux utilisateurs de trouver le contenu de l’application qu’ils souhaitent insérer.|
 |4|**Menu onglet (facultatif)** : fournit plusieurs catégories de contenu.|
 |5|**Menu commandes d’action (facultatif)** : affiche la liste des commandes d’action (le cas échéant).|
-|6 |**Contenu de l’application** : principalement pour afficher les résultats de la recherche.|
+|6|**Contenu de l’application** : principalement pour afficher les résultats de la recherche.|
 
 #### <a name="desktop"></a>Desktop
 
@@ -201,11 +201,11 @@ Les exemples suivants montrent une extension de message ouverte à partir de la 
 |Compteur|Description|
 |----------|-----------|
 |1|**Logo de l’application** : icône couleur du logo de votre application.|
-|2.|**Nom de l’application** : nom complet de votre application.|
+|2|**Nom de l’application** : nom complet de votre application.|
 |3|**Icône de menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de message (si vous en spécifiez une).
 |4|**Zone de recherche** : permet aux utilisateurs de trouver le contenu de l’application qu’ils souhaitent insérer.|
 |5|**Menu onglet (facultatif)** : fournit plusieurs catégories de contenu.|
-|6 |**Menu commandes d’action (facultatif)** : affiche la liste des commandes d’action (le cas échéant).|
+|6|**Menu commandes d’action (facultatif)** : affiche la liste des commandes d’action (le cas échéant).|
 |7 |**Contenu de l’application** : principalement pour afficher les résultats de la recherche. L’exemple suivant utilise la disposition de liste (la disposition de la grille est une autre option).|
 |8 |**Logo de l’application** : icône contour du logo de votre application.|
 
@@ -226,7 +226,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Exemple sur l’installation et l’utilisation générale.":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Exemple d’installation et d’utilisation générale.":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>À faire : intégrer avec l’authentification unique
 
@@ -251,7 +251,7 @@ Les extensions de message ne sont pas toujours faciles à trouver. Incluez des c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemple sur la création de modèles.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemple de création de modèles.":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>À faire : permettre à Teams de gérer une partie du travail de conception si possible
 

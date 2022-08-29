@@ -1,16 +1,16 @@
 ---
 title: Créer une page de contenu
 author: surbhigupta
-description: Dans ce module, découvrez comment créer une page de contenu pour le contenu de vos onglets et onglets et les instructions de conception
-ms.localizationpriority: medium
+description: Découvrez la page web dans le client Teams et fait partie de l’onglet personnalisé personnel, canal ou groupe. Créez une page de contenu et incorporez-la en tant que vue web à l’intérieur du module de tâche.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841968"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450372"
 ---
 # <a name="create-a-content-page"></a>Créer une page de contenu
 
@@ -33,6 +33,9 @@ Vous devez vous concentrer sur le nettoyage de la conception de votre onglet, l�
 ## <a name="integrate-your-code-with-teams"></a>Intégrer votre code à Teams
 
 Pour que votre page s’affiche dans Teams, vous devez inclure le [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et inclure un appel à `app.initialize()` après le chargement de votre page.
+
+> [!NOTE]
+> Il faut près de 24 à 48 heures pour que les modifications apportées au contenu ou à l’interface utilisateur soient reflétées dans l’application onglet en raison du cache.
 
 Le code suivant fournit un exemple de la façon dont votre page et le client Teams communiquent :
 

@@ -3,12 +3,12 @@ title: Authentification en mode silencieux
 description: Dans ce module, découvrez comment effectuer l’authentification silencieuse, l’authentification unique et Azure AD pour les onglets et comment il fonctionne
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035309"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435040"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Utiliser l’authentification silencieuse dans Azure AD
 
@@ -57,7 +57,7 @@ Incluez Bibliothèque d'authentification Active Directory dans vos pages d’ong
 
 ### <a name="get-the-user-context"></a>Obtenir l'utilisateur pour le contexte actuel
 
-Dans la page de contenu de l’onglet, appelez `microsoftTeams.getContext()` pour obtenir un indicateur de connexion pour l’utilisateur actuel. L’indicateur est utilisé comme un `loginHint` appel à Azure AD.
+Dans la page de contenu de l’onglet, appelez `app.getContext()` pour obtenir un indicateur de connexion pour l’utilisateur actuel. L’indicateur est utilisé comme un `loginHint` appel à Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -109,16 +109,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 La bibliothèque d’authentification Active Directory analyse le résultat de Azure AD en appelant `AuthenticationContext.handleWindowCallback(hash)` la page de rappel de connexion.
 
-Vérifiez que vous disposez d’un utilisateur valide et appelez `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()` pour signaler l’état à votre page de contenu de l’onglet principal.
+Vérifiez que vous disposez d’un utilisateur valide et appelez `authentication.notifySuccess()` ou `authentication.notifyFailure()` pour signaler l’état à votre page de contenu de l’onglet principal.
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }

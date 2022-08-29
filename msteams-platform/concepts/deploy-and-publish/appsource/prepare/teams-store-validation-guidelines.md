@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
+ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962474"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417649"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -430,7 +430,6 @@ N'oubliez pas ce qui suit :
 [*Correctif suggéré*]
 
 * Afficher des appareils spécifiques, tels que des téléphones ou des ordinateurs portables.
-* Afficher Chrome ou l’interface utilisateur qui ne se présente pas dans votre application.
 * Capturez l’interface Teams ou l’interface utilisateur du navigateur dans vos captures d’écran.
 * Incluez des maquettes qui reflètent de manière incorrecte l’interface utilisateur réelle de votre application, comme l’affichage de votre application utilisée en dehors de Teams.
 

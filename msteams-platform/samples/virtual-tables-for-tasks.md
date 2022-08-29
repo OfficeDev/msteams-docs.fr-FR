@@ -5,12 +5,12 @@ description: Dans ce module, découvrez les tables virtuelles pour les tâches, 
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 58572dc51164d18dcfcbf44012543bd5400c3921
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
+ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178974"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67314594"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Tables virtuelles pour tâches, réunions, fichiers
 
@@ -54,7 +54,7 @@ Pour suivre cet article, vous avez besoin des éléments suivants :
 
 Le scénario décrit dans ce guide utilise les tables virtuelles Plan planificateur et Tâche. Le scénario décrit est le même que celui utilisé par le contrôle Tasks Collaboration. Du point de vue de l’utilisateur, le scénario montre comment un plan planificateur et plusieurs tâches sont créées et associées à un enregistrement métier spécifique. Le scénario explique ensuite comment récupérer les tâches associées à l’enregistrement professionnel et comment lire, mettre à jour et supprimer une tâche de planificateur spécifique.
 
-Le diagramme de séquence suivant explique l’interaction entre le client, qui peut être le contrôle de collaboration Tâches, [l’API collaboration](~/samples/collaboration-api-reference.md) et les tables virtuelles plan planificateur et tâche.
+Le diagramme de séquence suivant explique l’interaction entre le client, qui peut être le contrôle de collaboration Tâches, [l’API collaboration](/rest/api/industry/collaboration-controls/) et les tables virtuelles plan planificateur et tâche.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Diagramme de séquence pour les tables virtuelles":::
 
@@ -584,7 +584,7 @@ La `plannerTaskId` propriété est associée à une tâche de planificateur, qui
 
 ---
 
-Pour résoudre ce problème, vous devez vérifier le message d’erreur dans la réponse et s’il est défini sur le message indiqué ci-dessus, cela signifie que l’enregistrement virtuel n’est pas associé. Pour créer une association pour cet enregistrement, vous devez appeler [Associate Collaboration Map - API REST](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map).
+Pour résoudre ce problème, vous devez vérifier le message d’erreur dans la réponse et s’il est défini sur le message indiqué ci-dessus, cela signifie que l’enregistrement virtuel n’est pas associé. Pour créer une association pour cet enregistrement, vous devez appeler [Associate Collaboration Map - API REST](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map).
 
 ### <a name="attempt-to-read-a-virtual-record-and-the-graph-resource-has-been-deleted"></a>Tentative de lecture d’un enregistrement virtuel et suppression de la ressource Graph
 

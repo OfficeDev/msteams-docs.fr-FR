@@ -1,16 +1,16 @@
 ---
 title: Créer une page de configuration
 author: surbhigupta
-description: Dans ce module, découvrez comment créer une page de configuration pour configurer un canal ou une conversation de groupe pour les paramètres, tels que l’obtention de données de contexte, etc.
-ms.localizationpriority: medium
+description: Créer une page de configuration pour collecter des informations auprès de l’utilisateur. En outre, obtenez des données de contexte pour les onglets Microsoft Teams, connaissez l’authentification, modifiez ou supprimez des onglets.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841700"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450379"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -174,9 +174,10 @@ Le code de la page de configuration informe les équipes que les exigences de co
 
 >[!NOTE]
 >
->* Vous disposez de 30 secondes pour effectuer l'opération de sauvegarde (le rappel de registerOnSaveHandler) avant le délai d'attente. Une fois le délai écoulé, un message d'erreur générique apparaît.
+>* Vous avez 30 secondes pour terminer l’opération d’enregistrement (le rappel vers `registerOnSaveHandler`) avant le délai d’expiration. Une fois le délai écoulé, un message d'erreur générique apparaît.
 >* Si vous enregistrez un gestionnaire de sauvegarde à l'aide de , la fonction de `registerOnSaveHandler()`rappel doit invoquer `saveEvent.notifySuccess()`ou`saveEvent.notifyFailure()` pour indiquer le résultat de la configuration.
 >* Si vous n'enregistrez pas de gestionnaire d'enregistrement, `saveEvent.notifySuccess()`l'appel est effectué automatiquement lorsque l'utilisateur sélectionne **Enregistrer**.
+>* Assurez-vous d’avoir un caractère unique `entityId`. Redirige en double `entityId` vers la première instance de l’onglet.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obtenez des données contextuelles pour les paramètres de votre onglet
 
@@ -292,7 +293,7 @@ Authentifiez-vous avant de permettre à un utilisateur de configurer votre appli
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
 
-Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier, reconfigurer ou renommer un canal ou un onglet de groupe. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
+Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier ou de reconfigurer un canal ou un onglet de groupe. Vous pouvez renommer votre onglet uniquement via l’interface utilisateur teams. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Configuration de Microsoft Teams `setConfig()` (anciennement `setSettings()`) pour la page de suppression :
 

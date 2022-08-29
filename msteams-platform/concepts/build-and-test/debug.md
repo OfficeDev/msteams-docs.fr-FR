@@ -3,12 +3,12 @@ title: Choix d’une configuration pour tester et déboguer votre application
 description: Dans ce module, découvrez les options de test et de débogage des applications Microsoft Teams dans un environnement local et hébergé dans le cloud.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: b064fb4ef06576251a91a4727a84bb4519d4d352
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312190"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452352"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Choisir une configuration de test et déboguer votre application Teams
 
@@ -81,6 +81,5 @@ Pour charger et exécuter votre expérience dans Teams, vous devez créer un pac
 
 ## <a name="see-also"></a>Voir aussi
 
-[Tester et déboguer votre bot localement avec l’IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
-
-[DevTools pour les onglets Microsoft Teams](../../tabs/how-to/developer-tools.md)
+* [Tester et déboguer votre bot localement avec l’IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+* [DevTools pour les onglets Microsoft Teams](../../tabs/how-to/developer-tools.md)

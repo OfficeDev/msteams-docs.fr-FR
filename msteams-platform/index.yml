@@ -11,12 +11,12 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 586bb6c57e338a3333c7f525eb98b710ac04c72a
-  ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+  ms.openlocfilehash: 48e77b1efaff9155a71e23caf6be8b6bd4dd8849
+  ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/19/2022
-  ms.locfileid: "66841995"
+  ms.lasthandoff: 08/13/2022
+  ms.locfileid: "67337221"
 highlightedContent:
   items:
   - title: Quelles sont les nouveautés ?
@@ -168,10 +168,10 @@ tools:
   items:
   - title: Extension du Kit de ressources Microsoft Teams pour Visual Studio Code
     imageSrc: /media/logos/logo_vs-code.svg
-    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+    url: /microsoftteams/platform/toolkit/teams-toolkit-fundamentals
   - title: Extension du Kit de ressources Microsoft Teams pour Visual Studio
     imageSrc: /media/logos/logo_vs-ide.svg
-    url: /microsoftteams/platform/toolkit/visual-studio-overview
+    url: /microsoftteams/platform/toolkit/teams-toolkit-overview-visual-studio
   - title: Portail des développeurs
     imageSrc: ./assets/icons/devp-logo.png
     url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal

@@ -3,12 +3,12 @@ title: Obtenir l’ID de réunion et l’ID d’organisateur pour récupérer le
 description: Décrit le processus d’obtention de l’ID de réunion et de l’ID d’organisateur pour récupérer les transcriptions de réunion
 ms.localizationpriority: high
 ms.topic: concept
-ms.openlocfilehash: 9581d65c418032aff2287b4ee0de1ee762a8ffb7
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
-ms.translationtype: HT
+ms.openlocfilehash: 316eabb77eb440a171ca6f357e1db8a2f3b18b6b
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232376"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67434984"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>Obtenir l’ID de réunion et l’ID d’organisateur
 
@@ -423,7 +423,7 @@ Pour obtenir l’ID de réunion et l’ID d’organisateur à partir d’une not
        Utilisez l’exemple suivant pour demander l’ID de transcription :
 
         ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings/('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
+        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
         ```
 
         Dans cet exemple :

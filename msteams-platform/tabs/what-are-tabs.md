@@ -1,16 +1,16 @@
 ---
 title: Onglets Microsoft Teams
 author: surbhigupta
-description: Dans ce module, découvrez comment créer des onglets personnalisés sur la plateforme Teams, des fonctionnalités d’onglets et des scénarios d’utilisation d’onglets.
+description: Apprenez à créer des onglets, des pages web incorporées dans Microsoft Teams. Créez une page de contenu dans le cadre de l’onglet personnel, canal ou groupe. Apprenez également à créer des onglets avec des cartes adaptatives.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 38781b844b9aa84c39daa4cae909ec11ad197175
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058234"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450393"
 ---
 # <a name="build-tabs-for-teams"></a>Créer des onglets pour Teams
 

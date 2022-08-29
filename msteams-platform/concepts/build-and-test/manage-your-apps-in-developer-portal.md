@@ -4,14 +4,14 @@ description: Dans cet article, découvrez comment configurer, distribuer et gér
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 12f1def758e4ef108f9670e0cc696c7ce197e485
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232418"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435075"
 ---
-# <a name="manage-your-apps-in-developer-portal"></a>Gérer vos applications dans le portail des développeurs
+# <a name="manage-your-apps-in-developer-portal"></a>Gérez vos applications dans le portail des développeurs
 
 Après avoir créé ou chargé votre application, vous pouvez gérer vos applications dans le portail des développeurs avec les éléments suivants :
 
@@ -20,7 +20,7 @@ Après avoir créé ou chargé votre application, vous pouvez gérer vos applica
 * [Avancé](#advanced)
 * [Publier](#publish)
 
-## <a name="overview"></a>Vue d’ensemble
+## <a name="overview"></a>Vue d'ensemble
 
 Dans la section **Vue d’ensemble** , vous pouvez voir les composants suivants pour gérer votre application :
 
@@ -154,7 +154,7 @@ Pour ajouter un bot :
 1. Dans la page de gestion du bot, sélectionnez **Nouveau bot**.
 1. Entrez le nom et **sélectionnez Ajouter**.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="La capture d’écran est un exemple montrant les outils du portail des développeurs, qui vous aide à créer des fonctionnalités clés.":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="La capture d’écran est un exemple montrant les outils du portail des développeurs, qui vous aide à créer des fonctionnalités clés.":::
 
 À partir du portail des développeurs, vous pouvez accéder au portail Bot Framework et configurer votre bot pour mettre à jour l’icône et d’autres propriétés.
 

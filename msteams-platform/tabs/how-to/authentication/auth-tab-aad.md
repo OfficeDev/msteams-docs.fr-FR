@@ -3,12 +3,12 @@ title: Configurer l’authentification OAuth tierce
 description: Dans cet article, découvrez les onglets d’authentification Teams Microsoft Azure AD, l’authentification dans Teams et comment l’utiliser dans les onglets.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: f3a3e9d4ae848459c4804895aa2f28a66868ddb0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 18a643af2b8a15940915145d02207f2aec93b014
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503465"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67434998"
 ---
 # <a name="configure-third-party-oauth-idp-authentication"></a>Configurer l’authentification d’un fournisseur d’identité OAuth tiers
 
@@ -20,11 +20,13 @@ Les informations de profil utilisateur Teams sont stockées dans Azure AD à l�
 
 OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0. Il lit les informations de profil de l’utilisateur à partir d’Azure AD et de Microsoft Graph.
 
-Le code de cet article provient de l’exemple d’application Teams [Exemple d’authentification par onglet Microsoft Teams (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Il contient un onglet statique qui demande un jeton d’accès pour Microsoft Graph et affiche les informations de profil de base de l’utilisateur actuel à partir d’Azure AD.
+Le code de cet article provient de l’exemple d’application [Teams Microsoft Teams Authentication Sample (Node).](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) Il contient un onglet statique qui demande un jeton d’accès pour Microsoft Graph et affiche les informations de profil de base de l’utilisateur actuel à partir d’Azure AD.
 
 Pour obtenir une vue d’ensemble du flux d’authentification pour les onglets, consultez [flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md).
 
 Le flux d’authentification dans les onglets diffère du flux d’authentification dans les bots.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="configure-your-app-to-use-azure-ad-as-an-identity-provider"></a>Configurer votre application pour utiliser Azure AD en tant que fournisseur d’identité
 
@@ -49,7 +51,31 @@ Le flux d’authentification doit être déclenché par une action de l’utilis
 
 Ajoutez un bouton à votre page de configuration ou de contenu pour permettre à l’utilisateur de se connecter si nécessaire. Vous pouvez le faire dans l’onglet page de [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) ou dans n’importe quelle page de [contenu](~/tabs/how-to/create-tab-pages/content-page.md).
 
-Azure AD, comme la plupart des fournisseurs d’identité, n’autorise pas le placement de son contenu dans un `iframe`. Cela signifie que vous devez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start`. Utilisez la `microsoftTeams.authenticate()` fonction du Kit de développement logiciel (SDK) client Microsoft Teams pour lancer cette page lorsque le bouton est sélectionné.
+Azure AD, comme la plupart des fournisseurs d’identité, n’autorise pas le placement de son contenu dans un `iframe`. Cela signifie que vous devez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start`. Utilisez la `authentication.authenticate()` fonction du Kit de développement logiciel (SDK) client Microsoft Teams pour lancer cette page lorsque le bouton est sélectionné.
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+import { authentication } from "@microsoft/teams-js";
+authentication.authenticate({
+    url: window.location.origin + "/tab/simple-start-v2"),
+    width: 600,
+    height: 535})
+.then((result) => {
+    console.log("Login succeeded: " + result);
+    let data = localStorage.getItem(result);
+    localStorage.removeItem(result);
+    let tokenResult = JSON.parse(data);
+    showIdTokenAndClaims(tokenResult.idToken);
+    getUserProfile(tokenResult.accessToken);
+})
+.catch((reason) => {
+    console.log("Login failed: " + reason);
+    handleAuthError(reason);
+});
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -64,18 +90,49 @@ microsoftTeams.authentication.authenticate({
     }
 });
 ```
+---
 
 ### <a name="notes"></a>Notes
 
-* L’URL que vous transmettez à `microsoftTeams.authentication.authenticate()` est la page de démarrage du flux d’authentification. Dans cet exemple, il s’agit de `/tab-auth/simple-start`. Cela doit correspondre à ce que vous avez inscrit dans le [Portail d’inscription des applications Azure AD](https://apps.dev.microsoft.com).
+* L’URL que vous transmettez à `authenticate()` est la page de démarrage du flux d’authentification. Dans cet exemple, il s’agit de `/tab-auth/simple-start`. Cela doit correspondre à ce que vous avez inscrit dans le [Portail d’inscription des applications Azure AD](https://apps.dev.microsoft.com).
 
 * Le flux d’authentification doit commencer sur une page qui se trouve sur votre domaine. Ce domaine doit également être répertorié dans la section [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) du manifeste. Si ce n’est pas le cas, une fenêtre contextuelle vide s’affiche.
 
-* Si vous ne l’utilisez `microsoftTeams.authentication.authenticate()` pas, la fenêtre contextuelle ne se ferme pas à la fin du processus de connexion.
+* Si vous ne l’utilisez `authenticate()` pas, la fenêtre contextuelle ne se ferme pas à la fin du processus de connexion.
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>Accédez à la page d’autorisation à partir de votre page contextuelle
 
-Lorsque votre page contextuelle (`/tab-auth/simple-start`) s’affiche, le code suivant est exécuté. L’objectif principal de cette page est de rediriger vers votre fournisseur d’identité afin que l’utilisateur puisse se connecter. Cette redirection peut être effectuée côté serveur à l’aide de HTTP 302, mais dans ce cas, elle est effectuée côté client à l’aide d’un appel à `window.location.assign()`. Cela permet également d’utiliser `microsoftTeams.getContext()` pour récupérer des informations d’indication, qui peuvent être passées à Azure AD.
+Lorsque votre page contextuelle (`/tab-auth/simple-start`) s’affiche, le code suivant est exécuté. L’objectif principal de la page est de rediriger vers votre fournisseur d’identité afin que l’utilisateur puisse se connecter. Cette redirection peut être effectuée côté serveur à l’aide de HTTP 302, mais dans ce cas, elle est effectuée côté client à l’aide d’un appel à `window.location.assign()`. Cela permet également d’utiliser `app.getContext()` pour récupérer des informations d’indication, qui peuvent être passées à Azure AD.
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+app.getContext().then((context) => {
+    // Generate random state string and store it, so we can verify it in the callback
+    let state = _guid(); // _guid() is a helper function in the sample
+    localStorage.setItem("simple.state", state);
+    localStorage.removeItem("simple.error");
+
+    // Go to the Azure AD authorization endpoint
+    let queryParams = {
+        client_id: "{{appId}}",
+        response_type: "id_token token",
+        response_mode: "fragment",
+        scope: "https://graph.microsoft.com/User.Read openid",
+        redirect_uri: window.location.origin + "/tab/simple-end",
+        nonce: _guid(),
+        state: state,
+        // The context object is populated by Teams; the loginHint attribute
+        // is used as hinting information
+        login_hint: context.user.loginHint,
+    };
+
+    let authorizeEndpoint = `https://login.microsoftonline.com/${context.user.tenant.id}/oauth2/v2.0/authorize?${toQueryString(queryParams)}`;
+    window.location.assign(authorizeEndpoint);
+});
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -102,12 +159,14 @@ microsoftTeams.getContext(function (context) {
 });
 ```
 
+---
+
 Une fois l’autorisation terminée, l’utilisateur est redirigé vers la page de rappel que vous avez spécifiée pour votre application à `/tab-auth/simple-end`.
 
 ### <a name="notes"></a>Notes
 
 * Consultez [obtenir des informations de contexte utilisateur](~/tabs/how-to/access-teams-context.md) pour obtenir de l’aide sur la création de demandes d’authentification et d’URL. Par exemple, vous pouvez utiliser le nom de connexion de l’utilisateur comme valeur de `login_hint` pour Azure AD connexion, ce qui signifie que l’utilisateur peut avoir besoin de taper moins. N’oubliez pas que vous ne devez pas utiliser ce contexte directement comme preuve d’identité, car un attaquant peut charger votre page dans un navigateur malveillant et lui fournir toutes les informations souhaitées.
-* Bien que le contexte de l’onglet fournisse des informations utiles concernant l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez en tant que paramètres d’URL vers l’URL de contenu de votre onglet ou en appelant la fonction `microsoftTeams.getContext()` dans le Kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant pourrait appeler l’URL de contenu de votre onglet avec ses propres paramètres, et une page web empruntant l’identité de Microsoft Teams pourrait charger l’URL de contenu de votre onglet dans une iFrame et retourner ses propres données à la fonction `getContext()`. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des indicateurs et les valider avant de les utiliser.
+* Bien que le contexte de l’onglet fournisse des informations utiles concernant l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez en tant que paramètres d’URL vers l’URL de contenu de votre onglet ou en appelant la fonction `app.getContext()` dans le Kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant pourrait appeler l’URL de contenu de votre onglet avec ses propres paramètres, et une page web empruntant l’identité de Microsoft Teams pourrait charger l’URL de contenu de votre onglet dans une iFrame et retourner ses propres données à la fonction `getContext()`. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des indicateurs et les valider avant de les utiliser.
 * Le paramètre `state` est utilisé pour confirmer que le service appelant l’URI de rappel est le service que vous avez appelé. Si le `state` paramètre dans le rappel ne correspond pas au paramètre que vous avez envoyé pendant l’appel, l’appel de retour n’est pas vérifié et doit être arrêté.
 * Il n’est pas nécessaire d’inclure le domaine du fournisseur d’identité dans la `validDomains` liste dans le fichier manifest.json de l’application.
 
@@ -115,37 +174,41 @@ Une fois l’autorisation terminée, l’utilisateur est redirigé vers la page 
 
 Dans la dernière section, vous avez appelé le service d’autorisation Azure AD et transmis des informations sur l’utilisateur et l’application afin qu’Azure AD puisse présenter à l’utilisateur sa propre expérience d’autorisation monolithique. Votre application n’a aucun contrôle sur ce qui se passe dans cette expérience. Tout ce qu’il sait est ce qui est retourné quand Azure AD appelle la page de rappel que vous avez fournie (`/tab-auth/simple-end`).
 
-Dans cette page, vous devez déterminer la réussite ou l’échec en fonction des informations retournées par Azure AD et de l’appel `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()`. Si la connexion a réussi, vous aurez accès aux ressources de service.
+Dans cette page, vous devez déterminer la réussite ou l’échec en fonction des informations retournées par Azure AD et de l’appel `authentication.notifySuccess()` ou `authentication.notifyFailure()`. Si la connexion a réussi, vous aurez accès aux ressources de service.
 
-````javascript
+```javascript
 // Split the key-value pairs passed from Azure AD
 // getHashParameters is a helper function that parses the arguments sent
 // to the callback URL by Azure AD after the authorization call
 let hashParams = getHashParameters();
 if (hashParams["error"]) {
     // Authentication/authorization failed
-    microsoftTeams.authentication.notifyFailure(hashParams["error"]);
+    localStorage.setItem("simple.error", JSON.stringify(hashParams));
 } else if (hashParams["access_token"]) {
     // Get the stored state parameter and compare with incoming state
-    // This validates that the data is coming from Azure AD
     let expectedState = localStorage.getItem("simple.state");
     if (expectedState !== hashParams["state"]) {
         // State does not match, report error
-        microsoftTeams.authentication.notifyFailure("StateDoesNotMatch");
+        localStorage.setItem("simple.error", JSON.stringify(hashParams));
+        authentication.notifyFailure("StateDoesNotMatch");
     } else {
-        // Success: return token information to the tab
-        microsoftTeams.authentication.notifySuccess({
+        // Success -- return token information to the parent page.
+        // Use localStorage to avoid passing the token via notifySuccess; instead we send the item key.
+        let key = "simple.result";
+        localStorage.setItem(key, JSON.stringify({
             idToken: hashParams["id_token"],
             accessToken: hashParams["access_token"],
             tokenType: hashParams["token_type"],
             expiresIn: hashParams["expires_in"]
-        })
+        }));
+        authentication.notifySuccess(key);
     }
 } else {
     // Unexpected condition: hash does not contain error or access_token parameter
-    microsoftTeams.authentication.notifyFailure("UnexpectedFailure");
+    localStorage.setItem("simple.error", JSON.stringify(hashParams));
+    authentication.notifyFailure("UnexpectedFailure");
 }
-````
+```
 
 Ce code analyse les paires clé-valeur reçues de Azure AD dans `window.location.hash` à l’aide de la fonction d’assistance `getHashParameters()`. S’il trouve une `access_token`, et que la valeur `state` est identique à celle fournie au début du flux d’authentification, elle retourne le jeton d’accès à l’onglet en appelant `notifySuccess()`; sinon, il signale une erreur avec `notifyFailure()`.
 

@@ -1,16 +1,16 @@
 ---
 title: Créer une page de suppression d’onglets
 author: surbhigupta
-description: Dans ce module, découvrez comment créer une page de suppression d’onglet et comment activer la reconfiguration de votre onglet après l’installation
-ms.localizationpriority: medium
+description: Découvrez comment activer la reconfiguration de votre onglet après l’installation. Étendez l’expérience utilisateur en prenant en charge les options de suppression et de modification dans l’application Microsoft Teams.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841973"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450407"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
