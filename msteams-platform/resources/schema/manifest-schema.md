@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058213"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363437"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -358,7 +358,7 @@ Si l’application demande le changement des autorisations, les utilisateurs son
 
 Cette chaîne de version doit suivre la norme de [semver](http://semver.org/) (MAJOR. MINOR. PATCH).
 
-## <a name="id"></a>id
+## <a name="id"></a>ID
 
 **Obligatoire** — ID d’application Microsoft
 
@@ -398,7 +398,7 @@ Nom de l’expérience de votre application, affiché à destination des utilisa
 
 Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations figurant dans votre entrée AppSource.
 
-Assurez-vous que votre description décrive votre expérience et aide les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs de `short` et `full` doivent être différentes. Votre description courte ne peut pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
+Assurez-vous que votre description décrive votre expérience et aide les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs de `short` et `full` doivent être différentes. Votre brève description ne peut pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -453,7 +453,7 @@ La valeur doit être un code de couleur HTML valide commençant par « # » par 
 
 **Facultatif**— tableau
 
-Utilisé lorsque l’expérience de votre application possède une expérience d’onglet de canal d’équipe qui nécessite une configuration supplémentaire avant d’être ajoutée. Les onglets configurables sont pris en charge uniquement dans les étendues `team` et `groupchat` vous pouvez configurer les mêmes onglets plusieurs fois. Toutefois, vous ne pouvez la définir dans le manifeste qu’une seule fois.
+Utilisé lorsque votre expérience d’application dispose d’une expérience d’onglet de canal d’équipe qui nécessite une configuration supplémentaire avant d’être ajoutée. Les onglets configurables sont pris en charge uniquement dans les étendues `team` et `groupchat` vous pouvez configurer les mêmes onglets plusieurs fois. Toutefois, vous ne pouvez la définir dans le manifeste qu’une seule fois.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -633,13 +633,13 @@ Fournissez votre ID d’application Azure Active Directory et vos informations d
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔️|Application Azure AD ID d’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔️|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, <https://notapplicable> pour éviter une réponse d’erreur. |
+|`resource`|string|2 048 caractères|✔️|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **NOTE:** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, <https://notapplicable> pour éviter une réponse d’erreur. |
 
 ## <a name="graphconnector"></a>graphConnector
 
 **Facultatif**— objet
 
-Spécifiez la configuration du connecteur Graph de l’application. Si cette valeur est présente, alors [webApplicationInfo.id](#webapplicationinfo) doit également être spécifié.
+Spécifiez la configuration du connecteur Graph de l’application. Si ce paramètre est présent, [webApplicationInfo.id](#webapplicationinfo) doit également être spécifié.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -767,15 +767,15 @@ Le bloc `configurableProperties` définit les propriétés d’application que l
 
 Vous pouvez définir l’une des propriétés suivantes :
 
-* `name` : Nom d’affichage de l’application.
-* `shortDescription` : Description courte de l’application.
-* `longDescription` : Description longue de l’application.
-* `smallImageUrl` : Icône de contour de l’application.
-* `largeImageUrl` : Icône de couleur de l’application.
-* `accentColor` : Couleur à utiliser et arrière-plan pour vos icônes de contour.
-* `developerUrl` : URL HTTPS du site web du développeur.
-* `privacyUrl` : URL HTTPS de la politique de confidentialité du développeur.
-* `termsOfUseUrl` : URL HTTPS des conditions d’utilisation du développeur.
+* [nom](#name) : nom complet de l’application.
+* [shortDescription](#description) : description courte de l’application.
+* [longDescription](#description) : description longue de l’application.
+* [smallImageUrl](#icons) : icône de contour de l’application.
+* [largeImageUrl](#icons) : icône de couleur de l’application.
+* [accentColor](#accentcolor) : couleur à utiliser et arrière-plan pour vos icônes de contour.
+* [developerUrl](#developer) : URL HTTPS du site web du développeur.
+* [privacyUrl](#developer) : URL HTTPS de la politique de confidentialité du développeur.
+* [termsOfUseUrl](#developer) : URL HTTPS des conditions d’utilisation du développeur.
 
 ## <a name="supportedchanneltypes"></a>supportedChannelTypes
 

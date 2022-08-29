@@ -4,12 +4,12 @@ author: laujan
 description: Dans ce module, découvrez comment utiliser les connecteurs Office 365 et créer et envoyer un message actionnable dans Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 6e50877f1afbebe1e132c6461fbae30445227f43
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190100"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337214"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -289,3 +289,5 @@ Ces limites sont en place pour réduire le courrier indésirable d’un canal pa
 * [Limite de taux pour les messages de bots Teams](~/bots/how-to/rate-limit.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Mettre en forme des cartes dans Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Générer un bot de notification avec JavaScript](../../sbs-gs-notificationbot.yml)
+* [Créer votre première application de bot à l’aide de JavaScript](../../sbs-gs-bot.yml)

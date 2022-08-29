@@ -1,18 +1,21 @@
 ---
 title: Bots dans Microsoft Teams
 author: surbhigupta
-description: Avec ce parcours d’apprentissage, commencez à utiliser des bots conversationnels dans Microsoft Teams et ses exemples de code.
+description: Dans cet article, utilisez des bots conversationnels dans Microsoft Teams pour partager des fichiers, envoyer des notifications proactives, des cartes interactives, passer des appels, appeler une commande de bot, IVR.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
-ms.translationtype: HT
+ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912260"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363511"
 ---
 # <a name="build-bots-for-teams"></a>Créer des bots pour Teams
+
+> [!NOTE]
+> Il est recommandé de créer votre première application bot ou application de bot de notification à l’aide de l’outil de développement de nouvelle génération pour Teams. Pour plus d’informations, consultez [Teams Toolkit pour Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) et [Teams Toolkit pour Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
 
 Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches simples et répétitives effectuées par des utilisateurs tels que le service clientèle ou le personnel de support technique. L’utilisation quotidienne de bots inclut des bots qui fournissent des informations sur la météo, qui effectuent des réservations au restaurant ou qui fournissent des informations concernant les voyages. Les interactions avec les bots peuvent être des questions et réponses rapides ou des conversations complexes.
 
@@ -26,17 +29,17 @@ Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’un
 
 Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web à l’aide de texte, de cartes interactives et de modules de tâche.
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="Service web utilisant du texte"lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="La capture d’écran est un exemple montrant un service web utilisant du texte."lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="service web à l’aide de cartes interactives"lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="La capture d’écran est un exemple montrant un service web utilisant des cartes interactives."lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-:::image type="content" source="../assets/images/task-module-example.png" alt-text="service web à l’aide du module de tâche"lightbox="../assets/images/task-module-example.png"border="true":::
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="La capture d’écran est un exemple montrant un service web à l’aide d’un module de tâche." lightbox="../assets/images/task-module-example-expanded.png":::
 
 Les bots de conversation sont extrêmement flexibles. Les bots peuvent gérer quelques commandes de base ou des tâches complexes qui impliquent l’intelligence artificielle et le traitement du langage naturel. Les bots peuvent faire partie d’une application plus grande ou être autonomes.
 
 Utilisez la bonne combinaison de cartes, de texte et de modules de tâche pour créer un bot utile. L’image suivante montre un utilisateur qui discute avec un bot dans une conversation privée à l’aide de texte et de cartes interactives.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Exemple de bot FAQ":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="La capture d’écran est un exemple montrant un exemple de bot FAQ.":::
 
 Chaque interaction entre l’utilisateur et le bot est représentée comme une activité. Lorsqu’un bot reçoit une activité, il la transmet à ses gestionnaires d’activité. Voir [les gestionnaires d’activité du bot](~/bots/bot-basics.md).
 
@@ -65,6 +68,9 @@ Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour les
 |Exemple de nom | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot de rappel de tâche quotidienne| Expliquer comment planifier une tâche périodique et obtenir un rappel à une heure prévue. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| bot Hello World | Il s’agit d’une application Hello World simple avec les fonctionnalités d’extension Bot et Message. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Notification de carte adaptative | Il s’agit d’un exemple qui montre comment envoyer des notifications avec différentes cartes adaptatives à l’aide de Bots. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Notification de webhook entrant | Il s’agit d’un exemple qui montre comment envoyer des notifications via le webhook entrant dans les canaux Microsoft Teams. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -74,3 +80,5 @@ Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour les
 * [Ajouter l’authentification à votre bot Teams](~/bots/how-to/authentication/add-authentication.md)
 * [Gestionnaire d'activité du robot](~/bots/bot-basics.md)
 * [Événements de conversation dans votre robot Teams](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Créer votre première application de bot à l’aide de JavaScript](../sbs-gs-bot.yml)
+* [Générer un bot de notification avec JavaScript](../sbs-gs-notificationbot.yml)
