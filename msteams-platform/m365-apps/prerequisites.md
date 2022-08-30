@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 49c2b2e6ce8f173fcbc106f1cec8e0bb6d3bcb7b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
+ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919738"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67457290"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
 
@@ -32,15 +32,25 @@ Vous avez besoin d’un locataire de bac à sable Microsoft 365 abonnement déve
 
 Vous devez également activer le chargement indépendant pour votre client :
 
-1. Connectez-vous à Centre d’administration Microsoft 365 (https://admin.microsoft.com) avec vos informations d’identification client de test et sélectionnez **Teams** dans le volet latéral pour ouvrir le *Centre d’administration Microsoft Teams*.
-1. Sélectionnez : Applications Teams > Gérer les applications > **Paramètres d’application à l’échelle de l’organisation**
-1. Sous **Applications personnalisées**, activez l’option *Interaction avec les applications personnalisées*.
+ 1. Connectez-vous au [Centre d’administration Teams](https://admin.teams.microsoft.com/dashboard) avec vos informations d’identification de locataire de test.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Activer le chargement indépendant pour les applications personnalisées à partir du Centre d’administration Teams":::
+ 1. Accédez aux **applications** >  Teams **Gérer les applications**.
+
+ 1. En haut à droite, sélectionnez **paramètres d’application à l’échelle de l’organisation**.
+
+ 1. Sous Applications personnalisées, activez **l’option Interaction with custom app** toggle and save.
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="La capture d’écran est un exemple qui permet le chargement indépendant pour les applications personnalisées à partir du Centre de Administration Teams":::
+
+ 1. Outre les paramètres d’application à l’échelle de l’organisation, les paramètres de stratégie d’application personnalisée permettent également aux utilisateurs de charger des applications personnalisées dans Teams. Pour plus d’informations, consultez [gérer les paramètres et les stratégies d’application personnalisés](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+ 1. Dans le Centre d’administration Teams, accédez aux **stratégies d’installation** des **applications** >  Teams, puis sélectionnez **Stratégie globale (par défaut à l’échelle de l’organisation**).
+
+ 1. Activez **Charger des applications personnalisées**, puis **sélectionnez Enregistrer**.
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Inscrire votre locataire de développeur pour les versions ciblées d’Office 365
 
-> [!Important]
+> [!IMPORTANT]
 > Il peut s'écouler jusqu'à cinq jours après la création d'un client [Microsoft 365 developer sandbox](/office/developer-program/microsoft-365-developer-program-get-started) et l'inscription aux [versions ciblées d'Office 365](#enroll-your-developer-tenant-for-office-365-targeted-releases) pour que les applications Teams chargées en version test apparaissent dans Outlook et Office.
 
 Pour inscrire votre locataire de test aux versions ciblées d’Office 365 :
