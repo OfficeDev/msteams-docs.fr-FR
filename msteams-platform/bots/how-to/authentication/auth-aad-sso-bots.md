@@ -3,19 +3,21 @@ title: Support de l'identification unique pour les robots
 description: Découvrez comment obtenir un jeton utilisateur et qu’un développeur de bots peut utiliser une carte de connexion ou le service de bot Azure avec la prise en charge de la carte OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611498"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465378"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Utiliser l’authentification unique pour les bots
 
 L'authentification par authentification unique dans Microsoft Azure Active Directory (Azure AD) rafraîchit silencieusement le jeton d'authentification afin de réduire le nombre de fois où les utilisateurs doivent saisir leurs informations d'identification. Si les utilisateurs acceptent d'utiliser votre application, ils n'ont pas besoin de donner à nouveau leur consentement sur un autre appareil car ils sont automatiquement connectés. Les onglets et les bots ont un flux similaire pour la prise en charge de l’authentification unique. Mais le bot [demande des jetons](#request-a-bot-token) et [reçoit des réponses](#receive-the-bot-token) avec un protocole différent.
 
 >[!NOTE]
-> OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base du flux d’octroi implicite OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans les onglets Microsoft Teams.
+> * OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base du flux d’octroi implicite OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans les onglets Microsoft Teams.
+>
+> * L’authentification unique bot est prise en charge uniquement dans une conversation en un-un.
 
 Consultez la vidéo suivante pour en savoir plus sur la prise en charge de l’authentification unique (SSO) pour les bots :
 <br>

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417506"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465385"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -214,7 +214,7 @@ Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctio
 
 | Type d'utilisateur | Onglets | Bots | Extensions de messages | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Non disponible |
+| Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Non disponible | Non disponible | Non disponible |
 | Invité, partie du locataire Azure AD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Available | Peut démarrer, afficher et interagir avec l’application sur la phase de réunion uniquement sur le client de bureau Teams |
 | Pour plus d’informations, consultez [les utilisateurs fédérés](/microsoftteams/non-standard-users). | L’interaction est autorisée dans les réunions planifiées. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut démarrer, afficher et interagir avec l’application sur la phase de réunion uniquement sur le client de bureau Teams. |
 
