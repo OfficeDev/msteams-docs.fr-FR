@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363451"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488284"
 ---
 # <a name="upload-your-app-in-teams"></a>Charger votre application dans Teams
 
@@ -127,3 +127,4 @@ Pour supprimer l’application dans Teams, suivez les étapes :
 
 * [Configurer les options d’installation par défaut](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintenir votre application Microsoft Teams publiée](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+* [Ajouter une application à la conversation](/graph/api/chat-post-installedapps)

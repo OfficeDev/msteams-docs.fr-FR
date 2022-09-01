@@ -4,12 +4,12 @@ description: Découvrez comment envoyer des messages proactifs avec votre bot Te
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 964dd5bf33ab527ea1dcf5307e7d9ae94a29d9ec
-ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
+ms.openlocfilehash: 41c7d1ecd4c57bda98bb72dd66546df21fe74754
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2022
-ms.locfileid: "67442983"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488263"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -50,9 +50,9 @@ Pour créer une conversation ou un fil de conversation dans un canal, vous devez
 
 * Lorsque votre application est installée dans un contexte particulier, vous recevez une [`onMembersAdded` activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Lorsqu’un nouvel utilisateur est ajouté à un contexte où votre application est installée, vous recevez une [`onMembersAdded`activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* Chaque événement reçu par le bot contient les informations requises, que vous pouvez obtenir à partir du contexte du bot (objet TurnContext).
 * Vous pouvez récupérer la [liste des canaux](~/bots/how-to/get-teams-context.md) d’une équipe où votre application est installée.
 * Vous pouvez récupérer la [liste des membres](~/bots/how-to/get-teams-context.md) d’une équipe où votre application est installée.
-* Chaque activité reçue par votre bot doit contenir les informations nécessaires.
 
 Quelle que soit la façon dont vous obtenez les informations, stockez le `tenantId` ou les `userId` `channelId` éléments pour créer une conversation. Vous pouvez également utiliser le `teamId` pour créer un thread de conversation dans le canal général ou par défaut d’une équipe.
 
@@ -346,3 +346,4 @@ Le tableau suivant fournit un exemple de code simple qui intègre le flux de con
 * [Envoyer des notifications proactives aux utilisateurs](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Créer votre première application de bot à l’aide de JavaScript](../../../sbs-gs-bot.yml)
 * [Créer un bot de notification avec JavaScript pour envoyer un message proactif](../../../sbs-gs-notificationbot.yml)
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

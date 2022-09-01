@@ -3,16 +3,16 @@ title: DevTools pour les onglets Microsoft Teams
 description: Dans ce module, découvrez comment accéder à DevTools lors de l’utilisation du client Microsoft Teams Desktop et du débogage
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a0d5e3ea15fd796c2c426f1cf1457171f0abe7b2
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143010"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488270"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools pour les onglets Microsoft Teams
 
-Quand Teams s’exécute dans un navigateur, il est facile d’accéder aux DevTools : F12 du navigateur sur Windows ou Command-Option-I sur MacOS. DevTools vous donne accès à :
+Lorsque Teams s’exécute dans un navigateur, il est facile d’accéder aux devTools du navigateur : F12 sur Windows ou Command-Option-I sur MacOS. DevTools vous donne accès à :
 
 1. Afficher les journaux de la console.
 1. Affichez ou modifiez les requêtes HTML, CSS et réseau pendant le runtime.
@@ -50,3 +50,7 @@ Vous pouvez également activer DevTools à partir du client Android Teams. Pour 
 1. Sélectionnez **Inspecter** sous l’onglet à déboguer, comme dans l’image suivante :
 
    ![DevTools pour Android](~/assets/images/android-devtools.png)
+
+## <a name="see-also"></a>Voir aussi
+
+[Vider le cache du client Teams](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)
