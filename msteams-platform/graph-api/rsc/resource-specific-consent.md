@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695308"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586706"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
@@ -107,7 +107,7 @@ Vous pouvez activer ou désactiver RSC pour les conversations à l’aide de API
 
    ![Configuration de l’équipe RSC Graph](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  La valeur par défaut de la propriété **isChatResourceSpecificConsentEnabled** est basée sur l’activation ou la désactivation [des paramètres de consentement de l’utilisateur](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) dans le locataire lorsque RSC pour les conversations est utilisé pour la première fois. Cela peut être la première fois a) récupérer [**teamsAppSettings**](/graph/api/teamsappsettings-get) ou b) installer une application Teams avec des autorisations spécifiques aux ressources dans une conversation/réunion.
+> La valeur par défaut de la propriété **isChatResourceSpecificConsentEnabled** est basée sur l’activation ou la désactivation [des paramètres de consentement de l’utilisateur](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) dans le locataire lorsque RSC pour les conversations est utilisé pour la première fois. Cela peut être la première fois a) récupérer [**teamsAppSettings**](/graph/api/teamsappsettings-get) ou b) installer une application Teams avec des autorisations spécifiques aux ressources dans une conversation/réunion.
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Inscrire votre application auprès de la plateforme d’identités Microsoft à l’aide du portail Azure AD
 

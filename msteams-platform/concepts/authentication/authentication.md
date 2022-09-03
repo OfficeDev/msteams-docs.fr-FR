@@ -1,14 +1,14 @@
 ---
 title: Authentification des utilisateurs de l’application
-description: Dans ce module, découvrez l’authentification dans Teams et comment l’utiliser dans les applications, le flux d’authentification web et le flux OAuthPrompt pour les bots conversationnels.
+description: Découvrez les méthodes d’authentification que vous pouvez activer dans l’application Teams, telles que l’authentification unique (SSO) et l’utilisation de fournisseurs OAuth tiers.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5a083d0bd52a2c9233adaf6164821042236f85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: b7ab4f007c0b7f9400e63d1654c5e0a930274468
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557868"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587007"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 

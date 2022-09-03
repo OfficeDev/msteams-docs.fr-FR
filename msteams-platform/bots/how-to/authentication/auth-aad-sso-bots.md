@@ -1,14 +1,14 @@
 ---
 title: Support de l'identification unique pour les robots
-description: Découvrez comment obtenir un jeton utilisateur et qu’un développeur de bots peut utiliser une carte de connexion ou le service de bot Azure avec la prise en charge de la carte OAuth.
+description: Activez l’authentification unique (SSO) à l’aide de la configuration Azure AD et de la prise en charge de la carte OAuth pour les applications de bot Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
-ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
+ms.openlocfilehash: 0b6ffec6cd9fedcfb67c3f65b391b24ff71e8528
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67465378"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586713"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Utiliser l’authentification unique pour les bots
 

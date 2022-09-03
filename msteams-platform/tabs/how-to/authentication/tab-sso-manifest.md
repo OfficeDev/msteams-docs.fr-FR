@@ -1,15 +1,15 @@
 ---
 title: Mettre à jour le manifeste pour activer l’authentification unique pour les onglets
-description: Décrit la mise à jour du manifeste pour l’activation de l’authentification unique pour les onglets
+description: Mettez à jour le manifeste Teams pour activer l’authentification unique (SSO) pour les onglets et chargez-le dans le client Teams pour tester l’authentification unique.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658962"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587000"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste d’application pour l’authentification unique et l’application en préversion
 

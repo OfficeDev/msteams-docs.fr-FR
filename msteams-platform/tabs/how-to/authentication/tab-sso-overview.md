@@ -1,15 +1,15 @@
 ---
 title: Vue d’ensemble de l’authentification pour les onglets utilisant l’authentification unique dans Teams avec Azure AD
-description: Décrit l’authentification dans Teams et comment l’utiliser dans des onglets
+description: Découvrez l’authentification unique (SSO) dans Teams et comment l’activer dans les onglets.
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: onglets d’authentification Teams Microsoft Azure Active Directory (Azure AD) étendue de l’authentification unique du jeton d’accès
-ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 367a7f0f02d6b1b32af42316774bd171afdaf703
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659016"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586993"
 ---
 # <a name="enable-sso-for-tab-app"></a>Activer l’authentification unique (SSO) pour l’application d’onglet
 
@@ -69,7 +69,7 @@ L’image suivante montre le fonctionnement de l’authentification unique lorsq
 | 3 | Azure AD → Formulaire de consentement | Si l’utilisateur actuel de l’application utilise votre application d’onglet pour la première fois, Teams affiche l’invite de demande de consentement, si l’application doit accéder à certaines données protégées. L’utilisateur de l’application (ou l’administrateur) doit donner son consentement à Teams pour utiliser l’identité Teams de l’utilisateur de l’application afin d’obtenir un jeton d’accès auprès de Azure AD. <br> Alternativement, il existe une invite de demande pour gérer l'authentification renforcée telle que l'authentification à deux facteurs. |
 | 4 | Azure AD → Teams Client | Azure AD envoie le jeton d’accès au client Teams. Le jeton est un JSON Web Token (JWT) et sa validation fonctionne comme la validation de jeton dans la plupart des flux OAuth standard. Teams met en cache le jeton en votre nom afin que les appels futurs à `getAuthToken()` retournent le jeton mis en cache. |
 | 5 | Client Teams → Client d’application d’onglet | Teams envoie le jeton d’accès à l’application d’onglet dans le cadre de l’objet de résultat retourné par l’appel `getAuthToken()` . |
-| 6  | Application de tabulation (entre le client et le serveur) | L’application d’onglet analyse le jeton d’accès à l’aide de JavaScript pour extraire les informations requises, telles que l’adresse e-mail de l’utilisateur de l’application. Le jeton retourné à l’application d’onglet est à la fois un jeton d’accès et un jeton d’identité. |
+| 6 | Application de tabulation (entre le client et le serveur) | L’application d’onglet analyse le jeton d’accès à l’aide de JavaScript pour extraire les informations requises, telles que l’adresse e-mail de l’utilisateur de l’application. Le jeton retourné à l’application d’onglet est à la fois un jeton d’accès et un jeton d’identité. |
 
 Pour plus d’informations, consultez [Mettre à jour le code pour activer l’authentification unique](tab-sso-code.md).
 

@@ -1,16 +1,16 @@
 ---
 title: Ajouter une authentification à votre extension de messagerie
 author: surbhigupta
-description: Dans cet article, vous allez apprendre à ajouter l’authentification à une extension de messagerie à l’aide d’exemples de code et d’exemples
+description: Activez l’authentification dans l’application d’extension de message Teams à l’aide d’un fournisseur OAuth tiers avec une configuration Azure AD et un exemple de code.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 4d5288d0145e60a263b439adfff3a5ae825caf23
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435047"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586979"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Ajouter une authentification à votre extension de messagerie
 

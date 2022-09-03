@@ -1,15 +1,15 @@
 ---
 title: Configuration du code pour l’activation de l’authentification unique pour les onglets
-description: Décrit la configuration du code pour l’activation de l’authentification unique pour les onglets
+description: Mettez à jour le code dans votre application onglet pour demander et recevoir un jeton d’accès à l’aide de l’identité Teams de l’utilisateur de l’application pour activer l’authentification unique (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658937"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586783"
 ---
 # <a name="add-code-to-enable-sso"></a>Ajouter du code pour activer l’authentification unique
 

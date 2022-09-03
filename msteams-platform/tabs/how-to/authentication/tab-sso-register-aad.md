@@ -1,15 +1,15 @@
 ---
 title: Inscrire votre application d’onglet auprès d’Azure AD
-description: Décrit comment inscrire votre application d’onglet auprès d’Azure AD
+description: Configurez l’authentification unique (SSO) avec Azure AD en configurant l’URI d’ID d’application, l’étendue du jeton d’accès et la pré-autorisation des clients approuvés.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d’authentification Teams Microsoft Azure Active Directory (Azure AD) étendue de l’authentification unique du jeton d’accès
-ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659002"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586797"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Inscrire votre application d’onglet dans Azure AD
 

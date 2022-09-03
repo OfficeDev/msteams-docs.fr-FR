@@ -1,16 +1,16 @@
 ---
 title: Prise en charge de l’authentification unique pour vos extensions de messages
 author: KirtiPereira
-description: Dans cet article, vous allez apprendre à activer la prise en charge de l’authentification unique (SSO) pour vos extensions de messagerie avec des exemples de code.
+description: Activez l’authentification unique (SSO) dans votre application d’extension de message Teams à l’aide d’Azure AD et d’un exemple de code.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 750b101a1a084d6ee409a663f9ee8ae2b4876dfe
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 999094e1649008e6d0528c8ac44c21a3f5f2f7a4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658916"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586846"
 ---
 # <a name="enable-sso-for-message-extensions"></a>Activer l’authentification unique pour les extensions de messagerie
 

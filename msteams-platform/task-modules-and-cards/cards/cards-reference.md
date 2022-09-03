@@ -3,12 +3,12 @@ title: Types de cartes
 description: Dans ce module, découvrez les cartes et les actions de carte disponibles pour les bots dans Teams et créez un héros, une miniature et des cartes adaptatives.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 20654804580c4e52f9355f32cd742458cccfc88c
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435026"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586790"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -131,6 +131,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 > * La plateforme Teams prend en charge la version 1.3 ou antérieure des fonctionnalités de carte adaptative pour d’autres fonctionnalités, telles que les cartes envoyées par l’utilisateur (extensions de message basées sur la recherche et déploiement de liens), les onglets et les modules de tâches.
 > * Le style d’action positif ou destructif n’est pas pris en charge dans les cartes adaptatives sur la plateforme Teams.
 > * Les éléments multimédias ne sont actuellement pas pris en charge dans la carte adaptative sur la plateforme Teams.
+> * Testez votre carte adaptative pleine largeur dans des facteurs de forme étroits tels que les panneaux côté mobile et de réunion pour vous assurer que le contenu n’est pas tronqué.
 
 ### <a name="example-of-adaptive-card"></a>Exemple de carte adaptative
 

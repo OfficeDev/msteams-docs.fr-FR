@@ -158,8 +158,6 @@
           href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
         - name: Analysez l'utilisation de vos applications dans le portail des développeurs.
           href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
-        - name: App Studio
-          href: concepts/build-and-test/app-studio-overview.md
     - name: Kit de développement logiciel client JavaScript Teams
       href: tabs/how-to/using-teams-client-sdk.md
     - name: Node.js Bot Framework pour les bots et les extensions de messagerie (GitHub)
@@ -216,46 +214,64 @@
   items:
     - name: Vue d'ensemble
       href: tabs/what-are-tabs.md
+      displayName: 'Adaptive Cards, channel or group tabs, conversational tabs, SSO capabiity, custom tab'
     - name: Conditions préalables
       href: tabs/how-to/tab-requirements.md
+      displayName: 'iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok'
     - name: Créer un onglet personnel
       href: tabs/how-to/create-personal-tab.md
+      displayName: 'App generator, secure tunnel to your tab, Reorder static personal tabs'
     - name: Créer un onglet de canal
       href: tabs/how-to/create-channel-group-tab.md
+      displayName: 'Secure tunnel to your tab, channel or group tab with ASP.NET Core'
     - name: Créer une page de contenu
       href: tabs/how-to/create-tab-pages/content-page.md
+      displayName: 'Task module, code integration, native loading indicator property, access additional content, TeamsJS'
     - name: Page Créer une configuration
       href: tabs/how-to/create-tab-pages/configuration-page.md
+      displayName: 'Secured HTTPs endpoints, context data for your tab, tabs on mobile'
     - name: Créer une page de suppression
       href: tabs/how-to/create-tab-pages/removal-page.md
+      displayName: 'Reconfigure tab, register remove handler'
     - name: Onglets sur les appareils mobiles
       href: tabs/design/tabs-mobile.md
+      displayName: 'Authentication on mobile, with low bandwhidht and intermittent connections, testng and debugging on mobile devices'
     - name: Obtenir un contexte Teams pour votre onglet
       href: tabs/how-to/access-teams-context.md
+      displayName: 'User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes'
     - name: Créer des applications pour les canaux partagés
       href: concepts/build-and-test/shared-channels.md
+      displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: Créer des onglets avec les Cartes adaptatives
       href: tabs/how-to/build-adaptive-card-tabs.md
+      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
     - name: Déploiement du lien des onglets et vue des étapes
       href: tabs/tabs-link-unfurling.md
+      displayName: 'Deep link, invoke stage view, tab information property'
     - name: Créer des onglets de conversation
       href: tabs/how-to/conversational-tabs.md
+      displayName: 'New converstaion, channel and static tabs'
     - name: Modifications des marges de l’onglet
       href: resources/removing-tab-margins.md
+      displayName: 'margins align, UI Kit desings, extra padding effect,'
 - name: Construire des bots
   items:
     - name: Vue d'ensemble
       href: bots/what-are-bots.md
+      displayName: 'Right mix of cards, text, and task modules, bot activity handlers, rate limiting'
     - name: Bots et kits de développement
       href: bots/bot-features.md
+      displayName: Multi-turn experiences in chat
     - name: Gestionnaire d'activité du robot
       href: bots/bot-basics.md
+      displayName: 'Bot logic, core Bot Framework handlers'
     - name: Conversations de robots
       items:
         - name: Vue d'ensemble
           href: bots/how-to/conversations/conversation-basics.md
         - name: Messages dans les conversations des robots
           href: bots/how-to/conversations/conversation-messages.md
+          displayName: 'Picture messages, attribution for bot message'
           items:
             - name: Recevoir tous les messages de canal avec RSC
               href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -263,34 +279,43 @@
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: Conversations de canal et de groupe avec un bot
           href: bots/how-to/conversations/channel-and-group-conversations.md
+          displayName: 'Entities collection, OAuthPrompt,'
         - name: Événements de conversation dans votre robot Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
+          displayName: Message reaction events
         - name: Messages proactifs
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Formatez vos messages robots.
           href: bots/how-to/format-your-bot-messages.md
+          displayName: 'Interactive elements, UTF-16'
         - name: Mettre à jour et supprimer les messages envoyés à partir du bot
           href: bots/how-to/update-and-delete-bot-messages.md
+          displayName: 'Poll updates, asychronous state change,'
         - name: Demander les en-têtes du bot
           href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Obtenir le contexte spécifique à Teams pour votre bot
       href: bots/how-to/get-teams-context.md
+      dispalyName: Fetch the roster
     - name: Envoyer et recevoir des fichiers à l’aide d’un bot
       href: bots/how-to/bots-filesv4.md
     - name: Optimisez votre robot grâce à la limitation du débit dans Teams
       href: bots/how-to/rate-limit.md
+      displayName: 'handle rate limit, detect transient exceptions, per thread limit'
     - name: Appels et réunions robots
       items:
         - name: Vue d'ensemble
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Appels et réunions avec les médias en temps réel
           href: bots/calls-and-meetings/real-time-media-concepts.md
+          displayName: 'Active and dominant speakers, SILK and G.722 for audio and H.264 for video,'
         - name: Enregistrer les appels et les réunions du robot.
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notifications d’appel entrant
           href: bots/calls-and-meetings/call-notifications.md
+          displayName: 'Redirects for region affinity, GeoDNS resolution'
         - name: Exigences et considérations relatives aux bots multimédias hébergés par des applications
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+          dispalyName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
         - name: Formats multimédias pris en charge pour les bots
           href: resources/media-formats.md
     - name: Modifications apportées à l’API du bot Teams pour récupérer les membres d’équipe ou de conversation
@@ -345,11 +370,15 @@
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
         - name: Fonctionnalités principales
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
-        - name: Fonctionnalités multimédias
+        - name: Synchronisation de média
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-        - name: Didacticiel Poker agile
-          href: sbs-teams-live-share.yml
-        - name: FAQ sur le Kit de développement logiciel (SDK) de partage en direct
+        - name: Guides pratiques
+          items:
+            - name: Didacticiel Poker agile
+              href: sbs-teams-live-share.yml
+            - name: Service Relais Azure Fluid personnalisé
+              href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+        - name: FAQ sur Live Share
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Scènes personnalisées en mode Ensemble dans Teams
       href: apps-in-teams-meetings/teams-together-mode.md
@@ -523,30 +552,40 @@
   items:
     - name: Présentation
       href: concepts/deploy-and-publish/apps-publish-overview.md
+      displayName: 'configure install options, valid app package'
     - name: Configurer les options d’installation par défaut pour l’application Teams
       href: concepts/deploy-and-publish/add-default-install-scope.md
+      displayName: 'default install scope, default capability for shared scopes'
     - name: Créer un package d’application Teams
       href: concepts/build-and-test/apps-package.md
+      displayName: 'App manifest, host your app'
     - name: Charger votre application dans Teams
       href: concepts/deploy-and-publish/apps-upload.md
+      displayName: 'Manage, access, update, and remove your app'
     - name: Publier sur votre organisation
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: 'App catalog, allow and block apps'
     - name: Publier sur le Teams Store
       items:
         - name: Présentation
           href: concepts/deploy-and-publish/appsource/publish.md
+          displayName: 'Commercial marketplace, deep functional and experience tests, publish through concierge service, rapid approval, prior app submission, post app submission'
         - name: Consulter les instructions de validation du magasin
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+          displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: Créer un compte de développeur Espace partenaires
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
+          displayName: Update Apple app store
         - name: Préparer votre soumission du store Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
+          displayName: 'Testing instructions, publisher verification, attestation'
         - name: Envoyer votre application
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: Résoudre les problèmes en cas d’échec de l’envoi de votre store Teams
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Tenir à jour votre application publiée
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+          displayName: 'Promote your app, stop selling'
         - name: Paramètres de classement du store Microsoft Teams
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
         - name: Raisons courantes de l’échec de validation d’application

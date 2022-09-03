@@ -4,12 +4,12 @@ description: Découvrez comment envoyer un message, des actions suggérées, des
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363444"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586986"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -192,7 +192,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Le fractionnement des messages se produit lorsqu’un sms et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un simple SMS et l’autre avec une pièce jointe. Lorsque l’activité est fractionnée, vous ne recevez pas l’ID de message en réponse, qui est utilisé pour [mettre à jour ou supprimer](~/bots/how-to/update-and-delete-bot-messages.md) le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+>
+>* Le fractionnement des messages se produit lorsqu’un sms et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un simple SMS et l’autre avec une pièce jointe. Lorsque l’activité est fractionnée, vous ne recevez pas l’ID de message en réponse, qui est utilisé pour [mettre à jour ou supprimer](~/bots/how-to/update-and-delete-bot-messages.md) le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+>* Les messages envoyés peuvent être localisés pour fournir une personnalisation. Pour plus d’informations, consultez [Localiser votre application](../../../concepts/build-and-test/apps-localization.md).
 
 Les messages envoyés entre les utilisateurs et les bots incluent des données de canal internes dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le Kit de développement logiciel (SDK) Bot Builder vous permet de modifier la structure des messages.
 
@@ -368,7 +370,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -459,9 +461,10 @@ Voici les codes d’état et leurs valeurs de code d’erreur et de message :
 
 ## <a name="code-sample"></a>Exemple de code
 
-|Exemple de nom | Description | . NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversation Teams | Gestion des événements de messagerie et de conversation. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Exemple de nom | Description | Node.js | . NETCore | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
+| Bot de conversation Teams | Gestion des événements de messagerie et de conversation. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | N/A |
+| Localisation d’applications Teams | Localisation des applications Teams à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | N/A | N/A | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -474,3 +477,4 @@ Voici les codes d’état et leurs valeurs de code d’erreur et de message :
 * [S’abonner à des événements de conversation](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Envoyer et recevoir des fichiers via le bot](~/bots/how-to/bots-filesv4.md)
 * [Envoyer l’ID de locataire et l’ID de conversation aux en-têtes de demande du bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Localiser votre application](../../../concepts/build-and-test/apps-localization.md)

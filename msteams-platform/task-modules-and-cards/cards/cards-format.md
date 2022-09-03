@@ -4,12 +4,12 @@ description: Dans ce module, découvrez ce qu’est la mise en forme du texte de
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962432"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586958"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -326,6 +326,9 @@ L’image suivante est un exemple d’informations de masquage dans Cartes adapt
 ### <a name="full-width-adaptive-card"></a>Carte adaptative pleine largeur
 
 Vous pouvez utiliser la propriété `msteams` pour étendre la largeur d’une carte adaptative et utiliser de l’espace canevas supplémentaire. La section suivante fournit des informations sur l’utilisation de la propriété.
+
+> [!NOTE]
+> Testez votre carte adaptative pleine largeur dans des facteurs de forme étroits tels que les panneaux côté mobile et de réunion pour vous assurer que le contenu n’est pas tronqué.
 
 #### <a name="construct-full-width-cards"></a>Construire des cartes pleine largeur
 

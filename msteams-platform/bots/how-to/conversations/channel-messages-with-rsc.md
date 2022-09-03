@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Permettre aux bots de recevoir tous les messages de canal sans être @mentioned à l’aide d’autorisations RSC. Lisez la section webApplicationInfo ou d’autorisation dans le manifeste.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bd740c999139d9b5f98c10800646501dd55e87f5
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: db51bcddaa22a115330129ddc677f0401c8bd523
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363465"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586909"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recevoir tous les messages de canal avec RSC
 
@@ -97,7 +97,7 @@ Le code suivant fournit un exemple d’autorisations RSC :
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
+  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels in team without being @mentioned."));
 }
 ```
 
@@ -108,7 +108,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 // Handle when a message is addressed to the bot. 
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 this.onMessage(async (context, next) => {
-   await context.sendActivity(MessageFactory.text("Using RSC the bot can recieve messages across channles in team without being @mentioned."))
+   await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channles in team without being @mentioned."))
    await next();
 });
 ```

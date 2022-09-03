@@ -1,15 +1,15 @@
 ---
 title: Résolution des problèmes d'authentification pour les onglets utilisant SSO dans Teams
-description: Dépannage de l'authentification SSO dans Teams et comment l'utiliser dans les onglets
+description: Résoudre les problèmes d’authentification unique (SSO) dans Teams et comment l’utiliser dans l’application onglet.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: équipes onglets d'authentification Microsoft Azure Active Directory (Azure AD) erreurs SSO questions
-ms.openlocfilehash: fa17ffef08f85124a230f76419158f4216f55416
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 8396b42c217ea58a0a4709e1dbd8580da32da991
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658951"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586895"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Résolution des problèmes d'authentification SSO dans Teams
 
