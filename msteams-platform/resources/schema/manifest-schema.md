@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363437"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605025"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -792,7 +792,7 @@ Active votre application dans des canaux non standard. Si votre application pren
 
 **Facultatif** - Booléen
 
-Lorsque la propriété `defaultBlockUntilAdminAction` est définie sur **true**, l’application est masquée par défaut aux utilisateurs jusqu’à ce que l’administrateur l’autorise. Si la valeur est **true**, l’application est masquée pour tous les locataires et tous les utilisateurs finaux. Les administrateurs de locataire peuvent voir l’application dans le Centre d’administration Teams et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**. Pour plus d’informations sur le bloc d’application par défaut, consultez [Masquer l’application Teams jusqu’à ce que l’administrateur approuve](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+Lorsque la propriété `defaultBlockUntilAdminAction` est définie sur **true**, l’application est masquée par défaut aux utilisateurs jusqu’à ce que l’administrateur l’autorise. Si la valeur est **true**, l’application est masquée pour tous les locataires et tous les utilisateurs finaux. Les administrateurs de locataire peuvent voir l’application dans le Centre d’administration Teams et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**. Pour plus d’informations sur le bloc d’application par défaut, consultez [Bloquer les applications par défaut pour les utilisateurs jusqu’à ce qu’un administrateur approuve](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

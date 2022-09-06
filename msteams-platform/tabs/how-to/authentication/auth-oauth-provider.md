@@ -1,14 +1,14 @@
 ---
 title: Utiliser des fournisseurs OAuth externes
-description: Dans ce module, découvrez comment effectuer l’authentification à l’aide de fournisseurs OAuth externes et comment l’ajouter à un navigateur externe
+description: Authentifier les utilisateurs de votre application à l’aide de fournisseurs OAuth externes et apprendre à l’ajouter à un navigateur externe.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 62f056fd852eda320a180fa61cf5693ef0105b8b
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ca88471405fa06713261d56eaf94179c7896d8c4
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435068"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605053"
 ---
 # <a name="use-external-oauth-providers"></a>Utiliser des fournisseurs OAuth externes
 

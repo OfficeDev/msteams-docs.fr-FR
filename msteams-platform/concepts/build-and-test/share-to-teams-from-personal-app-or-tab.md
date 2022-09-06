@@ -3,12 +3,12 @@ title: Partager dans Teams à partir d’une application ou d’un onglet person
 description: Découvrez comment activer le bouton Partager vers Teams sur votre application ou onglet personnel, les limitations et l’expérience de l’utilisateur final.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: cd4de40fdb557300ad957df03f463a0879f44b0e
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232196"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605060"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Partager dans Teams à partir d’une application ou d’un onglet personnel
 
@@ -98,9 +98,6 @@ Une fois que vous avez activé le bouton Partager vers teams sur l’application
 2. Ajoutez un autre utilisateur, groupe ou canal pour partager le contenu.
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
-
-    > [!NOTE]
-    > Vous pouvez ajouter une note en **disant quelque chose à ce sujet**.
 
 3. Sélectionnez **Partager**.
 

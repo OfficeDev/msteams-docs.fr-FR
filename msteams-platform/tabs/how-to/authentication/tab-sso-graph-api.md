@@ -1,15 +1,15 @@
 ---
 title: Étendre l'application d'onglet avec les autorisations Microsoft Graph
-description: Décrit la configuration des autorisations d'API avec Microsoft Graph
+description: Configurez des autorisations et des étendues supplémentaires avec Microsoft Graph pour activer l’authentification unique (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d'authentification des équipes Microsoft Azure Active Directory (Azure AD) API Graph Autorisation déléguée portée du jeton d'accès
-ms.openlocfilehash: 4ca708847144e72d80557943edcc163297c85c48
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658990"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605088"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Étendre l'application d'onglet avec les autorisations et la portée de Microsoft Graph
 

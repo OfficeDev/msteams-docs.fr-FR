@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment définir des commandes d’actio
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363458"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604856"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -85,8 +85,6 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 ### <a name="create-an-action-command-using-developer-portal"></a>Créer une commande d’action à l’aide du portail des développeurs
 
 Vous pouvez créer une commande d’action à l’aide **du portail des développeurs**.
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
 
 > [!NOTE]
 > La configuration requise pour créer une commande d’action est que vous avez déjà créé une extension de message. Pour plus d’informations sur la création d’une extension de message, consultez [créer une extension de message](~/messaging-extensions/how-to/create-messaging-extension.md).

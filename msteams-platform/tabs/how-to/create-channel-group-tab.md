@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 1b668a0e89ba2f2c77a56623d25ed11c1caaf7ea
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 8fb28eeed3b3de73fa5646ec51f23b4ae5421954
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450470"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605067"
 ---
 # <a name="create-a-channel-tab"></a>Créer un onglet de canal
 
@@ -679,3 +679,4 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Créer une page de suppression](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Ajouter une page SharePoint sous forme d’onglet dans Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

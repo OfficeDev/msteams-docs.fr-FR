@@ -5,12 +5,12 @@ description: Comment obtenir le contexte spécifique de Microsoft Team pour votr
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
-ms.translationtype: HT
+ms.openlocfilehash: 70079b1aa7db17c6fd76bc4c28832ea0b07d345d
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150693"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605074"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir le contexte spécifique à Teams pour votre bot
 
@@ -374,3 +374,7 @@ Response body
 
 > [!div class="nextstepaction"]
 > [Envoyer et recevoir des fichiers via le bot](~/bots/how-to/bots-filesv4.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Localiser votre application](../../concepts/build-and-test/apps-localization.md)

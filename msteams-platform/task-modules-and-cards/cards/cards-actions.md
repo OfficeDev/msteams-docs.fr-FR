@@ -3,12 +3,12 @@ title: Ajouter des actions de carte dans un bot
 description: Dans ce module, découvrez les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035302"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605011"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -37,7 +37,9 @@ Les cartes utilisées par les bots et les extensions de message dans Teams prenn
 `openUrl` type d’action spécifie une URL à lancer dans le navigateur par défaut.
 
 > [!NOTE]
-> Votre bot ne reçoit aucune notification indiquant sur quel bouton a été sélectionné.
+>
+> * Votre bot ne reçoit aucun avis sur le bouton sélectionné.
+> * Les noms d’ordinateurs avec des nombres ne sont pas pris en charge dans l’URL.
 
 Avec `openUrl`, vous pouvez créer une action avec les propriétés suivantes :
 

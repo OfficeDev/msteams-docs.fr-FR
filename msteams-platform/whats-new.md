@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435005"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605081"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -122,7 +122,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 |20/10/2021| API Meeting Details et événements de réunion Teams en temps réel | Créer des applications pour des réunions Teams > [Obtenir les détails de la réunion API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Déploiement du lien des onglets et vue des étapes | Construire des onglets > [Déploiement des liens d'onglets et vue d'ensemble de la scène](tabs/tabs-link-unfurling.md)  |
 |08/10/2021| Nouvelles bonnes pratiques pour la conception de cartes adaptatives | Concevoir votre application > Composants de l'interface utilisateur > [Conception de cartes adaptatives pour votre application Teams](task-modules-and-cards/cards/design-effective-cards.md)  |
-|05/10/2021| Cachez l'application Teams jusqu'à ce que l'administrateur permette de la rétablir | Concevoir votre application > [Cacher l'application Teams jusqu'à l'approbation de l'administrateur](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)  |
+|05/10/2021| Cachez l'application Teams jusqu'à ce que l'administrateur permette de la rétablir | Concevoir votre application > [bloquer les applications par défaut pour les utilisateurs jusqu’à ce qu’un administrateur approuve](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |05/10/2021| Planifiez vos applications pour Teams mobile | Fondamentaux de l'application > [Planifier des onglets réactifs pour Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)  |
 |04/10/2021| Lancement du nouveau portail de développeur pour les équipes pour la gestion de vos applications Teams | Outils et SDK > [Portail des développeurs pour les équipes](concepts/build-and-test/teams-developer-portal.md)  |
 |21/09/2021|Teams prend en charge l'ID d'objet Azure AD et le nom d’utilisateur principal dans la mention d'utilisateur pour les bots et les webhooks entrants | • Créer des cartes et des modules de tâche > Créer des cartes > [ID d’objet Azure AD et nom d’utilisateur principal dans la mention utilisateur](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> - Modules de tâches et cartes de construction > Cartes de construction > [Cartes - Vue d'ensemble](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)  |

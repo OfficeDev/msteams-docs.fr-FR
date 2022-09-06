@@ -4,12 +4,12 @@ description: Apprenez à envoyer et à recevoir des fichiers par le biais du rob
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 20dc421531864cf88f55932bc85ae7979f7992ff
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503878"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605046"
 ---
 # <a name="send-and-receive-files-using-bot"></a>Envoyer et recevoir des fichiers à l’aide d’un bot
 
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>Exemple de base en C #
+### <a name="basic-example-in-c"></a>Exemple de base en C# #
 
 Le code suivant montre un exemple de la façon de gérer les téléchargements de fichiers et d'envoyer des demandes de consentement de fichiers dans le dialogue du robot :
 
