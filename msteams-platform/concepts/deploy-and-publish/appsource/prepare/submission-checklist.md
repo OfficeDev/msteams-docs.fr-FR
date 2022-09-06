@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: bc38c6ed067a0d3884307e109d3033784ca2d4e8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363549"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605757"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 
@@ -82,7 +82,7 @@ Le nom de votre application (plus précisément, son *[nom court](~/resources/sc
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage du nom court d’une application dans une description dans le Store.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="Exemple de capture d’écran met en évidence l’affichage du nom court d’une application dans une description dans le Store.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -102,7 +102,7 @@ Résumé concis de votre application qui doit être original, attrayant et desti
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la brève description d’une application dans une description du Store.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la brève description d’une application dans une description du Store.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -124,7 +124,7 @@ Bien que cette description puisse contenir jusqu’à 4 000 caractères, la pl
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la description longue d’une application dans une description du Store.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la description longue d’une application dans une description du Store.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -146,7 +146,7 @@ Les captures d’écran fournissent un aperçu visuel évident de votre applicat
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Exemple de capture d’écran met en évidence l’affichage des captures d’écran d’application dans une description dans le Store.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="Exemple de capture d’écran met en évidence l’affichage des captures d’écran d’application dans une description dans le Store.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -189,14 +189,14 @@ Lors de l’envoi, vous êtes invité à classer votre application. Le tableau s
 
 | Catégories Teams       | Espace partenaires catégories  |
 |:---------------------|:---------------|
-| Analyse et BI | Analytique, visualisation des données et décisionnel |
-| Développeur et informatique | Outils de développement, administrateur informatique |
+| Visualisation des données et décisionnel | Analytique, visualisation des données et décisionnel |
+| Outils de développement | Outils de développement, administrateur informatique |
 | Formation | Formation |
-| Ressources humaines | Ressources humaines et recrutement |
+| Ressources humaines & recrutement| Ressources humaines et recrutement |
 | Productivité | Gestion de contenu, fichiers et documents, productivité, formation et didacticiels, et utilitaires |
 | Gestion de projet | Communication, gestion de projet, flux de travail et gestion d’entreprise |
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière et ventes et marketing |
-| Social et divertissement | Galeries d’images et de vidéos, Style de vie, Actualités et météo, Réseaux sociaux, Voyage et Navigation |
+| Social | Galeries d’images et de vidéos, Style de vie, Actualités et météo, Réseaux sociaux, Voyage et Navigation |
 
 ### <a name="localize-your-store-listing"></a>Localiser votre description dans le Store
 

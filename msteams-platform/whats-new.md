@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605081"
+ms.locfileid: "67605781"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -36,6 +36,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 09/06/2022 | `selectMedia` API pour la capture de vidéos à l’aide de l’appareil photo | Intégrer des fonctionnalités d’appareil > [Intégrer des fonctionnalités multimédias](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 09/08/2022 | Présentation de Teams Toolkit pour Visual Studio 2022 | Vue d’ensemble des outils et du Kit de développement logiciel (SDK) > Teams pour Visual Studio > [Kit de ressources Teams pour Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Ajout de la fonctionnalité permettant de récupérer les transcriptions de réunion dans le scénario de post-réunion. | Créer des applications pour les réunions et les appels Teams > obtenir des transcriptions de réunions à l’aide des API Graph > [Vue d’ensemble](graph-api/meeting-transcripts/overview-transcripts.md) |
