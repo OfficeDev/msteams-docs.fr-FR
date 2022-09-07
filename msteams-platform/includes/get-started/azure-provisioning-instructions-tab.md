@@ -18,7 +18,11 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Capture d’écran montrant les commandes d’approvisionnement":::
 
-1. Sélectionnez un abonnement à utiliser pour les ressources Azure.
+1. Sélectionnez n’importe qui de l’abonnement existant.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Sélectionner un abonnement":::
+
+1. Sélectionnez un groupe de ressources à utiliser pour les ressources Azure.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Capture d’écran montrant les ressources pour l’approvisionnement":::
 
@@ -29,7 +33,7 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
 1. Sélectionnez **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Capture d’écran de la boîte de dialogue d’approvisionnement.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Sélectionner un abonnement":::
 
    Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela peut prendre un certain temps. Vous pouvez surveiller la progression en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
@@ -89,4 +93,3 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
     Félicitations, votre première application onglet s’exécute dans votre environnement Azure !
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement":::
- 
