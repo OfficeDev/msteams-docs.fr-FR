@@ -1,73 +1,72 @@
 ---
 title: Ajouter des fonctionnalités à vos applications Teams
-author: MuyangAmigo
-description: Dans ce module, découvrez comment ajouter des fonctionnalités du Kit de ressources Teams, des avantages, des limitations et des fonctionnalités
-ms.author: zhany
+author: surbhigupta
+description: Dans ce module, découvrez comment ajouter des fonctionnalités de Teams Toolkit
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830791"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616962"
 ---
-# <a name="add-capabilities-to-teams-apps"></a>Ajouter des fonctionnalités aux applications Teams
+# <a name="add-capabilities-to-microsoft-teams-apps"></a>Ajouter des fonctionnalités aux applications Microsoft Teams
 
-L’ajout d’une fonctionnalité dans le Kit de ressources Teams vous permet d’ajouter des fonctionnalités supplémentaires à votre application Teams existante. Le tableau suivant répertorie les fonctionnalités de l’application Teams :
+L’ajout de fonctionnalités avec le Kit de ressources Teams vous permet d’inclure des fonctionnalités supplémentaires à votre application Teams existante. L’avantage d’ajouter d’autres fonctionnalités est que vous pouvez ajouter d’autres fonctions à votre application en ajoutant automatiquement des codes sources à l’aide du Kit de ressources Teams. Vous pouvez également choisir différentes fonctionnalités en fonction du projet que vous avez créé dans votre application Teams. Le tableau suivant répertorie les fonctionnalités de l’application Teams :
 
-|**Fonctionnalité**|**Description**|
-|--------|-------------|
-| Onglets |  Les onglets sont des balises HTML simples qui font référence aux domaines déclarés dans le manifeste de l’application. Vous pouvez ajouter des onglets dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur individuel.|
-| Bots |  Les bots permettent d’interagir avec votre service web par le biais de texte, de cartes interactives et de modules de tâches.|
-| Extensions de messages | Les extensions de message permettent d’interagir avec votre service web via des boutons et des formulaires dans le client Microsoft Teams.|
+|Fonctionnalité|Description|Autres fonctionnalités prises en charge|
+|--------|-------------|-----------------|
+|**Application Teams de base**|              |
+| Tab |  Les onglets sont des balises HTML simples qui font référence aux domaines déclarés dans le manifeste de l’application. Vous pouvez ajouter des onglets dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur individuel.|Onglet, bot de notification, bot de commandes, bot, extension de message|
+|Onglet SPFx| Les applications de l’onglet SPFx sont hébergées dans Microsoft 365 et prennent en charge le développement et l’hébergement de votre solution SPFx côté client|Aucun|
+|Onglet SSO activé|Vous pouvez créer une application d’onglet prenant en charge l’authentification unique qui permet à l’utilisateur avec la fonctionnalité d’authentification unique|Onglet SSO, bot de notification, bot de commandes, bot, extension de message|
+| Bot |  Les bots permettent d’interagir avec votre service web par le biais de texte, de cartes interactives et de modules de tâches.|Extension de message, onglet SSO, onglet|
+| Extension de message | Les extensions de message permettent d’interagir avec votre service web via des boutons et des formulaires dans le client Microsoft Teams.|Bot, onglet SSO, onglet|
+|**Application Teams basée sur un scénario**|             |
+| Bot de notification | Le bot de notification envoie de manière proactive des messages dans un canal Teams, une conversation de groupe ou une conversation personnelle. Vous pouvez déclencher le bot de notification avec une requête HTTP, telle que des cartes ou des textes. |Onglet SSO activé, onglet|
+| Bot de commandes | Le bot de commandes vous permet d’automatiser les tâches répétitives à l’aide d’un bot de commandes. Il répond aux commandes simples envoyées dans les conversations avec des cartes adaptatives. |Onglet SSO activé, onglet|
 
-## <a name="advantages"></a>Avantages
-
-La liste suivante présente des avantages pour ajouter d’autres fonctionnalités dans TeamsFx :
-
-* Fournit des commodités.
-* Ajoute plus de fonction à votre application en ajoutant automatiquement des codes sources à l’aide du Kit de ressources Teams.
-
-## <a name="limitations"></a>Limites
-
-La liste suivante fournit des limitations pour ajouter d’autres fonctionnalités dans TeamsFx :
-
-* Vous pouvez ajouter des onglets jusqu’à 16 instances.
-* Vous pouvez ajouter un bot et une extension de message pour une instance chacune.
+> [!NOTE]
+> Vous pouvez ajouter des onglets jusqu’à 16 instances. En ce qui concerne votre bot et l’extension de message, vous pouvez en ajouter un pour chaque instance à la fois.
 
 ## <a name="add-capabilities"></a>Ajouter des fonctionnalités
 
-**Vous pouvez ajouter des fonctionnalités en suivant les méthodes suivantes :**
+Vous pouvez ajouter des fonctionnalités en suivant les méthodes suivantes :
 
-* Pour ajouter des fonctionnalités à l’aide du Kit de ressources Teams dans Visual Studio Code.
-* Pour ajouter des fonctionnalités à l’aide de la palette de commandes.
+* [Utilisation de Teams Toolkit dans Microsoft Visual Studio Code](#using-teams-toolkit-in-microsoft-visual-studio-code)
+* [Utilisation de la palette de commandes](#using-the-command-palette)
+* [Utilisation de l’interface CLI TeamsFx](#using-teamsfx-cli)
 
-  > [!Note]
-  > Vous devez provisionner pour chaque environnement, une fois que vous avez ajouté les fonctionnalités dans votre application Teams.
-
-* **Pour ajouter des fonctionnalités à l’aide du Kit de ressources Teams dans Visual Studio Code :**
+### <a name="using-teams-toolkit-in-microsoft-visual-studio-code"></a>Utilisation de Teams Toolkit dans Microsoft Visual Studio Code
 
    1. Ouvrez **Visual Studio Code**.
-   1. Sélectionnez **Teams Toolkit** dans le volet gauche.
+   1. Sélectionnez **Teams Toolkit** dans la barre d’activité.
    1. Sélectionnez **Ajouter des fonctionnalités** sous **DÉVELOPPEMENT**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="mise à jour":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Ajouter des fonctionnalités à partir du Kit de ressources Teams":::
 
-* **Pour ajouter des fonctionnalités à l’aide de la palette de commandes :**
+      > [!NOTE]
+      > Une fois que vous avez ajouté les fonctionnalités dans votre application Teams, vous devez provisionner pour chaque environnement.
 
-   1. Ouvrez **la palette de commandes**.
-   1. Entrez **Teams :Ajouter des fonctionnalités**.
-   1. Appuyez sur **Entrée**.
+### <a name="using-the-command-palette"></a>Utilisation de la palette de commandes
+
+   1. Sélectionnez **Afficher** >  la **palette de commandes...** ou **Ctrl+Maj+P**.
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="Ajouter des fonctionnalités à partir de la commande palatte":::
+
+   1. Entrez **Teams : Ajouter des fonctionnalités**.
+   1. Appuyez sur Entrée.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="Pour ajouter des fonctionnalités à l’aide de la palette de commandes.":::
 
-   1. Dans la fenêtre contextuelle, sélectionnez la fonctionnalité à ajouter à votre projet.
+   1. Dans la fenêtre contextuelle, sélectionnez la fonctionnalité que vous devez ajouter à votre projet.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Notification":::
 
-## <a name="add-capabilities-using-teamsfx-cli"></a>Ajouter des fonctionnalités à l’aide de l’interface CLI TeamsFx
+### <a name="using-teamsfx-cli"></a>Utilisation de l’interface CLI TeamsFx
 
 * Remplacez le répertoire par votre **répertoire du projet**.
 * Le tableau suivant répertorie les fonctionnalités et les commandes requises :
@@ -81,43 +80,18 @@ La liste suivante fournit des limitations pour ajouter d’autres fonctionnalit�
   |Pour ajouter un bot |`teamsfx add bot`|
   |Pour ajouter l’extension de message |`teamsfx add message extension`|
 
-## <a name="available-capabilities-to-add-for-different-teams-project"></a>Fonctionnalités disponibles à ajouter pour différents projets Teams
+## <a name="changes-after-adding-capabilities"></a>Modifications après l’ajout de fonctionnalités
 
-Vous pouvez choisir d’ajouter différentes fonctionnalités en fonction du projet que vous avez créé dans l’application Teams.
-Le tableau suivant répertorie les fonctionnalités disponibles à ajouter à votre projet :
+Le tableau suivant présente les modifications qui peuvent être vues dans les fichiers de votre application lors de l’ajout des fonctionnalités :
 
-|Fonctionnalités existantes|Autres fonctionnalités prises en charge|
-|--------------------|--------------------|
-|Onglet SPFx |Aucun|
-|Onglet SSO activé |Onglet SSO, bot de notification, bot de commandes, bot, extension de message|
-|Bot de notification |Onglet SSO activé, onglet|
-|Bot de commandes |Onglet SSO activé, onglet|
-|Tab |Onglet, bot de notification, bot de commandes, bot, extension de message|
-|Bot |Extension de message, onglet SSO, onglet|
-|Extension de message |Bot, onglet SSO, onglet |
-
-## <a name="add-bot-tab-and-message-extension"></a>Ajouter le bot, l’onglet et l’extension de message
-
-Après l’ajout d’un bot et d’une extension de message, les modifications apportées à votre projet sont les suivantes :
-
-* Un code de modèle de bot est ajouté dans un sous-dossier avec chemin d’accès `yourProjectFolder/bot`. Cela inclut un modèle d’application de bot **Hello World** dans votre projet.
-* `launch.json` et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement.
-* `manifest.template.json` Le fichier sous `templates/appPackage` dossier est mis à jour, qui inclut les informations relatives au bot dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont les suivantes :
-  * ID de votre bot
-  * Étendues de votre bot
-  * Commandes auxquelles l’application de bot Hello World peut répondre
-* Les fichiers sous `templates/azure/teamsfx` sont mis à jour et `templates/azure/provision/xxx`les fichiers .bicep sont régénérés.
-* Les fichiers sous `.fx/config` sont régénérés, ce qui garantit que votre projet est configuré avec les configurations appropriées pour la fonctionnalité nouvellement ajoutée.
-
-Après l’ajout de l’onglet, les modifications apportées à votre projet sont les suivantes :
-
-* Un code de modèle d’onglet front-end est ajouté dans un sous-dossier avec chemin d’accès `yourProjectFolder/tab`, qui inclut un modèle d’application d’onglet **Hello World** dans votre projet.
-* `launch.json` et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement.
-* `manifest.template.json` Le fichier sous `templates/appPackage` dossier est mis à jour, qui inclut des informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont les suivantes :
-  * Onglets configurables et statiques
-  * Étendues des onglets
-* Les fichiers sous `templates/azure/teamsfx` seront mis à jour et `templates/azure/provision/xxx`le fichier .bicep sera régénéré.
-* Le fichier sous `.fx/config` est régénéré, ce qui garantit que votre projet est configuré avec les configurations appropriées pour la fonctionnalité nouvellement ajoutée.
+|Ajouter une fonctionnalité|Description| Modifications|
+|------------|------------------------|---------|
+|Bot, extension de message et onglet|Inclut un bot **Hello World**&nbsp;ou un modèle d’application d’onglet dans votre projet.|Un bot frontal ou un code de modèle d’onglet est ajouté dans un sous-dossier avec le chemin d’accès `yourProjectFolder/bot` ou `yourProjectFolder/tab` respectivement.|
+| Bot, extension de message et onglet |Inclut les scripts nécessaires pour Visual Studio Code et est exécuté lorsque vous souhaitez déboguer votre application localement. |Les fichiers `launch.json` et `task.json` sous `.vscode` le dossier sont mis à jour.|
+| Bot et extension de message|Inclut des informations relatives au bot ou aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams.|Le fichier`manifest.template.json` sous `templates/appPackage` le dossier est mis à jour, ce qui inclut les informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont visibles dans l’ID de votre bot, les étendues de votre bot et les commandes auxquelles hello world bot ou tab application peut répondre.|
+|Tab|Inclut des informations relatives au bot ou aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams.|Le fichier`manifest.template.json` sous `templates/appPackage` le dossier est mis à jour, ce qui inclut les informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont visibles dans les onglets configurables et statiques, ainsi que dans les étendues des onglets.|
+|Bot, extension de message et onglet|Inclut des informations relatives aux bots ou aux&nbsp;onglets dans teamsfx et fournit des fichiers destinés à l’intégration de fonctions Azure.|Les fichiers sous `templates/azure/teamsfx` sont mis à jour et `templates/azure/provision/xxx`les fichiers .bicep sont régénérés.|
+|Bot, extension de message et onglet|Garantit que votre projet est configuré avec les configurations appropriées pour la fonctionnalité nouvellement ajoutée.|Les fichiers sous `.fx/config` sont régénérés|
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 

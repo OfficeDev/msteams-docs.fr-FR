@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction au message du canal du bot d’événements
-ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695326"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616995"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -581,7 +581,6 @@ Un événement membre supprimé est envoyé à votre bot dans les scénarios sui
 
 L’activité `eventType` supprimée du membre est définie sur `teamMemberRemoved` le moment où l’événement est envoyé à partir d’un contexte d’équipe. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez l’objet `Activity` du `turnContext`. Si la `MembersRemoved` liste contient un objet où `id` est le même que le `id` champ de l’objet `Recipient` , le membre ajouté est le bot, sinon il s’agit d’un utilisateur. L’ID du bot est mis en forme en tant que `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > Lorsqu’un utilisateur est définitivement supprimé d’un locataire, `membersRemoved conversationUpdate` événement est déclenché.
 
@@ -673,7 +672,6 @@ L’objet `channelData` dans l’exemple de charge utile suivant est basé sur l
     }
 }
 ```
-
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -1340,24 +1338,27 @@ Dans cet exemple, les `conversation.id` activités et `installationUpdate` les `
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
-var activity = turnContext.Activity; if
-(string.Equals(activity.Action, "Add",
-StringComparison.InvariantCultureIgnoreCase)) {
-// TO:DO Installation workflow }
-else
-{ // TO:DO Uninstallation workflow
-} return; }
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var activity = turnContext.Activity;
+    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        // TO:DO Installation workflow
+    }
+    else
+    {
+        // TO:DO Uninstallation workflow
+    }
+    return;
+}
 ```
 
 Vous pouvez également utiliser un gestionnaire dédié pour *ajouter* ou *supprimer* des scénarios comme méthode alternative pour capturer un événement.
 
 ```csharp
-protected override async Task
-OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken) {
-// TO:DO Installation workflow return;
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
 }
 ```
 
