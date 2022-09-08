@@ -493,86 +493,115 @@
   items:
     - name: Vue d'ensemble
       href: concepts/authentication/authentication.md
+      displayName: Access
     - name: Onglets
       items:
         - name: Activer l’authentification unique (SSO) pour l’application d’onglet
           items:
             - name: Aperçu
               href: tabs/how-to/authentication/tab-sso-overview.md
+              displayName: 'Cookies, channel, access, permissions'
             - name: Inscrire votre application d’onglet dans Azure AD
               href: tabs/how-to/authentication/tab-sso-register-aad.md
+              displayName: 'Access, permissions, configurations, browser, extension'
             - name: Ajouter du code pour activer l’authentification unique
               href: tabs/how-to/authentication/tab-sso-code.md
+              displayName: 'Extension, access, permissions'
             - name: Mettre à jour le manifeste d’application pour l’authentification unique et l’application en préversion
               href: tabs/how-to/authentication/tab-sso-manifest.md
+              displayName: 'Access, permissions'
             - name: Accorder des autorisations et des étendues à Microsoft Graph
               href: tabs/how-to/authentication/tab-sso-graph-api.md
+              displayName: 'Access, permissions, channel, browser, configuration, delegated'
             - name: Résoudre les problèmes d’authentification unique
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+              displayName: 'Access, permissions, configurations'
         - name: Utiliser l’authentification d’un fournisseur d’identité OAuth tiers
           items:
             - name: Vue d’ensemble
               href: tabs/how-to/authentication/auth-flow-tab.md
+              displayName: 'Access, configuration'
             - name: Configurer l’authentification d’un fournisseur d’identité OAuth tiers
               href: tabs/how-to/authentication/auth-tab-aad.md
+              displayName: 'Access, configuration, cookies'
             - name: Utiliser des fournisseurs OAuth externes
               href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flux d’authentification dans des bots
           href: bots/how-to/authentication/auth-flow-bot.md
+          displayName: Access
         - name: Ajouter une authentification à votre bot
           href: bots/how-to/authentication/add-authentication.md
+          displayName: 'Configuration, delegate, emulator, tunneling, channels'
         - name: Utiliser l'authentification SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+          displayName: 'Acces, permissions, configuration, settings'
     - name: Extensions de messages
       items:
         - name: Ajouter une authentification à votre extension de messagerie
           href: messaging-extensions/how-to/add-authentication.md
+          displayName: Configuration
         - name: Activer l’authentification unique pour les extensions de messagerie
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+          displayName: 'Setting, extensions'
 - name: Intégrer les fonctionnalités de l’appareil
   items:
     - name: Présentation
       href: concepts/device-capabilities/device-capabilities-overview.md
+      displayName: 'Access, premissions'
     - name: Demander des autorisations d’appareil pour l’application Teams
       href: concepts/device-capabilities/native-device-permissions.md
     - name: Autorisations de périphérique pour le navigateur
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: Intégrer les fonctionnalités médias
       href: concepts/device-capabilities/media-capabilities.md
+      displayName: 'Access, permissions, whiteboard, configuration'
     - name: Intégrer la fonctionnalité de scanneur QR ou code-barres
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+      displayName: 'Access, permissions, configuration'
     - name: Intégrer les fonctionnalités d’emplacement
       href: concepts/device-capabilities/location-capability.md
+      displayName: 'Access, permissions, configurations'
 - name: Utiliser les données de Teams avec Microsoft Graph
   items:
     - name: Vue d’ensemble
       href: /graph/teams-concept-overview
+      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Kit de ressources Microsoft Graph
       href: /graph/toolkit/overview
+      displayName: 'Access, routing'
     - name: Prise en main
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+      displayName: 'Access, report, MSAL2'
     - name: Consentement spécifique à la ressource
       href: graph-api/rsc/resource-specific-consent.md
+      displayName: 'Access, permissions, delegated, channel, organizer, notifications'
     - name: Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+      displayName: 'Permissions, delegated, channel, notifications'
     - name: Importation de messages de tiers
       href: graph-api/import-messages/import-external-messages-to-teams.md
+      displayName: 'Permission, channel, communications, setting'
     - name: Exemples de code
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: "Développez votre application dans Microsoft\_365"
   items:
     - name: Vue d'ensemble
       href: m365-apps/overview.md
+      displayName: 'Access, permissions, channel, extensions'
     - name: Conditions préalables
       href: m365-apps/prerequisites.md
+      displayName: 'Channel, configuration, settings, extensions'
     - name: Activer un onglet personnel Teams pour Office et Outlook
       href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: 'Access, permissions, channel, report, browser'
     - name: Activer une extension de messagerie Teams pour Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
+      displayName: 'Access, channel, report, communication'
     - name: Publier des applications Teams pour Microsoft 365
       href: m365-apps/publish.md
+      displayName: 'Access, permissions, channel, extensions'
 - name: Tester votre application
   items:
     - name: Présentation
@@ -649,7 +678,7 @@
   items:
     - name: Aperçu
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-      displayName: 'Pricing model, SaaS offer, In-app purchases,'
+      displayName: 'Pricing model, SaaS offer, In-app purchases'
     - name: Inclure une offre SaaS avec votre application Teams
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       displayName: 'Transactable Software-as-a-Service, Recloud app'
@@ -658,15 +687,18 @@
     - name: Aperçu de test pour les applications monétisées
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifeste d'application
-  items:
+  itesms:
     - name: Schéma du manifeste d’application pour Teams
       href: resources/schema/manifest-schema.md
+      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: Aperçu pour les développeurs publiques
       items:
         - name: Vue d'ensemble
           href: resources/dev-preview/developer-preview-intro.md
+          displayName: 'Access, setting'
         - name: Schéma de manifeste pour les développeurs publics en préversion pour Teams
           href: resources/schema/manifest-schema-dev-preview.md
+          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: S'intégrer aux équipes
   items:
     - name: Aperçu
