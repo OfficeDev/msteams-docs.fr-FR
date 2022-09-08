@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: e64daa0c3288f97286177e814204404522a6d6b9
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 8500f5ba1f54b28f68f9b56c0a42aedfff108e64
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616599"
+ms.locfileid: "67617795"
 ---
 # <a name="create-a-new-teams-project"></a>Créer un projet Teams
 
@@ -29,40 +29,49 @@ Les étapes de création d’une application Teams sont similaires pour tous les
 **Pour créer une application**
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’icône du Kit de ressources :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: Teams.
+
+1. Sélectionnez l’icône du Kit de ressources :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: Teams dans la barre de navigation de gauche.
+
 1. Sélectionnez **Créer une application Teams**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Barre latérale du kit de ressources Teams":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Emplacement du lien Création d’un projet dans la barre latérale du Kit de ressources Teams.":::
 
-1. Sélectionnez **Créer une application Teams** pour créer une application à l’aide du Kit de ressources Teams.
+1. Vérifiez que **Tab** est sélectionné comme fonctionnalité de votre application.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Créer une application":::
-
-1. Pour ce didacticiel, sélectionnez **Tab** comme fonctionnalité de création de votre application.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="Sélectionner la fonctionnalité d’application":::
-
-   > [!NOTE]
-   > Vous pouvez sélectionner n’importe quel type de fonctionnalité en fonction de vos besoins.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Sélectionner la fonctionnalité d’application":::
 
 1. Sélectionnez **JavaScript** comme langage de programmation.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="Capture d’écran montrant comment sélectionner le langage de programmation":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Capture d’écran présentant comment sélectionner le langage de programmation.":::
 
-1. Sélectionnez l’emplacement de l’espace de travail du projet et **sélectionnez Dossier**.
+1. Sélectionnez **dossier par défaut** pour stocker le dossier racine de votre projet à l’emplacement par défaut.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder1.png" alt-text="select-folder":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Sélectionner l’emplacement par défaut":::
 
-1. Pour ce didacticiel, entrez `helloworld` le nom de l’application. Ensuite, sélectionnez **Entrée**.
+   Les étapes suivantes vous guident pour modifier l’emplacement par défaut :
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/enter-name-tab.png" alt-text="Capture d’écran montrant où entrer le nom de l’application":::
+      1. Sélectionnez **Parcourir**.
 
-   > [!NOTE]
-   > Vous pouvez entrer votre propre nom d’application pour d’autres fonctionnalités et vous assurer d’utiliser uniquement des caractères alphanumériques.
+          :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Sélectionner rechercher le stockage":::
+
+      1. Sélectionnez l’emplacement de l’espace de travail du projet.
+
+      1. Sélectionnez **le dossier Sélectionner**.
+
+          :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder pour le stockage":::
+
+1. Entrez `helloworld` le nom de l’application. Veillez à utiliser uniquement des caractères alphanumériques. Ensuite, sélectionnez **Entrée**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Capture d’écran montrant où entrer le nom de l’application.":::
+
+1. Par défaut, le projet s’ouvre dans une nouvelle fenêtre dans les 10 secondes. Si vous souhaitez ouvrir dans la fenêtre active, sélectionnez **Ouvrir dans la fenêtre active**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="Nouvelle notification de fenêtre":::
 
    L’application onglet Teams est créée en quelques secondes.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/tap-app-created1.png" alt-text="Capture d’écran montrant l’application créée":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Capture d’écran montrant l’application créée.":::
+
 
 ### <a name="directory-structure-for-different-app-types"></a>Structure de répertoires pour différents types d’applications
 
