@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
-ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67418849"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636160"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -227,7 +227,7 @@ Pour partager des parties spécifiques de l'application sur scène, vous devez i
 > [!NOTE]
 >
 > * Pour partager des parties spécifiques de l’application à mettre en scène, utilisez Teams manifeste version 1.12 ou ultérieure.
-> * Actuellement, vous pouvez partager des parties spécifiques de l’application pour la phase de réunion uniquement sur les clients de bureau Teams.
+> * Vous pouvez partager des parties spécifiques de l’application pour la phase de réunion uniquement sur les clients de bureau Teams. Les utilisateurs mobiles peuvent partager des parties spécifiques de l’application à mettre en scène à l’aide de [l’API share to stage](API-references.md#share-app-content-to-stage-api).
 
 ### <a name="after-a-meeting"></a>Après une réunion
 

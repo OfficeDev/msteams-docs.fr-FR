@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338850"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636174"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -194,9 +194,6 @@ Vous pouvez autoriser les utilisateurs à partager et à interagir avec tout ou 
 * Jouer à un jeu.
 
 Les applications partagées dans la phase de réunion occupent le même espace qu’un écran partagé. La scène se réoriente également pour tous les participants à la réunion.
-
-> [!NOTE]
-> Actuellement, les utilisateurs mobiles ne peuvent pas partager le contenu de l’application à la phase de réunion. Toutefois, ils peuvent voir le contenu partagé à partir du bureau.
 
 ### <a name="use-cases"></a>Cas d'utilisation
 
