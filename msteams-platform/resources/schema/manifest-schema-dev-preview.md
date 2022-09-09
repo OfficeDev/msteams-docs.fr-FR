@@ -4,12 +4,12 @@ description: Découvrez l’exemple de fichier manifeste et la description de to
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058206"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635328"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste pour les développeurs publics en préversion pour Teams
 
@@ -676,7 +676,7 @@ Active votre application dans des canaux non standard. Si votre application pren
 > [!NOTE]
 >
 > * Si votre application prend en charge une étendue d’équipe, elle fonctionne dans les canaux standard, quelles que soient les valeurs définies dans cette propriété.
-> * Votre application peut prendre en compte les propriétés uniques de chacun des types de canaux pour fonctionner correctement. Pour activer votre onglet pour les canaux privés et partagés, consultez [récupérer le contexte dans les canaux privés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) et [récupérer le contexte dans les canaux partagés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Votre application peut prendre en compte les propriétés uniques de chacun des types de canaux pour fonctionner correctement. Pour activer votre onglet pour les canaux privés et partagés, consultez [récupérer le contexte dans les canaux privés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) et [obtenir le contexte dans les canaux partagés](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -724,7 +724,7 @@ Spécifiez la définition de l'extension de réunion. Pour plus d'informations, 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`scenes`|tableau d’objets| 5 éléments||Scènes de réunion prise en charge.|
-|`supportsStreaming`|Boolean|||Valeur qui indique si une application peut diffuser le contenu audio et vidéo de la réunion vers un point de terminaison RTMP (Real-Time Meeting Protocol). La valeur par défaut est **false**.|
+|`supportsStreaming`|Boolean|||Valeur qui indique si une application peut diffuser en continu le contenu audio et vidéo de la réunion vers un point de terminaison RTMP (Real-Time Meeting Protocol). La valeur par défaut est **false**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

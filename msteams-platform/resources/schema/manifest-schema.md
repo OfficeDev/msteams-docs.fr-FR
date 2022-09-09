@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605025"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635335"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -578,7 +578,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameters.title`|string|32 caractères|✔️|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: false`. Un des éléments suivants`text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|chaîne|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: false`. Un des éléments suivants`text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour le `choiceset`. Utilisez uniquement lorsque `parameter.inputType` est `choiceset`.|
 |`parameters.choices.title`|string|128 caractères|✔️|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔️|Valeur du choix.|
@@ -752,7 +752,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
+|`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 |`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 
@@ -786,7 +786,7 @@ Active votre application dans des canaux non standard. Si votre application pren
 > [!NOTE]
 >
 > * Si votre application prend en charge une étendue d’équipe, elle fonctionne dans les canaux standard, quelles que soient les valeurs définies dans cette propriété.
-> * Votre application peut prendre en compte les propriétés uniques de chacun des types de canaux pour fonctionner correctement. Pour activer votre onglet pour les canaux privés et partagés, consultez [Récupérer le contexte dans les canaux privés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) et [Récupérer le contexte dans les canaux partagés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Votre application peut prendre en compte les propriétés uniques de chacun des types de canaux pour fonctionner correctement. Pour activer votre onglet pour les canaux privés et partagés, consultez [récupérer le contexte dans les canaux privés](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) et [obtenir le contexte dans les canaux partagés](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 

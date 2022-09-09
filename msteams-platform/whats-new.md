@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605781"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635300"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -288,6 +288,7 @@ Nous encourageons Teams développeurs à poser des questions, à déposer des bo
 ## <a name="get-latest-updates"></a>Obtenir les dernières mises à jour
 
 Vous pouvez obtenir les dernières mises à jour Teams plateforme en configurant le [flux RSS.](https://aka.ms/TeamsPlatformUpdates)
+
 
 ### <a name="to-configure-rss-feed"></a>Pour configurer le flux RSS
 

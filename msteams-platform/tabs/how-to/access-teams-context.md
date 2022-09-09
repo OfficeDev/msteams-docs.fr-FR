@@ -3,12 +3,12 @@ title: Obtenir un contexte Teams pour votre onglet
 description: Découvrez comment mettre en contexte votre onglet, le contexte de l’utilisateur, de l’équipe ou de l’entreprise, accéder aux informations, récupérer le contexte dans des canaux privés ou partagés et gérer les modifications de thème.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450386"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635307"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -241,31 +241,8 @@ Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans 
 
 Si votre page utilise l’une de ces valeurs, la valeur du `channel.membershipType` champ doit être `Private` de déterminer si votre page est chargée dans un canal privé et peut répondre de manière appropriée.
 
-## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Récupérer le contexte dans Microsoft Teams Connect canaux partagés
-
 > [!NOTE]
-> Actuellement, Microsoft Teams Connect canaux partagés sont en préversion uniquement pour les développeurs.
-
-Lorsque votre page de contenu est chargée dans un canal partagé Microsoft Teams Connect, les données que vous recevez de l’appel `getContext` sont modifiées en raison de la liste unique d’utilisateurs dans les canaux partagés.
-Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal partagé :
-
-* `team.groupId`: non défini pour les canaux partagés.
-* `team.internalId`: défini sur l’équipe `threadId` , le canal est partagé pour l’utilisateur actuel. Si l’utilisateur a accès à plusieurs équipes, celle-ci est définie sur l’équipe qui héberge (crée) le canal partagé.
-* `team.displayName`: défini sur le nom de l’équipe, le canal est partagé pour l’utilisateur actuel. Si l’utilisateur a accès à plusieurs équipes, celle-ci est définie sur l’équipe qui héberge (crée) le canal partagé.
-* `sharepointSite.url`: défini sur l’URL d’un site SharePoint distinct et unique pour le canal partagé.
-* `sharepointSite.path`: défini sur le chemin d’accès d’un site SharePoint distinct et unique pour le canal partagé.
-* `sharepointSite.domain`: défini sur le domaine d’un domaine de site SharePoint distinct et unique pour le canal partagé.
-
-En plus de ces modifications de champ, deux nouveaux champs sont disponibles pour les canaux partagés :
-
-* `hostTeamGroupId`: affectez la `team.groupId` valeur associée à l’équipe d’hébergement ou à l’équipe qui a créé le canal partagé. La propriété peut permettre à Microsoft API Graph appels de récupérer l’appartenance au canal partagé.
-* `hostTeamTenantId`: affectez la `channel.ownerTenantId` valeur associée à l’équipe d’hébergement ou à l’équipe qui a créé le canal partagé. La propriété peut être référencée de manière croisée avec l’ID de locataire de l’utilisateur actuel trouvé dans le `user.tenant.id` champ de l’objet *de contexte* pour déterminer si l’utilisateur est interne ou externe au locataire de l’équipe d’hébergement.
-
-Si votre page utilise l’une de ces valeurs, la valeur du `channel.membershipType` champ doit être `Shared` de déterminer si votre page est chargée dans un canal partagé et peut répondre de manière appropriée.
-
-> [!NOTE]
-> `teamSiteUrl` fonctionne également bien pour les canaux standard.
-> Si votre page utilise l’une de ces valeurs, la valeur du `channelType` champ doit être `Shared` de déterminer si votre page est chargée dans un canal partagé et peut répondre de manière appropriée.
+>`teamSiteUrl` fonctionne également bien pour les canaux standard. Si votre page utilise l’une de ces valeurs, la valeur du `channelType` champ doit être `Shared` de déterminer si votre page est chargée dans un canal partagé et peut répondre de manière appropriée.
 
 ## <a name="get-context-in-shared-channels"></a>Obtenir le contexte dans les canaux partagés
 
@@ -278,7 +255,7 @@ Utilisez les propriétés suivantes `getContext` dans les canaux partagés :
 
 | Propriété | Description |
 |----------|--------------|
-|`channelId`| La propriété est définie sur l’ID de thread du canal SC.|
+|`channelId`| La propriété est définie sur l’ID de thread de canaux partagés.|
 |`channelType`| La propriété est définie sur pour les `sharedChannel` canaux partagés.|
 |`groupId`|La propriété est `null` destinée aux canaux partagés.|
 |`hostTenantId`| La propriété est nouvellement ajoutée et décrit l’ID de locataire de l’hôte, utile pour la comparaison avec la propriété ID de locataire de `tid` l’utilisateur actuel. |
