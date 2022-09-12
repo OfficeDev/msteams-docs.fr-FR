@@ -5,12 +5,12 @@ description: Découvrez comment envoyer, recevoir et gérer des messages pour un
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
+ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503605"
+ms.lasthandoff: 09/12/2022
+ms.locfileid: "67646138"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -30,7 +30,7 @@ Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu
 Consultez la vidéo suivante pour en savoir plus sur les conversations de canal et de groupe avec un bot :
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## <a name="design-guidelines"></a>Instructions de conception
@@ -41,7 +41,7 @@ Contrairement aux conversations personnelles, dans les conversations de groupe e
 
 ## <a name="create-new-conversation-threads"></a>Créer des threads de conversation
 
-Lorsque votre bot est installé dans une équipe, vous devez créer un thread de conversation au lieu de répondre à un thread existant. Parfois, il est difficile de faire la distinction entre deux conversations. Si la conversation est thématique, il est plus facile d’organiser et de gérer différentes conversations dans les canaux. Il s’agit d’une forme de [messagerie proactive](~/bots/how-to/conversations/send-proactive-messages.md).
+Lorsque votre bot est installé dans une équipe, vous devez créer un thread de conversation au lieu de répondre à un thread existant. Parfois, il est difficile de faire la distinction entre deux conversations. Si la conversation est threadée, il est plus facile d’organiser et de gérer différentes conversations dans les canaux. Il s’agit d’une forme de [messagerie proactive](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Ensuite, vous pouvez récupérer des mentions à l’aide de l’objet `entities` et ajouter des mentions à vos messages à l’aide de l’objet `Mention` .
 
@@ -267,11 +267,14 @@ Vous pouvez maintenant envoyer un message d’introduction lorsque votre bot est
 
 Lorsque votre bot est ajouté pour la première fois au groupe ou à l’équipe, un message d’introduction doit être envoyé. Le message doit fournir une brève description des fonctionnalités du bot et comment les utiliser. Vous devez vous abonner à l’événement `conversationUpdate` avec le `teamMemberAdded` eventType.  L’événement est envoyé lorsqu’un nouveau membre d’équipe est ajouté. Vérifiez si le nouveau membre ajouté est le bot. Pour plus d’informations, consultez [envoyer un message de bienvenue à un nouveau membre de l’équipe](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Envoyez un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, obtenez la liste d’équipe et envoyez un message direct à chaque utilisateur.
+Vous pouvez envoyer un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, [récupérez la liste d’équipe](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) et envoyez un [message direct](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md) à chaque utilisateur.
+
+>[!NOTE]
+> Assurez-vous que le message envoyé par le bot est pertinent et ajoute de la valeur au message initial et qu’il n’envoie pas de courrier indésirable aux utilisateurs.
 
 N’envoyez pas de message dans les cas suivants :
 
-* L’équipe est grande, par exemple, plus de 100 membres. Votre bot peut être considéré comme du courrier indésirable et la personne qui l’a ajouté peut recevoir des plaintes. Vous devez communiquer clairement la proposition de valeur de votre bot à toutes les personnes qui voient le message d’accueil.
+* Lorsque l’équipe est grande, par exemple, plus de 100 membres. Votre bot peut être considéré comme du courrier indésirable et la personne qui l’a ajouté peut recevoir des plaintes. Vous devez communiquer clairement la proposition de valeur de votre bot à toutes les personnes qui voient le message d’accueil.
 * Votre bot est mentionné pour la première fois dans un groupe ou un canal au lieu d’être ajouté en premier à une équipe.
 * Un groupe ou un canal est renommé.
 * Un membre d’équipe est ajouté à un groupe ou à un canal.
@@ -292,4 +295,3 @@ Suivez le [guide pas à pas](../../../sbs-teams-conversation-bot.yml), pour cré
 * [obtenir des de contexte Teams](~/bots/how-to/get-teams-context.md)
 * [Créer un canal privé pour le compte de l’utilisateur](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Connecter un bot à Chat Web canal](/azure/bot-service/bot-service-channel-connect-webchat)
-

@@ -697,7 +697,6 @@
   itesms:
     - name: Schéma du manifeste d’application pour Teams
       href: resources/schema/manifest-schema.md
-      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: Aperçu pour les développeurs publiques
       items:
         - name: Vue d'ensemble
@@ -705,7 +704,6 @@
           displayName: 'Access, setting'
         - name: Schéma de manifeste pour les développeurs publics en préversion pour Teams
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: S'intégrer aux équipes
   items:
     - name: Aperçu
