@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 1562c69d38f92e0e03b17153568d714aa2612fbe
-  ms.sourcegitcommit: 60484634f38642048e9a9a1465ac0c3322c8229a
+  ms.openlocfilehash: e4a64e7ad55d369f7246927173e9841c10d85e89
+  ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 08/09/2022
-  ms.locfileid: "67290084"
+  ms.lasthandoff: 09/13/2022
+  ms.locfileid: "67653174"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -90,7 +90,7 @@ landingContent:
     - text: Aperçu de test pour les applications monétisées
       url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
     - text: Conseils supplémentaires pour une approbation rapide de la publication de votre application liée à une offre SaaS
-      url: ~/concepts/deploy-and-publish/appsource/publish.md
+      url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer
 - title: Créer des applications pour Teams
   linkLists:
   - linkListType: overview
@@ -180,7 +180,7 @@ landingContent:
   - linkListType: reference
     links:
     - text: Scénarios de génération pour l’application Teams
-      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/
     - text: Meilleures pratiques pour les scénarios d’application Teams
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explorer les applications à faible code pour Teams

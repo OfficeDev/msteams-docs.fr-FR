@@ -5,12 +5,12 @@ description: Apprenez à créer des onglets, des pages web incorporées dans Mic
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450393"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653188"
 ---
 # <a name="build-tabs-for-teams"></a>Créer des onglets pour Teams
 
@@ -80,7 +80,7 @@ Vous pouvez avoir plusieurs canaux ou onglets de groupe, et jusqu’à 16 onglet
 
 ### <a name="tools-to-build-tabs"></a>Outils pour créer des onglets
 
-* [Kit de ressources Microsoft Teams pour Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Extension de kit de ressources Teams pour Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
 * [Extension de kit de ressources Teams pour Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Étape suivante

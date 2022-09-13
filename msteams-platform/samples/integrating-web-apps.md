@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations relatives à l’intégration de Teams
-ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 994747586610ac9301e1cc1a6d752ad77816af97
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178610"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653167"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations relatives à l’intégration de Teams
 
@@ -75,7 +75,7 @@ Si votre application est utilisée par plusieurs organisations, envisagez l’h�
 
 ***scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Les API et les structures de données de votre application doivent prendre en charge l’application lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez augmenter les API et les structures de données avec des informations contextuelles sur Teams pour de [mappage d’identité](../concepts/authentication/configure-identity-provider.md), [prise en charge des liens profonds](../concepts/build-and-test/deep-links.md)et [incorporer Microsoft Graph](/graph/teams-concept-overview).
+Les API et les structures de données de votre application doivent prendre en charge l’application lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez augmenter les API et les structures de données avec des informations contextuelles sur Teams pour de [mappage d’identité](../concepts/authentication/authentication.md), [prise en charge des liens profonds](../concepts/build-and-test/deep-links.md)et [incorporer Microsoft Graph](/graph/teams-concept-overview).
 
 Découvrez comment obtenir le contexte de votre [d’onglet Teams](../tabs/how-to/access-teams-context.md) ou [bot](../bots/how-to/get-teams-context.md).
 

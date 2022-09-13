@@ -4,12 +4,12 @@ description: Configurez l’authentification unique (SSO) avec Azure AD en confi
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d’authentification Teams Microsoft Azure Active Directory (Azure AD) étendue de l’authentification unique du jeton d’accès
-ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586797"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653197"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Inscrire votre application d’onglet dans Azure AD
 
@@ -21,7 +21,7 @@ L’inscription de votre application d’onglet dans Azure AD et son activation
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurer Azure AD pour envoyer un jeton d’accès à l’application cliente Teams":::
 
-Créez une inscription d’application dans Azure AD et exposez son API (web) à l’aide d’étendues (autorisations). Configurez une relation d’approbation entre l’API exposée sur Azure AD et votre application. Cela permet au client Teams d’obtenir un jeton d’accès pour le compte de votre application et de l’utilisateur connecté. Vous pouvez ajouter des ID clients pour les applications mobiles, de bureau et web approuvées que vous souhaitez autoriser préalablement.
+Créez une inscription d’application dans Azure AD et exposez son API (web) à l’aide d’étendues (autorisations). Configurez une relation d’approbation entre l’API exposée sur Azure AD et votre application. Il permet au client Teams d’obtenir un jeton d’accès pour le compte de votre application et de l’utilisateur connecté. Vous pouvez ajouter des ID clients pour les applications mobiles, de bureau et web approuvées que vous souhaitez autoriser préalablement.
 
 Vous devrez peut-être également configurer des détails supplémentaires, tels que l’authentification des utilisateurs d’application sur la plateforme ou l’appareil sur lequel vous souhaitez cibler votre application d’onglet.
 
@@ -36,7 +36,7 @@ La configuration d’Azure AD active l’authentification unique pour votre app
 
 Vous devez d’abord vous informer sur la configuration de l’inscription de votre application sur Azure AD. Assurez-vous que vous êtes prêt à configurer les détails suivants avant d’inscrire votre application :
 
-- **Options à client unique ou mutualisé** : votre application sera-t-elle utilisée uniquement dans le client Microsoft 365 où elle est inscrite, ou est-ce que plusieurs clients Microsoft 365 l’utiliseront ? Les applications destinées à une entreprise n’ont généralement qu’un client unique. Les applications créées par un fournisseur de logiciels indépendant et utilisées par de nombreux clients doivent être mutualisées afin que le client de chaque client puisse accéder à l’application.
+- **Options à locataire unique ou multilocataire : votre application sera-t-elle** utilisée uniquement dans le locataire Microsoft 365 où elle est inscrite, ou de nombreux locataires Microsoft 365 l’utiliseront-ils ? Les applications écrites pour une entreprise sont généralement à locataire unique. Les applications écrites par un fournisseur de logiciels indépendant et utilisées par de nombreux clients doivent être mutualisées afin que le locataire de chaque client puisse accéder à l’application.
 - **URI de l’ID d’application** : il s’agit d’un URI global unique qui identifie l’API web que vous exposez pour l’accès de votre application via des étendues. Il est également appelé URI d’identificateur. L’URI de l’ID d’application inclut l’ID d’application et le sous-domaine où votre application est hébergée. Le nom de domaine de votre application et le nom de domaine que vous inscrivez pour votre application Azure AD doivent être identiques. Actuellement, la prise en charge de plusieurs domaines pour une application est impossible.
 - **Étendue** : il s’agit de la permission qu’un utilisateur d’application autorisé ou que votre application peut accorder pour accéder à une ressource exposée par l’API.
 
@@ -84,7 +84,7 @@ Inscrivez une nouvelle application dans Azure AD et configurez la location et l
     | Option | Sélectionnez cette option pour... |
     | --- | --- |
     | Comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement, client unique) | Créez une application pour une utilisation uniquement par des utilisateurs (ou des invités) dans votre client. <br> Souvent appelée application métier, cette application est une application à client unique dans la plateforme d'identités Microsoft. |
-    | Comptes de tout répertoire organisationnel (n’importe quel répertoire Azure AD, mutualisé) | Permet aux utilisateurs de n’importe quel client Azure AD d’utiliser votre application. Cette option est utile si, par exemple, vous créez une application SaaS et que vous envisagez de la mettre à disposition de plusieurs organisations. <br> Ce type d’application est appelé « application mutualisée » dans la plateforme d'identités Microsoft.|
+    | Comptes de tout répertoire organisationnel (n’importe quel répertoire Azure AD, mutualisé) | Permet aux utilisateurs de n’importe quel client Azure AD d’utiliser votre application. Cette option est appropriée si, par exemple, vous créez une application SaaS et que vous envisagez de la mettre à la disposition de plusieurs organisations. <br> Ce type d’application est appelé « application mutualisée » dans la plateforme d'identités Microsoft.|
     | Comptes dans n’importe quel annuaire organisationnel (tout annuaire Azure AD, mutualisé) et comptes Microsoft personnels | Ciblez un large ensemble de clients. <br> En sélectionnant cette option, vous inscrivez une application mutualisée qui peut également aider les utilisateurs d’applications disposant de comptes Microsoft personnels. |
     | Comptes Microsoft personnels uniquement | Créez une application uniquement pour les utilisateurs disposant de comptes Microsoft personnels. |
 
@@ -208,13 +208,13 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
 
     La page **Ajouter une application cliente** s’affiche.
 
-1. Entrez l’ID client qui correspond au client Teams pour les applications que vous souhaitez autoriser pour l’application web de votre application.
+1. Entrez l’ID client Microsoft 365 approprié pour le client Teams pour les applications que vous souhaitez autoriser pour l’application web de votre application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Ajouter une application cliente":::
 
     > [!NOTE]
     >
-    > - Les ID clients pour l’application Teams mobile, de bureau et web sont les ID réels que vous devez ajouter.
+    > - Les ID clients Microsoft 365 pour les applications mobiles, de bureau et web pour Teams, Office et Outlook sont les ID réels que vous devez ajouter.
     > - Pour une application d’onglet Teams, vous avez besoin d’une application web ou SPA, car vous ne pouvez pas avoir d’application cliente mobile ou de bureau dans Teams.
 
     1. Choisissez un des ID suivants :
@@ -223,6 +223,10 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
        | --- | --- |
        | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Application Teams mobile ou de bureau |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Application Teams web |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Application web Office |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Application de bureau Office |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Bureau Outlook, application mobile |
+       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Application web Outlook |
 
     1. Sélectionnez l’URI de l’ID d’application que vous avez créé pour votre application dans **Étendues autorisées** pour ajouter l’étendue à l’API web que vous avez exposée.
 

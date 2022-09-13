@@ -3,12 +3,12 @@ title: Documentation pour développeurs Microsoft Teams – Glossaire
 description: En savoir plus sur les termes utilisés dans Microsoft Teams documentation du développeur
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635321"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653160"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -25,7 +25,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Manifeste d'application](../resources/schema/manifest-schema.md) | Le manifeste de l’application Teams décrit comment l’application s’intègre au produit Microsoft Teams. Votre manifeste doit être conforme au [schéma du manifeste](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [Package de l’application](../concepts/build-and-test/apps-package.md) | Un package d’application Teams est un fichier zip qui contient le fichier manifeste de l’application, l’icône de couleur et l’icône de contour. |
 | [Autorisation de l’application](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Une option dans une application Teams pour activer les autorisations d’appareil. Il est disponible uniquement lorsque le fichier manifeste de l’application déclare que l’application a besoin d’autorisations d’appareil. <br> **Voir aussi** : [Autorisations de l’appareil](#d) |
-| [Étendue de l’application](../concepts/design/app-structure.md) | Zone dans Teams où les utilisateurs peuvent utiliser votre application. Les applications peuvent avoir une ou plusieurs étendues, notamment personnelles, canaux, conversations et réunions. Une application Teams peut exister entre les étendues. |
+| [Étendue de l’application](../concepts/design/understand-use-cases.md#app-scope) | Zone dans Teams où les utilisateurs peuvent utiliser votre application. Les applications peuvent avoir une ou plusieurs étendues, notamment personnelles, canaux, conversations et réunions. Une application Teams peut exister entre les étendues. |
 | Bac d’application | Un bac d’application situé dans la barre inférieure d’une application mobile Teams. Il collecte toutes les applications qui sont ouvertes mais qui ne sont pas actuellement utilisées ou actives. <br>**Voir aussi** : [Teams Mobile](#t) |
 | [Ressource Azure](../toolkit/provision.md) | Un service disponible via Azure que votre application Teams peut utiliser pour le déploiement Azure. Il peut s’agir de comptes de stockage, d’applications web, de bases de données, etc. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Service de gestion des identités et des accès basé sur le cloud de Microsoft. Il permet aux utilisateurs authentifiés d’accéder aux ressources internes et externes. |
@@ -54,7 +54,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Ressources cloud](../toolkit/add-resource.md) | Service disponible sur le cloud via Internet que votre application Teams peut utiliser. Il peut s’agir de comptes de stockage, d’applications web, de bases de données, etc. |
 | [Application de collaboration](../concepts/extensibility-points.md) | Application avec des fonctionnalités qui permet à un utilisateur de travailler dans un espace de travail collaboratif avec d’autres utilisateurs. <br> **Voir aussi** : [Application autonome](#s) |
 | [Composer l’extension](../resources/schema/manifest-schema.md#composeextensions) | Propriété dans le manifeste d’application (`composeExtensions`) qui fait référence à la fonctionnalité d’extension de message. Il est utilisé lorsque votre extension doit s’authentifier ou se configurer pour continuer. <br>**Voir aussi :** [Manifeste de l’application](#a) ; [Extension de messagerie](#m) |
-| [Zone de commande](../resources/schema/manifest-schema.md) | Type de contexte dans le manifeste d’application (`commandBox`) que vous pouvez configurer pour appeler une extension de message à partir de la zone de commande Teams. |
+| [CommandBox](../resources/schema/manifest-schema.md) | Type de contexte dans le manifeste d’application (`commandBox`) que vous pouvez configurer pour appeler une extension de message à partir de la zone de commande Teams. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | Il permet aux utilisateurs de s’abonner pour recevoir des notifications et des messages des services web. Les connecteurs exposent le point de terminaison HTTPS pour que le service publie des messages sur les canaux Teams, généralement sous la forme de cartes. <br> **Voir aussi** : [Webhook](#w) |
 | Conversation | Une série de messages envoyés entre votre application Microsoft Teams (onglet ou bot) et un ou plusieurs utilisateurs. Une conversation peut avoir trois étendues : canal, personnel et conversation de groupe. <br>**Voir aussi** : [Conversation un-à-un](#o) ; [Conversation de groupe](#g) ; [Canal](#c) |
 | [Bot conversationnel](../bots/how-to/conversations/conversation-messages.md) |  Il permet à un utilisateur d’interagir avec votre service web à l’aide de texte, de cartes interactives et de modules de tâche. <br>**Voir aussi** [Bot de conversation](#c) |
@@ -102,6 +102,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 
 | Terme | Définition |
 | --- | --- |
+| [Fournisseur d'identité](../concepts/authentication/authentication.md) | Entité qui stocke et fournit des informations d’identification à l’utilisateur. Il permet également aux utilisateurs de s’inscrire eux-mêmes.  <br>**Voir aussi :** [Authentification](#a) |
 | [Webhook entrant](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Permet à une application externe de partager du contenu dans les canaux Teams. Ces webhooks sont utilisés comme outils de suivi et de notification. <br>**Voir aussi** : [Webhook](#w) ; [Webhook sortant](#o) |
 | [Expérience d'application en réunion](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Une étape du cycle de vie d'une réunion Teams. Avec l'expérience des apps de réunion, vous pouvez impliquer les participants pendant la réunion en utilisant des apps et la boîte de dialogue de réunion. <br>**Voir aussi :** [Cycle de vie des réunions](#m) |
 
@@ -126,7 +127,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Extension de message](../messaging-extensions/what-are-messaging-extensions.md) | Les extensions de message sont des raccourcis permettant d’insérer du contenu d’application ou d’agir sur un message. Vous pouvez utiliser une extension de message sans quitter la conversation. <br>**Voir aussi** : [Commandes de recherche](#s) ; [Commandes d’action](#a) |
 | [Extension de réunion](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Application conçue pour être utilisée pendant le cycle de vie des réunions pour la rendre plus productive, comme le tableau blanc, le tableau de bord, etc. |
 | [Compte Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | Le compte Microsoft 365 inclut 25 licences utilisateur, y compris l’administrateur, à des fins de développement uniquement. |
-| [Programme de développement Microsoft 365](../toolkit/accounts.md)| Le programme de développement Microsoft 365 vous aide à créer des applications qui étendent Microsoft 365. |
+| [Programme de développement Microsoft 365](../toolkit/tools-prerequisites.md)| Le programme de développement Microsoft 365 vous aide à créer des applications qui étendent Microsoft 365. |
 | [Afficheur Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | La passerelle vers les données et l'intelligence dans Microsoft 365. Elle fournit un modèle de programmabilité unifié que vous pouvez utiliser pour accéder aux données dans Microsoft 365, Windows 10 et Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams est un logiciel de collaboration de groupe qui peut être utilisé pour aider les équipes à collaborer à distance. |
 | [Plateforme Microsoft Teams](../concepts/app-fundamentals-overview.md) | La plateforme de développement Microsoft Teams permet aux développeurs d’intégrer facilement leurs propres applications et services à Teams. |

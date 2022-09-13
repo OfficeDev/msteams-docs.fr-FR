@@ -5,12 +5,12 @@ description: Dans cet article, vous allez commencer à intégrer des application
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 19cf5b580c2d25e90eb90bd1fef9a78c75111092
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189775"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653180"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
@@ -49,7 +49,7 @@ Avec Power Apps, vous pouvez créer des applications métier qui se connectent �
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent est une solution d’interface graphique guidée sans code. Il est construit sur la Power Platform de Microsoft et le Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots conversationnels riches qui s’intègrent facilement à la plateforme Teams. Vous pouvez concevoir, développer et publier des agents virtuels intelligents pour Teams sans avoir à configurer un environnement de développement, à créer un service web ou à vous inscrire directement auprès du Bot Framework.
+Power Virtual Agent est une solution d’interface graphique guidée sans code. Il est construit sur la Power Platform de Microsoft et le Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots conversationnels riches qui s’intègrent facilement à la plateforme Teams. Vous pouvez concevoir, développer et publier des agents virtuels intelligents pour Teams sans avoir à configurer un environnement de développement, à créer un service web ou à vous inscrire directement auprès de Bot Framework.
 
 ### <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
@@ -65,7 +65,7 @@ Moodle est un système LMS (Learning Management System) open source populaire. I
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Créer un bouton Partager vers Teams sur votre site web
 
-Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des boutons Partager dans Teams sur leurs pages web. Lorsque vous sélectionnez le bouton, il lance l’expérience Partager vers Teams dans une fenêtre contextuelle. Cela vous permet de partager un lien directement avec une personne ou un canal Microsoft Teams sans changer de contexte.
+Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des boutons Partager dans Teams sur leurs pages web. Lorsque vous sélectionnez le bouton, il lance l’expérience Partager vers Teams dans une fenêtre contextuelle. Il vous permet de partager un lien directement vers une personne ou un canal Microsoft Teams sans changer de contexte.
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Ajouter un onglet Microsoft Teams dans SharePoint
 
@@ -106,4 +106,4 @@ Vous pouvez également intégrer Microsoft 365 identité pour créer des applica
 * [Ajouter un onglet Teams à SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Créer des liens plus étroits](~/concepts/build-and-test/deep-links.md)
 * [Fonctionnalités de l’appareil](~/concepts/device-capabilities/device-capabilities-overview.md)
-* [contrôle sélecteur de personnes](~/concepts/device-capabilities/people-picker-capability.md)
+* [contrôle sélecteur Personnes](~/concepts/device-capabilities/people-picker-capability.md)
