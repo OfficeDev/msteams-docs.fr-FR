@@ -698,7 +698,7 @@
     - name: Aperçu de test pour les applications monétisées
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifeste d'application
-  itesms:
+  items:
     - name: Schéma du manifeste d’application pour Teams
       href: resources/schema/manifest-schema.md
     - name: Aperçu pour les développeurs publiques
