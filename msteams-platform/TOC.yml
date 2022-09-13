@@ -705,7 +705,6 @@
       items:
         - name: Vue d'ensemble
           href: resources/dev-preview/developer-preview-intro.md
-          displayName: 'Access, setting'
         - name: Schéma de manifeste pour les développeurs publics en préversion pour Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: S'intégrer aux équipes
