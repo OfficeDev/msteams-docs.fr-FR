@@ -4,12 +4,12 @@ description: Découvrez l’exemple de fichier manifeste et la description de to
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: e7b74ab4c610e1cb3b71c8045c3cb93626f0efc9
+ms.sourcegitcommit: 3215a931285ae738c248d145c07fb98656dd42ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635328"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67675832"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste pour les développeurs publics en préversion pour Teams
 
@@ -69,7 +69,8 @@ Le manifeste Microsoft Teams décrit comment l’application s’intègre à la 
             "scopes": [
                 "team",
                 "groupchat"
-            ]"context": []
+            ],
+            "context": []
         }
     ],
     "staticTabs": [
