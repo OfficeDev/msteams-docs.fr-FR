@@ -6,18 +6,21 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 0ef95064a1715a64d8f719c54aced7cdc74ecb23
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 0126953ac43b463460dcfd07c66354d39b53d690
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617246"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781043"
 ---
 # <a name="explore-teams-toolkit"></a>Explorer le Kit de ressources Teams
 
-Dans ce document, vous pouvez comprendre différents éléments d’interface utilisateur, ainsi que la description et l’utilisation de base dans le Kit de ressources Teams.
+Dans ce document, vous pouvez comprendre différents éléments d’interface utilisateur, ainsi que la description et l’utilisation de base dans teams Toolkit pour Visual Studio Code et Visual Studio.
 
-## <a name="teams-toolkit-basic-ui-elements"></a>Éléments d’interface utilisateur de base du Kit de ressources Teams
+::: zone pivot="visual-studio-code"
+
+## <a name="teams-toolkit-for-visual-studio-code-basic-ui-elements"></a>Kit de ressources Teams pour les éléments d’interface utilisateur de base Visual Studio Code
 
 Après l’installation du Kit de ressources Teams, vous verrez l’interface utilisateur du Kit de ressources Teams, comme illustré dans l’image suivante :
 
@@ -142,12 +145,63 @@ Dans le volet Office, vous pouvez voir les sections suivantes :
    :::column-end:::
 :::row-end:::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="explore-teams-toolkit-for-visual-studio"></a>Explorer le Kit de ressources Teams pour Visual Studio
+
+Après avoir installé Teams Toolkit, vous pouvez afficher les options du Kit de ressources Teams dans deux méthodes différentes :
+
+# <a name="project"></a>[Project](#tab/prj)
+
+Vous pouvez accéder au Kit de ressources Teams sous **Project**.
+
+1. Sélectionnez **Project** > **Teams Toolkit**.
+1. Vous pouvez désormais accéder aux différentes options du Kit de ressources Teams.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Menu des opérations du kit de ressources Teams":::
+
+# <a name="solution-explorer"></a>[Explorateur de solutions](#tab/solutionexplorer)
+
+   Vous pouvez accéder au Kit de ressources Teams sous **Průzkumník řešení**.
+
+1. Sélectionnez **Afficher** >  **Průzkumník řešení** pour afficher Průzkumník řešení panneau.
+1. Cliquez avec le bouton droit sur votre **projet**.
+1. Sélectionnez **Teams Toolkit** pour accéder aux différentes options du Kit de ressources Teams.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Opérations du kit de ressources Teams à partir de Project":::
+
+   > [!NOTE]
+   > Dans ce scénario, le nom du projet est **MyTeamsApp1**.
+
+---
+
+Une fois que vous avez créé votre projet Teams, vous pouvez effectuer les fonctions suivantes sur le Kit de ressources Teams pour Visual Studio :
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Opérations du kit de ressources Teams à partir du menu Projet":::
+
+|Fonction  |Description  |
+|---------|---------|
+|Préparer les dépendances d’application Teams     |Avant d’effectuer un débogage local, cette étape vous permet de configurer les dépendances de débogage locales et d’inscrire l’application Teams dans la plateforme Teams. Vous avez besoin d’un compte Microsoft 365. Pour plus d’informations, consultez [Déboguer votre application Teams localement à l’aide de Visual Studio](debug-teams-app-visual-studio.md)         |
+|Ouvrir le fichier manifeste     |Pour ouvrir le fichier manifeste Teams, vous pouvez pointer sur les paramètres pour afficher un aperçu des valeurs. Pour plus d’informations, consultez [modifier le manifeste de l’application Teams à l’aide de Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)         |
+|Mettre à jour le manifeste dans le portail des développeurs Teams     |Lorsque vous mettez à jour le fichier manifeste, vous pouvez redéployer le fichier manifeste sur Azure sans redéployer l’ensemble du projet. Utilisez cette commande pour mettre à jour vos modifications à distance. Pour plus d’informations, consultez [modifier le manifeste de l’application Teams à l’aide de Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)       |
+|Provisionner dans le cloud     |Cette option vous permet de créer des ressources Azure qui hébergent votre application Teams. Pour plus d’informations, consultez [Provisionner des ressources cloud à l’aide de Visual Studio](provision-cloud-resources.md)        |
+|Déployer dans le cloud     |Cette option vous permet de copier votre code vers les ressources Azure créées lorsque vous avez effectué « Provisionner dans le cloud ». Pour plus d’informations, consultez [Déployer l’application Teams dans le cloud à l’aide de Visual Studio](deploy-teams-app.md)        |
+|Préversion dans Teams     |Cette option lance le client web Teams et vous permet d’afficher un aperçu de l’application Teams dans son navigateur.         |
+|Package d’application zip     |Cette option génère un package d’application Teams dans le `Build` dossier sous le projet. Vous pouvez charger le package sur le client Teams et exécuter l’application Teams.         |
+
+::: zone-end
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Installer Teams Toolkit](install-Teams-Toolkit.md)
 * [Créer une application Teams à l’aide du kit de ressources Teams](create-new-project.md)
 * [Préparer la création d’applications à l’aide de Microsoft Teams Toolkit](build-environments.md)
 * [Provisionner des ressources cloud à l’aide du Kit de ressources Teams](provision.md)
+* [Créer une application Teams dans Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provisionner des ressources cloud à l’aide de Visual Studio](provision-cloud-resources.md)
+* [Déployer une application Teams dans le cloud à l’aide de Visual Studio](deploy-teams-app.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::

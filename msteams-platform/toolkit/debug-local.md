@@ -6,16 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 68999351232deb60015259840147d2a1ab55681a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616549"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780861"
 ---
 # <a name="debug-your-microsoft-teams-app-locally"></a>Déboguer votre application Microsoft Teams localement
 
-Microsoft Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre application Teams localement. Pendant le processus de débogage, le Kit de ressources Teams démarre automatiquement les services d’application, lance les débogueurs et charge l’application Teams de manière test. Vous pouvez afficher un aperçu de votre application Teams dans le client web Teams localement après le débogage. Vous devez configurer Teams Toolkit avant de déboguer votre application.
+Teams Shared Computer Toolkit vous permet de déboguer et de prévisualiser votre application Teams localement. Pendant le processus de débogage, le Kit de ressources Teams démarre automatiquement les services d’application, lance les débogueurs et charge l’application Teams de manière test. Vous pouvez afficher un aperçu de votre application Teams dans le client web Teams localement après le débogage.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Déboguer votre application Microsoft Teams localement pour Visual Studio Code
+
+Le Kit de ressources Teams dans Visual Studio Code vous offre les fonctionnalités permettant d’automatiser le débogage de votre application Teams localement. Visual Studio vous permet de déboguer l’extension d’onglet, de bot et de message. Vous devez configurer Teams Toolkit avant de déboguer votre application.
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Configurer votre kit de ressources Teams pour le débogage
 
@@ -140,9 +147,73 @@ Le tableau suivant répertorie les noms et types de configuration de débogage p
 > [!div class="nextstepaction"]
 > [Déboguer les processus en arrière-plan](debug-background-process.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Déboguer votre application Microsoft Teams localement à l’aide de Visual Studio
+
+Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre application Microsoft Teams localement. Visual Studio vous permet de déboguer l’extension d’onglet, de bot et de message. Vous pouvez déboguer votre application localement dans Visual Studio à l’aide du Kit de ressources Teams en effectuant les opérations suivantes :
+
+### <a name="set-up-ngrok-only-for-bot-and-message-extension-app"></a>Configurer ngrok (uniquement pour l’application Bot et Extension de message)
+
+Utilisez une invite de commandes pour exécuter cette commande :
+
+```
+ngrok http 5130
+```
+
+### <a name="set-up-your-teams-toolkit"></a>1. Configurer votre Teams Shared Computer Toolkit
+
+Effectuez les étapes suivantes à l’aide du Kit de ressources Teams pour déboguer votre application après avoir créé un projet :
+
+1. Cliquez avec le bouton droit sur votre **projet**.
+1. Sélectionnez **Le kit de ressources** >  Teams **prépare les dépendances d’application Teams**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Dépendances d’application Teams pour le débogage local" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
+
+   > [!NOTE]
+   > Dans ce scénario, le nom du projet est MyTeamsApp1
+
+   Votre compte Microsoft 365 doit disposer de l’autorisation de chargement latéral avant de vous connecter.  Assurez-vous que votre application Teams peut être chargée sur le locataire, sinon votre application Teams peut ne pas s’exécuter dans le client Teams.
+
+1. Connectez-vous à votre **compte Microsoft 365**, puis **sélectionnez Continuer**
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Se connecter au compte Microsoft 365":::
+
+   > [!Note]
+   > Mer informasjon sur l’autorisation de chargement indépendant en visitant <https://aka.ms/teamsfx-sideloading-option>.
+
+1. Sélectionnez **Déboguer** > **Démarrer le débogage** ou sélectionnez directement **F5**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Démarrer le débogage":::
+
+   Visual Studio lance l’application Teams dans le client Microsoft Teams dans votre navigateur.
+
+   > [!Note]
+   > Mer informasjon en visitant <https://aka.ms/teamsfx-vs-debug>.
+
+1. Une fois Microsoft Teams chargé, **sélectionnez Ajouter** pour installer votre application dans Teams.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="Sélectionner Ajouter pour charger l’application":::
+
+   > [!TIP]
+   > Vous pouvez également utiliser la fonction de rechargement à chaud de Visual Studio pendant le débogage. Mer informasjon en visitant <https://aka.ms/teamsfx-vs-hotreload>.
+
+   > [!NOTE]
+   > Veillez à publier une requête HTTP sur «<http://localhost:5130/api/notification> » pour déclencher une notification, lorsque vous déboguez l’application Bot de notification. Si vous avez sélectionné le déclencheur HTTP lors de la création du projet, vous pouvez utiliser tous les outils API tels que curl (invite de commandes Windows), Postman, etc.
+
+   > [!TIP]
+   > Si vous apportez des modifications au fichier manifeste de l’application Teams (/templates/appPackage/manifest.template.json), veillez à exécuter la commande Préparer les dépendances d’application Teams. Avant d’essayer de réexécuter l’application Teams localement.
+
+::: zone-end
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud](provision.md)
 * [Ajouter des fonctionnalités à vos applications Teams](add-capability.md)
 * [Déployer à partir du cloud](deploy.md)
 * [Gérer plusieurs environnements dans Teams Shared Computer Toolkit](TeamsFx-multi-env.md)
+* [Provisionner des ressources cloud à l’aide de Visual Studio](provision-cloud-resources.md)
+* [Déployer une application Teams dans le cloud à l’aide de Visual Studio](deploy-teams-app.md)
+* [Modifier le manifeste de l’application Teams à l’aide de Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

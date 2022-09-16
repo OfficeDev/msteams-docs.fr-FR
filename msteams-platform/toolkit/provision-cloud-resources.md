@@ -6,18 +6,18 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7dfc5817fb8872a782b28c113c270a318e3d5078
-ms.sourcegitcommit: 52a11f7614c43172bc2d57401a60d569db5310a9
+ms.openlocfilehash: 00e021e3e42eed6eeb5881d258a9884a7e579377
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67291688"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781002"
 ---
 # <a name="provision-cloud-resources-using-visual-studio"></a>Provisionner des ressources cloud à l’aide de Visual Studio
 
 TeamsFx s’intègre à Azure et au cloud Microsoft 365 qui vous permet de placer votre application dans Azure avec une seule commande. TeamsFx s’intègre à Azure Resource Manager qui vous permet de provisionner des ressources Azure. Pour l’approche du code, votre application a besoin des ressources cloud.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Voici la liste des outils dont vous avez besoin pour provisionner vos ressources cloud :
 
@@ -87,7 +87,7 @@ Les étapes suivantes vous aident à provisionner des ressources cloud à l’ai
 5. Vous pouvez sélectionner ou créer un **groupe de ressources**.
 6. Sélectionnez **Provision**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Sélectionner un groupe de ressources":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Sélectionner un groupe de ressources":::
 
 7. La boîte de dialogue vous avertit que des frais peuvent être ajoutés en fonction de l’utilisation d’Azure. Sélectionnez **Provision**.
 
@@ -123,8 +123,8 @@ Lorsque vous créez un projet, vous devez également créer des ressources Azure
 | Ressource | Objectif | Description |
 | --- | --- | --- |
 | Bot Azure | Inscrit votre application en tant que bot avec l’infrastructure de bot. | Connecte le bot à Teams. |
-| App Service plan | Héberge votre application de bot web. | Non applicable |
-| App Service | Héberge votre application bot. | Ajoute l’identité affectée par l’utilisateur pour accéder à d’autres ressources Azure. |
+| plan Serviço de Aplicativo | Héberge votre application de bot web. | Non applicable |
+| Serviço de Aplicativo | Héberge votre application bot. | Ajoute l’identité affectée par l’utilisateur pour accéder à d’autres ressources Azure. |
 | Gérer l’identité | Authentifier les demandes de service à service Azure. | Partage entre différentes fonctionnalités et ressources. |
 
 ### <a name="create-resources-for-teams-command-bot-application"></a>Créer des ressources pour l’application de bot de commande Teams
@@ -177,7 +177,7 @@ Lorsque vous créez un projet, vous devez également créer des ressources Azure
 
 ### <a name="manage-your-resources"></a>Gérer vos ressources
 
-Vous pouvez vous connecter à [Portail Azure](https://portal.azure.com/) et gérer toutes les ressources créées par Teams Toolkit.
+Vous pouvez vous connecter à [Azure-Portal](https://portal.azure.com/) et gérer toutes les ressources créées par teams Toolkit.
 
 * Vous pouvez sélectionner un groupe de ressources dans la liste existante ou le nouveau groupe de ressources que vous avez créé.
 * Vous pouvez voir les détails du groupe de ressources que vous avez sélectionné dans la section vue d’ensemble de la table des matières.

@@ -1,16 +1,16 @@
 ---
 title: Étendre une application onglet personnel Teams sur Microsoft 365
-description: Dans cet article, vous allez apprendre à étendre une application d’onglet personnel Teams à Microsoft 365 en mettant à jour l’onglet personnel pour l’exécuter dans Outlook et Office.
+description: Dans cet article, vous allez découvrir comment étendre une application d’onglet personnel Teams à Microsoft 365 en mettant à jour l’onglet personnel pour l’exécuter dans Outlook et Office.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337235"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781199"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -46,7 +46,7 @@ Si vous disposez d’une application onglet personnelle existante, effectuez une
 
 Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de [l’exemple de liste Todo](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application onglet personnel à l’aide de l’extension Teams Toolkit pour Visual Studio Code, puis revenez à cet article pour la mettre à jour pour Microsoft 365.
 
-Vous pouvez également utiliser une application Simple Sign-On *Hello World* de base déjà activée pour Microsoft 365 dans la section de démarrage rapide suivante, puis passer au chargement indépendant de [votre application dans Teams](#sideload-your-app-in-teams) .
+Vous pouvez également utiliser une application *Hello World* de base pour l’authentification unique déjà activée pour Microsoft 365 dans la section de démarrage rapide suivante, puis passer au [chargement indépendant de votre application dans Teams](#sideload-your-app-in-teams) .
 
 ### <a name="quickstart"></a>Démarrage rapide
 
@@ -58,7 +58,7 @@ Pour commencer avec un [onglet personnel](https://github.com/OfficeDev/TeamsFx-S
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Exemple de liste Todo (fonctionne dans Teams, Outlook et Office) dans Teams Shared Computer Toolkit":::
 
 1. Sélectionnez un emplacement sur votre ordinateur local pour le dossier de l’espace de travail.
-1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Provision in the cloud` pour créer les ressources d’application requises (plan App Service, compte de stockage, application de fonction, identité managée) dans votre compte Azure.
+1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Provision in the cloud` pour créer les ressources d’application requises (plan Serviço de Aplicativo, compte de stockage, application de fonction, identité managée) dans votre compte Azure.
 1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Deploy to the cloud` pour déployer l’exemple de code sur les ressources approvisionnées dans Azure et démarrer l’application.
 
 À partir de là, vous pouvez passer directement au chargement indépendant de [votre application dans Teams](#sideload-your-app-in-teams) et afficher un aperçu de votre application dans Outlook et Office. (Le manifeste de l’application et les appels d’API TeamsJS ont déjà été mis à jour pour Microsoft 365.)
@@ -124,7 +124,7 @@ Si votre application utilise des en-têtes de stratégie de [sécurité de conte
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour l’inscription d’application Azure AD pour l’authentification unique
 
-[L’authentification unique (SSO) Azure Active Directory (AD)](../tabs/how-to/authentication/tab-sso-overview.md) pour les onglets personnels fonctionne de la même façon dans Office et Outlook que dans Teams. Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre application onglet dans le portail *inscriptions d'applications* de votre locataire.
+[L’authentification unique (SSO) Azure Active Directory (AD)](../tabs/how-to/authentication/tab-sso-overview.md) pour les onglets personnels fonctionne de la même façon dans Office et Outlook que dans Teams. Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre application onglet dans le portail *App-registraties* de votre locataire.
 
 1. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com) avec votre compte de locataire de bac à sable( sandbox).
 1. Ouvrez le **panneau inscriptions d'applications**.
@@ -190,7 +190,7 @@ Pour afficher votre application en cours d’exécution dans Outlook sur Windows
 Pour afficher votre application dans Outlook sur le web :
 
 1. Accédez à [Outlook sur le web](https://outlook.office.com) et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
+1. Dans la barre latérale, sélectionnez  **Autres applications**. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer et afficher un aperçu de votre application en cours d’exécution dans Outlook sur le web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de outlook.com pour afficher vos onglets personnels installés":::.
@@ -200,7 +200,7 @@ Pour afficher votre application dans Outlook sur le web :
 Pour afficher votre application en cours d’exécution dans Office sur Windows bureau :
 
 1. Lancez Office et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
+1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Office client de bureau pour afficher vos onglets personnels installés":::.
@@ -233,7 +233,7 @@ Utilisez les [canaux de la communauté des développeurs Microsoft Teams](/micro
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Choisir parmi les cibles de débogage Teams, Outlook et Office dans le Kit de ressources Teams":::
 
-Lors de la première exécution du débogage local vers Office ou Outlook, vous êtes invité à vous connecter à votre compte de locataire Microsoft 365 et à installer un certificat de test auto-signé. Vous serez également invité à installer manuellement Teams. Sélectionnez **Installer dans Teams** pour ouvrir une fenêtre de navigateur et installer manuellement votre application. Cliquez ensuite sur **Continuer** pour continuer à déboguer votre application dans Office/Outlook.
+Lors de la première exécution du débogage local vers Office ou Outlook, vous êtes invité à vous connecter à votre compte de locataire Microsoft 365 et à installer un certificat de test auto-signé. Vous serez également invité à installer manuellement Teams. Sélectionnez **Installer dans Teams** pour ouvrir une fenêtre de navigateur et installer manuellement votre application. Sélectionnez Ensuite **Continuer** pour continuer à déboguer votre application dans Office/Outlook.
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Boîte à outils - Boîte à outils - Installation de Teams":::
 
@@ -245,8 +245,8 @@ Fournissez des commentaires et signalez les problèmes liés à l’expérience 
 |---------------|--------------|--------|
 | Liste des tâches | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne uniquement dans Teams (utilisez cet exemple d’application pour essayer le processus de mise à niveau décrit dans ce didacticiel). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
-| Éditeur d’images (Microsoft 365) | Créez, modifiez, ouvrez et enregistrez des images à l’aide de Microsoft API Graph. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Exemple de page de lancement (Microsoft 365) | Présentation de l’authentification SSO et utilisation des fonctionnalités du Kit de développement logiciel (SDK) TeamsJS disponibles dans différents hôtes. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Éditeur d’images (Microsoft 365) | Créez, modifiez, ouvrez et enregistrez des images à l’aide de Microsoft Graph API. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Exemple de page de lancement (Microsoft 365) | Illustre l’authentification SSO et les fonctionnalités du Kit de développement logiciel (SDK) TeamsJS disponibles dans différents hôtes. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>Étape suivante
 

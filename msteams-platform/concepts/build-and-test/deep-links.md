@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Dans cet article, vous allez apprendre à créer des liens profonds et à les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
-ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67452359"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780883"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -392,7 +392,7 @@ Créez un lien profond pour l'application après son inscription dans le magasin
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Liaison approfondie pour les onglets SharePoint Framework
 
-Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message : `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Lorsqu’un bot envoie un message TextBlock avec un lien ciblé, un nouvel onglet de navigateur s’ouvre lorsque les utilisateurs sélectionnent le lien. Cela se produit dans Chrome et l’application de bureau Microsoft Teams s’exécutant sur Linux.

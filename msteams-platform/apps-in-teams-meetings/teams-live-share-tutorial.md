@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: 511083fea77c40cec0134e6620c741c3c4da8829
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425616"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780813"
 ---
 # <a name="dice-roller-code-tutorial"></a>Tutoriel de code pour le lanceur de dés
 
@@ -351,7 +351,7 @@ Les utilisateurs invités à la réunion peuvent voir votre application sur scè
 
 ## <a name="deployment"></a>Déploiement
 
-Lorsque vous êtes prêt à déployer votre code, vous pouvez utiliser [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit) ou [le portail des développeurs Teams](https://dev.teams.microsoft.com/apps) pour provisionner et télécharger le fichier zip de votre application.
+Lorsque vous êtes prêt à déployer votre code, vous pouvez utiliser [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio-code) ou [le portail des développeurs Teams](https://dev.teams.microsoft.com/apps) pour provisionner et télécharger le fichier zip de votre application.
 
 > [!NOTE]
 > Vous devez ajouter votre appId provisionné à la liste`manifest.json` avant de télécharger ou de distribuer l'application.

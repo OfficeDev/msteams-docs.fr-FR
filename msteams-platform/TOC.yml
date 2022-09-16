@@ -94,7 +94,7 @@
       href: concepts/design/enable-app-customization.md
 - name: Outils et kits de développement durable
   items:
-    - name: Extension de kit de ressources Teams pour Visual Studio Code
+    - name: Toolkit Teams
       items:
         - name: Vue d’ensemble du Kit de ressources Teams
           href: toolkit/teams-toolkit-fundamentals.md
@@ -162,20 +162,6 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: FAQ
           href: toolkit/faq.md
-    - name: Extension de kit de ressources Teams pour Visual Studio
-      items:
-        - name: Vue d’ensemble du Kit de ressources Teams
-          href: toolkit/teams-toolkit-overview-visual-studio.md
-        - name: Créer une application Teams.
-          href: toolkit/create-new-teams-app-for-Visual-Studio.md
-        - name: Déboguer votre Teams application
-          href: toolkit/debug-teams-app-visual-studio.md
-        - name: Provisionner des ressources cloud
-          href: toolkit/provision-cloud-resources.md
-        - name: Déployer l’application Teams dans le cloud
-          href: toolkit/deploy-teams-app.md
-        - name: Modifier le manifeste de l’application Teams
-          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Interface CLI du Kit de ressources Teams
       href: toolkit/TeamsFx-CLI.md
     - name: Générateur Yeoman pour Microsoft Teams (GitHub)
@@ -670,7 +656,7 @@
           displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: Créer un compte de développeur Espace partenaires
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: Update Apple app store
+          displayName: 'Update Apple app store,app acquisition on mobile'
         - name: Préparer votre soumission du store Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, publisher verification, attestation'

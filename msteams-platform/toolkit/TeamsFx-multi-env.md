@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 4a4b67399b2ec7c78fa536b06ee7faa9bb352468
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616950"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780995"
 ---
 # <a name="manage-multiple-environments"></a>Gérer plusieurs environnements
 
@@ -118,7 +118,7 @@ Vous pouvez définir le nom de l’application Teams pour `myapp(dev)` l’envir
 3. Vous pouvez créer un environnement et le nommer s’il `staging` n’existe pas.
 4. Ouvrez le fichier `.fx/configs/config.staging.json`de configuration.
 5. Mettez à jour la même propriété `myapp(staging)`.
-6. Vous pouvez maintenant exécuter la commande de provisionnement sur `dev` et `staging` l’environnement pour mettre à jour le nom de l’application dans les environnements distants. Pour exécuter la commande de provisionnement avec le Kit de ressources Teams, consultez [provisionner](provision.md#provision-using-teams-toolkit).
+6. Vous pouvez maintenant exécuter la commande de provisionnement sur `dev` et `staging` l’environnement pour mettre à jour le nom de l’application dans les environnements distants. Pour exécuter la commande de provisionnement avec le Kit de ressources Teams, consultez [provisionner](provision.md#provision-using-teams-toolkit-in-visual-studio-code).
 
 </details>
 

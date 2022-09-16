@@ -4,12 +4,12 @@ description: Configurez des autorisations et des étendues supplémentaires avec
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d'authentification des équipes Microsoft Azure Active Directory (Azure AD) API Graph Autorisation déléguée portée du jeton d'accès
-ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605088"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780848"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Étendre l'application d'onglet avec les autorisations et la portée de Microsoft Graph
 
@@ -220,8 +220,9 @@ Vous pouvez demander le consentement à l'aide de l'API Auth. Une autre approche
 4. Lorsque vous demandez plus de consentement à Azure AD, vous devez inclure `prompt=consent` dans votre [paramètre de chaîne de requête](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) Azure AD, sinon Azure AD ne demanderait pas d'autres étendues.
     - Au lieu de `?scope={scopes}`, utilisez `?prompt=consent&scope={scopes}`
     - Assurez-vous que `{scopes}` inclut toutes les étendues pour lesquelles vous demandez à l'utilisateur, par exemple, `Mail.Read` ou `User.Read`.
-5. Une fois que l'utilisateur de l'application a accordé plus d'autorisations, réessayez le flux OBO pour accéder à ces autres API.
 
+    Pour gérer le consentement incrémentiel pour l’application onglet, consultez [le consentement de l’utilisateur incrémentiel et dynamique](/azure/active-directory/develop/v2-permissions-and-consent).
+5. Une fois que l'utilisateur de l'application a accordé plus d'autorisations, réessayez le flux OBO pour accéder à ces autres API.
     </details>
 
 ## <a name="see-also"></a>Voir aussi

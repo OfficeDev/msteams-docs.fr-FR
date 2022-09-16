@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Dans ce module, découvrez le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503920"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781065"
 ---
 # <a name="teams-javascript-client-sdk"></a>Kit de développement logiciel client JavaScript Teams
 
@@ -408,8 +408,7 @@ Vous pouvez également visualiser les modifications en examinant la fonction `tr
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
 | `userTeamRole` | `app.Context.team.userRole`|
-| `userDisplayName` | `app.Context.user.displayName` |
-| S/O | `app.Context.app.host.name`|
+| N/A | `app.Context.app.host.name`|
 
 ## <a name="updating-to-the-teams-client-sdk-v200"></a>Mise à jour vers le Kit de développement logiciel (SDK) client Teams v.2.0.0
 

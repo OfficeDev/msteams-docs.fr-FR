@@ -1,15 +1,15 @@
 ---
 title: Obtenir le contexte de votre bot Microsoft Teams
-description: Dans ce module, découvrez comment obtenir le contexte des bots dans Microsoft Teams, extraire la liste d’équipe et le profil utilisateur ou la liste de liste dans une conversation personnelle ou de groupe
+description: Dans ce module, découvrez comment obtenir le contexte pour les bots dans Microsoft Teams, récupérer la liste d’équipe et le profil utilisateur ou la liste dans une conversation personnelle ou de groupe
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 3fd75e063f9b12c09bc4dded167bd8cdaead6b7a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fd43d9c4b3a3e4702b9bbd4955e58c0fc86caddf
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143115"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780925"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtenir le contexte de votre bot Microsoft Teams
 
@@ -19,13 +19,13 @@ Votre bot peut accéder à un contexte supplémentaire sur l’équipe ou la con
 
 > [!NOTE]
 >
-> * Microsoft Teams API de bot spécifiques sont mieux accessibles via nos extensions pour le Kit de développement logiciel (SDK) Bot Builder.
-> * Pour C# ou .NET, téléchargez notre package [de NuGet Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+> * Les API de bot spécifiques à Microsoft Teams sont mieux accessibles via nos extensions pour le Kit de développement logiciel (SDK) Bot Builder.
+> * Pour C# ou .NET, téléchargez notre package NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .
 > * Pour Node.js développement, la fonctionnalité Bot Builder pour Teams est incorporée dans le [Kit de développement logiciel (SDK) Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
 
 ## <a name="fetch-the-team-roster"></a>Récupérer la liste d’équipe
 
-Votre bot peut rechercher la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent des ID d’utilisateur Teams et des informations Microsoft Azure Active Directory (Azure AD), telles que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour mettre en corrélation les identités des utilisateurs. Par exemple, vérifiez si un utilisateur connecté à un onglet via des informations d’identification Microsoft Azure Active Directory (Azure AD) est un membre de l’équipe.
+Votre bot peut rechercher la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent des ID d’utilisateur Teams et des informations de Microsoft Azure Active Directory (Azure AD), telles que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour mettre en corrélation les identités des utilisateurs. Par exemple, vérifiez si un utilisateur connecté à un onglet via des informations d’identification Microsoft Azure Active Directory (Azure AD) est un membre de l’équipe.
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 
@@ -72,6 +72,7 @@ Response body
 ### <a name="net-example"></a>Exemple .NET
 
 Appeler `GetConversationMembersAsync` à l’aide `Team.Id` pour retourner une liste d’ID d’utilisateur.
+Appel `GetConversationMembersAsync` pour obtenir `userRole` la propriété retourner la valeur en tant qu’utilisateur.
 
 ```csharp
 // Fetch the members in the current conversation
@@ -172,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Exemple Node.js
 
-L’exemple suivant utilise l’appel des [extensions Teams pour le Kit de développement logiciel (SDK) Bot Builder pour Node.js](https://www.npmjs.com/package/botbuilder-teams):`fetchChannelList`
+L’exemple suivant utilise l’appel `fetchChannelList` des [extensions Teams pour le Kit de développement logiciel (SDK) Bot Builder pour Node.js](https://www.npmjs.com/package/botbuilder-teams):
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
