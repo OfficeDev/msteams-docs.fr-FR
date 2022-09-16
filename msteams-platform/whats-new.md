@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635300"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786968"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -36,6 +36,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 09/16/2022 | Les cartes adaptatives dans les extensions de message basées sur la recherche prennent désormais en charge les actions universelles. | Générer des extensions de message > des commandes de recherche > Définir des commandes de recherche > [actions universelles pour les extensions de message basées sur la recherche](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
 | 09/06/2022 | `selectMedia` API pour la capture de vidéos à l’aide de l’appareil photo | Intégrer des fonctionnalités d’appareil > [Intégrer des fonctionnalités multimédias](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 09/08/2022 | Présentation de Teams Toolkit pour Visual Studio 2022 | Vue d’ensemble des outils et du Kit de développement logiciel (SDK) > Teams pour Visual Studio > [Kit de ressources Teams pour Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
@@ -288,7 +289,6 @@ Nous encourageons Teams développeurs à poser des questions, à déposer des bo
 ## <a name="get-latest-updates"></a>Obtenir les dernières mises à jour
 
 Vous pouvez obtenir les dernières mises à jour Teams plateforme en configurant le [flux RSS.](https://aka.ms/TeamsPlatformUpdates)
-
 
 ### <a name="to-configure-rss-feed"></a>Pour configurer le flux RSS
 

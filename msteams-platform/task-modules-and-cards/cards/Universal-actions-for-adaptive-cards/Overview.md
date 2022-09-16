@@ -3,18 +3,18 @@ title: Vue d’ensemble des actions universelles pour les cartes adaptatives
 description: Découvrez les actions universelles pour les cartes adaptatives, telles que les vues spécifiques à l’utilisateur, la prise en charge des flux de travail séquentiels et bien plus encore pour les environnements de bureau et mobiles
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9c04ed4726840bd3d1637555d1bb021f31bf2e25
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142086"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786975"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Actions universelles pour les cartes adaptatives
 
 Les actions universelles pour les cartes adaptatives ont évolué à partir des commentaires des développeurs selon lesquelles même si la disposition et le rendu des cartes adaptatives étaient universels, la gestion des actions ne l’était pas. Même si un développeur voulait envoyer la même carte à différents endroits, il doit gérer les actions différemment.
 
-Les actions universelles pour les cartes adaptatives font du bot le serveur principal commun pour la gestion des actions et introduisent un nouveau type d’action, `Action.Execute`qui fonctionne entre les applications, telles que Teams et Outlook.
+Les actions universelles pour les cartes adaptatives font du bot le principal commun pour la gestion des actions et introduisent un nouveau type d’action, `Action.Execute`qui fonctionne entre les applications, telles que Teams et Outlook.
 
 Ce document vous aide à comprendre comment utiliser le modèle Actions universelles pour améliorer l’expérience utilisateur de l’interaction avec les cartes adaptatives entre les plateformes et les applications.
 
@@ -34,22 +34,22 @@ Les actions universelles pour les cartes adaptatives améliorent l’expérience
 
 Avant les actions universelles pour les cartes adaptatives, différents hôtes fournissaient différents modèles d’action comme suit :
 
-* Teams ou bots utilisés`Action.Submit`, une approche qui reporte le modèle de communication réel au canal sous-jacent.
-* Outlook utilisé `Action.Http` pour communiquer avec le service principal spécifié explicitement dans la charge utile de la carte adaptative.
+* Teams ou bots utilisés `Action.Submit`, une approche qui reporte le modèle de communication réel au canal sous-jacent.
+* Outlook utilisé `Action.Http` pour communiquer avec le service principal spécifié explicitement dans la charge utile de carte adaptative.
 
 L’image suivante montre le modèle d’action incohérent actuel :
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Modèle d’action incohérent":::
 
-Avec les actions universelles pour les cartes adaptatives, vous pouvez utiliser `Action.Execute` pour la gestion des actions sur différentes plateformes. `Action.Execute`fonctionne sur plusieurs hubs, notamment Teams et Outlook. En outre, une carte adaptative peut être retournée comme réponse pour une `Action.Execute` demande d’appel déclenchée.
+Avec les actions universelles pour les cartes adaptatives, vous pouvez utiliser `Action.Execute` pour la gestion des actions sur différentes plateformes. `Action.Execute` fonctionne sur plusieurs hubs, notamment Teams et Outlook. En outre, une carte adaptative peut être retournée comme réponse pour une `Action.Execute` demande d’appel déclenchée.
 
 L’image suivante montre le nouveau modèle Action universelle :
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Nouvelles actions universelles pour les cartes adaptatives":::
 
-Vous pouvez maintenant envoyer la même carte à la fois à Teams et Outlook, et les maintenir synchronisées les unes avec les autres à l’aide du bot sous-jacent. Toute action effectuée sur l’une ou l’autre plateforme est reflétée à l’autre avec cette *build une fois, déployer n’importe où* (actions universelles pour les cartes adaptatives) modèle.
+Vous pouvez maintenant envoyer la même carte à Teams et Outlook et les synchroniser les unes avec les autres à l’aide du bot sous-jacent. Toute action effectuée sur l’une ou l’autre plateforme est reflétée à l’autre avec cette *build une fois, déployer n’importe où* (actions universelles pour les cartes adaptatives) modèle.
 
-L’image suivante illustre les actions universelles pour les cartes adaptatives pour les Teams et les Outlook :
+L’image suivante illustre les actions universelles pour les cartes adaptatives pour Teams et Outlook :
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -122,3 +122,4 @@ Vous pouvez commencer par mettre à jour des scénarios à l’aide du [guide de
 * [Vue d’ensemble des cartes adaptatives](~/task-modules-and-cards/what-are-cards.md)
 * [Cartes adaptatives @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Cartes adaptatives @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
+* [Actions universelles pour les extensions de messagerie basées sur la recherche](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
