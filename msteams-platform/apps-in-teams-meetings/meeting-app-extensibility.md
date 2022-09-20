@@ -1,17 +1,17 @@
 ---
 title: Applications de réunions unifiées
 author: surbhigupta
-description: Découvrez le cycle de vie des réunions Teams et l’expérience de réunion des utilisateurs sur les ordinateurs de bureau et mobiles, les types d’utilisateurs, l’intégration de bots et l’extension de message dans le cycle de vie des réunions.
+description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie des réunions dans l’environnement de bureau et mobile, les rôles de participant et les types d’utilisateurs. En outre, découvrez comment intégrer des bots et une extension de message dans le cycle de vie des réunions.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: none
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 33fdea8b72202ab6914d04ba6158e8f1b3f7de02
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 4807b85ed1b520b84701bcd727fda88cf77808eb
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636167"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833671"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -29,7 +29,7 @@ Un cycle de vie de réunion consiste en une expérience d'application avant, pen
 
 > [!NOTE]
 >
-> * Les applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
+> * Les applications pour les réunions instantanées, les réunions de canal public planifiées, les appels en tête-à-tête et les appels de groupe sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Les extensions de réunion telles que les bots, les cartes, les extensions de message et les actions de message sont prises en charge dans le client web. Toutefois, les expériences hébergées telles que les onglets, les bulles de contenu et les partages intermédiaires ne sont pas actuellement entièrement prises en charge.
 
@@ -47,19 +47,17 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 
 Avec l'expérience de l'application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion. Vous pouvez également effectuer des tâches préalables à la réunion, telles que l'élaboration d'un sondage pour sonder les participants à la réunion.
 
-Pour ajouter des onglets à une réunion existante :
+#### <a name="to-add-tabs-to-an-existing-meeting"></a>Pour ajouter des onglets à une réunion existante
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
 1. Sélectionnez l’onglet **Détails** , puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Expérience d’application avant la réunion.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/PreMeeting.png" alt-text="Expérience d’application avant la réunion.":::
 
 1. Dans la galerie d’onglets, sélectionnez l’application que vous souhaitez ajouter et suivez les étapes nécessaires. L’application est installée sous forme d’onglet.
 
    > [!NOTE]
-   >
-   > * Vous pouvez également ajouter un onglet à une réunion existante à l’aide de l’onglet **Conversation** de réunion.
-   > * La disposition des onglets doit être organisée, s’il y a plus de 10 sondages ou enquêtes.
+   > Vous pouvez également ajouter un onglet à une réunion existante à l’aide de l’onglet **Conversation** de réunion.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -69,13 +67,13 @@ Pour ajouter des onglets à une réunion existante :
 
 Après avoir ajouté les onglets à une réunion existante sur mobile, vous pouvez voir les mêmes applications dans l’expérience de pré-réunion sous **la section Plus** des détails de la réunion.
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Expérience de pré-réunion mobile":::
 
 ---
 
 #### <a name="in-meeting-app-experience"></a>Expérience d'application en réunion
 
-Avec l'expérience de l'application en réunion, vous pouvez engager les participants pendant la réunion en utilisant des applications et la boîte de dialogue en réunion. Les applications de réunion sont hébergées sur la barre d'outils de la fenêtre de réunion en tant qu'onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter du contenu exploitable aux participants à la réunion. Pour plus d’informations, consultez [Activer et configurer vos applications pour les réunions Teams](enable-and-configure-your-app-for-teams-meetings.md).
+Avec l'expérience de l'application en réunion, vous pouvez engager les participants pendant la réunion en utilisant des applications et la boîte de dialogue en réunion. Les applications de réunion sont hébergées sur la barre d'outils de la fenêtre de réunion en tant qu'onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter du contenu exploitable aux participants à la réunion. Pour plus d’informations, consultez [créer des applications pour les réunions Teams](create-apps-for-teams-meetings.md).
 
 Pour les applications mobiles, les applications de réunion sont disponibles à partir **d’applications** > points de suspension &#x25CF;&#x25CF;&#x25CF; de la réunion. Sélectionnez **Applications** pour afficher toutes les applications disponibles dans la réunion.
 
@@ -99,7 +97,7 @@ Après avoir entré la réunion et ajouté l’application à partir du bureau o
 
 La boîte de dialogue en réunion s’affiche, dans laquelle vous pouvez entrer votre réponse en tant que commentaires.
 
-<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Affichage de la boîte de dialogue Mobile":::
 
 > [!NOTE]
 > Vous n’avez pas besoin de modifier le manifeste de l’application pour que les applications fonctionnent sur un appareil mobile.
@@ -111,21 +109,20 @@ La boîte de dialogue en réunion s’affiche, dans laquelle vous pouvez entrer 
 > * Les applications peuvent tirer parti du Kit de développement logiciel (SDK) client Teams pour accéder à l’expérience`meetingId``userMri`, et `frameContext` pour afficher l’expérience de manière appropriée.
 > * Si la boîte de dialogue en réunion est correctement affichée, elle envoie une notification indiquant que les résultats sont correctement téléchargés.
 > * Le manifeste de votre application spécifie les emplacements dans lesquels vous souhaitez que les applications apparaissent. Pour ce faire, spécifiez le champ de contexte dans le manifeste. Il fait également partie d’une expérience de phase de réunion de partage, sous réserve [des instructions de conception](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md) spécifiées.
-> * La phase de réunion n’est pas prise en charge pour les utilisateurs anonymes et le client web Teams.
 
 L’image suivante illustre le panneau côté réunion :
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-![Panneau côté réunion](../assets/images/in-meeting-dialog.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog1.png" alt-text="Panneau côté réunion":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Mobilel du panneau côté réunion":::
 
 ---
 
-Le tableau suivant décrit le comportement de l’application quand elle est validée et non validée :
+Le tableau suivant décrit le comportement de l’application lorsqu’elle est validée et non validée :
 
 |Fonctionnalité d’application | L’application est validée | L’application n’est pas validée |
 |---|---|---|
@@ -149,12 +146,19 @@ L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage
 
 ---
 
-> [!NOTE]
-> La disposition des onglets doit être organisée lorsqu’il y a plus de 10 sondages ou enquêtes.
+#### <a name="apps-in-channel-meeting"></a>Applications dans la réunion de canal
+
+Une réunion de canal public planifiée a la même liste d’applications que son équipe parente. L’installation d’une application dans une réunion de canal la rend également disponible dans l’équipe parente, et vice versa.
+
+Toutefois, les instances d’onglet d’une réunion de canal sont distinctes des onglets du canal lui-même. Par exemple, supposons qu’un canal « Développement » ait un onglet « Polly ». Si vous créez une réunion « Standup » dans ce canal, cette réunion n’a pas d’onglet « Polly » tant que vous n’ajoutez pas explicitement [l’onglet à la réunion](#to-add-tabs-to-an-existing-meeting).
+
+Dans les réunions de canal planifiées publiques, une fois qu’un onglet de réunion est ajouté, il est accessible à partir de la page de détails de la réunion en sélectionnant sur l’objet de réunion. Prenons l’exemple suivant :
+
+:::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="Après une réunion":::
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Intégrer des bots dans le cycle de vie des réunions
 
-Les bots activés dans l’étendue de conversation de groupe commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot](../build-your-first-app/build-bot.md), puis continuez avec [la création d’applications pour les réunions Teams](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Les bots activés dans `groupchat` l’étendue commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot](../build-your-first-app/build-bot.md) , puis continuez avec [la création d’applications pour les réunions Teams](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### <a name="integrate-message-extensions-into-the-meeting-lifecycle"></a>Intégrer des extensions de message dans le cycle de vie des réunions
 
@@ -168,16 +172,9 @@ Les applications de réunions unifiées Teams vous permettent de concevoir votre
 
 Les paramètres de participant par défaut sont déterminés par l’administrateur informatique d’une organisation. Voici les rôles de participant dans une réunion :
 
-* **Organisateur** : l’organisateur planifie une réunion, définit les options de réunion, attribue des rôles de réunion et démarre la réunion. Les utilisateurs disposant d’un compte Microsoft 365 et d’une licence Teams peuvent uniquement être les organisateurs et contrôler les autorisations des participants. Un organisateur de réunion peut modifier les paramètres d’une réunion spécifique. Les organisateurs peuvent apporter ces modifications sur la page web **Options de** réunion.
-
-* **Présentateur** : Les présentateurs ont les mêmes fonctionnalités que les organisateurs avec des exclusions. Un présentateur ne peut pas supprimer un organisateur de la session ou modifier les options de réunion pour la session. Par défaut, les participants à une réunion ont le rôle présentateur.
-
-* **Participant** : un participant est un utilisateur qui est invité à participer à la réunion. Les participants ont des fonctionnalités limitées pendant la réunion, par exemple :
-  * Ils peuvent interagir avec d’autres membres de la réunion, mais ils ne peuvent pas gérer les paramètres de la réunion ni partager le contenu.  
-  * Ils peuvent afficher ou interagir avec l’application onglet sur la phase de réunion dans le client de bureau Teams sans installer l’application ou sans droits d’application. Ils ne peuvent pas afficher ou interagir avec l’application lors de la phase de réunion dans un client web Teams.
-  * Ils ne peuvent pas afficher ou interagir avec l’application dans le panneau latéral sans droits d’application.
-  * Ils ne sont pas autorisés à agir en tant que présentateur.
-  * Si le participant rejoint en tant qu’utilisateur anonyme, il ne peut pas afficher ou interagir avec l’application onglet sur la phase de réunion dans les clients web et de bureau Teams.
+* **Organisateur** : l’organisateur planifie une réunion, définit les options de réunion, attribue des rôles de réunion et démarre la réunion. Seuls les utilisateurs disposant d’un compte Microsoft 365 et d’une licence Teams peuvent être organisateurs et contrôler les autorisations des participants. Un organisateur de réunion peut modifier les paramètres d’une réunion spécifique. Les organisateurs peuvent apporter ces modifications sur la page web **Options de** réunion.
+* **Présentateur** : les présentateurs ont les mêmes fonctionnalités que les organisateurs avec des exclusions. Un présentateur ne peut pas supprimer un organisateur de la session ou modifier les options de réunion pour la session. Par défaut, les participants à une réunion ont le rôle présentateur.
+* **Participant** : un participant est invité à participer à une réunion, mais ne peut pas agir en tant que présentateur. Les participants peuvent interagir avec d’autres membres de la réunion, mais ils ne peuvent pas gérer les paramètres de la réunion ni partager le contenu.
 
 > [!NOTE]
 > Seul un organisateur ou un présentateur peut ajouter, supprimer ou désinstaller des applications.
@@ -193,9 +190,11 @@ Les types d’utilisateurs, tels que les utilisateurs in-tenants, invités, féd
 > [!NOTE]
 > Le type d’utilisateur n’est pas inclus dans l’API **getParticipantRole** .
 
+Les types d’utilisateurs, tels que l’organisateur, le présentateur ou le participant à une réunion, peuvent participer [à une réunion](#participant-roles-in-a-meeting).
+
 La liste suivante détaille les différents types d’utilisateurs ainsi que leur accessibilité et leurs performances :
 
-* **In-tenant** : les utilisateurs in-tenants appartiennent à l’organisation et disposent d’informations d’identification dans Microsoft Azure Active Directory (Azure AD) pour le locataire. Ce sont des employés à temps plein, sur site ou distants. Un utilisateur in-tenant peut être un organisateur, un présentateur ou un participant.
+* **In-tenant** : les utilisateurs in-tenants appartiennent à l’organisation et disposent d’informations d’identification dans Azure Active Directory (AAD) pour le locataire. Ce sont des employés à temps plein, sur site ou distants. Un utilisateur in-tenant peut être un organisateur, un présentateur ou un participant.
 * **Invité** : un invité est un participant d’une autre organisation invité à accéder à Teams ou à d’autres ressources dans le locataire de l’organisation. Les invités sont ajoutés à Azure AD de l’organisation et disposent des mêmes fonctionnalités Teams qu’un membre d’équipe natif. Ils ont accès aux conversations d’équipe, aux réunions et aux fichiers. Un invité peut être un organisateur, un présentateur ou un participant. Pour plus d’informations, consultez [l’accès invité dans Teams](/microsoftteams/guest-access).
 * **Fédéré ou externe** : un utilisateur fédéré est un utilisateur Teams externe d’une autre organisation qui a été invité à participer à une réunion. Les utilisateurs fédérés ont des informations d’identification valides avec des partenaires fédérés et sont autorisés par Teams. Ils n’ont pas accès à vos équipes ou à d’autres ressources partagées de votre organisation. L’accès invité est une meilleure option pour que les utilisateurs externes aient accès aux équipes et aux canaux. Pour plus d’informations, consultez [gérer l’accès externe dans Teams](/microsoftteams/manage-external-access).
 
@@ -205,12 +204,12 @@ La liste suivante détaille les différents types d’utilisateurs ainsi que leu
     > [!IMPORTANT]
     > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (GCC), mais ne sont pas disponibles pour GCC-High et le Ministère de la défense (DOD). Les applications tierces sont désactivées par défaut pour GCC. Pour activer des applications tierces pour GCC, consultez [gérer les stratégies d’autorisation d’application](/microsoftteams/teams-app-permission-policies) et [gérer les applications](/microsoftteams/manage-apps).
 
-* **Anonyme** : les utilisateurs anonymes n’ont pas d’identité Azure AD et ne sont pas fédérés avec un locataire. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion et une étape de réunion. Un utilisateur anonyme ne peut pas être organisateur, mais peut être présentateur ou participant.
+* **Anonyme** : les utilisateurs anonymes n’ont pas d’identité Azure AD et ne sont pas fédérés avec un locataire. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être organisateur, mais peut être présentateur ou participant.
 
     > [!NOTE]
     > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application au niveau de l’utilisateur par défaut. Pour plus d’informations, consultez [Gérer les applications](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctionnalités auxquelles chaque utilisateur peut accéder dans les réunions planifiées :
+Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctionnalités auxquelles chaque utilisateur peut accéder dans les réunions :
 
 | Type d'utilisateur | Onglets | Bots | Extensions de messages | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -224,11 +223,12 @@ Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctio
 >
 > * Les utilisateurs fédérés ne peuvent pas interagir avec les applications onglet dans les appels.
 > * Si des utilisateurs fédérés sont ajoutés à un appel existant avec des utilisateurs clients ou invités, tous les participants perdent la possibilité d’ajouter, de mettre à jour ou de supprimer des applications. Toutefois, seuls les utilisateurs locataires ou invités existants pourraient toujours interagir avec les applications qui ont été ajoutées avant d’inviter des utilisateurs fédérés à l’appel.
+> * Sur les appareils mobiles, les utilisateurs anonymes ne pourront pas accéder aux applications dans les réunions de canal public planifiées.
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Activer et configurer vos applications pour les réunions Teams](enable-and-configure-your-app-for-teams-meetings.md)
+> [Conditions préalables et références d’API pour les applications dans les réunions Teams](create-apps-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Voir aussi
 

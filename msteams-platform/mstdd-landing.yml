@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 6dcfa4770612496b94845ef8d922535b911bc81a
-  ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+  ms.openlocfilehash: d6673489a45fb33141738ee553c97805e8fd1257
+  ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/16/2022
-  ms.locfileid: "67786947"
+  ms.lasthandoff: 09/20/2022
+  ms.locfileid: "67833717"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -27,8 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
-    - text: Actions universelles pour les extensions de message basées sur la recherche
-      url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
+    - text: Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées
+      url: apps-in-teams-meetings/meeting-app-extensibility.md
     - text: Présentation de Teams Toolkit pour Visual Studio 2022
       url: toolkit/teams-toolkit-overview-visual-studio.md
     - text: Contrôles de collaboration [préversion développeur]
@@ -103,6 +103,8 @@ landingContent:
       url: ~/concepts/design/design-teams-app-overview.md
     - text: Exemples de code
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+    - text: Applications de réunions unifiées
+      url: ~/apps-in-teams-meetings/meeting-app-extensibility.md
   - linkListType: whats-new
     links:
     - text: Nouveautés

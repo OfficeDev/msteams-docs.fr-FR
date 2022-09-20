@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636160"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833705"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -23,7 +23,7 @@ Avec les applications pour Teams réunions, vous pouvez étendre les fonctionnal
 
 * Savoir comment développer des applications Teams Pour plus d’informations sur le développement de l’application Teams, consultez [développement de l’application Teams](../overview.md).
 
-* Utilisez votre application qui prend en charge les onglets configurables dans l’étendue `groupchat` . Pour plus d’informations, consultez [l’étendue de conversation de groupe](../resources/schema/manifest-schema.md#configurabletabs) et [créez un onglet de groupe](../build-your-first-app/build-channel-tab.md).
+* Utilisez votre application qui prend en charge les onglets configurables dans l’étendue groupchat et/ou d’équipe. Pour plus d’informations, consultez [les étendues](../resources/schema/manifest-schema.md#configurabletabs) et [générez votre première application onglet](../build-your-first-app/build-channel-tab.md).
 
 * Respectez [les instructions générales de conception des onglets Teams pour les scénarios](../tabs/design/tabs.md) de pré-réunion et de post-réunion. Pour obtenir des expériences pendant les réunions, [reportez-vous aux instructions de conception de l’onglet en réunion](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) et [aux instructions de conception des dialogues en réunion](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
@@ -39,7 +39,8 @@ Les fonctionnalités de l’application de réunions sont déclarées dans le ma
 
 > [!NOTE]
 >
-> * Les applications dans les réunions nécessitent une `groupchat` étendue. L’étendue `team` fonctionne uniquement pour les onglets dans les canaux.
+> * Les applications dans les réunions nécessitent ou `team` s’appliquent `groupchat` à l’étendue. L’étendue `team` fonctionne pour les onglets dans les canaux ou les réunions de canal.
+> * Pour prendre en charge l’ajout d’onglets dans des réunions de canal planifiées, spécifiez l’étendue de **l’équipe** dans **la section Étendues** dans le manifeste de votre application. Sans étendue **d’équipe** , l’application n’apparaîtrait pas dans le menu volant pour les réunions de canal.
 > * Les applications dans les réunions peuvent utiliser les contextes suivants : `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` et `meetingStage`.
 
 L’extrait de code suivant est un exemple d’onglet configurable utilisé dans une application pour les réunions Teams :
@@ -81,7 +82,7 @@ Prenez en charge l’étendue `groupchat` pour activer votre application dans le
 | **meetingChatTab** | Un onglet dans l'en-tête d'une conversation de groupe entre un ensemble d'utilisateurs pour une réunion planifiée. Vous pouvez spécifier soit **meetingChatTab** ou **meetingDetailsTab** pour vous assurer que les applications fonctionnent sur mobile. |
 | **meetingDetailsTab** | Un onglet dans l'en-tête de la vue des détails de la réunion du calendrier. Vous pouvez spécifier soit **meetingChatTab** ou **meetingDetailsTab** pour vous assurer que les applications fonctionnent sur mobile. |
 | **meetingSidePanel** | Un panneau en réunion s'est ouvert à travers le bar unifié (U-bar). |
-| **meetingStage** | Une application de `meetingSidePanel` peut être partagée à l'étape de la réunion. Vous ne pouvez pas utiliser cette application sur les clients de salle Teams. |
+| **meetingStage** | Une application de `meetingSidePanel` peut être partagée à l'étape de la réunion. Vous ne pouvez pas utiliser cette application sur les clients mobiles ou de salle Teams. |
 
 Une fois que vous avez activé votre application pour Teams réunions, vous devez configurer votre application avant une réunion, pendant une réunion et après une réunion.
 
@@ -100,9 +101,9 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 Pour ajouter un onglet à une réunion :
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
-1. Sélectionnez l’onglet **Détails**, puis sélectionnez :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="La capture d’écran explique comment utiliser l’icône de bouton Plus dans l’onglet Détails pour installer l’application sous la forme Tab.":::
+1. Sélectionnez l’onglet **Détails** , puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="La capture d’écran décrit comment installer l’application sous la forme d’un onglet dans l’onglet de pré-réunion de la réunion Teams.":::
+    <img src="../assets/images/apps-in-meetings/PreMeeting1.png" alt="Pre-meeting experience" width="900"/>
 
 1. Dans la galerie d’onglets qui s’affiche, sélectionnez l’application que vous souhaitez ajouter et suivez les étapes nécessaires. L’application est installée sous forme d’onglet.
 
@@ -143,7 +144,7 @@ La notification en réunion est utilisée pour impliquer les participants pendan
 
 La notification en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans la conversation de la réunion. Une URL de ressource externe est utilisée pour afficher la notification en réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="La capture d’écran est un exemple qui montre comment utiliser une boîte de dialogue en réunion.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Exemple montrant comment utiliser une boîte de dialogue en réunion.":::
 
 Vous pouvez également ajouter l’image d’affichage Teams et la carte de contacts de l’utilisateur à la notification en réunion en fonction du jeton `onBehalfOf` avec l’utilisateur NULL et le nom d’affichage transmis dans la charge utile. Voici un exemple de charge utile :
 
@@ -183,18 +184,7 @@ La phase de réunion partagée permet aux participants à la réunion d’intera
 
 Les participants peuvent partager l'ensemble de l'application avec la scène de la réunion collaborative en utilisant le bouton Partager la scène du panneau latéral de l'application.
 
-> [!NOTE]
-> La phase de partage de l’ensemble de l’application vers la phase de réunion dans le mobile est actuellement disponible uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
-
-# <a name="desktop"></a>[Imprimante de bureau](#tab/Desktop)
-
-:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="La capture d’écran décrit comment partager l’ensemble de l’application à la phase de réunion collaborative sur le bureau.":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
-
-:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="La capture d’écran décrit comment partager l’ensemble de l’application à la phase de réunion collaborative sur mobile.":::
-
----
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
 Pour partager l’ensemble de l’application à mettre en scène, dans le manifeste de l’application, vous devez configurer `meetingStage` et `meetingSidePanel` en tant que contextes d’image. Par exemple :
 
@@ -220,7 +210,7 @@ Pour plus d'informations, voir [app manifest](../resources/schema/manifest-schem
 
 Les participants peuvent partager des parties spécifiques de l'application vers la fenêtre de partage collaborative en utilisant les API de partage vers la scène. Les API sont disponibles dans le SDK du client Teams et sont invoquées à partir du panneau latéral de l'application.
 
-:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="La capture d’écran décrit comment partager une partie spécifique de l’application à la phase de réunion dans la réunion Teams.":::
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 Pour partager des parties spécifiques de l'application sur scène, vous devez invoquer les API correspondantes dans la bibliothèque SDK du client Teams. Pour plus d'informations, consultez la [référence de l’API](API-references.md).
 
@@ -244,7 +234,7 @@ Les configurations d’après et [d’avant les réunions sont les mêmes](#befo
 ## <a name="step-by-step-guides"></a>Guides détaillés
 
 * Suivez le [guide pas à pas](../sbs-meeting-token-generator.yml) pour générer un jeton de réunion dans votre réunion Teams.
-* Suivez le [guide pas à pas](../sbs-meetings-sidepanel.yml) pour générer la réunion SidePanel dans votre réunion Teams.
+* Suivez le [guide pas à pas](../sbs-meetings-sidepanel.yml) pour générer un panneau latéral de réunion dans votre réunion Teams.
 * Suivez le [guide pas à pas](../sbs-meetings-stage-view.yml) pour partager l’affichage de la vue des étapes dans votre réunion Teams.
 * Suivez le [guide pas à pas](../sbs-meeting-content-bubble.yml) pour générer une bulle de contenu de réunion dans votre réunion Teams.
 

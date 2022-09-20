@@ -4,12 +4,12 @@ description: Découvrez comment configurer votre abonnement Office 365 programme
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6d3524ffc5e2ec5bb8f43fefcc100050060e154e
+ms.sourcegitcommit: 22e0803bb1d17ccb5222b7a1aa0f1ccebd785bdc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503458"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67835546"
 ---
 # <a name="add-test-data-to-your-environment"></a>Ajouter des données de test à votre environnement
 
@@ -179,7 +179,7 @@ Par défaut, seuls les administrateurs généraux ou les administrateurs de serv
 
             foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public 
                     Write-Host "Successfully created team: " $group.DisplayName
                 }
                 catch {
