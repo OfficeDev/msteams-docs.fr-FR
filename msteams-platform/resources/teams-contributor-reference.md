@@ -1,20 +1,20 @@
 ---
 title: Contribuer à la documentation Teams
-description: Découvrez les étapes de création et de publication de la documentation Teams
+description: Découvrir les étapes de création et de publication de la documentation Teams
 author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 165f5df18395d329aa2f383d2f07e6f7ff3afdcf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a9b2f16b23eaa4879062c104a85b223564cc10c
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143080"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806758"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuer à la documentation Teams
 
-La documentation Teams fait partie de la bibliothèque de documentation technique **Microsoft Docs** . Le contenu est organisé en groupes appelés docsets, chacun représentant un groupe de documents associés gérés en tant qu’entité unique. Les articles du même docset ont la même extension de chemin d’URL après **docs.microsoft.com**. Par exemple, `/docs.microsoft.com/microsoftteams/...` est le début du chemin du fichier docset Teams. Les articles Teams sont écrits dans la syntaxe Markdown et hébergés sur GitHub.
+La documentation Teams fait partie de la bibliothèque de documentation technique **Microsoft Docs** . Le contenu est organisé en groupes appelés docsets, chacun représentant un groupe de documents associés gérés en tant qu’entité unique. Les articles du même docset ont la même extension de chemin d’URL après `learn.microsoft.com`. Par exemple, `/learn.microsoft.com/microsoftteams/...` est le début du chemin du fichier docset Teams. Les articles Teams sont écrits dans la syntaxe Markdown et hébergés sur GitHub.
 
 ## <a name="set-up-your-workspace"></a>Configurer votre espace de travail
 

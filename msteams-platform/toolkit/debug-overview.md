@@ -7,22 +7,28 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781015"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806921"
 ---
-# <a name="debug-your-microsoft-teams-app"></a>Déboguer votre application Microsoft Teams
+# <a name="debug-your-teams-app"></a>Déboguer votre Teams application
 
-Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre application Teams. Le débogage est le processus de vérification, de détection et de correction des problèmes ou bogues pour garantir que le programme s’exécute correctement dans Teams.
+
+Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre application Microsoft Teams. Le débogage est le processus de vérification, de détection et de correction des problèmes ou bogues pour garantir que le programme s’exécute correctement dans Teams.
 
 ::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>Déboguer votre application Teams pour Visual Studio Code
+
+Teams Toolkit dans Microsoft Visual Studio Code automatise le processus de débogage. Vous pouvez détecter les erreurs et les corriger, ainsi qu’afficher un aperçu de l’application Teams. Vous pouvez également personnaliser les paramètres de débogage pour créer votre onglet ou bot.
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Déboguer votre application Microsoft Teams pour Visual Studio Code
 
 Teams Toolkit dans Visual Studio Code automatise le processus de débogage. Vous pouvez détecter les erreurs et les corriger, ainsi qu’afficher un aperçu de l’application Teams. Vous pouvez également personnaliser les paramètres de débogage pour créer votre onglet ou bot.
+
 Pendant le processus de débogage :
 
 * Teams Toolkit démarre automatiquement les services d’application, lance les débogueurs et charge l’application Teams de manière indépendante.
@@ -203,7 +209,7 @@ Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer si
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Déboguer votre application Microsoft Teams à l’aide de Visual Studio
+## <a name="debug-your-teams-app-using-visual-studio"></a>Déboguer votre application Teams à l’aide de Visual Studio
 
 Teams Toolkit automatise les services de démarrage d’application, lance le débogage et charge l’application Teams. Après le débogage, vous pouvez afficher un aperçu de l’application Teams dans le client web Teams. Vous pouvez également personnaliser les paramètres de débogage pour utiliser vos points de terminaison de bot ou des variables d’environnement pour charger votre application configurée. Visual Studio vous permet de déboguer l’extension d’onglet, de bot et de message. Pendant le processus de débogage, Teams Toolkit prend en charge les fonctionnalités de débogage suivantes :
 
@@ -213,7 +219,7 @@ Teams Toolkit automatise les services de démarrage d’application, lance le d�
 * Recharge à chaud
 * Arrêter le débogage
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables
 
 | &nbsp; | Installer | Pour l’utilisation... |
 | --- | --- | --- |
@@ -248,16 +254,16 @@ L’image suivante montre les points d’arrêt bascule :
 
 ### <a name="hot-reload"></a>Recharge à chaud
 
-Sélectionnez **Recarga Dinâmica** pour appliquer vos modifications dans votre application Teams lorsque vous souhaitez mettre à jour et enregistrer les codes sources simultanément pendant le débogage.
+Sélectionnez **Rechargement à chaud** pour appliquer vos modifications dans votre application Teams lorsque vous souhaitez mettre à jour et enregistrer les codes sources simultanément pendant le débogage.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Sélectionner l’icône de rechargement à chaud":::
 
-Sélectionnez l’option **Recarga Dinâmica sur l’enregistrement de fichier** dans la liste déroulante pour activer le rechargement automatique à chaud.
+Sélectionnez l’option **Rechargement à chaud sur l’enregistrement de fichier** dans la liste déroulante pour activer le rechargement automatique à chaud.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Sélectionner le rechargement à chaud lors de l’enregistrement de fichier":::
   
    > [!Tip]
-   > Pour en savoir plus sur Recarga Dinâmica fonction de Visual Studio pendant le débogage, vous pouvez visiter <https://aka.ms/teamsfx-vs-hotreload>.
+   > Pour en savoir plus sur Rechargement à chaud fonction de Visual Studio pendant le débogage, vous pouvez visiter <https://aka.ms/teamsfx-vs-hotreload>.
 
 ### <a name="stop-debugging"></a>Arrêter le débogage
 
@@ -289,7 +295,7 @@ Vous pouvez ajouter **environmentVariables** au fichier **launchSettings.json** 
 
 Vous pouvez lancer l’application Teams en tant qu’application web au lieu de l’exécuter dans le client Teams.
 
-1. Sélectionnez **Propriétés** > **launchSettings.json** dans Průzkumník řešení panneau sous votre projet.
+1. Sélectionnez **Propriétés** > **launchSettings.json** dans Explorateur de solutions panneau sous votre projet.
 1. Supprimez « **launchUrl »** du fichier.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Lancer des équipes en tant qu’application web en supprimant launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
@@ -312,6 +318,3 @@ Vous pouvez lancer l’application Teams en tant qu’application web au lieu de
 * [Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud](provision.md)
 * [Déployer à partir du cloud](deploy.md)
 * [Prévisualiser et personnaliser le manifeste de l'application Teams](TeamsFx-preview-and-customize-app-manifest.md)
-* [Provisionner des ressources cloud à l’aide de Visual Studio](provision-cloud-resources.md)
-* [Déployer une application Teams dans le cloud à l’aide de Visual Studio](deploy-teams-app.md)
-* [Modifier le manifeste de l’application Teams à l’aide de Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

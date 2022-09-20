@@ -6,16 +6,16 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616962"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806856"
 ---
-# <a name="add-capabilities-to-microsoft-teams-apps"></a>Ajouter des fonctionnalités aux applications Microsoft Teams
+# <a name="add-capabilities-to-teams-apps"></a>Ajouter des fonctionnalités aux applications Teams
 
-L’ajout de fonctionnalités avec le Kit de ressources Teams vous permet d’inclure des fonctionnalités supplémentaires à votre application Teams existante. L’avantage d’ajouter d’autres fonctionnalités est que vous pouvez ajouter d’autres fonctions à votre application en ajoutant automatiquement des codes sources à l’aide du Kit de ressources Teams. Vous pouvez également choisir différentes fonctionnalités en fonction du projet que vous avez créé dans votre application Teams. Le tableau suivant répertorie les fonctionnalités de l’application Teams :
+L’ajout de fonctionnalités avec le Kit de ressources Teams vous permet d’inclure des fonctionnalités supplémentaires à votre application Microsoft Teams existante. L’avantage d’ajouter d’autres fonctionnalités est que vous pouvez ajouter d’autres fonctions à votre application en ajoutant automatiquement des codes sources à l’aide du Kit de ressources Teams. Vous pouvez également choisir différentes fonctionnalités en fonction du projet que vous avez créé dans votre application Teams. Le tableau suivant répertorie les fonctionnalités de l’application Teams :
 
 |Fonctionnalité|Description|Autres fonctionnalités prises en charge|
 |--------|-------------|-----------------|

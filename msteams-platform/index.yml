@@ -11,12 +11,12 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 48e77b1efaff9155a71e23caf6be8b6bd4dd8849
-  ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+  ms.openlocfilehash: da994dca368e71f6b9843262fd60fbb91fa322ea
+  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 08/13/2022
-  ms.locfileid: "67337221"
+  ms.lasthandoff: 09/19/2022
+  ms.locfileid: "67806914"
 highlightedContent:
   items:
   - title: Quelles sont les nouveautés ?
@@ -143,7 +143,7 @@ conceptualContent:
     - url: https://aka.ms/microsoftteamscommunitycall
       itemType: overview
       text: Appels de la communauté Microsoft Teams
-    - url: https://docs.microsoft.com/teamblog/
+    - url: https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog
       itemType: whats-new
       text: Annonces
     - url: /microsoftteams/platform/feedback
@@ -177,7 +177,7 @@ tools:
     url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
   - title: Kits de développement logiciel (SDK) Microsoft Graph
     imageSrc: ./assets/icons/graph-icon-1.png
-    url: https://docs.microsoft.com/graph/sdks/sdks-overview
+    url: https://learn.microsoft.com/graph/sdks/sdks-overview
   - title: Kit de développement logiciel (SDK) client JavaScript pour les onglets et d’autres expériences hébergées
     imageSrc: ./assets/icons/logo_js.png
     url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk

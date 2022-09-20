@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 95a42e4bd2064bc1ce4b775f13ba990890bc6776
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780729"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806772"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
 
@@ -64,7 +64,7 @@ Teams Toolkit est une extension dans Visual Studio Code. Il est intégré aux en
 
 | Entités | Description |
 | ---- | ---- |
-| Azure AD  | Azure Active Directory (Azure AD) est un service de gestion des identités et des accès basé sur le cloud. Ce service permet à vos employés d’accéder à des ressources externes, telles que Microsoft 365, le Azure-Portal et des milliers d’autres applications SaaS. |
+| Azure AD  | Azure Active Directory (Azure AD) est un service de gestion des identités et des accès basé sur le cloud. Ce service permet à vos employés d’accéder à des ressources externes, telles que Microsoft 365, le Portail Azure et des milliers d’autres applications SaaS. |
 | Microsoft 365  | Compte de développeur Teams lors du développement d’une application.|
 | Portail des développeurs | Portail des développeurs pour Teams est l’outil principal pour configurer, distribuer et gérer vos applications Microsoft Teams. Avec le Developer Portal, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’exécution et bien plus encore. |
 | Microsoft Graph | Microsoft Graph est une passerelle qui vous permet d’accéder aux données et aux renseignements dans Microsoft 365. Elle fournit un modèle de programmabilité unifié qui vous permet d’accéder à la quantité impressionnante de données disponibles dans Microsoft 365, Windows et Enterprise Mobility + Security. |
@@ -131,10 +131,11 @@ Les opérations suivantes ne sont pas encore prises en charge dans le Kit de res
 * [Espace de noms Microsoft.TeamsFx.Conversation](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Espace de noms Microsoft.TeamsFx.Helper](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
+::: zone-end
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Créer une application Teams dans Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Provisionner des ressources cloud à l’aide de Visual Studio](provision-cloud-resources.md)
 * [Déployer une application Teams dans le cloud à l’aide de Visual Studio](deploy-teams-app.md)
 
-::: zone-end
