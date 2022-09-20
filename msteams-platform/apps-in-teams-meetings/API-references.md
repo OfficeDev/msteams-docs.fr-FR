@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c151217bc2a93de9337688b562b9f63f142c09fa
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435012"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833724"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -355,7 +355,7 @@ Utilisez l’exemple suivant pour configurer la propriété de votre manifeste d
 >
 > * Le bot peut recevoir automatiquement des événements de début ou de fin de réunion à partir de toutes les réunions créées dans tous les canaux en ajoutant `ChannelMeeting.ReadBasic.Group` au manifeste pour l’autorisation RSC.
 >
-> * Pour un appel `organizer` en tête-à-tête est l’initiateur de la conversation et pour les appels `organizer` de groupe est l’initiateur de l’appel.
+> * Pour un appel `organizer` en tête-à-tête est l’initiateur de la conversation et pour les appels `organizer` de groupe est l’initiateur de l’appel. Pour les réunions `organizer`de canal public, il s’agit de la personne qui a créé le billet de canal.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -416,6 +416,33 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
              "tenantId": "<Tenant ID>" 
          }
     } 
+    ```
+
+* **Réunions de canal planifiées :**
+
+    ```json
+    { 
+        "details": { 
+        "msGraphResourceId": "MSoxNmUwYjdiYi05M2Q1LTQzNTItOTllMC0yM2VlNWYyZmZmZTIqMTY2MDc1ODYwNzc0MCoqMTk6a0RtQkpEWFZsYWl0QWhHcVB2SzBtRExZbHVTWnJub01WX1MxeFNkTjQxNDFAdGhyZWFkLnRhY3Yy", 
+        "scheduledStartTime": "2022-08-17T18:00:00Z", 
+        "scheduledEndTime": "2022-08-17T18:30:00Z", 
+        "type": "ChannelScheduled", 
+        "id": "MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==", 
+        "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3akDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141%40thread.tacv2/1660758607740?context=%7b%22Tid%22%3a%229f044231-b634-4bdd-b29d-2776e3dbd699%22%2c%22Oid%22%3a%2216e0b7bb-93d5-4352-99e0-23ee5f2fffe2%22%7d", 
+        "title": "Test channel meeting"
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "channel", 
+        "id": "19:kDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141@thread.tacv2;messageid=1660758607740"
+    }, 
+    "organizer": { 
+        "tenantId": "9f044231-b634-4bdd-b29d-2776e3dbd699", 
+        "objectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2", 
+        "id": "29:1q4D6ekLXEAALkrqyLXUIcwtVSdXx31bf6vMdfahmkTb9euYVYSsN9x4133pXLV_I2idpVriFe40e19XEZt57bQ", 
+        "aadObjectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2"
+    }
+    }
     ```
 
 * **Appels en tête-à-tête :**
@@ -503,7 +530,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 | **details.scheduledEndTime** | Heure de fin planifiée de la réunion, au format UTC. |
 | **details.joinUrl** | URL utilisée pour rejoindre la réunion. |
 | **details.title** | Titre de la réunion. |
-| **details.type** | Type de réunion (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled ou Unknown). |
+| **details.type** | Type de réunion (GroupCall, ChannelScheduled, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled ou Unknown). |
 | **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
 | **conversation.conversationType** | Type de conversation. |
 | **conversation.id** | ID de conversation de réunion. |

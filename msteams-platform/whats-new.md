@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786968"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833738"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -66,7 +66,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 19/04/2022 | Téléchargez votre application dans Microsoft Teams | Distribuer votre application > [Télécharger votre application](concepts/deploy-and-publish/apps-upload.md)|
 | 04/01/2022 | Présentation du guide pas à pas pour créer un bot conversationnel Teams| Créer des bots > Conversations de bot > Conversations de groupe et de canal > Guide pas à pas pour créer Teams [Bot conversationnel](sbs-teams-conversation-bot.yml) |
 | 30/03/2022 | Mise à jour du module Démarrage avec l’application Blazor à l’aide d’onglets et de bots|  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorupdate.yml)|
-|30/03/2022|Autorisations de périphérique pour le navigateur | Intégrer des fonctionnalités d’appareil > [Autorisations d’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
+| 30/03/2022 | Autorisations de périphérique pour le navigateur | Intégrer des fonctionnalités d’appareil > [Autorisations d’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
 | 29/03/2022 |Intégrer Sélecteur de personnes | Intégrer à Teams > [Intégrer Sélecteur de personnes](concepts/device-capabilities/people-picker-capability.md)
 | 23/03/2022 | Introduction d’un guide pas à pas pour déployer des liens dans Teams à l’aide d’un bot | Créer des extensions de messagerie > Ajouter un déploiement de lien > [Liens de déploiement dans Teams à l’aide de bot](sbs-botbuilder-linkunfurling.yml).|  
 | 22/03/2022 | Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
@@ -77,7 +77,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur l’action | Générer des extensions de messagerie > Commandes d'action > Définir des commandes d’action > [Générer une extension de messagerie basée sur des actions](sbs-meetingextension-action.yml)|
 | 24/02/2022 | Introduction du guide pas à pas pour créer une extension de messagerie basée sur la recherche | Générer des extensions de messagerie > Commandes de recherche > Définir des commandes de recherche > [Générer une extension de messagerie basée sur la recherche](sbs-messagingextension-searchcommand.yml)|
 | 24/02/2022 | Présentation du guide pas à pas pour créer des webhooks sortants | Générer des webhooks et des connecteurs > Générer des webhooks sortants > [Générer des webhooks sortants](sbs-outgoing-webhooks.yml)|
-| 23/02/2022 |Paramètres de classement du store Microsoft Teams| Distribuer votre application > Publier dans le magasin Teams > [Paramètres de classement des magasins Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 23/02/2022 | Paramètres de classement du store Microsoft Teams| Distribuer votre application > Publier dans le magasin Teams > [Paramètres de classement des magasins Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18/02/2022 | Présentation d’un glossaire complet pour la documentation des développeurs Microsoft Teams pour vous aider à trouver rapidement la définition d’un terme | [Glossaire](~/get-started/glossary.md) |
 | 18/02/2022 | Mise à jour du module Vue d’ensemble pour mapper l’application Teams aux objectifs de l’organisation, à l’histoire utilisateur et à l’exploration des fonctionnalités de l’application Teams | [Vue d’ensemble > Application Teams adaptée à](overview.md) |
 | 18/02/2022 | Mise à jour du module Notions de base de l’application pour planifier votre application afin d’inclure des cas d’usage de mappage aux fonctionnalités Teams et une liste de vérification de planification d’application | [Planifier votre application > Vue d’ensemble](~/concepts/app-fundamentals-overview.md) |
@@ -266,7 +266,8 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
-| 08/23/2022 | Partager des applications vers la phase de réunion Teams dans le mobile | Créer des applications pour les réunions et les appels Teams > [activer et configurer des applications pour les réunions](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 09/20/2022 | Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées | Créer des applications pour les réunions et les appels Teams > [applications de réunions unifiées](apps-in-teams-meetings/meeting-app-extensibility.md) |
+| 08/10/2022 | Applications pour les réunions de canal public planifiées | Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Désactiver et activer le son des API pour les applications dans l’étape de réunion Teams | Créer des applications pour les réunions et les appels Teams > [références d’API Applications de réunion](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 02/08/2022| Contrôles de collaboration pour Teams| Intégrer avec [les contrôles](samples/collaboration-control.md)Teams > Collaboration|
 | 30/06/2022 | Applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe| Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md)|
