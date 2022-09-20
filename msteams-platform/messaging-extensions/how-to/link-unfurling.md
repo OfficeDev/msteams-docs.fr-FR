@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment ajouter un déploiement de lien 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
+ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312221"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833389"
 ---
 # <a name="add-link-unfurling"></a>Ajouter un déploiement de lien
 
@@ -22,6 +22,7 @@ Ce document vous guide sur la façon d’ajouter un déploiement de lien à votr
 >
 > * Actuellement, le déploiement de liens n’est pas pris en charge sur les clients mobiles.
 > * Le résultat du déploiement du lien est mis en cache pendant 30 minutes.
+> * Les commandes d’extension de messagerie ne sont pas requises pour le déploiement de liens. Toutefois, il doit y avoir au moins une commande dans le manifeste, car il s’agit d’une propriété obligatoire dans les extensions de messagerie. Pour plus d’informations, consultez [les extensions de composition](/microsoftteams/platform/resources/schema/manifest-schema)
 
 L’extension de message Azure DevOps utilise le déploiement de liens pour rechercher les URL collées dans la zone de message de composition pointant vers un élément de travail. Dans l’image suivante, un utilisateur a collé une URL pour un élément dans Azure DevOps que l’extension de message a résolue dans une carte :
 
