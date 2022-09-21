@@ -11,12 +11,12 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: da994dca368e71f6b9843262fd60fbb91fa322ea
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 71a0f5ad43599fa6d9e96974d10863624cabc993
+  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806914"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67858915"
 highlightedContent:
   items:
   - title: Quelles sont les nouveautés ?
@@ -48,22 +48,22 @@ conceptualContent:
   items:
   - title: Apprendre
     links:
-    - url: /learn/modules/intro-microsoft-teams-apps
+    - url: /training/modules/intro-microsoft-teams-apps
       itemType: learn
       text: Créer des applications pour Microsoft Teams
-    - url: /learn/modules/embedded-web-experiences
+    - url: /training/modules/embedded-web-experiences
       itemType: learn
       text: Créer des expériences web incorporées avec des onglets
-    - url: /learn/modules/msteams-conversation-bots/
+    - url: /training/modules/msteams-conversation-bots/
       itemType: learn
       text: Créer des interactions conversationnelles avec des bots
-    - url: /learn/modules/msteams-messaging-extensions/
+    - url: /training/modules/msteams-messaging-extensions/
       itemType: learn
       text: Créer des interactions orientées tâches avec des extensions de message
-    - url: /learn/modules/msteams-task-modules/
+    - url: /training/modules/msteams-task-modules/
       itemType: learn
       text: Collecter des informations d’entrée et de collecte avec des modules de tâches
-    - url: /learn/modules/msteams-webhooks-connectors/
+    - url: /training/modules/msteams-webhooks-connectors/
       itemType: learn
       text: Connecter des services web à des canaux et des équipes avec des webhooks et des connecteurs Office 365
     - url: /microsoftteams/platform/m365-apps/overview

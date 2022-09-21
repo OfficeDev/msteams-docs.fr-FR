@@ -3,12 +3,12 @@ title: Nouveautés et mises à jour pour les développeurs dans Teams
 description: Quelles sont les nouvelles fonctions de développement de Microsoft Teams introduites et les mises à jour des fonctions existantes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833738"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858901"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -169,7 +169,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
-|30/11/2020|Intégration de la plateforme d'identité avec Teams Toolkit et Visual Studio Code pour les onglets |[Authentification par authentification unique avec Teams Toolkit et Visual Studio Code pour les onglets](toolkit/visual-studio-code-tab-sso.md)|
+|30/11/2020|Intégration de la plateforme d'identité avec Teams Toolkit et Visual Studio Code pour les onglets |[Authentification par authentification unique avec Teams Toolkit et Visual Studio Code pour les onglets](toolkit/add-single-sign-on.md)|
 |16/11/2020|Le manifeste de l'application Teams a été mis à jour à la version 1.8.|[Référence : schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md)|
 |10/11/2020|Les équipes élaborent des directives de conception |[ Lignes directrices pour la conception du Bot ](bots/design/bots.md)|
 |30/09/2020|L'envoi et la réception de fichiers aux robots sur des appareils mobiles sont désormais pris en charge |[Envoyez et recevez des fichiers à travers votre bot](resources/bot-v3/bots-files.md)|
@@ -184,7 +184,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 |20/07/2020|Outil de validation des applications Teams pour les soumissions AppSource |[Outil de validation des applications Teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |15/07/2020|Créer un assistant virtuel pour Teams |[Assistant virtuel pour Microsoft Teams](samples/virtual-assistant.md)|
 |14/07/2020|Documentation d'un indicateur de chargement natif |[Affichage d'un indicateur de chargement natif](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|01/07/2020|Commencez à créer des applications Teams avec la boîte à outils Visual Studio Code |[Créez des applications avec la boîte à outils Microsoft Teams et Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|01/07/2020|Commencez à créer des applications Teams avec la boîte à outils Visual Studio Code |[Créez des applications avec la boîte à outils Microsoft Teams et Visual Studio Code](sbs-gs-javascript.yml) |
 |01/07/2020|Ouverture de session unique pour les onglets GA for Teams sur le Web et sur le bureau |[Ouverture de session unique (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |05/06/2020| Le schéma du manifeste a été mis à jour à la version 1.7.| [Référence : schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md)|
 |18/05/2020|Intégrez Power Virtual Agents à Teams |[Intégrer un chatbot Power Virtual Agents à Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
