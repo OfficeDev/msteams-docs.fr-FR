@@ -1,18 +1,18 @@
 ---
 title: Installer Teams Toolkit
 author: zyxiaoyuer
-description: Dans ce module, découvrez l’installation du Kit de ressources Teams
+description: Dans ce module, découvrez l’installation de Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 9b6492efed353e2f3228a04da292141679401e66
+ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780683"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991655"
 ---
 # <a name="install-teams-toolkit"></a>Installer Teams Toolkit
 
@@ -94,7 +94,7 @@ Teams Toolkit est mis à niveau vers la dernière version par défaut. Les étap
 
 Avant de commencer l’installation, vous devez installer Visual Studio Installer.
 
-Vous pouvez télécharger la dernière Visual Studio Installer à partir de la page de [téléchargement de Visual Studio](https://visualstudio.microsoft.com/vs/preview/).
+Vous pouvez télécharger la dernière Visual Studio Installer à partir de la page de [téléchargement de Visual Studio](https://visualstudio.microsoft.com).
 
 ## <a name="steps-to-install-teams-toolkit"></a>Étapes d’installation de Teams Toolkit
 

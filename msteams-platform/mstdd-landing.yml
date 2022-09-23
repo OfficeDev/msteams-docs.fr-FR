@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: d6673489a45fb33141738ee553c97805e8fd1257
-  ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+  ms.openlocfilehash: c97800d01e7444ff10bf5fc31c785d00d076e217
+  ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/20/2022
-  ms.locfileid: "67833717"
+  ms.lasthandoff: 09/23/2022
+  ms.locfileid: "67991641"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -30,7 +30,7 @@ landingContent:
     - text: Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées
       url: apps-in-teams-meetings/meeting-app-extensibility.md
     - text: Présentation de Teams Toolkit pour Visual Studio 2022
-      url: toolkit/teams-toolkit-overview-visual-studio.md
+      url: toolkit/teams-toolkit-fundamentals.md
     - text: Contrôles de collaboration [préversion développeur]
       url: samples/collaboration-control.md
     - text: Créer des canaux partagés

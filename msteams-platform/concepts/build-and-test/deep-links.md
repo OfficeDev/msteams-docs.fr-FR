@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Dans cet article, vous allez apprendre à créer des liens profonds et à les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780883"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991000"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -258,7 +258,7 @@ Les paramètres de requête sont les suivants :
 * `content` : champ facultatif pour le champ détails de la réunion.
 
 > [!NOTE]
-> Actuellement, la spécification de l'emplacement n'est pas prise en charge. Vous devez spécifier le décalage UTC, c'est-à-dire les fuseaux horaires lors de la génération de vos heures de début et de fin.
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme cible d’URL dans le bouton de votre carte ou appuyer sur l’action via le type `openUrl`action.
 
@@ -348,7 +348,7 @@ Le format de lien profond suivant peut être utilisé dans un bot, un connecteur
 
 Les paramètres de requête sont les suivants :
 
-* `fileId` : ID de fichier unique de Sharepoint Online, également appelé `sourcedoc`. Par exemple,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId` : ID de client tel que `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType` : type de fichier pris en charge, tel que docx, pptx, xlsx et pdf.
 * `objectUrl` : URL de l’objet du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Par exemple : `https://microsoft.sharepoint.com/teams/(filepath)`.
@@ -385,7 +385,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-to-an-app"></a>Liaison profonde à une conversation
 
-Créez un lien profond pour l'application après son inscription dans le magasin Teams. Pour créer un lien pour lancer Teams, ajoutez l’ID d’application à l’URL suivante : `https://teams.microsoft.com/l/app/<your-app-id>`. Une boîte de dialogue s’affiche pour installer l’application.
+Créez un lien profond pour l'application après son inscription dans le magasin Teams. Pour créer un lien pour lancer Teams, ajoutez l’ID d’application à l’URL suivante : `https://teams.microsoft.com/l/app/<your-app-id>`. Une boîte de dialogue s’affiche pour installer ou ouvrir l’application.
 
 > [!NOTE]
 > Si votre application a été approuvée pour la plateforme mobile, vous pouvez établir un lien profond vers une application mobile. L’ID d’équipe Apple App Store Connect est également requis pour que le lien approfondi fonctionne sur Teams-iOS. Pour plus d’informations, consultez [la mise à jour de l’ID d’équipe Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).

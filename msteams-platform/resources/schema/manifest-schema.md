@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635335"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990930"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -396,7 +396,7 @@ Nom de l’expérience de votre application, affiché à destination des utilisa
 
 **Obligatoire**— objet
 
-Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations figurant dans votre entrée AppSource.
+Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
 Assurez-vous que votre description décrive votre expérience et aide les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs de `short` et `full` doivent être différentes. Votre brève description ne peut pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
@@ -409,13 +409,13 @@ Assurez-vous que votre description décrive votre expérience et aide les client
 
 **Facultatif**— chaîne
 
-Un identifiant unique pour l'application en notation inverse du domaine ; par exemple, com.example.myapp. Longueur maximale : 64 caractères.
+A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
 **Facultatif**— objet
 
-Permet de spécifier une langue par défaut et fournit des pointeurs vers d'autres fichiers de langue. Pour plus d'informations, voir [localisation](~/concepts/build-and-test/apps-localization.md).
+Allows the specification of a default language and provides pointers to more language files. For more information, see [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -459,10 +459,10 @@ Utilisé lorsque votre expérience d’application dispose d’une expérience d
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔️|L’URL https:// à utiliser lors de la configuration de l’onglet.|
 |`scopes`|tableau d’énumération|1|✔️|Actuellement, les onglets configurables ne prennent en charge que les étendues `team` et `groupchat`. |
-|`canUpdateConfiguration`|Boolean|||Une valeur indiquant si une instance de la configuration de l'onglet peut être mise à jour par l'utilisateur après sa création. Valeur par défaut : **vrai**.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`context` |tableau d’énumération|6||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|string|2048||Un chemin de fichier relatif vers une image d'aperçu d'onglet à utiliser dans SharePoint. Taille 1024x768. |
-|`supportedSharePointHosts`|tableau d’énumération|1||Définit la manière dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage`et `sharePointWebPart`  |
+|`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|tableau d’énumération|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -483,7 +483,8 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`context` | tableau d’énumération| 2|| L’ensemble `contextItem` des étendues où un onglet est pris en charge.|
 
 > [!NOTE]
-> La fonctionnalité searchUrl n'est pas disponible pour les développeurs tiers. Si vos onglets nécessitent des informations dépendantes du contexte pour afficher du contenu pertinent ou pour initier un flux d'authentification, Pour plus d'informations, voir [Obtenir un contexte pour votre onglet Microsoft Teams](../../tabs/how-to/access-teams-context.md).
+> The searchUrl feature is not available for the third-party developers.
+> If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>bots
 
@@ -496,10 +497,10 @@ L’élément est un tableau (maximum d’un seul élément &mdash; actuellement
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|string|64 caractères|✔️|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. L’ID peut être identique à [l’ID d’application](#id) globale.|
-|`scopes`|tableau d’énumération|3|✔️|Spécifie si le bot offre une expérience dans le contexte d'un canal dans un`team` , dans un chat de groupe (`groupchat` ), ou une expérience scopée à un utilisateur individuel seul (`personal` ). Ces options sont non exclusives.|
-|`needsChannelSelector`|Boolean|||Indique si le bot utilise ou non une indication de l'utilisateur pour l'ajouter à un canal spécifique. Par défaut : **`false`**|
-|`isNotificationOnly`|Booléen|||Indique si un bot est un bot unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Par défaut : **`false`**|
-|`supportsFiles`|Boolean|||Indique si le bot prend en charge la possibilité de charger/télécharger des fichiers dans le chat personnel. Par défaut : **`false`**|
+|`scopes`|tableau d’énumération|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
+|`isNotificationOnly`|Booléen|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
+|`supportsFiles`|Booléen|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
 |`supportsCalling`|Boolean|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT** : Cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  La propriété est fournie uniquement à des fins de test et d’exploration et ne doit pas être utilisée dans les applications de production. Par défaut :**`false`**|
 |`supportsVideo`|Boolean|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT** : Cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  La propriété est fournie uniquement à des fins de test et d’exploration et ne doit pas être utilisée dans les applications de production. Par défaut :**`false`**|
 
@@ -509,7 +510,7 @@ Une liste de commandes que votre robot peut recommander aux utilisateurs. L’ob
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`items.scopes`|tableau d’énumération|3|✔️|Spécifie l'étendue pour laquelle la liste de commandes est valide. Les options sont`team` ,`personal` , et`groupchat`.|
+|`items.scopes`|tableau d’énumération|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|tableau d’objets|10|✔️|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -530,7 +531,7 @@ L’objet est un tableau (maximum d’un élément) avec tous les éléments de 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔️|L’URL https:// à utiliser lors de la configuration du connecteur.|
-|`scopes`|tableau d’énumération|1|✔️|Indique si le connecteur offre une expérience dans le contexte d'un canal dans un `team`, ou une expérience limitée à un utilisateur individuel uniquement (`personal` ). Actuellement, seule la `team`portée est prise en charge.|
+|`scopes`|tableau d’énumération|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 caractères|✔️|Identificateur unique du connecteur qui correspond à son ID dans le [tableau de bord du développeur de connecteurs.](https://aka.ms/connectorsdashboard)|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -548,9 +549,9 @@ L’élément est un tableau (maximum d’un élément) avec tous les éléments
 |---|---|---|---|---|
 |`botId`|string|64|✔️|ID d’application Microsoft unique pour le bot qui sauvegarde l’extension de message, tel qu’il est inscrit auprès de l’infrastructure de bot. L’ID peut être identique à l’ID d’application global.|
 |`commands`|tableau d’objets|10|✔️|Tableau de commandes prises en charge par l’extension de message.|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d’une extension de message peut être mise à jour par l’utilisateur. Valeur par défaut : **false**.|
+|`canUpdateConfiguration`|Booléen|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|tableau d’Objets|5||Liste des gestionnaires qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
-|`messageHandlers.type`|string|||Le type de gestionnaire de messages. Doit être `"link"`.|
+|`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|tableau de Chaînes|||Tableau de domaines pour lequel le gestionnaire de messages de lien peut s’inscrire.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -565,20 +566,20 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`title`|chaîne|32 caractères|✔️|Le nom de la commande conviviale.|
 |`type`|string|64 caractères||Type de la commande. L’un des `query` ou `action`. Par défaut : **requête**.|
 |`description`|chaîne|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|Boolean|||Une valeur booléenne indique si la commande s'exécute initialement sans paramètres. La valeur par défaut est **faux**.|
+|`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|tableau de Chaînes|3||Définit l’emplacement à partir duquel l’extension de message peut être appelée. N’importe quelle combinaison de `compose`,`commandBox` ,`message` . La valeur par défaut est `["compose","commandBox"]`.|
-|`fetchTask`|Boolean|||Une valeur booléenne qui indique si le module de tâche doit être récupéré dynamiquement. La valeur par défaut est **faux**.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de message.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|chaîne|||Largeur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
 |`taskInfo.height`|string|||Hauteur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
 |`taskInfo.url`|chaîne|||URL webview initiale.|
 |`parameters`|tableau d'objet|5 éléments|✔️|Liste des paramètres que prend la commande. Minimum : 1 ; maximum : 5.|
-|`parameters.name`|string|64 caractères|✔️|Le nom du paramètre tel qu'il apparaît dans le client. Le nom du paramètre est inclus dans la requête de l'utilisateur.|
-|`parameters.title`|string|32 caractères|✔️|Titre convivial du paramètre.|
+|`parameters.name`|string|64 caractères|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
+|`parameters.title`|chaîne|32 caractères|✔️|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
-|`parameters.inputType`|chaîne|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: false`. Un des éléments suivants`text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|128 caractères||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour le `choiceset`. Utilisez uniquement lorsque `parameter.inputType` est `choiceset`.|
 |`parameters.choices.title`|string|128 caractères|✔️|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔️|Valeur du choix.|
@@ -587,12 +588,12 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif** — tableau de chaînes
 
-Un tableau de `string`, qui spécifie les permissions demandées par l'application, qui permettent aux utilisateurs finaux de savoir comment fonctionne l'extension. Les options suivantes sont non exclusives :
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension does. The following options are non-exclusive:
 
 * `identity` &emsp;Nécessite des informations d’identité d’utilisateur.
 * `messageTeamMembers` &emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe.
 
-Si vous modifiez ces autorisations pendant la mise à jour de l'application, vos utilisateurs devront répéter le processus de consentement après avoir exécuté l'application mise à jour. Pour plus d'informations, voir [mise à jour de votre application](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+Changing these permissions during app update, causes your users to repeat the consent process after they run the updated app. For more information, see [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
 > [!NOTE]
 > Les autorisations sont désormais déconseillées.
@@ -601,7 +602,7 @@ Si vous modifiez ces autorisations pendant la mise à jour de l'application, vos
 
 **Facultatif** — tableau de chaînes
 
-Fournit les fonctionnalités natives de l'appareil de l'utilisateur auxquelles votre application demande à accéder. Les options sont les suivantes :
+Provides the native features on a user's device that your app requests access to. Options are:
 
 * `geolocation`
 * `media`
@@ -649,7 +650,7 @@ Spécifiez la configuration du connecteur Graph de l’application. Si ce param�
 
 **Facultatif**— booléen
 
-Indique si l'indicateur de chargement doit être affiché ou non lorsqu'une application ou un onglet est en cours de chargement. La valeur par défaut est **faux**.
+Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
 >Si vous sélectionnez`showLoadingIndicator` comme true dans le manifeste de votre application, pour charger correctement la page, modifiez les pages de contenu de vos onglets et modules de tâches, comme décrit dans le document [Afficher un indicateur de chargement natif](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
 
@@ -680,7 +681,7 @@ Définissez les propriétés utilisées par votre application pour publier un fl
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`type`|string|32 caractères|✔️|Le type de notification. *Voir ci-dessous*.|
-|`description`|string|128 caractères|✔️|Une brève description de la notification. *Voir ci-dessous*.|
+|`description`|string|128 caractères|✔️|A brief description of the notification. *See below*.|
 |`templateText`|string|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
 
 ```json
@@ -744,7 +745,7 @@ Spécifie l’étendue d’installation définie par défaut pour cette applicat
 
 **Facultatif**— objet
 
-Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capacité par défaut lorsque l'utilisateur installe l'application. Les options sont les suivantes :
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
@@ -752,9 +753,9 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -810,13 +811,13 @@ Spécifie l’offre SaaS associée à votre application.
 
 |Nom| Type|Taille maximale|Requis|Description|
 |---|---|---|---|---|
-|`offerId`| string | 2 048 caractères | ✔️ | Un identifiant unique qui comprend votre ID d'éditeur et votre ID d'offre, que vous pouvez trouver dans le [centre des partenaires](https://partner.microsoft.com/dashboard). Vous devez formater la chaîne de caractères comme suit`publisherId.offerId`|
+|`offerId`| string | 2 048 caractères | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
 **Facultatif**— objet
 
-Spécifiez la définition de l'extension de réunion. Pour plus d'informations, voir [les scènes personnalisées en mode Ensemble dans Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -839,7 +840,7 @@ Spécifiez la définition de l'extension de réunion. Pour plus d'informations, 
 **Facultatif**— objet
 
 > [!NOTE]
-> Si vous définissez la propriété `manifestVersion` sur 1.12, la propriété d’autorisation est incompatible avec les versions antérieures (version 1.11 ou antérieure) du manifeste. L’autorisation est prise en charge pour la version 1.12 du manifeste.
+> If you set the `manifestVersion` property to 1.12, the authorization property is incompatible with the older versions (version 1.11 or earlier) of the manifest. Authorization is supported for manifest version 1.12.
 
 Spécifiez et consolidez les informations relatives à l’autorisation pour l’application.
 
@@ -857,7 +858,7 @@ Spécifiez et consolidez les informations relatives à l’autorisation pour l�
 
 |Nom| Type|Taille maximale|Requis |Description|
 |---|---|---|---|---|
-|`type`|string||✔️| Le type de l'autorisation spécifique à la ressource. Options : `Application`et `Delegated`.|
+|`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 caractères|✔️|Nom de l’autorisation spécifique à la ressource. Pour plus d’informations, consultez [Autorisations d'application spécifiques aux ressources](#resource-specific-application-permissions) et [Autorisations déléguées spécifiques aux ressources](#resource-specific-delegated-permissions)|
 
 #### <a name="resource-specific-application-permissions"></a>Autorisations d’application spécifiques aux ressources
@@ -875,6 +876,7 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |`ChannelMeetingParticipant.Read.Group`| Permet à l’application de lire les informations des participants, notamment le nom, le rôle, l’ID, les horaires de participation et le temps restant, des réunions de canal associées à cette équipe, au nom de l’utilisateur connecté.|
     |`InAppPurchase.Allow.Group`| Permet à l’application d’afficher les offres Marketplace aux utilisateurs de cette équipe et d’effectuer leurs achats au sein de l’application, au nom de l’utilisateur connecté.|
     |`ChannelMeetingStage.Write.Group`| Permet à l’application d’afficher du contenu sur la fenêtre de partage des réunions de canal associées à cette équipe, pour le compte de l’utilisateur connecté.|
+    |`LiveShareSession.ReadWrite.Group`|Permet à l’application de créer et de synchroniser des sessions Live Share pour les réunions associées à cette équipe, et d’accéder aux informations connexes sur la liste de la réunion, telles que le rôle de réunion du membre, pour le compte de l’utilisateur connecté.|
 
 * **Autorisations déléguées spécifiques aux ressources pour les conversations ou les réunions**
 
@@ -884,6 +886,8 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |`MeetingStage.Write.Chat`|Permet à l’application d’afficher du contenu sur la phase de réunion dans les réunions associées à cette conversation, au nom de l’utilisateur connecté.|
     |`OnlineMeetingParticipant.Read.Chat`|Permet à l’application de lire les informations des participants, y compris le nom, le rôle, l’ID, les heures de participation et les heures restantes, de la réunion associée à cette conversation, au nom de l’utilisateur.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permet à l’application de basculer l’audio entrant pour les participants aux réunions associées à cette conversation, pour le compte de l’utilisateur connecté.|
+    |`LiveShareSession.ReadWrite.Chat`|Permet à l’application de créer et de synchroniser des sessions Live Share pour les réunions associées à cette conversation, et d’accéder aux informations connexes sur la liste de la réunion, telles que le rôle de réunion du membre, pour le compte de l’utilisateur connecté.|   
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|Permet à l’application de détecter les modifications apportées à l’état de l’audio entrant dans les réunions associées à cette conversation, pour le compte de l’utilisateur connecté.|
 
 * **Autorisations déléguées spécifiques aux ressources pour les utilisateurs**
 

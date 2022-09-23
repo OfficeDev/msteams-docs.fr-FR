@@ -4,12 +4,12 @@ description: Découvrez comment envoyer des messages proactifs avec votre bot Te
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: adecf29766909fb9a8692aa135e09c41a307c867
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586902"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990937"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -22,12 +22,10 @@ Un message proactif est un message envoyé par un bot qui ne répond pas à la d
 * Messages planifiés
 
 > [!IMPORTANT]
-> Les bots sont disponibles dans government community cloud (GCC) et GCC-High, mais pas dans les environnements du ministère de la Défense (DOD).
 >
-> Pour les messages proactifs, les bots doivent utiliser les points de terminaison suivants pour les environnements cloud gouvernementaux :
+> * Pour envoyer un message proactif, il est recommandé de commencer par [créer un bot de notification avec JavaScript](../../../sbs-gs-notificationbot.yml) ou un [exemple de notification de webhook entrant](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Pour commencer, téléchargez [l’exploration du Kit de ressources Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) . Pour plus d’informations, consultez les [documents du Kit de ressources Teams](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Cloud de la communauté du secteur public : `https://smba.infra.gcc.teams.microsoft.com/gcc`.
-> * GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD). Pour les messages proactifs, les bots doivent utiliser les points de terminaison suivants pour les environnements cloud gouvernementaux : <br> - GCC : `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Pour envoyer un message proactif à un utilisateur, à une conversation de groupe ou à une équipe, votre bot doit disposer de l’accès requis pour envoyer le message. Pour une conversation de groupe ou d’équipe, l’application contenant votre bot doit d’abord être installée à cet emplacement.
 
@@ -87,7 +85,7 @@ Visionnez la vidéo suivante pour découvrir comment envoyer des messages proact
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>Comprendre qui a bloqué, désactivé ou désinstallé un bot

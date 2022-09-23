@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: b62c2312524c1844b9b40b32d2d21ecdd2db43dc
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833654"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990888"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Applications pour les réunions et les appels Teams
 
@@ -36,8 +36,6 @@ Les utilisateurs peuvent ajouter des applications à la réunion à l’aide de 
 Visitez le [magasin Teams](https://go.microsoft.com/fwlink/p/?LinkID=2183121) et explorez les applications conçues spécifiquement pour les réunions.
 
 > [!Note]
->
-> * Actuellement, l’ajout d’une application n’est pas pris en charge dans le mobile. Toutefois, un utilisateur peut afficher l’application et partager l’application pour la mettre en scène à partir d’un appareil mobile.
 >
 > * Actuellement, lorsqu’une troisième personne est ajoutée à un appel un-à-un, l’appel est élevé à un appel de groupe, ce qui signifie qu’une nouvelle session démarre. Les applications ajoutées à l’appel un-à-un ne sont pas disponibles dans l’appel de groupe. Toutefois, ils peuvent être ajoutés à nouveau.
 >

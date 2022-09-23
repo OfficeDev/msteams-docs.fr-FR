@@ -5,19 +5,19 @@ description: Dans cet article, utilisez des bots conversationnels dans Microsoft
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: b9d0bda0d733a3b4a3204449ca9fd2ed6746ac98
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363511"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990909"
 ---
 # <a name="build-bots-for-teams"></a>Créer des bots pour Teams
 
-> [!NOTE]
-> Il est recommandé de créer votre première application bot ou application de bot de notification à l’aide de l’outil de développement de nouvelle génération pour Teams. Pour plus d’informations, consultez [Teams Toolkit pour Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) et [Teams Toolkit pour Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
-
 Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches simples et répétitives effectuées par des utilisateurs tels que le service clientèle ou le personnel de support technique. L’utilisation quotidienne de bots inclut des bots qui fournissent des informations sur la météo, qui effectuent des réservations au restaurant ou qui fournissent des informations concernant les voyages. Les interactions avec les bots peuvent être des questions et réponses rapides ou des conversations complexes.
+
+> [!NOTE]
+> Il est recommandé de commencer par [créer votre première application bot à l’aide de JavaScript](../sbs-gs-bot.yml) ou [de générer un bot de notification avec JavaScript](../sbs-gs-notificationbot.yml) à l’aide de l’outil de développement de nouvelle génération pour Teams. Pour plus d’informations, consultez [la vue d’ensemble du Kit de ressources Teams](../toolkit/teams-toolkit-fundamentals.md).
 
 > [!IMPORTANT]
 >
