@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990930"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026968"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -576,7 +576,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo.url`|chaîne|||URL webview initiale.|
 |`parameters`|tableau d'objet|5 éléments|✔️|Liste des paramètres que prend la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
-|`parameters.title`|chaîne|32 caractères|✔️|Titre convivial du paramètre.|
+|`parameters.title`|string|32 caractères|✔️|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
 |`parameters.inputType`|string|128 caractères||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
@@ -634,7 +634,7 @@ Fournissez votre ID d’application Azure Active Directory et vos informations d
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔️|Application Azure AD ID d’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔️|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **NOTE:** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, <https://notapplicable> pour éviter une réponse d’erreur. |
+|`resource`|string|2 048 caractères|✔️|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **NOTE:** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, `https://notapplicable` pour éviter une réponse d’erreur. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -682,7 +682,7 @@ Définissez les propriétés utilisées par votre application pour publier un fl
 |---|---|---|---|---|
 |`type`|string|32 caractères|✔️|Le type de notification. *Voir ci-dessous*.|
 |`description`|string|128 caractères|✔️|A brief description of the notification. *See below*.|
-|`templateText`|string|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
+|`templateText`|chaîne|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
 
 ```json
 {
@@ -886,7 +886,7 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |`MeetingStage.Write.Chat`|Permet à l’application d’afficher du contenu sur la phase de réunion dans les réunions associées à cette conversation, au nom de l’utilisateur connecté.|
     |`OnlineMeetingParticipant.Read.Chat`|Permet à l’application de lire les informations des participants, y compris le nom, le rôle, l’ID, les heures de participation et les heures restantes, de la réunion associée à cette conversation, au nom de l’utilisateur.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permet à l’application de basculer l’audio entrant pour les participants aux réunions associées à cette conversation, pour le compte de l’utilisateur connecté.|
-    |`LiveShareSession.ReadWrite.Chat`|Permet à l’application de créer et de synchroniser des sessions Live Share pour les réunions associées à cette conversation, et d’accéder aux informations connexes sur la liste de la réunion, telles que le rôle de réunion du membre, pour le compte de l’utilisateur connecté.|   
+    |`LiveShareSession.ReadWrite.Chat`|Permet à l’application de créer et de synchroniser des sessions Live Share pour les réunions associées à cette conversation, et d’accéder aux informations connexes sur la liste de la réunion, telles que le rôle de réunion du membre, pour le compte de l’utilisateur connecté.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Permet à l’application de détecter les modifications apportées à l’état de l’audio entrant dans les réunions associées à cette conversation, pour le compte de l’utilisateur connecté.|
 
 * **Autorisations déléguées spécifiques aux ressources pour les utilisateurs**

@@ -4,12 +4,12 @@ description: Configurez l’authentification unique (SSO) avec Azure AD en confi
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d’authentification Teams Microsoft Azure Active Directory (Azure AD) étendue de l’authentification unique du jeton d’accès
-ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 92b974840262fedb268aa7c160aa28fc0a33e2cb
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653197"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027094"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Inscrire votre application d’onglet dans Azure AD
 
@@ -154,8 +154,8 @@ Pour configurer l’étendue et autoriser les applications clientes approuvées,
     >
     >   | Si le nom de la ressource de base utilisé est | l’URL sera... | Le format est pris en charge dans... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | Toutes les plateformes.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Bureau, web et iOS uniquement. Ce n’est pas pris en charge sur Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | Toutes les plateformes.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Bureau, web et iOS uniquement. Ce n’est pas pris en charge sur Android. |
     >
     >    Utilisez l’option en minuscules *demoapplication* comme nom de la ressource de base.
 

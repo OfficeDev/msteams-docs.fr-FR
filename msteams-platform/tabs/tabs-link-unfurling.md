@@ -5,12 +5,12 @@ description: Découvrez l’affichage intermédiaire, un composant d’interface
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450449"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027290"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -24,7 +24,7 @@ La vue des étapes est un composant d’interface utilisateur en plein écran qu
 
 ## <a name="advantage-of-stage-view"></a>Avantage de la vue des étapes
 
-L’Affichage étendu fournit une expérience plus transparente de l’affichage de contenu dans Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide ultérieur, ce qui entraîne un plus grand engagement de l’utilisateur avec votre application.
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## <a name="stage-view-vs-task-module"></a>Vue des étapes et module de tâche
 
@@ -84,13 +84,13 @@ Le `invoke`type de demande doit être `composeExtension/queryLink`.
 
 Voici le processus d’appel de la vue d’étape :
 
-* Lorsque l'utilisateur sélectionne **Affichage** , le robot reçoit une `invoke`demande. Le type de demande st `composeExtension/queryLink`.
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
 * `invoke` La réponse du robot contient une carte adaptative `tab/tabInfoAction`avec le type.
 * Le robot répond avec un `200` code.
 
 > [!NOTE]
-
-> Sur les clients mobiles de Teams, l'invocation de l’Affichage étendu pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur web par défaut de l'appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo`.
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 
@@ -141,8 +141,8 @@ Encodé
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Chaîne | 64 | Cette propriété est un identifiant unique pour l'entité que l'onglet affiche. Ce champ est obligatoire.|
 | `name` | Chaîne | 128 | Cette propriété est le nom d'affichage de l'onglet dans l'interface du canal. Ce champ est facultatif.|
-| `contentUrl` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur de l'entité à afficher dans le canevas Teams. Il s’agit d’un champ obligatoire.|
-| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// vers laquelle il faut pointer, si un utilisateur choisit de l'afficher dans un navigateur. Il s’agit d’un champ obligatoire.|
+| `contentUrl` | Chaîne | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | Chaîne | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
 | `removeUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur à afficher lorsque l'utilisateur supprime l'onglet. Il s'agit d'un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code

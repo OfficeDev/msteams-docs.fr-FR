@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: bb85c9c7d00fea47796e171cc1a0175367462942
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338899"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027080"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Conception de votre extension de message Microsoft Teams
 
@@ -117,7 +117,7 @@ Les scénarios suivants montrent les principales façons dont les utilisateurs u
 
 ### <a name="insert-content-into-a-message"></a>Insérer du contenu dans un message
 
-**1. Sélectionnez une extension de message**. Les utilisateurs peuvent rechercher le contenu qu’ils souhaitent partager à partir de la zone de composition.
+**1. Select a message extension**. Users can search for the content they want to share from the compose box.
 
 #### <a name="mobile"></a>Mobile
 
@@ -127,7 +127,7 @@ Les scénarios suivants montrent les principales façons dont les utilisateurs u
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Exemple montrant un utilisateur recherchant du contenu à insérer à partir de la zone de rédaction.":::
 
-**2. Insérer le contenu**. Une fois publiés, d’autres utilisateurs peuvent répondre ou sélectionner le contenu pour afficher plus d’informations dans votre application.
+**2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
 #### <a name="mobile"></a>Mobile
 
@@ -161,7 +161,7 @@ Les extensions de message vous permettent également d’insérer des liens enri
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Exemple montrant un utilisateur collant un lien dans la zone de rédaction.":::
 
-**2. Insérer le contenu**. Si votre application reconnaît l’URL dans la zone de composition, elle affiche le lien sous la forme d’une carte qui fournit un aperçu riche en contenu du contenu web. (Pour plus d’informations, consultez les [Instructions de conception de cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md) .)
+**2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
 #### <a name="mobile"></a>Mobile
 
@@ -230,7 +230,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 #### <a name="do-integrate-with-single-sign-on"></a>À faire : intégrer avec l’authentification unique
 
-L’authentification unique facilite, accélère et sécurise le processus de connexion. En outre, si un utilisateur s’est déjà connecté à votre application personnelle, il n’a’ pas besoin de se reconnecter pour accéder à l’extension de message.
+SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ Si votre extension de message nécessite des commandes d’action, gardez le mod
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
 
-Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">jetons de couleur (Fluent UI)</a> dans votre conception.
+Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez [jetons de couleur (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) dans votre conception.
 
    :::column-end:::
    :::column span="":::

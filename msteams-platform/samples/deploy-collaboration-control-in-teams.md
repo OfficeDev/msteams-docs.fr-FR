@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment déployer votre application avec
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 0ea4f1c25a84ec1bcbefc379e5021815a5bea650
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179091"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027304"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>Déployer des contrôles collaboration dans Microsoft Teams
 
@@ -21,7 +21,7 @@ Les contrôles de collaboration fonctionnent actuellement mieux dans Microsoft T
 
 ## <a name="configure-the-app-for-teams"></a>Configurer l’application pour Teams
 
-L’application que vous avez créée dans [créer une application pilotée par modèle](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) n’a qu’un seul volet gauche et il n’existe aucune commande complexe. Ainsi, avant d’ajouter votre application dans Teams, vous pouvez masquer le volet gauche et rendre l’affichage d’en-tête plus compréhensible.
+L’application que vous avez créée dans [créer une application pilotée par modèle](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) n’a qu’un seul volet gauche et il n’existe aucune commande complexe. Ainsi, avant d’ajouter votre application dans Teams, vous pouvez masquer le volet gauche et rendre l’affichage d’en-tête plus compréhensible.
 
 > [!NOTE]
 > N’activez pas les étapes suivantes si vous souhaitez afficher le volet gauche et l’en-tête à haute densité à vos utilisateurs.

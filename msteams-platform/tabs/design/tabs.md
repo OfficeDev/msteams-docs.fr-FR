@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 26e6982cf7b00d21fb8a15e0d8f194ac8d08ac7d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558323"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026996"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevoir votre onglet pour Microsoft Teams
 
@@ -62,7 +62,7 @@ Il existe un bref processus de configuration pour ajouter une application en tan
 |3|**IFrame** : espace réactif pour le contenu de votre application (par exemple, authentification ou paramètres d’onglet).|
 |4|**À propos du lien** : ouvre une boîte de dialogue affichant plus d’informations sur l’application, telles qu’une description complète, les autorisations requises par l’application et les liens vers votre politique de confidentialité et les conditions d’utilisation.|
 |5|**Bouton Fermer** : ferme la boîte de dialogue.|
-|6 |**Option Avertir les membres de l’équipe** : la boîte de dialogue demande aux utilisateurs s’ils souhaitent créer un billet pour informer d’autres utilisateurs qu’ils ont ajouté un onglet.|
+|6|**Option Avertir les membres de l’équipe** : la boîte de dialogue demande aux utilisateurs s’ils souhaitent créer un billet pour informer d’autres utilisateurs qu’ils ont ajouté un onglet.|
 |7 |**Bouton Précédent** : passe à l’étape précédente en fonction de l’endroit où la boîte de dialogue s’est ouverte.|
 |8 |**Bouton Enregistrer** : termine la configuration de l’onglet.|
 
@@ -270,7 +270,7 @@ Supprimez les étapes inutiles pour ajouter un onglet.
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
 
-Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">jetons de couleur (Fluent UI)</a> dans votre conception.
+Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez [jetons de couleur (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) dans votre conception.
 
    :::column-end:::
    :::column span="":::

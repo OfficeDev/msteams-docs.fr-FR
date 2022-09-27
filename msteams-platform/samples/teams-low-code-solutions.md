@@ -5,12 +5,12 @@ description: Découvrez les solutions Microsoft low et no code disponibles avec 
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 05553535f146316dddef311a9a7c2f859fedc3f8
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858908"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027227"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Créer des applications personnalisées à faible code pour Teams
 
@@ -43,7 +43,7 @@ La nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=214
 
 ### <a name="-teams-and-power-automate"></a>✔ Équipes et Power Automate
 
-Vous pouvez [créer des flux pour automatiser les tâches répétitives](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directement dans l’environnement Teams avec l’application [Power Automate dans Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe quel message dans Microsoft Teams](/power-automate/trigger-flow-teams-message) et [utiliser Cartes adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter de la valeur ajoutée à Microsoft Teams à partir de la nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) dans Teams.
+Vous pouvez [créer des flux pour automatiser les tâches répétitives](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directement dans l’environnement Teams avec l’application [Power Automate dans Teams](/power-automate/teams/install-teams-app). Vous pouvez [déclencher un flux à partir de n’importe quel message dans Microsoft Teams](/power-automate/trigger-flow-teams-message) et [utiliser Cartes adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter de la valeur ajoutée à Microsoft Teams à partir de la nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) dans Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Équipes et Power Virtual Agents
 

@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 654bc49cfc671b849e3b88aae1eefa5d1bbaef02
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558834"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026975"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Système de conception d’applications Microsoft Teams
 
-Découvrez rapidement les principes de base de la conception d’application Teams. Vous trouverez des conseils complets et des exemples dans le <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Kit d’interface utilisateur Microsoft Teams (Figma)</a>.
+Découvrez rapidement les principes de base de la conception d’application Teams. Vous trouverez des conseils complets et des exemples dans le [Kit d’interface utilisateur Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159).
 
 ## <a name="layout"></a>Disposition
 
@@ -42,7 +42,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       Un avatar est une représentation graphique d’une personne, d’une équipe, d’un bot ou d’une entité dans Teams. Un groupe d’avatars est souvent utilisé pour transmettre une activité en direct ou représenter une liste d’une manière qui conserve l’espace vertical. 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Voir les instructions d’avatar complètes (Figma)</a>
+      * [Voir les instructions d’avatar complètes (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::
@@ -62,7 +62,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       Vous pouvez également utiliser des icônes d’interface utilisateur Fluent dans votre application :
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obtenir le dernier jeu d’icônes Fluent (Figma)</a>
+      * [Obtenir le dernier jeu d’icônes Fluent (Figma)](https://www.figma.com/community/file/836835755999342788)
       * [Implémenter les icônes (interface utilisateur Fluent)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
@@ -81,7 +81,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       Teams utilise Segoe UI pour sa prise en charge de type et différentes tailles de police et poids pour créer une hiérarchie et garantir la lisibilité.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consultez les directives complètes sur les types de caractères (Figma)</a>
+      * [Consultez les directives complètes sur les types de caractères (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implémenter la typographie (IU utilisateur)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
@@ -100,7 +100,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       Le web et le bureau Teams prennent en charge les thèmes par défaut (clair), sombre et à contraste élevé, tandis que les appareils mobiles Teams prennent en charge les thèmes clair et sombre. Chaque thème a son propre modèle de couleurs.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consultez les instructions de couleurs complètes et les jetons de couleur disponibles (Figma)</a>
+      * [Consultez les instructions de couleurs complètes et les jetons de couleur disponibles (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implémenter des couleurs (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
@@ -118,7 +118,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       Vous pouvez utiliser la forme et l’élévation pour créer une hiérarchie supplémentaire dans votre application. 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consultez les instructions de forme et d’élévation complètes (Figma)</a>
+      * [Consultez les instructions de forme et d’élévation complètes (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implémenter des formes et d’élévation (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
@@ -137,7 +137,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       Pour vous sentir membre de Teams, votre copie d’application en général doit suivre ces [principes vocaux Microsoft](/style-guide/brand-voice-above-all-simple-human): chaleureux et souple, nette et claire, et prêt à vous prêter main.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consultez les instructions de copie et de contenu complètes – pour l’écriture de bots (Figma)</a>
+      * [Consultez les instructions de copie et de contenu complètes – pour l’écriture de bots (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::

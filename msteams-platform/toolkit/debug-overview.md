@@ -7,15 +7,14 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 3b125d6f2f1029191debc547b3cc49b30cd47089
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806921"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027059"
 ---
 # <a name="debug-your-teams-app"></a>Déboguer votre Teams application
-
 
 Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre application Microsoft Teams. Le débogage est le processus de vérification, de détection et de correction des problèmes ou bogues pour garantir que le programme s’exécute correctement dans Teams.
 

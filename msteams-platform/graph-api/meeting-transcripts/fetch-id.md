@@ -3,12 +3,12 @@ title: Obtenir l’ID de réunion et l’ID d’organisateur pour récupérer le
 description: Décrit le processus d’obtention de l’ID de réunion et de l’ID d’organisateur pour récupérer les transcriptions de réunion
 ms.localizationpriority: high
 ms.topic: concept
-ms.openlocfilehash: 316eabb77eb440a171ca6f357e1db8a2f3b18b6b
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 8be611f72a1ddac84bbe596a1bfc00621cb7c038
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67434984"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027311"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>Obtenir l’ID de réunion et l’ID d’organisateur
 
@@ -510,7 +510,7 @@ La charge utile de réponse contient :
 Dans cet exemple :
 
 - L’ID de réunion est inclus comme valeur pour `msGraphResourceId`: *MSo2NzAyYWZiNi0xMDliLTRjMjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM 1ltVXpAdGhyZWFkLnYy*.
-- L’ID d’organisateur est contenu comme valeur pour `id` `organizer`:  *29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w*.
+- L’ID d’organisateur est contenu comme valeur pour `aadObjectId` `organizer`:  *6702afb6-109b-4c32-a141-6e65469502b9*.
 
 </details>
 
