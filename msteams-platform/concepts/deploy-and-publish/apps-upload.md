@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: ffa7cdb0fabf07254c90590fe94fe2347c35658c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488284"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044678"
 ---
 # <a name="upload-your-app-in-teams"></a>Charger votre application dans Teams
 
@@ -21,7 +21,7 @@ Vous pouvez télécharger les applications Microsoft Teams sans avoir à les pub
 * Vous avez créé une application pour un petit groupe d'utilisateurs, tel que votre groupe de travail.
 
 > [!NOTE]
-> Le chargement indépendant de votre application plusieurs fois affiche plusieurs instances pour les extensions de messagerie.
+> Le chargement indépendant de votre application d’extension de messagerie plusieurs fois affiche plusieurs instances pour les extensions de messagerie.
 
 > [!IMPORTANT]
 >
@@ -50,21 +50,22 @@ Vous pouvez télécharger votre application dans une équipe, un chat, une réun
 1. Sélectionnez le fichier .zip de votre package d'application.
 1. Ajoutez votre application à Teams en fonction de vos besoins :</br>
 
-   Sélectionnez **Ajouter** pour ajouter votre application personnelle.</br>b. Utilisez le menu déroulant pour ajouter votre application à une équipe ou à un chat.
+   a. Select **Add** to add your personal app.</br>
+   b. Use the dropdown menu to add your app to a Team or chat.
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Description de l’application":::
 
 ## <a name="troubleshoot"></a>Résoudre des problèmes
 
-Si votre application ne parvient pas à charger une version test ou si vous rencontrez des problèmes de chargement, vérifiez les options suivantes :
+Si votre application ne parvient pas à charger une version test ou rencontre des problèmes de chargement, consultez les options suivantes :
 
 1. Vérifiez que vous avez suivi toutes les instructions pour la [création de votre package d’application](../../concepts/build-and-test/apps-package.md).
 1. [Validez votre package d'application](https://dev.teams.microsoft.com/appvalidation.html).
-1. Assurez-vous que le manifeste de votre application correspond au dernier [schéma](../../resources/schema/manifest-schema.md).
+1. Vérifiez que le manifeste de votre application correspond au [schéma](../../resources/schema/manifest-schema.md) le plus récent.
 
 ## <a name="manage-your-apps"></a>Gérer vos applications
 
-Gérer vos applications permet aux utilisateurs d'avoir un endroit dédié pour gérer, mettre à jour et supprimer leurs applications, permissions et abonnements sur le client Teams. Les utilisateurs peuvent installer les applications à partir de **gérer vos applications**.
+Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
 
 ### <a name="access-your-app"></a>Accéder à votre application
 
@@ -80,7 +81,7 @@ Pour accéder aux applications via **Gérer vos applications**, procédez comme 
 
 1. Sélectionnez la portée de l’application pour accéder à l’application dans le canal ou la vue personnelle. La liste des étendues comprend uniquement l’étendue personnelle et l’étendue Teams. Les applications installées dans l’étendue de la conversation de groupe ne sont pas affichées dans cette vue pour le moment.
 
-Teams propose plusieurs façons d’ouvrir des applications. Pour plus d'informations, voir [accéder à vos applications dans Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
+Teams propose plusieurs façons d'ouvrir des applications. Pour plus d'informations, voir [accéder à vos applications dans Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 ### <a name="update-your-app"></a>Mettre à jour votre application
 
@@ -92,7 +93,7 @@ Si une mise à jour est disponible pour votre application, l’option **Mise à 
 
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Mettez à jour l’application Teams.":::
 
-1. Sélectionnez **Afficher la mise à jour** une fenêtre avec l’option de mise à jour apparaît.
+1. Sélectionnez **Afficher la mise à jour**. Une fenêtre avec l’option de mise à jour s’affiche.
 1. Sélectionnez le bouton **Mettre à jour** pour mettre à jour votre application.
 
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Mettez à jour l’application Teams dans gérer les applications.":::
@@ -115,7 +116,7 @@ Pour supprimer l’application dans Teams, suivez les étapes :
 
 > [!NOTE]
 >
-> * Vous ne pouvez pas supprimer entièrement l’activité personnelle du bot. Si vous supprimez l’application et l’ajoutez à nouveau, la nouvelle communication avec le bot s’ajoute à la conversation précédente avec lui.
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
 > * Actuellement, vous ne pouvez pas migrer votre application personnalisée vers le Magasin Teams. Si vous souhaitez répertorier votre application dans le Magasin Teams, consultez [Publier votre application dans le Microsoft Teams Store](appsource/publish.md).
 
 ## <a name="next-step"></a>Étape suivante

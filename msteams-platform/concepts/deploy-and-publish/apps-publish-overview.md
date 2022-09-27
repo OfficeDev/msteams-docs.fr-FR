@@ -5,12 +5,12 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 0efbc1e18d7cec6324ecc4cbec762d7b94c32511
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
-ms.translationtype: HT
+ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150798"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044671"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams
 
@@ -18,7 +18,7 @@ Vous pouvez fournir votre application Microsoft Teams à une personne, une équi
 
 ## <a name="configure-default-install-options"></a>Configurer les options d’installation par défaut
 
-Vous configurez les options d’installation par défaut. Par exemple, si la fonctionnalité principale de votre application est un bot, vous pouvez également faire du bot la fonctionnalité par défaut lorsqu’un utilisateur installe votre application auprès d’une équipe.
+Vous pouvez configurer les options d’installation par défaut. Par exemple, si la fonctionnalité principale de votre application est un bot, vous pouvez en faire la fonctionnalité par défaut lorsqu’un utilisateur installe votre application dans une équipe.
 
 ## <a name="create-your-app-package"></a>Créer votre package d’application
 

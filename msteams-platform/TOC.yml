@@ -633,8 +633,8 @@
     - name: Charger votre application dans Teams
       href: concepts/deploy-and-publish/apps-upload.md
     - name: Publier sur votre organisation
-      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      displayName: 'App catalog, allow and block apps'
+      href: /microsoftteams/upload-custom-apps
+      displayName: 'upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization''s store'
     - name: Publier sur le Teams Store
       items:
         - name: Présentation
