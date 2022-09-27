@@ -1,6 +1,6 @@
 ## <a name="deploy-your-app-to-azure"></a>Déployer votre application vers Azure
 
-Le déploiement se compose de deux étapes.  Tout d’abord, les ressources cloud nécessaires sont créées (également appelées approvisionnement). Ensuite, le code de votre application est copié dans les ressources cloud créées. Pour ce didacticiel, vous allez déployer l’application onglet.
+Le déploiement se compose de deux étapes. Tout d’abord, les ressources cloud nécessaires sont créées (également appelées approvisionnement). Ensuite, le code de votre application est copié dans les ressources cloud créées. Pour ce didacticiel, vous allez déployer l’application onglet.
 <br>
 <br>
 <details>
@@ -20,34 +20,38 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
 1. Sélectionnez n’importe qui de l’abonnement existant.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Sélectionner un abonnement":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Capture d’écran montrant la sélection de l’abonnement existant":::
 
 1. Sélectionnez un groupe de ressources à utiliser pour les ressources Azure.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Capture d’écran montrant les ressources pour l’approvisionnement":::
 
    > [!NOTE]
-   > Certaines ressources Azure sont toujours utilisées pour héberger votre application.
+   > Votre application est hébergée à l’aide de ressources Azure.
+   >
+   >Pour plus d’informations, consultez [Créer un groupe de ressources](/azure/azure-resource-manager/management/manage-resource-groups-portal.)
 
     Une boîte de dialogue vous avertit que des coûts peuvent être engagés lors de l’exécution de ressources dans Azure.
 
 1. Sélectionnez **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Sélectionner un abonnement":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Capture d’écran montrant l’approvisionnement de la boîte de dialogue.":::
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Capture d’écran montrant la sélection de l’abonnement.":::
 
    Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela peut prendre un certain temps. Vous pouvez surveiller la progression en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Capture d’écran montrant la ressource correctement approvisionnée dans le cloud.":::
 
     Si vous le souhaitez, vous pouvez afficher les ressources approvisionnées. Pour ce didacticiel, vous n’avez pas besoin d’afficher les ressources.
 
     La ressource approvisionnée apparaît dans la section **Environnement** .
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Capture d’écran montrant la ressource approvisionnée.":::
 
 1. Sélectionnez **Déployer dans le cloud dans** le panneau **Déploiement** une fois l’approvisionnement terminé.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Capture d’écran montrant où cliquer pour déployer dans le cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Capture d’écran montrant le déploiement dans le cloud.":::
 
    Comme pour le provisionnement, le déploiement prend un certain temps. Vous pouvez surveiller le processus en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, un avis d’achèvement s’affiche.
 
@@ -65,9 +69,6 @@ Dans la fenêtre de votre terminal :
 
    Lorsque vous y êtes invité, sélectionnez un abonnement Azure pour utiliser des ressources Azure.
 
-   > [!NOTE]
-   > Certaines ressources Azure sont toujours utilisées pour héberger votre application.
-
 1. Exécutez `teamsfx deploy`.
 
    ``` bash
@@ -75,6 +76,9 @@ Dans la fenêtre de votre terminal :
    ```
 
 ---
+
+> [!NOTE]
+> Votre application est hébergée à l’aide de ressources Azure.
 
 ## <a name="run-the-deployed-app"></a>Exécuter l’application déployée
 
@@ -84,12 +88,12 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
 1. Sélectionnez **Lancer à distance (Edge)** dans la liste déroulante de configuration de lancement.
 1. Sélectionnez le bouton **Démarrer le débogage (F5)** pour lancer votre application à partir d’Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Capture d’écran montrant l’application de lancement à distance.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Capture d’écran montrant comment lancer l’application à distance.":::
 
 1. Sélectionnez **Ajouter** lorsque vous êtes invité à charger l’application sur Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Capture d’écran montrant l’application en cours d’installation.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Capture d’écran montrant une application en cours d’installation.":::
 
     Félicitations, votre première application onglet s’exécute dans votre environnement Azure !
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement.":::

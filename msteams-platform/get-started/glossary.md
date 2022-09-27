@@ -3,12 +3,12 @@ title: Documentation pour développeurs Microsoft Teams – Glossaire
 description: En savoir plus sur les termes utilisés dans Microsoft Teams documentation du développeur
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
+ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027325"
+ms.locfileid: "68027511"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -78,7 +78,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 
 | Terme | Définition |
 | --- | --- |
-| [Compte de développeur E5](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Abonnement pour développeurs E5 pour la création d’applications pour étendre Microsoft 365. Il inclut 25 licences utilisateur, y compris l’administrateur, à des fins de développement uniquement.  <br>**Voir aussi** : [Compte Microsoft 365](#m) |
+| [Compte de développeur E5](../toolkit/tools-prerequisites.md) | Abonnement pour développeurs E5 pour la création d’applications pour étendre Microsoft 365. Il inclut 25 licences utilisateur, y compris l’administrateur, à des fins de développement uniquement.  <br>**Voir aussi** : [Compte Microsoft 365](#m) |
 | [Point d’entrée](../concepts/app-fundamentals-overview.md) | Un point d’accès, tel que l’équipe, le canal et la conversation, pour une application Teams où les utilisateurs peuvent utiliser votre application. |
 | [Environnement](../toolkit/teamsfx-multi-env.md) | Une fonctionnalité du Kit de ressources Teams qui vous permet de créer et d’utiliser plusieurs environnements de développement pour votre projet d’application. Le Kit de ressources Teams crée deux environnements de développement par défaut : environnement local et environnement de développement. <br>**Voir aussi** : [Environnement local](#l) ; [Environnement de développement](#d) |
 
