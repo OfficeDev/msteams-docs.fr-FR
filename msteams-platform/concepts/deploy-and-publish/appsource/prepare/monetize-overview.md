@@ -1,21 +1,21 @@
 ---
 title: Vue d’ensemble de monétiser votre application
-description: Découvrez comment monétiser votre application Microsoft Teams en choisissant un modèle de tarification avec l’offre Saas.
+description: Monétiser votre application. Les modèles tarifaires pris en charge sont les essais gratuits, les achats dans l’application et incluent une offre SaaS avec votre application.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9b684fccb108b733a63ae6b61e002bc24bde32ef
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485509"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100580"
 ---
 # <a name="monetize-your-app"></a>Monétiser votre application
 
 Microsoft Teams App Store fournit des fonctionnalités qui vous permettent de monétiser vos applications et d’attirer des clients en contactant vos utilisateurs. Les rubriques de cette section vous montrent comment créer ces fonctionnalités dans votre application.
-
+ 
 ## <a name="choose-a-pricing-model"></a>Choisir un modèle de tarification
 
 :::row:::

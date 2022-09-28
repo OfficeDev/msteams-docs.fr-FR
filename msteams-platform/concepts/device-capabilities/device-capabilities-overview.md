@@ -1,16 +1,16 @@
 ---
 title: Fonctionnalités de l’appareil – Vue d’ensemble
 author: Rajeshwari-v
-description: Découvrez comment intégrer des fonctionnalités d’appareil natif, telles que la caméra, l’image, le média, le microphone, le code QR, etc. avec Microsoft Teams application.
+description: Découvrez comment intégrer des fonctionnalités d’appareil natif, telles que l’emplacement et le média (caméra, microphone, galerie, QR ou scanneur de codes-barres) à l’application Microsoft Teams.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 26ca39aea4d759edbce62f43e9c832632d267cf6
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 04ae1a0b21c12ef7dda5d4bf8dfa799ac5726d15
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189451"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100566"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
@@ -50,4 +50,4 @@ En outre, vous pouvez intégrer le [contrôle de sélecteur de personnes](people
 
 | Exemple de nom           | Description | Node.js    |
 |:---------------------|:--------------|:---------|
-|Autorisations de l’appareil | Décrit comment illustrer Teams’exemple d’application onglet pour les autorisations d’appareil. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Autorisations de l’appareil | Décrit comment illustrer l’exemple d’application de l’onglet Teams pour les autorisations d’appareil. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

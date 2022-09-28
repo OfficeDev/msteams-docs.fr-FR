@@ -1,16 +1,16 @@
 ---
 title: Formatez vos messages robots.
 author: surbhigupta
-description: Dans ce module, découvrez comment ajouter une mise en forme et des styles enrichis à vos messages de bot, tels que la barre d’accès, la liste ordonnée et non triée, le lien hypertexte, le lien d’image, etc.
+description: Découvrez comment mettre en forme et appliquer un style à vos messages de bot, tels que la liste barré, la liste ordonnée et non triée, le lien hypertexte ou le lien d’image. Comprendre la prise en charge multiplateforme.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 63c201e2126181793ce09a962b5352fb3418cff2
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363493"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100181"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 

@@ -1,18 +1,18 @@
 ---
 title: Mettre à jour et supprimer les messages envoyés à partir de votre bot
 author: WashingtonKayaker
-description: Découvrez comment mettre à jour et supprimer des messages envoyés à partir de votre bot Microsoft Teams dans différents environnements et avec des API REST à l’aide d’exemples de code.
+description: Découvrez comment mettre à jour et supprimer des messages envoyés à partir de votre bot Microsoft Teams dans différents environnements et avec des API REST à l’aide d’exemples (.NET, Node.js, Python).
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bd52a3cfa27153c4349d50f4263dc29346fdfb45
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d85bb7086661eba58c6cf852cab599970fdc9c80
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503801"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100818"
 ---
-# <a name="update-and-delete-messages-sent-from-bot"></a>Mettre à jour et supprimer des messages envoyés à partir du bot 
+# <a name="update-and-delete-messages-sent-from-bot"></a>Mettre à jour et supprimer les messages envoyés à partir du bot 
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

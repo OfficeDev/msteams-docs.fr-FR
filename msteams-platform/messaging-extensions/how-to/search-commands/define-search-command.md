@@ -1,16 +1,16 @@
 ---
 title: Définir des commandes de recherche d’extension de message
 author: surbhigupta
-description: Dans ce module, découvrez les emplacements d’appel de commande de recherche et comment créer une commande de recherche pour les extensions de messagerie.
+description: Découvrez les commandes de recherche d’extension de message pour les applications Teams, pour créer une commande de recherche via le manifeste de l’application et manuellement.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: f774ae4ce0e4198a8e676080b87c33c8ecec3f3f
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786961"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100895"
 ---
 # <a name="define-message-extension-search-commands"></a>Définir des commandes de recherche d’extension de message
 

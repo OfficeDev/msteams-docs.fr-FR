@@ -1,16 +1,16 @@
 ---
 title: Utilisez Microsoft Graph pour autoriser l'installation de robots proactifs et l'envoi de messages dans Teams.
-description: Cet article décrit la messagerie proactive dans Teams et comment l’implémenter. Découvrez comment activer l’installation proactive des applications et la conversation à l’aide d’un exemple de code.
+description: Installez l’application de manière proactive à l’aide des API Graph. Vérifiez si votre bot est actuellement installé, récupérez le chatId de conversation pour envoyer un message proactif.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: cee1b0078c3a963f41d811b1fac9daa0fbe65f77
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5c45eff85b3a46f27e91e4740513c48c05588198
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604849"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100748"
 ---
 # <a name="send-proactive-installation-messages"></a>Envoyer des messages d’installation proactifs
 

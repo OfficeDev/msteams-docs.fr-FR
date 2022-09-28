@@ -1,17 +1,17 @@
 ---
 title: 'Vue d’ensemble : Récit de l’utilisateur pour la plateforme Microsoft Teams'
 author: heath-hamilton
-description: Découvrez l’histoire utilisateur de vue d’ensemble de la façon dont l’idée d’application répond aux exigences de l’utilisateur pour Microsoft Teams plateforme.
+description: Découvrez comment les applications Microsoft Teams aident vos utilisateurs dans l’environnement Teams. Comprendre l’utilisateur, le problème, les exigences de l’application, les avantages et la solution centrée sur l’utilisateur.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 905e357438e9913b64fd46c60a645d0d3d5d3cb0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557980"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100706"
 ---
 # <a name="from-ideas-to-teams-app"></a>Des idées à l’application Teams
 

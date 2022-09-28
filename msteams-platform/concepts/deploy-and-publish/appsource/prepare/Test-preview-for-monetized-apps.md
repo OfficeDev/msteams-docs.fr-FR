@@ -1,16 +1,16 @@
 ---
 title: Aperçu du test pour les applications monétisées
 author: v-ypalikila
-description: Découvrez comment créer et tester des offres d’aperçu SaaS pour l’application Teams avant de les mettre en ligne. Vous pouvez tester l’expérience d’achat de bout en bout pour vos applications monétisées dans Teams.
+description: Créez et testez les offres SaaS Preview pour l'application Teams avant de mettre l'offre en ligne. Créez un ID d’offre en préversion, configurez votre application avec l’ID de l’offre en préversion et chargez la version test.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 98b9876a93fe6040cf66a16475fe7fdacf98a520
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558743"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100790"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Aperçu du test pour les applications monétisées
 
@@ -33,13 +33,13 @@ Vous pouvez générer l’ID d’offre d’aperçu à partir du lien **d’aper�
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID de l’offre d’aperçu" :::
 
     > [!NOTE]
-    > Contrairement à un ID d’offre publique, l’ID d’offre en préversion peut être reconnu avec le suffixe *-preview*. Par exemple, **publisherId.offerId-preview**.
+    > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>Configurer votre application avec l’ID d’offre d’aperçu
 
 Avant de commencer, connectez-vous **au portail du développeur** à l’aide d’un compte de développeur avec une **audience d’aperçu** pour que les utilisateurs voient vos plans d’abonnement dans Teams store.
 
-Une fois que vous avez généré votre ID d’offre en préversion, liez l’ID de l’offre à votre application Teams. Pour lier l’ID de l’offre :
+After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
 1. Allez sur le [portail des développeurs](https://dev.teams.microsoft.com/) et connectez-vous en utilisant vos identifiants de développeur.
 1. Sélectionnez **Applications** dans le volet gauche.

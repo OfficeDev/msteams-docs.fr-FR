@@ -1,16 +1,16 @@
 ---
 title: Instructions de validation du magasin Microsoft Teams
-description: Dans cet article, vous trouverez les instructions que chaque application soumise au Store Teams (AppSource) doit suivre.
+description: Découvrez comment augmenter les chances que votre application réussisse le processus de soumission du Microsoft Teams Store. Comprendre les correctifs obligatoires et suggérés. Explorez les instructions de validation.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: ed428ba714f5e6cf409f7ded25e8b0df22cd61a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044699"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100300"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 

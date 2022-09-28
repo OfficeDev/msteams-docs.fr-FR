@@ -1,17 +1,17 @@
 ---
 title: Exploration de Teams en tant que plateforme pour la création d’applications
 author: heath-hamilton
-description: Découvrez la vue d’ensemble de l’exploration des fonctionnalités de plateforme Microsoft Teams pour votre application sur le bureau et les appareils mobiles.
+description: Fonctionnalités de la plateforme Microsoft Teams pour votre application sur le bureau et sur mobile. Onglets, bots, extension de messagerie, webhook, connecteurs, Microsoft Graph ou cartes adaptatives.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: b49c4013184b11f686e460cd23441acf1b4faff1
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558827"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100307"
 ---
 # <a name="explore-teams-platform-features"></a>Explorer les fonctionnalités de la plateforme Teams
 
@@ -23,7 +23,7 @@ Avec Teams, vous pouvez créer votre application dans un environnement riche en 
 
 | Fonctionnalité | Description | Utile pour |
 | --- | --- | --- |
-|Onglets | Les onglets sont des pages Web adaptées à Teams et intégrées à Microsoft Teams. Vous pouvez les ajouter dans le cadre d'un canal au sein d'une équipe, d'une discussion de groupe ou d'une application personnelle pour un utilisateur individuel. | Onglet personnel, onglet canal ou groupe, affichage intermédiaire et déploiement de liens. |
+|Onglets | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Onglet personnel, onglet canal ou groupe, affichage intermédiaire et déploiement de liens. |
 | Bots | Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs. Une interaction de bot peut être une question et une réponse rapides, ou il peut s’agir d’une conversation complexe qui fournit l’accès aux services. | Service clientèle, informations sur la météo, réservations de repas ou informations de voyage. |
 | Extension de message | Les extensions de message permettent aux utilisateurs d’interagir avec votre client Teams de service web. Ils recherchent ou démarrent des actions dans un système externe. Vous pouvez envoyer le résultat de l’interaction au client Teams sous la forme d’une carte enrichie. | Réservez une ressource et autorisez le canal à connaître l’intervalle de temps réservé. Recherchez un élément de travail et partagez-le avec le groupe sous forme de carte adaptative. Créez un bogue dans votre système de suivi en fonction d’un message Teams, attribuez ce bogue à un utilisateur et envoyez une carte au thread de conversation avec les détails du bogue. |
 |Extensions de réunion | Vous pouvez créer des applications pour rendre les réunions plus productives. | Demandez aux personnes de répondre à une enquête pendant un appel ou d’envoyer un rappel rapide qui n’interrompt pas le flux de la réunion. |

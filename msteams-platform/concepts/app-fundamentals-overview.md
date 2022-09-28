@@ -1,22 +1,22 @@
 ---
 title: Vue d’ensemble de la planification de votre application
 author: heath-hamilton
-description: Présentez les éléments de la planification d’une application, de la compréhension des cas d’usage, des fonctionnalités d’application et d’autres fonctionnalités Teams.
+description: Comprendre les fonctionnalités de cas d’utilisation et d’application Microsoft Teams, les cas d’usage de carte, les onglets réactifs du plan pour les appareils mobiles. Découvrez les fonctionnalités et la disponibilité de Teams pour GCC, GCC-High et DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058241"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100419"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
 La création d’une application Teams exceptionnelle consiste à trouver la bonne combinaison de fonctionnalités pour répondre aux besoins de votre utilisateur. La conception, les fonctionnalités et les capacités d'une application découlent de cet objectif.
 
-Au fond, Teams est une plateforme de collaboration. Il s’agit également d’une plateforme sociale, une multiplateforme en mode natif, qui se trouve au cœur d’Office 365 et offre un canevas personnel pour vous permettre de créer des applications.
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
 Dans cette section, découvrez comment :
 
@@ -76,7 +76,7 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 |-------------|---------|---|---|
 | Applications appartenant à Teams comme dans les applications développées en interne | ✔️ L’application est activée si elle a GCC. | ✔️ L’application est activée si elle a GCC-High. | ✔️ L’application est activée si elle possède un DOD. |
 | Applications Microsoft | ✔️ Applications Microsoft conformes à GCC | ✔️ Applications Microsoft conformes à GCC-High | ✔️ Applications Microsoft conformes à DOD |
-| Applications 3p ou tierces | ✔️ Des applications tierces sont disponibles. Désactivées par défaut et l’administrateur client utilise sa propre discrétion pour les activer. | ❌ | ❌ |
+| Applications 3p ou tierces | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Applications de tabulation personnalisées ou métier |  ✔️ | ✔️ | ✔️ |
 | Chargement indépendant d’applications | ✔️ | ❌ | ❌ |

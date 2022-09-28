@@ -1,14 +1,14 @@
 ---
 title: Démarrage - Vue d’ensemble
-description: Dans ce module, découvrez comment prendre en main la documentation des développeurs Microsoft Teams qui vous présente les outils courants, les concepts fondamentaux et les fonctionnalités avancées.
+description: Bien démarrer. Créez votre première application Microsoft Teams en fonction du langage (Node.js, C#, Java, Python) et de l’environnement de développement, comprenez les fonctionnalités de l’application, les Kits de développement logiciel (SDK).
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 4ad64240c97ab11da6a999f87621fdff6d70ebe2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312281"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100433"
 ---
 # <a name="get-started"></a>Prise en main
 

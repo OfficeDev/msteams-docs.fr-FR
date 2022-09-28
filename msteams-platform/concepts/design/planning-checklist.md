@@ -1,16 +1,15 @@
 ---
 title: Questions pour aider à planifier le développement de l'application Teams
 author: heath-hamilton
-description: Apprenez à planifier votre application à l’aide de la liste de vérification pour vous assurer que votre plan couvre les détails importants du développement d’applications.
-ms.topic: conceptual
+description: Apprenez à planifier votre application à l’aide de la liste de vérification pour vous assurer que votre plan couvre les détails importants du développement d’applications. Planifier le cycle de vie de l’application. Prévoyez d’héberger votre application Teams.
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 932e8ea564a6cc47bb2b8dbe4e01256d0688cefa
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338766"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100713"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 
@@ -106,9 +105,9 @@ La création d’une application Teams exceptionnelle consiste à trouver la bon
 
 | # | Facteurs |
 | --- | --- |
-| 1 | Les informations présentées par l’application, sous l’onglet ou via un bot, sont-elles pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, l’application Scrum. |
+| 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
 | 2 | Le contexte de l'application peut-il changer en fonction de l'équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes selon les équipes. |
-| 3 | Est-il possible que tous les membres d’un personnage qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket. |
+| 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
 <br>

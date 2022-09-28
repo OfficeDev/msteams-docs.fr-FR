@@ -1,18 +1,18 @@
 ---
 title: Résoudre les problèmes liés à l’envoi de votre magasin
-description: Dans cet article, découvrez comment résoudre et corriger les problèmes liés à la soumission de votre magasin Microsoft Teams.
+description: Découvrez comment résoudre et corriger les problèmes liés à la soumission de votre magasin Microsoft Teams. Obtenez de l’aide directement de Microsoft, résolvez les problèmes et renvoyez votre application.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503871"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100279"
 ---
-# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec de la soumission de votre magasin Teams
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec de l’envoi de votre store Teams
 
 Les applications publiées dans le magasin Microsoft Teams doivent respecter les [instructions de validation du magasin Teams et les](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) [stratégies de la Place de marché commerciale](/legal/marketplace/certification-policies).
 
@@ -49,7 +49,7 @@ Le processus de résolution des problèmes et de réinscription d’une applicat
 > [!CAUTION]
 > Pour éviter les échecs de soumission multiples, ne soumettez pas votre application à l’Espace partenaires tant que l’équipe de validation du concierge Microsoft n’a pas approuvé votre application.
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>Questions fréquentes (FAQ)
 
 Obtenez des réponses à certaines questions courantes lors de la résolution des problèmes de soumission d’application.
 

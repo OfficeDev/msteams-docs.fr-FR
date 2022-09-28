@@ -1,16 +1,16 @@
 ---
 title: Inclure une offre SaaS avec votre application
-description: Dans cet article, découvrez comment monétiser votre application Microsoft Teams avec un modèle de tarification basé sur un abonnement et inclure une offre SaaS avec votre application Microsoft Teams.
+description: Découvrez comment monétiser votre application Microsoft Teams en vendant des plans d’abonnement directement à partir de votre description dans le Windows Store Teams. Comprendre l’expérience d’achat de l’application de publication, de l’utilisateur final et de l’administrateur.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
-ms.translationtype: HT
+ms.openlocfilehash: 3fe41b635f9789e7f96eeb41f17526205924dadf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288184"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100636"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Inclure une offre SaaS avec votre application Teams
 
@@ -69,7 +69,7 @@ Pour obtenir des instructions complètes et des informations de référence sur 
 
 * Avec les offres SaaS pouvant effectuer des transactions pour les applications Teams, les offres d’abonnement (licences) doivent être attribuées à des utilisateurs individuels plutôt qu’à des groupes ou à une organisation entière.
 * Lorsqu’une offre d’abonnement est attribuée aux utilisateurs, informez-les par le biais d’un bot Teams ou d’un e-mail. Dans la messagerie, incluez des informations sur l’ajout de l’application à Teams et la prise en main.
-* Soutenir l'idée d'administrateurs multiples. En d'autres termes, plusieurs utilisateurs d'une même organisation peuvent acheter et gérer leurs propres abonnements.
+* Considérez qu’il y aura plusieurs administrateurs. En d’autres termes, plusieurs utilisateurs de la même organisation peuvent acheter et gérer leurs propres abonnements.
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>Créer une page d’accueil pour la gestion des abonnements
 
@@ -109,7 +109,7 @@ Consultez [Créer une offre SaaS](/azure/marketplace/create-new-saas-offer) pour
 
     * Sous **Intégration à Microsoft 365**, ajoutez le lien AppSource à la liste de votre application. Cette étape permet de s’assurer que les utilisateurs peuvent acheter vos offres d’abonnement dans AppSource en plus de Teams.
 
-1. Enregistrez vos identifiants d'éditeur et d'offre. (Vous en aurez besoin plus tard pour lier l'offre à votre application dans le portail des développeurs).
+1. Stockez vos ID d’éditeur et d’offre. (Vous en aurez besoin plus tard pour lier l’offre à votre application dans le Portail des développeurs.)
 
 1. Publiez votre offre sur la place de marché commerciale.
 

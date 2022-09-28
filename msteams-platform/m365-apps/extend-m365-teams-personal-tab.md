@@ -1,20 +1,20 @@
 ---
 title: Étendre une application onglet personnel Teams sur Microsoft 365
-description: Dans cet article, vous allez découvrir comment étendre une application d’onglet personnel Teams à Microsoft 365 en mettant à jour l’onglet personnel pour l’exécuter dans Outlook et Office.
+description: Mettez à jour votre application personnelle pour qu’elle s’exécute dans Outlook et Office. Mettez à jour le manifeste et le Kit de développement logiciel (SDK) TeamsJS V2, modifiez la sécurité du consentement, mettez à jour l’inscription d’application Azure AD pour l’authentification unique.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781199"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100763"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
-Les onglets personnels offrent un excellent moyen d’améliorer l’expérience Microsoft Teams. À l’aide d’onglets personnels, vous pouvez fournir à un utilisateur l’accès à son application directement dans Teams, sans que l’utilisateur ait à quitter l’expérience ou à se reconnecter. Avec cette préversion, les onglets personnels peuvent s’allumer dans d’autres applications Microsoft 365. Ce didacticiel illustre le processus de prise d’un onglet personnel Teams existant et de mise à jour pour qu’il s’exécute à la fois dans les expériences de bureau et web Outlook, ainsi que Office sur le Web (office.com).
+Les onglets personnels offrent un excellent moyen d’améliorer l’expérience Microsoft Teams. À l’aide d’onglets personnels, vous pouvez fournir à un utilisateur l’accès à son application directement dans Teams, sans que l’utilisateur ait à quitter l’expérience ou à se reconnecter. Avec cette préversion, les onglets personnels peuvent s’allumer dans d’autres applications Microsoft 365. Ce didacticiel montre comment prendre un onglet personnel Teams existant et le mettre à jour pour qu’il s’exécute à la fois dans les expériences de bureau et web Outlook et Office, ainsi que dans l’application Office pour Android.
 
 La mise à jour de votre application personnelle pour qu’elle s’exécute dans Outlook et Office implique les étapes suivantes :
 
@@ -58,7 +58,7 @@ Pour commencer avec un [onglet personnel](https://github.com/OfficeDev/TeamsFx-S
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Exemple de liste Todo (fonctionne dans Teams, Outlook et Office) dans Teams Shared Computer Toolkit":::
 
 1. Sélectionnez un emplacement sur votre ordinateur local pour le dossier de l’espace de travail.
-1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Provision in the cloud` pour créer les ressources d’application requises (plan Serviço de Aplicativo, compte de stockage, application de fonction, identité managée) dans votre compte Azure.
+1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Provision in the cloud` pour créer les ressources d’application requises (plan App Service, compte de stockage, application de fonction, identité managée) dans votre compte Azure.
 1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Deploy to the cloud` pour déployer l’exemple de code sur les ressources approvisionnées dans Azure et démarrer l’application.
 
 À partir de là, vous pouvez passer directement au chargement indépendant de [votre application dans Teams](#sideload-your-app-in-teams) et afficher un aperçu de votre application dans Outlook et Office. (Le manifeste de l’application et les appels d’API TeamsJS ont déjà été mis à jour pour Microsoft 365.)
@@ -72,7 +72,7 @@ Vous avez deux options pour mettre à jour le manifeste de votre application :
 # <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez la palette de commandes : `Ctrl+Shift+P`.
-1. Exécutez la commande `Teams: Upgrade Teams manifest` et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées en place.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
 
 # <a name="manual-steps"></a>[Étapes manuelles](#tab/manifest-manual)
 
@@ -124,7 +124,7 @@ Si votre application utilise des en-têtes de stratégie de [sécurité de conte
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour l’inscription d’application Azure AD pour l’authentification unique
 
-[L’authentification unique (SSO) Azure Active Directory (AD)](../tabs/how-to/authentication/tab-sso-overview.md) pour les onglets personnels fonctionne de la même façon dans Office et Outlook que dans Teams. Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre application onglet dans le portail *App-registraties* de votre locataire.
+[L’authentification unique (SSO) Azure Active Directory (AD)](../tabs/how-to/authentication/tab-sso-overview.md) pour les onglets personnels fonctionne de la même façon dans Office et Outlook que dans Teams. Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre application onglet dans le portail *inscriptions d'applications* de votre locataire.
 
 1. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com) avec votre compte de locataire de bac à sable( sandbox).
 1. Ouvrez le **panneau inscriptions d'applications**.
@@ -141,8 +141,12 @@ Si votre application utilise des en-têtes de stratégie de [sécurité de conte
     |Web Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Version de bureau d’Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Bureau Outlook, mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Certaines applications clientes Microsoft 365 partagent des ID clients.
 
 ## <a name="sideload-your-app-in-teams"></a>Charger une version test de votre application dans Teams
 
@@ -164,7 +168,7 @@ La dernière étape de l’exécution de votre application dans Office et Outloo
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option « Charger une application personnalisée » dans Teams":::
 
-Une fois qu’il est chargé de manière indépendante dans Teams, votre onglet personnel est disponible dans Outlook et Office. Veillez à vous connecter avec les mêmes informations d’identification que celles que vous avez utilisées pour vous connecter à Teams pour charger une version test de votre application.
+Une fois qu’il est chargé de manière indépendante dans Teams, votre onglet personnel est disponible dans Outlook et Office. Vous devez vous connecter avec les mêmes informations d’identification que celles que vous avez utilisées pour charger de manière indépendante votre application dans Teams. Lorsque vous exécutez l’application Office pour Android, vous devez redémarrer l’application pour utiliser votre application onglet personnel à partir de l’application Office.
 
 Vous pouvez épingler l’application pour un accès rapide, ou vous pouvez trouver votre application dans le menu volant des points de suspension (**...**) parmi les applications récentes dans la barre latérale sur la gauche. L’épinglage d’une application dans Teams ne l’épingle pas en tant qu’application dans Office ou Outlook.
 
@@ -215,6 +219,19 @@ Pour afficher un aperçu de l’exécution de votre application dans Office sur 
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
 
+### <a name="office-app-for-android"></a>Application Office pour Android
+
+> [!NOTE]
+> Avant d’installer l’application, procédez [comme suit pour installer la dernière version bêta de l’application Office](prerequisites.md#mobile) et faire partie du programme bêta.
+
+Pour afficher votre application s’exécutant dans l’application Office pour Android :
+
+1. Lancez l’application Office et connectez-vous à l’aide de votre compte de locataire de développement. Si l’application Office pour Android était déjà en cours d’exécution avant le chargement indépendant de votre application dans Teams, vous devez la redémarrer pour la voir parmi vos applications installées.
+1. Sélectionnez l’icône **Applications** . Votre application chargée en version test apparaît parmi les applications installées.
+1. Sélectionnez l’icône de votre application pour lancer votre application dans l’application Office pour Android.
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Appuyez sur l’option « Applications » dans la barre latérale de l’application Office pour afficher vos onglets personnels installés":::
+
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
 Actuellement, un sous-ensemble de types et de fonctionnalités d’application Teams est pris en charge dans les clients Outlook et Office. Cette prise en charge s’étend au fil du temps.
@@ -239,14 +256,35 @@ Lors de la première exécution du débogage local vers Office ou Outlook, vous 
 
 Fournissez des commentaires et signalez les problèmes liés à l’expérience de débogage du Kit de ressources Teams dans [Microsoft Teams Framework (TeamsFx).](https://github.com/OfficeDev/TeamsFx/issues)
 
+#### <a name="mobile-debugging"></a>Débogage mobile
+
+Le débogage Teams Toolkit (`F5`) n’est pas encore pris en charge avec l’application Office pour Android. Voici comment déboguer à distance votre application s’exécutant dans l’application Office pour Android :
+
+1. Si vous déboguez à l’aide d’un appareil Android physique, connectez-le à votre machine de développement et activez l’option [de débogage USB](https://developer.android.com/studio/debug/dev-options). Cette option est activée par défaut avec l’émulateur Android.
+1. Lancez l’application Office à partir de votre appareil Android.
+1. Ouvrez votre profil **Me > Paramètres > Autoriser le débogage**, puis activez l’option **Activer le débogage à distance**.
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Capture d’écran montrant Activer le débogage à distance":::
+
+1. **Paramètres de** sortie.
+1. Quittez l’écran de votre profil.
+1. Sélectionnez **Applications** et lancez votre application chargée de manière indépendante pour qu’elle s’exécute dans l’application Office.
+1. Vérifiez que votre appareil Android est connecté à votre ordinateur de développement. À partir de votre ordinateur de développement, ouvrez votre navigateur sur sa page d’inspection DevTools. Par exemple, accédez à `edge://inspect/#devices` Microsoft Edge pour afficher la liste des webViews Android compatibles avec le débogage.
+1. Recherchez l’URL `Microsoft Teams Tab` avec votre onglet et sélectionnez **Inspecter** pour démarrer le débogage de votre application avec DevTools.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="capture d’écran montrant la liste des vues web dans devtool":::
+
+1. Déboguer votre application onglet dans Android WebView. De la même façon, vous [déboguez à distance](/microsoft-edge/devtools-guide-chromium/remote-debugging) un site web standard sur un appareil Android.
+
 ## <a name="code-sample"></a>Exemple de code
 
 | **Exemple de nom** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | Liste des tâches | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne uniquement dans Teams (utilisez cet exemple d’application pour essayer le processus de mise à niveau décrit dans ce didacticiel). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
-| Éditeur d’images (Microsoft 365) | Créez, modifiez, ouvrez et enregistrez des images à l’aide de Microsoft Graph API. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Éditeur d’images (Microsoft 365) | Créez, modifiez, ouvrez et enregistrez des images à l’aide de Microsoft API Graph. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Exemple de page de lancement (Microsoft 365) | Illustre l’authentification SSO et les fonctionnalités du Kit de développement logiciel (SDK) TeamsJS disponibles dans différents hôtes. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Application Northwind Orders | Montre comment utiliser le Kit de développement logiciel (SDK) Microsoft TeamsJS V2 pour étendre l’application Teams à d’autres applications hôtes M365. Fonctionne dans Teams, Outlook, Office. Optimisé pour les appareils mobiles.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Étape suivante
 

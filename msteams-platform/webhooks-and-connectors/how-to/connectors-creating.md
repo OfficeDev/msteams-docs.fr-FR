@@ -1,20 +1,20 @@
 ---
 title: Créer des connecteurs Office 365
 author: laujan
-description: Dans ce module, découvrez comment bien démarrer avec les connecteurs Office 365 et ajouter un connecteur à l’application Teams dans Microsoft Teams
+description: Prise en main des connecteurs Office 365. Ajoutez un connecteur à l’application Teams dans Microsoft Teams. Exemple (.NET, Node.js) Office 365 connecteur générant des notifications au canal Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 977bcac5daa3185177fbc9a3b441c245541914df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363482"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100727"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
-Avec les applications Microsoft Teams, vous pouvez ajouter votre Connecteur Office 365 existant ou en créer un nouveau dans Teams. Pour plus d'informations, consultez la section [Construire votre propre connecteur](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 Consultez la vidéo suivante pour découvrir comment créer un connecteur Office 365 :
 <br>
@@ -62,7 +62,7 @@ Pour intégrer l’expérience de configuration :
     > Vous devez appeler `microsoftTeams.pages.config.setValidityState(true)` en réponse à la sélection de l’utilisateur ou à la mise à jour du champ.
 
 1. Inscrivez un `microsoftTeams.pages.config.registerOnSaveHandler()` gestionnaire d’événements, qui est appelé lorsque l’utilisateur sélectionne **Enregistrer**.
-1. Appelez `microsoftTeams.pages.config.setConfig()` pour enregistrer les paramètres du connecteur. Les paramètres enregistrés sont également affichés dans la boîte de dialogue de configuration si l’utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
+1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. Appeler `microsoftTeams.pages.getConfig()` pour récupérer les propriétés du webhook, y compris l’URL.
 
     > [!NOTE]
@@ -147,9 +147,9 @@ Le tableau suivant fournit les paramètres et les détails des propriétés de r
 | `entityId`       | ID d’entité, tel que défini par votre code lors de l’appel `setConfig()`. |
 | `configName`  | Nom de configuration, tel que défini par votre code lors de l’appel vers `setConfig()`. |
 | `contentUrl` | URL de la page de configuration, définie par votre code lors de l’appel vers `setConfig()`. |
-| `webhookUrl` | URL de webhook créée pour le connecteur. Utilisez l’URL de webhook pour publier le code JSON structuré afin d’envoyer des cartes au canal. Le `webhookUrl` est retourné uniquement lorsque l’application retourne des données. |
+| `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | Les valeurs retournées peuvent être `mail`respectivement , `groups`ou `teams` correspondre au Office 365 Mail, Office 365 Groups ou Teams. |
-| `userObjectId` | ID unique correspondant à l’utilisateur Office 365 qui a lancé la configuration du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365, qui a configuré la configuration dans votre service. |
+| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### <a name="handle-edits"></a>Gérer les modifications
 
@@ -219,7 +219,7 @@ Le fichier *manifest.json* suivant contient les éléments nécessaires pour tes
 
 ## <a name="test-your-connector"></a>Tester votre connecteur
 
-Pour tester votre connecteur, téléchargez-le dans une équipe avec n'importe quelle autre application. Vous pouvez créer un package .zip à l’aide du fichier manifeste à partir des deux fichiers d’icône et du tableau de bord du développeur des connecteurs, modifié comme indiqué dans [Inclure le connecteur dans votre manifeste](#include-the-connector-in-your-manifest).
+To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
 Une fois que vous avez téléchargé l’application, ouvrez la liste des connecteurs à partir de n’importe quel canal. Faites défiler la page vers le bas pour afficher votre application dans la section **Téléchargé** :
 

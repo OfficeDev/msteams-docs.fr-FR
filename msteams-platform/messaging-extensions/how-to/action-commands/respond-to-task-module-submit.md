@@ -1,16 +1,16 @@
 ---
 title: Répondre à l’action d’envoi du module de tâche
 author: surbhigupta
-description: Dans ce module, découvrez comment répondre au module de tâche en soumettant une action à partir d’une commande d’action d’extension de messagerie avec un message proactif et bien plus encore.
+description: Découvrez comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de message avec un message proactif. Définissez des commandes de recherche et répondez aux recherches.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144025"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100482"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
@@ -204,7 +204,7 @@ La méthode de réponse est la même que [réponse à l’événement `fetchTask
 ## <a name="bot-response-with-adaptive-card"></a>Réponse du bot avec carte adaptative
 
 > [!NOTE]
-> La condition préalable pour obtenir la réponse du bot avec une carte adaptative est que vous devez ajouter l’objet `bot` au manifeste de votre application et définir l’étendue requise pour le bot. Utilisez le même ID que l’extension de votre message pour votre bot.
+> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
 Vous pouvez également répondre au `submitAction` en insérant un message avec une carte adaptative dans le canal avec un bot. L’utilisateur peut afficher un aperçu du message avant de l’envoyer. Cela est utile dans les scénarios où vous collectez des informations auprès des utilisateurs avant de créer une réponse de carte adaptative, ou lorsque vous mettez à jour la carte après qu’une personne interagit avec elle.
 
@@ -595,7 +595,7 @@ La section suivante est une description des entités dans le tableau `OnBehalfOf
 |`itemId`|Entier|Décrit l’identification de l’élément. Sa valeur doit être `0`.|
 |`mentionType`|Chaîne|Décrit la mention d’une « personne ».|
 |`mri`|Chaîne|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme «\<user\> via \<bot name\>».|
-|`displayName`|Chaîne|Nom de la personne. Utilisé comme solution de secours dans le cas où la résolution de noms n’est pas disponible.|
+|`displayName`|Chaîne|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## <a name="code-sample"></a>Exemple de code
 

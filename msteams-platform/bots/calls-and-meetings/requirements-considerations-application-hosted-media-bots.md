@@ -1,19 +1,19 @@
 ---
 title: Exigences et considérations relatives aux bots multimédias hébergés par des applications
-description: Découvrez les exigences et considérations importantes, ainsi que les considérations relatives à l’extensibilité et aux performances liées à la création de bots multimédias hébergés par l’application pour Teams
+description: Découvrez comment créer des bots multimédias hébergés par l’application pour Microsoft Teams, l’extensibilité et les performances. Consultez des exemples pour différents scénarios de médias distants et locaux.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 8643575f2fcb64cbfe6349c32d0b1b3df98ea31e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150788"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100874"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Exigences et considérations relatives aux bots multimédias hébergés par des applications
 
-Un bot multimédia hébergé par une application nécessite la [`Microsoft.Graph.Communications.Calls.Media` bibliothèque .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) pour accéder aux flux multimédias audio et vidéo. Le bot doit être déployé sur une machine locale Windows Server ou un système d’exploitation invité Windows Server dans Azure.
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server on-premises machine or a Windows Server guest Operating System (OS) in Azure.
 
 > [!NOTE]
 >
@@ -39,7 +39,7 @@ La section suivante fournit des détails sur l’emplacement des appels multimé
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
 
-Les appels multimédias en temps réel restent sur l’ordinateur sur lequel ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle qui a accepté ou démarré l’appel. Le média d’un appel Teams ou d’une réunion est envoyé à cette instance de machine virtuelle, et le média que le bot renvoie à Teams doit également provenir de cette machine virtuelle. S’il existe des appels multimédias en temps réel en cours lorsque la machine virtuelle est arrêtée, ces appels sont soudainement arrêtés. Si le bot a connaissance préalablement de l’arrêt de la machine virtuelle en attente, il peut mettre fin aux appels.
+Les appels multimédias en temps réel restent sur l’ordinateur sur lequel ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle qui a accepté ou démarré l’appel. Les médias d’un appel ou d’une réunion Teams circulent vers cette instance de machine virtuelle, et les médias que le bot renvoie à Teams doivent également provenir de cette machine virtuelle. S’il existe des appels multimédias en temps réel en cours lorsque la machine virtuelle est arrêtée, ces appels sont soudainement arrêtés. Si le bot a connaissance préalablement de l’arrêt de la machine virtuelle en attente, il peut mettre fin aux appels.
 
 La section suivante fournit des détails sur l’accessibilité des bots multimédias hébergés par l’application.
 

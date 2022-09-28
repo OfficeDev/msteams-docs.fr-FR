@@ -1,16 +1,16 @@
 ---
 title: Définir des commandes d’action d’extension de message
 author: surbhigupta
-description: Dans ce module, découvrez comment définir des commandes d’action d’extension de messagerie avec un exemple de manifeste d’application dans Microsoft Teams.
+description: Découvrez comment définir des commandes d’action d’extension de messagerie avec un exemple de manifeste d’application dans Microsoft Teams. Exemple (.NET, Node.js) comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’envoi du module de tâche.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604856"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100734"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -77,7 +77,7 @@ Si l’extension de message est appelée à partir de la zone de composition ou 
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Ajouter la commande d’action au manifeste de votre application
 
-Pour ajouter la commande d’action au manifeste de l’application, vous devez ajouter un nouvel objet `composeExtension` au niveau supérieur du manifeste d’application JSON. Vous pouvez utiliser l'un des moyens suivants pour ce faire :
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [Créer une commande d’action à l’aide du portail des développeurs](#create-an-action-command-using-developer-portal)
 * [Créer une commande d’action manuellement](#create-an-action-command-manually)
@@ -149,9 +149,9 @@ Si vous utilisez une liste statique de paramètres, vous devez également ajoute
 
 | Nom de la propriété | Objectif | Est-ce obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
-| `parameters` | Cette propriété décrit la liste statique des paramètres de la commande. À utiliser seulement quand `fetchTask` est `false`. | Non | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | Non | 1.0 |
 | `parameter.name` | Cette propriété décrit le nom du paramètre. Il est envoyé à votre service dans la demande de l’utilisateur. | Oui | 1.0 |
-| `parameter.description` | Cette propriété décrit les objectifs des paramètres ou l’exemple de la valeur qui doit être fournie. Cette valeur apparaît dans l'interface utilisateur. | Oui | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Oui | 1.0 |
 | `parameter.title` | Cette propriété est un titre ou une étiquette de paramètre convivial court. | Oui | 1.0 |
 | `parameter.inputType` | Cette propriété est définie sur le type d’entrée requis. Les valeurs possibles incluent `text`, `textarea`, `number`, `date`, `time`, `toggle`. La valeur par défaut est définie sur `text`. | Non | 1.4 |
 

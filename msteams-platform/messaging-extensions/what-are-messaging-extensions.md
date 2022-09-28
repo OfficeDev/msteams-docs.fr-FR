@@ -1,16 +1,16 @@
 ---
 title: Extensions de messages
 author: surbhigupta
-description: Dans ce module, découvrez les extensions de messagerie et les scénarios dans lesquels les extensions de message sont utilisées sur la plateforme Microsoft Teams
+description: Découvrez comment les extensions de message sont utilisées, les types et les scénarios dans lesquels elles sont utilisées sur la plateforme Microsoft Teams. Exemples sur l’action et l’extension de message basée sur la recherche.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c93e55bbbbf9bc135afeef3c9b5787cbefe3ce80
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: 766a135a55b3894c985a0701bb883d45519b496b
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786954"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100272"
 ---
 # <a name="message-extensions"></a>Extensions de messages
 

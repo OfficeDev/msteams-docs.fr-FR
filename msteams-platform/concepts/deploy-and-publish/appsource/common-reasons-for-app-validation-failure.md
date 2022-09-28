@@ -1,16 +1,16 @@
 ---
 title: Raisons courantes de l’échec de validation d’application
-description: Découvrez les raisons les plus courantes pour lesquelles votre application échoue à la validation de l’application et augmentez la probabilité que votre application réussisse le processus de soumission du Magasin Teams.
+description: Découvrez les raisons les plus courantes pour lesquelles votre application échoue à la validation de l’application. Liens rompus, erreurs dans la description, liens de stratégie non valides, violation des instructions de domaine valides, liens de support non valides, etc.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: b8d0b0eb44a3071a6831500cfae41952e520399e
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
-ms.translationtype: HT
+ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132763"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100909"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Raisons courantes de l’échec de validation d’application
 

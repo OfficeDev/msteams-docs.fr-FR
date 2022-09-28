@@ -1,16 +1,16 @@
 ---
 title: Déploiement de lien
 author: surbhigupta
-description: Dans ce module, découvrez comment ajouter un déploiement de lien avec l’extension de messagerie dans une application Teams avec un manifeste d’application ou manuellement à l’aide d’exemples de code et d’exemples.
+description: Ajoutez un déploiement de lien avec l’extension de messagerie dans une application Microsoft Teams avec le manifeste de l’application ou manuellement. Ajouter un déploiement de lien à l’aide du portail des développeurs. Comment mettre à jour votre code de service web pour gérer la demande d’appel.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
-ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
+ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833389"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100629"
 ---
 # <a name="add-link-unfurling"></a>Ajouter un déploiement de lien
 

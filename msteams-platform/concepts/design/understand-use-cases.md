@@ -1,16 +1,16 @@
 ---
 title: Présentation des cas d’utilisation et des fonctionnalités Teams de votre application
 author: heath-hamilton
-description: Dans cet article, vous découvrirez les fonctionnalités de l’application Microsoft Teams, planifierez et comprendrez l’application et les fonctionnalités Teams, ainsi que les problèmes utilisateur que l’application Teams résoudrait.
+description: 'Découvrez les responsabilités des applications Microsoft Teaams : onglets, bots, extensions de réunion, extensions de message, connecteurs webhook, expérience d’application personnelle, expérience d’application partagée.'
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558442"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100454"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
@@ -31,7 +31,7 @@ Si vous souhaitez répondre aux exigences des utilisateurs avec votre applicatio
 
 ## <a name="microsoft-teams-app-features"></a>Fonctionnalités de l’application Microsoft Teams
 
-Il existe plusieurs façons d’étendre Teams afin que chaque application soit unique. Offre de fonctionnalités d’application Teams :
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [Fonctionnalités de l’application](#app-capabilities)
 - [Étendue de l’application](#app-scope)
@@ -173,7 +173,7 @@ Votre application peut avoir l’une des étendues suivantes :
 - **Expérience d’application personnelle**: une application personnelle est un espace dédié ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités importantes pour eux.
 - **Expérience d’application partagée**: l’équipe, le canal et la conversation sont des espaces de collaboration. Les applications de ces contextes sont accessibles à tous les utilisateurs de cet espace. Les espaces de collaboration se concentrent généralement sur les flux de travail pour les interactions de votre application ou sur le déverrouillage de nouvelles interactions sociales.
 
-Une application peut exister dans différentes étendues. Par exemple :
+Une application peut exister dans différentes étendues. Par exemple :
 
 - Votre application peut afficher des données dans un emplacement partagé central, c’est-à-dit un onglet.
 - Il peut également présenter ces mêmes informations par le biais d’une interface conversationnelle personnelle, c’est-à-d., un bot.

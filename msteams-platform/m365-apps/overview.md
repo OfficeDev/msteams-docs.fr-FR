@@ -1,16 +1,16 @@
 ---
 title: Étendre les applications Teams à travers Microsoft 365 (version préliminaire)
-description: Dans cet article, découvrez comment créer, mettre à jour et étendre vos expériences d’application Teams et comment créer des applications utilisées dans d’autres domaines à utilisation élevée de Microsoft 365.
+description: Découvrez comment créer, mettre à jour et étendre votre application Teams sur Microsoft M365 (Teams, Outlook et Office en tant qu’hôtes d’applications). Soumission Microsoft AppSource.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 835af580a23a5fa4bcf99bf5fd2f091d076df489
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781072"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100617"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Étendre Teams applications à travers Microsoft 365
 
@@ -22,7 +22,7 @@ La plateforme d’applications Teams continue d’évoluer et de se développer 
 
 |          | Élément de manifeste d’application | Prise en charge de Teams |Prise en charge d’Outlook* | Prise en charge d’Office* | Remarques |
 |--|--|--|--|--|--|
-| [**Onglets**](../tabs/what-are-tabs.md) (étendue personnelle)    |`staticTabs`  | Web, Bureau, Mobile | Web (version ciblée), Bureau (canal bêta) | Web (version ciblée), Bureau (canal bêta)| Étendue de canal et de groupe non encore prise en charge pour Microsoft 365. Consultez [les notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Onglets**](../tabs/what-are-tabs.md) (étendue personnelle)    |`staticTabs`  | Web, Bureau, Mobile | Web (version ciblée), Bureau (canal bêta) | Web (version ciblée), Bureau (canal bêta), Mobile (Android)| Étendue de canal et de groupe non encore prise en charge pour Microsoft 365. Consultez [les notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Extensions de message**](../messaging-extensions/what-are-messaging-extensions.md) (basées sur la recherche)| `composeExtensions` | Web, Bureau, Mobile| Web (version ciblée), Bureau (canal bêta)| - |Basée sur des actions non encore prises en charge pour Microsoft 365. Consultez [les notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
 | [**Compléments Office**](/office/dev/add-ins/develop/json-manifest-overview) (préversion) | `extensions` | - | Web, Bureau | - | Disponible uniquement dans la version [du manifeste devPreview](../resources/schema/manifest-schema-dev-preview.md) . Consultez [les notes](#office-add-ins-preview).|
 
@@ -38,6 +38,10 @@ Pour obtenir des conseils sur le manifeste de l’application Teams et le guide 
 Atteignez vos utilisateurs là où ils se trouvent, dans le contexte de leur travail, en étendant votre application web en tant qu’application d’onglet personnel Teams qui s’exécute également dans Outlook et Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="La capture d’écran est un exemple montrant l’onglet Personnel en cours d’exécution dans Outlook, Office et Teams.":::
+
+Sur mobile, vous pouvez tester et déboguer votre onglet personnel Teams s’exécutant sur l’application Office pour Android.
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="La capture d’écran est un exemple montrant l’onglet personnel en cours d’exécution dans Office.":::
 
 Vous pouvez également étendre vos extensions de message Teams basées sur la recherche à Outlook sur le web et au bureau Windows, ce qui permet à vos clients de rechercher et de partager des résultats via la zone de composition des messages d’Outlook, en plus des clients Microsoft Teams.
 

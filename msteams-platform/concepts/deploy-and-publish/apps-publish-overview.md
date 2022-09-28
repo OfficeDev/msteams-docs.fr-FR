@@ -1,16 +1,16 @@
 ---
 title: Vue d’ensemble – Distribuer votre application
-description: Dans cet article, découvrez les options de publication de votre application Microsoft Teams, de chargement et de déploiement de votre application et de Cloud de la communauté du secteur public.
+description: Apprenez à distribuer, publier votre application dans le Microsoft Teams Store ou sur votre organisation. Découvrez comment les points de terminaison de l’application doivent respecter les exigences de votre organisation Cloud de la communauté du secteur public (GCC).
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: df17129ce1e51093351683ad01db3be9e65c5770
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044671"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100720"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams
 

@@ -1,14 +1,14 @@
 ---
 title: Référence du schéma du manifeste
-description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
+description: Dans cet article, vous trouverez la dernière version du schéma de manifeste public pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026968"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100167"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -576,7 +576,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo.url`|chaîne|||URL webview initiale.|
 |`parameters`|tableau d'objet|5 éléments|✔️|Liste des paramètres que prend la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
-|`parameters.title`|string|32 caractères|✔️|Titre convivial du paramètre.|
+|`parameters.title`|chaîne|32 caractères|✔️|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
 |`parameters.inputType`|string|128 caractères||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
@@ -682,7 +682,7 @@ Définissez les propriétés utilisées par votre application pour publier un fl
 |---|---|---|---|---|
 |`type`|string|32 caractères|✔️|Le type de notification. *Voir ci-dessous*.|
 |`description`|string|128 caractères|✔️|A brief description of the notification. *See below*.|
-|`templateText`|chaîne|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
+|`templateText`|string|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
 
 ```json
 {

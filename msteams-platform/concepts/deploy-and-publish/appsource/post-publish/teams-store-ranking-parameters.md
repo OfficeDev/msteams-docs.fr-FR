@@ -1,16 +1,16 @@
 ---
 title: Paramètres de classement du store Microsoft Teams
-description: Le store Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs.
+description: Comprendre les paramètres de classement du magasin Microsoft Teams. Les principaux paramètres utilisés pour déterminer les placements d’applications sont les données d’utilisation historiques, les données d’engagement des utilisateurs, la qualité et les valeurs de l’application, la pertinence de l’udience, la mise à jour de l’application.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 558ac86814ddb61660ca2409418754fd33730c7b
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190004"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100335"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Paramètres de classement du store Microsoft Teams
 

@@ -1,15 +1,15 @@
 ---
 title: Notifications d’appel entrant
-description: Dans ce module, découvrez des informations techniques détaillées sur la gestion des notifications à partir d’appels entrants, la redirection et l’authentification des appels à l’aide d’exemples de code
+description: Découvrez le protocole de notification entrante pour convertir l’appel de l’ancien au format Graph, les redirections pour l’affinité de région et authentifier le rappel.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2019
-ms.openlocfilehash: fd68b85a3c6f5f4682a728461d792093bcd8cac0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d5bdd20cb9cb7deef7419acb1da4ac96da2d89a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143829"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100657"
 ---
 # <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 

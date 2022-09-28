@@ -1,15 +1,15 @@
 ---
 title: Planifier la monétisation de votre application
-description: Dans ce module d’apprentissage, vous découvrirez comment planifier la monétisation de votre application Microsoft Teams et comprendrez la meilleure option de monétisation pour une visibilité globale.
+description: Planifiez la monétisation de votre application Microsoft Teams et comprenez également les meilleures options de monétisation pour une visibilité globale.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: bb6f33d568b16d5f8f2aeb4d900b3d658d2bd6bb
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 0bc933282990437742f99a53da5ee386efd9020c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558134"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100342"
 ---
 # <a name="plan-to-monetize-your-app"></a>Planifier la monétisation de votre application
 

@@ -1,17 +1,17 @@
 ---
 title: Solution Teams pour la création d’applications
 author: heath-hamilton
-description: Découvrez la vue d’ensemble de Teams solution pour la création d’applications et fournissez un support allant de la planification de votre application à sa distribution.
+description: Découvrez comment planifier, concevoir, générer, étendre à Microsoft 365, tester, distribuer, monétiser et intégrer votre application à Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 10e35af5ec4993ea93579f70afc120ff0aa8b18a
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
-ms.translationtype: HT
+ms.openlocfilehash: ac4f3a208484a093460a14777a351aa4abc10af7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66793060"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100783"
 ---
 # <a name="the-teams-solution"></a>La solution Teams
 
@@ -22,7 +22,7 @@ Plateforme Microsoft Teams est une plateforme puissante et flexible qui vous per
 
 Vous avez affiché les offres Teams. Vous pouvez désormais les mapper aux besoins de l’utilisateur. Revoyons le scénario.
 
-Le développeur de l’agence Tours and Travel souhaite créer une application pour ses utilisateurs, les travelers. L’application doit :
+Le développeur de l’agence Tours and Travel souhaite créer une application pour ses utilisateurs, les voyageur. L’application doit :
 
 - Vérifiez et envoyez les prévisions aux voyageurs inscrits auprès de l’agence de voyage.
 - Informez les utilisateurs un jour avant la date de départ afin qu’ils puissent planifier.
@@ -40,7 +40,7 @@ La **solution d’application Teams** : un *bot de conversation personnelle* de 
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Un développeur d’une agence de voyages crée un bot pour Teams qui envoie des prévisions météorologiques aux clients afin qu’ils puissent planifier leurs dates de voyage":::
 
-Teams offre ces fonctionnalités et bien d’autres pour offrir à vos utilisateurs une solution d’application riche en fonctionnalités. Pour développer cette application :
+Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. Créez une application de bot de conversation personnelle.
 1. Intégrez-la à une API de prévisions météorologiques externe pour vous connecter et demander des prévisions pour une date et un emplacement spécifiques.
@@ -55,7 +55,7 @@ Une application Teams vous offre la flexibilité de choisir votre environnement 
 
 :::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Besoin commercial de l’application":::
 
-Créez votre application Teams dans l’environnement qui convient à vos besoins particuliers. Vous pouvez même sélectionner une combinaison.
+Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
 Par exemple, vous pouvez utiliser le Kit de ressources Teams pour créer une application avec JavaScript et l’héberger sur un site SharePoint.
 
@@ -67,10 +67,10 @@ En tant que plateforme de création d’applications, Teams offre la gamme compl
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Description d’un cycle de vie du développement d’applications Teams. Planifier, concevoir, générer, étendre, tester, déployer, distribuer. Détails affichés dans une liste à puces ci-dessous.":::
 
-De la conception à la création et à la distribution d’une application Teams, vous pouvez utiliser différents outils et services. Voici un exemple de flux de développement :
+From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. Planifiez votre projet et déterminez l’exigence.
-1. Concevez l’application. Utilisez le Kit d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir l’interface utilisateur des onglets.
+1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Créez l’application avec JavaScript à l’aide du Kit de ressources Teams.
 1. Étendez les fonctionnalités en ajoutant des fonctionnalités Teams et des données M365 avec :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph.
 1. Testez l’application sur un locataire de développeur avec des exemples de données utilisateur.
@@ -122,7 +122,7 @@ De la conception à la création et à la distribution d’une application Teams
         **Créer votre application**
     :::column-end:::
     :::column span="2":::
-        Vous recherchez de l’inspiration pour le développement d’applications ? Parcourez notre liste de scénarios réels et de solutions du secteur avec un concept haute fidélité fictif pour comprendre les différentes façons dont une application Teams peut aider vos utilisateurs.
+        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
         > [!div class="nextstepaction"]
         > [Voir les scénarios d’application](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
@@ -194,7 +194,7 @@ Vous pouvez prévisualiser vos applications Teams exécutées dans d’autres ex
         **Un petit code suffit**
     :::column-end:::
     :::column span="2":::
-        Vous n’avez pas besoin d’être un programmeur expert pour créer une application Teams exceptionnelle. Essayez l’une des solutions à faible code.
+        You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
         > [!div class="nextstepaction"]
         > [Créer une application à faible code](samples/teams-low-code-solutions.md)

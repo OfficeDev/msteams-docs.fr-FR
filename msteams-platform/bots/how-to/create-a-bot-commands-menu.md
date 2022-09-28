@@ -1,18 +1,21 @@
 ---
 title: Créer un menu de commandes pour votre bot
 author: surbhigupta
-description: Dans ce module, découvrez comment créer et gérer un menu de commandes pour votre bot Microsoft Teams avec des exemples de code.
+description: Découvrez comment créer et gérer un menu de commandes pour votre bot Microsoft Teams et les meilleures pratiques. Découvrez comment supprimer des commandes de votre manifeste.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0e0f9ce9ada0cde0aa6f7b6b29c7badb07dd7db9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312303"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100902"
 ---
 # <a name="create-a-commands-menu"></a>Créer un menu commandes
+
+> [!NOTE]
+> Il est recommandé de créer un bot de commandes en suivant le guide pas à pas pour [créer un bot de commandes avec JavaScript](../../sbs-gs-commandbot.yml) à l’aide de l’outil de développement de nouvelle génération pour Teams. Pour plus d’informations sur le Kit de ressources Teams, consultez [la vue d’ensemble du Kit de ressources Teams pour Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) et la [vue d’ensemble du Kit de ressources Teams pour Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -61,7 +64,7 @@ Pour créer un menu de commandes pour votre bot à l’aide du portail des déve
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Créer un menu de commandes pour votre bot en modifiant Manifest.json
 
-Une autre façon de créer un menu de commande consiste à le créer directement dans le fichier manifeste lors du développement de votre code source de bot. Pour utiliser cette méthode, suivez ces points :
+Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
 * Chaque menu prend en charge jusqu’à dix commandes.
 * Créez un menu de commandes unique qui fonctionne dans toutes les étendues.
@@ -188,7 +191,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Vous pouvez analyser la partie **@Mention** du texte du message à l’aide d’une méthode statique fournie avec le Bot Framework. C’est une méthode de la classe `TurnContext` appelée `remove_recipient_mention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `remove_recipient_mention`.
 
 Le code Python permettant d’analyser la **\@mention** partie du texte du message est la suivante :
 
@@ -205,7 +208,7 @@ Pour permettre le bon fonctionnement de votre code de bot, vous devez suivre que
 Voici les meilleures pratiques du menu de commandes :
 
 * Restez simple : le menu du bot est destiné à présenter les fonctionnalités clés de votre bot.
-* Restez bref : les options de menu ne doivent pas être longues et ne doivent pas être des instructions de langage naturel complexes. Elles doivent être de simples commandes.
+* Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
 * Gardez-le invocable : les commandes ou les actions du menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans lequel se trouve le bot.
 
 > [!NOTE]

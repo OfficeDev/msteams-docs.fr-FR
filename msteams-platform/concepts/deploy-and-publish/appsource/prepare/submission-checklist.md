@@ -1,16 +1,16 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Découvrez les étapes finales avant de soumettre votre application Microsoft Teams à répertorier dans le Store. Apprenez à valider votre package d’application et bien plus encore.
+description: Découvrez les étapes finales avant de soumettre votre application Microsoft Teams à répertorier dans le Store. Apprenez à valider votre package d’application. Découvrez comment mettre à jour l’ID d’équipe Apple App Store Connect sur l’Espace partenaires.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605757"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100440"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 
@@ -33,7 +33,7 @@ L’outil de validation d’application Microsoft Teams vous permet d’identifi
 1. Accédez à l’[outil de validation d’application Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Remarque : l’outil est également disponible dans [Developer Portal pour Teams](~/concepts/build-and-test/teams-developer-portal.md)
 1. Chargez votre package d’application pour exécuter les tests automatisés.
 1. Accédez à la **liste de contrôle préliminaire** et passez en revue les cas de test difficiles à automatiser.
-1. [Résoudre les problèmes liés à vos configurations](~/resources/schema/manifest-schema.md) ou application en général. Ces problèmes se produisent si les tests automatisés vous donnent des erreurs ou si vous ne répondez pas à tous les critères de la liste de vérification.
+1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
@@ -97,7 +97,7 @@ Vous devez avoir une description courte et longue de votre application.
 
 #### <a name="short-description"></a>Description courte
 
-Résumé concis de votre application qui doit être original, attrayant et destiné à votre public cible. Conservez la brève description d’une phrase.
+A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
 :::row:::
 
@@ -167,7 +167,7 @@ Pour connaître les meilleures pratiques, consultez les ressources suivantes :
 
 ### <a name="create-a-video"></a>Créer une vidéo
 
-Une vidéo dans votre description peut être le moyen le plus efficace de communiquer pourquoi les utilisateurs doivent utiliser votre application. Répondez aux questions suivantes dans une vidéo :
+A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
 
 * À qui est destinée votre application ?
 * Quels problèmes votre application peut-elle résoudre ?
@@ -179,7 +179,7 @@ Vous pouvez ajouter une URL pour votre vidéo YouTube ou Vimeo.
 #### <a name="best-practices-for-videos"></a>Meilleures pratiques pour les vidéos
 
 * Conservez votre vidéo entre 60 et 90 secondes.
-* Visez la qualité. Dans une liste, les utilisateurs verront votre vidéo avant les captures d’écran.
+* Aim for quality. In a listing, users will see your video before screenshots.
 * Communiquez la valeur du produit sous forme de narration.
 * Montrez le fonctionnement du produit.
 

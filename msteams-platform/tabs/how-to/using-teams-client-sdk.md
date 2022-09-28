@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Dans ce module, découvrez le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781065"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100153"
 ---
 # <a name="teams-javascript-client-sdk"></a>Kit de développement logiciel client JavaScript Teams
 
@@ -38,10 +38,10 @@ Le tableau suivant répertorie les onglets et boîtes de dialogue Teams (modules
 
 |Fonctionnalité | Prise en charge de l’hôte | Remarques |
 |-----------|--------------|-------|
-| application | Teams, Outlook, Office | Espace de noms représentant l’initialisation et le cycle de vie des applications. |
+| application | Teams, Outlook, Office, application Office pour Android | Espace de noms représentant l’initialisation et le cycle de vie des applications. |
 | appInitialization| | Déconseillé. Remplacé par `app` un espace de noms. |
 | appInstallDialog | Équipes||
-| authentification | Teams, Outlook, Office | |
+| authentification | Teams, Outlook, Office, application Office pour Android | |
 | calendrier | Outlook ||
 | appeler | Équipes||
 | conversation |Équipes||
@@ -49,7 +49,7 @@ Le tableau suivant répertorie les onglets et boîtes de dialogue Teams (modules
 | emplacement |Équipes| Consultez les notes sur [les autorisations d’application](#app-permissions).|
 | messagerie | Outlook (bureau Windows uniquement)||
 | média |Équipes| Consultez les notes sur [les autorisations d’application](#app-permissions).|
-| pages | Teams, Outlook, Office | Espace de noms représentant la navigation de page. Consultez les notes sur la [liaison approfondie](#deep-linking). |
+| pages | Teams, Outlook, Office, application Office pour Android | Espace de noms représentant la navigation de page. Consultez les notes sur la [liaison approfondie](#deep-linking). |
 | contacts |Équipes||
 | paramètres || Déconseillé. Remplacé par `pages.config`.|
 | partage | Équipes||
@@ -143,7 +143,7 @@ Pour plus d’informations, consultez [Étendre les applications Teams sur Micro
 
 ### <a name="callbacks-converted-to-promises"></a>Rappels convertis en promesses
 
-Les API Teams qui ont précédemment pris un paramètre de rappel ont été mises à jour pour retourner un objet JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) . Il s’agit notamment des API suivantes :
+Les API Teams qui ont précédemment pris un paramètre de rappel ont été mises à jour pour retourner un objet [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) JavaScript. Il s’agit notamment des API suivantes :
 
 ```js
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
@@ -232,7 +232,7 @@ Vous pouvez vérifier la prise en charge par l’hôte d’une fonctionnalité d
 
 Le nom de l’hôte dans lequel votre application s’exécute est exposé en tant que propriété *hostName* sur l’interface de contexte (`app.Context.app.host.name`), qui peut être interrogée au moment de l’exécution en appelant `getContext`. Il est également disponible en tant que `{hostName}`[valeur d’espace réservé d’URL](./access-teams-context.md#get-context-by-inserting-url-placeholder-values). Il est recommandé d’utiliser le mécanisme *hostName* avec parcimonie :
 
-* **Ne partez pas** du principe que certaines fonctionnalités sont ou ne sont pas disponibles dans un hôte en fonction de la valeur de la propriété *hostName*. Au lieu de cela, recherchez la prise en charge des fonctionnalités (`isSupported`).
+* **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **N’utilisez** pas *hostName* pour contrôler les appels d’API. Au lieu de cela, recherchez la prise en charge des fonctionnalités (`isSupported`).
 * **Utilisez***hostName* pour différencier le thème de votre application en fonction de l’hôte dans lequel elle s’exécute. Par exemple, vous pouvez utiliser Microsoft Teams violet comme couleur d’accentuation principale lors de l’exécution dans Teams, et Outlook bleu lors de l’exécution dans Outlook.
 * **Utilisez** *hostName* pour différencier les messages affichés à l’utilisateur en fonction de l’hôte dans lequel il s’exécute. Par exemple, affichez *Gérer vos tâches dans Office* lors de l’exécution dans Office sur le web, et *Gérer vos tâches dans Teams* lors de l’exécution dans Teams.
@@ -446,7 +446,7 @@ Si vous mettez à jour une application Teams pour qu’elle s’exécute dans Of
 # <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez la *palette de commandes* : `Ctrl+Shift+P`
-1. Exécuter **Teams : mettez à niveau le manifeste Teams pour prendre en charge la commande Applications Outlook et Office** et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées en place.
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Office apps** command and select your app manifest file. Changes will be made in place.
 
 # <a name="manual-steps"></a>[Étapes manuelles](#tab/manifest-manual)
 

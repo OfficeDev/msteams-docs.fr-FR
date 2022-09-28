@@ -1,16 +1,16 @@
 ---
 title: Répondre à la commande de recherche
 author: surbhigupta
-description: Dans ce module, découvrez comment répondre à la commande de recherche à partir d’une extension de message dans une application Microsoft Teams à l’aide d’exemples de code et d’exemples
+description: Découvrez comment répondre à la commande de recherche à partir d’une extension de message dans une application Microsoft Teams. Découvrez comment répondre à la demande de l’utilisateur.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143703"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100559"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
@@ -107,7 +107,7 @@ Pour savoir comment utiliser les types de miniatures et de cartes de héros, con
 
 Pour plus d’informations sur la carte de connecteur Office 365, consultez [Utilisation des cartes de connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-La liste des résultats s’affiche dans l’interface utilisateur Microsoft Teams avec un aperçu de chaque élément. La préversion est générée de l’une des deux manières suivantes :
+La liste des résultats s’affiche dans l’interface utilisateur de Microsoft Teams avec un aperçu de chaque élément. La préversion est générée de l’une des deux manières suivantes :
 
 * Utilisation de la `preview` propriété dans l’objet `attachment` . La `preview` pièce jointe ne peut être qu’un héros ou une carte miniature.
 * Extraction des propriétés de base `title``text`et `image` de l’objet`attachment`. Les propriétés de base sont utilisées uniquement si la `preview` propriété n’est pas spécifiée.
@@ -387,7 +387,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>Requête par défaut
 
-Si vous avez la valeur définie `initialRun` `true` dans le manifeste, Microsoft Teams émet une requête **par défaut** lorsque l’utilisateur ouvre l’extension de message pour la première fois. Votre service peut répondre à cette requête avec un ensemble de résultats préremplis. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant des éléments récemment consultés, des favoris ou toute autre information qui ne dépend pas de l’entrée utilisateur.
+Si vous définissez la valeur `initialRun` `true` dans le manifeste, Microsoft Teams émet une requête **par défaut** lorsque l’utilisateur ouvre l’extension de message pour la première fois. Votre service peut répondre à cette requête avec un ensemble de résultats préremplis. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant des éléments récemment consultés, des favoris ou toute autre information qui ne dépend pas de l’entrée utilisateur.
 
 La requête par défaut a la même structure que n’importe quelle requête utilisateur normale, avec le `name` champ défini `initialRun` sur et `value` défini `true` sur comme indiqué dans l’objet suivant :
 
