@@ -4,12 +4,12 @@ description: Dans cet article, découvrez comment configurer, distribuer et gér
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
+ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435075"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68098917"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Gérez vos applications dans le portail des développeurs
 
@@ -20,7 +20,7 @@ Après avoir créé ou chargé votre application, vous pouvez gérer vos applica
 * [Avancé](#advanced)
 * [Publier](#publish)
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Dans la section **Vue d’ensemble** , vous pouvez voir les composants suivants pour gérer votre application :
 
@@ -56,7 +56,7 @@ Dans la section **Configurer** , vous pouvez voir les composants suivants pour g
   * Extension de réunion
   * Notification de flux d’activité
 * **Autorisations** : cette section vous permet d’accorder des autorisations d’appareil, des autorisations d’équipe, des autorisations de conversation ou de réunion et des autorisations utilisateur pour votre application.
-* **Authentification unique** : vous pouvez configurer votre application pour authentifier les utilisateurs avec l’authentification unique (SSO).
+* **Authentification unique** : le bot inscrit sur Azure AD prend en charge l’authentification unique Sign-On (SSO). Si un bot est inscrit sur le portail Bot Framework (ou dans le portail des développeurs sous Bot Management), ces bots ne prennent pas en charge l’authentification unique et vous devez inscrire votre bot sur Azure AD pour prendre en charge l’authentification unique. Pour un bot inscrit sur Azure AD, ajoutez **l’URI d’ID d’application**. Pour obtenir l’URI d’ID d’application à partir d’Azure AD, consultez [Utiliser l’authentification unique pour les bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Langues** : vous pouvez configurer ou modifier la langue de votre application.
 * **Domaine** : vous pouvez ajouter les domaines pour charger vos applications dans le client Teams (par exemple : *.example.com).
 
