@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ca65a34796886ff8eb6a0c13aaa11af319739dc8
+ms.sourcegitcommit: 1db4429f34da213aa749e483a4ceb83c14b07de3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806772"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158262"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
 
@@ -59,7 +59,7 @@ Le tableau suivant vous aide à obtenir la vue d’ensemble du Kit de ressources
 | Publier votre application Teams | Il contient : <br> - Publier votre application <br> - Gérer l’approbation de l’administrateur <br> - Publier sur le store <br> - Intégrer au portail des développeurs |
 
 ### <a name="entities-integrated-with-teams-toolkit"></a>Entités intégrées à Teams Toolkit
-
+ 
 Teams Toolkit est une extension dans Visual Studio Code. Il est intégré aux entités suivantes dans Teams Toolkit.such as Azure AD and Microsoft 365, Developer Portal and Microsoft graph. Toutes les entités sont intégrées au Kit de ressources Teams et aident les utilisateurs à créer une application.
 
 | Entités | Description |
