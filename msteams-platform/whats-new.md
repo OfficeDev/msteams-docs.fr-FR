@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités et mises à jour des dév
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: e54f37ae2c330275fb0dd51de34c2f8bcd721bba
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158826"
+ms.locfileid: "68160726"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -31,6 +31,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 **Septembre 2022**
 
+* ***29 septembre 2022*** : [L’application mobile Teams prend désormais en charge les téléchargements de fichiers sur les appareils locaux.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***29 septembre 2022*** : [Générer un lien profond pour partager du contenu dans les réunions.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***16 septembre 2022*** : [Les cartes adaptatives dans les extensions de message basées sur la recherche prennent désormais en charge les actions universelles.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***6 septembre 2022*** : [Introduction d’extraits de code pour la capture de vidéos à l’aide de l’appareil photo via `selectMedia` l’API.](concepts/device-capabilities/media-capabilities.md#code-snippets)
@@ -291,9 +292,10 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | Partager des applications vers la phase de réunion Teams dans le mobile | Créer des applications pour les réunions et les appels Teams > [activer et configurer des applications pour les réunions](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Applications pour les réunions de canal public planifiées | Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Désactiver et activer le son des API pour les applications dans l’étape de réunion Teams | Créer des applications pour les réunions et les appels Teams > [références d’API Applications de réunion](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
-| 02/08/2022| Contrôles de collaboration pour Teams| Intégrer avec [les contrôles](samples/collaboration-control.md)Teams > Collaboration|
+| 02/08/2022| Contrôles de collaboration pour Teams| Intégrer avec [les contrôles](samples/collaboration-control.md)Teams > Collaboration |
 | 30/06/2022 | Applications pour les réunions instantanées, les appels en tête-à-tête et les appels de groupe| Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |24/05/2022| Collaboration améliorée avec Live Share SDK | Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 03/02/2022 | Introduction de la version 1.13 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |

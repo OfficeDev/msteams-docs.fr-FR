@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 9d850b76bddf288e766bdcc039711ef1d3059df8
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100440"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160712"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 
@@ -19,7 +19,7 @@ Vous avez conçu, créé et testé votre application Microsoft Teams. Vous êtes
 Regardez la vidéo suivante pour en savoir plus sur la publication de votre application dans l’App Store Microsoft Teams :
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Avant de soumettre votre application à [Espace partenaires](/office/dev/store/use-partner-center-to-submit-to-appsource), vérifiez que vous avez effectué les opérations suivantes.
@@ -30,7 +30,10 @@ Bien que votre application fonctionne dans un environnement de test, vous devez 
 
 L’outil de validation d’application Microsoft Teams vous permet d’identifier et de résoudre les problèmes avant de les soumettre à Espace partenaires. L’outil vérifie automatiquement les configurations de votre application par rapport aux cas de test utilisés lors de la validation du Store.
 
-1. Accédez à l’[outil de validation d’application Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Remarque : l’outil est également disponible dans [Developer Portal pour Teams](~/concepts/build-and-test/teams-developer-portal.md)
+1. Accédez à l’[outil de validation d’application Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html).
+
+   Vous pouvez également valider votre application à l’aide [du portail des développeurs pour Teams.](~/concepts/build-and-test/teams-developer-portal.md)
+
 1. Chargez votre package d’application pour exécuter les tests automatisés.
 1. Accédez à la **liste de contrôle préliminaire** et passez en revue les cas de test difficiles à automatiser.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -185,18 +188,36 @@ Vous pouvez ajouter une URL pour votre vidéo YouTube ou Vimeo.
 
 ### <a name="select-a-category-for-your-app"></a>Sélectionner une catégorie pour votre application
 
-Lors de l’envoi, vous êtes invité à classer votre application. Le tableau suivant mappe les catégories du Magasin Teams aux catégories répertoriées dans [Espace partenaires](https://aka.ms/PartnerCenterHomePage).
+Lors de l’envoi, vous êtes invité à classer votre application. Vous pouvez catégoriser votre application en fonction des catégories suivantes :
 
-| Catégories Teams       | Espace partenaires catégories  |
-|:---------------------|:---------------|
-| Visualisation des données et décisionnel | Analytique, visualisation des données et décisionnel |
-| Outils de développement | Outils de développement, administrateur informatique |
-| Formation | Formation |
-| Ressources humaines & recrutement| Ressources humaines et recrutement |
-| Productivité | Gestion de contenu, fichiers et documents, productivité, formation et didacticiels, et utilitaires |
-| Gestion de projet | Communication, gestion de projet, flux de travail et gestion d’entreprise |
-| Ventes et support | Gestion des clients et des contacts, support client, gestion financière et ventes et marketing |
-| Social | Galeries d’images et de vidéos, Style de vie, Actualités et météo, Réseaux sociaux, Voyage et Navigation |
+|Categories  |
+|--------------|
+| Microsoft |
+| Éducation |
+| Productivité |
+| Images & galeries vidéo |
+| Gestion de projet |
+| Utilitaires |
+| Social |
+| Communication |
+| Gestion de contenu |
+| Fichiers & documents |
+| Gestion des flux de travail & l’entreprise |
+| Informatique/Administration |
+| Ressources humaines & recrutement|
+| Outils de développement |
+| Réunions & planification |
+| Visualisation des données & BI |
+| Didacticiel & de formation |
+| Actualités & météo |
+| Service client |
+| Référence |
+| Marketing & des ventes |
+| Regarder & sentir |
+| Gestion des contacts client & (CRM) |
+| Gestion financière |
+| Mappe les flux & |
+| Autre |
 
 ### <a name="localize-your-store-listing"></a>Localiser votre description dans le Store
 

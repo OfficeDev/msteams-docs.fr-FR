@@ -649,6 +649,9 @@
         - name: Préparer votre soumission du store Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing'
+        - name: Mettre à jour l’ID d’équipe Apple App Store Connect sur Espace partenaires
+          href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
+          displayName: Enable users to install your app on Teams iOS Platform.
         - name: Envoyer votre application
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: Résoudre les problèmes en cas d’échec de l’envoi de votre store Teams

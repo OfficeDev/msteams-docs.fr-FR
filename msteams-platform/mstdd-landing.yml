@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: c97800d01e7444ff10bf5fc31c785d00d076e217
-  ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
+  ms.openlocfilehash: cc515e28b4cc9ffd2de4af531472e7213d4565d3
+  ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/23/2022
-  ms.locfileid: "67991641"
+  ms.lasthandoff: 09/29/2022
+  ms.locfileid: "68160691"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
+    - text: Mettre à jour l’ID d’équipe Apple App Store Connect sur Partner Cente
+      url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
     - text: Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées
       url: apps-in-teams-meetings/meeting-app-extensibility.md
     - text: Présentation de Teams Toolkit pour Visual Studio 2022
@@ -45,8 +47,6 @@ landingContent:
       url: m365-apps/overview.md
     - text: Conseils sur les applications et nouveautés de la version 2.0.0 de TeamsJS
       url: tabs/how-to/using-teams-client-sdk.md
-    - text: La version 4.0.0 du kit de ressources de Teams pour Visual Studio Code est désormais en disponibilité générale
-      url: toolkit/teams-toolkit-fundamentals.md
 - title: Prise en main
   linkLists:
   - linkListType: get-started

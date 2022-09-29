@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Dans cet article, vous allez apprendre à créer des liens profonds et à les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158840"
+ms.locfileid: "68160719"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -388,7 +388,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Créez un lien profond pour l'application après son inscription dans le magasin Teams. Pour créer un lien pour lancer Teams, ajoutez l’ID d’application à l’URL suivante : `https://teams.microsoft.com/l/app/<your-app-id>`. Une boîte de dialogue s’affiche pour installer ou ouvrir l’application.
 
 > [!NOTE]
-> Si votre application a été approuvée pour la plateforme mobile, vous pouvez établir un lien profond vers une application mobile. L’ID d’équipe Apple App Store Connect est également requis pour que le lien approfondi fonctionne sur Teams-iOS. Pour plus d’informations, consultez [la mise à jour de l’ID d’équipe Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
+> Si votre application a été approuvée pour la plateforme mobile, vous pouvez établir un lien profond vers une application mobile. L’ID d’équipe Apple App Store Connect est également requis pour que le lien approfondi fonctionne sur Teams-iOS. Pour plus d’informations, consultez [la mise à jour de l’ID d’équipe Apple App Store Connect](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Liaison approfondie pour les onglets SharePoint Framework
 

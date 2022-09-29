@@ -5,12 +5,12 @@ description: Découvrez comment utiliser le Kit de développement logiciel (SDK)
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 25d8fb9c52e0dee02d8057f1fe4714f7f3f1f613
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605788"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160635"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias
 
@@ -20,15 +20,15 @@ Pour une intégration efficace, vous devez avoir une bonne compréhension des ex
 
 ## <a name="advantages"></a>Avantages
 
-Le principal avantage de l’intégration des fonctionnalités d’appareil dans vos applications Teams est qu’il utilise des contrôles Teams natifs pour offrir une expérience riche et immersive à vos utilisateurs. Les scénarios suivants présentent les avantages des fonctionnalités multimédias :
+L’avantage de l’intégration des fonctionnalités d’appareil dans vos applications Teams est qu’il utilise des contrôles Teams natifs pour offrir une expérience riche et immersive à vos utilisateurs. Les scénarios suivants présentent les avantages des fonctionnalités multimédias :
 
-* Permettre à l’utilisateur de capturer les maquettes approximatives dessinées sur un tableau blanc physique via le téléphone cellulaire et d’utiliser les images capturées comme options de sondage dans la conversation de groupe Teams.
+* Permettre à l’utilisateur de capturer les maquettes approximatives dessinées sur un tableau blanc physique via son téléphone mobile et d’utiliser les images capturées comme options de sondage dans la conversation de groupe Teams.
 
 * Autoriser l’utilisateur à enregistrer le message audio et à l’attacher à un ticket d’incident.
 
 * Permettre à l’utilisateur d’analyser les documents physiques à partir du smartphone pour déposer une demande d’assurance automobile.
 
-* Permettre à l’utilisateur d’enregistrer une vidéo sur un site de travail et de charger pour la présence.
+* Permettre à l’utilisateur d’enregistrer une vidéo sur un site de travail et de la charger pour la présence.
 
 > [!NOTE]
 >
@@ -69,7 +69,7 @@ Le tableau suivant répertorie un ensemble d’API pour activer les fonctionnali
 | API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Caméra)**| Cette API permet aux utilisateurs de **capturer ou de sélectionner un média à partir de la caméra de l’appareil** et de le retourner à l’application web. Les utilisateurs peuvent modifier, rogner, faire pivoter, annoter ou dessiner sur des images avant la soumission. En réponse à `selectMedia`, l’application web reçoit les ID multimédias des images sélectionnées et une miniature du média sélectionné. Cette API peut être configurée par le biais de la configuration [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) . |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Définissez [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) `4` sur (Audio) dans l’API `selectMedia` pour accéder à la fonctionnalité de microphone. Cette API permet également aux utilisateurs d’enregistrer du son à partir du microphone de l’appareil et de retourner des clips enregistrés à l’application web. Les utilisateurs peuvent suspendre, ré-enregistrer et lire la préversion de l’enregistrement avant la soumission. En réponse à  **toselectMedia**, l’application web reçoit les ID multimédias de l’enregistrement audio sélectionné. <br/> Utilisez `maxDuration`, si vous avez besoin de configurer une durée en minutes pour l’enregistrement de la conversation. La durée actuelle de l’enregistrement est de 10 minutes, après quoi l’enregistrement se termine.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Définissez [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) `4` sur (Audio) dans l’API `selectMedia` pour accéder à la fonctionnalité de microphone. Cette API permet également aux utilisateurs d’enregistrer du son à partir du microphone de l’appareil et de retourner des clips enregistrés à l’application web. Les utilisateurs peuvent suspendre, ré-enregistrer et lire la préversion de l’enregistrement avant la soumission. En réponse à **selectMedia**, l’application web reçoit les ID multimédias des enregistrements audio sélectionnés. <br/> Utilisez `maxDuration`, si vous devez configurer une durée en minutes pour l’enregistrement de la conversation. La durée actuelle de l’enregistrement est de 10 minutes, après quoi l’enregistrement se termine.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| Cette API récupère le média capturé par `selectMedia` l’API en blocs, quelle que soit la taille du média. Ces blocs sont assemblés et renvoyés à l’application web sous la forme d’un fichier ou d’un objet blob. La segmentation du média en blocs plus petits facilite le transfert de fichiers volumineux. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| Cette API permet à l’utilisateur d’afficher des images en mode plein écran sous la forme d’une liste déroulante.|
 
@@ -80,7 +80,6 @@ L’image suivante illustre l’expérience d’application web de l’API `sele
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration montrant la fonctionnalité d’image pour mobile.":::
 
 > [!NOTE]
->
 > Sur les appareils avec android version inférieure à 7, l’API `selectMedia` lance l’expérience de caméra Android native au lieu de l’expérience de caméra Teams native.
 
 L’image suivante illustre l’expérience d’application web de l’API `selectMedia` pour la fonctionnalité de microphone :
@@ -383,6 +382,23 @@ Veillez à gérer ces erreurs de manière appropriée dans votre application Tea
         }
     });
     });
+    ```
+
+## <a name="file-download-on-teams-mobile"></a>Téléchargement de fichiers sur teams mobile
+
+Vous pouvez configurer une application pour permettre aux utilisateurs de télécharger des fichiers à partir de la vue web sur leur appareil mobile.
+
+>[!NOTE]
+> Le téléchargement de fichiers est uniquement pris en charge sur le client mobile Android Teams et seuls les fichiers non authentifiés peuvent être téléchargés.
+
+Pour l’activer, procédez comme suit :
+
+1. Mettez à jour votre fichier [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) d’application Teams en ajoutant la `devicePermissions` propriété et en spécifiant `media` comme indiqué dans le [manifeste de mise à jour](#update-manifest).
+
+2. Utilisez le format suivant et ajoutez l’attribut de téléchargement HMTL à la page web :
+
+    ```html
+    <a href="path_to_file" download="download">Download</a>
     ```
 
 ## <a name="see-also"></a>Voir aussi

@@ -5,12 +5,12 @@ description: Découvrez comment définir des commandes d’action d’extension 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100734"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160642"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -99,7 +99,7 @@ Pour créer une commande d’action :
 
 1. Pour utiliser un bot existant, **sélectionnez Sélectionner un bot existant** et choisissez les bots existants dans la liste déroulante ou **entrez un ID de bot** si vous avez déjà créé un ID de bot.
 
-1. Sélectionnez l’étendue de l’extension de messagerie, puis **sélectionnez Enregistrer**.
+1. Sélectionnez l’étendue du bot et **Enregistrez**.
 
 1. Sélectionnez **Ajouter une commande** dans la section **Commande** pour inclure les commandes, qui déterminent le comportement de l’extension de message.
 
@@ -167,17 +167,13 @@ Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l�
 
 #### <a name="app-manifest-example"></a>Exemple de manifeste d’application
 
-La section suivante est un exemple d’objet `composeExtensions` définissant deux commandes d’action. Il ne s’agit pas d’un exemple de manifeste complet. Pour obtenir le schéma complet du manifeste d’application, consultez [schéma de manifeste d’application](~/resources/schema/manifest-schema.md):
-
+Cette section n’est pas un exemple de manifeste complet. Pour le schéma complet du manifeste d’application, consultez [le schéma de manifeste de l’application](~/resources/schema/manifest-schema.md). Voici un exemple d’objet `composeExtensions` définissant deux commandes d’action :
+ 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",
