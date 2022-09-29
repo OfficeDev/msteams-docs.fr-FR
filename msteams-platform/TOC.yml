@@ -173,7 +173,7 @@
               href: toolkit/publish.md
             - name: Intégrer au portail des développeurs
               href: toolkit/Integrate-with-developer-portal.md
-        - name: FAQ
+        - name: Questions fréquentes (FAQ)
           href: toolkit/faq.md
     - name: Interface CLI du Kit de ressources Teams
       href: toolkit/TeamsFx-CLI.md
@@ -265,13 +265,13 @@
       displayName: Teams store apps approved by Microsoft for mobile
     - name: Obtenir un contexte Teams pour votre onglet
       href: tabs/how-to/access-teams-context.md
-      displayName: 'User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes'
+      displayName: 'User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes'
     - name: Créer des applications pour les canaux partagés
       href: concepts/build-and-test/shared-channels.md
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: Créer des onglets avec les Cartes adaptatives
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
     - name: Déploiement du lien des onglets et vue des étapes
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -320,7 +320,7 @@
           href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Obtenir le contexte spécifique à Teams pour votre bot
       href: bots/how-to/get-teams-context.md
-      dispalyName: Fetch roster or user profile
+      displayName: Fetch roster or user profile
     - name: Envoyer et recevoir des fichiers à l’aide d’un bot
       href: bots/how-to/bots-filesv4.md
       displayName: File consent and upload files to Teams from a bot
@@ -342,7 +342,7 @@
           displayName: 'Redirects for region affinity, GeoDNS resolution'
         - name: Exigences et considérations relatives aux bots multimédias hébergés par des applications
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-          dispalyName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
+          displayName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
         - name: Formats multimédias pris en charge pour les bots
           href: resources/media-formats.md
     - name: Modifications apportées à l’API du bot Teams pour récupérer les membres d’équipe ou de conversation
@@ -423,7 +423,7 @@
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Scènes personnalisées en mode Ensemble dans Teams
       href: apps-in-teams-meetings/teams-together-mode.md
-      displayName: 'Single vitrual scene, scene studio'
+      displayName: 'Single virtual scene, scene studio'
 - name: Construire webhooks et connecteurs
   items:
     - name: Vue d'ensemble
@@ -481,7 +481,7 @@
           href: task-modules-and-cards/what-are-task-modules.md
         - name: Appeler et ignorer des modules de tâche
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
-          displayName: 'JavaScript task modules,keyboard and accessility guidelines, module sizing'
+          displayName: 'JavaScript task modules, keyboard and accessibility guidelines, module sizing'
         - name: Utiliser des modules de tâche dans les onglets
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: Utiliser des modules de tâches à partir de bots
@@ -551,7 +551,7 @@
   items:
     - name: Vue d’ensemble
       href: /graph/teams-concept-overview
-      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
+      displayName: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Kit de ressources Microsoft Graph
       href: /graph/toolkit/overview
       displayName: 'Access, routing'
@@ -576,10 +576,10 @@
       href: m365-apps/prerequisites.md
     - name: Activer un onglet personnel Teams pour Office et Outlook
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: 'Microoft 365, Office 365'
+      displayName: 'Microsoft 365, Office 365'
     - name: Activer une extension de messagerie Teams pour Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
-      displayName: 'Microoft 365, Office 365'
+      displayName: 'Microsoft 365, Office 365'
     - name: Publier des applications Teams pour Microsoft 365
       href: m365-apps/publish.md
 - name: Tester votre application
@@ -744,7 +744,7 @@
       displayName: 'Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams'
     - name: Connecteurs Shifts prêts pour la production
       href: samples/shifts-wfm-connectors.md
-      displayName: 'Teams Shifts Workforce management (WFM),'
+      displayName: Teams Shifts Workforce management (WFM)
     - name: Moodle LMS
       items:
         - name: Présentation

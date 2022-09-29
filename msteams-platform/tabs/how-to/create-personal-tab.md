@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
+ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450400"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158680"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -130,7 +130,8 @@ Voici les étapes à suivre pour créer un onglet personnel :
     * **Avez-vous besoin de la prise en charge de l’authentification unique Microsoft Azure Active Directory (Azure AD) pour l’onglet ?**
 
       Choisissez ne **pas** inclure la prise en charge de l’authentification unique Azure AD pour l’onglet. La valeur par défaut est Oui, entrez **n**.
-
+    > [!NOTE]
+    > Dans un onglet, la page d’accueil de l’onglet s’affiche uniquement lorsque l’utilisateur sélectionne le bouton Précédent (ou sort de l’onglet) et revient à la page d’accueil. L’onglet ne conserve pas l’état précédent par conception.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Ajouter une page de contenu à l’onglet personnel
