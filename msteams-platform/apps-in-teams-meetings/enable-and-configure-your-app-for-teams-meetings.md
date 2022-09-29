@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833705"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158819"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -177,7 +177,7 @@ Vous pouvez également ajouter l’image d’affichage Teams et la carte de cont
 
 La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel. Vous pouvez partager vos applications à l’étape de la réunion collaborative des manières suivantes :
 
-* [Partagez l’intégralité de l’application pour effectuer une mise en scène](#share-entire-app-to-stage) à l’aide du bouton Partager pour mettre en scène dans client Teams.
+* [Partagez l’intégralité de l’application pour effectuer une étape](#share-entire-app-to-stage) à l’aide du bouton Partager pour mettre en scène dans le panneau côté réunion du client Teams ou via [des liens profonds](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 * [Partagez des parties spécifiques de l’application pour effectuer des étapes à](#share-specific-parts-of-the-app-to-stage) l’aide d’API dans le SDK client Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Partager l’intégralité de l’application en plusieurs étapes
@@ -190,18 +190,18 @@ Pour partager l’ensemble de l’application à mettre en scène, dans le manif
 
 ```json
 "configurableTabs": [
-    {
+   {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
       "scopes": [
-        "groupchat"
-      ],
+         "groupchat"
+        ],
       "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
+         "meetingSidePanel",
+         "meetingStage"
+        ]
     }
-  ]
+]
 ```
 
 Pour plus d'informations, voir [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)
