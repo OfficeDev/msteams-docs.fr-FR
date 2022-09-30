@@ -6,12 +6,12 @@ keywords: démonstration d’exemples de modèles Microsoft Teams
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 7f99a15ee8138c029e3ae0c68ae52152f0efc6bb
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 1314221e5962db045a5e75b8dadbcb6a868c959c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058122"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243037"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft Teams
 
@@ -28,7 +28,7 @@ Les principaux avantages de l’utilisation de modèles d’application sont les
 * **Personnalisable et extensible :** Bien que tous les modèles d’application soient déployés avec une configuration minimale, l’ensemble des scripts de base de code et de déploiement sont fournis, afin que vous puissiez facilement les personnaliser ou les étendre en fonction de vos besoins uniques.
 * **Documentation détaillée :** Tous les modèles d’application sont accompagnés d’une documentation de bout en bout sur l’architecture de la solution, le déploiement et les étapes de configuration.  
 
-## <a name="champion-management-platform"></a>Plateforme de gestion des champions
+## <a name="champion-management-platform"></a>Plateforme de gestion champion
 
 Le modèle d’application CMP (Champion Management Platform) vous aide à gérer, mettre à l’échelle et inspirer vos champions du travail d’équipe pour obtenir plus. Ce modèle d’application est basé sur le SharePoint Framework et chargé dans un onglet au sein d’une équipe. Les groupes peuvent tirer parti de cet outil pour gérer l’appartenance au programme, fournir un classement et des types d’événements pour la journalisation, et des outils pour superposer des badges numériques aux participants au programme.
 
@@ -83,7 +83,7 @@ Le modèle d’application De prise en main vous permet d’intégrer la puissan
 
 ## <a name="microsoft-teams-emergency-operations-center-teoc"></a>Centre des opérations d’urgence Microsoft Teams (TEOC)
 
-Le modèle de solution TEOC (Microsoft Teams Emergency Operations Center) tire parti de la puissance de la plateforme Microsoft 365 pour centraliser la réponse aux incidents, le partage d’informations et les communications sur le terrain à l’aide de services puissants tels que Listes Microsoft, SharePoint et bien plus encore. Une solution open source prise en charge par Microsoft fournit des fonctionnalités de base et peut être étendue pour répondre aux exigences spécifiques de l’agence.
+Le modèle de solution TEOC (Microsoft Teams Emergency Operations Center) tire parti de la puissance de la plateforme Microsoft 365 pour centraliser la réponse aux incidents, le partage d’informations et les communications sur le terrain à l’aide de services puissants tels que Listes Microsoft, SharePoint, etc. Une solution open source prise en charge par Microsoft fournit des fonctionnalités de base et peut être étendue pour répondre aux exigences spécifiques de l’agence.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
 
@@ -99,7 +99,7 @@ Les exemples de code de modèle d’application sont une collection d’exemples
 
 > [!NOTE]
 >
-> * Microsoft ne gère pas activement le code source. Le code source complet est open source et vous pouvez explorer, bifurquer et modifier le code source pour répondre à vos besoins spécifiques.
+> * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications destinées à être publiées dans la boutique d'applications Teams. Les applications Microsoft Power Platform peuvent être publiées dans l’App Store d’une organisation uniquement.
 
 Le tableau suivant décrit les exemples de code de modèle d’application :  

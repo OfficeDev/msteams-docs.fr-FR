@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: En savoir plus pour activer et configurer des applications pour les réunions
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 798023d6033a151035aa34c3e108edf812e19fe9
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 8bac76c7e1e0b404ab82ef08eb92dd83b27e27f0
+  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806878"
+  ms.lasthandoff: 09/30/2022
+  ms.locfileid: "68243394"
 items:
 - durationInMinutes: 1
   content: >
@@ -34,7 +34,7 @@ items:
     Ce guide pas à pas vous aide à partager la phase de réunion dans Teams pour ajouter des détails d’état pour la collaboration. La sortie suivante s’affiche :
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="vue d’étape des réunions":::
-- title: Conditions préalables
+- title: Configuration requise
   durationInMinutes: 1
   content: "\nVeillez à installer les outils suivants et à configurer votre environnement de développement :\n\n* [Microsoft Teams](https://teams.microsoft.com/) avec un compte valide\n* [Dernière version de Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [Dernière version de nodejs](https://nodejs.org/en/download/) \n* [Dernière version de ngrok](https://ngrok.com/download) (uniquement pour le test de devbox) ou toute solution de tunneling équivalente\n\n  > [!NOTE]\n  > Après avoir téléchargé ngrok, inscrivez-vous et installez [authtoken](https://ngrok.com/download).\n\n Vous devez avoir une connaissance pratique des technologies suivantes :\n\n* [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [Dernière version de ASP.NET core](/aspnet/core/?view=aspnetcore-3.1) \n* [Dernière version de React.JS](https://reactjs.org/tutorial/tutorial.html) \n"
 - title: Configurer un environnement local

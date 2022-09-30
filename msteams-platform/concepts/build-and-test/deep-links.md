@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Dans cet article, vous allez apprendre à créer des liens profonds et à les parcourir dans vos applications Microsoft Teams avec des onglets.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 7a9af415a6fdc4f2cb1f9fd04ba79e8b197a40fc
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160719"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243219"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -101,7 +101,7 @@ Bien qu’il soit recommandé d’utiliser `shareDeepLink()` pour générer un l
 > [!NOTE]
 >
 > * Les onglets personnels ont un `personal`scope, tandis que les onglets canal et groupe utilisent `team`or `group`scopes. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable a un `channel`propriété associé à son objet de contexte. Pour plus d’informations sur les étendues d’onglet, consultez la référence du [manifeste](~/resources/schema/manifest-schema.md).
-> * Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et qu’en raison de cela a un ID d’entité. Les liens profonds vers des onglets sans ID d’entité accèdent toujours à l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
+> * Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et qu’en raison de cela a un ID d’entité. Les liens profonds vers les onglets sans ID d’entité passent toujours à l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
 
 Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message :
 
@@ -322,7 +322,7 @@ Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d’URL 
 
 ### <a name="generate-deep-links-to-channel-conversation"></a>Générer des liens profonds vers la conversation du canal
 
-Utilisez ce format de lien profond pour accéder à une conversation particulière dans le thread du canal :
+Utilisez ce format de lien profond pour accéder à une conversation particulière dans le thread de canal :
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

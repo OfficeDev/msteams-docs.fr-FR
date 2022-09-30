@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100763"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243506"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -215,7 +215,7 @@ Pour afficher un aperçu de l’exécution de votre application dans Office sur 
 
 1. **Connectez-vous à office.com** avec les informations d’identification du locataire de test.
 1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
-1. Sélectionnez l’icône de votre application pour lancer votre application dans Office sur le Web.
+1. Sélectionnez l’icône de votre application pour lancer votre application dans Office لەسەر وێب.
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
 

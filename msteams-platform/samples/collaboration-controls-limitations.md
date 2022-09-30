@@ -5,28 +5,28 @@ description: Dans ce module, découvrez les limitations et les problèmes connus
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 6961b5fc51cc8aa2a2ad0620c8a8ef5032005f40
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: fe403c566b47be6509ff0d11113c34a8fc667cc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179018"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243387"
 ---
 # <a name="limitations-and-known-issues"></a>Limitations et problèmes connus
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 Voici les limitations des contrôles de collaboration :
 
 * Les composants ne peuvent pas être utilisés dans les applications Canvas.
 * Les composants prennent uniquement en charge les affichages d’onglets complets.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="tâches" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="La capture d’écran montre les tâches." border="true":::
 
-* La vue sous-engrid sélectionnée n’est pas honorée. Toutes les tâches, réunions ou notes de l’enregistrement collaboratif s’affichent.
+* La vue sous-engrid sélectionnée n’est pas honorée. Toutes les tâches, réunions ou notes de l’enregistrement collaboratif sont affichées.
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="vue subgrid" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="La capture d’écran montre la vue sous-grid des tâches." border= "true":::
 
 * Les activités ajoutées au contrôle de chronologie n’apparaissent pas dans les composants, les tâches, les réunions et les notes créés dans les composants ne sont pas inclus dans le contrôle de chronologie.
 * Les nouveaux enregistrements doivent être enregistrés avant d’accéder aux composants. Sinon, un écran vide s’affiche.
@@ -34,17 +34,17 @@ Voici les limitations des contrôles de collaboration :
 * La localisation est disponible uniquement lors de l’exécution de l’application dans Microsoft Teams.
 * Le mode strict Microsoft Edge n’est pas pris en charge et les cookies intersites sont requis.
 
-**Administration Center ne se met pas à jour lorsque l’installation ou la mise à niveau est terminée**
+**Le Centre d’administration ne se met pas à jour lorsque l’installation ou la mise à niveau est terminée**
 
-Lorsque vous suivez les étapes d’installation des [contrôles Collaboration](~/samples/install-collaboration-control.md), vous êtes redirigé vers le Centre d’administration Power Platform. Une bannière s’affiche au démarrage de l’installation, mais elle n’est pas mise à jour à la fin de l’installation. L’état est répertorié pendant l’installation et, une fois l’installation terminée, il peut disparaître de la liste. Vous pouvez afficher la liste des solutions pour [https://make.powerapps.com/](https://make.preview.powerapps.com/) vérifier que l’installation est terminée.
+Lorsque vous suivez les étapes d’installation des [contrôles Collaboration](~/samples/install-collaboration-control.md), vous êtes redirigé vers le Centre d’administration Power Platform. Une bannière s’affiche au démarrage de l’installation, mais elle n’est pas mise à jour à la fin de l’installation. L’état est répertorié lors de l’installation et, une fois l’installation terminée, il peut ne pas être disponible dans la liste. Vous pouvez afficher la liste des solutions pour [https://make.powerapps.com/](https://make.preview.powerapps.com/) vérifier que l’installation est terminée.
 
-**Afficher pendant l’installation :** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="afficher pendant l’installation" border="true":::
+**Afficher pendant l’installation :** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="la capture d’écran montre le processus pendant l’installation." border="true":::
 
-**Afficher après l’installation :** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="afficher après l’installation" border="true":::
+**Afficher après l’installation :** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="la capture d’écran montre la fin de l’installation." border="true":::
 
 Lors de la mise à niveau des contrôles vers une version ultérieure, la même bannière de démarrage de l’installation s’affiche, mais l’état du contrôle reste installé même une fois la mise à niveau terminée. Vous pouvez vérifier que la mise à niveau est terminée en vérifiant la liste des solutions dans [https://make.powerapps.com/](https://make.preview.powerapps.com/)laquelle elle doit prendre environ 15 minutes.
 
-Vous pouvez également voir dans l’historique des solutions spécifiques que la version ultérieure a été installée, puis que la version précédente a été supprimée : :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="Vérification de l’historique" border="true":::
+Vous pouvez également voir dans l’historique des solutions spécifiques que la version ultérieure a été installée, puis que la version précédente a été supprimée : :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="la capture d’écran montre l’historique des solutions spécifiques des versions installées et supprimées." border="true":::
 
 ## <a name="bookings-meetings"></a>Réservations de réunions
 
@@ -52,7 +52,7 @@ Le contrôle Réunions prend en charge une réunion sur une lors de l’utilisat
 
 **L’état du participant à la réunion est incorrect**
 
-Lorsqu’un participant participe à une réunion, son état de réponse peut ne pas s’afficher correctement dans l’affichage de l’ordre du jour et dans les détails de la réunion. La sélection du bouton Refuser peut également renvoyer un message d’erreur à l’écran.
+Lorsqu’un participant participe à une réunion, son état de réponse peut ne pas s’afficher correctement dans l’affichage de l’ordre du jour et dans les détails de la réunion. La sélection du bouton Refuser peut renvoyer un message d’erreur à l’écran.
 
 ## <a name="tasks"></a>Tâches
 
@@ -62,7 +62,7 @@ Le texte du bouton « Effacer » affiché sur le filtre Tâches n’est pas trad
 
 **Tâches : le menu contextuel grille s’affiche rogné**
 
-Quand, la grille Tâches est remplie par un petit nombre de tâches, le menu contextuel de la grille peut apparaître rogné et nécessiter l’utilisation de barres de défilement.
+Lorsque la grille Tâches est remplie par un petit nombre de tâches, le menu contextuel de la grille peut apparaître rogné et nécessiter l’utilisation de barres de défilement.
 
 **Tâches : le filtre de recherche par mot clé utilise l’opérateur « BeginsWith » pour les tâches « Guest »**
 
@@ -70,7 +70,7 @@ Lorsque vous recherchez des tâches à l’aide du filtre de texte par mot clé,
 
 ## <a name="files"></a>Fichiers
 
-Lors de la navigation dans le dossier Archive après l’archivage des fichiers, les utilisateurs peuvent rencontrer des dossiers d’archivage en double.  La navigation entre le ou les dossiers d’archivage et la vue principale des fichiers résout le problème et les fichiers archivés ne seront pas supprimés.
+Lors de la navigation dans le dossier Archive après l’archivage des fichiers, les utilisateurs peuvent rencontrer des dossiers d’archivage en double.  La navigation entre le ou les dossiers d’archivage et la vue principale des fichiers résout le problème, et les fichiers archivés ne seront pas supprimés.
 
 ## <a name="controls"></a>Contrôles
 
@@ -78,9 +78,9 @@ Lors de la navigation dans le dossier Archive après l’archivage des fichiers,
 
 Si un contrôle ne parvient pas à enregistrer une tâche ou une réunion, la cause probable est un ID de groupe ou un ID de canal mal configuré.  
 
-Solution 1 : Vérifiez que les ID sont corrects et que les paramètres ont été appliqués conformément à l’exercice de paramètres.  
+Solution 1 : Vérifiez que les ID sont corrects et que les paramètres sont appliqués conformément à l’exercice des paramètres.  
 
-Solution 2 : Essayez de vous assurer que l’environnement Power Apps et l’environnement Teams se trouvent sur le même locataire.  
+Solution 2 : Vérifiez que l’environnement Power Apps et l’environnement Teams se trouvent sur le même locataire.  
 
 **Échec du chargement des contrôles ou affichage d’une erreur**
 
@@ -88,11 +88,11 @@ Si les contrôles ne parviennent pas à se charger ou à afficher une erreur, il
 
 Exemple :
 
-:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="échec de la synchronisation des contrôles":::
+:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="Capture d’écran montrant l’échec de la synchronisation du contrôle.":::
 
 Cela s’affiche dans le journal de la console comme suit :
 
-:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="échec du contrôle" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="La capture d’écran est un exemple d’échec de contrôle à partir du journal consol." border="true":::
 
 Solution : actualisez votre navigateur ou, dans l’application Teams, rechargez l’onglet.
 
@@ -108,13 +108,13 @@ Les contrôles fournissent les méthodes suivantes pour déboguer votre applicat
 
 1. **Journalisation du navigateur** pour les contrôles d’interface utilisateur. Il s’agit de la journalisation de la console standard.
 
-    1. Il est pris en charge lors de l’utilisation d’un navigateur pour exécuter l’application Gestionnaire de collaboration via Power Platform et teams web.
-    1. Dans l’onglet console, vous pouvez rechercher des erreurs à l’aide du message d’erreur Gestionnaire de collaboration ou à la recherche de noms de contrôle Gestionnaire de collaboration tels que Tâches.
+    1. Il est pris en charge lors de l’utilisation d’un navigateur pour exécuter l’application Collaboration Manager via Power Platform et teams web.
+    1. Dans l’onglet console, vous pouvez rechercher des erreurs à l’aide du message d’erreur du Gestionnaire de collaboration ou à la recherche de noms de contrôles du Gestionnaire de collaboration tels que Tâches.
 
 > [!TIP]
 > Si une erreur se produit dans un client de bureau Teams, essayez de répliquer dans le web Teams pour capturer le journal des erreurs.
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>Questions fréquentes (FAQ)
 
 <br>
 

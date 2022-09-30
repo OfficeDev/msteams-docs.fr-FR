@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990888"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243205"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Applications pour les réunions et les appels Teams
 
@@ -46,6 +46,10 @@ L'illustration suivante vous donne une idée des caractéristiques d'extensibili
 ![Extensibilité de l’application de réunion](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 Cet article fournit une vue d'ensemble de l'extensibilité des applications de réunion, des références API, de l'activation et de la configuration des applications pour les réunions et des scènes personnalisées en mode Ensemble dans Teams.
+
+> [!Note]
+>
+> Les applications de réunion (panneau latéral, phase de réunion) sont prises en charge dans le client de bureau Teams. Là où, comme dans le client web Teams, il est pris en charge uniquement lorsque la préversion du développeur est activée.
 
 * **Étendre l’application de réunion** : améliorez votre expérience de réunion à l’aide de la fonctionnalité d’extensibilité de réunion. Cette fonctionnalité vous permet d'intégrer vos applications dans les réunions. Il comprend également les différentes étapes du cycle de vie d'une réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messages. Vous pouvez identifier divers rôles de participants et types d'utilisateurs, obtenir des événements de réunion et générer des dialogues en réunion.
 * **Configurer des applications pour les réunions** : pour personnaliser Teams avec des applications pour les réunions, activez vos applications pour les réunions Teams en mettant à jour le manifeste de l’application et configurez également les applications pour les scénarios de réunion.

@@ -4,12 +4,12 @@ description: Découvrez comment activer la préversion du développeur. Exemple 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100293"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243170"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste pour les développeurs publics en préversion pour Teams
 
@@ -300,7 +300,7 @@ Cette chaîne de version doit suivre la norme de [semver](http://semver.org/) (M
 
 **Obligatoire** &ndash; ID d’application Microsoft
 
-Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via le Microsoft Bot Framework, ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), l’entrer ici, puis le réutiliser lorsque vous [ajoutez un bot](~/bots/how-to/create-a-bot-for-teams.md).
+Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via Microsoft Bot Framework ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), l’entrer ici, puis le réutiliser lorsque vous [ajoutez un bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -535,7 +535,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **Facultatif**, sauf **Obligatoire** lorsque indiqué.
 
-Liste des domaines valides à partir desquels l’application s’attend à charger tout contenu. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine, si vous devez faire correspondre `a.b.example.com` utilisez `*.*.example.com`. Si la configuration de votre onglet ou l’interface utilisateur du contenu doit accéder à un autre domaine en plus de celui utilisé pour la configuration de tabulation, ce domaine doit être spécifié ici.
+Liste des domaines valides à partir desquels l’application s’attend à charger tout contenu. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine, si vous devez faire correspondre `a.b.example.com`, puis utilisez `*.*.example.com`. Si votre configuration d’onglet ou votre interface utilisateur de contenu doit accéder à un autre domaine en plus de celui utilisé pour la configuration des onglets, ce domaine doit être spécifié ici.
 
 Toutefois, il n’est **pas** nécessaire d’inclure les domaines des fournisseurs d’identité que vous souhaitez prendre en charge dans votre application. Par exemple, pour vous authentifier à l’aide d’un ID Google, il est nécessaire de rediriger vers accounts.google.com, mais vous ne devez pas inclure accounts.google.com dans `validDomains[]`.
 

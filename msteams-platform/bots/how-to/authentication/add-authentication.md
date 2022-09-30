@@ -5,12 +5,12 @@ description: Découvrez comment activer l’authentification à l’aide d’un 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 6984774ea8738ce2039f61b83891745db0774599
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618330"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243121"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -168,9 +168,9 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres 
 1. Dans le volet droit, sélectionnez l’onglet **Nouvelle inscription**, en haut à gauche.
 1. Il vous sera demandé de fournir les informations suivantes :
    1. **Nom**. Entrez le nom pour la nouvelle application de service. *Par exemple, BotTeamsIdentity* N’oubliez pas que le nom doit être unique.
-   1. Sélectionnez les **types de comptes pris en charge** pour votre application. Sélectionnez *Comptes dans n’importe quel annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Multilocataire) et comptes Microsoft personnels (par exemple, Skype, Xbox).*
+   1. Sélectionnez les **types de comptes pris en charge** pour votre application. Sélectionnez *Comptes dans n’importe quel annuaire organisationnel (Tout compte Microsoft Azure Active Directory (Azure AD) - Multilocataire) et comptes Microsoft personnels (par exemple, Skype, Xbox).*
    1. Pour **l’URI de redirection** :<br/>
-       &#x2713;Sélectionner **le web**.<br/>
+       &#x2713;Select **Web**. <br/>
        &#x2713; définir l’URL sur `https://token.botframework.com/.auth/web/redirect`
    1. Sélectionnez **Inscrire**.
 
@@ -211,9 +211,9 @@ Remarque : il existe deux options pour les fournisseurs de services ici : Azure 
     1. **URL de connexion**. Entrez `https://login.microsoftonline.com`.
     1. **ID de locataire**, entrez **l’ID d’annuaire (locataire)** que vous avez enregistré précédemment pour votre application d’identité Azure ou **commun** en fonction du type de compte pris en charge sélectionné lors de la création de l’application de fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez les critères suivants :
 
-        - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans n’importe quel annuaire organisationnel (Microsoft Azure Active Directory (Azure AD ) - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour le Microsoft Azure Active Directory (Azure) Application AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
+        - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans un annuaire organisationnel (Microsoft Azure Active Directory (Azure AD) - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour l’application Microsoft Azure Active Directory (Azure AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD (Azure AD) vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
+        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout annuaire Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD (Azure AD) vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     h. Pour **l’URL de ressource**, entrez `https://graph.microsoft.com/`. Cela n’est pas utilisé dans l’exemple de code actuel.  
     i. Laissez **les étendues** vides. L’image suivante est un exemple.
@@ -242,7 +242,7 @@ Remarque : il existe deux options pour les fournisseurs de services ici : Azure 
 
         - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans un annuaire organisationnel (Microsoft Azure Active Directory - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour l’application Azure AD. Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
+        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout annuaire Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     1. Pour **les étendues**, entrez une liste délimitée par des espaces des autorisations de graphe requises par cette application, par exemple : User.Read User.ReadBasic.All Mail.Read
 
@@ -283,7 +283,7 @@ Une fois les paramètres préliminaires terminés, concentrons-nous sur la créa
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. Dans le Explorateur de solutions, accédez au `TeamsAppManifest` dossier, ouvrez `manifest.json` et définissez `id` et `botId` accédez à **l’ID d’application du bot** que vous avez enregistré au moment de l’inscription du bot.
+1. Dans le Explorateur de solutions, accédez au `TeamsAppManifest` dossier, ouvrez `manifest.json` et définissez `id` **l’ID** `botId` d’application du bot que vous avez enregistré au moment de l’inscription du bot.
 
 # <a name="javascript"></a>[JavaScript](#tab/node-js)
 
@@ -334,7 +334,7 @@ Dans Visual Studio, vous pouvez également effectuer les étapes suivantes :
 
 1. Sélectionnez **Créer**.
 1. Si le déploiement se termine correctement, vous devriez le voir reflété dans Visual Studio. En outre, une page s’affiche dans votre navigateur par défaut indiquant que *votre bot est prêt!*. L'URL ressemble à ceci :`https://botteamsauth.azurewebsites.net/`. Enregistrez-le dans un fichier.
-1. Dans votre navigateur, accédez au [**portail Azure**][azure-portal] et connectez-vous.
+1. Dans votre navigateur, accédez au [**Portail Azure**][azure-portal].
 1. Vérifiez votre groupe de ressources. Le bot doit être répertorié avec les autres ressources. L’image suivante est un exemple.
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="Cette capture d’écran montre comment vérifier le groupe de ressources et le bot.":::
@@ -407,7 +407,7 @@ Une fois que vous avez configuré le mécanisme d’authentification, vous pouve
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. Dans votre navigateur, accédez au [**portail Azure**][azure-portal] et connectez-vous.
+1. Dans votre navigateur, accédez au [**Portail Azure**][azure-portal].
 1. Recherchez votre groupe de ressources.
 1. Sélectionnez le lien de ressource. La page de ressource s’affiche.
 1. Dans la page de ressources, sélectionnez **Tester dans Chat Web**. Le bot démarre et affiche les salutations prédéfinies.
@@ -435,7 +435,7 @@ and when for these, and just reference that from here, along with the set of ste
 ## <a name="install-and-test-the-bot-in-teams"></a>Installer et tester le bot dans Teams
 
 1. Dans votre projet de bot, assurez-vous que le `TeamsAppManifest` dossier contient les `manifest.json` fichiers et `color.png` les `outline.png` fichiers.
-1. Dans l'explorateur de solutions, naviguez jusqu'au dossier `TeamsAppManifest`. Modifiez `manifest.json` en affectant les valeurs suivantes :
+1. Dans Explorateur de solutions, accédez au `TeamsAppManifest` dossier. Modifiez `manifest.json` en affectant les valeurs suivantes :
     1. Vérifiez que **l’ID d’application de bot** que vous avez reçu au moment de l’inscription du bot est affecté `id` et `botId`.
     1. Affectez cette valeur : `validDomains: [ "token.botframework.com" ]`.
 1. Sélectionnez et **compressez** les fichiers, `manifest.json`et `outline.png` les `color.png`fichiers.
@@ -468,7 +468,7 @@ Cela lance ngrok pour écouter sur le port que vous spécifiez. En retour, il vo
 1. Copiez l’adresse HTTPS de transfert. Il doit se présenter comme suit :`https://dea822bf.ngrok.io/`.
 1. `/api/messages` Ajouter pour obtenir `https://dea822bf.ngrok.io/api/messages` Il s’agit du **point de terminaison des messages** pour le bot s’exécutant localement sur votre ordinateur et accessible sur le web dans une conversation dans Teams.
 1. Une dernière étape à effectuer consiste à mettre à jour le point de terminaison des messages du bot déployé. Dans l’exemple, nous avons déployé le bot dans Azure. Procédons donc comme suit :
-    1. Dans votre navigateur, accédez au [**portail Azure**][azure-portal] et connectez-vous.
+    1. Dans votre navigateur, accédez au [**Portail Azure**][azure-portal].
     1. Sélectionnez votre **inscription de bot**.
     1. Dans le panneau gauche, sélectionnez **Paramètres**
     1. Dans le volet droit, dans la zone de point **de terminaison de messagerie**, entrez l’URL ngrok, dans notre exemple. `https://dea822bf.ngrok.io/api/messages`

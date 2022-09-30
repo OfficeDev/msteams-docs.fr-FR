@@ -3,12 +3,12 @@ title: Préparer votre client Microsoft Office 365
 description: Dans ce module, découvrez comment bien démarrer avec Teams dans Microsoft 365 et créer votre environnement de développement
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c5ebc7d36f73978e1cd954c7be8d7ac3595ba68e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484886"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243583"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
@@ -46,7 +46,7 @@ Pour activer le téléchargement d'applications personnalisées ou le chargement
     > [!Note]
     > L’affichage de l’option Teams peut prendre **jusqu’à** 24 heures. Vous pouvez [charger votre application personnalisée dans un environnement Teams](/microsoftteams/upload-custom-apps#validate) à des fins de test et de validation à l’heure indiquée.
 
-3. Accédez à **Applications Teams** > **Stratégies d’installation** > **Global**.
+3. Accédez aux stratégies **d’installation globales** >  des **applications** >  Teams.
 
    ![Activer la vue chargement indépendant](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 

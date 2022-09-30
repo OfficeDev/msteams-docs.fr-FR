@@ -5,12 +5,12 @@ keywords: Résolution des problèmes de développement d’applications Teams
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0b3f4f7b3a38b6e61b4fbc7e58c5ed5897ed427e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048961"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243471"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Résoudre les problèmes de votre application Microsoft Teams
 
@@ -26,6 +26,9 @@ Si vous ne voyez pas votre contenu dans l’affichage onglet, il peut s’agir d
 
 * votre contenu ne peut pas être affiché dans un `<iframe>`.
 * le domaine de contenu ne figure pas dans la liste [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le manifeste.
+
+> [!NOTE]
+> Un onglet vide s’affiche lorsque l’URL de l’onglet donné est redirigée vers l’écran de connexion. Les pages de connexion ne s’affichent pas dans les iFrames comme protection contre le détournement de clic. Votre logique d’authentification doit utiliser une méthode autre que la redirection.
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>Le bouton Enregistrer n’est pas activé dans la boîte de dialogue Paramètres
 
@@ -50,7 +53,7 @@ Lorsque vous ajoutez un onglet, si vous **sélectionnez Enregistrer** mais recev
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Impossible d’authentifier l’utilisateur ou d’afficher votre fournisseur d’authentification dans votre onglet
 
-Sauf si vous effectuez une authentification silencieuse, vous devez suivre le processus d’authentification fourni par le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client).
+Sauf si vous effectuez une authentification silencieuse, vous devez suivre le processus d’authentification fourni par le [Kit de développement logiciel (SDK) client JavaScript microsoft Teams](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > Nous exigeons que tout le flux d’authentification démarre et se termine sur votre domaine, qui doit être répertorié dans l’objet `validDomains` dans votre manifeste.
@@ -93,6 +96,6 @@ Raisons courantes des erreurs de lecture de manifeste :
 
 ### <a name="another-extension-with-same-id-exists"></a>Il existe une autre extension avec le même ID
 
-Si vous tentez de charger à nouveau un package mis à jour avec le même ID, choisissez l’icône **Remplacer** à la fin de la ligne du tableau de l’onglet plutôt que le bouton **Télécharger**.
+Si vous tentez de télécharger à nouveau un package mis à jour avec le même ID, choisissez l’icône **Remplacer** à la fin de la ligne du tableau de l’onglet plutôt que le bouton **Charger** .
 
 Si vous ne retentez pas un package mis à jour, vérifiez que l’ID est unique.

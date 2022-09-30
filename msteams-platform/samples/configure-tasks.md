@@ -5,32 +5,32 @@ description: Dans ce module, découvrez comment configurer tasks pour les client
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: bb98ab632b335717a61499600aef01e652fd0dee
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 7d458cc97429772695958606835edd4ef953b5db
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179043"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243163"
 ---
-# <a name="configure-tasks-for-external-clients"></a>Configurer des tâches pour des clients externes
+# <a name="configure-tasks-for-external-clients"></a>Configurer les tâches pour les clients externes
 
 Tâches externes qui peuvent être affectées à des utilisateurs qui ne font pas partie de votre organisation ou qui n’ont pas accès à votre application, comme l’affectation d’une tâche à un client.
 
 Pour l’activer, vous aurez besoin d’une étape supplémentaire de passage d’une chaîne XML à chaque instance du contrôle PCF Tasks attaché au composant de sous-grille sur le formulaire MDA souhaité. La chaîne XML est une requête paramétrée qui permet au contrôle d’extraire les données requises d’une table qui contient des informations client.
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
-Voici les étapes à suivre pour créer des tâches externes :
+Pour créer des tâches externes, procédez comme suit :
 
 1. Créez une entité personnalisée telle que Customer ou réutilisez une entité client existante telle que Contacts.
 
-1. Créez des champs qui contiendront les informations suivantes :
+1. Créez des champs contenant les informations suivantes :
     1. Nom
     1. E-mail
     1. Parent (recherche dans la table parente telle que Inspections)
     > [!NOTE]
-    > L’entité client créée ci-dessus est l’endroit où le contrôle de tâche extrait les informations client lors de l’affectation d’une tâche externe. Le champ Parent garantit que l’entité client est liée à un enregistrement d’inspection.
+    > L’entité client créée ci-dessus est l’endroit où le contrôle de tâche extrait les informations client lors de l’attribution d’une tâche externe. Le champ Parent garantit que l’entité client est liée à un enregistrement d’inspection.
 
 1. Générez un fichier Fetch XML pour permettre au contrôle PCF d’extraire les informations client appropriées.
 
@@ -40,7 +40,7 @@ Voici les étapes à suivre pour créer des tâches externes :
 
     * Le résultat de la requête doit retourner les propriétés suivantes pour chaque objet utilisateur :
       * ID
-      * displayname
+      * Displayname
       * e-mail, utilisez l’alias si nécessaire.
     * La requête doit contenir le paramètre **@top** pour permettre à l’appelant de limiter le nombre de résultats.
     * La requête doit avoir **@rootEntityId** paramètre pour filtrer les résultats par des enregistrements associés uniquement, si nécessaire.
@@ -81,19 +81,19 @@ Voici les étapes à suivre pour créer des tâches externes :
 
 1. Parcourez le concepteur de formulaires classique jusqu’à ce que vous trouviez l’onglet **Tâches** . Double-cliquez sur le sous-menu pour ouvrir sa boîte de dialogue de propriétés.
 
-    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Boîte de dialogue Propriétés des tâches":::
+    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Capture d’écran montrant la boîte de dialogue de propriété tâches.":::
 
 1. Dans la boîte de dialogue de propriétés, définissez les propriétés comme indiqué dans l’image suivante :
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Paramètres de propriété Tasks":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot montre comment définir les propriétés dans les paramètres de propriété Tasks.":::
 
-1. Accédez à l’onglet Contrôles et sélectionnez :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Modifier les tâches"::: sur la propriété Tâches personnalisées pour ajouter le code XML fetch généré ci-dessus.
+1. Accédez à l’onglet Contrôles et sélectionnez :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Capture d’écran montrant comment modifier les tâches."::: sur la propriété Tâches personnalisées pour ajouter le code XML fetch généré ci-dessus.
 
 1. Coller le code XML fetch
 
-    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Récupérer les paramètres de propriété XML":::
+    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Capture d’écran montrant comment coller fetch XML.":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Récupérer les paramètres de propriété personnalisée XML":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Capture d’écran montrant comment configurer les paramètres de propriété personnalisée.":::
 
 1. Sélectionnez **OK** dans Configurer la propriété « Tâches personnalisées » et définir les fenêtres Propriétés.
 

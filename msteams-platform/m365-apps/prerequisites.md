@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100948"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243324"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
 
@@ -40,7 +40,7 @@ Vous devez également activer le chargement indépendant pour votre client :
 
  1. Sous Applications personnalisées, activez **l’option Interaction with custom app** toggle and save.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="La capture d’écran est un exemple qui permet le chargement indépendant pour les applications personnalisées à partir du Centre de Administration Teams":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="La capture d’écran est un exemple qui permet le chargement indépendant pour les applications personnalisées à partir du Centre d’administration Teams":::
 
  1. Outre les paramètres d’application à l’échelle de l’organisation, les paramètres de stratégie d’application personnalisée permettent également aux utilisateurs de charger des applications personnalisées dans Teams. Pour plus d’informations, consultez [gérer les paramètres et les stratégies d’application personnalisés](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
@@ -79,12 +79,12 @@ Pour installer des applications Office 365 Canal bêta dans votre environnement 
 1. Connectez-vous à votre environnement de test avec vos informations d’identification de locataire de test.
 1. Téléchargez [l’outil déploiement d’Office](https://www.microsoft.com/download/details.aspx?id=49117) et extrayez-le dans un dossier local.
 1. Accédez au dossier local et ouvrez *configuration-Office365-x86.xml* (ou **x64.xml*, en fonction de votre environnement) dans un éditeur de texte et mettez à jour la valeur *canal* sur `BetaChannel`.
-1. Ouvrez l’invite de commandes et accédez au chemin d’accès au dossier local.
+1. Ouvrez l’invite de commandes et accédez au chemin du dossier local.
 1. Exécutez `setup.exe /configure configuration-Office365-x86.xml` (ou utilisez le fichier *de x64.xml **, selon votre configuration).
 1. Ouvrez Outlook (client de bureau) et configurez le compte de messagerie à l’aide de vos informations d’identification de locataire de test.
 1. Ouvrez **Fichier** > **Compte Office** > **À propos d’Outlook** pour confirmer que vous exécutez un build de *canal bêta* Microsoft 365 de Outlook.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Accédez à « À propos d’Outlook » à partir de votre compte Office pour vérifier que vous exécutez une build Canal bêta.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Accédez à « À propos d’Outlook » à partir de votre compte Office pour vérifier que vous exécutez une build de canal bêta.":::
 
 1. Vérifiez que *Microsoft Edge WebView2 Runtime* est installé. Ouvrez Windows **Démarrage** > **Applications et fonctionnalités**, puis recherchez **webview** :
 
@@ -96,7 +96,7 @@ Pour installer des applications Office 365 Canal bêta dans votre environnement 
 
 Vous pouvez afficher un aperçu des onglets personnels Teams s’exécutant dans l’application Office pour Android en rejoignant le programme bêta.
 
-Pour installer la dernière version bêta de l’application Office sur votre appareil Android physique ou émulateur Android :
+Pour installer la dernière version bêta de l’application Office, générez sur votre appareil Android physique ou émulateur Android :
 
 1. Veillez à utiliser un [appareil Android pris en charge par](https://support.google.com/googleplay/answer/1727131) Google Play.
 1. Lancez le **Play Store** sur votre appareil Android.

@@ -5,17 +5,17 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 144328aff254f94a3bcfc7e383e82dfa93d0d8fd
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100580"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243576"
 ---
 # <a name="monetize-your-app"></a>Monétiser votre application
 
 Microsoft Teams App Store fournit des fonctionnalités qui vous permettent de monétiser vos applications et d’attirer des clients en contactant vos utilisateurs. Les rubriques de cette section vous montrent comment créer ces fonctionnalités dans votre application.
- 
+
 ## <a name="choose-a-pricing-model"></a>Choisir un modèle de tarification
 
 :::row:::
@@ -70,6 +70,10 @@ Avec une offre SaaS (Software as a Service) négociable, vous pouvez tester l’
 
     :::column-end:::
 :::row-end:::
+
+**Gérer la licence pour les applications tierces dans Teams**
+
+À l’aide de la gestion des licences Microsoft, les éditeurs de logiciels indépendants (ISV) peuvent gérer la licence SaaS achetée dans Teams pour attribuer, désaffecter, utiliser et suivre facilement les licences SaaS. Pour plus d’informations, consultez [Gérer la licence pour les applications tierces dans Teams](include-saas-offer.md#manage-license-for-third-party-apps-in-teams).
 
 ## <a name="next-step"></a>Étape suivante
 

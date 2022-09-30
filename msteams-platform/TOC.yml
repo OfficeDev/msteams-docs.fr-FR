@@ -659,7 +659,7 @@
           displayName: 'Resubmit your app, multiple submission failures, Microsoft concierge'
         - name: Tenir à jour votre application publiée
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-          displayName: 'Promote your app, stop selling, stop app distribution'
+          displayName: 'Promote your app, stop selling, stop app distribution, analyze app usage'
         - name: Paramètres de classement du store Microsoft Teams
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
           displayName: 'Microsoft Publisher Agreement, app update or new release, user engagement data,'

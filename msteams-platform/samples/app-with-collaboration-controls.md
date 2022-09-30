@@ -5,12 +5,12 @@ description: Dans ce module, découvrez comment créer une application basée su
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027339"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243058"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Créer une application basée sur des modèles avec des contrôles collaboration pour Teams
 
@@ -29,7 +29,7 @@ Les contrôles de collaboration sont conçus pour les [applications basées sur 
 
    :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="La capture d’écran est un exemple montrant la nouvelle solution.":::
 
-1. Indiquez le nom et l’éditeur de votre nouvelle solution. Cette solution conservera votre Gestionnaire de collaboration personnalisé.
+1. Indiquez le nom et l’éditeur de votre nouvelle solution. Cette solution contiendra votre Gestionnaire de collaboration personnalisé.
 
    :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="La capture d’écran est un exemple montrant le gestionnaire de collaboration.":::
 
@@ -284,7 +284,7 @@ Pour planifier une réunion externe avec le client, sélectionnez la liste déro
 
 Les utilisateurs peuvent voir les réunions internes et les réservations de clients dans leur liste de réunions. Une fois la réunion démarrée, les utilisateurs peuvent participer en sélectionnant le bouton **Rejoindre** , qui ouvre la réunion directement dans Microsoft Teams.
 
-À mesure que les réunions sont soutenues par Outlook, les utilisateurs peuvent accéder à Bookings ou Calendrier Outlook pour voir toutes les réunions répertoriées dans un calendrier unique. Les réunions internes sont répertoriées dans le calendrier partagé.
+Étant donné que les réunions sont soutenues par Outlook, les utilisateurs peuvent accéder à Bookings ou au calendrier Outlook pour voir toutes les réunions répertoriées dans un calendrier unique. Les réunions internes sont répertoriées dans le calendrier partagé.
 
 Voici les étapes à suivre pour ajouter un calendrier partagé à votre Outlook (facultatif) :
 

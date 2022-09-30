@@ -1,17 +1,17 @@
 ---
-title: FAQ
+title: Questions fréquentes (FAQ)
 author: MuyangAmigo
 description: Dans ce module, consultez faq sur Teams Toolkit à l’aide de Visual Studio Code
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2b229b14db563a6b7a4dc587ac67c872d461ec72
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 6a6c6599ff036cf7b81dd30b00e5608db3dc4cc2
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806900"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243374"
 ---
 # <a name="faq-for-teams-toolkit"></a>FAQ sur Teams Toolkit
 
@@ -25,7 +25,7 @@ FAQ sur [l’approvisionnement de ressources cloud à l’aide du Kit de ressour
 
 <summary><b>Procédure de dépannage ?</b></summary>
 
-Si vous obtenez des erreurs avec Teams Shared Computer Toolkit dans Visual Studio Code, vous pouvez sélectionner **Obtenir de l’aide** dans la notification d’erreur pour accéder au document associé. Si vous utilisez l’interface CLI TeamsFx, un lien hypertexte à la fin du message d’erreur pointe vers la documentation d’aide. Vous pouvez également consulter directement la [documentation d’aide sur l’approvisionnement](https://aka.ms/teamsfx-arm-help) .
+Si vous obtenez des erreurs avec le Kit de ressources Teams dans Visual Studio Code, vous pouvez sélectionner **Obtenir de l’aide** sur la notification d’erreur pour accéder au document associé. Si vous utilisez l’interface CLI TeamsFx, un lien hypertexte à la fin du message d’erreur pointe vers la documentation d’aide. Vous pouvez également consulter directement la [documentation d’aide sur l’approvisionnement](https://aka.ms/teamsfx-arm-help) .
 
 <br>
 

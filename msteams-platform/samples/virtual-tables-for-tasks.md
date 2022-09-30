@@ -5,12 +5,12 @@ description: Dans ce module, découvrez les tables virtuelles pour les tâches, 
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
-ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
+ms.openlocfilehash: 2571787d5fba47c4ada3765dd13dd36ef1f8f63a
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67314594"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243044"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Tables virtuelles pour tâches, réunions, fichiers
 
@@ -19,7 +19,7 @@ Une nouvelle fonctionnalité de cette version est un ensemble de tables virtuell
 La solution de base des contrôles de collaboration comprend un ensemble de [tables virtuelles](/power-apps/developer/data-platform/virtual-entities/get-started-ve), qui peuvent être utilisées pour l’accès programmatique aux données créées par les contrôles collaboration.
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!TIP]
 > [Les tables virtuelles](/power-apps/developer/data-platform/virtual-entities/get-started-ve) également appelées entités virtuelles permettent l’intégration des données résidant dans des systèmes externes en représentant ces données en tant que tables dans Microsoft Dataverse, sans réplication des données et souvent sans codage personnalisé.
@@ -45,18 +45,18 @@ Pour suivre cet article, vous avez besoin des éléments suivants :
 
 1. Environnement Dataverse dans lequel les contrôles collaboration ont été installés.
 1. Un compte d’utilisateur dans l’environnement Dataverse, auquel le rôle **Utilisateur des contrôles de collaboration** lui est attribué.
-1. Un outil tiers, par exemple : Publier un homme ou un code C# personnalisé qui vous permet de vous authentifier auprès des instances Microsoft Dataverse, de composer et d’envoyer des demandes d’API web et d’afficher des réponses.  
+1. Outil tiers, par exemple, Post man ou un code C# personnalisé qui vous permet de vous authentifier auprès d’instances Microsoft Dataverse, de composer et d’envoyer des demandes d’API web et d’afficher des réponses.  
 
 > [!TIP]
 > Microsoft fournit des informations sur la configuration d’un environnement Postman qui se connecte à votre instance Dataverse et utilise Postman pour effectuer des opérations avec l’API web. Consultez [Utiliser Postman avec l’API web Microsoft Dataverse](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
 ## <a name="virtual-tables-sample-scenario"></a>Exemple de scénario de tables virtuelles
 
-Le scénario décrit dans ce guide utilise les tables virtuelles Plan planificateur et Tâche. Le scénario décrit est le même que celui utilisé par le contrôle Tasks Collaboration. Du point de vue de l’utilisateur, le scénario montre comment un plan planificateur et plusieurs tâches sont créées et associées à un enregistrement métier spécifique. Le scénario explique ensuite comment récupérer les tâches associées à l’enregistrement professionnel et comment lire, mettre à jour et supprimer une tâche de planificateur spécifique.
+Le scénario décrit dans ce guide utilise les tables virtuelles Plan planificateur et Tâche. Le scénario décrit est le même que celui utilisé par le contrôle Tasks Collaboration. Du point de vue de l’utilisateur, le scénario montre comment un plan planificateur et plusieurs tâches sont créées et associées à un enregistrement métier spécifique. Le scénario montre ensuite comment récupérer les tâches associées à l’enregistrement professionnel et comment lire, mettre à jour et supprimer une tâche de planificateur spécifique.
 
 Le diagramme de séquence suivant explique l’interaction entre le client, qui peut être le contrôle de collaboration Tâches, [l’API collaboration](/rest/api/industry/collaboration-controls/) et les tables virtuelles plan planificateur et tâche.
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Diagramme de séquence pour les tables virtuelles":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="L’illustration montre le diagramme de séquence pour les tables virtuelles.":::
 
 ## <a name="virtual-tables-basic-operations"></a>Opérations de base sur les tables virtuelles
 
@@ -73,7 +73,7 @@ Récupérez l’ID de groupe utilisé dans [les paramètres de votre collaborati
 
 Une session de collaboration est un enregistrement de la table racine de collaboration, qui vous permet d’associer plusieurs collaborations, par exemple, des tâches, des événements, des rendez-vous à un enregistrement professionnel.
 
-Une session de collaboration vous permet d’effectuer des opérations telles que la liste des événements de calendrier associés à un enregistrement professionnel, par exemple une application d’inspection.
+Une session de collaboration vous permet d’effectuer des opérations telles que la liste des événements de calendrier associés à un enregistrement professionnel, par exemple, une application d’inspection.
 
 # <a name="request"></a>[Demande](#tab/request)
 
@@ -108,7 +108,7 @@ Une session de collaboration vous permet d’effectuer des opérations telles qu
 
 ---
 
-Suivez les besoins dans les `collaborationRootId` demandes suivantes.
+Effectuez le suivi de ce qui est nécessaire dans les `collaborationRootId` demandes suivantes.
 
 **Tâche 3 : Créer un plan planificateur**
 
@@ -132,7 +132,7 @@ Créez un plan planificateur et associez-le à la session de collaboration cré�
 
 * `collaborationRootId`: identifie la session de collaboration à laquelle nous souhaitons associer ce plan, utiliser la valeur de la tâche 2
 
-* `groupId`: identifie le groupe qui sera propriétaire de ce plan, utiliser la valeur de l’étape 1
+* `groupId`: identifie le groupe propriétaire de ce plan, utilise la valeur de l’étape 1
 
 * `planTitle`: Titre du plan
 
@@ -161,7 +161,7 @@ Créez un plan planificateur et associez-le à la session de collaboration cré�
 
 ---
 
-Suivez les besoins dans les`m365_id` demandes suivantes.
+Effectuez le suivi de ce qui est nécessaire dans les`m365_id` demandes suivantes.
 
 **Tâche 4 : Créer une tâche de planificateur**
 
@@ -184,7 +184,7 @@ Créer une tâche de planificateur avec `PlanId` et `collaborationRootId`. vous 
 
 ```
 
-* `collaborationRootId`: identifie la session de collaboration à laquelle nous souhaitons associer ce plan, nous la valeur de la tâche 2
+* `collaborationRootId`: identifie la session de collaboration à laquelle nous souhaitons associer ce plan, utiliser la valeur de la tâche 2
 * `planId`: identifie le plan à laquelle cette tâche sera affectée, utilisez la valeur de l’étape précédente
 * `taskTitle`: Titre de la tâche
 
@@ -230,7 +230,7 @@ Créer une tâche de planificateur avec `PlanId` et `collaborationRootId`. vous 
 
 ---
 
-Suivez les besoins dans les `m365_graphplannertaskid` demandes suivantes.
+Effectuez le suivi de ce qui est nécessaire dans les `m365_graphplannertaskid` demandes suivantes.
 
 > [!NOTE]
 > Il `m365_graphplannertaskid` s’agit de la clé primaire de l’enregistrement dans la table virtuelle de tâche du planificateur. Toutes les demandes suivantes à la table virtuelle pour interagir avec cet enregistrement doivent utiliser cette clé primaire. Il s’agit `plannerTaskId` des étapes suivantes de ce document.
@@ -474,7 +474,7 @@ Pour acquérir le jeton de porteur approprié, une inscription d’application d
 
 Une fois l’inscription de l’application configurée, vous devez configurer un utilisateur d’application dans l’environnement PowerApps. Cela vous permet de vous authentifier avec les étendues Dynamics correctes qui ont été configurées précédemment.
 
-1. Ouvrez le [Centre de Administration Power Platform](https://admin.powerplatform.microsoft.com/).
+1. Ouvrez le [Centre d’administration Power Platform](https://admin.powerplatform.microsoft.com/).
 1. Accédez aux **environnements** > **Your_Environment** > **liste utilisateurs de l’application Utilisateurs** > .
 1. Sélectionnez **Nouvel utilisateur d’application** , puis sélectionnez votre inscription d’application Azure.
 1. Sélectionnez **Modifier les rôles de sécurité** et attribuez le rôle **Administrateur système** à l’utilisateur de l’application.

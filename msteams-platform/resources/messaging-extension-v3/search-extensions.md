@@ -4,12 +4,12 @@ description: Dans cet article, vous allez apprendre à développer des extension
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 789563d3a11a7e83d59b1653cc0cf45af2354dc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035225"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243030"
 ---
 # <a name="search-with-message-extensions"></a>Rechercher avec des extensions de message
 
@@ -132,7 +132,7 @@ En plus des propriétés standard de l’activité du bot, la charge utile conti
 |`name`| Type de commande qui est émise à votre service. Actuellement, les types suivants sont pris en charge : <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| Microsoft Azure Active Directory ID d’objet (Azure AD) de l’utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| ID d’objet Microsoft Azure Active Directory (Azure AD) de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID de locataire Microsoft Azure Active Directory (Azure AD). |
 |`channelData.channel.id`| Identification du canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| Identification de l'équipe (si la demande a été faite dans un canal). |
@@ -434,7 +434,7 @@ La requête par défaut a la même structure que n’importe quelle requête uti
 
 ## <a name="identify-the-user"></a>Identifier l’utilisateur
 
-Chaque demande adressée à vos services inclut l’ID masqué de l’utilisateur qui a effectué la requête, ainsi que le nom d’affichage et l’ID d’objet Microsoft Azure Active Directory (Azure AD) de l’utilisateur.
+Chaque demande adressée à vos services inclut l’ID masqué de l’utilisateur qui a effectué la requête, ainsi que le nom complet de l’utilisateur et l’ID d’objet Microsoft Azure Active Directory (Azure AD).
 
 ```json
 "from": {

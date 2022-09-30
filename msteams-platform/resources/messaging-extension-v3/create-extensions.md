@@ -3,12 +3,12 @@ title: Lancer des actions avec des extensions de messagerie
 description: Dans ce module, découvrez comment créer des extensions de message basées sur des actions pour permettre aux utilisateurs de déclencher des services externes.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337144"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243569"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Lancer des actions avec des extensions de messagerie
 

@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 2a06953ede09d9486dab239557a4941c590c882b
-ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
+ms.openlocfilehash: 233000d39ee60b6affd5efa26c69e04390a24686
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991662"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243366"
 ---
 # <a name="customize-teams-app-manifest"></a>Personnaliser le manifeste de l’application Teams
 
@@ -246,14 +246,14 @@ Pendant les opérations telles que le **package de métadonnées Zip Teams**, Te
 
 ## To preview values for local and dev environment
 
-In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
+In `manifest.template.json`, you can go to codelens to preview the values for `local` and `dev` environment.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
 
-You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+You can go to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Screenshot is an example of showing the selection of an environment.":::
 

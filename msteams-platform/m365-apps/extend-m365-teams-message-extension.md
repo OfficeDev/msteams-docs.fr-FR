@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919731"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243513"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Étendre une extension de message Teams dans Microsoft 365
 
@@ -75,7 +75,7 @@ Vous avez deux options pour mettre à jour le manifeste de votre application :
 # <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez la palette de commandes : `Ctrl+Shift+P`.
-1. Exécutez la commande `Teams: Upgrade Teams manifest` et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées en place.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
 
 # <a name="manual-steps"></a>[Étapes manuelles](#tab/manifest-manual)
 
@@ -90,7 +90,7 @@ Ouvrez le manifeste de votre application Teams et mettez à jour les `$schema` e
 
 ---
 
-Si vous avez utilisé teams Toolkit pour créer votre application d’extension de message, vous pouvez l’utiliser pour valider les modifications apportées à votre fichier manifeste et identifier les erreurs éventuelles. Ouvrez la palette de commandes `Ctrl+Shift+P` et recherchez **Teams : Valider le fichier manifeste**.
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Ajouter un canal Outlook pour votre bot
 
@@ -98,7 +98,7 @@ Dans Microsoft Teams, une extension de message se compose d’un service web que
 
 Pour que les utilisateurs interagissent avec votre extension de message à partir d’Outlook, vous devez ajouter un canal Outlook à votre bot :
 
-1. À partir de [Portail Microsoft Azure](https://portal.azure.com) (ou [Bot Framework portail](https://dev.botframework.com) si vous vous y êtes inscrit précédemment), accédez à votre ressource de bot.
+1. À partir de [Microsoft Portail Azure](https://portal.azure.com) (ou [du portail Bot Framework](https://dev.botframework.com) si vous y êtes inscrit précédemment), accédez à votre ressource de bot.
 
 1. A partir de *Paramètres*, sélectionnez **Canaux**.
 
@@ -115,7 +115,7 @@ Pour que les utilisateurs interagissent avec votre extension de message à parti
 > [!NOTE]
 > Vous pouvez ignorer l’étape si vous utilisez [l’exemple d’application](#quickstart) fourni dans ce tutoriel, car le scénario n’implique pas l’authentification unique Azure Active Directory (AAD).
 
-L’authentification unique (SSO) Azure Active Directory (AD) pour les extensions de message fonctionne de la même façon dans Outlook [que dans Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre bot dans le portail *inscriptions d'applications* de votre client.
+Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
 1. Connectez-vous à [Portail Azure](https://portal.azure.com) avec votre compte de locataire de bac à sable.
 1. Ouvrez **inscriptions d'applications**.
@@ -167,7 +167,7 @@ Pour afficher un aperçu de votre application s’exécutant dans Outlook sur le
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Cliquez sur le menu « Autres applications » en bas de la fenêtre de composition de courrier pour utiliser votre extension de message":::
 
-Votre extension de message est répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message dans Teams.
+Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ### <a name="outlook"></a>Outlook
 

@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636174"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243128"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -81,7 +81,7 @@ L’onglet in-meeting est un canevas permettant d’accroître la collaboration 
 
 ### <a name="use-cases"></a>Cas d'utilisation
 
-Personnes pouvez utiliser l’onglet en réunion pour :
+Les personnes peuvent utiliser l’onglet in-meeting pour :
 
 * Fournissez des commentaires détaillés. Par exemple, évaluez un candidat au poste.
 * Créez un sondage, une enquête ou un élément de tâche pour les participants à la réunion.
@@ -126,7 +126,7 @@ N’oubliez pas les éléments suivants si vous autorisez le défilement :
 
 ### <a name="navigation"></a>Navigation
 
-Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vous recommandons d’autoriser les utilisateurs à accéder à une couche secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
+Pour les scénarios avec des couches de navigation ou du contenu lourd, nous vous recommandons d’autoriser les utilisateurs à accéder à une couche secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="L’exemple montre la navigation dans la réunion.":::
 
@@ -268,12 +268,12 @@ La phase de réunion partagée est consacrée à la collaboration et à la parti
 
 La taille des applications partagées dans la phase de réunion varie en fonction de l’état de la réunion et de la façon dont l’utilisateur redimensionne la fenêtre. Conservez le remplissage et la disposition réactive de la navigation et des contrôles comme vous le feriez dans un navigateur.
 
-* **Panneau latéral** : un utilisateur peut avoir le panneau latéral ouvert à tout moment pendant une réunion pour discuter, afficher la liste de présence ou utiliser une application (c’est-à-dire, l’onglet réunion). L’étape se réorganise dynamiquement lorsque le panneau est ouvert.
+* **Panneau latéral** : un utilisateur peut avoir le panneau latéral ouvert à tout moment pendant une réunion pour discuter, afficher la liste de présence ou utiliser une application (c’est-à-dire l’onglet dans la réunion). L’étape se réorganise dynamiquement lorsque le panneau est ouvert.
 * **Grille vidéo et audio** : la grille vidéo et audio est toujours visible pour afficher les participants à la réunion. Lorsqu’un utilisateur met en évidence ou épingle une personne dans la réunion, cela augmente la hauteur ou la largeur de la grille des participants en fonction de l’orientation.
 
 #### <a name="meeting-stage-without-side-panel"></a>Étape de réunion (sans panneau latéral)
 
-Lorsque le panneau latéral n’est pas ouvert, la phase de réunion est de 994 x 678 pixels par défaut et peut être d’au moins 792 x 382 pixels.
+Lorsque le panneau latéral n’est pas ouvert, la phase de réunion est de 994 x 678 pixels, par défaut et peut être d’au moins 792 x 382 pixels.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image montrant la réactivité de la phase de réunion partagée avec le panneau latéral fermé.":::
 

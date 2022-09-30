@@ -5,19 +5,19 @@ description: Dans ce module, découvrez l’api web Tables virtuelles pour l’a
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 31784cfabccdfa861044e74be533c00f134ea851
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: b15c7972dfc0152d458e4ad895ed6d4f7e45cd4c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179094"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243548"
 ---
 # <a name="virtual-tables-web-api"></a>API web de tables virtuelles
 
-Lorsque vous utilisez l’API Web Dataverse pour récupérer plusieurs enregistrements à partir d’une table virtuelle, des paramètres de requête supplémentaires peuvent être inclus pour prendre en charge le tri, le filtrage et la pagination. Ces fonctionnalités ne sont pas prises en charge uniformément dans les tables virtuelles de contrôles collaboration, car elles s’appuient sur la prise en charge fournie par microsoft API Graph. Pour plus d’informations sur ce que chaque table virtuelle prend en charge, consultez la référence d’entité tables virtuelles.
+Lorsque vous utilisez l’API Web Dataverse pour récupérer plusieurs enregistrements à partir d’une table virtuelle, des paramètres de requête supplémentaires peuvent être inclus pour prendre en charge le tri, le filtrage et la pagination. Ces fonctionnalités ne sont pas prises en charge uniformément dans les tables virtuelles de contrôles collaboration, car elles s’appuient sur la prise en charge fournie par microsoft API Graph. Pour plus d’informations sur la prise en charge de chaque table virtuelle, consultez la référence des entités de tables virtuelles.
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="virtual-table-sorting"></a>Tri de tables virtuelles
 
@@ -31,14 +31,14 @@ Avec les tables virtuelles, vous pouvez utiliser le paramètre de requête OData
 > [!NOTE]
 > Le tri n’est pas pris en charge sur tous les attributs des ressources Graph respectives. Si un utilisateur tente de trier sur une table virtuelle avec un attribut non pris en charge, ce jeu de résultats a son ordre par défaut. Il s’agit du même comportement que l’API web Dataverse sur les colonnes qui ne prennent pas en charge le tri.
 
-Exemples :
+Exemples :
 
 * GET [URI de l’organisation]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq '00000000-0000-0000-00 &$orderby 0000000000000000000000000=m365_name desc
 * GET [URI d’organisation]/api/data/v9.2/m365_graphevents?$filter=m365_groupid eq '00000000-0000-0000-0000-00000000000000000000'$orderby=m365_subject asc
 
 ## <a name="virtual-table-filtering"></a>Filtrage de table virtuelle
 
-Avec les tables virtuelles, vous pouvez utiliser le paramètre de requête OData $filter pour définir les critères pour lesquels les lignes seront retournées. Les tables virtuelles sont interrogées à l’aide des mêmes opérateurs OData que ceux pris en charge par l’API Web Dataverse.
+Avec les tables virtuelles, vous pouvez utiliser le paramètre de requête OData $filter pour définir les critères pour lesquels les lignes sont retournées. Les tables virtuelles sont interrogées à l’aide des mêmes opérateurs OData que ceux pris en charge par l’API Web Dataverse.
 
 * **Opérateurs de comparaison**
 
@@ -83,7 +83,7 @@ not|Négociation logique |$filter=not contains(m365_name,'Contoso')|
 > [!Note]
 > Le filtrage n’est pas pris en charge sur tous les attributs des ressources Graph respectives. Si un utilisateur tente de filtrer sur une table virtuelle avec un attribut non pris en charge, ce filtre est ignoré. Il s’agit du même comportement que l’API web Dataverse sur les colonnes qui ne prennent pas en charge le filtrage.
 
-Exemples :
+Exemples :
 
 * GET [URI d’organisation]/api/data/v9.2/m365_graphbookingappointments?$filter=m365_bookingbusinessid eq 'ContosoBank@Contoso.onmicrosoft.com' et m365_price eq 100.0
 * GET [URI d’organisation]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq '00000000-0000-0000-0000-0000000000000' et m365_name eq 'Meeting Notes.docx'

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: En savoir plus sur les autorisations d’appareil pour le navigateur
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 2d78357348ef50c57439ebf8ca2bca7936c61260
-  ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
+  ms.openlocfilehash: 7ce86d763811fb80bbdb79517682f9972b51fd03
+  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 08/09/2022
-  ms.locfileid: "67285959"
+  ms.lasthandoff: 09/30/2022
+  ms.locfileid: "68243555"
 items:
 - durationInMinutes: 1
   content: >
@@ -26,7 +26,7 @@ items:
     Ce guide pas à pas vous aide à accorder l’autorisation d’appareil onglet à Teams. La sortie suivante s’affiche :
 
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="sortie finale":::
-- title: Conditions préalables
+- title: Configuration requise
   durationInMinutes: 1
   content: >
     Veillez à installer les outils suivants et à configurer votre environnement de développement :
