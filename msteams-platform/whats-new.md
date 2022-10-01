@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités et mises à jour des dév
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 8c618862056d6cc8b7a76cfd504be32f341d11ca
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243422"
+ms.locfileid: "68295969"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -33,7 +33,6 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 * ***30 septembre 2022*** : [Gérer les licences SaaS pour les applications tierces dans Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***29 septembre 2022*** : [L’application mobile Teams prend désormais en charge les téléchargements de fichiers sur les appareils locaux.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
-* ***29 septembre 2022*** : [Générer un lien profond pour partager du contenu dans les réunions.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***16 septembre 2022*** : [Les cartes adaptatives dans les extensions de message basées sur la recherche prennent désormais en charge les actions universelles.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***6 septembre 2022*** : [Introduction d’extraits de code pour la capture de vidéos à l’aide de l’appareil photo via `selectMedia` l’API.](concepts/device-capabilities/media-capabilities.md#code-snippets)
 

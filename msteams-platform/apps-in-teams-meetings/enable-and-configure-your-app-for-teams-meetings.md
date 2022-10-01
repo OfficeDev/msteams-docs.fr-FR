@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158819"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295976"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -177,7 +177,7 @@ Vous pouvez également ajouter l’image d’affichage Teams et la carte de cont
 
 La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel. Vous pouvez partager vos applications à l’étape de la réunion collaborative des manières suivantes :
 
-* [Partagez l’intégralité de l’application pour effectuer une étape](#share-entire-app-to-stage) à l’aide du bouton Partager pour mettre en scène dans le panneau côté réunion du client Teams ou via [des liens profonds](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+* [Partagez l’intégralité de l’application pour effectuer une mise en scène](#share-entire-app-to-stage) à l’aide du bouton Partager pour mettre en scène dans client Teams.
 * [Partagez des parties spécifiques de l’application pour effectuer des étapes à](#share-specific-parts-of-the-app-to-stage) l’aide d’API dans le SDK client Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Partager l’intégralité de l’application en plusieurs étapes

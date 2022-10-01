@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Dans ce module, découvrez le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 963c9b390323b92d6cfecfad04a251bd0310a6d7
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100153"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68296011"
 ---
 # <a name="teams-javascript-client-sdk"></a>Kit de développement logiciel client JavaScript Teams
 
@@ -188,31 +188,30 @@ Ce code :
 
 ```TypeScript
 import * as microsoftTeams from "@microsoft/teams-js";
-
-microsoftTeams.getContext((context: microsoftTeams.Context) => {
-  /* ... */
+microsoftTeams.app.getContext().then((context:  microsoftTeams.app.Context) => { 
+/* ... */ 
 });
 ```
 
 Doit être mis à jour pour :
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
-app.getContext().then((context: Context) => {
-    /*...*/
+app.getContext().then((context: app.Context) => { 
+/*...*/
 });
 ```
 
 ... ou le modèle équivalent `async/await` :
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
 async function example() {
-  const context: Context = await app.getContext();
-  /*...*/
-}
+            const context: app.Context = await app.getContext();
+            /*...*/
+          }
 ```
 
 ---

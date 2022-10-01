@@ -5,21 +5,18 @@ description: Dans ce module, découvrez les modifications à venir et en cours d
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: e3096b3a2201d1bc36824fb5bf726150522f679b
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: b2e9258975de236116e5b9e33aef4aaf914ec797
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485362"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295955"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Modifications apportées à l’API du bot Teams pour récupérer les membres d’équipe ou de conversation
 
-> [!NOTE]
-> `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` les API sont dépréciées. Ils sont limités à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe et la liste complète n’est pas retournée pour les grandes équipes. Vous devez mettre à jour vers la version 4.10 ou ultérieure du Kit de développement logiciel (SDK) Bot Framework et basculer vers les points de terminaison d’API paginés, ou utiliser celui-ci `TeamsInfo.GetMemberAsync` pour récupérer des utilisateurs uniques.
->
-> Cela s’applique également à votre bot même si vous n’utilisez pas directement ces API, car les SDK plus anciens appellent ces API pendant les événements [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) . Si vous utilisez une version antérieure du Kit de développement logiciel (SDK) vers la version 4.10, mettez-la à niveau vers la dernière version.
->
-> Pour afficher la liste des modifications à venir, consultez [modifications de l’API](team-chat-member-api-changes.md#api-changes).
+>[!NOTE]
+> Le processus de dépréciation de `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` API a démarré. Initialement, ils sont fortement limités à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. La liste complète n’est donc pas retournée à mesure que la taille de l’équipe augmente.
+> Vous devez effectuer une mise à jour vers la version 4.10 ou ultérieure du SDK Bot Framework et basculer vers les points de terminaison d’API paginés, ou la classe `TeamsInfo.GetMemberAsync`'API mono-utilisateur. Cela s’applique également à votre bot même si vous n’utilisez pas directement ces API, car les SDK plus anciens appellent ces API pendant événements [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added). Pour afficher la liste des modifications à venir, consultez [modifications de l’API](team-chat-member-api-changes.md#api-changes).
 
 Actuellement, si vous souhaitez récupérer des informations pour un ou plusieurs membres d’une conversation ou d’une équipe, vous pouvez utiliser les API de bot [Microsoft Teams](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` pour C# ou `TeamsInfo.getMembers` pour les API TypeScript ou Node.js. Pour plus d’informations, consultez [récupérer la liste ou le profil utilisateur](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -73,4 +70,9 @@ Voici les modifications à venir de l’API :
     > [!NOTE]
     > `objectId` est remplacé par `aadObjectId` pour correspondre à ce qui est appelé dans l’objet `Activity` d’un message Bot Framework. La nouvelle API est disponible avec la version 4.8 ou ultérieure du SDK Bot Framework. Il est également disponible dans l’extension du Kit de développement logiciel (SDK) Teams Bot Framework 3.x. Pendant ce temps, vous pouvez utiliser le point de terminaison [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details).
 
-* `TeamsInfo.GetMembersAsync` en C# et `TeamsInfo.getMembers` dans TypeScript ou Node.js est formellement déconseillé. Une fois la nouvelle API disponible, vous devez mettre à jour vos bots pour l’utiliser. Cela s’applique également à la [API REST sous-jacente que ces API utilisent](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json). 
+* `TeamsInfo.GetMembersAsync` en C# et `TeamsInfo.getMembers` dans TypeScript ou Node.js est formellement déconseillé. Une fois la nouvelle API disponible, vous devez mettre à jour vos bots pour l’utiliser. Cela s’applique également à la [API REST sous-jacente que ces API utilisent](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
+* Fin 2022, les bots ne peuvent pas récupérer de manière proactive les propriétés `userPrincipalName` ou `email` pour les membres d’une conversation ou d’une équipe. Les bots doivent utiliser les API Graph pour récupérer les informations requises. La nouvelle api `GetConversationPagedMembers` ne peut pas retourner les propriétés `userPrincipalName` et `email` de fin 2022. Les bots doivent utiliser API Graph avec un jeton d’accès pour récupérer des informations.
+
+> [!NOTE]
+>
+> Nous vous recommandons d’utiliser le [API Graph](/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) avec un jeton d’accès pour récupérer des informations.
