@@ -1,15 +1,15 @@
 ---
 title: Messages dans les conversations des robots
-description: Découvrez comment envoyer un message, des actions suggérées, des notifications, des pièces jointes, des images, des cartes adaptatives, des réponses de code d’erreur d’état pour throttle.
+description: Découvrez comment envoyer recevoir un message, des actions suggérées, des notifications, des pièces jointes, des images, des réponses de code d’erreur de carte adaptative et d’état.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 152515f16ff27467feac6e17aeb1310abc548c54
+ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586986"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68327593"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -248,8 +248,8 @@ Un objet classique `channelData` d’une activité envoyée à votre bot contien
 * `channel`: transmis uniquement dans les contextes de canal, lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes, où le bot a été ajouté.
   * `id`: GUID pour le canal.
   * `name`: nom du canal passé uniquement en cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`: déprécié. Cette propriété est incluse uniquement pour la compatibilité descendante.
-* `channelData.teamsChannelId`: déprécié. Cette propriété est incluse uniquement pour la compatibilité descendante.
+* `channelData.teamsTeamId`:Déconseillée. Cette propriété est incluse uniquement pour la compatibilité descendante.
+* `channelData.teamsChannelId`:Déconseillée. Cette propriété est incluse uniquement pour la compatibilité descendante.
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>Exemple d’objet channelData (événement channelCreated)
 
@@ -444,20 +444,39 @@ Le message d’achèvement du formulaire s’affiche dans les cartes adaptatives
 
 Pour plus d’informations sur les cartes et les cartes dans les bots, consultez la documentation sur les [cartes](~/task-modules-and-cards/what-are-cards.md).
 
-## <a name="status-code-responses"></a>Réponses du code d’état
+## <a name="status-codes-from-bot-conversational-apis"></a>Codes d’état des API conversationnelles du bot
 
-Voici les codes d’état et leurs valeurs de code d’erreur et de message :
+Veillez à gérer ces erreurs de manière appropriée dans votre application Teams. Le tableau suivant répertorie les codes d’erreur et les descriptions sous lesquels les erreurs sont générées :
 
-| Code d'état | Code d’erreur et valeurs de message | Description |
-|----------------|-----------------|-----------------|
-| 403 | **Code** : `ConversationBlockedByUser` <br/> **Message** : l’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation 1:1 ou un canal via les paramètres de modération. |
-| 403 | **Code** : `BotNotInConversationRoster` <br/> **Message** : Le bot ne fait pas partie de la liste de conversation. | Le bot ne fait pas partie de la conversation. |
-| 403 | **Code** : `BotDisabledByAdmin` <br/> **Message** : l’administrateur client a désactivé ce bot. | Le locataire a bloqué le bot. |
-| 401 | **Code** : `BotNotRegistered` <br/> **Message** : Aucune inscription trouvée pour ce bot. | L’inscription de ce bot est introuvable. |
-| 412 | **Code** : `PreconditionFailed` <br/> **Message** : Échec de la condition préalable, veuillez réessayer. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
-| 404  | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation est introuvable. |
-| 413 | **Code** : `MessageSizeTooBig` <br/> **Message** : Taille du message trop grande. | La taille de la requête entrante était trop grande. |
-| 429 | **Code** : `Throttled` <br/> **Message** : Trop de demandes. Retourne également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, consultez [la limite de débit](~/bots/how-to/rate-limit.md). |
+| Code d'état | Code d’erreur et valeurs de message | Description | Demande de nouvelle tentative | Action du développeur |
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code** : `Bad Argument` <br/> **Message** : *scénario spécifique | Charge utile de requête non valide fournie par le bot. Pour plus d’informations, consultez le message d’erreur. | Non | Réévaluez la charge utile de la demande pour les erreurs. Pour plus d’informations, consultez le message d’erreur retourné. |
+| 401 | **Code** : `BotNotRegistered` <br/> **Message** : Aucune inscription trouvée pour ce bot. | L’inscription de ce bot est introuvable. | Non | Vérifiez l’ID et le mot de passe du bot. Vérifiez que l’ID de bot (ID AAD) est inscrit dans le portail des développeurs Teams ou via l’inscription de canal de bot Azure dans Azure avec le canal « Teams » activé.|
+| 403 | **Code** : `BotDisabledByAdmin` <br/> **Message** : l’administrateur du locataire a désactivé ce bot | L’administrateur client a bloqué les interactions entre l’utilisateur et l’application bot. L’administrateur client doit autoriser l’application pour l’utilisateur à l’intérieur des stratégies d’application. Pour plus d’informations, consultez [les stratégies d’application](/microsoftteams/app-policies). | Non | Arrêtez la publication dans la conversation jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation indiquant que le bot n’est plus bloqué. |
+| 403 | **Code** : `BotNotInConversationRoster` <br/> **Message** : Le bot ne fait pas partie de la liste de conversation. | Le bot ne fait pas partie de la conversation. L’application doit être réinstallée dans la conversation. | Non | Avant de tenter d’envoyer des demandes de conversation supplémentaires, attendez un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) événement qui indique que le bot a été ajouté à nouveau.|
+| 403 | **Code** : `ConversationBlockedByUser` <br/> **Message** : l’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation personnelle ou un canal via des paramètres de modération. | Non | Supprimez la conversation du cache. Arrêtez la tentative de publication dans les conversations jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation, indiquant que le bot n’est plus bloqué. |
+| 403 | **Code** : `NotEnoughPermissions` <br/> **Message** : *scénario spécifique | Le bot n’a pas les autorisations nécessaires pour effectuer l’action demandée. | Non | Déterminez l’action requise à partir du message d’erreur. |
+| 404  | **Code** : `ActivityNotFoundInConversation` <br/> **Message** : Conversation introuvable. | L’ID de message fourni est introuvable dans la conversation. Le message n’existe pas ou a été supprimé. | Non | Vérifiez si l’ID de message envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
+| 404  | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation est introuvable, car elle n’existe pas ou a été supprimée. | Non | Vérifiez si l’ID de conversation envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
+| 412 | **Code** : `PreconditionFailed` <br/> **Message** : Échec de la condition préalable, veuillez réessayer. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. | Oui | Réessayez avec interruption exponentielle. |
+| 413 | **Code** : `MessageSizeTooBig` <br/> **Message** : Taille du message trop grande. | La taille de la requête entrante était trop grande. Pour plus d’informations, consultez [mettre en forme les messages de votre bot](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | Non | Réduisez la taille de la charge utile. |
+| 429 | **Code** : `Throttled` <br/> **Message** : Trop de demandes. Retourne également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, consultez [la limite de débit](/microsoftteams/platform/bots/how-to/rate-limit). | Oui | Réessayez d’utiliser l’en-tête `Retry-After` pour déterminer le temps d’arrêt. |
+| 500 | **Code** : `ServiceError` <br/> **Message** : *divers | Erreur interne au serveur. | Non | Signalez le problème dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+| 502 | **Code** : `ServiceError` <br/> **Message** : *divers | Problème de dépendance de service. | Oui | Réessayez avec interruption exponentielle. Si le problème persiste, signalez-le dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+| 503 | | Le service n’est pas disponible. | Oui | Réessayez avec interruption exponentielle. Si le problème persiste, signalez-le dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+| 504 | | Délai d’expiration de la passerelle. | Oui | Réessayez avec interruption exponentielle. Si le problème persiste, signalez-le dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+
+### <a name="status-codes-retry-guidance"></a>Instructions relatives aux nouvelles tentatives des codes d’état
+
+Les instructions générales de nouvelle tentative pour chaque code d’état sont répertoriées dans le tableau suivant. Le bot doit éviter de réessayer sur les codes d’état qui ne sont pas spécifiés dans le tableau suivant :
+
+|Code d'état | Stratégie de nouvelle tentative |
+|----------------|-----------------|
+| 412 | Réessayez à l’aide d’un backoff exponentiel. |
+| 429 | Réessayez d’utiliser l’en-tête `Retry-After` pour déterminer le temps d’attente en secondes et entre les demandes, le cas échéant. Sinon, réessayez d’utiliser le backoff exponentiel avec l’ID de thread, si possible. |
+| 502 | Réessayez à l’aide d’un backoff exponentiel. |
+| 503 | Réessayez à l’aide d’un backoff exponentiel. |
+| 504 | Réessayez à l’aide d’un backoff exponentiel. |
 
 ## <a name="code-sample"></a>Exemple de code
 

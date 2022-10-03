@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027332"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329083"
 ---
 # <a name="create-a-channel-tab"></a>Créer un onglet de canal
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Charger votre application dans Teams
 
 1. Accédez à Teams et sélectionnez **Applications**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Sélectionnez **Gérer vos applications** et **Charger une application personnalisée**.
+1. Sélectionnez **Gérer vos applications** > **Charger une application** > **Charger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet de canal chargé":::
@@ -428,7 +428,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans les **URL d’application**, mettez à jour la Stratégie de confidentialité vers `https://<yourngrokurl>/privacy` et Conditions d’utilisation vers `https://<yourngrokurl>/tou`, puis enregistrez.
 
-1. Dans **Fonctionnalités de l’application**, sélectionnez Groupe et application de canal. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
+1. Dans **les fonctionnalités de l’application**, sélectionnez **l’application de groupe et de canal**. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -649,7 +649,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans les **URL d’application**, mettez à jour la Stratégie de confidentialité vers `https://<yourngrokurl>/privacy` et Conditions d’utilisation vers `https://<yourngrokurl>/tou`, puis enregistrez.
 
-1. Dans **Fonctionnalités de l’application**, sélectionnez Groupe et application de canal. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
+1. Dans **les fonctionnalités de l’application**, sélectionnez **l’application de groupe et de canal**. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
 
 1. Sélectionnez **Enregistrer**.
 
