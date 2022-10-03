@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 175854db36b85a1fc68cc299bd733b7abd539ac9
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: a0174d113d441e2318f4f9f4165211f46df1876e
+ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780969"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68350460"
 ---
 # <a name="provision-cloud-resources"></a>Provisionner des ressources cloud
 
@@ -189,7 +189,7 @@ Pour vous assurer que l’outil TeamsFx fonctionne correctement, veillez à pers
 
 Vous pouvez créer un abonnement pour les scénarios suivants :
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Utiliser une application Azure AD existante pour votre bot
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Utiliser une application Azure AD existante pour votre application Teams
 
 Vous pouvez ajouter l’extrait de configuration suivant au `.fx/configs/config.{env}.json` fichier pour utiliser une application Azure AD créée par vous-même pour votre application Teams. Pour créer une application Azure AD, consultez <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -207,7 +207,7 @@ Après avoir ajouté l’extrait de code, ajoutez votre secret à la variable d�
 > [!NOTE]
 > Veillez à ne pas partager la même application Azure AD dans plusieurs environnements. Si vous n’êtes pas autorisé à mettre à jour l’application Azure AD, vous pouvez recevoir un avertissement avec des instructions sur la façon de mettre à jour manuellement l’application Azure AD. Suivez les instructions pour mettre à jour votre application Azure AD après l’approvisionnement.
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Utiliser une application Azure AD existante pour votre application Teams
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Utiliser une application Azure AD existante pour votre bot
 
 Vous pouvez ajouter l’extrait de configuration suivant au `.fx/configs/config.{env}.json` fichier pour utiliser une application Azure AD créée par vous-même pour votre bot :
 
@@ -308,7 +308,7 @@ Les étapes suivantes vous aident à provisionner des ressources cloud à l’ai
 
 1. Sélectionnez **Se connecter** pour vous connecter à votre compte Azure.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Se connecter à Microsoft 365":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Connectez-vous à Microsoft 365.":::
 
     > [!NOTE]
     > Si vous êtes déjà connecté, votre nom d’utilisateur s’affiche ou vous pouvez sélectionner la même option pour changer de compte.
@@ -400,8 +400,8 @@ La liste suivante montre la création de ressources pour différents types d’a
 | Ressource | Objectif | Description |
 | --- | --- | --- |
 | Bot Azure | Inscrit votre application en tant que bot avec l’infrastructure de bot. | Connecte le bot à Teams. |
-| plan Serviço de Aplicativo | Héberge votre application de bot web. | Non applicable |
-| Serviço de Aplicativo | Héberge votre application bot. | Ajoute l’identité affectée par l’utilisateur pour accéder à d’autres ressources Azure. |
+| App Service plan | Héberge votre application de bot web. | Non applicable |
+| App Service | Héberge votre application bot. | Ajoute l’identité affectée par l’utilisateur pour accéder à d’autres ressources Azure. |
 | Gérer l’identité | Authentifier les demandes de service à service Azure. | Partage entre différentes fonctionnalités et ressources. |
 
 </details>
@@ -477,7 +477,7 @@ La liste suivante montre la création de ressources pour différents types d’a
 
 ### <a name="manage-your-resources"></a>Gérer vos ressources
 
-Vous pouvez vous connecter à [Azure-Portal](https://portal.azure.com/) et gérer toutes les ressources créées par teams Toolkit.
+Vous pouvez vous connecter à [Portail Azure](https://portal.azure.com/) et gérer toutes les ressources créées par Teams Toolkit.
 
 * Vous pouvez sélectionner un groupe de ressources dans la liste existante ou le nouveau groupe de ressources que vous avez créé.
 * Vous pouvez voir les détails du groupe de ressources que vous avez sélectionné dans la section vue d’ensemble de la table des matières.
@@ -543,7 +543,7 @@ Pour vous assurer que l’outil TeamsFx fonctionne correctement, personnalisez l
 
 Vous pouvez personnaliser votre bot ou l’application Teams en ajoutant des extraits de configuration pour utiliser une application Azure AD créée par vous. Vous pouvez effectuer les opérations suivantes :
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Utiliser une application Azure AD existante pour votre bot
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Utiliser une application Azure AD existante pour votre application Teams
 
 Vous pouvez ajouter l’extrait `.fx/configs/config.{env}.json` de configuration suivant pour utiliser une application Azure AD créée par vous pour votre application Teams. Pour créer une application Azure AD, suivez le lien <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -561,7 +561,7 @@ Après avoir ajouté l’extrait de code, ajoutez votre clé secrète client à 
 > [!NOTE]
 > Veillez à ne pas partager la même application Azure AD dans plusieurs environnements. Si vous n’êtes pas autorisé à mettre à jour l’application Azure AD, vous recevez un avertissement avec des instructions pour mettre à jour manuellement l’application Azure AD. Suivez ces instructions pour mettre à jour votre application Azure AD après l’approvisionnement.
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Utiliser une application Azure AD existante pour votre application Teams
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Utiliser une application Azure AD existante pour votre bot
 
 Vous pouvez ajouter l’extrait de configuration suivant pour `.fx/configs/config.{env}.json` utiliser l’application Azure AD créée pour votre bot :
 
