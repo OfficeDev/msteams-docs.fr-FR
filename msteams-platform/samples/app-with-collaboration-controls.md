@@ -5,19 +5,19 @@ description: Dans ce module, découvrez comment créer une application basée su
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243058"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373044"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Créer une application basée sur des modèles avec des contrôles collaboration pour Teams
 
 Les contrôles de collaboration sont conçus pour les [applications basées sur des modèles](/power-apps/maker/model-driven-apps/model-driven-app-overview). La section suivante explique comment créer une application pilotée par modèle.
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="create-a-model-driven-application"></a>Créer une application pilotée par modèle
 
@@ -27,11 +27,11 @@ Les contrôles de collaboration sont conçus pour les [applications basées sur 
 
 1. Sélectionnez **Nouvelle solution**, afin de pouvoir fournir une maison pour toutes vos personnalisations futures.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="La capture d’écran est un exemple montrant la nouvelle solution.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="Capture d’écran d’un exemple montrant la nouvelle solution, qui fournit une maison pour toutes vos personnalisations futures.":::
 
-1. Indiquez le nom et l’éditeur de votre nouvelle solution. Cette solution contiendra votre Gestionnaire de collaboration personnalisé.
+1. Indiquez le nom et l’éditeur de votre nouvelle solution. Cette solution contiendra votre Gestionnaire de collaboration personnalisée.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="La capture d’écran est un exemple montrant le gestionnaire de collaboration.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="La capture d’écran est un exemple qui fournit des détails sur l’éditeur de votre nouvelle solution.":::
 
 1. Sélectionnez **Créer**.
 
@@ -39,41 +39,41 @@ Les contrôles de collaboration sont conçus pour les [applications basées sur 
 
 1. Avant de créer votre application, créez une maison pour vos données. sélectionnez **Nouvelle** > **table** pour commencer.
 
-     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="La capture d’écran décrit comment créer une table.":::
+     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="Capture d’écran montrant comment créer une table.":::
 
 1. Donnez un nom à votre table. Sous **Options avancées**, sélectionnez **Création d’une nouvelle activité**.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="La capture d’écran décrit comment créer une activité.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Capture d’écran montrant comment créer une activité.":::
 
 1. Sélectionnez **Enregistrer**.
 
-1. Une fois que vous avez terminé de créer votre table, vous pouvez la personnaliser en ajoutant des colonnes, des relations et bien plus encore (facultatif).
+1. Une fois que vous avez créé votre table, vous pouvez la personnaliser en ajoutant des colonnes, des relations et bien plus encore (facultatif).
 
 1. Vous pouvez maintenant créer une application pilotée par modèle en sélectionnant **nouvelle** >  > **application pilotée par modèle d’application.**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="La capture d’écran est un exemple montrant la nouvelle application pilotée par modèle.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="Capture d’écran d’un exemple montrant comment créer une application basée sur un modèle.":::
 
-1. Choisissez le nouveau **concepteur d’applications modernes (préversion)** pour ouvrir la nouvelle application.
+1. Sélectionnez le nouveau **concepteur d’applications moderne (préversion)** pour ouvrir la nouvelle application.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="La capture d’écran est un exemple qui montre la nouvelle application pilotée par modèle vide.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="La capture d’écran est un exemple montrant la nouvelle application pilotée par modèle vide et vous pouvez sélectionner une expérience de création.":::
 
 1. Sélectionnez **Créer.**
 
 1. Donnez un nom à votre application, puis **sélectionnez Créer.**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="La capture d’écran est un exemple montrant le gestionnaire de collaboration à des fins d’inspection.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Capture d’écran montrant l’ajout du gestionnaire de collaboration pour l’inspection et la création d’une application basée sur des modèles.":::
 
 1. Sélectionnez **Ajouter une page.**
 
 1. Sélectionnez **l’affichage et le formulaire basés sur table.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="La capture d’écran est un exemple montrant la vue et le formulaire basés sur une table.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="La capture d’écran est un exemple montrant la vue et le formulaire basés sur un tableau, et vous pouvez sélectionner un type de page.":::
 
 1. Sélectionnez **Suivant.**
 
 1. Recherchez et sélectionnez la table que vous avez créée précédemment.
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="La capture d’écran est un exemple montrant les pages de formulaire en mode Tableau.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="La capture d’écran est un exemple qui montre les pages de formulaire d’affichage de tableau et peut sélectionner la table que vous avez créée.":::
 
 1. Sélectionnez **Ajouter.**
 
@@ -93,54 +93,54 @@ Voici les étapes à suivre pour ajouter à l’application créée des fonction
 
 1. Accédez à l’onglet Formulaires de votre tableau.
 
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="La capture d’écran est un exemple montrant l’onglet Formulaires de votre tableau.":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="Capture d’écran d’un exemple montrant l’onglet Formulaires de votre tableau.":::
 
 1. Sélectionnez le formulaire Informations de type **Main** pour l’ouvrir dans le concepteur de formulaires.
 
 1. Une fois que vous êtes dans le concepteur de formulaires, appuyez et faites glisser un **onglet de 1 colonne** à partir de la section **Composants** .
 
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="La capture d’écran est un exemple qui montre les composants de Power Apps.":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Capture d’écran d’un exemple montrant les composants des applications power.":::
 
 1. Après avoir sélectionné l’onglet, renommez l’onglet « Tâches » dans le volet de propriétés.
 
 1. Sélectionnez le nom de l’onglet pour sélectionner la section complète, puis **sélectionnez Développer le premier composant vers l’onglet complet** dans le volet Propriétés. Cela est nécessaire, car les contrôles Collaboration sont mieux affichés dans les affichages d’onglets complets.
 
-    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" La capture d’écran décrit comment sélectionner le premier composant dans l’onglet complet.":::
+    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" Capture d’écran montrant comment sélectionner le premier composant dans l’onglet complet.":::
 
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" La capture d’écran décrit comment étendre le premier composant à l’onglet complet.":::
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Capture d’écran montrant comment développer le premier composant sous l’onglet complet.":::
 
 1. Développez la catégorie Collaboration (préversion) dans le tiroir de contrôles et faites glisser le contrôle Tâches (préversion) vers la section sous forme Tâches.
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Aperçu du contrôle sur la section sous forme de tâches":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Capture d’écran décrivant comment afficher un aperçu du contrôle sur la section sous forme de tâches.":::
 
 3. Définissez la table sur Activités & sélectionnez Terminé.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Sélectionner la table pour les activités":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Capture d’écran montrant comment sélectionner le tableau en activités.":::
 
 5. Sélectionnez « Masquer l’étiquette » dans les propriétés.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Sélectionner masquer l’étiquette":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Capture d’écran montrant comment sélectionner masquer l’étiquette.":::
 
 1. Le contrôle Tâches s’affiche maintenant.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Affichage du contrôle Tâches":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Capture d’écran montrant un exemple d’affichage de contrôle de tâches.":::
 
-1. Répétez les étapes tâches pour ajouter des contrôles Approbations, Fichiers, Réunions et Notes à votre application.
-1. Une fois tous les contrôles ajoutés, vous verrez les contrôles affichés ci-dessous dans le Concepteur de formulaires. Si un contrôle ne s’affiche pas dans le Concepteur de formulaires, par exemple, affiche un formulaire vide, exécutez votre application dans Power Apps et la présence d’une page « configurer » ou d’un « état vide » signifie que le contrôle a été correctement ajouté.
+1. Répétez les étapes Tâches pour ajouter des contrôles Approbations, Fichiers, Réunions et Notes à votre application.
+1. Après avoir ajouté tous les contrôles, vous verrez les contrôles affichés ci-dessous dans le Concepteur de formulaires. Si un contrôle ne s’affiche pas dans le Concepteur de formulaires, par exemple, affiche un formulaire vide, exécutez votre application dans Power Apps et la présence d’une page « configurer » ou d’un « état vide » signifie que le contrôle a été correctement ajouté.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Concepteur de formulaires controls":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Capture d’écran montrant l’ajout réussi du concepteur de formulaires Contrôles.":::
 
 1. Vous pouvez maintenant exécuter votre application d’alimentation dans Power Apps en la sélectionnant.
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Gestionnaire de collaboration pour les inspections":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Capture d’écran montrant comment exécuter votre application d’alimentation en sélectionnant Le Gestionnaire de collaboration pour les inspections.":::
 
 1. Créez un enregistrement en sélectionnant **+ Nouveau** , puis ouvrez l’enregistrement.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="La capture d’écran est un exemple montrant les applications power qui ouvrent l’enregistrement.":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Capture d’écran montrant la création d’un enregistrement.":::
 
 1. Vous pouvez maintenant voir les vues de chaque onglet qui ressemblent à l’image suivante :
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="La capture d’écran est un exemple qui montre les tâches.":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="La capture d’écran est un exemple montrant l’affichage de chaque onglet.":::
 
      > [!TIP]
      > Les contrôles sont visibles uniquement après l’enregistrement d’un enregistrement dans l’application. Si les onglets de contrôle n’apparaissent pas dans votre enregistrement, essayez d’actualiser votre navigateur ou de republier l’application à partir de Power Apps.
@@ -161,7 +161,7 @@ Les paramètres que vous pouvez appliquer sont les suivants :
 |ID de lecteur|fichiers SharePoint ;|
 
 > [!NOTE]
-> Les paramètres sont peu pratiques pour lancer votre application. Veillez donc à suivre les étapes suggérées. Si vous rencontrez des problèmes lors du lancement et de l’enregistrement des contrôles, revérifier les valeurs.
+> Les paramètres sont essentiels pour lancer votre application. Veillez donc à suivre les étapes suggérées. Si vous rencontrez des problèmes lors du lancement et de l’enregistrement des contrôles, revérifier les valeurs.
 
 Vous pouvez obtenir l’ID de groupe en créant une équipe ou en utilisant une équipe existante dans Microsoft Teams pour héberger votre application et créer des variables de paramètres.
 
@@ -173,7 +173,7 @@ Utilisez les instructions suivantes pour récupérer l’ID de groupe de votre �
 
 1. Sélectionnez l’ellipse **...** et **sélectionnez Obtenir le lien vers l’équipe**.
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="La capture d’écran décrit comment obtenir le lien avec l’équipe.":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="Capture d’écran décrivant comment obtenir le lien avec l’équipe.":::
 
 1. Copiez le lien et enregistrez la valeur de `groupId` l’URL. Vous utiliserez cette valeur ultérieurement lors de la définition des paramètres de votre solution.
 
@@ -187,7 +187,7 @@ Utilisez les instructions suivantes pour récupérer l’ID de site SharePoint e
 
      1. **ID de site** : à l’aide de [l’Explorateur Graph](https://developer.microsoft.com/graph/graph-explorer), connectez-vous et accordez des autorisations à Directory.ReadWrite.All et User.ReadWrite.All
 
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="La capture d’écran est un exemple montrant l’Explorateur Graph.":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Capture d’écran d’un exemple montrant l’Explorateur Graph.":::
 
      1. Veillez à remplacer le nom d’hôte par votre nom d’hôte et le chemin d’accès relatif au chemin d’accès du site, puis effectuez un appel de graphe vers `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Voici un exemple :
          1. Si votre URL de site = `https://myhostname.sharepoint.com/sites/MySiteName`
@@ -212,7 +212,7 @@ Pour créer des réunions avec des utilisateurs extérieurs à votre organisatio
 
 Pour appliquer des paramètres et explorer les fonctionnalités collaboratives de votre application dans Power Apps, ouvrez l’application que vous avez créée précédemment. Une page d’affichage s’affiche, dans laquelle vous pouvez sélectionner les enregistrements existants ou en créer un nouveau. Pour commencer par ouvrir ou créer un enregistrement.
 
-Vous devez ajouter les ID de paramètres que vous avez enregistrés précédemment pour votre application
+Vous devez ajouter les ID de paramètres que vous avez enregistrés précédemment pour votre application.
 
 |Paramètres|Utilisateur|
 |---|---|
@@ -229,11 +229,11 @@ Vous devez ajouter les ID de paramètres que vous avez enregistrés précédemme
 
 1. Sélectionnez **Configurer** et accédez à l’onglet Général pour ajouter l’ID de groupe.
 
-     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="La capture d’écran décrit comment ajouter l’ID de groupe sous l’onglet Général.":::
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Capture d’écran montrant comment ajouter l’ID de groupe sous l’onglet Général.":::
 
 1. Ouvrez l’onglet Fichiers pour ajouter l’ID de site et l’ID de lecteur.
 
-     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="La capture d’écran décrit comment ajouter l’ID de site et l’ID de lecteur dans l’onglet Fichiers.":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Capture d’écran décrivant comment ajouter l’ID de site et l’ID de lecteur dans l’onglet Fichiers.":::
 
 Le contrôle Notes ne nécessite pas de valeur de paramètre. Vous pouvez maintenant créer des entités telles que tâches et réunions dans votre application. Si vous rencontrez des problèmes lors du lancement et de l’enregistrement des contrôles, revérifier les valeurs des paramètres.
 
@@ -247,13 +247,13 @@ Explorez la collaboration dans l’onglet Tâches en sélectionnant l’onglet T
 
 1. Pour créer une tâche pour l’équipe, sélectionnez **Ajouter une tâche**. Il ouvre une boîte de dialogue dans laquelle vous pouvez fournir des détails sur la tâche et l’affecter aux personnes concernées de l’équipe, puis sélectionner Enregistrer.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="La capture d’écran décrit comment ajouter une tâche.":::
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Capture d’écran décrivant comment ajouter une tâche.":::
 
 1. La tâche enregistrée apparaît dans la liste des tâches.
 
 1. Comme toutes les tâches sont sauvegardées par Planificateur Microsoft. Les utilisateurs peuvent utiliser l’application Tâches dans Microsoft Teams pour voir toutes les tâches qui sont affectées. Pour commencer, sélectionnez points de suspension **...** dans le volet gauche de Teams. Recherchez et sélectionnez Tâches par planificateur et à faire.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="La capture d’écran est un exemple des tâches par planificateur et à faire.":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="La capture d’écran est un exemple de tâches par planificateur et à faire.":::
 
 1. Après avoir ouvert l’application Tâches par planificateur et À faire, les utilisateurs peuvent voir toutes les tâches qui ont été créées dans votre application dans la section **Affecté à moi** de l’application. Les utilisateurs peuvent également afficher les détails d’une tâche, ajouter des pièces jointes et les marquer comme terminées.
 
@@ -268,7 +268,7 @@ Sélectionnez l’onglet **Réunions** dans un enregistrement pour planifier des
 
 Pour planifier une réunion interne, sélectionnez la liste déroulante en regard du bouton **Nouvelle réunion** , puis sélectionnez **Réunion interne**.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="La capture d’écran décrit comment planifier des réunions internes.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Capture d’écran montrant comment planifier des réunions internes.":::
 
 > [!NOTE]
 >
@@ -276,15 +276,15 @@ Pour planifier une réunion interne, sélectionnez la liste déroulante en regar
 
 Dans la boîte de dialogue **Nouvelle réunion** , les utilisateurs peuvent fournir des informations pertinentes sur la réunion et sélectionner **Enregistrer**. La réunion apparaît dans la liste des réunions.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="La capture d’écran décrit comment planifier une nouvelle réunion.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="Capture d’écran montrant comment planifier une nouvelle réunion.":::
 
 Pour planifier une réunion externe avec le client, sélectionnez la liste déroulante en regard du bouton **Nouvelle réunion** , puis sélectionnez **Réservation du client**. Si l’option **Réservation** de client n’est pas disponible dans la liste déroulante **Nouvelle réunion**, vérifiez si l’application est configurée pour Microsoft Bookings dans les paramètres et si l’utilisateur a le rôle Administrateur de réservations. Pour plus d’informations, consultez [ajouter du personnel à Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). Vous pouvez ajouter des types de réservation supplémentaires en ajoutant des services supplémentaires dans votre entreprise Bookings.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="La capture d’écran décrit comment planifier bookings client.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Capture d’écran décrivant la planification des réservations client.":::
 
 Les utilisateurs peuvent voir les réunions internes et les réservations de clients dans leur liste de réunions. Une fois la réunion démarrée, les utilisateurs peuvent participer en sélectionnant le bouton **Rejoindre** , qui ouvre la réunion directement dans Microsoft Teams.
 
-Étant donné que les réunions sont soutenues par Outlook, les utilisateurs peuvent accéder à Bookings ou au calendrier Outlook pour voir toutes les réunions répertoriées dans un calendrier unique. Les réunions internes sont répertoriées dans le calendrier partagé.
+À mesure que les réunions sont sauvegardées par Outlook, les utilisateurs peuvent accéder à Bookings ou à Calendrier Outlook pour voir toutes les réunions répertoriées dans un calendrier unique. Les réunions internes sont répertoriées dans le calendrier partagé.
 
 Voici les étapes à suivre pour ajouter un calendrier partagé à votre Outlook (facultatif) :
 
@@ -294,13 +294,13 @@ Voici les étapes à suivre pour ajouter un calendrier partagé à votre Outlook
 
 Dans le volet gauche, sous Calendriers partagés, vous devez maintenant voir un calendrier supplémentaire avec le nom de la personne.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="La capture d’écran décrit comment planifier bookings client.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Capture d’écran décrivant la planification des réservations client.":::
 
 ### <a name="add-files"></a>Ajouter des fichiers
 
 Ouvrez l’onglet **Fichiers** de votre application et **sélectionnez Charger** pour charger des fichiers à partir de OneDrive Entreprise ou de votre ordinateur. Lorsqu’un fichier est correctement chargé, l’affichage de liste principale s’actualise automatiquement pour afficher les fichiers de la liste.
 
-:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="La capture d’écran décrit comment ouvrir le calendrier partagé.":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="Capture d’écran montrant comment ouvrir un calendrier partagé.":::
 
 ### <a name="approvals"></a>Approbations
 
@@ -314,7 +314,7 @@ Les approbations permettent aux utilisateurs de demander la déconnexion d’aut
 
 1. Sélectionnez la **nouvelle demande d’approbation** pour ouvrir le formulaire de demande d’approbation.
 
-      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="La capture d’écran est un exemple montrant le nouveau formulaire de demande d’approbation.":::
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Capture d’écran d’un exemple montrant le nouveau formulaire de demande d’approbation.":::
 
 1. Dans le formulaire de demande d’approbation, renseignez les champs requis et sélectionnez **Envoyer**, ce qui crée une demande et est ajouté à la liste.
 

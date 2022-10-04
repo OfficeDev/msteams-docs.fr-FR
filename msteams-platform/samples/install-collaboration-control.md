@@ -5,17 +5,17 @@ description: Dans ce module, découvrez comment installer des contrôles de coll
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
-ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
+ms.openlocfilehash: 5a253c9e7373a2df9e1161e6d3fc9d9b1c8ccdaa
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617977"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373030"
 ---
 # <a name="install-collaboration-controls"></a>Installer les contrôles de collaboration
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 Dans cet article, vous allez apprendre à installer des contrôles de collaboration. Les éléments suivants sont nécessaires pour générer et déployer Gestionnaire de collaboration applications à l’aide des contrôles collaboration :
 
@@ -33,12 +33,11 @@ Pour plus d’informations sur les privilèges de rôle, consultez [Configurer l
 
 Vous allez installer les contrôles Collaboration dans votre environnement dataverse via [Microsoft AppSource.](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)
 
-
 Vous ne pourrez configurer et utiliser les composants de votre propre application basée sur des modèles qu’après avoir accédé à [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  et installé des contrôles Collaboration dans votre environnement dataverse.
 
 Les contrôles de collaboration incluent les solutions suivantes :
 
-|**Solutions de paramètres** | **Objectif** |
+|**Solutions des paramètres** | **Objectif** |
 |---|---|
 | Paramètres des contrôles de collaboration | Conserver l’infrastructure de paramètres qui alimente les contrôles de collaboration |
 | Objets paramètres des contrôles de collaboration | Fournit des valeurs de paramètres prédéfinies utilisées par les contrôles Collaboration.|
@@ -62,20 +61,20 @@ Pour installer les solutions, accédez à [Microsoft AppSource](https://appsourc
 
 1. Sélectionnez **le bouton Obtenir maintenant** .
 
-   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Formulaire d’aperçu "border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Capture d’écran du bouton Obtenir maintenant pour afficher le contrôle Collaboration."border="true":::
 
 1. Connectez-vous avec votre compte, remplissez le formulaire et **sélectionnez Continuer**.
 
-   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="vue d’ensemble du contrôle de collaboration" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="Capture d’écran du contrôle Collaboration de vue d’ensemble." border="true":::
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Aperçu du contrôle de collaboration" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Capture d’écran de l’aperçu du contrôle Collaboration d’installation." border="true":::
 
 1. Vous serez dirigé vers Power Platform Administration Center. Sélectionnez un environnement dans le menu déroulant et acceptez les termes et les instructions de stratégie.
 
    > [!TIP]
    > Si vous voyez une erreur d’autorisation lorsque vous sélectionnez l’environnement, essayez de sélectionner en dehors du menu déroulant de l’environnement pour voir si cela résout le problème.
 
-   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="Installer l’environnement de contrôle de collaboration" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="La capture d’écran est un exemple d’environnement de contrôle de collaboration d’installation." border="true":::
 
 1. Sélectionnez **Installer**, l’installation peut prendre environ 15 minutes.
 
@@ -85,7 +84,7 @@ Pour installer les solutions, accédez à [Microsoft AppSource](https://appsourc
 
 1. Sélectionnez l’onglet **Solutions** pour afficher toutes les solutions que vous avez installées dans l’environnement approprié.
 
-   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="contrôle de collaboration des solutions" border= "true":::
+   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="Capture d’écran montrant l’onglet Solutions pour afficher tous les contrôles de collaboration de solutions." border= "true":::
 
 > [!NOTE]
 > Les contrôles collaboration sont en préversion et les éléments peuvent changer au fil du temps, ce qui peut entraîner des changements cassants. Les contrôles collaboration ne sont pas pris en charge dans les environnements de production.

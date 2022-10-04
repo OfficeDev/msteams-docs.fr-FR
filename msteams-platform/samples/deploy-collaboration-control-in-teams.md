@@ -5,19 +5,19 @@ description: Dans ce module, découvrez comment déployer votre application avec
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 816dd8052cdfb13ab83bfc34ae2a99a16f9f9569
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027304"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373037"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>Déployer des contrôles collaboration dans Microsoft Teams
 
 Les contrôles de collaboration fonctionnent actuellement mieux dans Microsoft Teams. Vous pouvez créer une application qui peut être incorporée dans l’application Teams sous la forme d’une application personnelle et d’une application onglet.
 
 > [!NOTE]
-> Actuellement, les contrôles collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> Actuellement, les contrôles de collaboration sont disponibles uniquement en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="configure-the-app-for-teams"></a>Configurer l’application pour Teams
 
@@ -34,31 +34,31 @@ Pour ce faire, nous allons utiliser les nouveaux paramètres de **l’applicatio
 
 1. Recherchez et sélectionnez **définition de paramètre**.
 
-     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Définition de paramètre":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Capture d’écran montrant la recherche et la définition de définition dans les applications Power.":::
 
 1. Recherchez et **sélectionnez Masquer la barre de navigation** dans la liste des définitions de paramètres. Cela masque le volet gauche de votre application.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Masquer la barre de navigation":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Capture d’écran montrant comment sélectionner masquer la barre de navigation.":::
 
 1. En bas à droite de votre application dans le volet d’édition, une section intitulée **Définir les valeurs de l’application** s’affiche. Si vous avez créé votre application à l’aide du concepteur d’applications moderne, votre application apparaît dans la liste. Sélectionnez **Nouvelle valeur d’application** sous votre application.
 
 1. Remplacez la valeur **non** par **Oui.**
 
-     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Remplacer la valeur par oui":::
+     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Capture d’écran montrant la liste déroulante pour sélectionner la valeur de modification par oui.":::
 
 1. Sélectionnez **Enregistrer.**
 
 1. Recherchez et sélectionnez **l’en-tête de page à haute densité d’application** dans la liste des définitions de paramètres, puis répétez le processus.
 
-     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="En-tête de page densité":::
+     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Capture d’écran montrant comment sélectionner l’en-tête de page à haute densité d’application.":::
 
 1. **Sélectionnez Revenir aux solutions**.
 
-     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="Solution par défaut":::
+     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="La capture d’écran montre la solution par défaut.":::
 
 1. Sélectionnez **Publier toutes les personnalisations** pour publier tout le travail que vous avez effectué.
 
-     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publier toutes les personnalisations":::
+     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publiez toutes les personnalisations.":::
 
 ## <a name="add-the-app-to-microsoft-teams-app-catalog"></a>Ajouter l’application au catalogue d’applications Microsoft Teams
 
@@ -66,11 +66,11 @@ Pour ce faire, nous allons utiliser les nouveaux paramètres de **l’applicatio
 
 Pour ajouter l’application à Teams, **sélectionnez Ajouter à Teams**.
 
-:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Ajouter à Teams":::
+:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Ajouter à Teams.":::
 
 La sélection **d’Ajouter à Teams** ouvre une boîte de dialogue dans laquelle vous pouvez consulter les détails et sélectionner **Télécharger l’application**, ce qui enregistre le manifeste de l’application Microsoft Teams sur votre appareil.
 
-:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="La capture d’écran est un exemple montrant l’inspection du gestionnaire de collaboration":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="La capture d’écran est un exemple montrant l’inspection du gestionnaire de collaboration.":::
 
 Pour charger votre application dans Teams, consultez [charger votre application dans Team](~/concepts/deploy-and-publish/apps-upload.md).
 
@@ -100,7 +100,7 @@ Les éléments suivants sont nécessaires pour permettre aux utilisateurs d’ex
      1. **Administrateur:** Recherchez l’utilisateur au sein de votre organisation que vous souhaitez affecter en tant qu’administrateur en entrant des caractères.
      1. **Type d’équipe :** Sélectionnez le type d’équipe. Les étapes suivantes supposent que vous avez sélectionné Propriétaire dans la liste déroulante. Les autres types d’équipe (équipe Microsoft 365 et équipe Microsoft Azure Active Directory) remplissent automatiquement les membres de l’équipe à partir d’Azure Active Directory.
 
-         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Nouvelle équipe":::
+         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Capture d’écran pour sélectionner un nouveau type d’équipe.":::
 
      1. Veillez à noter le nom de l’équipe. Vous en aurez besoin ultérieurement pour affecter cette équipe en tant que propriétaire d’un enregistrement.
 
@@ -115,7 +115,7 @@ Les éléments suivants sont nécessaires pour permettre aux utilisateurs d’ex
 
 1. Pour ajouter de nouveaux membres d’équipe, sélectionnez **+ Ajouter des membres d’équipe** et choisissez les utilisateurs de votre organisation à ajouter.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="La capture d’écran décrit comment ajouter des membres de l’équipe":::
+     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="La capture d’écran décrit comment ajouter des membres de l’équipe.":::
 
 1. Pour supprimer un membre de l’équipe, sélectionnez l’utilisateur, puis **choisissez Supprimer**.
 
@@ -125,7 +125,7 @@ Les éléments suivants sont nécessaires pour permettre aux utilisateurs d’ex
 
 1. Sélectionnez **Rôles de sécurité**.
 
-     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Autorisation des utilisateurs":::
+     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Capture d’écran montrant comment ajouter de nouveaux membres d’équipe pour l’autorisation utilisateur.":::
 
 1. Sélectionnez **Le nouveau rôle** en haut à gauche de la page, qui ouvre maintenant une nouvelle page.
 
@@ -135,7 +135,7 @@ Les éléments suivants sont nécessaires pour permettre aux utilisateurs d’ex
 
      1. Accordez des autorisations d’organisation (cercle vert complet) pour chacune des entités de collaboration, **carte** de collaboration, **métadonnées de collaboration** et **racine de collaboration**.
 
-         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Carte de collaboration":::
+         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Capture d’écran montrant comment créer un rôle de sécurité sur la carte de collaboration.":::
 
 1. Sélectionnez **Enregistrer** et **fermer**.
 
@@ -147,7 +147,7 @@ Les éléments suivants sont nécessaires pour permettre aux utilisateurs d’ex
 
 1. Choisissez **Gérer les rôles de sécurité** dans l’en-tête.
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Modifier l’équipe":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Capture d’écran montrant la carte de collaboration, les métadonnées de collaboration et la racine de collaboration. pour l’équipe de modification.":::
 
 1. Sélectionnez les rôles [créés dans un rôle de sécurité](#create-a-security-role).
 
