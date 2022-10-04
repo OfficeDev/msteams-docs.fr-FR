@@ -5,12 +5,12 @@ description: Découvrez comment activer l’authentification à l’aide d’un 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6984774ea8738ce2039f61b83891745db0774599
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: db760f81195634431fe0d3415b1a9c3797b519e7
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243121"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376633"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -168,7 +168,7 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres 
 1. Dans le volet droit, sélectionnez l’onglet **Nouvelle inscription**, en haut à gauche.
 1. Il vous sera demandé de fournir les informations suivantes :
    1. **Nom**. Entrez le nom pour la nouvelle application de service. *Par exemple, BotTeamsIdentity* N’oubliez pas que le nom doit être unique.
-   1. Sélectionnez les **types de comptes pris en charge** pour votre application. Sélectionnez *Comptes dans n’importe quel annuaire organisationnel (Tout compte Microsoft Azure Active Directory (Azure AD) - Multilocataire) et comptes Microsoft personnels (par exemple, Skype, Xbox).*
+   1. Sélectionnez les **types de comptes pris en charge** pour votre application. Sélectionnez *Comptes dans n’importe quel annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Multilocataire) et comptes Microsoft personnels (par exemple, Skype, Xbox).*
    1. Pour **l’URI de redirection** :<br/>
        &#x2713;Select **Web**. <br/>
        &#x2713; définir l’URL sur `https://token.botframework.com/.auth/web/redirect`
@@ -211,9 +211,9 @@ Remarque : il existe deux options pour les fournisseurs de services ici : Azure 
     1. **URL de connexion**. Entrez `https://login.microsoftonline.com`.
     1. **ID de locataire**, entrez **l’ID d’annuaire (locataire)** que vous avez enregistré précédemment pour votre application d’identité Azure ou **commun** en fonction du type de compte pris en charge sélectionné lors de la création de l’application de fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez les critères suivants :
 
-        - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans un annuaire organisationnel (Microsoft Azure Active Directory (Azure AD) - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour l’application Microsoft Azure Active Directory (Azure AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
+        - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans n’importe quel annuaire organisationnel (Microsoft Azure Active Directory (Azure AD ) - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour le Microsoft Azure Active Directory (Azure) Application AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout annuaire Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD (Azure AD) vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
+        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD (Azure AD) vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     h. Pour **l’URL de ressource**, entrez `https://graph.microsoft.com/`. Cela n’est pas utilisé dans l’exemple de code actuel.  
     i. Laissez **les étendues** vides. L’image suivante est un exemple.
@@ -242,7 +242,7 @@ Remarque : il existe deux options pour les fournisseurs de services ici : Azure 
 
         - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans un annuaire organisationnel (Microsoft Azure Active Directory - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour l’application Azure AD. Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout annuaire Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
+        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Azure AD vérifie par le biais du locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     1. Pour **les étendues**, entrez une liste délimitée par des espaces des autorisations de graphe requises par cette application, par exemple : User.Read User.ReadBasic.All Mail.Read
 
@@ -493,7 +493,6 @@ Ce manifeste contient les informations nécessaires à Teams pour se connecter a
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
-  "packageName": "com.teams.auth.bot",
   "developer": {
     "name": "TeamsBotAuth",
     "websiteUrl": "https://www.microsoft.com",

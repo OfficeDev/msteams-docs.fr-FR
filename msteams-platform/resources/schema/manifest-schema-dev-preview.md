@@ -4,12 +4,12 @@ description: Découvrez comment activer la préversion du développeur. Exemple 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 2278b2f500ce89f239cae59ffab7f432a8d170f5
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243170"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376598"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Schéma de manifeste pour les développeurs publics en préversion pour Teams
 
@@ -28,7 +28,6 @@ Le manifeste Microsoft Teams décrit comment l’application s’intègre à la 
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -300,13 +299,7 @@ Cette chaîne de version doit suivre la norme de [semver](http://semver.org/) (M
 
 **Obligatoire** &ndash; ID d’application Microsoft
 
-Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via Microsoft Bot Framework ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), l’entrer ici, puis le réutiliser lorsque vous [ajoutez un bot](~/bots/how-to/create-a-bot-for-teams.md).
-
-## <a name="packagename"></a>packageName
-
-Chaîne **requise**&ndash;
-
-Identificateur unique de cette application en notation de domaine inverse ; par exemple, com.example.myapp.
+Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via le Microsoft Bot Framework, ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), l’entrer ici, puis le réutiliser lorsque vous [ajoutez un bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="developer"></a>developer
 
@@ -759,7 +752,7 @@ Spécifiez et consolidez les informations relatives à l’autorisation pour l�
 |Nom| Type|Taille maximale|Requis |Description|
 |---|---|---|---|---|
 |`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 caractères|✔️|Nom de l’autorisation spécifique à la ressource. Pour plus d’informations, consultez [Autorisations d'application spécifiques aux ressources](#resource-specific-application-permissions) et [Autorisations déléguées spécifiques aux ressources](#resource-specific-delegated-permissions)|
+|`name`|chaîne|128 caractères|✔️|Nom de l’autorisation spécifique à la ressource. Pour plus d’informations, consultez [Autorisations d'application spécifiques aux ressources](#resource-specific-application-permissions) et [Autorisations déléguées spécifiques aux ressources](#resource-specific-delegated-permissions)|
 
 #### <a name="resource-specific-application-permissions"></a>Autorisations d’application spécifiques aux ressources
 

@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous trouverez la dernière version du schéma de manifeste public pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100167"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376570"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -29,7 +29,6 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -405,12 +404,6 @@ Assurez-vous que votre description décrive votre expérience et aide les client
 |`short`|80 caractères|✔️|Brève description de l’expérience de votre application, utilisée lorsque l’espace est limité.|
 |`full`|4 000 caractères|✔️|Description complète de votre application.|
 
-## <a name="packagename"></a>packageName
-
-**Facultatif**— chaîne
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
-
 ## <a name="localizationinfo"></a>localizationInfo
 
 **Facultatif**— objet
@@ -579,7 +572,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameters.title`|chaîne|32 caractères|✔️|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
-|`parameters.inputType`|string|128 caractères||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|chaîne|128 caractères||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour le `choiceset`. Utilisez uniquement lorsque `parameter.inputType` est `choiceset`.|
 |`parameters.choices.title`|string|128 caractères|✔️|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔️|Valeur du choix.|
@@ -682,7 +675,7 @@ Définissez les propriétés utilisées par votre application pour publier un fl
 |---|---|---|---|---|
 |`type`|string|32 caractères|✔️|Le type de notification. *Voir ci-dessous*.|
 |`description`|string|128 caractères|✔️|A brief description of the notification. *See below*.|
-|`templateText`|string|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
+|`templateText`|chaîne|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
 
 ```json
 {
@@ -910,7 +903,7 @@ Pour créer un fichier manifeste d’application Teams :
 <br>
 
 > [!NOTE]
-> L’exemple de contenu du manifeste présenté ici concerne uniquement une application d’onglet. Il utilise des exemples de valeurs pour l’URI de sous-domaine et le nom du package. Pour plus d’informations, consultez [exemple de schéma de manifeste](#sample-full-manifest).
+> L’exemple de contenu du manifeste présenté ici concerne uniquement une application d’onglet. Il utilise des exemples de valeurs pour l’URI de sous-domaine. Pour plus d’informations, consultez [exemple de schéma de manifeste](#sample-full-manifest).
 
   ```json
 { 
@@ -918,7 +911,6 @@ Pour créer un fichier manifeste d’application Teams :
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 

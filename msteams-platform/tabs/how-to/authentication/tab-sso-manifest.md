@@ -4,12 +4,12 @@ description: Mettez à jour le manifeste Teams pour activer l’authentification
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: bd5b7257a131a11e861b94221c533d8364b6bb54
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67587000"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376584"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Mettre à jour le manifeste d’application pour l’authentification unique et l’application en préversion
 
@@ -81,7 +81,6 @@ Pour plus d'informations, voir [webApplicationInfo .](../../../resources/schema/
   "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-  "packageName": "com.contoso.teamsauthsso",
   "developer": {
     "name": "Microsoft",
     "websiteUrl": "https://www.microsoft.com",
