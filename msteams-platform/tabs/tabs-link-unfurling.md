@@ -5,12 +5,12 @@ description: Découvrez l’affichage intermédiaire, un composant d’interface
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
+ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027290"
+ms.lasthandoff: 10/06/2022
+ms.locfileid: "68484919"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -90,7 +90,7 @@ Voici le processus d’appel de la vue d’étape :
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> Sur les clients mobiles Teams, l’appel de la vue intermédiaire pour les applications distribuées via le [magasin Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) et l’absence d’expérience optimisée pour les appareils mobiles ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l'URL spécifié dans le `websiteUrl`paramètre de `TabInfo`l'objet.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 
