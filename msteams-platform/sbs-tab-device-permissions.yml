@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: En savoir plus sur les autorisations d’appareil pour le navigateur
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 7ce86d763811fb80bbdb79517682f9972b51fd03
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 90f0562fc24a3d363a1435b16cff15ba73f42b3e
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243555"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490919"
 items:
 - durationInMinutes: 1
   content: >
@@ -33,15 +33,14 @@ items:
 
 
 
-    * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) avec un compte valide
-
-    * [Compte de développeur Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) ou accès au compte Teams avec les autorisations appropriées pour installer une application
-
-    * [Dernière version de Visual Studio](https://code.visualstudio.com/Download)
-
-    * [Dernière version de nodejs](https://nodejs.org/en/download/)
-
-    * [Dernière version de ngrok](https://ngrok.com/download) (uniquement pour le test de devbox) ou toute solution de tunneling équivalente
+    *| &nbsp; | Installer | Pour l’utilisation... |
+     | --- | --- | --- |
+     | **Obligatoire** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams pour collaborer avec toutes les personnes avec lesquelles vous travaillez par le biais d’applications pour la conversation, les réunions, les appels et le tout au même endroit.|
+     | &nbsp; | [Compte de développeur Microsoft 365](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Accès au compte Teams avec les autorisations appropriées pour installer une application. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Installez l’une des deux charges de travail suivantes :<br> • **développement ASP.NET et web** <br> • **Développement multiplateforme .NET Core** | Vous pouvez installer la version d’entreprise dans Visual Studio 2022 et installer les charges de travail. |
+     | &nbsp; | [Node.js et NPM](https://nodejs.org/) | Environnement runtime JavaScript principal. Utilisez la dernière version de LTS v16.|
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Les fonctionnalités de l’application Teams (bots conversationnels, extensions de message et webhooks entrants) nécessitent des connexions entrantes. Un tunnel connecte votre système de développement à Teams. Il n’est pas nécessaire pour les applications qui incluent uniquement des onglets. Ce package est installé dans le répertoire du projet (à l’aide de npm `devDependencies`). |
 
       > [!NOTE]
       > Après avoir téléchargé ngrok, inscrivez-vous et installez [authtoken](https://ngrok.com/download).
