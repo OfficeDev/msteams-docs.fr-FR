@@ -5,12 +5,12 @@ description: Découvrez comment activer la reconfiguration de votre onglet aprè
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450407"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499293"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
@@ -24,15 +24,15 @@ Votre `manifest.json` définit les fonctionnalités et fonctionnalités de votre
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. La valeur par défaut est `true`. |
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. La valeur par défaut est `true`. |
 
 Lorsque votre onglet est chargé dans un canal ou une conversation de groupe, Teams ajoute un menu déroulant contextuel de clic droit pour votre onglet. Les options disponibles sont déterminées par le paramètre `canUpdateConfiguration`. Le tableau suivant fournit les détails du paramètre :
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Paramètres            |   √    |       |La page `configurationUrl` est rechargée dans un IFrame permettant à l’utilisateur de reconfigurer l’onglet. |
+|     Paramètres            |   √    |       |La `configurationUrl` page est rechargée dans un iFrame, ce qui permet à l’utilisateur de reconfigurer l’onglet. |
 |     Renommer              |   √    |   √   | L’utilisateur peut modifier le nom de l’onglet tel qu’il apparaît dans la barre d’onglets.          |
-|     Supprimer              |   √    |   √   |  Si la propriété et la valeur `removeURL` sont incluses dans la **page de configuration**, la **page de suppression** est chargée dans un IFrame et présentée à l’utilisateur. Si aucune page de suppression n’est incluse, une boîte de dialogue confirmer s’affiche à l’utilisateur.          |
+|     Supprimer              |   √    |   √   |  Si la propriété et la  `removeURL` valeur sont incluses dans la **page de configuration**, la **page de suppression** est chargée dans un iFrame et présentée à l’utilisateur. Si aucune page de suppression n’est incluse, une boîte de dialogue confirmer s’affiche à l’utilisateur.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Créer une page de suppression d’onglet pour votre application
 
@@ -111,7 +111,7 @@ Voici un exemple de bloc de code de suppression d’onglet :
 
 ***
 
-Lorsqu’un utilisateur sélectionne **Supprimer** dans le menu déroulant de l’onglet, Teams charge la page de `removeUrl` facultative affectée dans votre **page de configuration**, dans un IFrame. L’utilisateur voit un bouton chargé avec la fonction `onClick()` qui appelle `pages.config.setValidityState(true)` et active le bouton **Supprimer** affiché en bas de l’IFrame de la page de suppression.
+Lorsqu’un utilisateur sélectionne **Supprimer** dans le menu déroulant de l’onglet, Teams charge la page facultative `removeUrl` affectée dans votre **page de configuration**, dans un iFrame. L’utilisateur voit un bouton chargé avec la `onClick()` fonction qui appelle `pages.config.setValidityState(true)` et active le bouton **Supprimer** affiché en bas de l’iFrame de la page de suppression.
 
 Une fois le gestionnaire de suppression exécuté, `removeEvent.notifySuccess()` ou `removeEvent.notifyFailure()` informe Teams du résultat de la suppression du contenu.
 

@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 8ed7d882ba7d58862539e77bfc8b6ea5277a3729
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781139"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499243"
 ---
 # <a name="create-a-new-teams-project"></a>Créer un projet Teams
 
@@ -182,7 +182,7 @@ Teams Toolkit fournit des modèles d’application Microsoft Teams dans Visual S
 * Bot de notification
 * Application d’extension de message
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 | &nbsp; | Installer | Pour l’utilisation... |
 | --- | --- | --- |
@@ -235,9 +235,9 @@ Les étapes de création d’une application Teams sont similaires pour tous les
    > [!NOTE]
    > Vous pouvez sélectionner le type d’application Teams requis pour votre projet.
 
-   La **Začínáme** avec la fenêtre **Bienvenue dans le Kit de ressources Teams** s’affiche.
+   La **Prise en main** avec la fenêtre **Bienvenue dans le Kit de ressources Teams** s’affiche.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Sélectionnez le kit de ressources teams Začínáme":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Sélectionnez le kit de ressources teams Prise en main":::
 
 ### <a name="directory-structure"></a>Structure de répertoires
 
@@ -245,11 +245,11 @@ Teams Toolkit fournit tous les composants pour la création d’une application.
 
 * **Structure d’annuaires pour l’application Teams de base**
 
-  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="Sélectionnez l’onglet Průzkumník řešení boîte à outils Teams":::
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="Sélectionnez l’onglet Explorateur de solutions boîte à outils Teams":::
 
 * **Structure d’annuaires pour l’application Teams basée sur un scénario**
 
-  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="Sélectionnez le kit de ressources teams Průzkumník řešení":::
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="Sélectionnez le kit de ressources Explorateur de solutions Teams":::
 
 ## <a name="teams-app-templates-in-teams-toolkit-for-visual-studio"></a>Modèles d’application Teams dans le Kit de ressources Teams pour Visual Studio
 
@@ -260,7 +260,7 @@ Vous pouvez voir les modèles d’application Teams déjà renseignés dans le K
 |Notification Bot     |L’application Bot de notification peut envoyer une notification à votre client Teams. Il existe plusieurs façons de déclencher la notification. Par exemple, déclenchez la notification par requête HTTP ou par heure. Vous pouvez également sélectionner une notification déclenchée en fonction de votre scénario métier.         |
 |Bot de commandes     |Les utilisateurs peuvent taper une commande pour interagir avec le bot à l’aide de l’application Command Bot.         |
 |Tab     |L’application Tab affiche une page web dans Teams et active l’authentification unique à l’aide d’un compte Teams.         |
-|Message Extension     |L’application d’extension de message implémente des fonctionnalités simples telles que la création d’une carte adaptative, la recherche de packages De la pépite, le déploiement de liens pour le domaine « dev.botframework.com ».         |
+|Message Extension     |L’application d’extension de message implémente des fonctionnalités simples telles que la création d’une carte adaptative, la recherche de packages De pépites, le déploiement de liens pour le domaine « dev.botframework.com ».         |
 
 > [!NOTE]
 > Une fois le projet créé, le Kit de ressources Teams ouvre automatiquement la fenêtre **Prise en main** . Vous pouvez maintenant voir les instructions de la fenêtre **Prise en main** et découvrir les différentes fonctionnalités du Kit de ressources Teams.

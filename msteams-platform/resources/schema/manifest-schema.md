@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous trouverez la dernière version du schéma de manifeste public pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 2638c668bf1363a0f997786bcb958689626c70c6
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376570"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499173"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Schéma du manifeste d’application pour Teams
 
@@ -499,7 +499,7 @@ L’élément est un tableau (maximum d’un seul élément &mdash; actuellement
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Une liste de commandes que votre robot peut recommander aux utilisateurs. L’objet est un tableau (maximum de deux éléments) avec tous les éléments de type `object` ; vous devez définir une liste de commandes distincte pour chaque étendue que votre bot prend en charge. Pour plus d’informations, voir [Menus bot.](~/bots/how-to/create-a-bot-commands-menu.md)
+Une liste de commandes que votre robot peut recommander aux utilisateurs. L’objet est un tableau (maximum de deux éléments) avec tous les éléments de type `object` ; vous devez définir une liste de commandes distincte pour chaque étendue que votre bot prend en charge. Pour plus d’informations, consultez [Menus bot](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -643,9 +643,9 @@ Spécifiez la configuration du connecteur Graph de l’application. Si ce param�
 
 **Facultatif**— booléen
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
+Indique si l’indicateur de chargement s’affiche ou non lorsqu’une application ou un onglet est en cours de chargement. La valeur par défaut est **False**.
 >[!NOTE]
->Si vous sélectionnez`showLoadingIndicator` comme true dans le manifeste de votre application, pour charger correctement la page, modifiez les pages de contenu de vos onglets et modules de tâches, comme décrit dans le document [Afficher un indicateur de chargement natif](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+>Si vous sélectionnez `showLoadingIndicator` true dans le manifeste de votre application, pour charger correctement la page, modifiez les pages de contenu de vos onglets et modules de tâches, comme décrit dans [Afficher un document d’indicateur de chargement natif](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) .
 
 ## <a name="isfullscreen"></a>IsFullScreen
 
@@ -675,7 +675,7 @@ Définissez les propriétés utilisées par votre application pour publier un fl
 |---|---|---|---|---|
 |`type`|string|32 caractères|✔️|Le type de notification. *Voir ci-dessous*.|
 |`description`|string|128 caractères|✔️|A brief description of the notification. *See below*.|
-|`templateText`|chaîne|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
+|`templateText`|string|128 caractères|✔️|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
 
 ```json
 {

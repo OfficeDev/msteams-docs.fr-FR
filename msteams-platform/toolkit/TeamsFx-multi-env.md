@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 20bdb351eeff9a11d9460cf8206cfdc7dcbea0ff
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780995"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499299"
 ---
 # <a name="manage-multiple-environments"></a>Gérer plusieurs environnements
 
@@ -156,7 +156,7 @@ Vous pouvez définir différentes descriptions d’application Teams pour les di
 4. Ouvrez le fichier `.fx/configs/config.staging.json`de configuration.
 5. Ajoutez la même propriété à `my app description for staging`.
 6. Ouvrez le modèle `templates/appPackage/manifest.template.json`de manifeste d’application Teams.
-7. Mettez à jour la propriété **`description`** > **`short`** pour utiliser la **variable** définie dans configurer les fichiers avec la syntaxe **`{{config.manifest.description.short}}`** de la moustache.
+7. Mettez à jour la propriété **`description`** > **`short`** pour utiliser la **variable** définie dans configurer des fichiers avec une syntaxe **`{{config.manifest.description.short}}`** d’accolades.
   
   Les mises à jour sont les `manifest.template.json` suivantes :
 

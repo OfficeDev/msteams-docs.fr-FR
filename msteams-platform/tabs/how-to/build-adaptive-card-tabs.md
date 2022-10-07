@@ -5,12 +5,12 @@ description: Apprenez à créer des onglets à l’aide de cartes adaptatives o�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376626"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499285"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -25,7 +25,7 @@ Lorsque vous développez un onglet en utilisant la méthode traditionnelle, vous
 * Contraintes iFrame
 * Maintenance et coûts des serveurs
 
-Les onglets de carte adaptative sont une nouvelle façon de construire des onglets dans Teams. Au lieu d'intégrer du contenu web dans une IFrame, vous pouvez rendre les cartes adaptatives dans un onglet. Alors que la partie frontale est rendue avec des cartes adaptatives, la partie arrière est alimentée par un robot. Le robot est chargé d'accepter les demandes et de répondre de manière appropriée avec la carte adaptative qui est rendue.
+Les onglets de carte adaptative sont une nouvelle façon de construire des onglets dans Teams. Au lieu d’incorporer du contenu web dans un iFrame, vous pouvez afficher des cartes adaptatives dans un onglet. Tandis que le serveur frontal est rendu avec des cartes adaptatives, le back-end est alimenté par un bot. Le robot est chargé d'accepter les demandes et de répondre de manière appropriée avec la carte adaptative qui est rendue.
 
 Vous pouvez créer vos onglets à l'aide de modules d'interface utilisateur prêts à l'emploi, natifs des ordinateurs de bureau, du web et des téléphones mobiles. Cet article vous aide à comprendre les modifications à apporter au manifeste de l'application. L'article explique également comment l'activité d'invocation demande et envoie des informations dans l'onglet des cartes adaptatives, et son effet sur le flux de travail du module de tâches.
 

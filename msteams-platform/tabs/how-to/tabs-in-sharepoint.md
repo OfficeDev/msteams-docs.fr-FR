@@ -5,12 +5,12 @@ description: Découvrez comment déployer votre onglet Teams existant sur ShareP
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 076cf027e2696848319fc0beb7ae69c3633b8dc4
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189472"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499194"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Ajouter l'onglet Teams à SharePoint
 
@@ -124,7 +124,7 @@ L’image suivante affiche l’écran correspondant :
 1. Sélectionnez le bouton **Publier** une fois la modification terminée.
 
 1. Sélectionnez **Ajouter une page à la navigation** pour avoir une référence rapide à votre page dans la barre de navigation de gauche.
-L’image suivante affiche l’onglet dans Sharepoint :
+L’image suivante affiche l’onglet dans SharePoint :
 
    ![Onglet dans l’image Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 

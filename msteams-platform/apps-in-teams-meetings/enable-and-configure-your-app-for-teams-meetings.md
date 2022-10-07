@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295976"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499201"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -42,6 +42,7 @@ Les fonctionnalités de l’application de réunions sont déclarées dans le ma
 > * Les applications dans les réunions nécessitent ou `team` s’appliquent `groupchat` à l’étendue. L’étendue `team` fonctionne pour les onglets dans les canaux ou les réunions de canal.
 > * Pour prendre en charge l’ajout d’onglets dans des réunions de canal planifiées, spécifiez l’étendue de **l’équipe** dans **la section Étendues** dans le manifeste de votre application. Sans étendue **d’équipe** , l’application n’apparaîtrait pas dans le menu volant pour les réunions de canal.
 > * Les applications dans les réunions peuvent utiliser les contextes suivants : `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` et `meetingStage`.
+> * Les autorisations `MeetingStage.Write.Chat` RSC déléguées et `ChannelMeetingStage.Write.Group` sont requises dans le manifeste pour activer le partage de la phase de réunion.
 
 L’extrait de code suivant est un exemple d’onglet configurable utilisé dans une application pour les réunions Teams :
 

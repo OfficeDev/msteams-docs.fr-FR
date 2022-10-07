@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 29ba0fff62678a18222f0229701546515b7d4c38
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806856"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499187"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Ajouter des fonctionnalités aux applications Teams
 
@@ -75,7 +75,7 @@ Vous pouvez ajouter des fonctionnalités en suivant les méthodes suivantes :
   |-----------------------|----------|
   |Pour ajouter un bot de notification |`teamsfx add notification`|
   |Pour ajouter un bot de commandes |`teamsfx add command-and-response`|
-  |Pour ajouter l’onglet sso-enabled |`teamsfx add sso-tab`|
+  |Pour ajouter l’onglet SSO |`teamsfx add sso-tab`|
   |Pour ajouter un onglet |`teamsfx add tab`|
   |Pour ajouter un bot |`teamsfx add bot`|
   |Pour ajouter l’extension de message |`teamsfx add message extension`|
@@ -89,7 +89,7 @@ Le tableau suivant présente les modifications qui peuvent être vues dans les f
 |Bot, extension de message et onglet|Inclut un bot **Hello World**&nbsp;ou un modèle d’application d’onglet dans votre projet.|Un bot frontal ou un code de modèle d’onglet est ajouté dans un sous-dossier avec le chemin d’accès `yourProjectFolder/bot` ou `yourProjectFolder/tab` respectivement.|
 | Bot, extension de message et onglet |Inclut les scripts nécessaires pour Visual Studio Code et est exécuté lorsque vous souhaitez déboguer votre application localement. |Les fichiers `launch.json` et `task.json` sous `.vscode` le dossier sont mis à jour.|
 | Bot et extension de message|Inclut des informations relatives au bot ou aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams.|Le fichier`manifest.template.json` sous `templates/appPackage` le dossier est mis à jour, ce qui inclut les informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont visibles dans l’ID de votre bot, les étendues de votre bot et les commandes auxquelles hello world bot ou tab application peut répondre.|
-|Tab|Inclut des informations relatives au bot ou aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams.|Le fichier`manifest.template.json` sous `templates/appPackage` le dossier est mis à jour, ce qui inclut les informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont visibles dans les onglets configurables et statiques, ainsi que dans les étendues des onglets.|
+|Tab|Inclut des informations relatives au bot ou aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams.|Le fichier `manifest.template.json` sous `templates/appPackage` le dossier est mis à jour, ce qui inclut les informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams. Les modifications sont visibles dans les onglets configurables et statiques, ainsi que dans les étendues des onglets.|
 |Bot, extension de message et onglet|Inclut des informations relatives aux bots ou aux&nbsp;onglets dans teamsfx et fournit des fichiers destinés à l’intégration de fonctions Azure.|Les fichiers sous `templates/azure/teamsfx` sont mis à jour et `templates/azure/provision/xxx`les fichiers .bicep sont régénérés.|
 |Bot, extension de message et onglet|Garantit que votre projet est configuré avec les configurations appropriées pour la fonctionnalité nouvellement ajoutée.|Les fichiers sous `.fx/config` sont régénérés|
 

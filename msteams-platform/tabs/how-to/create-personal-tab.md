@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329090"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499209"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -193,13 +193,13 @@ Créez une page de contenu et mettez à jour les fichiers existants de l’appli
 
 1. Enregistrez le fichier `manifest.json` mis à jour.
 
-1. Ouvrez **Tab.ts** dans votre Visual Studio Code à partir du chemin suivant pour fournir votre page de contenu dans un IFrame :
+1. Ouvrez **Tab.ts** dans votre Visual Studio Code à partir du chemin d’accès suivant pour fournir votre page de contenu dans un iFrame :
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. Ajoutez ce qui suit à la liste des éléments décoratifs IFrame :
+1. Ajoutez ce qui suit à la liste des décorateurs iFrame :
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -485,7 +485,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * **Icône de contour transparent** mesurant 32 x 32 pixels.
 * Un fichier `manifest.json` qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Teams charge le `contentUrl` spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Teams charge le `contentUrl` fichier spécifié dans votre manifeste, l’incorpore dans un iFrame et le restitue dans votre onglet.
 
 #### <a name="csproj"></a>.csproj
 

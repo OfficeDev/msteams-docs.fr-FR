@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 3b125d6f2f1029191debc547b3cc49b30cd47089
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027059"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499159"
 ---
 # <a name="debug-your-teams-app"></a>Déboguer votre Teams application
 
@@ -218,7 +218,7 @@ Teams Toolkit automatise les services de démarrage d’application, lance le d�
 * Recharge à chaud
 * Arrêter le débogage
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 | &nbsp; | Installer | Pour l’utilisation... |
 | --- | --- | --- |

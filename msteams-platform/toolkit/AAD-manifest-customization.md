@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 0df9cc75b6a9775f9369b6a3bf8b95c35941207b
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616652"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499320"
 ---
 # <a name="edit-azure-ad-manifest"></a>Modifier le manifeste Azure AD
 
@@ -278,7 +278,7 @@ Vous devez interagir avec l’application Azure AD pendant différentes étapes 
 
     * Ignore initialement certaines propriétés du fichier manifeste qui nécessitent davantage de contexte (par exemple, la propriété replyUrls qui nécessite un point de terminaison de débogage local) lors de la création d’une application Azure AD avec le fichier manifeste.
 
-    * Une fois le démarrage de l’environnement de développement local réussi, les identificateurs, les replyUrls et d’autres propriétés de l’application Azure AD qui ne sont pas disponibles lors de l’étape de création sont mis à jour en conséquence.
+    * Une fois l’environnement de développement local démarré avec succès, les identificateurs, les replyUrls et d’autres propriétés de l’application Azure AD qui ne sont pas disponibles lors de l’étape de création sont mis à jour en conséquence.
 
     * Les modifications que vous avez apportées à votre application Azure AD sont chargées lors de la prochaine session de débogage locale. Vous pouvez voir [les modifications apportées à l’application Azure AD](https://github.com/OfficeDev/TeamsFx/wiki/) pour appliquer manuellement les modifications apportées à l’application Azure AD.
 
@@ -309,9 +309,9 @@ Vous devez interagir avec l’application Azure AD pendant différentes étapes 
       |**Propriétés non prises en charge**|**Raison**|
       |-----------|----------|
       |passwordCredentials|Non autorisé dans le manifeste|
-      |createdDateTime|Lecture seule et ne peut pas changer|
-      |logoUrl|Lecture seule et ne peut pas changer|
-      |publisherDomain|Lecture seule et ne peut pas changer|
+      |createdDateTime|En lecture seule et ne peut pas changer|
+      |logoUrl|En lecture seule et ne peut pas changer|
+      |publisherDomain|En lecture seule et ne peut pas changer|
       |oauth2RequirePostResponse|N’existe pas dans API Graph|
       |oauth2AllowUrlPathMatching|N’existe pas dans API Graph|
       |samlMetadataUrl|N’existe pas dans API Graph|

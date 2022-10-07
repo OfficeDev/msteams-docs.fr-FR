@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: e28e726a1915cdbc8fddf501b0352d160673516c
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327586"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499166"
 ---
 # <a name="teamsfx-sdk"></a>Kit de développement logiciel (SDK) TeamsFx
 
@@ -179,6 +179,7 @@ Si vous avez créé une fonction Azure ou un projet de bot à l’aide de Visual
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
+
 * sqlServerEndpoint (SQL_ENDPOINT) // utilisé uniquement lorsqu’il existe une instance sql
 * sqlUsername (SQL_USER_NAME) // utilisé uniquement en cas d’instance sql
 * sqlPassword (SQL_PASSWORD) // utilisé uniquement lorsqu’il existe une instance sql
@@ -254,9 +255,9 @@ Cette section fournit plusieurs extraits de code pour les scénarios courants li
     <details>
     <summary><b>Intégration à Microsoft Graph Toolkit</b></summary>
 
-    La bibliothèque [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) est une collection de différents fournisseurs d’authentification et composants d’interface utilisateur optimisés par Microsoft Graph.
+    La bibliothèque [Microsoft Graph Toolkit](https://aka.ms/mgt) est une collection de différents fournisseurs d’authentification et composants d’interface utilisateur optimisés par Microsoft Graph.
 
-    Le `@microsoft/mgt-teamsfx-provider` package expose la classe qui utilise la `TeamsFxProvider` classe pour connecter des `TeamsFx` utilisateurs et acquérir des jetons à utiliser avec Graph.
+    Le `@microsoft/mgt-teamsfx-provider` package expose la classe qui utilise la `TeamsFxProvider` classe pour connecter des utilisateurs `TeamsFx` et acquérir des jetons à utiliser avec Microsoft Graph.
 
     1. Vous pouvez installer les packages requis suivants :
 
