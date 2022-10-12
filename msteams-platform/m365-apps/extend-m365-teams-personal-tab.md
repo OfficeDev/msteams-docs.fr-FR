@@ -1,16 +1,16 @@
 ---
 title: Étendre une application onglet personnel Teams sur Microsoft 365
-description: Mettez à jour votre application personnelle pour qu’elle s’exécute dans Outlook et Office. Mettez à jour le manifeste et le Kit de développement logiciel (SDK) TeamsJS V2, modifiez la sécurité du consentement, mettez à jour l’inscription d’application Azure AD pour l’authentification unique.
-ms.date: 05/24/2022
+description: Découvrez comment mettre à jour votre application onglet personnelle pour qu’elle s’exécute dans Outlook et Office, en plus de Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243506"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537590"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -35,6 +35,7 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 * Un locataire de bac à sable du programme Microsoft 365 Developer
 * Votre locataire de bac à sable inscrit dans *Office 365 versions ciblées*
 * Un ordinateur avec des applications Office installées à partir du *canal bêta* Microsoft 365 Apps
+* (Facultatif) Un appareil Android ou un émulateur avec l’application Office pour Android installé et inscrit au *programme bêta*
 * (Facultatif) [Teams Shared Computer Toolkit](https://aka.ms/teams-toolkit) extension pour Microsoft Visual Studio Code afin de vous aider à mettre à jour votre code
 
 > [!div class="nextstepaction"]
@@ -46,7 +47,7 @@ Si vous disposez d’une application onglet personnelle existante, effectuez une
 
 Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de [l’exemple de liste Todo](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application onglet personnel à l’aide de l’extension Teams Toolkit pour Visual Studio Code, puis revenez à cet article pour la mettre à jour pour Microsoft 365.
 
-Vous pouvez également utiliser une application *Hello World* de base pour l’authentification unique déjà activée pour Microsoft 365 dans la section de démarrage rapide suivante, puis passer au [chargement indépendant de votre application dans Teams](#sideload-your-app-in-teams) .
+Vous pouvez également utiliser une application *hello world* de base pour l’authentification unique déjà activée pour Microsoft 365 dans la section de [démarrage rapide](#quickstart) suivante, puis passer au [chargement indépendant de votre application dans Teams](#sideload-your-app-in-teams) .
 
 ### <a name="quickstart"></a>Démarrage rapide
 
@@ -93,7 +94,7 @@ Si vous avez utilisé Teams Toolkit pour créer votre application personnelle, v
 
 Pour s’exécuter dans Outlook et Office, votre application doit référencer le package `@microsoft/teams-js@2.0.0` npm (ou version ultérieure). Bien que le code avec des versions de niveau inférieur soit pris en charge dans Outlook et Office, les avertissements de dépréciation sont enregistrés et la prise en charge des versions de niveau inférieur de TeamsJS dans Outlook et Office cessera éventuellement.
 
-Vous pouvez utiliser le Kit de ressources Teams pour identifier et automatiser les modifications de code nécessaires à la mise à niveau de versions 1.x TeamsJS vers TeamsJS version 2.0.0. Vous pouvez également effectuer les mêmes étapes manuellement ; Pour plus d’informations, [reportez-vous au Kit de développement logiciel (SDK) client JavaScript de Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) .
+Vous pouvez utiliser le Kit de ressources Teams pour identifier et automatiser les modifications de code nécessaires pour effectuer une mise à niveau de versions 1.x TeamsJS vers TeamsJS version 2.x.x. Vous pouvez également effectuer les mêmes étapes manuellement ; Pour plus d’informations, [reportez-vous au Kit de développement logiciel (SDK) client JavaScript de Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) .
 
 1. Ouvrez la *palette de commandes* : `Ctrl+Shift+P`.
 1. Exécutez la commande `Teams: Upgrade Teams JS SDK and code references`.
@@ -102,8 +103,8 @@ Une fois l’opération terminée, votre fichier *package.json* fait référence
 
 > [!div class="checklist"]
 >
-> * Importer des instructions pour teams-js@2.0.0
-> * [Appels de fonction, d’énumération et d’interface](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) pour teams-js@2.0.0
+> * Importer des instructions pour teams-js@2.x.x
+> * [Appels de fonction, d’énumération et d’interface](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) pour teams-js@2.x.x
 > * `TODO`rappels de commentaires signalant les zones susceptibles d’être affectées par les modifications apportées à l’interface [de contexte](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface)
 > * `TODO` rappels de commentaire pour [convertir des fonctions de rappel en promesses](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
@@ -215,7 +216,7 @@ Pour afficher un aperçu de l’exécution de votre application dans Office sur 
 
 1. **Connectez-vous à office.com** avec les informations d’identification du locataire de test.
 1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
-1. Sélectionnez l’icône de votre application pour lancer votre application dans Office لەسەر وێب.
+1. Sélectionnez l’icône de votre application pour lancer votre application dans Office sur le Web.
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
 
@@ -240,7 +241,7 @@ Reportez-vous à la [prise en charge de Microsoft 365](../tabs/how-to/using-team
 
 Pour obtenir un résumé global de la prise en charge de l’hôte et de la plateforme Microsoft 365 pour les applications Teams, consultez [Étendre les applications Teams dans Microsoft 365](overview.md).
 
-Vous pouvez vérifier la prise en charge par l’hôte d’une fonctionnalité donnée au moment de l’exécution en appelant la `isSupported()` fonction sur cette fonctionnalité (espace de noms) et en ajustant le comportement de l’application selon les besoins. Cela permet à votre application d’activer l’interface utilisateur et les fonctionnalités des hôtes qui la prennent en charge, et de fournir une expérience de secours appropriée dans les hôtes qui ne le prennent pas en charge. Pour plus d’informations, consultez [Différencier votre expérience d’application](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+Vous pouvez vérifier la prise en charge par l’hôte d’une fonctionnalité donnée au moment de l’exécution en appelant la `isSupported()` fonction sur cette fonctionnalité (espace de noms) et en ajustant le comportement de l’application selon les besoins. Cela permet à votre application d’activer l’interface utilisateur et les fonctionnalités des hôtes qui la prennent en charge et de fournir une expérience de secours appropriée dans les hôtes qui ne le prennent pas en charge. Pour plus d’informations, consultez [Différencier votre expérience d’application](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
 Utilisez les [canaux de la communauté des développeurs Microsoft Teams](/microsoftteams/platform/feedback) pour signaler les problèmes et fournir des commentaires.
 

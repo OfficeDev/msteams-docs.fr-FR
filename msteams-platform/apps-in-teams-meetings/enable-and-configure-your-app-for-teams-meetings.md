@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: b551513d61e7bb9ab2b9c118f756b3ce5232dde4
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499201"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537583"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Activer et configurer les applications pour les meetings
 
@@ -178,7 +178,7 @@ Vous pouvez également ajouter l’image d’affichage Teams et la carte de cont
 
 La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel. Vous pouvez partager vos applications à l’étape de la réunion collaborative des manières suivantes :
 
-* [Partagez l’intégralité de l’application pour effectuer une mise en scène](#share-entire-app-to-stage) à l’aide du bouton Partager pour mettre en scène dans client Teams.
+* [Partagez l’intégralité de l’application pour effectuer une étape à](#share-entire-app-to-stage) l’aide du bouton Partager pour mettre en scène dans le panneau côté réunion du client Teams ou via [[liens profonds](#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 * [Partagez des parties spécifiques de l’application pour effectuer des étapes à](#share-specific-parts-of-the-app-to-stage) l’aide d’API dans le SDK client Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Partager l’intégralité de l’application en plusieurs étapes
@@ -223,6 +223,82 @@ Pour partager des parties spécifiques de l'application sur scène, vous devez i
 ### <a name="after-a-meeting"></a>Après une réunion
 
 Les configurations d’après et [d’avant les réunions sont les mêmes](#before-a-meeting) .
+
+## <a name="generate-a-deep-link-to-share-content-to-stage-in-meetings"></a>Générer un lien profond pour partager du contenu à mettre en scène dans les réunions
+
+Vous pouvez également générer un lien profond pour [partager l’application afin de](#share-entire-app-to-stage) mettre en scène et de démarrer ou de participer à une réunion.
+
+> [!NOTE]
+>
+> * Actuellement, le lien profond vers le partage de contenu pour effectuer des étapes dans les réunions fait l’objet d’améliorations de l’expérience utilisateur et n’est disponible qu’en [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> * Le lien profond permettant de partager du contenu vers une phase de réunion est pris en charge uniquement dans le client de bureau Teams.
+
+Lorsqu’un lien profond est sélectionné dans une application par un utilisateur qui fait partie d’une réunion en cours, l’application est partagée à l’étape et une fenêtre contextuelle d’autorisation s’affiche. Les utilisateurs peuvent accorder l’accès aux participants pour collaborer avec une application.
+
+:::image type="content" source="../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="La capture d’écran est un exemple montrant une fenêtre contextuelle d’autorisation.":::
+
+Lorsqu’un utilisateur ne participe pas à une réunion, il est redirigé vers le calendrier Teams où il peut participer à une réunion ou lancer une réunion instantanée (Réunion maintenant).
+
+:::image type="content" source="../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="La capture d’écran est un exemple montrant une fenêtre contextuelle lorsqu’il n’y a pas de réunion en cours.":::
+
+Une fois que l’utilisateur a lancé une réunion instantanée (Réunion maintenant), il peut ajouter des participants et interagir avec l’application.
+
+:::image type="content" source="../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="La capture d’écran est un exemple qui montre une option pour ajouter des participants et comment interagir avec l’application.":::
+
+Pour ajouter un lien profond pour partager du contenu sur scène, vous devez disposer d’un contexte d’application. Le contexte d’application permet au client Teams d’extraire le manifeste de l’application et de vérifier si le partage sur scène est possible. Voici un exemple de contexte d’application.
+
+`{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+
+Les paramètres de requête pour le contexte d’application sont les suivants :
+
+* `appID`: il s’agit de l’ID qui peut être obtenu à partir du manifeste de l’application.
+* `appSharingUrl`: l’URL qui doit être partagée sur scène doit être un domaine valide défini dans le manifeste de l’application. Si l’URL n’est pas un domaine valide, une boîte de dialogue d’erreur s’affiche pour fournir à l’utilisateur une description de l’erreur.
+* `useMeetNow`: cela inclut un paramètre booléen qui peut être vrai ou faux.
+  * **True** : lorsque la `UseMeetNow` valeur est true et s’il n’y a pas de réunion en cours, une nouvelle réunion De réunion maintenant est lancée. Quand une réunion est en cours, cette valeur est ignorée.
+
+  * **False** : la valeur `UseMeetNow` par défaut est false, ce qui signifie que lorsqu’un lien profond est partagé vers une phase et qu’il n’y a pas de réunion en cours, une fenêtre contextuelle de calendrier s’affiche. Toutefois, vous pouvez partager directement pendant une réunion.
+
+Vérifiez que tous les paramètres de requête sont correctement encodés en URI et que le contexte de l’application doit être encodé deux fois dans l’URL finale. Voici un exemple :
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+Un lien profond peut être lancé à partir du web Teams ou du client de bureau Teams.
+
+* **Web Teams** : utilisez le format suivant pour lancer un lien profond à partir du site web Teams pour partager du contenu sur scène.
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    Exemple : `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Lien profond|Format|Exemple|
+    |---------|---------|---------|
+    |Pour partager l’application et ouvrir le calendrier Teams, lorsque UseMeeetNow a la **valeur false**, par défaut.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |Pour partager l’application et lancer une réunion instantanée, lorsque UseMeeetNow a **la valeur true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **Client de bureau d’équipe** : utilisez le format suivant pour lancer un lien profond à partir du client de bureau Teams pour partager du contenu sur scène.
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    Exemple : `msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Lien profond|Format|Exemple|
+    |---------|---------|---------|
+    |Pour partager l’application et ouvrir le calendrier Teams, lorsque UseMeeetNow a la **valeur false**, par défaut.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |Pour partager l’application et lancer une réunion instantanée, lorsque UseMeeetNow a **la valeur true**.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+Les paramètres de requête sont les suivants :
+
+* `deepLinkId`: tout identificateur utilisé pour la corrélation de télémétrie.
+* `fqdn`: `fqdn` est un paramètre facultatif, qui peut être utilisé pour basculer vers un environnement approprié d’une réunion pour partager une application sur scène. Il prend en charge les scénarios dans lesquels un partage d’application spécifique se produit dans un environnement particulier. La valeur par défaut est l’URL d’entreprise `fqdn` et les valeurs possibles sont `Teams.live.com` pour Teams for Life, `teams.microsoft.com`ou `teams.microsoft.us`.
+
+Pour partager l’intégralité de l’application à l’étape, dans le manifeste de l’application, vous devez configurer `meetingStage` et `meetingSidePanel` , en tant que contextes d’image, voir [le manifeste de l’application](../resources/schema/manifest-schema.md). Dans le cas contraire, les participants à la réunion peuvent ne pas être en mesure de voir le contenu sur scène.
+
+> [!NOTE]
+> Pour que votre application réussisse la validation, lorsque vous créez un lien profond à partir de votre site web, de votre application web ou de votre carte adaptative, utilisez **Share in meeting** comme chaîne ou copie.
 
 ## <a name="code-sample"></a>Exemple de code
 

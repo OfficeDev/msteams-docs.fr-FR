@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités et mises à jour des dév
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295969"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537576"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -284,15 +284,16 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont en pr�
 
 L'aperçu pour développeurs est un programme public qui fournit un accès anticipé à des fonctionnalités inédites de la plate-forme Teams.
 
-**Septembre 2022**
+**Octobre 2022**
 
-***23 septembre 2022*** : Présentation de la [prise en charge des applications de réunion pour les réunions de canal planifiées.](apps-in-teams-meetings/meeting-app-extensibility.md)
+***11 octobre 2022*** : [Générer un lien profond pour partager du contenu dans les réunions.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+| 09/23/2022 | Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées. | Créer des applications pour les réunions et les appels Teams > [applications de réunions unifiées](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/23/2022 | Partager des applications vers la phase de réunion Teams dans le mobile | Créer des applications pour les réunions et les appels Teams > [activer et configurer des applications pour les réunions](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Applications pour les réunions de canal public planifiées | Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Désactiver et activer le son des API pour les applications dans l’étape de réunion Teams | Créer des applications pour les réunions et les appels Teams > [références d’API Applications de réunion](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |

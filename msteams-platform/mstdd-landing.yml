@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 3ed46761977bf31a9eb717d3533ed0c4f6e49646
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: ac74ac9f38e4c9e015cba3039e44ff92b4af92dd
+  ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243184"
+  ms.lasthandoff: 10/12/2022
+  ms.locfileid: "68537513"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
+    - text: Générez un lien profond pour partager du contenu à mettre en scène dans les réunions.
+      url: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
     - text: Gérer les licences SaaS pour les applications tierces dans Teams
       url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
     - text: Mettre à jour l’ID d’équipe Apple App Store Connect sur Espace partenaires
@@ -45,8 +47,6 @@ landingContent:
       url: apps-in-teams-meetings/teams-live-share-overview.md
     - text: Mettre à jour les événements de conversation et d’installation dans votre bot Teams [préversion développeur]
       url: bots/how-to/conversations/subscribe-to-conversation-events.md
-    - text: Envoyer vos applications Outlook et Office dans le store Teams
-      url: m365-apps/overview.md
 - title: Prise en main
   linkLists:
   - linkListType: get-started

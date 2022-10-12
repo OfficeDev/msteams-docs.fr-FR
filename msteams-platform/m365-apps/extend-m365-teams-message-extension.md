@@ -1,16 +1,16 @@
 ---
 title: Étendre une extension de message Teams dans Microsoft 365
-description: Dans cet article, vous découvrirez comment mettre à jour l’extension de message Teams basée sur la recherche pour qu’elle s’exécute dans Outlook en mettant à jour le manifeste de l’application, en ajoutant un canal Outlook et en chargeant l’application mise à jour.
-ms.date: 05/24/2022
+description: Découvrez comment mettre à jour votre extension de message basée sur la recherche pour qu’elle s’exécute dans Outlook, en plus de Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: a0de61f0d1b6414d4ab35b54e4ec708f3b868948
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243513"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537506"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Étendre une extension de message Teams dans Microsoft 365
 
@@ -36,7 +36,11 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 * (Facultatif) Microsoft Visual Studio Code avec l’extension du Kit de ressources Teams.
 
 > [!div class="nextstepaction"]
-> [Publier des applications Teams étendues pour Microsoft 365](publish.md)
+> [Installer les composants prérequis](prerequisites.md)
+
+## <a name="link-unfurling"></a>Déploiement de lien
+
+Si votre extension de message basée sur la recherche prend en charge le [déploiement de liens](../messaging-extensions/how-to/link-unfurling.md) dans Teams, suivre les étapes de ce didacticiel permet également le déploiement de liens dans Outlook sur le web et les environnements de bureau Windows. La section [Exemples de code ci-dessous](#code-sample) fournit une application de déploiement de lien simple à des fins de test.
 
 ## <a name="prepare-your-message-extension-for-the-upgrade"></a>Préparer votre extension de message pour la mise à niveau
 
@@ -115,7 +119,7 @@ Pour que les utilisateurs interagissent avec votre extension de message à parti
 > [!NOTE]
 > Vous pouvez ignorer l’étape si vous utilisez [l’exemple d’application](#quickstart) fourni dans ce tutoriel, car le scénario n’implique pas l’authentification unique Azure Active Directory (AAD).
 
-Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+L’authentification unique (SSO) Azure Active Directory (AD) pour les extensions de message fonctionne de la même façon dans Outlook [que dans Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre bot dans le portail *inscriptions d'applications* de votre locataire.
 
 1. Connectez-vous à [Portail Azure](https://portal.azure.com) avec votre compte de locataire de bac à sable.
 1. Ouvrez **inscriptions d'applications**.
@@ -186,7 +190,7 @@ Votre extension de message est répertoriée, elle ouvre un volet adjacent pour 
  Bien que votre extension de message mise à jour continuera à fonctionner dans Teams avec une [prise en charge complète des extensions de message](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), il y a des limitations dans cette première version de l'expérience Outlook à prendre en compte :
 
 * Les extensions de message dans Outlook sont limitées au contexte [*de composition* du courrier](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Même si votre extension de message Teams inclut `commandBox` en tant que *contexte* dans son manifeste, l'aperçu actuel est limité à l'option de composition du courrier (`compose`). L’appel d’une extension de message à partir de la zone *de recherche* Outlook globale n’est pas pris en charge.
-* [La commande d’extension de message basée sur des actions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) n’est pas prise en charge dans Outlook. Si votre application a des commandes basées sur la recherche et l’action, elle apparaîtra dans Outlook, mais le menu d’action ne sera pas disponible.
+* [La commande d’extension de message basée sur des actions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) n’est pas prise en charge dans Outlook. Si votre application a des commandes basées sur la recherche et l’action, elle apparaît dans Outlook, mais le menu d’action n’est pas disponible.
 * L’insertion de plus de cinq [Cartes adaptatives](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) dans un e-mail n’est pas prise en charge ; les cartes adaptatives v1.4 et versions ultérieures ne sont pas prises en charge.
 * [Les actions de carte](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) de type `messageBack`, `imBack`, `invoke` et `signin` ne sont pas prises en charge pour les cartes insérées. La prise en charge est limitée à `openURL` : en un clic, l’utilisateur est redirigé vers l’URL spécifiée dans un nouvel onglet.
 
@@ -201,6 +205,7 @@ Lorsque vous testez votre extension de message, vous pouvez identifier la source
 | **Exemple de nom** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | Connecteur de recherche NPM | Utilisez le Kit de ressources Teams pour créer une application d’extension de message. Fonctionne dans Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Déploiement de liens Teams | Application Teams simple pour illustrer le déploiement de liens. Fonctionne dans Teams, Outlook. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## <a name="next-step"></a>Étape suivante
 
