@@ -1,16 +1,16 @@
 ---
 title: Mettre à jour l’ID d’équipe Apple Store Connect sur l’Espace partenaires
-description: Découvrez comment mettre à jour votre ID d’équipe Apple App Store Connect dans l’Espace partenaires Microsoft pour permettre aux utilisateurs finaux d’installer votre application sur la plateforme iOS Teams.
+description: Mettez à jour votre ID d’équipe Apple App Store Connect dans l’Espace partenaires Microsoft pour permettre aux utilisateurs finaux de rechercher et d’acquérir votre application sur la plateforme Teams iOS.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: v-ypalikila
-ms.openlocfilehash: faccd01e8dde76f61c007ffe772d79995d3a7ffd
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: a936e2c8f135f0d30617739bd5808601be02fec7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160735"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560721"
 ---
 # <a name="update-apple-app-store-connect-team-id-on-partner-center"></a>Mettre à jour l’ID d’équipe Apple App Store Connect sur Espace partenaires
 

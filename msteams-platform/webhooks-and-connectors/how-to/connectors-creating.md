@@ -5,12 +5,12 @@ description: Prise en main des connecteurs Office 365. Ajoutez un connecteur à 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 82fa425b3a2edb4db72c327655bdc8513d6b51f3
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 8e9b1d831858bcf9aefeedbafcb098744470e1d7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376577"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560742"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
@@ -19,7 +19,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 Consultez la vidéo suivante pour découvrir comment créer un connecteur Office 365 :
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -87,17 +87,15 @@ Le code suivant fournit un exemple de code HTML pour créer une page de configur
     </section>
 </div>
 
-<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        
+<script>
         function onClick() {
             pages.config.setValidityState(true);
         }
 
-        await app.initialize();
+        await microsoftTeams.app.initialize();
         pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
@@ -149,7 +147,7 @@ Le tableau suivant fournit les paramètres et les détails des propriétés de r
 | `contentUrl` | URL de la page de configuration, définie par votre code lors de l’appel vers `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | Les valeurs retournées peuvent être `mail`respectivement , `groups`ou `teams` correspondre au Office 365 Mail, Office 365 Groups ou Teams. |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `userObjectId` | ID unique correspondant à l’utilisateur Office 365 qui a initié la configuration du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365, qui a configuré la configuration dans votre service. |
 
 #### <a name="handle-edits"></a>Gérer les modifications
 
@@ -163,7 +161,7 @@ Cet appel est effectué dans le cadre de votre gestionnaire d’événements d�
 
 #### <a name="handle-removals"></a>Gérer les suppressions
 
-Vous pouvez exécuter un gestionnaire d’événements lorsque l’utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce gestionnaire en appelant `microsoftTeams.pages.config.registerOnRemoveHandler()`. Ce gestionnaire est utilisé pour effectuer des opérations de nettoyage telles que la suppression d’entrées d’une base de données.
+Vous pouvez exécuter un gestionnaire d’événements lorsque l’utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce gestionnaire en appelant `microsoftTeams.pages.config.registerOnRemoveHandler()`. Ce gestionnaire est utilisé pour effectuer des opérations de nettoyage, telles que la suppression d’entrées d’une base de données.
 
 ### <a name="include-the-connector-in-your-manifest"></a>Inclure le connecteur dans votre manifeste
 

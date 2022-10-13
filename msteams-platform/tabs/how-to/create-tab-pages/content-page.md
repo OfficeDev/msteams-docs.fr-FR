@@ -5,12 +5,12 @@ description: Découvrez la page web dans le client Teams et fait partie de l’o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450372"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560462"
 ---
 # <a name="create-a-content-page"></a>Créer une page de contenu
 
@@ -20,7 +20,7 @@ Une page de contenu est une page web qui est affichée dans le client Teams, qui
 * Onglet personnalisé de canal ou de groupe : la page de contenu s’affiche après que l’utilisateur a épinglé et configuré l’onglet dans le contexte approprié.
 * [Module de tâche](~/task-modules-and-cards/what-are-task-modules.md): vous pouvez créer une page de contenu et l’incorporer en tant que vue web à l’intérieur d’un module de tâche. La page est rendue dans la fenêtre contextuelle modale.
 
-Cet article est spécifique à l’utilisation de pages de contenu sous forme d’onglets; toutefois, la plupart des conseils ici s’appliquent, quelle que soit la façon dont la page de contenu est présentée à l’utilisateur.
+Cet article est spécifique à l’utilisation de pages de contenu sous forme d’onglets; toutefois, la plupart des conseils présentés ici s’appliquent, quelle que soit la façon dont la page de contenu est présentée à l’utilisateur.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -46,13 +46,16 @@ Le code suivant fournit un exemple de la façon dont votre page et le client Tea
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -68,7 +71,6 @@ Le code suivant fournit un exemple de la façon dont votre page et le client Tea
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -86,7 +88,7 @@ Vous pouvez accéder à du contenu supplémentaire à l’aide du Kit de dévelo
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Utiliser le Kit de développement logiciel (SDK) pour interagir avec Teams
 
-Le kit de développement logiciel (SDK) [JavaScript du client Teams](~/tabs/how-to/using-teams-client-sdk.md) fournit de nombreuses fonctions supplémentaires que vous pouvez trouver utiles lors du développement de votre page de contenu.
+Le [Kit de développement logiciel (SDK) JavaScript du client Teams](~/tabs/how-to/using-teams-client-sdk.md) fournit de nombreuses autres fonctions que vous pouvez trouver utiles lors du développement de votre page de contenu.
 
 ### <a name="deep-links"></a>Liens profonds
 
@@ -94,7 +96,7 @@ Vous pouvez créer des liens profonds vers des entités dans Teams. Ils sont uti
 
 ### <a name="task-modules"></a>Modules de tâche
 
-Un module de tâche est une expérience contextuelle modale que vous pouvez déclencher à partir de votre onglet. Dans une page de contenu, utilisez des modules de tâches pour présenter des formulaires permettant de collecter des informations supplémentaires, d’afficher les détails d’un élément dans une liste ou de présenter à l’utilisateur des informations supplémentaires. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou entièrement créés à l’aide de Cartes adaptatives. Pour plus d’informations, consultez [à l’aide de modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Un module de tâche est une expérience contextuelle modale que vous pouvez déclencher à partir de votre onglet. Dans une page de contenu, utilisez des modules de tâches pour présenter des formulaires permettant de collecter des informations supplémentaires, d’afficher les détails d’un élément dans une liste ou de présenter à l’utilisateur des informations supplémentaires. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou entièrement créés à l’aide de cartes adaptatives. Pour plus d’informations, consultez [à l’aide de modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Domaines valides
 

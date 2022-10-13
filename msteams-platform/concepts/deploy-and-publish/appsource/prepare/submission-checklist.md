@@ -1,16 +1,16 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Découvrez les étapes finales avant de soumettre votre application Microsoft Teams à répertorier dans le Store. Apprenez à valider votre package d’application. Découvrez comment mettre à jour l’ID d’équipe Apple App Store Connect sur l’Espace partenaires.
+description: Étapes finales avant de soumettre votre application Microsoft Teams à répertorier sur le Store. Valider le package d’application et terminer la vérification et l’attestation de l’éditeur.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c78cfb103b9e6bd57218b6ca31edeae54c4ecca1
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: bec6c900a0f478b2243685215f094b9a051c44f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376605"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560679"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Préparer l'envoi de votre Magasin Teams
 

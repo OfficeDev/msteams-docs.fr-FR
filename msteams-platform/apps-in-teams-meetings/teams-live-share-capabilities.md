@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 6d2e1dc9d49ab1ec551fd814ba8baa330e9ace3f
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0e2c2a41eee5bf77dfeaf7150eede97a4b60ded8
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552546"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560623"
 ---
 # <a name="live-share-core-capabilities"></a>Fonctionnalités principales de Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Live Share Teams":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Capture d’écran montrant un exemple d’utilisateurs jouant à un jeu de poker agile dans une réunion Teams, qui présente la fonctionnalité live share.":::
 
 Le Kit de développement logiciel (SDK) Live Share peut être ajouté aux contextes `sidePanel` et `meetingStage`  de l’extension de votre réunion avec un minimum d’efforts. Cet article se concentre sur la façon d’intégrer le Kit de développement logiciel (SDK) Live Share dans votre application et les fonctionnalités clés du Kit de développement logiciel (SDK).
 
@@ -221,7 +221,7 @@ Le Kit de développement logiciel (SDK) Live Share inclut un ensemble de nouvell
 
 ### <a name="livepresence-example"></a>Exemple LivePresence
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Présence de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Capture d’écran montrant un exemple montrant les personnes disponibles dans une sessionTeams à l’aide de la présence Live Share.":::
 
 La `LivePresence` classe facilite plus que jamais le suivi des personnes qui se trouve dans la session. Lorsque vous appelez la `.initialize()` ou `.updatePresence()` les méthodes, vous pouvez affecter des métadonnées personnalisées pour cet utilisateur, telles que le nom ou l’image de profil. En écoutant les `presenceChanged` événements, chaque client reçoit l’objet le plus récent `LivePresenceUser` , réduisant toutes les mises à jour de présence en un seul enregistrement pour chaque objet unique `userId`.
 
@@ -317,7 +317,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ### <a name="liveevent-example"></a>Exemple LiveEvent
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Événement Teams Live Share pour l’affichage des notifications":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Capture d’écran montrant un exemple de client Teams affichant une notification en cas de modification de l’événement.":::
 
 `LiveEvent` est un excellent moyen d’envoyer des événements simples vers d’autres clients dans une réunion. Il est utile pour des scénarios tels que l’envoi de notifications de session.
 
@@ -399,7 +399,7 @@ notifications.sendEvent({
 
 ### <a name="livetimer-example"></a>Exemple LiveTimer
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Minuteur de compte à rebours Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Capture d’écran montrant un exemple de minuteur de comptage avec 9 secondes restantes.":::
 
 `LiveTimer` active les scénarios qui ont une limite de temps, comme un minuteur de méditation de groupe ou un minuteur rond pour un jeu.
 

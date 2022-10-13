@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 38157dea1c2d24b82cf1f48829639fd1d92392c1
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: c242faa57809bb967a29b7ab224e6cc0e859247b
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552526"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560553"
 ---
 ---
 
@@ -49,7 +49,7 @@ Vous trouverez plus d’informations sur ce package dans la [page des fonctionna
 
 ### <a name="live-share-media"></a>Live Share Media
 
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Expérience de partage de vidéos Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Capture d’écran montrant un exemple d’expérience de partage vidéo Live Share.":::
 
 La vidéo et l’audio sont des parties instrumentales du monde moderne et du lieu de travail. Live Share Media permet la **synchronisation de média** pour n’importe quel lecteur multimédia avec seulement quelques lignes de code. En synchronisant le média à l’état du lecteur et la couche de contrôles de transport, vous pouvez attribuer individuellement des vues, tout en fournissant la qualité la plus élevée possible disponible via votre application. Étant donné que Microsoft ne retranscrit pas votre contenu multimédia, vos exigences en matière de licences et d’accès sont conservées intactes.
 
@@ -67,7 +67,7 @@ Vous trouverez plus d’informations sur ce package sur la [page multimédia Liv
 
 ### <a name="live-share-canvas"></a>Canevas Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Live Share Teams":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Les captures d’écran montrent un exemple de plusieurs utilisateurs dessinant sur un canevas pendant une réunion.":::
 
 Lors de la collaboration dans des réunions, il est essentiel que les utilisateurs puissent faire ressortir et mettre en évidence le contenu à l’écran. Le canevas Live Share facilite l’ajout d’entrée manuscrite, de pointeurs laser et de curseurs à votre application pour une collaboration transparente.
 
@@ -173,7 +173,7 @@ Pour plus d’informations, consultez le [guide pratique](./teams-live-share-how
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Lors d’une révision marketing, un utilisateur souhaite recueillir des commentaires sur sa dernière modification vidéo. | L’utilisateur partage la vidéo à la phase de réunion et démarre la vidéo. Si nécessaire, l’utilisateur suspend la vidéo pour discuter de la scène et les participants dessinent sur des parties de l’écran pour mettre en évidence les points clés. |
 | Un responsable de projet joue à Agile Poker avec son équipe lors de la planification.                    | Manager partage une application Agile Poker à la phase de réunion qui permet de jouer au jeu de planification jusqu’à ce que l’équipe ait un consensus.                                                                        |
-| Un conseiller financier examine les documents PDF avec les clients avant de signer.                  | Le conseiller financier partage le contrat PDF à la phase de réunion. Tous les participants peuvent voir les curseurs et le texte mis en surbrillance dans le PDF, après quoi les deux parties signent l’accord.        |
+| Un conseiller financier examine les documents PDF avec les clients avant de signer.                  | Le conseiller financier partage le contrat PDF à la phase de réunion. Tous les participants peuvent voir les curseurs et le texte mis en surbrillance dans le pdf, après quoi les deux parties signent l’accord.        |
 
 > [!IMPORTANT]
 > Live Share est concédé sous licence sous la [licence du Kit de développement logiciel (SDK) Microsoft Live Share](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE). Pour utiliser ces fonctionnalités dans votre application, vous devez d’abord lire et accepter ces termes.

@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499209"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560735"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -50,13 +50,13 @@ Voici les étapes à suivre pour créer un onglet personnel :
 
 1. À l’invite de commandes, créez un répertoire pour votre onglet personnel.
 
-1. Entrez la commande suivante dans votre nouveau répertoire pour démarrer le générateur d’application Microsoft Teams :
+1. Entrez la commande suivante dans votre nouveau répertoire pour démarrer le générateur d’applications Microsoft Teams :
 
     ```cmd
     yo teams
     ```
 
-1. Fournissez vos valeurs à une série de questions posées par le générateur d’applications Microsoft Teams pour mettre à jour votre fichier `manifest.json`.
+1. Fournissez vos valeurs à une série de questions posées par le générateur d’applications Microsoft Teams pour mettre à jour votre `manifest.json` fichier.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Générateur Teams":::
 
@@ -97,7 +97,7 @@ Voici les étapes à suivre pour créer un onglet personnel :
 
     * **URL dans laquelle vous hébergez cette solution ?**
 
-      Par défaut, le générateur suggère une URL de sites web Azure. Vous testez uniquement votre application localement, donc une URL valide n’est pas nécessaire.
+      Par défaut, le générateur suggère une URL de site web Azure. Vous testez uniquement votre application localement, donc une URL valide n’est pas nécessaire.
 
     * **Voulez-vous afficher un indicateur de chargement lorsque votre application/onglet se charge ?**
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. Dans le volet gauche de Teams, sélectionnez des points de suspension &#x25CF;&#x25CF;&#x25CF; puis choisissez votre application chargée pour afficher votre onglet personnel.
 
-   Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
+   Vous avez maintenant créé et ajouté votre onglet personnel dans Teams.
   
    Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réordonner](#reorder-static-personal-tabs) votre onglet personnel.
 
@@ -371,7 +371,9 @@ Dans Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Dans Visual Studio Explorateur de solutions ouvrir **PersonalTab.cshtml** à partir du dossier **Pages** et ajoutez `app.initialize()` dans les balises `<script>` et enregistrez.
+1. Dans Visual Studio Explorateur de solutions, **ouvrez PersonalTab.cshtml** à partir du dossier **Pages** et ajoutez `microsoftTeams.app.initialize()` les `<script>` balises.
+
+1. Sélectionnez **Enregistrer**.
 
 1. Dans Visual Studio, sélectionnez **F5** ou choisissez **Démarrer le débogage** dans le menu **Déboguer** de votre application.
 
@@ -389,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Ouvrez **Applications** et sélectionnez **Importer une application**.
 
-1. Le nom du fichier de package d’application est `tab.zip` et il est disponible dans `/bin/Debug/netcoreapp3.1/tab.zip` chemin d’accès.
+1. Le nom du fichier de package d’application est `tab.zip` et il est disponible au `/bin/Debug/netcoreapp3.1/tab.zip` chemin d’accès.
 
 1. Sélectionnez `tab.zip` et ouvrez-le dans le Developer Portal.
 
@@ -401,7 +403,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Dans **les URL d’application**, mettez à jour la stratégie `https://<yourngrokurl>/privacy` de confidentialité et les conditions d’utilisation pour `https://<yourngrokurl>/tou` sélectionner **Enregistrer**.
 
-1. Dans **Fonctionnalités de l’application**, sélectionnez **Application personnelle** > **Créer votre premier onglet d’application personnelle** et entrez le nom et mettez à jour **L’URL du content** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Context** en tant que personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
+1. Dans **les fonctionnalités de l’application** > , sélectionnez Application **personnelle****Créer votre premier onglet d’application personnelle**, entrez le nom et mettez à jour **l’URL de contenu** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Context** en tant que personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -415,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Onglet par défaut":::
 
-   Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
+   Vous avez maintenant créé et ajouté votre onglet personnel dans Teams.
   
    Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réordonner](#reorder-static-personal-tabs) votre onglet personnel.
 
@@ -536,7 +538,9 @@ Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiqueme
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Dans Visual Studio Explorateur de solutions ouvrir **PersonalTab.cshtml** à partir du dossier **Vues** > **PersonalTab** et ajoutez `app.initialize()` à l’intérieur des balises `<script>` et enregistrez.
+1. Dans Visual Studio Explorateur de solutions, **ouvrez PersonalTab.cshtml** à partir du dossier **Views** > **PersonalTab** et ajoutez-le `microsoftTeams.app.initialize()` à l’intérieur des `<script>` balises.
+
+1. Sélectionnez **Enregistrer**.
 
 1. Dans Visual Studio, sélectionnez **F5** ou choisissez **Démarrer le débogage** dans le menu **Déboguer** de votre application.
 
@@ -570,7 +574,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Dans **les URL d’application**, mettez à jour la stratégie `https://<yourngrokurl>/privacy` de confidentialité et les conditions d’utilisation pour `https://<yourngrokurl>/tou` sélectionner **Enregistrer**.
 
-1. Dans **Fonctionnalités de l’application**, sélectionnez **Application personnelle** > **Créer votre premier onglet d’application personnelle** et entrez le nom et mettez à jour **L’URL du content** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Context** en tant que personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
+1. Dans **les fonctionnalités de l’application** > , sélectionnez Application **personnelle****Créer votre premier onglet d’application personnelle**, entrez le nom et mettez à jour **l’URL de contenu** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Context** en tant que personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -584,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Onglet personnel":::
   
-   Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
+   Vous avez maintenant créé et ajouté votre onglet personnel dans Teams.
 
    Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réordonner](#reorder-static-personal-tabs) votre onglet personnel.
 
@@ -592,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Réorganiser les onglets personnels statiques
 
-À compter de la version 1.7 du manifeste, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. En particulier, un développeur peut déplacer l’onglet **bot chat**, qui est toujours défini par défaut sur la première position, n’importe où dans l’en-tête de l’onglet d’application personnelle. Deux mots clés `entityId` sont déclarés, **conversations** et **à propos de**.
+À compter de la version 1.7 du manifeste, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. Vous pouvez déplacer l’onglet **de conversation du bot** , qui est toujours défini par défaut sur la première position, n’importe où dans l’en-tête de l’onglet de l’application personnelle. Deux mots clés `entityId` sont déclarés, **conversations** et **à propos de**.
 
 Si vous créez un bot avec une étendue **personnel**, il apparaît par défaut à la première position de l’onglet dans une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, **conversations**. L’onglet **conversation** s’affiche sur le web ou le bureau en fonction de l’emplacement où vous ajoutez l'onglet **conversation** dans le tableau `staticTabs`.
 

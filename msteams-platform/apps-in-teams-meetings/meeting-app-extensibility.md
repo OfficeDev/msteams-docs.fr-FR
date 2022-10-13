@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: none
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 4807b85ed1b520b84701bcd727fda88cf77808eb
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: db90b3e3f026eced56c626a082f5ec6be04cb893
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833671"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560644"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -29,7 +29,7 @@ Un cycle de vie de réunion consiste en une expérience d'application avant, pen
 
 > [!NOTE]
 >
-> * Les applications pour les réunions instantanées, les réunions de canal public planifiées, les appels en tête-à-tête et les appels de groupe sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
+> * Les applications pour les réunions de canal public planifiées sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Les extensions de réunion telles que les bots, les cartes, les extensions de message et les actions de message sont prises en charge dans le client web. Toutefois, les expériences hébergées telles que les onglets, les bulles de contenu et les partages intermédiaires ne sont pas actuellement entièrement prises en charge.
 

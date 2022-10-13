@@ -1,16 +1,16 @@
 ---
 title: Raisons courantes de l’échec de validation d’application
-description: Découvrez les raisons les plus courantes pour lesquelles votre application échoue à la validation de l’application. Liens rompus, erreurs dans la description, liens de stratégie non valides, violation des instructions de domaine valides, liens de support non valides, etc.
+description: Découvrez les raisons les plus courantes de l’échec de validation d’application, telles que les liens rompus, les erreurs inattendues, les incidents, la violation des instructions de domaine valides, les bogues fonctionnels.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100909"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560651"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Raisons courantes de l’échec de validation d’application
 

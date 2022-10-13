@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329083"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560490"
 ---
 # <a name="create-a-channel-tab"></a>Créer un onglet de canal
 
-Les onglets de canal ou de groupe offrent du contenu aux canaux et aux conversations de groupe, et sont un excellent moyen de créer des espaces de collaboration autour de contenu web dédié.
+Les onglets de canal ou de groupe fournissent du contenu aux canaux et aux conversations de groupe, ce qui permet de créer des espaces de collaboration autour du contenu web dédié.
 
 Vérifiez que vous disposez de toutes les [conditions préalables](~/tabs/how-to/tab-requirements.md) pour créer votre canal ou onglet de groupe.
 
@@ -49,13 +49,13 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
 1. À l’invite de commandes, créez un répertoire pour votre canal ou onglet de groupe.
 
-1. Entrez la commande suivante dans votre nouveau répertoire pour démarrer le générateur d’application Microsoft Teams :
+1. Entrez la commande suivante dans votre nouveau répertoire pour démarrer le générateur d’applications Microsoft Teams :
 
     ```cmd
     yo teams
     ```
 
-1. Fournissez vos valeurs à une série de questions posées par le générateur d’applications Microsoft Teams pour mettre à jour votre fichier `manifest.json` :
+1. Fournissez vos valeurs à une série de questions posées par le générateur d’applications Microsoft Teams pour mettre à jour votre `manifest.json` fichier :
 
     ![capture d’écran de l’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
     * **Votre nom (société) ? (32 caractères maximum)**
 
-        Le nom de votre entreprise sera utilisé dans le manifeste de l’application. Entrez un nom de société ou sélectionnez **Entrer** pour accepter le nom par défaut.
+        Le nom de votre entreprise peut être utilisé dans le manifeste de l’application. Entrez un nom de société ou sélectionnez **Entrer** pour accepter le nom par défaut.
 
     * **Quelle version du manifeste voulez-vous utiliser ?**
 
@@ -94,9 +94,9 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
         Sélectionnez **( &ast; ) Onglet**.
 
-    * **URL dans laquelle vous hébergez cette solution ?**
+    * **URL d’hébergement de cette solution ?**
 
-        Par défaut, le générateur suggère une URL de sites web Azure. Vous testez uniquement votre application localement, donc une URL valide n’est pas nécessaire.
+        Par défaut, le générateur suggère une URL de site web Azure. Vous testez uniquement votre application localement, donc une URL valide n’est pas nécessaire.
 
     * **Voulez-vous afficher un indicateur de chargement lorsque votre application/onglet se charge ?**
 
@@ -179,7 +179,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut":::
 
-1. Pour afficher la page de configuration de votre onglet, accédez à `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Les éléments suivants sont affichés :
+1. Pour afficher la page de configuration de votre onglet, accédez à `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Page de configuration de l’onglet":::
 
@@ -338,7 +338,10 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -346,9 +349,9 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Insérez un appel à `microsoftTeams.app.initialize();` dans la balise `script`.
 
-1. Dans Visual Studio Explorateur de solutions accédez au dossier **Pages** et ouvrez **ùTab.cshtml**
+1. Dans Visual Studio Explorateur de solutions, accédez au dossier **Pages** et ouvrez **Tab.cshtml**
 
-    Dans **Tab.cshtml** , l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner le gris** ou **sélectionner le rouge** définit `saveGray()` ou `saveRed()` définit `pages.config.setValidityState(true)`respectivement et active **l’option Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez poursuivre l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
+    Dans **Tab.cshtml**, l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner le gris** ou **sélectionner le rouge** définit `saveGray()` ou `saveRed()` définit `pages.config.setValidityState(true)`respectivement et active **l’option Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez poursuivre l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
 
 1. Mettez à jour les valeurs `websiteUrl` et `contentUrl` dans chaque fonction avec l’URL ngrok HTTPS sous votre onglet.
 
@@ -537,15 +540,15 @@ Dans la fenêtre Visual Studio Explorateur de solutions, cliquez avec le bouton 
 
 #### <a name="models"></a>Modèles
 
-**ChannelGroup.cs** présente un objet Message et des méthodes qui seront appelés à partir des contrôleurs pendant la configuration.
+**ChannelGroup.cs** présente un objet de message et des méthodes qui peuvent être appelés à partir des contrôleurs pendant la configuration.
 
 #### <a name="views"></a>Affichages
 
 Voici les différentes vues dans ASP.NET Core MVC :
 
-* Accueil : ASP.NET Core traite les fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** s’affiche en tant que page d’accueil de votre application.
+* Accueil : ASP.NET Core traite les fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** peut être affiché comme page d’accueil de votre application.
 
-* Partagé : le balisage de vue partielle **_Layout.cshtml** contient la structure de page globale de l’application et les éléments visuels partagés. Il référence également la bibliothèque Teams.
+* Partagé : le balisage d’affichage partiel **_Layout.cshtml** contient la structure de page globale de l’application et les éléments visuels partagés qui référencent également la bibliothèque Teams.
 
 #### <a name="controllers"></a>Contrôleurs
 
@@ -569,7 +572,10 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -577,9 +583,9 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Insérez un appel à `microsoftTeams.app.initialize();` dans la balise `script`.
 
-1. Dans Visual Studio Explorateur de solutions accédez au dossier **Tab** et ouvrez **Tab.cshtml**
+1. Dans Visual Studio Explorateur de solutions, accédez au dossier **Tab** et ouvrez **Tab.cshtml**
 
-    Dans **Tab.cshtml** , l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner le gris** ou **sélectionner le rouge** définit `saveGray()` ou `saveRed()` définit `pages.config.setValidityState(true)`respectivement et active **l’option Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez poursuivre l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
+    Dans **Tab.cshtml**, l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner le gris** ou **sélectionner le rouge** définit `saveGray()` ou `saveRed()` définit `pages.config.setValidityState(true)`respectivement et active **l’option Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez poursuivre l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
 
 1. Mettez à jour les valeurs `websiteUrl` et `contentUrl` dans chaque fonction avec l’URL ngrok HTTPS sous votre onglet.
 

@@ -1,16 +1,16 @@
 ---
 title: Maintenir et prendre en charge votre application publiée
-description: Apprenez à gérer votre application Microsoft Teams publiée et ce qu’il faut faire une fois que votre magasin est répertorié sur le Magasin Teams et AppSource. Analyser l’utilisation des applications, publier des mises à jour, promouvoir votre application, terminer la certification Microsoft 365.
+description: Gérez votre application Microsoft Teams publiée. Analyser l’utilisation des applications, publier des mises à jour, promouvoir votre application, terminer la certification Microsoft 365.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100328"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560469"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 

@@ -5,12 +5,12 @@ description: Créer une page de configuration pour collecter des informations au
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450379"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560658"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -24,7 +24,7 @@ Une page de configuration est un type particulier de [page de contenu](content-p
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un onglet de canal ou de groupe de conversation
 
-L'application doit faire référence au SDK client [JavaScript de Microsoft Teams ](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)et appeler`app.initialize()`. Les URL utilisées doivent être des points d'extrémité HTTPS sécurisés et disponibles depuis le cloud.
+L'application doit faire référence au SDK client [JavaScript de Microsoft Teams ](/javascript/api/overview/msteams-client)et appeler`app.initialize()`. Les URL utilisées doivent être des points de terminaison HTTPS sécurisés et sont disponibles à partir du cloud.
 
 ### <a name="example"></a>Exemple
 
@@ -38,17 +38,19 @@ Le code suivant est un exemple de code correspondant à la page de configuration
 
 ```html
 <head>
-    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+        await microsoftTeams.app.initialize();
         let saveGray = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
@@ -62,7 +64,7 @@ Le code suivant est un exemple de code correspondant à la page de configuration
         }
 
         let saveRed = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
@@ -81,14 +83,14 @@ Le code suivant est un exemple de code correspondant à la page de configuration
         const colorClickGray = () => {
             gr.display = "block";
             rd.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveGray()
         }
 
         const colorClickRed = () => {
             rd.display = "block";
             gr.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveRed();
         }
     </script>
@@ -170,7 +172,7 @@ Le fait de choisir le bouton approprié déclenche l'une ou l'autre `saveGray()`
 * Le `pages.config.registerOnSaveHandler()`gestionnaire d'événements est déclenché.
 * **Enregistrer** sur la page de configuration de l'application, est activé.
 
-Le code de la page de configuration informe les équipes que les exigences de configuration sont satisfaites et que l'installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer**, les paramètres sont `pages.config.setConfig()` définis, comme défini par l’interface `Config` . Pour plus d’informations, consultez [l’interface de configuration](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` est appelé pour indiquer que l'URL du contenu a été résolu avec succès.
+Le code de la page de configuration informe Teams que les exigences de configuration sont remplies et que l’installation peut continuer. Lorsque l’utilisateur sélectionne **Enregistrer**, les paramètres sont `pages.config.setConfig()` définis, comme défini par l’interface `Config` . Pour plus d’informations, consultez [l’interface de configuration](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` est appelé pour indiquer que l'URL du contenu a été résolu avec succès.
 
 >[!NOTE]
 >
@@ -215,7 +217,7 @@ Une fois votre page téléchargée, Teams met à jour les espaces réservés aux
 
 ```html
 <script>
-   await app.initialize();
+   await microsoftTeams.app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -293,7 +295,7 @@ Authentifiez-vous avant de permettre à un utilisateur de configurer votre appli
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
 
-Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier ou de reconfigurer un canal ou un onglet de groupe. Vous pouvez renommer votre onglet uniquement via l’interface utilisateur teams. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
+Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier ou de reconfigurer un canal ou un onglet de groupe. Vous pouvez renommer votre onglet uniquement via l’interface utilisateur teams. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L’utilisateur peut désinstaller les onglets personnels, mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Configuration de Microsoft Teams `setConfig()` (anciennement `setSettings()`) pour la page de suppression :
 

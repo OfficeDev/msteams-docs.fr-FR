@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 3845d890de365eca8029a3f28d770586a6929743
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552611"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560609"
 ---
 # <a name="live-share-canvas-overview"></a>Vue d’ensemble du canevas Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Synchronisation des médias Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Capture d’écran montrant un exemple de canevas synchronisé avec d’autres participants à une réunion Teams.":::
 
-Dans les salles de conférence et les salles de classe du monde entier, les tableaux blancs sont un élément essentiel de la collaboration. Dans les temps modernes cependant, le tableau blanc n’est plus suffisant. Avec de nombreux outils numériques tels que PowerPoint étant le point focal de collaboration dans l’ère moderne, il est essentiel d’activer le même potentiel créatif.
+Dans les salles de conférence et les salles de classe du monde entier, les tableaux blancs sont un élément essentiel de la collaboration. Dans les temps modernes cependant, le tableau blanc n’est plus suffisant. Avec de nombreux outils numériques tels que PowerPoint étant le point focal de collaboration à l’ère moderne, il est essentiel d’activer le même potentiel créatif.
 
 Pour permettre une collaboration plus transparente, Microsoft a créé PowerPoint Live, qui est devenu essentiel à la façon dont les utilisateurs travaillent dans Teams. Les présentateurs peuvent annoter les diapositives pour que tout le monde puisse les voir, en utilisant des stylos, des surligneurs et des pointeurs laser pour attirer l’attention sur les concepts clés. À l’aide du canevas Live Share, votre application peut apporter la puissance de PowerPoint Live outils d’entrée manuscrite avec un minimum d’efforts.
 
@@ -103,7 +103,7 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools--cursors"></a>Outils de canevas & curseurs
+## <a name="canvas-tools-and-cursors"></a>Outils et curseurs de canevas
 
 Maintenant que le canevas Live Share est configuré et synchronisé, vous pouvez configurer le canevas pour l’interaction utilisateur, par exemple des boutons pour sélectionner un outil de stylet. Dans cette section, nous allons discuter des outils disponibles et de leur utilisation.
 
@@ -113,7 +113,7 @@ Chaque outil d’entrée manuscrite dans le canevas Live Share affiche des trait
 
 #### <a name="pen-tool"></a>Outil Stylet
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Outil de stylet de canevas Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF montre un exemple de traits de dessin sur le canevas à l’aide de l’outil de stylet.":::
 
 L’outil de stylet dessine des traits solides qui sont stockés dans le canevas. La forme d’extrémité par défaut est un cercle.
 
@@ -151,7 +151,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>Outil de surligneur
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Outil de surligneur de canevas Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF montre un exemple de dessin de traits translucides sur le canevas à l’aide de l’outil de surligneur.":::
 
 L’outil de surligneur dessine des traits translucides qui sont stockés dans le canevas. La forme d’extrémité par défaut est un carré.
 
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>Outil Gomme
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Outil d’effaceur de canevas Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF montre un exemple d’effacement de traits sur le canevas à l’aide de l’outil gomme.":::
 
 L’outil gomme efface les traits entiers qui croisent son chemin.
 
@@ -219,7 +219,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### <a name="point-eraser-tool"></a>Outil d’effacement de point
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Outil d’effacement de point de canevas Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF montre un exemple de suppression de points individuels dans des traits sur le canevas à l’aide de l’outil d’effacement de points.":::
 
 L’outil d’effacement de points efface les points individuels dans les traits qui croisent son chemin en fractionnant les traits existants en deux. Cet outil est coûteux sur le plan du calcul et peut entraîner des taux d’images plus lents pour vos utilisateurs.
 
@@ -247,7 +247,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>Pointeur laser
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Outil de pointeur laser de canevas Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF montre un exemple de traits de dessin sur le canevas à l’aide de l’outil pointeur laser.":::
 
 Le pointeur laser est unique car l’extrémité du laser a un effet de fin lorsque vous déplacez votre souris. Lorsque vous dessinez des traits, l’effet de fin s’affiche pendant une courte période avant qu’il ne s’efface complètement. Cet outil est parfait pour signaler des informations à l’écran lors d’une réunion, car le présentateur n’a pas besoin de basculer entre les outils pour effacer les traits.
 
@@ -285,7 +285,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>Outils de ligne et de flèche
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Outil de ligne de canevas Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF montre un exemple de dessin de lignes droites sur un canevas à l’aide de l’outil de ligne et de flèche.":::
 
 L’outil de ligne permet aux utilisateurs de dessiner des lignes droites d’un point à un autre, avec une flèche facultative qui peut être appliquée à la fin.
 
@@ -333,7 +333,7 @@ Vous pouvez effacer tous les traits dans le canevas en appelant `inkingManager.c
 
 ### <a name="cursors"></a>Curseurs
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Partage de curseurs Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF montre un exemple d’utilisateurs partageant un curseur sur un canevas.":::
 
 Vous pouvez activer les curseurs actifs dans votre application pour permettre aux utilisateurs de suivre les positions des curseurs les uns des autres sur le canevas. Contrairement aux outils d’entrée manuscrite, les curseurs fonctionnent entièrement via la `LiveCanvas` classe. Vous pouvez éventuellement fournir un nom et une image pour identifier chaque utilisateur. Vous pouvez activer les curseurs séparément ou avec les outils d’entrée manuscrite.
 
@@ -357,7 +357,7 @@ Par défaut, le canevas Live Share fonctionne beaucoup comme une application de 
 
 Voici un diagramme simple pour vous aider à visualiser ce concept :
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Visualisation de la fenêtre d’affichage du canevas Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Capture d’écran montrant la disposition du canevas en plein écran pour les utilisateurs de bureau et mobiles ensemble.":::
 
 Vous pouvez personnaliser ce comportement de la manière suivante :
 
@@ -366,7 +366,7 @@ Vous pouvez personnaliser ce comportement de la manière suivante :
 - Modifiez le niveau d’échelle de la fenêtre d’affichage.
 
 > [!NOTE]
-> Les points de référence, les décalages et les niveaux d’échelle sont locaux pour le client et ne sont pas synchronisés entre les participants à la réunion.
+> Les points de référence, les décalages et les niveaux de mise à l’échelle sont locaux pour le client et ne sont pas synchronisés entre les participants à la réunion.
 
 Exemple :
 
@@ -435,7 +435,7 @@ document.getElementById("change-reference").onclick = () => {
 
 ## <a name="ideal-scenarios"></a>Scénarios idéaux
 
-Avec les pages web disponibles dans toutes les formes et tailles, il n’est pas possible de créer un canevas Live Share pour prendre en charge tous les scénarios. Le package est idéal pour les scénarios dans lesquels tous les utilisateurs regardent le même contenu en même temps. Bien que tous les contenus ne doivent pas être visibles à l’écran, il doit s’agir d’un contenu qui est mis à l’échelle de façon linéaire entre les appareils.
+Avec les pages web disponibles dans toutes les formes et tailles, il n’est pas possible de créer un canevas Live Share pour prendre en charge tous les scénarios. Le package est idéal pour les scénarios dans lesquels tous les utilisateurs regardent le même contenu en même temps. Bien que tous les contenus ne doivent pas être visibles à l’écran, il doit s’agir d’un contenu qui est mis à l’échelle de manière linéaire sur les appareils.
 
 Voici quelques exemples de scénarios dans lesquels le canevas Live Share est une excellente option pour votre application :
 

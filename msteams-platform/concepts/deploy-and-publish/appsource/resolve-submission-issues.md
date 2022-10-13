@@ -1,16 +1,16 @@
 ---
 title: Résoudre les problèmes liés à l’envoi de votre magasin
-description: Découvrez comment résoudre et corriger les problèmes liés à la soumission de votre magasin Microsoft Teams. Obtenez de l’aide directement de Microsoft, résolvez les problèmes et renvoyez votre application.
+description: Résolvez et corrigez les problèmes liés à la soumission de votre magasin Microsoft Teams. Obtenez de l’aide directement de Microsoft, résolvez les problèmes et renvoyez votre application.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 729275b141fc30571dcfc1a1b5e303734d216aa2
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100279"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560714"
 ---
 # <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec de l’envoi de votre store Teams
 

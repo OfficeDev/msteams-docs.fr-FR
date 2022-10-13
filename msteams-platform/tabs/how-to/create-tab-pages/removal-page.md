@@ -5,12 +5,12 @@ description: Découvrez comment activer la reconfiguration de votre onglet aprè
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499293"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560448"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
@@ -40,7 +40,7 @@ La page de suppression facultative est une page HTML que vous hébergez et qui s
 
 ### <a name="register-a-remove-handler"></a>Inscrire un gestionnaire de suppression
 
-Si vous le souhaitez, dans votre logique de page de suppression, vous pouvez appeler le `registerOnRemoveHandler((RemoveEvent) => {}` gestionnaire d’événements lorsque l’utilisateur supprime une configuration d’onglet existante. La méthode accepte l’interface [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) et exécute le code dans le gestionnaire lorsqu’un utilisateur tente de supprimer du contenu. La méthode est utilisée pour effectuer des opérations de nettoyage telles que la suppression de la ressource sous-jacente qui alimente le contenu de l’onglet. À la fois, un seul gestionnaire de suppression peut être inscrit.
+Si vous le souhaitez, dans votre logique de page de suppression, vous pouvez appeler le `registerOnRemoveHandler((RemoveEvent) => {}` gestionnaire d’événements lorsque l’utilisateur supprime une configuration d’onglet existante. La méthode accepte l’interface [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) et exécute le code dans le gestionnaire lorsqu’un utilisateur tente de supprimer du contenu. La méthode est utilisée pour effectuer des opérations de nettoyage, telles que la suppression de la ressource sous-jacente qui alimente le contenu de l’onglet. À la fois, un seul gestionnaire de suppression peut être inscrit.
 
 L’interface `RemoveEvent` décrit un objet avec deux méthodes :
 
@@ -67,9 +67,8 @@ Voici un exemple de bloc de code de suppression d’onglet :
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();
