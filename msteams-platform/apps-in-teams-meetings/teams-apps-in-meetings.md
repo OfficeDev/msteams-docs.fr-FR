@@ -6,22 +6,16 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 7420a7fb92d6abd684d931896221bf86eb9acf9a
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560532"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575760"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Applications pour les réunions et les appels Teams
 
 Les réunions permettent la collaboration, le partenariat, la communication éclairée et le partage de commentaires. L'application de réunion peut offrir une expérience utilisateur pour chaque étape du cycle de vie de la réunion. Le cycle de vie de la réunion comprend l'expérience de l'application avant, pendant et après la réunion, en fonction du statut du participant.
-
-> [!NOTE]
->
-> * Les applications pour les réunions de canal public planifiées sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
->
-> * Les applications ne sont pas prises en charge dans le [réseau téléphonique commuté (RTC) public](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options) et les [appels Teams chiffrés de bout en bout](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90).
 
 Teams prend en charge l’accès aux applications pendant la réunion pour les types de réunion suivants :
 
@@ -31,6 +25,16 @@ Teams prend en charge l’accès aux applications pendant la réunion pour les t
 * [**Appels de groupe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798) : appels lancés dans une conversation de groupe.
 * [**Réunions instantanées**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5) : réunions initiées via le bouton **Réunion maintenant** dans le calendrier Teams.
 
+> [!NOTE]
+>
+> * Les applications pour les réunions de canal public planifiées sont actuellement disponibles uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Les applications ne sont pas prises en charge dans les éléments suivants :
+>   * [Appels Teams du réseau téléphonique commuté (RTC)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+>   * [Appels Teams chiffrés de bout en bout](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+>   * [Réunions de canal instantané](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+>   * Réunions dans un [canal partagé](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
+
 Les utilisateurs peuvent ajouter des applications à la réunion à l’aide de l’option **+** à partir de leur fenêtre de réunion Teams.
 
 :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Ajouter une application dans une réunion" border="true":::
@@ -39,9 +43,7 @@ Visitez le [magasin Teams](https://go.microsoft.com/fwlink/p/?LinkID=2183121) et
 
 > [!NOTE]
 >
-> * Actuellement, lorsqu’une troisième personne est ajoutée à un appel un-à-un, l’appel est élevé à un appel de groupe, ce qui signifie qu’une nouvelle session démarre. Les applications ajoutées à l’appel un-à-un ne sont pas disponibles dans l’appel de groupe. Toutefois, ils peuvent être ajoutés à nouveau.
->
-> * Actuellement, les expériences d’application ne sont pas prises en charge dans les réunions de canal instantané Teams.
+> Actuellement, lorsqu’une troisième personne est ajoutée à un appel un-à-un, l’appel est élevé à un appel de groupe, ce qui signifie qu’une nouvelle session démarre. Les applications ajoutées à l’appel un-à-un ne sont pas disponibles dans l’appel de groupe. Toutefois, ils peuvent être ajoutés à nouveau.
 
 L'illustration suivante vous donne une idée des caractéristiques d'extensibilité de l'application de réunion :
 

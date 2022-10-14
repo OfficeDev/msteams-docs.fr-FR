@@ -3,12 +3,12 @@ title: Onglets sur les appareils mobiles
 description: Découvrez comment l’onglet fonctionne sur les clients Microsoft Teams Android et iOS (mobile), leur authentification, leur connexion à faible bande passante, leurs tests ou leur distribution.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 604d1ed8cabd745359e4714bc1b5fe82e67c7662
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450477"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575767"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
@@ -63,6 +63,11 @@ Le tableau suivant décrit la disponibilité et le comportement de l’onglet lo
 |----------|-----------|------------|
 |Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams à l’aide de la configuration de `websiteUrl` votre application, qui doit également être incluse dans la [fonction](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace) de `setSettings()` votre code source. Toutefois, les utilisateurs peuvent afficher l’onglet dans le client mobile Teams en sélectionnant **Plus** en regard de l’application et en choisissant **Ouvrir**, ce qui déclenche la configuration de `contentUrl` votre application.|
 |Application personnelle|Non|Non applicable|
+
+> [!NOTE]
+> Les messages du bot sont affichés dans la section de conversation si une application mobile dispose à la fois des fonctionnalités du bot et de l’onglet.
+>
+> Lorsque vous sélectionnez **Chat** de l’application bot et sélectionnez **Plus (...)**, vous ne pouvez pas voir la fonctionnalité d’onglet de cette application dans la liste. Toutefois, si vous sélectionnez **Plus (...)** dans le coin inférieur droit de la section **Conversation** , vous pouvez afficher l’application onglet avec un lien vers la fonctionnalité d’application bot de cette application.
 
 ### <a name="apps-not-on-teams-store"></a>Applications qui ne sont pas sur le magasin Teams
 
