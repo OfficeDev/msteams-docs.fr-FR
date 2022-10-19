@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 4646d47c5aa325291f060ea192dcc1705b414ac7
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338822"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575787"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Concevoir votre application personnelle pour Microsoft Teams
 
-Une application personnelle peut être un robot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu, d’autres fois, il offre à l’utilisateur une vue d’ensemble de tout ce qui lui appartient lorsque l’application a été configurée comme un onglet dans plusieurs canaux.
+Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu. Dans d’autres cas, il offre à l’utilisateur une vue d’ensemble de tout ce qui lui revenait lorsque l’application a été configurée en tant qu’onglet dans plusieurs canaux.
 
 Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les utilisateurs peuvent ajouter, utiliser et gérer des applications personnelles dans Teams.
 
@@ -47,8 +47,39 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu d
 |----------|-----------|
 |A|**Attribution d’application** : nom de votre application.|
 |B|**onglets**: fournit la navigation pour votre application personnelle.|
-|C|**Plus de menu**: inclut des options et des informations supplémentaires sur l’application.|
+|C|**Menu Plus** : Inclut d’autres options et informations d’application.|
 |D|**Navigation principale**: fournit la navigation à votre application à d’autres fonctionnalités principales de Teams.|
+
+#### <a name="configure-and-add-multiple-actions-in-navbar"></a>**Configurer et ajouter plusieurs actions dans NavBar**
+
+Vous pouvez ajouter plusieurs actions à la barre de navigation supérieure droite et créer un menu de dépassement pour les actions supplémentaires dans une application.
+
+>[!NOTE]
+> Un maximum de cinq actions peut être ajouté dans la barre de navigation, y compris le menu de dépassement de capacité.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="La capture d’écran est un exemple qui décrit le menu NavBar et Overflow.":::
+
+Pour **configurer et ajouter plusieurs actions dans NavBar**, appelez [l’API setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) . et ajoutez la `displayMode enum` propriété à `MenuItem`. Définit `displayMode enum` l’affichage d’un menu dans la barre de navigation. La valeur par défaut est `displayMode enum` définie sur `ifRoom`.
+
+En fonction des exigences et de l’espace disponibles dans navBar, définissez `displayMode enum` l’une des options suivantes.
+
+* S’il y a de la place, définissez-le `ifRoom = 0` pour placer un élément dans la barre de navigation.
+* S’il n’y a pas de place, définissez `overflowOnly = 1`, afin que cet élément soit toujours placé dans le menu de dépassement de capacité du NavBar, mais pas dans la barre de navigation.
+
+Voici un exemple de configuration de NavBar avec un menu de dépassement de capacité pour plusieurs actions :
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> L’API `setNavBarMenu` ne contrôle pas le bouton **Actualiser** . Il s’affiche par défaut.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="La capture d’écran est un exemple montrant la barre de navigation et plusieurs actions dans un menu de dépassement de capacité.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Exemple montre l’anatomie structurelle de l’onglet personnel.":::
 
@@ -66,7 +97,7 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu d
 |A|**Attribution d’application** : logo et nom de votre application.|
 |B|**onglets**: fournit la navigation pour votre application personnelle.|
 |C|**Affichage contextuel** : fait passer le contenu de votre application d'une fenêtre parent à une fenêtre enfant autonome.|
-|D|**Plus de menu**: inclut des options et des informations supplémentaires sur l’application. (Vous pouvez également créer **Paramètres** un onglet.)|
+|D|**Menu Plus** : Inclut d’autres options et informations d’application. (Vous pouvez également créer **Paramètres** un onglet.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Cet exemple montre l’anatomie structurelle de l’onglet personnel.":::
 
@@ -88,7 +119,7 @@ Utilisez l’un des modèles et composants Teams suivants pour vous aider à con
 
 ## <a name="use-a-personal-app-bot"></a>Utiliser une application personnelle (bot)
 
-Les applications personnelles peuvent inclure un bot pour les conversations en tête-à-tête et les notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur le plan de travail). Les utilisateurs interagissent avec le bot dans un onglet que vous spécifiez.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on artboard). Users interact with the bot in a tab you specify.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie : application personnelle (bot)
 
@@ -102,6 +133,30 @@ Les applications personnelles peuvent inclure un bot pour les conversations en t
 |B|**bouton Précédent**: renvoie les utilisateurs à l’espace de travail privé.|
 |C|**message bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
 |D|**zone Compose**: champ d’entrée pour l’envoi de messages au bot.|
+
+#### <a name="configure-back-button"></a>Bouton Configurer l’arrière
+
+Lorsque vous sélectionnez le bouton Précédent dans une application Teams, vous revenez à la plateforme Teams sans naviguer à l’intérieur de l’application.
+
+Pour naviguer dans l’application, configurez le bouton Précédent afin que lorsque vous sélectionnez le bouton Précédent, vous puissiez revenir aux étapes précédentes et naviguer dans l’application.
+
+Pour **configurer le bouton Précédent**, appelez l’API [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) , qui gère les fonctionnalités du bouton Précédent en fonction de l’une des conditions suivantes :
+
+* Lorsque `registerBackButtonHandler` la valeur est définie `false`sur , le Kit de développement logiciel (SDK) JavaScript appelle l’API `navigateBack` et la plateforme Teams gère le bouton Précédent.
+* Lorsque `registerBackButtonHandler` la valeur est définie `true`sur , l’application gère les fonctionnalités du bouton Précédent (vous pouvez revenir aux étapes précédentes et naviguer dans l’application), et la plateforme Teams n’effectue aucune autre action.
+
+Voici un exemple de configuration du bouton Précédent :
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
@@ -204,4 +259,6 @@ Sauf si vous avez créé votre application spécifiquement pour Teams, vous disp
 Ces autres instructions de conception peuvent vous aider en fonction de l’étendue de votre application personnelle :
 
 * [Conception de votre onglet](../../tabs/design/tabs.md)
-* [la conception de votre bot](../../bots/design/bots.md)
+* [Conception de votre bot](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [DisplayMode, énumération](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
