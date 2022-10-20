@@ -7,16 +7,16 @@ metadata:
   level: Beginner
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: En savoir plus pour activer et configurer des applications pour les réunions
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8bac76c7e1e0b404ab82ef08eb92dd83b27e27f0
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 07cdf5701631d3d5b737bcc4d9d4ac014b04f74e
+  ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243394"
+  ms.lasthandoff: 10/20/2022
+  ms.locfileid: "68615246"
 items:
 - durationInMinutes: 1
   content: >

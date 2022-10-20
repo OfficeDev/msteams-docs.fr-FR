@@ -5,12 +5,12 @@ description: Comprendre les fonctionnalités de cas d’utilisation et d’appli
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: fcc360410d4af501d4097c6269b3e1157a6e742b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100419"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615176"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -88,7 +88,7 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 
 La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :
 
-* Pour les applications tierces, consultez [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* Pour les applications tierces, consultez [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * Pour les bots, consultez [créer votre premier bot conversationnel pour Teams](../get-started/first-app-bot.md), [concevoir votre bot Teams](../bots/design/bots.md), [ajouter des bots aux applications Microsoft Teams](../resources/bot-v3/bots-overview.md)et [bots dans Teams](../bots/what-are-bots.md).
 * Pour le chargement indépendant des applications, consultez [permettre à votre application Teams d’être personnalisée](../concepts/design/enable-app-customization.md), [distribuer votre application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)et [Charger votre application dans Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Pour les connecteurs personnalisés, consultez [créer des connecteurs Office 365 pour Teams](../webhooks-and-connectors/how-to/connectors-creating.md).

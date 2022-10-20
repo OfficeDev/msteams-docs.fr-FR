@@ -1,19 +1,19 @@
 ---
-title: Créer un onglet de canal
+title: Créer un onglet de canal ou un onglet de groupe
 author: laujan
 description: Créez un canal personnalisé, un onglet de groupe avec Node.js, ASP.NET Core ASP.NET Core MVC. Générer une application, créer un package, générer et exécuter une application, tunnel secret, charger dans Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560490"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615239"
 ---
-# <a name="create-a-channel-tab"></a>Créer un onglet de canal
+# <a name="create-a-channel-tab-or-group-tab"></a>Créer un onglet de canal ou un onglet de groupe
 
 Les onglets de canal ou de groupe fournissent du contenu aux canaux et aux conversations de groupe, ce qui permet de créer des espaces de collaboration autour du contenu web dédié.
 
