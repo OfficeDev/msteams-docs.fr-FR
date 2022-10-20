@@ -271,7 +271,9 @@
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: Créer des onglets avec les Cartes adaptatives
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+    - name: Utiliser Fluid avec Microsoft Teams
+      href: tabs/how-to/using-fluid-msteam.md
     - name: Déploiement du lien des onglets et vue des étapes
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -378,15 +380,20 @@
   items:
     - name: Vue d'ensemble
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Applications de réunions unifiées
-      href: apps-in-teams-meetings/meeting-app-extensibility.md
-      displayName: 'Chat tab, poll survey, user access, federated users'
-    - name: Activer et configurer les applications pour les meetings
-      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-      displayName: 'meeting token generator app, meeting scenario'
-    - name: Références API des applications de réunion
-      href: apps-in-teams-meetings/API-references.md
-      displayName: 'CART URL, channel, permissions, access, audio state'
+    - name: Activer et configurer des applications pour les réunions Teams
+      items:
+        - name: Créer des onglets pour la réunion
+          href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        - name: Créer des applications pour la phase de réunion
+          href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+        - name: Générer une notification dans la réunion pour la réunion
+          href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+        - name: Créer des conversations extensibles pour la conversation de réunion
+          href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
+        - name: Créer des applications pour les utilisateurs anonymes
+          href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
+        - name: API d’applications de réunion
+          href: apps-in-teams-meetings/meeting-apps-apis.md
     - name: Obtenir des transcriptions de réunion à l'aide des API graphiques
       items:
         - name: Vue d’ensemble
