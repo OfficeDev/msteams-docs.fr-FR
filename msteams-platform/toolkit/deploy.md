@@ -7,16 +7,16 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 4f5afe23e9d8deefdf2b1b182fa51cfe034e5c4d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781105"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615141"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Déployer l’application Teams dans le cloud
 
-Le Kit de ressources Teams vous aide à déployer ou à charger le code frontal et le code principal de votre application vers vos ressources cloud provisionnées dans Azure.
+Teams Toolkit vous aide à déployer ou à charger le code frontal et back-end dans votre application sur vos ressources cloud provisionnées dans Azure.
 
 ::: zone pivot="visual-studio-code"
 
@@ -24,9 +24,9 @@ Le Kit de ressources Teams vous aide à déployer ou à charger le code frontal 
 
 Vous pouvez déployer les éléments suivants dans le cloud :
 
-* L’onglet, tel que les applications frontales, est déployé vers le stockage Azure et configuré pour l’hébergement web statique ou un site SharePoint.
-* Les API principales sont déployées vers les fonctions Azure.
-* Le bot ou l’extension de message est déployé vers Azure App Service.
+* L’onglet, tel que les applications frontales, est déployé sur Stockage Azure et configuré pour l’hébergement web statique ou un site SharePoint.
+* Les API back-end sont déployées sur Azure Functions.
+* Le bot ou l’extension de message est déployé sur Azure App Service.
 
   > [!NOTE]
   > Avant de déployer du code d’application dans le cloud Azure, vous devez terminer avec succès [l’approvisionnement des ressources cloud](provision.md).
@@ -44,11 +44,11 @@ Les guides de prise en main vous aident à déployer à l’aide du Kit de resso
 |-------------|----------|---------------|---------------|
 |Onglets avec React </br> Charge de travail frontale| `yourProjectFolder/tabs`| `tabs/build` |Stockage Azure |
 |Onglets avec SharePoint </br> Charge de travail frontale | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |Catalogue des applications SharePoint |
-|Les API sur Azure Functions </br> Charge de travail principale | `yourProjectFolder/api`| Non applicable |Azure Functions |
+|API sur Azure Functions </br> Charge de travail principale | `yourProjectFolder/api`| Non applicable |Azure Functions |
 |Bots et extensions de message </br> Charge de travail principale | `yourProjectFolder/bot` | Non applicable | Azure App Service |
 
 > [!NOTE]
-> Lorsque vous incluez une ressource de gestion des API Azure dans votre projet et que vous déclenchez un déploiement, vous pouvez publier vos API dans les fonctions Azure sur le service de gestion des API Azure.
+> Lorsque vous incluez une ressource de gestion des API Azure dans votre projet et que vous déclenchez le déploiement, vous pouvez publier vos API dans Azure Functions sur le service de gestion des API Azure.
 
 ::: zone-end
 
@@ -58,9 +58,9 @@ Les guides de prise en main vous aident à déployer à l’aide du Kit de resso
 
 Les applications suivantes peuvent être déployées dans Visual Studio :
 
-* L’application onglet, telle que les applications frontales, est déployée dans le stockage Azure, configurée pour l’hébergement web statique.
-* L’application de bot de notification avec des déclencheurs de fonction Azure peut être déployée sur des fonctions Azure.
-* L’application bot ou l’extension de message peut être déployée sur les services d’application Azure.
+* L’application onglet, telle que les applications frontales, est déployée dans stockage Azure, configurée pour l’hébergement web statique.
+* L’application de bot de notification avec des déclencheurs Azure Functions peut être déployée sur Azure Functions.
+* L’application bot ou l’extension de message peut être déployée sur Azure App Services.
 
 Après le déploiement, vous pouvez afficher un aperçu de l’application dans le client Teams ou le navigateur web avant de commencer à l’utiliser.
 
@@ -104,7 +104,7 @@ Pour afficher un aperçu de votre application, vous devez d’abord créer un pa
 
 L’autre façon d’afficher un aperçu de votre application :
 
-1. Cliquez avec le bouton droit sur votre projet **MyTeamsApp1** sous **Průzkumník řešení**.
+1. Cliquez avec le bouton droit sur votre projet **MyTeamsApp1** sous **Explorateur de solutions**.
 1. Sélectionnez La **préversion du** **Kit de ressources** >  Teams dans Teams pour lancer l’application Teams dans le navigateur web.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Aperçu de l’application Teams dans le navigateur web":::
