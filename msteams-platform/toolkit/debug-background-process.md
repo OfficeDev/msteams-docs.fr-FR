@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: b8f85f092f9a99e9931a5ff0ea5e763c0b4fb0fe
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 4d654d5da598b9bf2b9bacfc189c97df08f9a359
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616787"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653645"
 ---
 # <a name="debug-background-process"></a>Processus de débogage en arrière-plan
 
@@ -21,13 +21,13 @@ Le flux de travail du processus de débogage est le suivant :
 
 1. `launch.json` configure le débogueur dans Visual Studio Code.
 
-2. Visual Studio Code exécute le **composant preLaunchTask**, **Pre Debug Check & Start All** in `.vscode/tasks.json` file.
+2. Visual Studio Code exécute le **préLaunchTask** composé, **démarrer l’application Teams localement** dans le `.vscode/tasks.json` fichier.
 
 3. Visual Studio Code lance ensuite les débogueurs spécifiés dans les configurations composées, telles que **Attach to Bot**, **Attacher au Backend**, **Attach to Frontend**, et **Lancer Bot**.
 
 4. Microsoft Edge ou Google Chrome lance une nouvelle instance de navigateur et ouvre une page web pour charger le client Teams.
 
-## <a name="teams-toolkit-verification-of-prerequisites"></a>Vérification par le Kit de ressources Teams des prérequis
+## <a name="verification-of-prerequisites"></a>Vérification des prérequis
 
 Teams Toolkit vérifie les conditions préalables suivantes pendant le processus de débogage :
 
@@ -42,9 +42,6 @@ Teams Toolkit vérifie les conditions préalables suivantes pendant le processus
 
 * Teams Toolkit vous invite à vous connecter au compte Microsoft 365, si vous ne vous êtes pas connecté avec vos informations d’identification valides.
 * Le chargement ou le chargement indépendant d’applications personnalisées pour votre locataire de développeur est activé pour empêcher l’arrêt du débogage local.
-* Teams Toolkit installe le package `ngrok@4.2.2` Ngrok NPM dans `~/.fx/bin/ngrok`, si Ngrok n’est pas installé ou si la version ne correspond pas à l’exigence. Le package Ngrok NPM dans `/.fx/bin/ngrok/node modules/ngrok/bin` gère la version binaire Ngrok 2.3 applicable à l’extension de bot et de message.
-* Teams Toolkit installe Azure Functions package NPM Core Tools, azure-functions-core-tools@3 pour **Windows** et **macOs**, si `~/.fx/bin/func`Azure Functions Core Tools version 3 n’est pas installée ou si la version ne correspond pas à l’exigence. Le package NPM Azure Functions Core Tools gère `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` les outils azure Functions Core Tools binaires. Pour Linux, le débogage local se termine.
-* Teams Toolkit installe le Kit de développement logiciel (SDK) .NET Core pour **Windows** et **MacOS** dans `~/.fx/bin/dotnet`, si la version du SDK .NET Core applicable à Azure Functions n’est pas installée ou si la version ne correspond pas à l’exigence. Pour Linux, le débogage local se termine.
 * Teams Toolkit installe le package `ngrok@4.2.2` Ngrok NPM dans `~/.fx/bin/ngrok`, si Ngrok n’est pas installé ou si la version ne correspond pas à l’exigence. La version binaire Ngrok 2.3 s’applique à l’extension de bot et de message. Le fichier binaire Ngrok est géré par le package NPM Ngrok dans `/.fx/bin/ngrok/node modules/ngrok/bin`.
 * Teams Toolkit installe Azure Functions package NPM Core Tools, azure-functions-core-tools@3 pour **Windows** et **MacOs**, si `~/.fx/bin/func`Azure Functions Core Tools version 4 n’est pas installée ou si la version ne correspond pas à l’exigence. Le paquet Azure Functions Core Tools NPM gère le binaire `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin`Azure Functions Core Tools. Pour Linux, le débogage local se termine.
 * Teams Toolkit installe le Kit de développement logiciel (SDK) .NET Core pour **Windows** et **MacOS** dans `~/.fx/bin/dotnet`la version du Kit de développement logiciel (SDK) .NET Core applicable pour Azure Functions, si le SDK .NET Core n’est pas installé ou si la version ne correspond pas à l’exigence. Pour Linux, le débogage local se termine.
@@ -103,7 +100,7 @@ Use the following .NET Core versions:
 
 Lorsque vous sélectionnez **Lancer le débogage (F5)**, le canal de sortie du Teams Toolkit affiche la progression et le résultat de la vérification des conditions préalables.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Résumé de la vérification des prérequis" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="Résumé de la vérification des prérequis" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
 ## <a name="register-and-configure-teams-app"></a>Enregistrer et configurer l'application Teams
 

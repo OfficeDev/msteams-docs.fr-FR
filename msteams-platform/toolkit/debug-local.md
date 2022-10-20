@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026961"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653659"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
@@ -23,6 +23,10 @@ Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre applicat
 ## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Déboguer votre application Microsoft Teams localement pour Visual Studio Code
 
 Le Kit de ressources Teams dans Visual Studio Code vous offre les fonctionnalités permettant d’automatiser le débogage de votre application Teams localement. Visual Studio vous permet de déboguer l’extension d’onglet, de bot et de message. Vous devez configurer Teams Toolkit avant de déboguer votre application.
+
+> [!NOTE]
+>
+> Vous pouvez mettre à niveau votre ancien projet Teams Toolkit pour utiliser de nouvelles tâches. Pour plus d’informations, consultez la [documentation sur les paramètres de débogage](https://aka.ms/teamsfx-debug-upgrade-new-tasks).
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Configurer votre kit de ressources Teams pour le débogage
 
@@ -110,7 +114,7 @@ Exécute des tâches telles que définies dans `.vscode/tasks.json`.
 
 L’image suivante affiche les noms des tâches dans les onglets **OUTPUT** et **TERMINAL** de Visual Studio Code lors de l’exécution de l’onglet, du bot ou de l’extension de message, et Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Démarrer les services d’application":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Démarrer les services d’application" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### <a name="launches-debug-configurations"></a>Lance les configurations de débogage
 

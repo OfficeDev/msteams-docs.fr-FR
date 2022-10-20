@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499159"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653685"
 ---
 # <a name="debug-your-teams-app"></a>Déboguer votre Teams application
 
@@ -88,71 +88,82 @@ Vérifiez que vous pouvez basculer des points d’arrêt sur les codes sources d
 
 ## <a name="customize-debug-settings"></a>Personnaliser les paramètres de débogage
 
-Teams Toolkit supprime certains prérequis et vous permet de personnaliser les paramètres de débogage pour créer votre onglet ou votre robot :
+Teams Toolkit vous permet de personnaliser les paramètres de débogage pour créer votre onglet ou bot. Pour plus d’informations sur la liste complète des options personnalisables, consultez la [documentation sur les paramètres de débogage](https://aka.ms/teamsfx-debug-tasks).
+
+### <a name="customize-scenarios"></a>Personnaliser des scénarios
 
 <br>
 
 <details>
-<summary><b>Utiliser le point de terminaison de votre bot</b></summary>
 
-1. Dans les paramètres Visual Studio Code, vous devez décocher **vérifier que Ngrok est installé et démarré (ngrok).**
+<summary><b>Ignorer les vérifications des prérequis</b></summary>
 
-1. Vous pouvez définir `siteEndpoint` la configuration sur `.fx/configs/config.local.json` votre point de terminaison.
+En `.fx/configs/tasks.json` dessous`"prerequisites"``"Validate & install prerequisites"` > `"args"` > , mettez à jour les vérifications des prérequis que vous souhaitez ignorer.
 
-```json
-{
-    "bot": {
-        "siteEndpoint": "https://your-bot-tunneling-url"
-    }
-}
-
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Personnaliser le point de terminaison du bot":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="ignorer les vérifications des prérequis":::
 
 </details>
 
 <details>
 <summary><b>Utiliser votre certificat de développement</b></summary>
 
-1. Dans les paramètres Visual Studio Code, vous devez décocher **Vérifier que le certificat de développement est approuvé (devCert).**
-
-1. Vous pouvez définir et `sslKeyFile` configurer `sslCertFile` le `.fx/configs/config.local.json` chemin d’accès de votre fichier de certificat et le chemin du fichier de clé.
-
-```json
-{
-    "frontend": {
-        "sslCertFile": "",
-        "sslKeyFile": ""
-    }
-}
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Personnaliser le certificat":::
+1. Dans `.fx/configs/tasks.json`, décochez `"devCert"` sous`"prerequisites"``"Validate & install prerequisites"``"args"` >  >  .
+1. Définissez « SSL_CRT_FILE » et « SSL_KEY_FILE » dans `.env.teamsfx.local` le chemin de votre fichier de certificat et le chemin du fichier de clé.
 
 </details>
 
 <details>
-<summary><b>Utiliser vos scripts de démarrage pour démarrer les services d’application</b></summary>
+<summary><b>Personnaliser npm install args</b></summary>
 
-1. Pour l’onglet, vous devez mettre à jour `dev:teamsfx` le script dans `tabs/package.json`.
-
-1. Pour l’extension de bot ou de message, vous devez mettre à jour `dev:teamsfx` le script dans `bot/package.json`.
-
-1. Pour Azure Functions, vous devez mettre à jour `dev:teamsfx` le script dans `api/package.json` et pour le script de mise à jour `watch:teamsfx` TypeScript.
-
-   > [!NOTE]
-   > Actuellement, l’onglet, le bot, les applications d’extension de message et les ports Azure Functions ne prennent pas en charge la personnalisation.
+Dans `.fx/configs/tasks.json`, définissez npmInstallArgs sous `"Install npm packages"`.
+  
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Installer le package npm":::
 
 </details>
 
 <details>
+<summary><b>Modifier les ports</b></summary>
+
+* Bot
+  1. Recherchez `"3978"` dans votre projet et recherchez des apparences dans `tasks.json`, `ngrok.yml` et `index.js`.
+  1. Remplacez-le par votre port.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Remplacer votre port pour le bot":::
+* Tab
+  1. Dans `.fx/configs/tasks.json`, recherchez `"53000"`.
+  1. Remplacez-le par votre port.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Remplacer votre port par l’onglet":::
+
+</details>
+
+<details>
+<summary><b>Utiliser votre propre package d’application</b></summary>
+
+Dans `.fx/configs/tasks.json`, définissez `"appPackagePath"` sous `"Build & upload Teams manifest"` le chemin d’accès de votre package d’application.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="utiliser votre propre chemin d’accès au package d’application":::
+
+</details>
+
+<details>
+<summary><b>Utiliser votre propre tunnel</b></summary>
+
+1. En `.fx/configs/tasks.json` dessous `"Start Teams App Locally"`, vous pouvez mettre à jour `"Start Local tunnel"`.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Utiliser votre propre tunnel":::
+1. Lancez votre propre service de tunnel, puis mettez à jour `"botMessagingEndpoint"` vers votre propre point de terminaison de message sous `.fx/configs/tasks.json` `"Set up bot"`.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="mettre à jour le point de terminaison de messagerie":::
+
+</details>
+
+<details>
+
 <summary><b>Ajouter des variables d’environnement</b></summary>
 
 Vous pouvez ajouter des variables d’environnement à `.env.teamsfx.local` fichier pour l’onglet, le bot, l’extension de message et Azure Functions. Teams Shared Computer Toolkit charge les variables d’environnement que vous avez ajoutées pour démarrer les services pendant le débogage local.
 
  > [!NOTE]
- > Assurez-vous de démarrer un nouveau débogage local après avoir ajouté de nouvelles variables d'environnement, car celles-ci ne prennent pas en charge le rechargement à chaud.
+ > Veillez à démarrer un nouveau débogage local après avoir ajouté de nouvelles variables d’environnement, car les variables d’environnement ne prennent pas en charge le rechargement à chaud.
 
 </details>
 
@@ -161,7 +172,7 @@ Vous pouvez ajouter des variables d’environnement à `.env.teamsfx.local` fich
 
 Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer simultanément l’onglet, le bot, l’extension de message et Azure Functions. Vous pouvez mettre à jour `.vscode/launch.json` et `.vscode/tasks.json` déboguer un composant partiel. Si vous souhaitez déboguer l'onglet uniquement dans un projet tab plus bot avec Azure Functions, utilisez les étapes suivantes :
 
-1. Commentaire **`Attach to Bot`** et **`Attach to Backend`** du composé de débogage dans `.vscode/launch.json`.
+1. Mettre à jour `"Attach to Bot"` et `"Attach to Backend"` à partir du composé de débogage dans `.vscode/launch.json`.
 
    ```json
    {
@@ -181,7 +192,7 @@ Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer si
    }
    ```
 
-2. Commentez **`Start Backend`** et démarrez le bot à partir de la tâche Démarrer tout dans .vscode/tasks.json.
+2. Mettez à jour `"Start Backend"` et `"Start Bot"` à partir de Start All, tâche dans .vscode/tasks.json.
 
    ```json
    {
