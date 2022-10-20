@@ -1,16 +1,16 @@
 ---
 title: Conception de votre application personnalisée
 author: heath-hamilton
-description: Découvrez comment concevoir Microsoft Teams applications et ressources incluent le kit d’interface utilisateur Microsoft Teams, les meilleures pratiques, des exemples et bien plus encore.
+description: Découvrez comment concevoir des applications et des ressources Microsoft Teams, notamment le Kit d’interface utilisateur Microsoft Teams, les meilleures pratiques, des exemples et bien plus encore.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 341c64b2afda7574b6d230257290220e2c97d325
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142877"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615309"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams
 
@@ -185,7 +185,7 @@ Concevez des cartes adaptatives dans notre outil web.
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Activer et configurer vos applications pour les réunions Teams](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Activer et configurer vos applications pour la phase de réunion](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Conception de votre bot Microsoft Teams](~/bots/design/bots.md)
 * [Créer un assistant virtuel](~/samples/virtual-assistant.md)
 * [Conception de modules de tâches pour votre application Microsoft Teams](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

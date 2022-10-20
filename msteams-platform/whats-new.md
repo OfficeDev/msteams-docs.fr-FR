@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités et mises à jour des dév
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 069c908c18377b440d21e44c0a95594d2904722b
-ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
+ms.openlocfilehash: d1ad99b5fff30f5329525fc536e62f5690c0e9a9
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2022
-ms.locfileid: "68575774"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615323"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -31,6 +31,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 **Octobre 2022**
 
+* ***19 octobre 2022*** : [Le portail des développeurs pour Teams est désormais disponible pour les locataires GCC](concepts/build-and-test/teams-developer-portal.md).
 * ***13 octobre 2022*** : [Configurez NavBar et créez un menu de dépassement pour plusieurs actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***13 octobre 2022*** : [Bouton Configurer l’arrière d’une application](concepts/design/personal-apps.md#configure-back-button).
 * ***12 octobre 2022*** : [Les applications sont prises en charge dans les réunions instantanées, les appels en tête-à-tête et les appels de groupe.](apps-in-teams-meetings/teams-apps-in-meetings.md)
@@ -54,7 +55,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 03/08/2022 | Ajout de la fonctionnalité permettant de récupérer les transcriptions de réunion dans le scénario de post-réunion. | Créer des applications pour les réunions et les appels Teams > obtenir des transcriptions de réunions à l’aide des API Graph > [Vue d’ensemble](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03/08/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web | Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 08/01/2022| Remarque : Le portail des développeurs est désormais en disponibilité générale et App Studio est déconseillé à partir du 1er août 2022. | Outils et SDK > [Portail des développeurs pour les équipes](concepts/build-and-test/teams-developer-portal.md)  |
-| 28/07/2022 | Ajouter l’image d’affichage Teams et la carte contacts pour la notification en réunion| Créer des applications pour les réunions et les appels Teams > Activer et configurer des applications pour les réunions > [Notification en réunion](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 28/07/2022 | Ajouter l’image d’affichage Teams et la carte contacts pour la notification en réunion| Créer des applications pour les réunions et les appels Teams > activer et configurer des applications pour les réunions Teams > [générer une notification en réunion pour la réunion Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
 | 28/07/2022 | Créer des canaux partagés dans Teams | Créer des applications pour les réunions et les appels Teams > [Canaux partagés](concepts/build-and-test/Shared-channels.md) |
 | 28/07/2022|Présentation du manifeste d’application v1.14| Manifeste d’application > [Schéma de manifeste d’application pour Teams](resources/schema/manifest-schema.md)|
 | 26/07/2022|Actions suggérées pour les bots| Créer des bots > conversations de bot > [messages dans les conversations de bot](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
@@ -94,10 +95,10 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 18/02/2022 | Mise à jour du module Notions de base de l’application pour planifier votre application afin d’inclure des cas d’usage de mappage aux fonctionnalités Teams et une liste de vérification de planification d’application | [Planifier votre application > Vue d’ensemble](~/concepts/app-fundamentals-overview.md) |
 | 17/02/2022 | À quoi vous attendre après avoir envoyé votre application ?| Distribuer votre application > Publier dans le Magasin Teams > [Vue d’ensemble](concepts/deploy-and-publish/appsource/publish.md) |
 | 15/02/2022 | Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [Guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
-| 11/02/2022 | Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
+| 11/02/2022 | Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Créer des applications pour les réunions Teams > [créer des applications pour les réunions Teams](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 | 08/02/2022 | Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | Introduction de la version 1.12 du manifeste d’application | App Manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) |
-| 25/01/2022 | API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
+| 25/01/2022 | API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > références d’API Applications de [réunion> API de réunion avancée](apps-in-teams-meetings/meeting-apps-apis.md)|
 | 19/01/2022 | Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 17/01/2022 | Sélectionneur de personnes dans les cartes adaptatives pour le bureau | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
@@ -129,8 +130,8 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 |13/11/2021| Les bots peuvent être activés pour recevoir tous les messages du canal en utilisant le consentement spécifique aux ressources (RSC) | - Construire des bots > Conversations des bots > Messages dans les conversations des bots > [Recevoir tous les messages du canal avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)  </br> - Construire des bots > Conversations des bots > [Aperçu des conversations des bots](~/bots/how-to/conversations/conversation-basics.md)  </br> - Construire des bots > Conversations avec les bots > [Conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md)  |
 |28/10/2021| Monétisez votre application Teams avec une offre SaaS transactionnelle | Distribuez votre application > Publiez dans le magasin Teams > [Incluez une offre SaaS avec votre application Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).  |
 |25/10/2021| Mise à jour du module de mise en route pour la documentation du développeur Microsoft Teams avec une nouvelle structure et de nouvelles procédures dans un guide étape par étape | Démarrage > [Démarrez avec votre première application Teams](get-started/get-started-overview.md)  |
-|20/10/2021| La scène de réunion est maintenant disponible en GA | Créer des applications pour les réunions Teams > [Activer et configurer vos applications pour les réunions Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)  |
-|20/10/2021| API Meeting Details et événements de réunion Teams en temps réel | Créer des applications pour des réunions Teams > [Obtenir les détails de la réunion API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
+|20/10/2021| La scène de réunion est maintenant disponible en GA | Créer des applications pour les réunions Teams > [Activer et configurer vos applications pour les réunions Teams](apps-in-teams-meetings/build-tabs-for-meeting.md)  |
+|20/10/2021| API Meeting Details et événements de réunion Teams en temps réel | Créer des applications pour des réunions Teams > [Obtenir les détails de la réunion API](apps-in-teams-meetings/meeting-apps-apis.md) |
 |18/10/2021| Déploiement du lien des onglets et vue des étapes | Construire des onglets > [Déploiement des liens d'onglets et vue d'ensemble de la scène](tabs/tabs-link-unfurling.md)  |
 |08/10/2021| Nouvelles bonnes pratiques pour la conception de cartes adaptatives | Concevoir votre application > Composants de l'interface utilisateur > [Conception de cartes adaptatives pour votre application Teams](task-modules-and-cards/cards/design-effective-cards.md)  |
 |05/10/2021| Cachez l'application Teams jusqu'à ce que l'administrateur permette de la rétablir | Concevoir votre application > [bloquer les applications par défaut pour les utilisateurs jusqu’à ce qu’un administrateur approuve](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
@@ -143,7 +144,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 |19/08/2021| Événement de mise à jour de l'installation reçu lorsque vous installez un robot dans un fil de conversation | Construire des bots > Conversations avec les bots > [Événement de mise à jour de l'installation](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |12/08/2021|Créer des onglets avec les Cartes adaptatives| Construire des onglets > [Construire des onglets avec des cartes adaptatives](tabs/how-to/build-adaptive-card-tabs.md)  |
 |04/08/2021|Les onglets n'auront plus de marges entourant leurs expériences | Créer des onglets > [suppression des marges d’onglet](resources/removing-tab-margins.md) |
-|08/07/2021|Teams Mobile ajoute la prise en charge des applications dans les réunions | Créer des applications pour Teams réunions > [l’extensibilité des applications de réunion](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|08/07/2021|Teams Mobile ajoute la prise en charge des applications dans les réunions | Créer des applications pour les réunions Teams > [créer des applications pour une réunion Teams](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) |
 |28/06/2021|Intégrer Sélecteur de personnes fonctionnalité | Intégration avec Teams > [Intégration de la fonction People Picker](concepts/device-capabilities/people-picker-capability.md)  |  
 |25/06/2021| Introduction d'un guide étape par étape pour envoyer des messages proactifs | Créer des bots > Conversation avec les bots > Messages proactifs > [Guide étape par étape pour envoyer des messages proactifs](sbs-send-proactive.yml)  |
 |09/06/2021| Vue de scène pour les images dans les cartes adaptatives avec `allowExpand` attribut | Construire des cartes et des modules de tâches > Construire des cartes > [Vue de scène pour les images dans les cartes adaptatives](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)  |
@@ -290,14 +291,14 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 **Octobre 2022**
 
-***11 octobre 2022*** : [Générer un lien profond pour partager du contenu dans les réunions.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+***11 octobre 2022*** : [Générer un lien profond pour partager du contenu dans les réunions.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
-| 09/23/2022 | Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées. | Créer des applications pour les réunions et les appels Teams > [applications de réunions unifiées](apps-in-teams-meetings/meeting-app-extensibility.md) |
+| 09/23/2022 | Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées. | Créer des applications pour les réunions et les appels Teams > [les réunions et les appels d’applications pour Teams](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Partager des applications vers la phase de réunion Teams dans le mobile | Créer des applications pour les réunions et les appels Teams > [activer et configurer des applications pour les réunions](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Applications pour les réunions de canal public planifiées | Créer des applications pour les réunions et les appels Teams > [Vue d’ensemble](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Désactiver et activer le son des API pour les applications dans l’étape de réunion Teams | Créer des applications pour les réunions et les appels Teams > [références d’API Applications de réunion](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |

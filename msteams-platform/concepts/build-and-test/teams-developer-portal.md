@@ -4,12 +4,12 @@ description: Dans cet article, découvrez-en plus sur le portail des développeu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417499"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615134"
 ---
 # <a name="developer-portal-for-teams"></a>Documentation pour les développeurs
 
@@ -19,9 +19,8 @@ ms.locfileid: "67417499"
 
 > [!NOTE]
 >
-> * Actuellement, Developer Portal n’est pas disponible pour les locataires Cloud de la communauté du secteur public (GCC), GCC-High ou department of Defense (DOD).
+> * Actuellement, le portail des développeurs n’est pas disponible pour les locataires Government Community Cloud (GCC)-High ou Department of Defense (DOD).
 > * Toutefois, vous pouvez utiliser un locataire standard pour créer une application dans le Developer Portal, télécharger l’application et charger l’application à l’aide de [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) dans un cloud national. Pour plus d’informations, consultez [Déploiements cloud nationaux](/graph/deployments).
-> * Actuellement, dans certains scénarios, le portail des développeurs ne se charge pas dans le navigateur quand AdBlocker est activé. Pour continuer avec le portail des développeurs dans le navigateur, désactivez AdBlocker.
 
 ## <a name="register-an-app"></a>Inscrire une application
 

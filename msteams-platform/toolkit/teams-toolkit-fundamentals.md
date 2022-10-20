@@ -7,16 +7,14 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 84a18c736c59c992bb4e3e51962ed631483f7f2b
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68296022"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615337"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Parcours utilisateur du Kit de ressources Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Teams Toolkit facilite la prise en main du développement d’applications pour Microsoft Teams à l’aide de Visual Studio et Visual Studio Code.
 
@@ -27,13 +25,15 @@ Teams Toolkit facilite la prise en main du développement d’applications pour 
 * Créer des configurations uniques comme dev, test et prod à l’aide de la fonctionnalité Environnements
 * Apporter votre application à votre organisation ou au App Store Teams à l’aide d’outils de publication intégrés
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Parcours utilisateur du Kit de ressources Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+
 ## <a name="available-for-visual-studio-and-visual-studio-code"></a>Disponible pour Visual Studio et Visual Studio Code
 
 Teams Toolkit est disponible gratuitement pour Visual Studio Code et prend en charge Visual Studio 2022 Community, Professional et Enterprise. Pour plus d’informations sur l’installation et l’installation, consultez la [documentation install Teams Toolkit](./install-Teams-Toolkit.md) .
 
 | Toolkit Teams | Visual Studio | Visual Studio Code |
 | - | ------------- | ------------------ |
-| Installation | Disponible dans Visual Studio Installer | Disponible sur la Place de marché VS |
+| Installation | Disponible dans le Visual Studio Installer | Disponible sur la Place de marché VS |
 | Générer avec | C#, .NET, ASP.NET, Blazor | JavaScript, TypeScript, React, SPFx |
 
 ## <a name="features"></a>Fonctionnalités
