@@ -1,15 +1,15 @@
 ---
 title: Envoyer des messages proactifs
-description: Découvrez comment envoyer des messages proactifs avec votre bot Teams, installer votre application à l’aide de Microsoft Graph et vérifier des exemples de code basés sur le Kit de développement logiciel (SDK) Bot Framework v4.
+description: Découvrez comment envoyer des messages proactifs avec votre bot Teams, installer votre application à l’aide de Microsoft Graph et consulter des exemples de code basés sur le Kit de développement logiciel (SDK) Bot Framework v4.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 13db8624cfd9b8bc73adce0a418fe5283455bf5f
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: dec8739cbab66e9ddd6aac18038a001b1fdfa104
+ms.sourcegitcommit: b72f51377f41be18ee9b70b042f736605f755cf1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243023"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68670048"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -23,13 +23,13 @@ Un message proactif est un message envoyé par un bot qui ne répond pas à la d
 
 > [!IMPORTANT]
 >
-> * Pour envoyer un message proactif, il est recommandé de commencer par [créer un bot de notification avec JavaScript](../../../sbs-gs-notificationbot.yml) ou un [exemple de notification de webhook entrant](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Pour commencer, téléchargez [l’exploration du Kit de ressources Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) . Pour plus d’informations, consultez les [documents du Kit de ressources Teams](../../../toolkit/teams-toolkit-fundamentals.md).
+> * Pour envoyer un message proactif, il est recommandé de commencer par [créer un bot de notification avec JavaScript](../../../sbs-gs-notificationbot.yml) ou un [exemple de notification de webhook entrant](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Pour commencer, téléchargez [l’exploration du Kit de ressources Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) . Pour plus d’informations, consultez [Documents du Kit de ressources Teams](../../../toolkit/teams-toolkit-fundamentals.md).
 >
 > * Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD). Pour les messages proactifs, les bots doivent utiliser les points de terminaison suivants pour les environnements cloud gouvernementaux : <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Pour envoyer un message proactif à un utilisateur, à une conversation de groupe ou à une équipe, votre bot doit disposer de l’accès requis pour envoyer le message. Pour une conversation de groupe ou d’équipe, l’application contenant votre bot doit d’abord être installée à cet emplacement.
 
-Vous pouvez [installer votre application de manière proactive à l’aide de Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une [stratégie d’application personnalisée](/microsoftteams/teams-custom-app-policies-and-settings) pour installer une application dans vos équipes et pour les utilisateurs de l’organisation. Dans certains cas, vous devez [installer votre application de manière proactive à l’aide de Graph](#proactively-install-your-app-using-graph). Pour qu’un utilisateur reçoive des messages proactifs, installez l’application pour l’utilisateur ou faites de l’utilisateur une partie d’une équipe dans laquelle l’application est installée.
+Vous pouvez [installer de manière proactive votre application à l’aide de Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une stratégie [d’application personnalisée](/microsoftteams/teams-custom-app-policies-and-settings) pour installer une application dans vos équipes et pour les utilisateurs de l’organisation. Dans certains cas, vous devez [installer votre application de manière proactive à l’aide de Graph](#proactively-install-your-app-using-graph). Pour qu’un utilisateur reçoive des messages proactifs, installez l’application pour l’utilisateur ou faites-le partie d’une équipe dans laquelle l’application est installée.
 
 L’envoi d’un message proactif est différent de l’envoi d’un message classique. Il n’existe aucun `turnContext` actif à utiliser pour la réponse. Vous devez créer la conversation avant l’envoi du message. Par exemple, une nouvelle conversation individuelle ou un nouveau thread de conversation dans un canal. Vous ne pouvez pas créer une conversation de groupe ou un nouveau canal dans une équipe à l’aide d’une messagerie proactive.
 
@@ -40,11 +40,11 @@ Pour envoyer un message proactif, suivez ces étapes :
 1. [Obtenez l’identification de la conversation](#get-the-conversation-id).
 1. [Envoyez le message](#send-the-message).
 
-Les extraits de code de la section [Exemples](#samples) permettent de créer une conversation un-à-un. Pour obtenir des liens vers des exemples pour les conversations un-à-un et les messages de groupe ou de canaux, consultez [l’exemple de code](#code-sample). Pour utiliser efficacement des messages proactifs, consultez [les meilleures pratiques pour la messagerie proactive](#best-practices-for-proactive-messaging).
+Les extraits de code de la section [exemples](#samples) doivent créer une conversation un-à-un. Pour obtenir des liens vers des exemples de conversations un-à-un et de messages de groupe ou de canaux, consultez exemple [de code](#code-sample). Pour utiliser efficacement les messages proactifs, consultez [les meilleures pratiques en matière de messagerie proactive](#best-practices-for-proactive-messaging).
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Obtenir l’identifiant utilisateur, l’identification de l’équipe ou l’identification du canal
 
-Pour créer une conversation ou un fil de conversation dans un canal, vous devez disposer de l’ID approprié. Vous pouvez recevoir ou récupérer cet ID de l’une des manières suivantes :
+Pour créer une conversation ou un thread de conversation dans un canal, vous devez disposer de l’ID correct. Vous pouvez recevoir ou récupérer cet ID de l’une des manières suivantes :
 
 * Lorsque votre application est installée dans un contexte particulier, vous recevez une [`onMembersAdded` activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Lorsqu’un nouvel utilisateur est ajouté à un contexte où votre application est installée, vous recevez une [`onMembersAdded`activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -52,7 +52,7 @@ Pour créer une conversation ou un fil de conversation dans un canal, vous devez
 * Vous pouvez récupérer la [liste des canaux](~/bots/how-to/get-teams-context.md) d’une équipe où votre application est installée.
 * Vous pouvez récupérer la [liste des membres](~/bots/how-to/get-teams-context.md) d’une équipe où votre application est installée.
 
-Quelle que soit la façon dont vous obtenez les informations, stockez le `tenantId` ou les `userId` `channelId` éléments pour créer une conversation. Vous pouvez également utiliser le `teamId` pour créer un thread de conversation dans le canal général ou par défaut d’une équipe.
+Quelle que soit la façon dont vous obtenez les informations, stockez le `tenantId` et le `userId` ou `channelId` pour créer une conversation. Vous pouvez également utiliser le `teamId` pour créer un thread de conversation dans le canal général ou par défaut d’une équipe.
 
 Le `userId` est propre à votre identification de bot et à un utilisateur particulier. Vous ne pouvez pas réutiliser le `userId` entre les bots. Le `channelId` est global. Toutefois, installez le bot dans l’équipe avant de pouvoir envoyer un message proactif à un canal.
 
@@ -60,11 +60,11 @@ Créez la conversation, une fois que vous avez les informations de l’utilisate
 
 ## <a name="create-the-conversation"></a>Créer la conversation
 
-Créez la conversation si elle n’existe pas ou si vous ne connaissez pas .`conversationId` Créez la conversation une seule fois et stockez la valeur ou `conversationReference` l’objet`conversationId`.
+Créez la conversation si elle n’existe pas ou si vous ne connaissez pas .`conversationId` Créez la conversation une seule fois et stockez la valeur ou l’objet `conversationId` `conversationReference` .
 
 Vous pouvez obtenir la conversation lorsque l’application est installée pour la première fois. Une fois la conversation créée, [obtenez l’ID de conversation](#get-the-conversation-id). `conversationId` est disponible dans les événements de mise à jour de conversation.
 
-Si vous n’en avez `conversationId`pas, vous pouvez [installer votre application de manière proactive à l’aide de Graph](#proactively-install-your-app-using-graph) pour obtenir le `conversationId`.
+Si vous n’avez pas le `conversationId`, vous pouvez [installer de manière proactive votre application à l’aide de Graph](#proactively-install-your-app-using-graph) pour obtenir le `conversationId`.
 
 ## <a name="get-the-conversation-id"></a>Obtenir l’identification de la conversation
 
@@ -77,7 +77,7 @@ Une fois les informations d’adresse appropriées reçues, vous pouvez envoyer 
 Maintenant que vous avez les bonnes informations relatives à l’adresse, vous pouvez envoyer votre message. Si vous utilisez le Kit de développement logiciel (SDK), vous devez utiliser la méthode `continueConversation`, ainsi que `conversationId` et `tenantId` pour effectuer un appel d’API direct. Pour envoyer votre message, définissez .`conversationParameters` Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code](#code-sample).
 
 > [!NOTE]
-> Teams ne prend pas en charge l’envoi de messages proactifs à l’aide d’un e-mail ou d’un nom d’utilisateur principal (UPN).
+> Teams ne prend pas en charge l’envoi de messages proactifs à l’aide de l’e-mail ou du nom d’utilisateur principal (UPN).
 
 Maintenant que vous avez envoyé le message proactif, vous devez suivre ces meilleures pratiques lors de l’envoi de messages proactifs pour améliorer l’échange d’informations entre les utilisateurs et le bot.
 
@@ -85,16 +85,16 @@ Visionnez la vidéo suivante pour découvrir comment envoyer des messages proact
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>Comprendre qui a bloqué, désactivé ou désinstallé un bot
 
-En tant que développeur, vous pouvez créer un rapport pour comprendre quels utilisateurs de votre organisation ont bloqué, désactivé ou désinstallé un bot. Ces informations peuvent aider les administrateurs de votre organisation à diffuser des messages à l’échelle de l’organisation ou à favoriser l’utilisation de l’application.
+En tant que développeur, vous pouvez créer un rapport pour comprendre quels utilisateurs de votre organisation ont bloqué, désactivé ou désinstallé un bot. Ces informations peuvent aider les administrateurs de votre organisation à diffuser des messages à l’échelle de l’organisation ou à piloter l’utilisation de l’application.
 
-Avec Teams, vous pouvez envoyer un message proactif au bot pour vérifier si un utilisateur a bloqué ou désinstallé un bot. Si le bot est bloqué ou désinstallé, Teams retourne un `403` code de réponse avec un `subCode: MessageWritesBlocked`. Cette réponse indique que le message envoyé par le bot n’est pas remis à l’utilisateur.
+À l’aide de Teams, vous pouvez envoyer un message proactif au bot pour vérifier si un utilisateur a bloqué ou désinstallé un bot. Si le bot est bloqué ou désinstallé, Teams retourne un `403` code de réponse avec un `subCode: MessageWritesBlocked`. Cette réponse indique que le message envoyé par le bot n’est pas remis à l’utilisateur.
 
-Le code de réponse est envoyé par utilisateur et inclut l’identité de l’utilisateur. Vous pouvez compiler les codes de réponse de chaque utilisateur avec leur identité pour créer un rapport de tous les utilisateurs qui ont bloqué le bot.
+Le code de réponse est envoyé par utilisateur et inclut l’identité de l’utilisateur. Vous pouvez compiler les codes de réponse de chaque utilisateur avec son identité pour créer un rapport de tous les utilisateurs qui ont bloqué le bot.
 
 Voici un exemple de code de réponse 403.
 
@@ -129,29 +129,29 @@ L’envoi de messages proactifs aux utilisateurs constitue un moyen de communica
 
 ### <a name="welcome-messages"></a>Les messages de bienvenue
 
-Lorsque la messagerie proactive est utilisée pour envoyer un message d’accueil à un utilisateur, il n’existe aucun contexte pour expliquer pourquoi l’utilisateur reçoit le message. En outre, il s’agit de la première interaction de l’utilisateur avec votre application. C’est l’opportunité de faire une bonne première impression. Une bonne expérience utilisateur garantit une meilleure adoption de l’application. Les messages d’accueil médiocres peuvent amener les utilisateurs à bloquer votre application. Écrivez un message d’accueil clair et itérer sur le message d’accueil s’il n’a pas l’effet souhaité.
+Lorsque la messagerie proactive est utilisée pour envoyer un message de bienvenue à un utilisateur, il n’existe aucun contexte pour la raison pour laquelle l’utilisateur reçoit le message. En outre, il s’agit de la première interaction de l’utilisateur avec votre application. C’est l’opportunité de faire une bonne première impression. Une bonne expérience utilisateur garantit une meilleure adoption de l’application. Des messages de bienvenue médiocres peuvent amener les utilisateurs à bloquer votre application. Écrivez un message de bienvenue clair et effectuez une itération sur le message d’accueil s’il n’a pas l’effet souhaité.
 
 Un bon message de bienvenue peut inclure les éléments suivants :
 
-* Motif du message : il doit être clair pour l’utilisateur pourquoi il reçoit le message. Si votre robot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, faites-leur savoir dans quel canal il a été installé et qui l'a installé.
+* Raison du message : l’utilisateur doit savoir pourquoi il reçoit le message. Si votre robot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, faites-leur savoir dans quel canal il a été installé et qui l'a installé.
 
-* Votre offre : les utilisateurs doivent être en mesure d’identifier ce qu’ils peuvent faire avec votre application et quelle valeur pouvez-vous leur apporter.
+* Votre offre : les utilisateurs doivent être en mesure d’identifier ce qu’ils peuvent faire avec votre application et la valeur que vous pouvez leur apporter.
 
 * Étapes suivantes : les utilisateurs doivent comprendre les étapes suivantes. Par exemple, invitez les utilisateurs à essayer une commande ou à interagir avec votre application.
 
 ### <a name="notification-messages"></a>Les messages de notification
 
-Pour envoyer des notifications à l’aide d’une messagerie proactive, vérifiez que vos utilisateurs ont un chemin d’accès clair pour prendre des mesures communes basées sur votre notification. Veillez à ce que les utilisateurs comprennent clairement pourquoi ils ont reçu une notification. Les bons messages de notification incluent généralement les éléments suivants :
+Pour envoyer des notifications à l’aide d’une messagerie proactive, vérifiez que vos utilisateurs ont un chemin d’accès clair pour prendre des mesures communes basées sur votre notification. Veillez à ce que les utilisateurs comprennent clairement pourquoi ils ont reçu une notification. Les messages de notification corrects incluent généralement les éléments suivants :
 
 * Que s'est-il passé ? Une indication claire de ce qui a causé la réception de la notification.
 
 * Quel a été le résultat? Il doit être clair et indiquer quel élément est mis à jour pour recevoir la notification.
 
-* Qui ou ce qui l’a déclenché? Qui ou ce qui a pris des mesures, ce qui a provoqué l’envoi de la notification.
+* Qui ou ce qui l’a déclenché? Qui ou qui a pris des mesures, ce qui a provoqué l’envoi de la notification.
 
 * Que peuvent faire les utilisateurs en réponse? Faciliter l’action de vos utilisateurs en fonction de vos notifications
 
-* Comment les utilisateurs peuvent-ils refuser? Vous devez fournir un chemin d’accès pour permettre aux utilisateurs de refuser d’autres notifications.
+* Comment les utilisateurs peuvent-ils refuser? Vous devez fournir un chemin d’accès permettant aux utilisateurs de refuser d’autres notifications.
 
 Pour envoyer des messages à un grand groupe d’utilisateurs, par exemple à votre organisation, installez votre application de manière proactive en utilisation Graph.
 
