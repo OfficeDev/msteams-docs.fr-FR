@@ -1,33 +1,33 @@
 ---
 title: Messages dans les conversations des robots
-description: Découvrez comment envoyer recevoir un message, des actions suggérées, des notifications, des pièces jointes, des images, des réponses de code d’erreur de carte adaptative et d’état.
+description: Découvrez comment envoyer un message, des actions suggérées, une notification, des pièces jointes, des images, une carte adaptative et des réponses de code d’erreur d’état.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 152515f16ff27467feac6e17aeb1310abc548c54
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: 99594722225350e102b47d7a77314212192f7820
+ms.sourcegitcommit: 75ce5a6f7540775b768f69a9cf18dac17e5055d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327593"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68657624"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
 Chaque message d’une conversation est un `Activity` objet de type `messageType: message`. Lorsqu’un utilisateur envoie un message, Microsoft Teams le publie sur votre bot. Teams envoie un objet JSON au point de terminaison de messagerie de votre bot et Teams n’autorise qu’un seul point de terminaison pour la messagerie. Votre bot examine le message pour déterminer son type et répond en conséquence.
 
-Les conversations de base sont gérées via le connecteur Bot Framework, une API REST unique. Cette API permet à votre bot de communiquer avec Teams et d’autres canaux. Le Kit de développement logiciel (SDK) Bot Builder fournit les fonctionnalités suivantes :
+Les conversations de base sont gérées via le connecteur Bot Framework, une seule API REST. Cette API permet à votre bot de communiquer avec Teams et d’autres canaux. Le Kit de développement logiciel (SDK) Bot Builder fournit les fonctionnalités suivantes :
 
 * Accès facile au connecteur Bot Framework.
-* Fonctionnalités supplémentaires pour gérer le flux et l’état de conversation.
-* Méthodes simples pour incorporer des services cognitifs, tels que le traitement en langage naturel (NLP).
+* Fonctionnalités supplémentaires pour gérer l’état et le flux de conversation.
+* Moyens simples d’incorporer des services cognitifs, tels que le traitement du langage naturel (NLP).
 
-Votre bot reçoit des messages de Teams à l’aide de la `Text` propriété et envoie des réponses de message uniques ou multiples aux utilisateurs.
+Votre bot reçoit des messages de Teams à l’aide de la `Text` propriété et envoie un ou plusieurs messages aux utilisateurs.
 
-Pour plus d’informations, consultez [Attribution d’utilisateur pour les messages de bot](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
+Pour plus d’informations, consultez [Attribution d’utilisateurs pour les messages de bot](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
 
 ## <a name="receive-a-message"></a>Recevoir un message
 
-Pour recevoir un message texte, utilisez la propriété `Text` de l’objet `Activity`. Dans le gestionnaire d’activités du bot, utilisez l’`Activity` de l’objet de contexte de tour pour lire un seul message de demande.
+Pour recevoir un sms, utilisez la `Text` propriété d’un `Activity` objet . Dans le gestionnaire d’activités du bot, utilisez l’`Activity` de l’objet de contexte de tour pour lire un seul message de demande.
 
 Le code suivant montre un exemple de réception d’un message :
 
@@ -120,7 +120,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Envoyer un message
 
-Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité. Dans le gestionnaire d’activités du bot, utilisez la méthode de l’objet de contexte de `SendActivityAsync` tour pour envoyer une réponse de message unique. Utilisez la méthode de `SendActivitiesAsync` l’objet pour envoyer plusieurs réponses à la fois.
+Pour envoyer un sms, spécifiez la chaîne que vous souhaitez envoyer en tant qu’activité. Dans le gestionnaire d’activités du bot, utilisez la méthode de `SendActivityAsync` l’objet de contexte de tour pour envoyer une réponse de message unique. Utilisez la méthode de l’objet `SendActivitiesAsync` pour envoyer plusieurs réponses.
 
 Le code suivant montre un exemple d’envoi d’un message lorsqu’un utilisateur est ajouté à une conversation :
 
@@ -193,17 +193,17 @@ async def on_members_added_activity(
 
 > [!NOTE]
 >
->* Le fractionnement des messages se produit lorsqu’un sms et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un simple SMS et l’autre avec une pièce jointe. Lorsque l’activité est fractionnée, vous ne recevez pas l’ID de message en réponse, qui est utilisé pour [mettre à jour ou supprimer](~/bots/how-to/update-and-delete-bot-messages.md) le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+>* Le fractionnement des messages se produit lorsqu’un sms et une pièce jointe sont envoyés dans la même charge utile d’activité. Teams divise cette activité en deux activités distinctes, l’une avec un SMS et l’autre avec une pièce jointe. Comme l’activité est fractionnée, vous ne recevez pas l’ID de message en réponse, qui est utilisé pour [mettre à jour ou supprimer](~/bots/how-to/update-and-delete-bot-messages.md) le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
 >* Les messages envoyés peuvent être localisés pour fournir une personnalisation. Pour plus d’informations, consultez [Localiser votre application](../../../concepts/build-and-test/apps-localization.md).
 
-Les messages envoyés entre les utilisateurs et les bots incluent des données de canal internes dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le Kit de développement logiciel (SDK) Bot Builder vous permet de modifier la structure des messages.
+Les messages envoyés entre les utilisateurs et les bots incluent des données de canal interne dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le Kit de développement logiciel (SDK) Bot Builder vous permet de modifier la structure des messages.
 
 ## <a name="send-suggested-actions"></a>Envoyer des actions suggérées
 
-Les actions suggérées permettent à votre bot de présenter des boutons que l’utilisateur peut sélectionner pour fournir une entrée. Les actions suggérées améliorent l’expérience utilisateur en permettant à l’utilisateur de répondre à une question ou de faire un choix avec la sélection d’un bouton, plutôt que de taper une réponse avec un clavier.
-Les boutons restent visibles et accessibles à l’utilisateur dans les cartes enrichies même après que l’utilisateur a effectué une sélection alors que pour les actions suggérées, les boutons ne sont pas disponibles. Cela empêche l’utilisateur de sélectionner des boutons obsolètes dans une conversation.
+Les actions suggérées permettent à votre bot de présenter des boutons que l’utilisateur peut sélectionner pour fournir une entrée. Les actions suggérées améliorent l’expérience utilisateur en permettant à l’utilisateur de répondre à une question ou de faire un choix en sélectionnant un bouton, plutôt que de taper une réponse avec un clavier.
+Lorsque l’utilisateur sélectionne un bouton, celui-ci reste visible et accessible dans les cartes enrichies, mais pas pour les actions suggérées. Cela empêche l’utilisateur de sélectionner des boutons obsolètes dans une conversation.
 
-Pour ajouter des actions suggérées à un message, définissez la `suggestedActions` propriété de l’objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) pour spécifier la liste des objets [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) qui représentent les boutons à présenter à l’utilisateur. Pour plus d’informations, consultez [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+Pour ajouter des actions suggérées à un message, définissez la `suggestedActions` propriété d’un objet [d’activité](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) pour spécifier la liste des objets [d’action de carte](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) qui représentent les boutons à présenter à l’utilisateur. Pour plus dʼinformations, reportez-vous à [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
 
 Voici un exemple d’implémentation et d’expérience des actions suggérées :
 
@@ -225,29 +225,31 @@ Voici un exemple d’implémentation et d’expérience des actions suggérées 
   }
 ```
 
+Voici un exemple d’actions suggérées :
+
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Actions suggérées par le bot" border="true":::
 
 > [!NOTE]
 >
-> * `SuggestedActions` ne sont pris en charge que pour les bots conversationnels et les messages texte, et non pour les cartes adaptatives ou les pièces jointes.
-> * Actuellement `imBack` , il s’agit du seul type d’action pris en charge et Teams affiche jusqu’à trois actions suggérées.
+> * `SuggestedActions` sont uniquement pris en charge pour les bots de conversation en un-à-un et les messages texte, et non pour les cartes adaptatives ou les pièces jointes.
+> * `imBack` est le seul type d’action pris en charge et Teams affiche jusqu’à trois actions suggérées.
 
 ## <a name="teams-channel-data"></a>Données du canal Teams
 
-L’objet `channelData` contient des informations spécifiques à Teams et constitue une source définitive pour les ID d’équipe et de canal. Si vous le souhaitez, vous pouvez mettre en cache et utiliser ces ID comme clés pour le stockage local. Le `TeamsActivityHandler` Kit de développement logiciel (SDK) extrait les informations importantes de l’objet `channelData` pour les rendre facilement accessibles. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de l’objet `turnContext` .
+L’objet `channelData` contient des informations spécifiques à Teams et constitue une source définitive pour les ID d’équipe et de canal. Si vous le souhaitez, vous pouvez mettre en cache et utiliser ces ID comme clés pour le stockage local. Dans `TeamsActivityHandler` le SDK, le extrait les informations importantes de l’objet pour le `channelData` rendre accessible. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de l’objet `turnContext` .
 
-L’objet `channelData` n’est pas inclus dans les messages dans les conversations personnelles, car ils ont lieu en dehors d’un canal.
+L’objet `channelData` n’est pas inclus dans les messages dans les conversations personnelles, car celles-ci ont lieu en dehors d’un canal.
 
 Un objet classique `channelData` d’une activité envoyée à votre bot contient les informations suivantes :
 
-* `eventType`: Type d’événement Teams passé uniquement en cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: ID de locataire Microsoft Azure Active Directory (Azure AD) passé dans tous les contextes.
-* `team`: transmis uniquement dans les contextes de canal, et non dans les conversations personnelles.
-  * `id`: GUID pour le canal.
-  * `name`: nom de l’équipe passée uniquement en cas [d’événements de changement de nom d’équipe](subscribe-to-conversation-events.md#team-renamed).
+* `eventType`: type d’événement Teams transmis uniquement en cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `tenant.id`: id de locataire Microsoft Azure Active Directory (Azure AD) passé dans tous les contextes.
+* `team`: transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.
+  * `id`: GUID du canal.
+  * `name`: nom de l’équipe passé uniquement en cas [d’événements de renommage d’équipe](subscribe-to-conversation-events.md#team-renamed).
 * `channel`: transmis uniquement dans les contextes de canal, lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes, où le bot a été ajouté.
-  * `id`: GUID pour le canal.
-  * `name`: nom du canal passé uniquement en cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  * `id`: GUID du canal.
+  * `name`: nom de canal transmis uniquement en cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId`:Déconseillée. Cette propriété est incluse uniquement pour la compatibilité descendante.
 * `channelData.teamsChannelId`:Déconseillée. Cette propriété est incluse uniquement pour la compatibilité descendante.
 
@@ -278,16 +280,103 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 | Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔️                | ✔️                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
-| Images  | ✔️                | ✔️                | Maximum 1 024 × 1 024 pixels et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
-| Cartes     | ❌                | ✔️                | Consultez la [référence de carte Teams](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes prises en charge. |
-| Emojis    | ✔️                | ✔️                | Teams prend actuellement en charge les emojis par le biais d’UTF-16, tels que U+1F600 pour les visages grinçants. |
+| Images  | ✔️                | ✔️                | Maximum 1 024 × 1 024 pixels et 1 Mo au format PNG, JPEG ou GIF. Ne prend pas en charge le GIF animé. |
+| Cartes     | ❌                | ✔️                | Consultez [Informations de référence sur les cartes Teams](~/task-modules-and-cards/cards/cards-reference.md) pour connaître les cartes prises en charge. |
+| Emojis    | ✔️                | ✔️                | Teams prend actuellement en charge les emojis via UTF-16, tels que U+1F600 pour le sourire. |
 
-## <a name="notifications-to-your-message"></a>Notifications à votre message
+### <a name="picture-messages"></a>Messages d’image
 
-Vous pouvez également ajouter des notifications à votre message à l’aide de la `Notification.Alert` propriété. Les notifications alertent les utilisateurs sur les nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou à ce qu’ils doivent examiner en insérant une notification dans leur flux d’activité. Pour que les notifications se déclenchent à partir de votre message de bot, définissez la propriété d’objets `TeamsChannelData` `Notification.Alert` sur *true*. L’activation ou non d’une notification dépend des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+Pour améliorer votre message, vous pouvez inclure des images en tant que pièces jointes à ce message. Pour plus d’informations sur les pièces jointes, consultez [Ajouter des pièces jointes multimédias aux messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+
+Les images peuvent être au maximum 1024 × 1 024 pixels et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
+
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille d’image par défaut est 256×256. Par exemple :
+
+* Utilisez : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+Un bot conversationnel peut inclure des cartes adaptatives qui simplifient les workflows métier. Les cartes adaptatives offrent du texte, de la parole, des images, des boutons et des champs d’entrée personnalisables enrichis.
+
+### <a name="adaptive-cards"></a>Cartes adaptatives
+
+Les cartes adaptatives peuvent être créées dans un bot et affichées dans plusieurs applications telles que Teams, votre site web, etc. Pour plus d’informations, voir [Cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+
+Le code suivant montre un exemple d’envoi d’une carte adaptative simple :
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+#### <a name="form-completion-feedback"></a>Commentaires sur l’achèvement du formulaire
+
+Vous pouvez générer des commentaires sur la saisie semi-automatique des formulaires à l’aide d’une carte adaptative. Le message de saisie semi-automatique du formulaire s’affiche dans cartes adaptatives lors de l’envoi d’une réponse au bot. Le message peut être de deux types, erreur ou réussite :
+
+* **Erreur** : Lorsqu’une réponse envoyée au bot échoue, **un problème s’est produit, le message Réessayer** s’affiche.
+
+     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Message d’erreur"border="true":::
+
+* **Réussite** : lorsqu’une réponse envoyée au bot réussit, **votre réponse a été envoyée au message de l’application s’affiche** .
+
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Message de réussite"border="true":::
+
+     Vous pouvez sélectionner **Fermer** ou basculer la conversation pour ignorer le message.
+
+     Si vous ne souhaitez pas afficher le message de réussite, définissez l’attribut `hide` `true` sur dans la `msTeams` `feedback` propriété . Voici un exemple :
+
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+
+Pour plus d’informations sur les cartes et les cartes dans les bots, consultez [la documentation](~/task-modules-and-cards/what-are-cards.md) sur les cartes.
+
+## <a name="add-notifications-to-your-message"></a>Ajouter des notifications à votre message
+
+Il existe deux façons d’envoyer une notification à partir de votre application :
+
+* En définissant la propriété sur le `Notification.Alert` message du bot.
+* En envoyant une notification de flux d’activité à l’aide du API Graph.
+
+Vous pouvez ajouter des notifications à votre message à l’aide de la `Notification.Alert` propriété . Les notifications alertent les utilisateurs d’un événement dans votre application, tel que de nouvelles tâches, mentions ou commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou à ce qu’ils doivent examiner en insérant un avis dans leur flux d’activité. Pour que les notifications se déclenchent à partir de votre message de bot, définissez la `TeamsChannelData` propriété objects `Notification.Alert` sur *true*. Si une notification est déclenchée dépend des paramètres Teams de l’utilisateur individuel, et vous ne pouvez pas remplacer ces paramètres.
+
+Si vous souhaitez générer une notification arbitraire sans envoyer de message à l’utilisateur, vous pouvez utiliser la API Graph. Pour plus d’informations, consultez [comment envoyer des notifications de flux d’activité à l’aide de API Graph](/graph/teams-send-activityfeednotifications) ainsi que les [meilleures pratiques](/graph/teams-activity-feed-notifications-best-practices).
 
 > [!NOTE]
-> Le champ **Résumé** affiche le texte de l’utilisateur sous la forme d’un message de notification dans le flux.
+> Le champ **Résumé** affiche n’importe quel texte de l’utilisateur sous forme de message de notification dans le flux.
 
 Le code suivant montre un exemple d’ajout de notifications à votre message :
 
@@ -362,118 +451,36 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-Pour améliorer votre message, vous pouvez inclure des images en tant que pièces jointes à ce message.
-
-## <a name="picture-messages"></a>Messages d’image
-
-Les images sont envoyées en ajoutant des pièces jointes à un message. Pour plus d’informations sur les pièces jointes, consultez [ajouter des pièces jointes multimédias aux messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
-
-Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
-
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
-
-* Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-* N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
-
-Un bot conversationnel peut inclure des cartes adaptatives qui simplifient les flux de travail métier. Les cartes adaptatives offrent un texte, une voix, des images, des boutons et des champs d’entrée personnalisables enrichis.
-
-## <a name="adaptive-cards"></a>Cartes adaptatives
-
-Les cartes adaptatives peuvent être créées dans un bot et affichées dans plusieurs applications telles que Teams, votre site web, etc. Pour plus d’informations, voir [Cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
-
-Le code suivant montre un exemple d’envoi d’une carte adaptative simple :
-
-```json
-{
-    "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-    {
-        "items": [
-        {
-            "size": "large",
-            "text": " Simple Adaptivecard Example with a Textbox",
-            "type": "TextBlock",
-            "weight": "bolder",
-            "wrap": true
-        },
-        ],
-        "spacing": "extraLarge",
-        "type": "Container",
-        "verticalContentAlignment": "center"
-    }
-    ]
-}
-```
-
-### <a name="form-completion-feedback"></a>Commentaires sur l’achèvement du formulaire
-
-Le message d’achèvement du formulaire s’affiche dans les cartes adaptatives lors de l’envoi d’une réponse au bot. Le message peut être de deux types : erreur ou réussite :
-
-* **Erreur** : lorsqu’une réponse envoyée au bot échoue, **un problème s’est produit, le message Réessayer** s’affiche.
-
-     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Message d’erreur"border="true":::
-
-* **Réussite** : lorsqu’une réponse envoyée au bot réussit, **votre réponse a été envoyée au message d’application** .
-
-     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Message de réussite"border="true":::
-
-     Vous pouvez sélectionner **Fermer** ou changer de conversation pour ignorer le message.
-
-     Si vous ne souhaitez pas afficher le message de réussite, définissez l’attribut `hide` `true` sur la `msTeams` `feedback` propriété. Voici un exemple :
-
-     ```json
-        "content": {
-            "type": "AdaptiveCard",
-            "title": "Card with hidden footer messages",
-            "version": "1.0",
-            "actions": [
-            {
-                "type": "Action.Submit",
-                "title": "Submit",
-                "msTeams": {
-                    "feedback": {
-                    "hide": true
-                    }
-                }
-            }
-            ]
-        } 
-     ```
-
-Pour plus d’informations sur les cartes et les cartes dans les bots, consultez la documentation sur les [cartes](~/task-modules-and-cards/what-are-cards.md).
-
-## <a name="status-codes-from-bot-conversational-apis"></a>Codes d’état des API conversationnelles du bot
+## <a name="status-codes-from-bot-conversational-apis"></a>Codes d’état des API conversationnelles de bot
 
 Veillez à gérer ces erreurs de manière appropriée dans votre application Teams. Le tableau suivant répertorie les codes d’erreur et les descriptions sous lesquels les erreurs sont générées :
 
 | Code d'état | Code d’erreur et valeurs de message | Description | Demande de nouvelle tentative | Action du développeur |
 |----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code** : `Bad Argument` <br/> **Message** : *scénario spécifique | Charge utile de requête non valide fournie par le bot. Pour plus d’informations, consultez le message d’erreur. | Non | Réévaluez la charge utile de la demande pour les erreurs. Pour plus d’informations, consultez le message d’erreur retourné. |
-| 401 | **Code** : `BotNotRegistered` <br/> **Message** : Aucune inscription trouvée pour ce bot. | L’inscription de ce bot est introuvable. | Non | Vérifiez l’ID et le mot de passe du bot. Vérifiez que l’ID de bot (ID AAD) est inscrit dans le portail des développeurs Teams ou via l’inscription de canal de bot Azure dans Azure avec le canal « Teams » activé.|
-| 403 | **Code** : `BotDisabledByAdmin` <br/> **Message** : l’administrateur du locataire a désactivé ce bot | L’administrateur client a bloqué les interactions entre l’utilisateur et l’application bot. L’administrateur client doit autoriser l’application pour l’utilisateur à l’intérieur des stratégies d’application. Pour plus d’informations, consultez [les stratégies d’application](/microsoftteams/app-policies). | Non | Arrêtez la publication dans la conversation jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation indiquant que le bot n’est plus bloqué. |
-| 403 | **Code** : `BotNotInConversationRoster` <br/> **Message** : Le bot ne fait pas partie de la liste de conversation. | Le bot ne fait pas partie de la conversation. L’application doit être réinstallée dans la conversation. | Non | Avant de tenter d’envoyer des demandes de conversation supplémentaires, attendez un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) événement qui indique que le bot a été ajouté à nouveau.|
-| 403 | **Code** : `ConversationBlockedByUser` <br/> **Message** : l’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation personnelle ou un canal via des paramètres de modération. | Non | Supprimez la conversation du cache. Arrêtez la tentative de publication dans les conversations jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation, indiquant que le bot n’est plus bloqué. |
-| 403 | **Code** : `NotEnoughPermissions` <br/> **Message** : *scénario spécifique | Le bot n’a pas les autorisations nécessaires pour effectuer l’action demandée. | Non | Déterminez l’action requise à partir du message d’erreur. |
-| 404  | **Code** : `ActivityNotFoundInConversation` <br/> **Message** : Conversation introuvable. | L’ID de message fourni est introuvable dans la conversation. Le message n’existe pas ou a été supprimé. | Non | Vérifiez si l’ID de message envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
-| 404  | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation est introuvable, car elle n’existe pas ou a été supprimée. | Non | Vérifiez si l’ID de conversation envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
-| 412 | **Code** : `PreconditionFailed` <br/> **Message** : Échec de la condition préalable, veuillez réessayer. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. | Oui | Réessayez avec interruption exponentielle. |
-| 413 | **Code** : `MessageSizeTooBig` <br/> **Message** : Taille du message trop grande. | La taille de la requête entrante était trop grande. Pour plus d’informations, consultez [mettre en forme les messages de votre bot](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | Non | Réduisez la taille de la charge utile. |
-| 429 | **Code** : `Throttled` <br/> **Message** : Trop de demandes. Retourne également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, consultez [la limite de débit](/microsoftteams/platform/bots/how-to/rate-limit). | Oui | Réessayez d’utiliser l’en-tête `Retry-After` pour déterminer le temps d’arrêt. |
+| 400 | **Code** : `Bad Argument` <br/> **Message** : *spécifique au scénario | Charge utile de requête non valide fournie par le bot. Pour plus d’informations, consultez le message d’erreur. | Non | Réévaluez la charge utile de la demande pour les erreurs. Consultez le message d’erreur retourné pour plus d’informations. |
+| 401 | **Code** : `BotNotRegistered` <br/> **Message** : Aucune inscription n’a été trouvée pour ce bot. | L’inscription de ce bot est introuvable. | Non | Vérifiez l’ID et le mot de passe du bot. Vérifiez que l’ID de bot (ID AAD) est inscrit dans le portail des développeurs Teams ou via l’inscription du canal de bot Azure dans Azure avec le canal « Teams » activé.|
+| 403 | **Code** : `BotDisabledByAdmin` <br/> **Message** : L’administrateur du locataire a désactivé ce bot | L’administrateur client a bloqué les interactions entre l’utilisateur et l’application bot. L’administrateur de locataire doit autoriser l’application pour l’utilisateur à l’intérieur des stratégies d’application. Pour plus [d’informations, consultez Stratégies d’application](/microsoftteams/app-policies). | Non | Arrêtez la publication dans la conversation jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation indiquant que le bot n’est plus bloqué. |
+| 403 | **Code** : `BotNotInConversationRoster` <br/> **Message** : Le bot ne fait pas partie de la liste de conversation. | Le bot ne fait pas partie de la conversation. L’application doit être réinstallée dans la conversation. | Non | Avant de tenter d’envoyer des demandes de conversation supplémentaires, attendez un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) événement, qui indique que le bot a été rajouté.|
+| 403 | **Code** : `ConversationBlockedByUser` <br/> **Message** : L’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation personnelle ou un canal via les paramètres de modération. | Non | Supprimez la conversation du cache. Arrêtez la tentative de publication dans les conversations jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation, ce qui indique que le bot n’est plus bloqué. |
+| 403 | **Code** : `NotEnoughPermissions` <br/> **Message** : *spécifique au scénario | Le bot ne dispose pas des autorisations requises pour effectuer l’action demandée. | Non | Déterminez l’action requise à partir du message d’erreur. |
+| 404  | **Code** : `ActivityNotFoundInConversation` <br/> **Message** : Conversation introuvable. | L’ID de message fourni est introuvable dans la conversation. Le message n’existe pas ou il a été supprimé. | Non | Vérifiez si l’ID de message envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
+| 404  | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation n’a pas été trouvée, car elle n’existe pas ou a été supprimée. | Non | Vérifiez si l’ID de conversation envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
+| 412 | **Code** : `PreconditionFailed` <br/> **Message** : Échec de la condition préalable. Réessayez. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. | Oui | Réessayez avec un backoff exponentiel. |
+| 413 | **Code** : `MessageSizeTooBig` <br/> **Message** : taille du message trop grande. | La taille de la requête entrante était trop grande. Pour plus d’informations, consultez [Mettre en forme vos messages de bot](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | Non | Réduisez la taille de la charge utile. |
+| 429 | **Code** : `Throttled` <br/> **Message** : Trop de demandes. Retourne également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, consultez [Limite de débit](/microsoftteams/platform/bots/how-to/rate-limit). | Oui | Réessayez à l’aide de `Retry-After` l’en-tête pour déterminer le temps d’interruption. |
 | 500 | **Code** : `ServiceError` <br/> **Message** : *divers | Erreur interne au serveur. | Non | Signalez le problème dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
-| 502 | **Code** : `ServiceError` <br/> **Message** : *divers | Problème de dépendance de service. | Oui | Réessayez avec interruption exponentielle. Si le problème persiste, signalez-le dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
-| 503 | | Le service n’est pas disponible. | Oui | Réessayez avec interruption exponentielle. Si le problème persiste, signalez-le dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
-| 504 | | Délai d’expiration de la passerelle. | Oui | Réessayez avec interruption exponentielle. Si le problème persiste, signalez-le dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+| 502 | **Code** : `ServiceError` <br/> **Message** : *divers | Problème de dépendance de service. | Oui | Réessayez avec un backoff exponentiel. Si le problème persiste, signalez le problème dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+| 503 | | Le service n’est pas disponible. | Oui | Réessayez avec un backoff exponentiel. Si le problème persiste, signalez le problème dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
+| 504 | | Délai d’expiration de la passerelle. | Oui | Réessayez avec un backoff exponentiel. Si le problème persiste, signalez le problème dans la [communauté des développeurs](~/feedback.md#developer-community-help). |
 
-### <a name="status-codes-retry-guidance"></a>Instructions relatives aux nouvelles tentatives des codes d’état
+### <a name="status-codes-retry-guidance"></a>Conseils sur les nouvelles tentatives de codes d’état
 
-Les instructions générales de nouvelle tentative pour chaque code d’état sont répertoriées dans le tableau suivant. Le bot doit éviter de réessayer sur les codes d’état qui ne sont pas spécifiés dans le tableau suivant :
+Les instructions générales relatives aux nouvelles tentatives pour chaque code d’état sont répertoriées dans le tableau suivant. Le bot doit éviter de réessayer les codes d’état qui ne sont pas spécifiés :
 
 |Code d'état | Stratégie de nouvelle tentative |
 |----------------|-----------------|
 | 412 | Réessayez à l’aide d’un backoff exponentiel. |
-| 429 | Réessayez d’utiliser l’en-tête `Retry-After` pour déterminer le temps d’attente en secondes et entre les demandes, le cas échéant. Sinon, réessayez d’utiliser le backoff exponentiel avec l’ID de thread, si possible. |
+| 429 | Réessayez à l’aide `Retry-After` de l’en-tête pour déterminer le temps d’attente en secondes et entre les requêtes, le cas échéant. Sinon, réessayez à l’aide d’une interruption exponentielle avec l’ID de thread, si possible. |
 | 502 | Réessayez à l’aide d’un backoff exponentiel. |
 | 503 | Réessayez à l’aide d’un backoff exponentiel. |
 | 504 | Réessayez à l’aide d’un backoff exponentiel. |
@@ -483,7 +490,7 @@ Les instructions générales de nouvelle tentative pour chaque code d’état so
 | Exemple de nom | Description | Node.js | . NETCore | Python | .NET |
 |----------------|-----------------|--------------|----------------|-----------|-----|
 | Bot de conversation Teams | Gestion des événements de messagerie et de conversation. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | N/A |
-| Localisation d’applications Teams | Localisation des applications Teams à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | N/A | N/A | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Localisation des applications Teams | Localisation d’applications Teams à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | N/A | N/A | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Étape suivante
 
