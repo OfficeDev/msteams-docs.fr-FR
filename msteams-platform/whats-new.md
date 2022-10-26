@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités des développeurs Microso
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699184"
+ms.locfileid: "68701040"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -31,6 +31,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 **Octobre 2022**
 
+* ***26 octobre 2022*** : [Créer une application de signature de document en réunion](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***19 octobre 2022*** : [Le portail des développeurs pour Teams est désormais disponible pour les locataires gcc](concepts/build-and-test/teams-developer-portal.md).
 * ***13 octobre 2022*** : [Configurer NavBar et créer un menu de dépassement pour plusieurs actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***13 octobre 2022*** : [bouton Configurer précédent d’une application](concepts/design/personal-apps.md#configure-back-button).

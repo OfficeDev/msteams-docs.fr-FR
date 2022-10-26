@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: ea5d7b57b9ee6344d34fcc6ed560936ac6109304
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699137"
+ms.locfileid: "68701033"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>Créer des applications pour la phase de réunion Teams
 
@@ -277,7 +277,7 @@ Vous pouvez utiliser une application de signature en réunion pour :
 
 Les participants peuvent consulter et signer des documents, tels que des contrats d’achat et des bons de commande.
 
-![Application de signature de document en réunion](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Application de signature de documents en réunion":::
 
 Les rôles de participants suivants peuvent être impliqués pendant la réunion :
 
@@ -307,4 +307,3 @@ Suivez le [guide pas à pas](../sbs-inmeeting-document-signing.yml) pour créer 
 * [API de réunion avancées](meeting-apps-apis.md)
 * [Scènes personnalisées du mode ensemble](~/apps-in-teams-meetings/teams-together-mode.md)
 * [FAQ sur le Kit de développement logiciel (SDK) de Live Share](teams-live-share-overview.md)
-* [Guide pas à pas pour créer une application de signature de document en réunion](../sbs-inmeeting-document-signing.yml)
