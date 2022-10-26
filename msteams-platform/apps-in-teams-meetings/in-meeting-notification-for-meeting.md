@@ -1,18 +1,18 @@
 ---
-title: Générer une notification dans la réunion pour la réunion Teams
+title: Générer une notification en réunion pour une réunion Teams
 author: v-sdhakshina
-description: Dans cet article, découvrez comment générer une notification en réunion pour la réunion Microsoft Teams et son exemple de code.
+description: Dans cet article, découvrez comment créer une notification en réunion pour une réunion Microsoft Teams et son exemple de code.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bdf63ab597c00627c14b909d51efa753e0cd1b0
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: e62958535fa1bcbcdeb104b5fd5fdd2882250aa3
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615402"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699128"
 ---
-# <a name="build-in-meeting-notification-for-teams-meeting"></a>Générer une notification dans la réunion pour la réunion Teams
+# <a name="build-in-meeting-notification-for-teams-meeting"></a>Générer une notification en réunion pour une réunion Teams
 
 La notification en réunion est utilisée pour impliquer les participants et collecter des informations ou des commentaires pendant la réunion. Utilisez une [charge utile de notification en réunion](meeting-apps-apis.md#send-an-in-meeting-notification) pour déclencher une notification en réunion. Dans le cadre de la demande de charge utile de notification, incluez l’URL où le contenu à afficher est hébergé.
 
@@ -45,21 +45,21 @@ Vous pouvez également ajouter l’image d’affichage Teams et la carte de cont
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Cette capture d’écran montre comment l’image d’affichage Teams et la carte contacts sont utilisées avec la boîte de dialogue en réunion." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Cette capture d’écran montre comment Teams affiche l’image et la carte des personnes sont utilisés avec la boîte de dialogue en réunion." border="true":::
 
 ## <a name="code-sample"></a>Exemple de code
 
 Exemple de nom | Description | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Notification en réunion | Montre comment implémenter une notification en réunion à l’aide du bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+| Notification en réunion | Montre comment implémenter la notification en réunion à l’aide d’un bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 
-## <a name="step-by-step-guides"></a>Guides détaillés
+## <a name="step-by-step-guide"></a>Guide pas à pas
 
 Suivez le [guide pas à pas](../sbs-meeting-content-bubble.yml) pour générer une notification en réunion dans votre réunion Teams.
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Créer des onglets pour la réunion](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
+* [Onglets générer pour la réunion](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Créer des applications pour la phase de réunion Teams](build-apps-for-teams-meeting-stage.md)
 * [Créer une conversation extensible pour la conversation de réunion](build-extensible-conversation-for-meeting-chat.md)
 * [Créer des applications pour les utilisateurs anonymes](build-apps-for-anonymous-user.md)

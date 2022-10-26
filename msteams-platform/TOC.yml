@@ -109,13 +109,13 @@
       items:
         - name: Vue d’ensemble du Kit de ressources Teams
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Installer Teams Toolkit
+        - name: Installer teams Toolkit
           href: toolkit/install-Teams-Toolkit.md
         - name: Explorer le Kit de ressources Teams
           href: toolkit/explore-Teams-Toolkit.md
         - name: Préparer la création d’applications à l’aide du Kit de ressources Teams
           href: toolkit/build-environments.md
-        - name: Utiliser le Kit de ressources Teams pour créer votre application
+        - name: Utiliser teams Toolkit pour créer votre application
           items:
             - name: Conditions préalables à la création de votre application Teams
               href: toolkit/tools-prerequisites.md
@@ -126,7 +126,7 @@
               items:
                 - name: Ajouter et gérer un environnement
                   href: toolkit/TeamsFx-multi-env.md
-                - name: Créer une application multi-fonctionnalités
+                - name: Créer une application multi-capacité
                   href: toolkit/add-capability.md
                   displayName: Multiple capabilities app
                 - name: Créer des ressources cloud basées sur des fonctionnalités
@@ -163,7 +163,7 @@
                   href: toolkit/TeamsFx-collaboration.md
                 - name: Mettre en place des pipelines CI/CD
                   href: toolkit/use-CICD-template.md
-                - name: Charger et tester une application dans l’environnement Teams
+                - name: Chargement indépendant et test de l’application dans l’environnement Teams
                   href: toolkit/sideload-and-test-app.md
                 - name: Tester le comportement de l’application dans un environnement différent
                   href: toolkit/test-app-behavior.md
@@ -382,17 +382,17 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Activer et configurer des applications pour les réunions Teams
       items:
-        - name: Créer des onglets pour la réunion
+        - name: Onglets générer pour la réunion
           href: apps-in-teams-meetings/build-tabs-for-meeting.md
         - name: Créer des applications pour la phase de réunion
           href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-        - name: Générer une notification dans la réunion pour la réunion
+        - name: Générer une notification en réunion pour la réunion
           href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
         - name: Créer des conversations extensibles pour la conversation de réunion
           href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
         - name: Créer des applications pour les utilisateurs anonymes
           href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-        - name: API d’applications de réunion
+        - name: API des applications de réunion
           href: apps-in-teams-meetings/meeting-apps-apis.md
     - name: Obtenir des transcriptions de réunion à l'aide des API graphiques
       items:
@@ -427,7 +427,7 @@
           items:
             - name: Didacticiel Poker agile
               href: sbs-teams-live-share.yml
-            - name: Service Relais Azure Fluid personnalisé
+            - name: Service relais Azure Fluid personnalisé
               href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
         - name: FAQ sur Live Share
           href: apps-in-teams-meetings/teams-live-share-faq.md
@@ -659,7 +659,7 @@
         - name: Préparer votre soumission du store Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration'
-        - name: 'Mettre à jour l’ID d’équipe Apple App Store Connect sur l’Espace partenaires, l’acquisition d’applications sur mobile'
+        - name: 'Mettre à jour l’ID d’équipe Apple App Store Connect sur l’Espace partenaires, acquisition d’applications sur mobile'
           href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
           displayName: Enable users to install your app on Teams iOS platform.
         - name: Envoyer votre application

@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Documentation du développeur Microsoft Teams
-summary: Bienvenue dans la vue d’ensemble de la documentation du développeur Microsoft Teams. Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les contacts se réunissent, apprennent et travaillent de plus en plus.
+title: Documentation pour les développeurs Microsoft Teams
+summary: Bienvenue dans la vue d’ensemble de la documentation des développeurs Microsoft Teams. Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les contacts se réunissent, apprennent et travaillent de plus en plus.
 metadata:
-  title: Documentation du développeur Microsoft Teams
+  title: Documentation pour les développeurs Microsoft Teams
   description: Présentation de la création d’applications pour Teams
   ms.service: msteams
   ms.subservice: subservice
@@ -12,14 +12,14 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea9e2643aa280749887a323fb442db3c37f6e552
-  ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+  ms.openlocfilehash: c70a978c8d369d8caf486c35c39c9aed48b94fcb
+  ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/20/2022
-  ms.locfileid: "68615295"
+  ms.lasthandoff: 10/26/2022
+  ms.locfileid: "68699163"
 landingContent:
-- title: Explorer la dernière version
+- title: Explorer les dernières nouveautés
   linkLists:
   - linkListType: reference
     links:
@@ -31,17 +31,17 @@ landingContent:
       url: concepts/build-and-test/teams-developer-portal.md
     - text: Canevas Live Share
       url: apps-in-teams-meetings/teams-live-share-canvas.md
-    - text: Générer un lien profond pour partager du contenu à mettre en scène dans les réunions
+    - text: Générer un lien profond pour partager du contenu à l’étape des réunions
       url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
     - text: Gérer les licences SaaS pour les applications tierces dans Teams
       url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
     - text: Mettre à jour l’ID d’équipe Apple App Store Connect sur Espace partenaires
       url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
-    - text: Présentation de la prise en charge des applications de réunion pour les réunions de canal planifiées
+    - text: Introduction de la prise en charge des applications de réunion pour les réunions de canal planifiées
       url: apps-in-teams-meetings/teams-apps-in-meetings.md
     - text: Présentation de Teams Toolkit pour Visual Studio 2022
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: Contrôles de collaboration [préversion développeur]
+    - text: Contrôles de collaboration [préversion pour les développeurs]
       url: samples/collaboration-control.md
     - text: Créer des canaux partagés
       url: concepts/build-and-test/Shared-channels.md
@@ -49,9 +49,9 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: Prise en main de la création d’applications
+    - text: Bien démarrer avec la création d’applications
       url: ../msteams-platform/get-started/get-started-overview.md
-    - text: Bien démarrer avec GitHub
+    - text: Prise en main de GitHub
       url: /contribute/additional-resources
     - text: Glossaire
       url: ~/get-started/glossary.md
@@ -63,9 +63,9 @@ landingContent:
       url: sbs-gs-javascript.yml
     - text: Créer votre première application à l’aide de Blazor
       url: sbs-gs-blazorupdate.yml
-    - text: Générer une application avec SPFx
+    - text: Créer une application avec SPFx
       url: sbs-gs-spfx.yml
-    - text: Générer une application avec C# ou .NET
+    - text: Créer une application avec C# ou .NET
       url: sbs-gs-csharp.yml
     - text: Créer une application avec Node.js
       url: sbs-gs-nodejs.yml
@@ -77,7 +77,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Instructions pour les applications liées aux offres SaaS
+    - text: Recommandations pour les applications liées aux offres SaaS
       url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
     - text: Instructions de validation du magasin Microsoft Teams
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -139,7 +139,7 @@ landingContent:
       url: ~/sbs-calling-and-meeting.yml
     - text: Configurer l’authentification unique pour les onglets et les extensions de message
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
-    - text: Créer des onglets avec des cartes adaptatives
+    - text: Générer des onglets avec des cartes adaptatives
       url: ~/sbs-tab-with-adaptive-cards.yml
     - text: Créer un bot pour envoyer des messages proactifs
       url: ~/sbs-send-proactive.yml
@@ -153,6 +153,8 @@ landingContent:
     links:
     - text: Envoyer une notification de flux d’activité
       url: ~/sbs-graphactivity-feedbroadcast.yml
+    - text: Créer une application de signature de document en réunion
+      url: ~/sbs-inmeeting-document-signing.yml
   - linkListType: tutorial
     links:
     - text: Générer un bot de commandes avec JavaScript
@@ -163,13 +165,13 @@ landingContent:
       url: ~/sbs-file-handling-in-bot.yml
     - text: Générer une bulle de contenu de réunion
       url: ~/sbs-meeting-content-bubble.yml
-    - text: Appeler des modules de tâches à partir de Microsoft Teams
+    - text: Appeler des modules de tâche à partir de Microsoft Teams
       url: ~/sbs-botbuilder-taskmodule.yml
     - text: Générer une extension de message basée sur la recherche
       url: ~/sbs-messagingextension-searchcommand.yml
     - text: Générer une extension de message basée sur une action
       url: ~/sbs-meetingextension-action.yml
-    - text: Créer des webhooks sortants
+    - text: Générer des webhooks sortants
       url: ~/sbs-outgoing-webhooks.yml
     - text: Déployer des liens dans Teams à l’aide d’un bot
       url: ~/sbs-botbuilder-linkunfurling.yml
@@ -179,11 +181,11 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Scénarios de génération pour l’application Teams
+    - text: Créer des scénarios pour l’application Teams
       url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/
     - text: Meilleures pratiques pour les scénarios d’application Teams
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
-    - text: Explorer les applications à faible code pour Teams
+    - text: Explorer les applications low-code pour Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publier et distribuer
   linkLists:
