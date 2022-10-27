@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités des développeurs Microso
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
-ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
+ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
+ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2022
-ms.locfileid: "68701040"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "68740610"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "68701040"
 Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont en disponibilité générale (GA). Vous pouvez désormais obtenir les dernières mises à jour de la plateforme Teams en vous abonnant au flux de[![ téléchargement RSS](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Pour plus d'informations, voir [Configurer le flux RSS](#get-latest-updates).
 
 ## <a name="generally-available"></a>Disponibilité générale
- 
+
 :::row:::
 :::column:::
 
@@ -31,6 +31,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 **Octobre 2022**
 
+* ***27 octobre 2022*** : [Présentation du bot de workflow pour Teams](sbs-gs-workflow-bot.yml)
 * ***26 octobre 2022*** : [Créer une application de signature de document en réunion](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***19 octobre 2022*** : [Le portail des développeurs pour Teams est désormais disponible pour les locataires gcc](concepts/build-and-test/teams-developer-portal.md).
 * ***13 octobre 2022*** : [Configurer NavBar et créer un menu de dépassement pour plusieurs actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
