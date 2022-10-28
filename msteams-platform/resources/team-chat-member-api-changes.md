@@ -1,16 +1,16 @@
 ---
 title: Modifications de l’API du bot pour les membres de l’équipe et de la conversation
 author: ojasvichoudhary
-description: Dans ce module, découvrez les modifications à venir et en cours des API bot utilisées pour récupérer les membres des équipes et des conversations
+description: Dans ce module, découvrez les modifications à venir et en cours apportées aux API bot utilisées pour récupérer les membres des équipes et des conversations
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: b2e9258975de236116e5b9e33aef4aaf914ec797
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 8160f59f1bb08cf205d057fa6c1e5df7a4e61240
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295955"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773484"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Modifications apportées à l’API du bot Teams pour récupérer les membres d’équipe ou de conversation
 
@@ -22,10 +22,10 @@ Actuellement, si vous souhaitez récupérer des informations pour un ou plusieur
 
 Ces API présentent les inconvénients suivants :
 
-* Pour les grandes équipes, les performances sont médiocres et les délais d’attente sont plus probables : la taille maximale de l’équipe a considérablement augmenté depuis la publication de Teams début 2017. En tant que `GetMembersAsync` liste de membres entière ou `getMembers` en retourne, l’appel d’API prend beaucoup de temps à revenir pour les grandes équipes, et il est courant que l’appel expire et que vous devez réessayer.
-* L’obtention des détails du profil pour un seul utilisateur est difficile : pour obtenir les informations de profil d’un seul utilisateur, vous devez récupérer la liste des membres entière, puis rechercher celle souhaitée. Il existe une fonction d’assistance dans le Kit de développement logiciel (SDK) Bot Framework pour la simplifier, mais elle n’est pas efficace.
+* Pour les grandes équipes, les performances sont médiocres et les délais d’attente sont plus probables : la taille maximale de l’équipe a considérablement augmenté depuis la publication de Teams début 2017. En tant que `GetMembersAsync` ou `getMembers` retourne l’intégralité de la liste des membres, le retour de l’appel d’API pour les grandes équipes prend beaucoup de temps, et il est courant que l’appel expire et que vous devez réessayer.
+* Il est difficile d’obtenir les détails du profil d’un seul utilisateur : pour obtenir les informations de profil d’un seul utilisateur, vous devez récupérer la liste complète des membres, puis rechercher celle que vous souhaitez. Il existe une fonction d’assistance dans le Kit de développement logiciel (SDK) Bot Framework pour simplifier la tâche, mais elle n’est pas efficace.
 
-Avec l’introduction d’équipes à l’échelle de l’organisation, il est nécessaire de mieux aligner ces API sur Office 365 contrôles de confidentialité. Les bots utilisés dans les grandes équipes peuvent récupérer des informations de profil de base similaires à l’autorisation `User.ReadBasic.All` Microsoft Graph. Les administrateurs clients ont un grand contrôle sur les applications et les bots qui peuvent être utilisés dans leur locataire, mais ces paramètres sont différents de Microsoft Graph.
+Avec l’introduction d’équipes à l’échelle de l’organisation, il est nécessaire de mieux aligner ces API sur les contrôles de confidentialité Office 365. Les bots utilisés dans les grandes équipes peuvent récupérer des informations de profil de base similaires à l’autorisation `User.ReadBasic.All` Microsoft Graph. Les administrateurs clients ont un grand contrôle sur les applications et les bots qui peuvent être utilisés dans leur locataire, mais ces paramètres sont différents de Microsoft Graph.
 
 Le code suivant fournit un exemple de représentation JSON de ce qui est retourné par les API de bot Teams :
 
@@ -56,7 +56,7 @@ Le code suivant fournit un exemple de représentation JSON de ce qui est retourn
 }]
 ```
 
-## <a name="api-changes"></a>Modifications de l’API
+## <a name="api-changes"></a>Modifications apportées à l’API
 
 Voici les modifications à venir de l’API :
 
@@ -71,8 +71,7 @@ Voici les modifications à venir de l’API :
     > `objectId` est remplacé par `aadObjectId` pour correspondre à ce qui est appelé dans l’objet `Activity` d’un message Bot Framework. La nouvelle API est disponible avec la version 4.8 ou ultérieure du SDK Bot Framework. Il est également disponible dans l’extension du Kit de développement logiciel (SDK) Teams Bot Framework 3.x. Pendant ce temps, vous pouvez utiliser le point de terminaison [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details).
 
 * `TeamsInfo.GetMembersAsync` en C# et `TeamsInfo.getMembers` dans TypeScript ou Node.js est formellement déconseillé. Une fois la nouvelle API disponible, vous devez mettre à jour vos bots pour l’utiliser. Cela s’applique également à la [API REST sous-jacente que ces API utilisent](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
-* Fin 2022, les bots ne peuvent pas récupérer de manière proactive les propriétés `userPrincipalName` ou `email` pour les membres d’une conversation ou d’une équipe. Les bots doivent utiliser les API Graph pour récupérer les informations requises. La nouvelle api `GetConversationPagedMembers` ne peut pas retourner les propriétés `userPrincipalName` et `email` de fin 2022. Les bots doivent utiliser API Graph avec un jeton d’accès pour récupérer des informations.
+* Fin 2022, les bots ne peuvent pas récupérer de manière proactive les propriétés `userPrincipalName` ou `email` pour les membres d’une conversation ou d’une équipe. Les bots doivent utiliser les API Graph pour récupérer les informations requises. La nouvelle api `GetConversationPagedMembers` ne peut pas retourner les propriétés `userPrincipalName` et `email` de fin 2022.
 
-> [!NOTE]
->
-> Nous vous recommandons d’utiliser le [API Graph](/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) avec un jeton d’accès pour récupérer des informations.
+    > [!NOTE]
+    > Nous vous recommandons d’utiliser le [API Graph](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true#examples) avec un jeton d’accès pour récupérer des informations.

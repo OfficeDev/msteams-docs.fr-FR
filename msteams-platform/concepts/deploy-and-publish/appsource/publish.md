@@ -1,16 +1,16 @@
 ---
 title: 'Vue d’ensemble : publier votre application dans le store Microsoft Teams'
-description: Publiez votre application sur le Microsoft Teams Store ou AppSource. À quoi vous attendre après l’envoi, conseils pour l’approbation rapide et la publication d’applications liées à une offre SaaS.
+description: Publiez votre application dans le Magasin Microsoft Teams ou AppSource. À quoi vous devez vous attendre après l’envoi, conseils pour l’approbation rapide et la publication d’applications liées à une offre SaaS.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: f3981ccc9437c28b288a86912dd2b878e729c101
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560728"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773505"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -124,7 +124,7 @@ Si votre application est prête pour la production, vous pouvez commencer le pro
 
 * **Après la soumission de l’application**
 
-  * Après avoir examiné le rapport de validation, répondez au thread d’e-mail avec toutes les requêtes liées au rapport de validation, ou si vous avez besoin d’une prise en charge supplémentaire pour résoudre les problèmes signalés.
+  * Après avoir examiné le rapport de validation, répondez au fil de messagerie avec toutes les requêtes relatives au rapport de validation, ou si vous avez besoin d’une assistance supplémentaire pour résoudre les problèmes signalés.
 
   * Assurez-vous que vous disposez d’une bande passante de développeur suffisante pour résoudre les problèmes signalés jusqu’à ce que l’application soit approuvée.
 
@@ -172,6 +172,7 @@ Si votre application est prête pour la production, vous pouvez commencer le pro
 
 ## <a name="see-also"></a>Voir aussi
 
+* [Publier des applications Teams dans le magasin Microsoft Teams](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Publication sur Microsoft 365 App Stores](/office/dev/store/)
 * [Charger votre application Teams](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publier votre application Teams sur votre organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)

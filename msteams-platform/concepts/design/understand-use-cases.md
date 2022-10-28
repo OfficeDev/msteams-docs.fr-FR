@@ -1,16 +1,16 @@
 ---
 title: Présentation des cas d’utilisation et des fonctionnalités Teams de votre application
 author: heath-hamilton
-description: 'Découvrez les responsabilités des applications Microsoft Teaams : onglets, bots, extensions de réunion, extensions de message, connecteurs webhook, expérience d’application personnelle, expérience d’application partagée.'
+description: Découvrez les fonctionnalités des applications Microsoft Teams telles que les onglets, les bots, les extensions de réunion, les extensions de message, les connecteurs webhook, l’expérience d’application personnelle et l’expérience d’application partagée.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 296f6d2e8fe5088c480490cc0dbcc035f9f659ec
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100454"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773512"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
@@ -20,21 +20,22 @@ L’utilisateur de l’application et les exigences de son application sont les 
 
 Si vous souhaitez répondre aux exigences des utilisateurs avec votre application, vous devez d’abord les comprendre.
 
-- **Comprenez votre utilisateur** :
-  - Reconnaissez les problèmes des utilisateurs et identifiez les solutions à certains problèmes courants auxquels les utilisateurs sont confrontés.
-  - Créez votre application Teams en recherchant la combinaison appropriée de fonctionnalités Teams pour répondre aux besoins de votre utilisateur.
-  - Comprendre les cas d’usage pour savoir comment un utilisateur final interagit avec votre application.
+* **Comprenez votre utilisateur** :
+  * Reconnaissez les problèmes des utilisateurs et identifiez les solutions à certains problèmes courants auxquels les utilisateurs sont confrontés.
+  * Créez votre application Teams en recherchant la combinaison appropriée de fonctionnalités Teams pour répondre aux besoins de votre utilisateur.
+  * Comprendre les cas d’usage pour savoir comment un utilisateur final interagit avec votre application.
+  * Il est recommandé de suivre le module lean [comment publier votre application dans le magasin d’applications Teams](/training/modules/microsoft-teams-publish-app-to-store/) pour aider votre application à passer le processus de soumission au Magasin Microsoft Teams.
 
-- **Comprendre le problème**: déterminez le problème principal que votre application doit résoudre.
+* **Comprendre le problème**: déterminez le problème principal que votre application doit résoudre.
 
-- **Envisagez l’intégration** : identifiez les applications et services requis par votre application, tels que l’authentification, les Microsoft Graph ou les applications web.
+* **Envisagez l’intégration** : identifiez les applications et services requis par votre application, tels que l’authentification, les Microsoft Graph ou les applications web.
 
 ## <a name="microsoft-teams-app-features"></a>Fonctionnalités de l’application Microsoft Teams
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [Fonctionnalités de l’application](#app-capabilities)
-- [Étendue de l’application](#app-scope)
+* [Fonctionnalités de l’application](#app-capabilities)
+* [Étendue de l’application](#app-scope)
 
 ### <a name="app-capabilities"></a>Fonctionnalités de l’application
 
@@ -150,7 +151,7 @@ Les[webhooks entrants](../../webhooks-and-connectors/what-are-webhooks-and-conne
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph pour Teams
 
-L’API [Microsoft Graph pour Teams](/graph/teams-concept-overview) donne accès à des informations sur les équipes, les canaux, les utilisateurs et les messages qui vous aident à créer ou à améliorer les fonctionnalités de votre application.
+Microsoft [API Graph pour Teams](/graph/teams-concept-overview) permet d’accéder à des informations sur les équipes, les canaux, les utilisateurs et les messages qui vous aident à créer ou à améliorer des fonctionnalités pour votre application.
 
    :::column-end:::
 
@@ -170,13 +171,13 @@ L’API [Microsoft Graph pour Teams](/graph/teams-concept-overview) donne accès
 
 Votre application peut avoir l’une des étendues suivantes :
 
-- **Expérience d’application personnelle**: une application personnelle est un espace dédié ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités importantes pour eux.
-- **Expérience d’application partagée**: l’équipe, le canal et la conversation sont des espaces de collaboration. Les applications de ces contextes sont accessibles à tous les utilisateurs de cet espace. Les espaces de collaboration se concentrent généralement sur les flux de travail pour les interactions de votre application ou sur le déverrouillage de nouvelles interactions sociales.
+* **Expérience d’application personnelle**: une application personnelle est un espace dédié ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités importantes pour eux.
+* **Expérience d’application partagée**: l’équipe, le canal et la conversation sont des espaces de collaboration. Les applications de ces contextes sont accessibles à tous les utilisateurs de cet espace. Les espaces de collaboration se concentrent généralement sur les flux de travail pour les interactions de votre application ou sur le déverrouillage de nouvelles interactions sociales.
 
 Une application peut exister dans différentes étendues. Par exemple :
 
-- Votre application peut afficher des données dans un emplacement partagé central, c’est-à-dit un onglet.
-- Il peut également présenter ces mêmes informations par le biais d’une interface conversationnelle personnelle, c’est-à-d., un bot.
+* Votre application peut afficher des données dans un emplacement partagé central, c’est-à-dit un onglet.
+* Il peut également présenter ces mêmes informations par le biais d’une interface conversationnelle personnelle, c’est-à-d., un bot.
 
 Un utilisateur peut interagir avec une application dans un onglet de canevas pour effectuer une activité ou peut choisir de faire de même à l’aide d’un bot conversationnel.
 

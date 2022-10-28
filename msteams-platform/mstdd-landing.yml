@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 4ca17af82eddcfe4648436ff56246419f57f4d55
-  ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+  ms.openlocfilehash: 35cdd8a9e70ced7e78377f35184ba033dcf36154
+  ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/27/2022
-  ms.locfileid: "68739917"
+  ms.lasthandoff: 10/28/2022
+  ms.locfileid: "68773498"
 landingContent:
 - title: Explorer les dernières nouveautés
   linkLists:
@@ -193,6 +193,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Publier des applications Teams dans le magasin Microsoft Teams
+      url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Téléchargez votre application dans Microsoft Teams
