@@ -5,12 +5,12 @@ description: Apprenez à créer des onglets, des pages web incorporées dans Mic
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
+ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653188"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772507"
 ---
 # <a name="build-tabs-for-teams"></a>Créer des onglets pour Teams
 
@@ -21,7 +21,7 @@ Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Ce 
 
 L’image suivante montre les onglets personnels :
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Onglet personnel" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Capture d’écran montrant un exemple d’onglet personnel dans le client de bureau Teams.":::
 
 L’image suivante montre les onglets du canal Contoso :
 
@@ -72,7 +72,7 @@ Vous pouvez utiliser l’une des méthodes suivantes pour créer des onglets :
 
 Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page web que vous souhaitez inclure en tant qu’onglet dans votre application, vous définissez une URL et une étendue. En outre, vous pouvez ajouter le [SDK client JavaScript Teams](/javascript/api/overview/msteams-client) à votre page, et appeler `microsoftTeams.initialize()`après le chargement de votre page. Teams affiche votre page et donne accès à des informations spécifiques à Teams, par exemple le client Teams exécute le thème sombre.
 
-Que vous choisissiez d’exposer votre onglet au sein du canal ou du groupe, ou dans une portée personnelle, vous devez présenter une \>[page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) HTML <iframe dans votre onglet. Pour les onglets personnels, l’URL de contenu est définie directement dans le manifeste de votre application Teams par la propriété `contentUrl` du tableau `staticTabs`. Le contenu de votre onglet est le même pour tous les utilisateurs.
+Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
 
 Pour les onglets de canal ou de groupe, vous pouvez également créer une page de configuration supplémentaire. Cette page vous permet de configurer l’URL de la page de contenu, généralement à l’aide de paramètres de chaîne de requête d’URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet de canal ou de groupe peut être ajouté à plusieurs conversations d’équipe ou de groupe. À chaque installation ultérieure, vos utilisateurs peuvent configurer l’onglet, ce qui vous permet d’adapter l’expérience selon les besoins. Lorsque les utilisateurs ajoutent ou configurent un onglet, une URL est associée à l’onglet présenté dans l’interface utilisateur Teams. La configuration d’un onglet ajoute simplement des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet Azure Boards, la page de configuration vous permet de choisir le tableau chargé par l’onglet. L’URL de la page de configuration est spécifiée par la `configurationUrl` propriété dans le `configurableTabs`tableau dans le manifeste de votre application.
 
