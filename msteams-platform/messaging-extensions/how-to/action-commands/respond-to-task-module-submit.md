@@ -1,23 +1,23 @@
 ---
 title: Répondre à l’action d’envoi du module de tâche
 author: surbhigupta
-description: Découvrez comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de message avec un message proactif. Définissez des commandes de recherche et répondez aux recherches.
+description: Découvrez comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de message avec un message proactif. Définissez les commandes de recherche et répondez aux recherches.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100482"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772306"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 Ce document vous guide sur la façon dont votre application répond aux commandes d’action, telles que l’action d’envoi du module de tâche de l’utilisateur.
-Une fois qu’un utilisateur a envoyé le module de tâche, votre service web reçoit un message `composeExtension/submitAction` appeler avec l’ID de commande et les valeurs de paramètre. Votre application a cinq secondes pour répondre à l’appel, sinon l’utilisateur reçoit un message d’erreur **Impossible d’atteindre l’application**, et toute réponse à appeler est ignorée par le client Teams.
+Une fois qu’un utilisateur a envoyé le module de tâche, votre service web reçoit un message `composeExtension/submitAction` appeler avec l’ID de commande et les valeurs de paramètre. Votre application dispose de cinq secondes pour répondre à l’appel.  
 
 Vous disposez des options suivantes pour répondre :
 
@@ -27,6 +27,11 @@ Vous disposez des options suivantes pour répondre :
 * [Carte adaptative de bot](#bot-response-with-adaptive-card): insérez une carte adaptative directement dans la conversation.
 * [Demandez à l’utilisateur d’authentifier](~/messaging-extensions/how-to/add-authentication.md).
 * [Demandez à l’utilisateur de fournir une configuration supplémentaire](~/get-started/first-message-extension.md).
+
+Si l’application ne répond pas dans les cinq secondes, le client Teams retentera la demande deux fois avant d’envoyer un message d’erreur **Impossible d’atteindre l’application**. Si le bot répond après le délai d’expiration, la réponse est ignorée.
+
+> [!NOTE]
+> L’application doit différer toutes les actions de longue durée une fois que le bot a répondu à la demande d’appel. Les résultats de l’action de longue durée peuvent être remis sous forme de message.
 
 Pour l’authentification ou la configuration, une fois que l’utilisateur a terminé le processus, l’appel d’origine est renvoyé à votre service web. Le tableau suivant indique les types de réponses disponibles, en fonction de l’emplacement `commandContext` d’appel de l’extension de message :
 
@@ -215,14 +220,14 @@ Pour configurer le sondage :
 1. L’utilisateur sélectionne l’extension de message pour appeler le module de tâche.
 1. L’utilisateur configure le sondage avec le module de tâche.
 1. Après avoir soumis le module de tâche, l’application utilise les informations fournies pour générer le sondage en tant que carte adaptative et l’envoie en tant que réponse `botMessagePreview` au client.
-1. L’utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot ne l’insère dans le canal. Si l’application n’est pas membre du canal, sélectionnez-la `Send` pour l’ajouter.
+1. L’utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot ne l’insère dans le canal. Si l’application n’est pas membre du canal, sélectionnez `Send` pour l’ajouter.
 
     > [!NOTE]
     >
     > * Les utilisateurs peuvent également choisir de `Edit` le message, ce qui les renvoie au module de tâche d’origine.
     > * L’interaction avec la carte adaptative modifie le message avant de l’envoyer.
     >
-1. Une fois l’utilisateur sélectionné `Send`, le bot publie le message sur le canal.
+1. Une fois que l’utilisateur a `Send`sélectionné , le bot publie le message sur le canal.
 
 ## <a name="respond-to-initial-submit-action"></a>Répondre à l’action d’envoi initiale
 

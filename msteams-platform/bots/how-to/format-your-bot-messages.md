@@ -1,23 +1,23 @@
 ---
 title: Formatez vos messages robots.
 author: surbhigupta
-description: Découvrez comment mettre en forme et appliquer un style à vos messages de bot, tels que la liste barré, la liste ordonnée et non triée, le lien hypertexte ou le lien d’image. Comprendre la prise en charge multiplateforme.
+description: Découvrez comment mettre en forme et appliquer un style à vos messages de bot, tels que les messages barrés, les listes ordonnées et non ordonnées, les liens hypertexte ou les liens d’image. Comprendre la prise en charge multiplateforme.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b0db9f9d9e55dc3f11474dac4b8c6563caf5fd1b
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100181"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772299"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
-La mise en forme des messages vous permet de tirer le meilleur parti des messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies sous forme de pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l’audio, de la vidéo, etc.
+La mise en forme des messages vous permet de tirer le meilleur parti des messages du bot. Vous pouvez mettre en forme les messages de votre bot pour inclure des cartes enrichies sous forme de pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, etc.
 
 > [!NOTE]
-> La limite de taille des messages du bot est de 40 Ko. Si la limite de taille du message du bot dépasse 40 Ko, le bot reçoit un code d’état `413` (`RequestEntityTooLarge`), qui contient le code `MessageSizeTooBig`d’erreur. La limite de taille des messages du bot inclut la charge utile de message entière encodée en UTF-16 et n’inclut pas d’images encodées en Base64.
+> La taille limite des messages du bot est de 40 Ko. Si la limite de taille des messages du bot dépasse 40 Ko, le bot reçoit un code d’état `413` (`RequestEntityTooLarge`), qui contient le code `MessageSizeTooBig`d’erreur . La limite de taille des messages du bot inclut la charge utile de message entière encodée en UTF-16 et n’inclut pas les images encodées en Base64.
 
 ## <a name="format-text-content"></a>Mettre en forme le contenu de texte
 
@@ -35,11 +35,11 @@ Teams prend en charge un sous-ensemble de balises de mise en forme XML ou HTML e
 
 Actuellement, les limitations suivantes s’appliquent à la mise en forme :
 
-* Les messages texte uniquement ne prennent pas en charge la mise en forme des tables.
+* Les messages texte uniquement ne prennent pas en charge la mise en forme des tableaux.
 * Les cartes enrichies prennent uniquement en charge la mise en forme dans la propriété de texte, et non dans les propriétés de titres ou de sous-titres.
-* Les cartes enrichies ne prennent pas en charge la mise en forme markdown ou table.
+* Les cartes enrichies ne prennent pas en charge la mise en forme markdown ou de tableau.
 
-Après avoir mis en forme du contenu texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Teams.
+Après avoir mis en forme le contenu du texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Teams.
 
 ## <a name="cross-platform-support"></a>Prise en charge multiplateforme
 
