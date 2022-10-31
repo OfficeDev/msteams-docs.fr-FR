@@ -1,16 +1,16 @@
 ---
 title: Planifier teams mobiles
 author: surbhigupta
-description: Avec ce module d’apprentissage, vous allez apprendre à planifier la création d’une application sur Teams mobile et à comprendre différentes étapes pour créer une application.
+description: Avec ce module d’apprentissage, vous allez apprendre à planifier la création d’une application sur teams mobile et à comprendre les différentes étapes de création d’une application.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e7cf4508f723efa1b2a0445d304e080677b257ff
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66483999"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791558"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
 
@@ -40,8 +40,8 @@ Une fois que vous avez identifié l’étendue de l’application, il est temps 
 
    Fournissez des expériences d’application complètes pour vous impliquer sur les appareils mobiles. Au fur et à mesure que vos utilisateurs s’engagent dans votre application, offrez une expérience immersive complète sur les appareils mobiles, soit à parité, soit mieux que l’expérience de bureau. Pour offrir une bonne expérience à vos utilisateurs, rendez tous les cas d’usage réactifs sur les appareils mobiles.
 
-> [!TIP]
-> Pour obtenir des informations sur les instructions de conception, consultez [processus de conception pour les applications Teams](design-teams-app-process.md).
+    > [!TIP]
+    > Pour obtenir des informations sur les instructions de conception, consultez [processus de conception pour les applications Teams](design-teams-app-process.md).
 
 ## <a name="use-cases"></a>Cas d’utilisation
 
@@ -65,7 +65,7 @@ Vous pouvez afficher les informations suivantes :
 * Visuels de données, cartes et infographies.
 * Graphiques, graphiques et tableaux.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Afficher les données sous la forme d’une visualisation.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Afficher les données sous forme de visualisation.":::
 
 Actions rapides :
 
@@ -83,9 +83,9 @@ Dans la troisième étape, permettre aux utilisateurs de créer du contenu tel q
 
 Vous pouvez fournir l’accès suivant aux utilisateurs :
 
-* Modifiez le titre et la description.
-* Insérez des éléments de données pour créer des visualisations.
-* Partagez des visualisations dans un canal ou une conversation de groupe.
+* Modifier le titre et la description.
+* Insérer des éléments de données pour créer des visualisations.
+* Partagez des visualisations dans une conversation de canal ou de groupe.
 
 :::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Permettre aux utilisateurs de créer du contenu tel que des graphiques graphiques.":::
 
@@ -105,18 +105,18 @@ Consommation:
 
 Dans la première étape, votre application peut afficher la liste des tâches à l’utilisateur dans une pile verticale. S’il existe plusieurs catégories de tâches, telles que **Proposée** , **Active** et **Bouclée**, fournissez des filtres pour afficher les tâches groupées ou en tant qu’en-têtes pour afficher les tâches groupées.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Affiche la liste des tâches dans une pile verticale.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Affiche la liste des tâches d’une pile verticale.":::
 
 Actions rapides :
 
 Dans la deuxième étape, vous pouvez fournir l’accès à l’application suivant aux utilisateurs :
 
 * Créez des tâches ou des éléments avec les champs obligatoires pour réduire la charge cognitive des utilisateurs.
-* Modifiez le type ou la vue du tableau.
+* Modifiez le type ou la vue de la carte.
 * Passez en revue les tâches en développant la vue.
-* Utilisez les modules de tâches pour afficher une vue détaillée.
+* Utilisez les modules de tâche pour afficher une vue détaillée.
 * Déplacez les tâches dans différentes catégories.
-* Partagez les tâches pertinentes dans les conversations et les canaux par le biais d’e-mails et de flux d’activité.
+* Partagez des tâches pertinentes dans des conversations et des canaux par le biais d’e-mails et de flux d’activités.
 
 :::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Créez des tâches pour réduire la charge cognitive des utilisateurs.":::
 
@@ -148,7 +148,7 @@ Dans la première étape, vous pouvez envisager l’expérience de bureau pour a
 
 * Commentaires ou commentaires.
 * Zoom avant ou arrière.
-* Étape ou progression actuelle d’un document en attente.
+* Étape actuelle ou progression d’un document en attente.
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Affiche le contenu et les ressources dans l’expérience de bureau.":::
 
@@ -156,23 +156,23 @@ Actions rapides :
 
 Dans la deuxième étape, vous pouvez introduire les actions suivantes :
 
-* Créez un tableau pour la collaboration ou de nouveaux documents pour la signature.
+* Créez un tableau pour la collaboration ou de nouveaux documents à signer.
 * Partagez des tableaux en interne et également avec des invités.
 * Configurez les autorisations d’administrateur.
 
 > [!TIP]
 > Vous exposez des actions qui peuvent être affichées facilement sur les petits écrans.
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Présente la création d’un tableau pour la collaboration.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Présente la création d’un nouveau tableau pour la collaboration.":::
 
 Activation : 
 
 Dans la troisième étape, fournissez une expérience complète à vos utilisateurs. Vous pouvez activer l’expérience des utilisateurs avec les activités suivantes :
 
 * Ajout de texte, de formes et de notes rapides.
-* Parcourez le contenu.
-* Ajoutez des couches et des filtres.
-* Opérations de suppression, d’annulation et de restauration.
+* Naviguer dans le contenu.
+* Ajouter des couches et des filtres.
+* Opérations de suppression, d’annulation et de rétablissement.
 * Accédez à la caméra et au microphone à l’aide des API du Kit de développement logiciel (SDK) JS. Pour plus d’informations sur les fonctionnalités des appareils, consultez [vue d’ensemble des fonctionnalités des appareils](../device-capabilities/device-capabilities-overview.md).
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Activez l’expérience utilisateur en ajoutant des formes de texte, des notes rapides et d’autres fonctionnalités.":::

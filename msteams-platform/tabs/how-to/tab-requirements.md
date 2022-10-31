@@ -1,16 +1,16 @@
 ---
 title: Conditions préalables
 author: surbhigupta
-description: Dans cet article, découvrez les conditions préalables à la création de l’onglet Personnel, Canal ou Groupe de Microsoft Teams. Connaissez les outils nécessaires à la génération de votre onglet.
+description: Dans cet article, découvrez les prérequis pour créer un onglet personnel, canal ou groupe Microsoft Teams. Connaître les outils nécessaires pour créer votre onglet.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450414"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791810"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
@@ -30,7 +30,7 @@ Veillez à respecter les conditions préalables suivantes lors de la création d
 
 * Stylisez vos onglets en fonction du thème, de la conception et de l’intention du client Teams. Les onglets fonctionnent mieux lorsqu’ils sont conçus pour répondre à un besoin spécifique et se concentrer sur un petit ensemble de tâches ou un sous-ensemble de données pertinent pour l’emplacement du canal de l’onglet.
 
-* Dans votre page de contenu, ajoutez une référence au [Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) à l’aide de balises de script. Une fois votre page chargée, effectuez un appel à `app.initialize()`; sinon, votre page ne s’affichera pas.
+* Dans votre page de contenu, ajoutez une référence au [Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) à l’aide de balises de script. Une fois votre page chargée, appelez `app.initialize()`, sinon votre page ne s’affichera pas.
 
 * Pour que l’authentification fonctionne sur des clients mobiles, vous devez effectuer une mise à niveau vers Kit de développement logiciel (SDK) JavaScript Microsoft Teams 1.4.1 et versions ultérieures.
 
@@ -45,10 +45,10 @@ Veillez à respecter les conditions préalables suivantes lors de la création d
 | &nbsp; | Installer | Pour l’utilisation... |
 | --- | --- | --- |
 | **Obligatoire** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Environnement runtime JavaScript principal. Utilisez la dernière version de LTS v16.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Environnement runtime JavaScript principal. Utilisez la dernière version v16 LTS.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/) | Un navigateur avec des outils de développement. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Environnements de build JavaScript, TypeScript ou SharePoint Framework (SPFx). |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET et le développement web** ou la charge de travail **de développement multiplateforme .NET Core** | .NET. Vous pouvez installer l’édition communauté gratuite de Visual Studio 2019. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **développement ASP.NET et web**, ou charge de travail développement **multiplateforme .NET Core** | .NET. Vous pouvez installer l’édition community gratuite de Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git pour utiliser le référentiel d’exemples d’applications de GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams pour collaborer avec toutes les personnes avec lesquelles vous travaillez via les applications pour les conversations, les réunions, les appels, le tout au même endroit. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok est un outil logiciel de proxy inverse. Ngrok crée un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web local en cours d’exécution. Les points de terminaison web de votre serveur sont disponibles pendant la session active sur votre ordinateur. Lorsque l’ordinateur est arrêté ou mis en veille, le service n’est plus disponible. |

@@ -1,16 +1,16 @@
 ---
 title: Inclure une offre SaaS avec votre application
-description: Découvrez comment monétiser votre application Microsoft Teams en vendant des plans d’abonnement directement à partir de votre description dans le Windows Store Teams. Comprendre l’expérience d’achat de l’application de publication, de l’utilisateur final et de l’administrateur.
+description: Apprenez à monétiser votre application Microsoft Teams en vendant des plans d’abonnement directement à partir de votre description dans le Magasin Teams. Comprendre l’expérience d’achat de l’application de publication, de l’utilisateur final et de l’administrateur.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 23327ea2765eb5496f8cfb157cdd194fcc13aaf7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 500dbd4b3677c802a19eb3d454aa35cad2791f3d
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243254"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791824"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Inclure une offre SaaS avec votre application Teams
 
@@ -71,116 +71,116 @@ Pour obtenir des instructions complètes et des informations de référence sur 
 * Lorsqu’une offre d’abonnement est attribuée aux utilisateurs, informez-les par le biais d’un bot Teams ou d’un e-mail. Dans la messagerie, incluez des informations sur l’ajout de l’application à Teams et la prise en main.
 * Considérez qu’il y aura plusieurs administrateurs. En d’autres termes, plusieurs utilisateurs de la même organisation peuvent acheter et gérer leurs propres abonnements.
 
-## <a name="manage-license-for-third-party-apps-in-teams"></a>Gérer la licence pour les applications tierces dans Teams
+## <a name="manage-license-for-third-party-apps-in-teams"></a>Gérer la licence des applications tierces dans Teams
 
-Teams permet aux administrateurs ou aux utilisateurs éditeurs de logiciels indépendants de gérer les licences SaaS pour les applications tierces achetées à partir de la vitrine Teams. Les administrateurs ou utilisateurs d’éditeurs de logiciels indépendants peuvent facilement attribuer, annuler l’affectation, utiliser et suivre les licences SaaS.
+Teams permet aux administrateurs ou aux utilisateurs des éditeurs de logiciels indépendants (ISV) de gérer les licences SaaS pour les applications tierces achetées à la vitrine de Teams. Les administrateurs ou utilisateurs d’éditeurs de logiciels indépendants peuvent facilement attribuer, annuler, utiliser et suivre des licences SaaS.
 
 Pour activer la gestion des licences pour une application dans Teams, procédez comme suit :
 
 1. [Créer une offre dans l’Espace partenaires](#create-an-offer-in-partner-center)
 1. [Mettre à jour votre application Teams](#update-your-teams-app)
 1. [Après l’achat](#post-purchase)
-1. [Intégrer à l’API de droite d’utilisation de Graph](#integrate-with-graph-usage-right-api)
+1. [Intégrer à l’API De droite d’utilisation de Graph](#integrate-with-graph-usage-right-api)
 
 ### <a name="create-an-offer-in-partner-center"></a>Créer une offre dans l’Espace partenaires
 
 1. Connectez-vous à [l’Espace partenaires](https://partner.microsoft.com/) et sélectionnez **Espace partenaires**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Les captures d’écran montrent comment se connecter au compte Espace partenaires.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Les captures d’écran montrent comment se connecter au compte espace partenaires.":::
 
-1. Dans la page **d’accueil** , sélectionnez l’onglet Offres de la **Place de marché** pour définir les offres de la Place de marché commerciale.
+1. Dans la page **Accueil** , sélectionnez l’onglet **Offres de la Place de marché** pour définir les offres de la Place de marché commerciale.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Les captures d’écran montrent la page d’accueil et l’onglet Offre de la Place de marché dans l’Espace partenaires.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Les captures d’écran montrent la page d’accueil et l’onglet offre de la Place de marché dans l’Espace partenaires.":::
 
 1. Sélectionnez **Vue d’ensemble** dans le volet gauche.
 
-1. Sélectionnez **Nouveau logiciel d’offre** > **en tant que service**.
+1. Sélectionnez **Nouvelle offre** > **Logiciel en tant que service**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="Les captures d’écran montrent la page de l’offre de la Place de marché dans laquelle vous pouvez sélectionner une nouvelle offre.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="Les captures d’écran montrent la page d’offre de la Place de marché dans laquelle vous pouvez sélectionner une nouvelle offre.":::
 
-1. Entrez **l’ID d’offre** et **l’alias d’offre** , puis **sélectionnez Créer**.
+1. Entrez **l’ID de l’offre** et **l’alias de l’offre** , puis sélectionnez **Créer**.
 
    > [!NOTE]
-   > Si vous créez une offre à des fins de test, ajoutez le texte **-ISVPILOT** à la fin de votre alias d’offre. Cela indique à l’équipe de certification que l’offre est à des fins de test. Microsoft supprime régulièrement des offres avec **-ISVPILOT** . Par conséquent, n’utilisez pas cette balise pour d’autres raisons que le test de la fonctionnalité de gestion des licences.
+   > Si vous créez une offre à des fins de test, ajoutez le texte **-ISVPILOT** à la fin de votre alias d’offre. Cela indique à l’équipe de certification que l’offre est destinée aux tests. Microsoft supprime régulièrement des offres avec **-ISVPILOT** . Par conséquent, n’utilisez pas cette balise pour d’autres raisons que le test de la fonctionnalité de gestion des licences.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="Les captures d’écran montrent comment entrer l’ID d’offre et l’alias d’offre dans l’Espace partenaires.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="Les captures d’écran montrent comment entrer l’ID d’offre et l’alias de l’offre dans l’Espace partenaires.":::
 
-1. Dans la page d’installation de l’offre, sous détails de l’installation, cochez la case **Oui, je souhaite que Microsoft gère les licences client en mon nom**.
+1. Dans la page Configuration de l’offre, sous Détails de l’installation, cochez la case **Oui, j’aimerais que Microsoft gère les licences client en mon nom**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Les captures d’écran montrent la page d’installation de l’offre pour configurer la licence à gérer pour votre application dans Teams.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Les captures d’écran montrent la page de configuration de l’offre pour configurer la licence à gérer pour votre application dans Teams.":::
 
    > [!NOTE]
    >
-   > * Il s’agit d’un paramètre unique que vous ne pouvez pas modifier une fois votre offre publiée. Cela permet au client de gérer les licences de votre application dans Teams.
-   > * Le manifeste d’application ne prend en charge qu’une seule offre pour une application. Choisissez une solution de gestion des licences appropriée pour tous les plans disponibles dans votre offre et vous ne pouvez pas modifier cette option une fois l’offre mise en ligne.
+   > * Il s’agit d’un paramètre à usage unique que vous ne pouvez pas modifier une fois votre offre publiée. Cela permet au client de gérer les licences de votre application dans Teams.
+   > * Le manifeste d’application ne prend en charge qu’une seule offre pour une application. Choisissez une solution de gestion des licences appropriée pour tous les plans disponibles dans votre offre, et vous ne pouvez pas modifier cette option une fois que l’offre a été mise en ligne.
 
 1. Sélectionnez **Enregistrer le brouillon**.
 
-1. Sélectionnez **Vue d’ensemble du plan** dans le volet gauche, puis **sélectionnez Créer un plan**.
+1. Sélectionnez **Vue d’ensemble** du plan dans le volet gauche, puis **sélectionnez Créer un plan**.
 
    > [!NOTE]
    > Vous devez ajouter au moins un plan.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Les captures d’écran montrent une vue d’ensemble du plan pour créer un plan pour vos applications dans l’Espace partenaires.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Les captures d’écran montrent la vue d’ensemble du plan pour créer un plan pour vos applications dans l’Espace partenaires.":::
 
-1. Entrez l’ID de plan et le nom du plan, puis sélectionnez **Créer**.
+1. Entrez ID de plan et Nom du plan, puis sélectionnez **Créer**.
 
-1. Entrez le **nom du plan** et la **description du plan**.
+1. Entrez le **nom du plan** et **la description du plan**.
 
    > [!NOTE]
-   > Les informations de plan s’affichent sur la Place de marché Teams et [Appsource](https://appsource.microsoft.com/) sous la liste des offres (section plans).
+   > Les informations sur le plan s’affichent sur la Place de marché Teams et [Appsource](https://appsource.microsoft.com/) sous la liste des offres (section Plans).
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Les captures d’écran affichent la page du plan pour ajouter le nom du plan et la description du plan pour votre application.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Les captures d’écran montrant la page du plan pour ajouter le nom du plan et la description du plan pour votre application.":::
 
 1. Sélectionnez **Enregistrer le brouillon**.
 
 1. Sélectionnez **Tarification et disponibilité** dans le volet gauche.
 
-1. Ajoutez des détails sur la tarification et la disponibilité.
+1. Ajoutez les détails de la tarification et de la disponibilité.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="Les captures d’écran montrent la page de tarification et de disponibilité pour ajouter une offre SaaS pour votre application.":::
 
 1. Sélectionnez **Enregistrer le brouillon**.
 
-1. Sélectionnez **Vue d’ensemble du plan** en haut de la page pour accéder à la page de liste qui affiche tous les plans que vous avez créés pour cette offre.
+1. Sélectionnez **Vue d’ensemble du plan** en haut de la page pour accéder à la page de référencement qui affiche tous les plans que vous avez créés pour cette offre.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="Les captures d’écran montrent la page de liste des plans avec l’ID de service, le modèle tarifaire, la disponibilité, l’état et l’action.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="Les captures d’écran montrant la page de description du plan avec l’ID de service, le modèle tarifaire, la disponibilité, l’état et l’action.":::
 
-1. Copiez l’ID de service du plan que vous avez créé pour l’intégrer à l’API Microsoft Graph Usage Rights.
+1. Copiez l’ID de service du plan que vous avez créé pour l’intégrer à l’API des droits d’utilisation Microsoft Graph.
 
 ### <a name="update-your-teams-app"></a>Mettre à jour votre application Teams
 
-Mettez à jour votre application Teams pour la mapper aux fonctionnalités payantes et [mapper votre application Teams](https://aka.ms/TMTG) à votre offre et publier.
+Mettez à jour votre application Teams pour la mapper à la fonctionnalité payante et [mappez votre application Teams](https://aka.ms/TMTG) à votre offre et publiez.
 
 ### <a name="post-purchase"></a>Après l’achat
 
-1. Après l’activation, le client est redirigé de la page d’accueil vers la gestion des licences Teams.
+1. Après l’activation, le client est redirigé de la page d’accueil vers Gestion des licences Teams.
 
-1. Une fois l’achat de l’abonnement terminé, le client est redirigé vers la page d’accueil de l’application pour l’activation de l’abonnement. Il s’agit de l’expérience existante pour l’achat [d’applications monétisées par](https://aka.ms/TMTG) l’utilisateur dans Teams.
+1. Une fois l’achat de l’abonnement terminé, le client est redirigé vers la page d’accueil de l’application pour l’activation de l’abonnement. Il s’agit de l’expérience existante pour les utilisateurs qui achètent des [applications monétisées dans Teams](https://aka.ms/TMTG).
 
-1. Une fois que le client a activé l’achat d’abonnement sur la page d’accueil, le client est redirigé vers la page abonnements dans Teams via un lien [d’URL de redirection](https://teams.microsoft.com/_#/subscriptionManagement) ou un bouton que le client sélectionne sur la page d’accueil de l’éditeur.
+1. Une fois que le client a activé l’achat d’abonnement sur la page d’accueil, le client est redirigé vers la page des abonnements dans Teams via un lien URL de [redirection](https://teams.microsoft.com/_#/subscriptionManagement) ou un bouton sélectionné par le client sur la page d’accueil de l’éditeur.
 
-### <a name="integrate-with-graph-usage-right-api"></a>Intégrer à l’API de droite d’utilisation de Graph
+### <a name="integrate-with-graph-usage-right-api"></a>Intégrer à l’API De droite d’utilisation de Graph
 
-Intégrer à l’API Graph Usage Right pour gérer les autorisations utilisateur au moment du lancement de l’application par un client disposant d’une licence d’achat. Vous devez déterminer les autorisations de l’utilisateur pour l’application avec un appel Graph à l’API Droits d’utilisation.
+Intégrez à l’API Graph Usage Right pour gérer les autorisations utilisateur au moment du lancement de l’application par un client disposant d’une licence d’achat. Vous devez déterminer les autorisations de l’utilisateur pour l’application avec un appel Graph à l’API des droits d’utilisation.
 
-Vous pouvez appeler les API Graph pour déterminer si l’utilisateur actuellement connecté avec un abonnement valide du plan a accès à votre application. Pour appeler l’API Graph UsageRight pour vérifier les autorisations utilisateur, procédez comme suit :
+Vous pouvez appeler des API Graph pour déterminer si l’utilisateur actuellement connecté avec un abonnement valide du plan a accès à votre application. Pour appeler l’API Graph UsageRight afin de vérifier les autorisations des utilisateurs, procédez comme suit :
 
-1. Obtenir un jeton OBO utilisateur : [obtenir l’accès pour le compte d’un utilisateur - Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
+1. Obtenir le jeton OBO de l’utilisateur : [obtenir l’accès au nom d’un utilisateur - Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
 
-1. Appeler Graph pour obtenir l’ID d’objet de l’utilisateur : [utiliser microsoft API Graph - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
+1. Appeler Graph pour obtenir l’ID d’objet de l’utilisateur : [Utiliser le API Graph Microsoft - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
 
-1. Appeler l’API UsageRights pour déterminer que l’utilisateur dispose d’une licence pour le plan [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
+1. Appelez l’API UsageRights pour déterminer que l’utilisateur dispose d’une licence pour [l’utilisation de la liste des utilisateurs du planRights - Microsoft Graph bêta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
    > [!NOTE]
    > Vous devez disposer des autorisations minimales `User.Read` pour appeler UsageRights.
-   > L’API UsageRights est actuellement en version bêta. Une fois la version mise à jour vers V1, les utilisateurs de l’éditeur de logiciels indépendants doivent passer de la version bêta à la version V1.
+   > L’API UsageRights est actuellement en version bêta. Une fois la version mise à jour vers la version V1, les utilisateurs d’éditeurs de logiciels indépendants doivent effectuer une mise à niveau de la version bêta vers la version V1.
 
 ### <a name="check-license-usage-in-partner-center-analytics"></a>Vérifier l’utilisation des licences dans l’analytique de l’Espace partenaires
 
 1. Connectez-vous à l’[Espace partenaires](https://partner.microsoft.com/).
-1. Dans le volet gauche, accédez à **La Place de marché commerciale > Analyser les licences >**.
-1. Sélectionnez **Plan et Locataire** dans le widget de création de rapports pour voir l’utilisation du mois.
+1. Dans le volet gauche, accédez à **Place de marché commerciale > Analyser les licences >**.
+1. Sélectionnez **Plan et locataire** dans le widget de création de rapports pour afficher l’utilisation mensuelle.
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>Créer une page d’accueil pour la gestion des abonnements
 
@@ -190,9 +190,9 @@ Sélectionnez **Non, je préfère gérer moi-même les licences client** dans de
 
 Pour obtenir des instructions complètes, consultez [créer la page d’accueil de votre offre SaaS](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
-Une fois que quelqu’un a fini d’acheter un plan d’abonnement pour votre application et souhaite rester dans Teams, sans le diriger vers votre page d’accueil, sélectionnez **Oui, j’aimerais que Microsoft gère les licences client en mon nom**.
+Quand quelqu’un termine l’achat d’un plan d’abonnement pour votre application et souhaite rester dans Teams, sans le diriger vers votre page **d’accueil, sélectionnez Oui, j’aimerais que Microsoft gère les licences client en mon nom**.
 
-Pour plus d’informations, consultez [la gestion des licences](/platform/concepts/deploy-and-publish/appsource/prepare/first-party-license-management) internes.
+Pour plus d’informations, consultez [Gérer les licences pour les applications tierces dans Teams](#manage-license-for-third-party-apps-in-teams).
 
 ### <a name="best-practices-for-landing-pages"></a>Meilleures pratiques pour les pages d’accueil
 

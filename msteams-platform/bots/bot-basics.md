@@ -1,28 +1,28 @@
 ---
 title: Gestionnaire d'activité du robot
 author: surbhigupta
-description: Découvrez les événements Microsoft Teams et les gestionnaires d’activités pour les messages, les canaux, les équipes, les membres, les mentions, l’authentification, les actions de carte à l’aide de Microsoft Bot Framework SDK.
+description: Découvrez les événements microsoft Teams et les gestionnaires d’activités pour les messages, les canaux, les équipes, les membres, les mentions, l’authentification, les actions de carte à l’aide de Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: 6599fbecd9166e053952bbbf70c7a2bea7ab48e3
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321207"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791677"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
 Ce document s’appuie sur l’article sur le [fonctionnement des bots](https://aka.ms/how-bots-work) dans la [documentation principale de Bot Framework](https://aka.ms/azure-bot-service-docs). La principale différence entre les bots développés pour Microsoft Teams et le framework bot principal réside dans les fonctionnalités fournies dans Teams.
 
-Pour organiser la logique conversationnelle de votre bot, un gestionnaire d’activités est utilisé. Les activités sont gérées de deux manières à l’aide de gestionnaires d’activités Teams et de logique de bot. Le gestionnaire d’activités Teams ajoute la prise en charge des événements et interactions spécifiques à Teams. L’objet bot contient le raisonnement conversationnel ou la logique d’un tour et expose un gestionnaire de tours, qui est la méthode qui peut accepter les activités entrantes de l’adaptateur de bot.
+Un gestionnaire d’activités est utilisé pour organiser la logique conversationnelle de votre bot. Les activités sont gérées de deux manières à l’aide de gestionnaires d’activités Teams et de logique de bot. Le gestionnaire d’activités Teams ajoute la prise en charge des événements et des interactions spécifiques à Teams. L’objet bot contient le raisonnement conversationnel ou la logique d’un tour et expose un gestionnaire de tours, qui est la méthode qui peut accepter les activités entrantes de l’adaptateur de bot.
 
 ## <a name="teams-activity-handlers"></a>Gestionnaires d’activités Microsoft Teams
 
 Teams gestionnaire d’activités est dérivé du gestionnaire d’activités de Microsoft Bot Framework. Il achemine toutes les activités Teams avant d’autoriser la gestion des activités non Teams spécifiques.
 
-Lorsqu’un bot pour Teams reçoit une activité, il est routée vers les gestionnaires d’activités. Toutes les activités sont routées via un gestionnaire de base appelé gestionnaire de tour. Le gestionnaire de tours appelle le gestionnaire d’activités requis pour gérer le type d’activité reçu. Le bot Teams est dérivé de la `TeamsActivityHandler` classe, qui est dérivée de la classe bot `ActivityHandler` framework.
+Lorsqu’un bot pour Teams reçoit une activité, elle est routée vers les gestionnaires d’activités. Toutes les activités sont routées via un gestionnaire de base appelé gestionnaire de tour. Le gestionnaire de tours appelle le gestionnaire d’activités requis pour gérer le type d’activité reçu. Le bot Teams est dérivé de la `TeamsActivityHandler` classe, qui est dérivée de la classe bot `ActivityHandler` framework.
 
 > [!NOTE]
 > Si le traitement de l’activité du bot prend plus de 15 secondes, Teams envoie une demande de nouvelle tentative au point de terminaison du bot. Par conséquent, vous verrez des demandes en double dans votre bot.
@@ -179,7 +179,7 @@ Pour implémenter votre logique pour Teams gestionnaires d’activités spécifi
 
 ## <a name="bot-logic"></a>Logique de bot
 
-La logique du bot traite les activités entrantes à partir d’un ou plusieurs de vos canaux de bot et génère en réponse des activités sortantes. Cela reste vrai pour les bots dérivés de la classe de gestionnaire d’activités Teams, qui vérifie d’abord les activités Teams. Après avoir vérifié Teams activités, elle transmet toutes les autres activités au gestionnaire d’activités de Bot Framework.
+La logique du bot traite les activités entrantes à partir d’un ou plusieurs de vos canaux de bot et génère en réponse des activités sortantes. Cela est toujours vrai pour les bots dérivés de la classe de gestionnaire d’activités Teams, qui vérifie d’abord les activités Teams. Après avoir vérifié Teams activités, elle transmet toutes les autres activités au gestionnaire d’activités de Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -192,7 +192,7 @@ La logique du bot traite les activités entrantes à partir d’un ou plusieurs 
 
 Les gestionnaires d’activités sont différents dans le contexte d’une équipe, où un nouveau membre est ajouté à l’équipe au lieu d’un thread de message.
 
-La liste des gestionnaires définis inclut `ActivityHandler` les éléments suivants :
+La liste des gestionnaires définis dans `ActivityHandler` inclut les événements suivants :
 
 | Événement | Handler | Description |
 | :-- | :-- | :-- |
@@ -208,7 +208,7 @@ La liste des gestionnaires définis inclut `ActivityHandler` les éléments suiv
 
 #### <a name="teams-specific-activity-handlers"></a>Gestionnaires d’activités Microsoft Teams
 
-L’extension `TeamsActivityHandler` de la liste des gestionnaires dans la section principale des gestionnaires Bot Framework inclut les éléments suivants :
+Étend `TeamsActivityHandler` la liste des gestionnaires dans la section Principaux gestionnaires Bot Framework pour inclure les événements suivants :
 
 | Événement | Handler | Description |
 | :-- | :-- | :-- |
@@ -221,7 +221,7 @@ L’extension `TeamsActivityHandler` de la liste des gestionnaires dans la secti
 
 #### <a name="teams-invoke-activities"></a>Teams appeler des activités
 
-La liste des gestionnaires d’activités Teams appelés à partir du `OnInvokeActivityAsync` gestionnaire d’activités Teams comprend les éléments suivants :
+La liste des gestionnaires d’activités Teams appelés à partir du `OnInvokeActivityAsync` gestionnaire d’activités Teams comprend les types d’appels suivants :
 
 | Appeler des types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -234,7 +234,7 @@ La liste des gestionnaires d’activités Teams appelés à partir du `OnInvokeA
 | tâche/extraction                      | `OnTeamsTaskModuleFetchAsync`        | Cette méthode peut être substituée dans une classe dérivée pour fournir une logique lors de l’extraction d’un module de tâche. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Cette méthode peut être substituée dans une classe dérivée pour fournir une logique lors de l’envoi d’un module de tâche. |
 
-Les activités Invoke répertoriées dans cette section concernent les bots conversationnels dans Teams. Le Kit de développement logiciel (SDK) Bot Framework prend également en charge les activités d’appel spécifiques aux extensions de message. Pour plus d’informations, consultez [les extensions de message](https://aka.ms/azure-bot-what-are-messaging-extensions).
+Les activités Invoke répertoriées dans cette section sont destinées aux bots conversationnels dans Teams. Le Kit de développement logiciel (SDK) Bot Framework prend également en charge les activités d’appel spécifiques aux extensions de message. Pour plus d’informations, consultez [les extensions de message](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -245,7 +245,7 @@ Les activités Invoke répertoriées dans cette section concernent les bots conv
 
 Les gestionnaires d’activités sont différents dans le contexte d’une équipe, où le nouveau membre est ajouté à l’équipe au lieu d’un thread de message.
 
-La liste des gestionnaires définis inclut `ActivityHandler` les éléments suivants :
+La liste des gestionnaires définis dans `ActivityHandler` inclut les événements suivants :
 
 | Événement | Handler | Description |
 | :-- | :-- | :-- |
@@ -260,7 +260,7 @@ La liste des gestionnaires définis inclut `ActivityHandler` les éléments suiv
 
 #### <a name="teams-specific-activity-handlers"></a>Gestionnaires d’activités Microsoft Teams
 
-L’extension `TeamsActivityHandler` de la liste des gestionnaires dans la section principale des gestionnaires Bot Framework inclut les éléments suivants :
+Étend `TeamsActivityHandler` la liste des gestionnaires dans la section Principaux gestionnaires Bot Framework pour inclure les événements suivants :
 
 | Événement | Handler | Description |
 | :-- | :-- | :-- |
@@ -297,7 +297,7 @@ Les activités d’appel répertoriées dans cette section concernent les bots c
 
 Les gestionnaires d’activités sont différents dans le contexte d’une équipe, où le nouveau membre est ajouté à l’équipe au lieu d’un thread de message.
 
-La liste des gestionnaires définis inclut `ActivityHandler` les éléments suivants :
+La liste des gestionnaires définis dans `ActivityHandler` inclut les événements suivants :
 
 | Événement | Handler | Description |
 | :-- | :-- | :-- |
@@ -309,11 +309,11 @@ La liste des gestionnaires définis inclut `ActivityHandler` les éléments suiv
 | Activité d’événement reçue | `on_event_activity` | Cette méthode appelle un gestionnaire spécifique au type d’événement. |
 | Activité d’événement de réponse de jeton reçue | `on_token_response_event` | Cette méthode peut être remplacée pour gérer les événements de réponse de jeton. |
 | Activité d’événement sans réponse de jeton reçue | `on_event` | Cette méthode peut être remplacée pour gérer d’autres types d’événements. |
-| Autres types d’activités reçus | `on_unrecognized_activity_type` | Cette méthode peut être substituée pour gérer n’importe quel type d’activité qui n’est pas géré. |
+| Autres types d’activités reçus | `on_unrecognized_activity_type` | Cette méthode peut être remplacée pour gérer n’importe quel type d’activité qui n’est pas géré. |
 
 #### <a name="teams-specific-activity-handlers"></a>Gestionnaires d’activités Microsoft Teams
 
-La `TeamsActivityHandler` liste des gestionnaires s’étend à partir de la section principale des gestionnaires Bot Framework pour inclure les éléments suivants :
+Étend `TeamsActivityHandler` la liste des gestionnaires à partir de la section gestionnaires Bot Framework de base pour inclure les événements suivants :
 
 | Événement | Handler | Description |
 | :-- | :-- | :-- |
@@ -326,7 +326,7 @@ La `TeamsActivityHandler` liste des gestionnaires s’étend à partir de la sec
 
 #### <a name="teams-invoke-activities"></a>Teams appeler des activités
 
-La liste des gestionnaires d’activités Teams appelés à partir du `on_invoke_activity` gestionnaire d’activités Teams comprend les éléments suivants :
+La liste des gestionnaires d’activités Teams appelés à partir du `on_invoke_activity` gestionnaire d’activités Teams comprend les types d’appels suivants :
 
 | Appeler des types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -345,7 +345,7 @@ Les activités d’appel répertoriées dans cette section concernent les bots c
 
 ---
 
-Maintenant que vous vous êtes familiarisé avec les gestionnaires d’activités de bot, voyons comment les bots se comportent différemment en fonction de la conversation et des messages qu’il reçoit ou envoie.
+Maintenant que vous vous êtes familiarisé avec les gestionnaires d’activité de bot, voyons comment les bots se comportent différemment en fonction de la conversation et des messages qu’ils reçoivent ou envoient.
 
 ## <a name="next-step"></a>Étape suivante
 

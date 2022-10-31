@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ade66f40662140b86fcc9ae2e185fc10ea09d2f2
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189881"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791712"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement spécifiques aux ressources dans Teams
 
@@ -273,7 +273,7 @@ Pour vérifier si les autorisations RSC sont respectées par la charge utile de 
 
 * `azureADAppId` : ID d’application Azure AD de votre application.
 * `azureADAppSecret` : mot de passe de votre application Azure AD.
-* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default.
+* `token_scope`: l’étendue est requise pour obtenir un jeton. Définissez la valeur sur `https://graph.microsoft.com/.default`.
 * `teamGroupId` : vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
     1. Dans le client Teams, sélectionnez **Teams** dans la barre de navigation située à l’extrême gauche.
@@ -288,7 +288,7 @@ Pour vérifier si les autorisations RSC sont respectées par la charge utile de 
 
 * `azureADAppId` : ID d’application Azure AD de votre application.
 * `azureADAppSecret` : mot de passe de votre application Azure AD.
-* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default.
+* `token_scope`: l’étendue est requise pour obtenir un jeton. Définissez la valeur sur `https://graph.microsoft.com/.default`.
 * `tenantId` : nom ou ID d’objet Azure AD de votre locataire.
 * `chatId`: vous pouvez obtenir l’ID du thread de conversation à partir du client *web* Teams comme suit :
 

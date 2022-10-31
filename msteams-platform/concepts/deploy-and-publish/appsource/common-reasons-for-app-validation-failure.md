@@ -1,16 +1,16 @@
 ---
 title: Raisons courantes de l’échec de validation d’application
-description: Découvrez les raisons les plus courantes de l’échec de validation d’application, telles que les liens rompus, les erreurs inattendues, les incidents, la violation des instructions de domaine valides, les bogues fonctionnels.
+description: Découvrez les raisons les plus courantes de l’échec de validation d’application, telles que les liens rompus, les erreurs inattendues, les plantages, la violation des instructions de domaine valides, les bogues fonctionnels.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 006fe6d9e939d9578fa84c61daaa4c404a10d5f6
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560651"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791726"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Raisons courantes de l’échec de validation d’application
 
@@ -155,7 +155,7 @@ Le nom de votre application joue un rôle essentiel pour que les utilisateurs d�
 * Utilisation incohérente du nom de l’application dans toutes les fonctionnalités des applications.
 * Incompatibilité entre le nom de l’application mentionné dans le manifeste d’application envoyé dans le cadre du package d’application et l’Espace partenaires.
 * Les noms d’application ajoutés à *Beta*, *Dev* et *Prod* indiquent que l’application n’est pas prête pour la production.
-* Soumissions d’applications où le développeur a modifié le nom de l’application, mais où l’ancien nom d’application est utilisé dans l’application.
+* Soumissions d’applications dans lesquelles le développeur a modifié le nom de l’application, mais où l’ancien nom de l’application est toujours utilisé dans l’application.
 
 ## <a name="support-link"></a>Lien vers le support technique
 

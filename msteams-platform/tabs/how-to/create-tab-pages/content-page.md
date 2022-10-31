@@ -5,12 +5,12 @@ description: Découvrez la page web dans le client Teams et fait partie de l’o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
-ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68773442"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791537"
 ---
 # <a name="create-a-content-page"></a>Créer une page de contenu
 
@@ -111,7 +111,7 @@ Assurez-vous que tous les domaines URL utilisés dans vos onglets sont inclus da
 
 > [!NOTE]
 >
-> * Le comportement sur les clients mobiles n’est pas configurable via la propriété d’indicateur de chargement natif. Les clients mobiles affichent cet indicateur par défaut dans les pages de contenu et les modules de tâche basés sur iframe. Cet indicateur sur mobile s’affiche lorsqu’une demande est effectuée pour extraire du contenu et est ignorée dès que la demande est terminée.
+> Le comportement sur les clients mobiles n’est pas configurable via la propriété d’indicateur de chargement natif. Les clients mobiles affichent cet indicateur par défaut dans les pages de contenu et les modules de tâche basés sur iframe. Cet indicateur sur mobile s’affiche lorsqu’une demande est effectuée pour extraire du contenu et est ignorée dès que la demande est terminée.
 
 Si vous indiquez `showLoadingIndicator : true`  dans le manifeste de votre application, la configuration de l’onglet, le contenu, les pages de suppression et tous les modules de tâche basés sur iframe doivent suivre ces étapes :
 

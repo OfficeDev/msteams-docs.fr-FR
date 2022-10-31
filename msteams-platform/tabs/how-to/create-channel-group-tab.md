@@ -1,23 +1,23 @@
 ---
 title: Créer un onglet de canal ou un onglet de groupe
 author: laujan
-description: Créez un canal personnalisé, un onglet de groupe avec Node.js, ASP.NET Core ASP.NET Core MVC. Générer une application, créer un package, générer et exécuter une application, tunnel secret, charger dans Teams
+description: Créer un canal personnalisé, onglet grouper avec Node.js, ASP.NET Core ASP.NET Core MVC. Générer une application, créer un package, générer et exécuter une application, tunnel secret, charger dans Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615239"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791663"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>Créer un onglet de canal ou un onglet de groupe
 
 Les onglets de canal ou de groupe fournissent du contenu aux canaux et aux conversations de groupe, ce qui permet de créer des espaces de collaboration autour du contenu web dédié.
 
-Vérifiez que vous disposez de toutes les [conditions préalables](~/tabs/how-to/tab-requirements.md) pour créer votre canal ou onglet de groupe.
+Vérifiez que vous disposez de tous les [prérequis](~/tabs/how-to/tab-requirements.md) pour créer votre canal ou onglet de groupe.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -94,7 +94,7 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
         Sélectionnez **( &ast; ) Onglet**.
 
-    * **URL d’hébergement de cette solution ?**
+    * **L’URL pour héberger cette solution ?**
 
         Par défaut, le générateur suggère une URL de site web Azure. Vous testez uniquement votre application localement, donc une URL valide n’est pas nécessaire.
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Charger votre application dans Teams
 
 1. Accédez à Teams et sélectionnez **Applications**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Sélectionnez **Gérer vos applications** > **Charger une application** > **Charger une application personnalisée**.
+1. Sélectionnez **Gérer vos applications** > **Charger une application****Charger une application** >  charger une application personnalisée.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet de canal chargé":::
@@ -296,7 +296,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * **Icône de contour transparent** mesurant 32 x 32 pixels.
 * Un fichier `manifest.json` qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Lorsqu’un utilisateur choisit d’ajouter ou de mettre à jour votre onglet, Teams charge le `configurationUrl` fichier spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Lorsqu’un utilisateur choisit d’ajouter ou de mettre à jour votre onglet, Teams charge le `configurationUrl` spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
 
 #### <a name="csproj"></a>.csproj
 
@@ -324,7 +324,7 @@ Dans la fenêtre Visual Studio Explorateur de solutions, cliquez avec le bouton 
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-À l’invite de commandes à la racine de votre répertoire de projet, exécutez la commande suivante pour établir un tunnel sécurisé vers votre onglet :
+À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante pour établir un tunnel sécurisé dans votre onglet :
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -349,9 +349,9 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Insérez un appel à `microsoftTeams.app.initialize();` dans la balise `script`.
 
-1. Dans Visual Studio Explorateur de solutions, accédez au dossier **Pages** et ouvrez **Tab.cshtml**
+1. Dans Visual Studio Explorateur de solutions, accédez au dossier **Pages** et ouvrez **Tab.cshtml**.
 
-    Dans **Tab.cshtml**, l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner le gris** ou **sélectionner le rouge** définit `saveGray()` ou `saveRed()` définit `pages.config.setValidityState(true)`respectivement et active **l’option Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez poursuivre l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
+    Dans **Tab.cshtml**, l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner gris** ou **Sélectionner rouge** déclenche `saveGray()` ou `saveRed()` , respectivement, définit `pages.config.setValidityState(true)`et active **Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez procéder à l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
 
 1. Mettez à jour les valeurs `websiteUrl` et `contentUrl` dans chaque fonction avec l’URL ngrok HTTPS sous votre onglet.
 
@@ -410,10 +410,10 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Ouvrez **Applications** et sélectionnez **Importer une application**.
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. Le nom de votre package d’application est `tab.zip`. Il est disponible dans le chemin d’accès suivant :
 
@@ -431,7 +431,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans les **URL d’application**, mettez à jour la Stratégie de confidentialité vers `https://<yourngrokurl>/privacy` et Conditions d’utilisation vers `https://<yourngrokurl>/tou`, puis enregistrez.
 
-1. Dans **les fonctionnalités de l’application**, sélectionnez **l’application de groupe et de canal**. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
+1. Dans **Fonctionnalités de l’application**, sélectionnez **Grouper et canaliser l’application**. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -540,15 +540,15 @@ Dans la fenêtre Visual Studio Explorateur de solutions, cliquez avec le bouton 
 
 #### <a name="models"></a>Modèles
 
-**ChannelGroup.cs** présente un objet de message et des méthodes qui peuvent être appelés à partir des contrôleurs pendant la configuration.
+**ChannelGroup.cs** présente un objet de message et des méthodes qui peuvent être appelées à partir des contrôleurs pendant la configuration.
 
 #### <a name="views"></a>Affichages
 
 Voici les différentes vues dans ASP.NET Core MVC :
 
-* Accueil : ASP.NET Core traite les fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** peut être affiché comme page d’accueil de votre application.
+* Accueil : ASP.NET Core traite les fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** peut être affiché en tant que page d’accueil de votre application.
 
-* Partagé : le balisage d’affichage partiel **_Layout.cshtml** contient la structure de page globale de l’application et les éléments visuels partagés qui référencent également la bibliothèque Teams.
+* Partagé : le balisage de vue partielle **_Layout.cshtml** contient la structure de page globale de l’application et les éléments visuels partagés qui font également référence à la bibliothèque Teams.
 
 #### <a name="controllers"></a>Contrôleurs
 
@@ -558,7 +558,7 @@ Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiqueme
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-À l’invite de commandes à la racine de votre répertoire de projet, exécutez la commande suivante pour établir un tunnel sécurisé vers votre onglet :
+À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante pour établir un tunnel sécurisé dans votre onglet :
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -585,7 +585,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans Visual Studio Explorateur de solutions, accédez au dossier **Tab** et ouvrez **Tab.cshtml**
 
-    Dans **Tab.cshtml**, l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner le gris** ou **sélectionner le rouge** définit `saveGray()` ou `saveRed()` définit `pages.config.setValidityState(true)`respectivement et active **l’option Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez poursuivre l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
+    Dans **Tab.cshtml**, l’application présente à l’utilisateur deux options pour afficher l’onglet avec une icône rouge ou grise. Le bouton **Sélectionner gris** ou **Sélectionner rouge** déclenche `saveGray()` ou `saveRed()` , respectivement, définit `pages.config.setValidityState(true)`et active **Enregistrer** sur la page de configuration. Ce code indique à Teams que vous avez terminé la configuration requise et que vous pouvez procéder à l’installation. Les paramètres de `pages.config.setConfig` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
 
 1. Mettez à jour les valeurs `websiteUrl` et `contentUrl` dans chaque fonction avec l’URL ngrok HTTPS sous votre onglet.
 
@@ -655,7 +655,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans les **URL d’application**, mettez à jour la Stratégie de confidentialité vers `https://<yourngrokurl>/privacy` et Conditions d’utilisation vers `https://<yourngrokurl>/tou`, puis enregistrez.
 
-1. Dans **les fonctionnalités de l’application**, sélectionnez **l’application de groupe et de canal**. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
+1. Dans **Fonctionnalités de l’application**, sélectionnez **Grouper et canaliser l’application**. Mettez à jour l’**URL de configuration** avec `https://<yourngrokurl>/tab`, puis sélectionnez l’**Étendue** de votre onglet.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -685,4 +685,4 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Créer une page de suppression](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Ajouter une page SharePoint sous forme d’onglet dans Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
+* [Ajouter une page SharePoint en tant qu’onglet dans Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

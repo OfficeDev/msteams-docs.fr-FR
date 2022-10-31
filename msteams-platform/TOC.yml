@@ -274,8 +274,6 @@
     - name: Créer des onglets avec les Cartes adaptatives
       href: tabs/how-to/build-adaptive-card-tabs.md
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
-    - name: Utiliser Fluid avec Microsoft Teams
-      href: tabs/how-to/using-fluid-msteam.md
     - name: Déploiement du lien des onglets et vue des étapes
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -570,6 +568,8 @@
     - name: Prise en main
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
       displayName: 'Access, report, MSAL2'
+    - name: Autorisations d’application Teams
+      href: graph-api/app-permissions/teams-app-permissions.md
     - name: Consentement spécifique à la ressource
       href: graph-api/rsc/resource-specific-consent.md
       displayName: 'Permissions, delegated'

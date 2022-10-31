@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités des développeurs Microso
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740610"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791586"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -27,7 +27,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont en dis
 :::column-end:::
 :::column span="2":::
 
-Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour tous les développeurs d'applications.
+Fonctionnalités de la plateforme Teams disponibles pour tous les développeurs d’applications.
 
 **Octobre 2022**
 
@@ -94,8 +94,8 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 24/02/2022 | Présentation du guide pas à pas pour créer des webhooks sortants | Générer des webhooks et des connecteurs > Générer des webhooks sortants > [Générer des webhooks sortants](sbs-outgoing-webhooks.yml)|
 | 23/02/2022 | Paramètres de classement du store Microsoft Teams| Distribuer votre application > Publier dans le magasin Teams > [Paramètres de classement des magasins Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18/02/2022 | Présentation d’un glossaire complet pour la documentation des développeurs Microsoft Teams pour vous aider à trouver rapidement la définition d’un terme | [Glossaire](~/get-started/glossary.md) |
-| 18/02/2022 | Mise à jour du module Vue d’ensemble pour mapper l’application Teams aux objectifs de l’organisation, à l’histoire utilisateur et à l’exploration des fonctionnalités de l’application Teams | [Vue d’ensemble > Application Teams adaptée à](overview.md) |
-| 18/02/2022 | Mise à jour du module Notions de base de l’application pour planifier votre application afin d’inclure des cas d’usage de mappage aux fonctionnalités Teams et une liste de vérification de planification d’application | [Planifier votre application > Vue d’ensemble](~/concepts/app-fundamentals-overview.md) |
+| 18/02/2022 | Mise à jour du module Vue d’ensemble pour mapper l’application Teams aux objectifs de l’organisation, à l’histoire utilisateur et à l’exploration des fonctionnalités de l’application Teams | Vue d’ensemble [>'application Teams adaptée](overview.md) |
+| 18/02/2022 | Mise à jour du module Notions de base de l’application pour planifier votre application afin d’inclure des cas d’usage de mappage aux fonctionnalités Teams et une liste de vérification de planification d’application | Planifier votre application > [Vue d’ensemble](~/concepts/app-fundamentals-overview.md) |
 | 17/02/2022 | À quoi vous attendre après avoir envoyé votre application ?| Distribuer votre application > Publier dans le Magasin Teams > [Vue d’ensemble](concepts/deploy-and-publish/appsource/publish.md) |
 | 15/02/2022 | Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [Guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
 | 11/02/2022 | Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Créer des applications pour les réunions Teams > [Créer des applications pour les réunions Teams](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
@@ -233,7 +233,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | 23/04/2019 | Les extensions de messagerie basées sur l’action sont désormais disponibles. | [Extensions de message basées sur l’action](~/concepts/messaging-extensions/create-extensions.md) |
 | 18/02/2019 | Création de liens profonds vers une conversation privée. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 23/01/2019 | Faire apparaître les informations SKU et licenceType dans le contexte de l'onglet. | [Contexte de l’onglet](~/concepts/tabs/tabs-context.md) |
-|
+
 </details>
 
 <br>
@@ -269,7 +269,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | 03/15/2018 | Documentation remaniée pour les cartes. |[Cartes,](~/concepts/cards/cards.md) [actions de carte,](~/concepts/cards/cards-actions.md) [mise en forme de carte,](~/concepts/cards/cards-format.md) [référence de carte](~/concepts/cards/cards-reference.md)|
 | 27/02/2018 | Ajout d'un exemple de code pour démontrer la méthode AsTeamsChannelAccounts(). |[Obtenir un contexte pour votre bot](~/concepts/bots/bots-context.md)|
 | 05/02/2018 | Ajout de rubriques pour commencer à utiliser C#. |[Prise en main de la plateforme Microsoft Teams avec C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
-|
+
 </details>
 </details>
 </details>
@@ -330,7 +330,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont décon
 :::column-end:::
 :::column span="2":::
 
-Fonctionnalités de la plateforme Microsoft Teams qui ne sont pas disponibles.
+Fonctionnalités de la plateforme Teams qui ne sont pas disponibles.
 
 **Août 2022**
 
@@ -355,7 +355,7 @@ Vous pouvez obtenir les dernières mises à jour Teams plateforme en configurant
 
 ### <a name="to-configure-rss-feed"></a>Pour configurer le flux RSS
 
-1. Ouvrir Microsoft Teams.
+1. Ouvrir Teams.
 1. Sélectionnez **Teams** dans le volet gauche.
 1. Sélectionnez un canal dans l’équipe.
 1. Sélectionnez des points de suspension &#x25CF;&#x25CF;&#x25CF; et, dans la liste déroulante, sélectionnez **Connecteurs**.

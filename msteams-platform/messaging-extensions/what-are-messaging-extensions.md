@@ -1,23 +1,23 @@
 ---
 title: Extensions de messages
 author: surbhigupta
-description: Découvrez comment les extensions de message sont utilisées, les types et les scénarios dans lesquels elles sont utilisées sur la plateforme Microsoft Teams. Exemples sur l’action et l’extension de message basée sur la recherche.
+description: Découvrez comment les extensions de message sont utilisées, leurs types et les scénarios où elles sont utilisées sur la plateforme Microsoft Teams. Exemples sur l’action et l’extension de message basée sur la recherche.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 766a135a55b3894c985a0701bb883d45519b496b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100272"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791733"
 ---
 # <a name="message-extensions"></a>Extensions de messages
 
 Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez renvoyer les résultats de cette interaction au client Teams sous la forme d’une carte richement mise en forme.
 
 > [!IMPORTANT]
-> Les extensions de message sont disponibles dans les environnements cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans l’environnement du ministère de la Défense (DoD).
+> Les extensions de message sont disponibles dans les environnements Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans l’environnement department of Defense (DoD).
 
 Ce document fournit une vue d’ensemble de l’extension de message, des tâches effectuées dans différents scénarios, du fonctionnement de l’extension de message, des commandes d’action et de recherche, et du déploiement de liens.
 
@@ -38,12 +38,12 @@ L’image suivante affiche les emplacements à partir desquels les extensions de
 
 ## <a name="understand-how-message-extensions-work"></a>Comprendre le fonctionnement des extensions de message
 
-Une extension de message se compose d’un service web que vous hébergez et d’un manifeste d’application, qui définit l’emplacement d’appel de votre service web dans le client Teams. Le service web tire parti du schéma de messagerie et du protocole de communication sécurisé du Bot Framework. Vous devez donc enregistrer votre service web en tant que bot dans le Bot Framework.
+Une extension de message se compose d’un service web que vous hébergez et d’un manifeste d’application, qui définit l’emplacement à partir duquel votre service web est appelé dans le client Teams. Le service web tire parti du schéma de messagerie et du protocole de communication sécurisé du Bot Framework. Vous devez donc enregistrer votre service web en tant que bot dans le Bot Framework.
 
 > [!NOTE]
 > Bien que vous puissiez créer le service web manuellement, utilisez le [Kit de développement logiciel (SDK) Bot Framework](https://github.com/microsoft/botframework-sdk) pour utiliser le protocole.
 
-Dans le manifeste de l’application Teams, une extension de message unique est définie avec jusqu’à 10 commandes différentes. Chaque commande définit un type, tel que l’action ou la recherche, ainsi que les emplacements dans le client à partir desquels il est appelé. Les emplacements d’appel sont la zone de message de composition, la barre de commandes et le message. Lors de l’appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l’interaction suivante à activer.
+Dans le manifeste d’application pour l’application Teams, une seule extension de message est définie avec jusqu’à 10 commandes différentes. Chaque commande définit un type, tel que l’action ou la recherche et les emplacements dans le client à partir desquels il est appelé. Les emplacements d’appel sont la zone de message de composition, la barre de commandes et le message. Lors de l’appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l’interaction suivante à activer.
 
 ## <a name="types-of-message-extension-commands"></a>Types de commandes d’extension de message
 
@@ -51,7 +51,7 @@ Il existe deux types de commandes d’extension de message, la commande d’acti
 
 ### <a name="action-commands"></a>Commandes d'action
 
-Les commandes d’action sont utilisées pour présenter aux utilisateurs une fenêtre contextuelle modale pour collecter ou afficher des informations. Lorsque l'utilisateur soumet le formulaire, votre service web répond en insérant un message dans la conversation directement ou en insérant un message dans la zone de composition de messages. Après cela, l’utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires ensemble pour des flux de travail plus complexes.
+Les commandes d’action sont utilisées pour présenter aux utilisateurs une fenêtre contextuelle modale afin de collecter ou d’afficher des informations. Lorsque l'utilisateur soumet le formulaire, votre service web répond en insérant un message dans la conversation directement ou en insérant un message dans la zone de composition de messages. Après cela, l’utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires ensemble pour des flux de travail plus complexes.
 
 Les commandes d’action sont déclenchées à partir de la zone de composition de message, de la zone de commande ou d’un message. Lorsque la commande est invoquée à partir d'un message, la charge utile JSON initiale envoyée à votre robot comprend l'intégralité du message à partir duquel elle a été invoquée. L'image suivante affiche le module de tâches de la commande d’action de l'extension de message :
 
@@ -238,7 +238,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | Extension de message avec des commandes basées sur des actions | Cet exemple montre comment créer une extension de message basée sur des actions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extension de message avec des commandes basées sur la recherche | Cet exemple montre comment créer une extension de message basée sur la recherche. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Action d’extension de message pour la planification des tâches|Cet exemple montre comment planifier une tâche à partir de la commande d’action d’extension de message et obtenir une carte de rappel à une date et une heure planifiées.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Action d’extension de message pour la planification des tâches|Cet exemple montre comment planifier une tâche à partir de la commande d’action d’extension de message et obtenir une carte de rappel à une date et une heure planifiées.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| N/A |
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -249,4 +249,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [Définir la commande d’extension de message de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)
-* [Actions universelles pour les extensions de messagerie basées sur la recherche](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [Actions universelles pour les extensions de messagerie basée sur la recherche](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

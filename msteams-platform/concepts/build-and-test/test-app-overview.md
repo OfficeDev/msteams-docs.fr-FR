@@ -1,14 +1,14 @@
 ---
 title: Vue d’ensemble de Tester votre application
-description: Dans ce module, découvrez le processus de test et de débogage de votre application personnalisée Teams dans Microsoft 365 et ajoutez des données de test à votre locataire Microsoft 365
+description: Dans ce module, découvrez le processus pour tester et déboguer votre application personnalisée Teams dans Microsoft 365 et ajouter des données de test à votre client Microsoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7cb0d194cfa5cab503a632889b5449f086532afd
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144382"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791551"
 ---
 # <a name="test-your-app"></a>Tester votre application
 
@@ -20,7 +20,7 @@ Après avoir intégré votre application à Microsoft Teams, vous devez tester v
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
-Avant de commencer à tester votre application, préparez votre client de test Microsoft 365 et activez l’application Teams personnalisée pour vous permettre de charger votre application. Vous devez vous inscrire au programme de développement Microsoft 365 et gérer les paramètres Teams de votre organisation. Configurez votre abonnement développeur et configurez-le via [préparer votre client Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Avant de commencer à tester votre application, préparez votre locataire de test Microsoft 365 et activez l’application Teams personnalisée pour vous permettre de charger votre application. Vous devez vous inscrire au programme de développement Microsoft 365 et gérer les paramètres Teams de votre organisation. Configurez votre abonnement développeur et configurez-le via [préparer votre client Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ## <a name="test-and-debug"></a>Test et débogage
 

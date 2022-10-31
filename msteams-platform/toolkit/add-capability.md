@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: abcda0dd19388d1cdce2f2b440ecbae833b5f9c3
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: a0bec3166228b53dd4a6da336b42632ba2475582
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740603"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791754"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Ajouter des fonctionnalités aux applications Teams
 
@@ -94,7 +94,7 @@ Le tableau suivant présente les modifications qui peuvent être visibles dans l
 |Bot, extension de message et onglet|Inclut des informations relatives aux bots ou aux&nbsp;onglets dans les fichiers teamsfx et de provisionnement destinés à l’intégration des fonctions Azure.|Les fichiers sous `templates/azure/teamsfx` sont mis à jour et `templates/azure/provision/xxx`les fichiers .bicep sont régénérés.|
 |Bot, extension de message et onglet|Garantit que votre projet est défini avec les configurations appropriées pour les fonctionnalités nouvellement ajoutées.|Les fichiers sous `.fx/config` sont régénérés|
 
-## <a name="step-by-step-guide"></a>Guide pas à pas
+## <a name="step-by-step-guides"></a>Guides détaillés
 
 * Suivez le guide [pas à pas](../sbs-gs-commandbot.yml) pour créer un bot de commande dans Microsoft Teams.
 

@@ -1,22 +1,22 @@
 ---
 title: Déboguer votre Teams application
 author: surbhigupta
-description: Dans ce module, découvrez comment déboguer votre application Teams dans le Kit de ressources Teams et les principales fonctionnalités du Kit de ressources Teams
+description: Dans ce module, découvrez comment déboguer votre application Teams dans le Kit de ressources Teams et les fonctionnalités clés du Kit de ressources Teams
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
-ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
+ms.openlocfilehash: db6e3b99ab737b7ea8cac393e6ee3e0830cd0acc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68653685"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791789"
 ---
 # <a name="debug-your-teams-app"></a>Déboguer votre Teams application
 
-Teams Toolkit vous aide à déboguer et à afficher un aperçu de votre application Microsoft Teams. Le débogage est le processus de vérification, de détection et de correction des problèmes ou bogues pour garantir que le programme s’exécute correctement dans Teams.
+Teams Toolkit vous permet de déboguer et d’afficher un aperçu de votre application Microsoft Teams. Le débogage est le processus de vérification, de détection et de correction des problèmes ou des bogues pour garantir que le programme s’exécute correctement dans Teams.
 
 ::: zone pivot="visual-studio-code"
 
@@ -30,13 +30,13 @@ Teams Toolkit dans Visual Studio Code automatise le processus de débogage. Vous
 
 Pendant le processus de débogage :
 
-* Teams Toolkit démarre automatiquement les services d’application, lance les débogueurs et charge l’application Teams de manière indépendante.
+* Teams Toolkit démarre automatiquement les services d’application, lance les débogueurs et charge une version test de l’application Teams.
 * Teams Toolkit vérifie les prérequis pendant le processus de débogage en arrière-plan.
 * Votre application Teams est disponible en préversion dans le client web Teams localement après le débogage.
 * Vous pouvez également personnaliser les paramètres de débogage pour utiliser les points de terminaison de votre robot, le certificat de développement ou le composant de débogage partiel pour charger votre application configurée.
 * Microsoft Visual Studio Code vous permet de déboguer l’onglet, le bot, l’extension de message et Azure Functions.
 
-## <a name="key-debug-features-of-teams-toolkit"></a>Fonctionnalités de débogage clés du Kit de ressources Teams
+## <a name="key-debug-features-of-teams-toolkit"></a>Principales fonctionnalités de débogage du Kit de ressources Teams
 
 Teams Shared Computer Toolkit prend en charge les fonctionnalités de débogage suivantes :
 
@@ -46,7 +46,7 @@ Teams Shared Computer Toolkit prend en charge les fonctionnalités de débogage 
 * [Recharge à chaud](#hot-reload)
 * [Arrêter le débogage](#stop-debugging)
 
-Teams Toolkit exécute des fonctions en arrière-plan pendant le processus de débogage, notamment la vérification des conditions préalables requises pour le débogage. Vous pouvez voir la progression du processus de vérification dans le canal de sortie du Kit de ressources Teams. Dans le processus d’installation, vous pouvez inscrire et configurer votre application Teams.
+Teams Toolkit effectue des fonctions d’arrière-plan pendant le processus de débogage, notamment la vérification des conditions préalables requises pour le débogage. Vous pouvez voir la progression du processus de vérification dans le canal de sortie du Kit de ressources Teams. Dans le processus d’installation, vous pouvez inscrire et configurer votre application Teams.
 
 ### <a name="start-debugging"></a>Démarrer le débogage
 
@@ -64,13 +64,13 @@ Vous pouvez activer/désactiver les points d’arrêt sur les codes sources des 
 
 ### <a name="hot-reload"></a>Recharge à chaud
 
-Vous pouvez mettre à jour et enregistrer les codes sources de l’onglet, du bot, de l’extension de message et Azure Functions en même temps lorsque vous déboguez l’application Teams. L'application se recharge et le débogueur se rattache aux langages de programmation.
+Vous pouvez mettre à jour et enregistrer les codes sources d’onglet, de bot, d’extension de message et d’Azure Functions en même temps lorsque vous déboguez l’application Teams. L'application se recharge et le débogueur se rattache aux langages de programmation.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="recharge à chaud pour les codes sources" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
 ### <a name="stop-debugging"></a>Arrêter le débogage
 
-Une fois le débogage local terminé, vous pouvez sélectionner **Arrêter (Maj+F5)** ou **[Alt] Déconnecter (Maj+F5)** dans la barre d’outils de débogage flottante pour arrêter toutes les sessions de débogage et terminer les tâches. L’image suivante illustre l’action d’arrêt du débogage :
+Lorsque vous avez terminé le débogage local, vous pouvez sélectionner **Arrêter (Maj+F5)** ou **[Alt] Déconnecter (Maj+F5)** dans la barre d’outils de débogage flottante pour arrêter toutes les sessions de débogage et arrêter les tâches. L’image suivante illustre l’action d’arrêt du débogage :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="arrêter le débogage":::
 
@@ -80,17 +80,17 @@ Les étapes suivantes vous aident à préparer le débogage :
 
 ### <a name="sign-in-to-microsoft-365"></a>Connectez-vous à Microsoft 365.
 
-Si vous êtes déjà inscrit à Microsoft 365, connectez-vous à Microsoft 365. Pour plus d’informations, consultez [le programme pour développeurs Microsoft 365](tools-prerequisites.md#microsoft-365-developer-program)
+Si vous êtes déjà inscrit à Microsoft 365, connectez-vous à Microsoft 365. Pour plus d’informations, consultez [Programme pour les développeurs Microsoft 365](tools-prerequisites.md#microsoft-365-developer-program)
 
 ### <a name="toggle-breakpoints"></a>Basculez les points d’arrêt.
 
-Vérifiez que vous pouvez basculer des points d’arrêt sur les codes sources des onglets, des bots, des extensions de message et des Azure Functions pour plus d’informations, consultez [Les points d’arrêt bascule](#toggle-breakpoints)
+Vérifiez que vous pouvez activer les points d’arrêt sur les codes sources des onglets, des bots, des extensions de message et des Azure Functions pour plus d’informations, consultez [Basculer les points d’arrêt](#toggle-breakpoints).
 
 ## <a name="customize-debug-settings"></a>Personnaliser les paramètres de débogage
 
 Teams Toolkit vous permet de personnaliser les paramètres de débogage pour créer votre onglet ou bot. Pour plus d’informations sur la liste complète des options personnalisables, consultez la [documentation sur les paramètres de débogage](https://aka.ms/teamsfx-debug-tasks).
 
-### <a name="customize-scenarios"></a>Personnaliser des scénarios
+### <a name="customize-scenarios"></a>Personnaliser les scénarios
 
 <br>
 
@@ -98,7 +98,7 @@ Teams Toolkit vous permet de personnaliser les paramètres de débogage pour cr�
 
 <summary><b>Ignorer les vérifications des prérequis</b></summary>
 
-En `.fx/configs/tasks.json` dessous`"prerequisites"``"Validate & install prerequisites"` > `"args"` > , mettez à jour les vérifications des prérequis que vous souhaitez ignorer.
+ > `"prerequisites"``"Validate & install prerequisites"``"args"` > Sous `.fx/configs/tasks.json` , mettez à jour les vérifications des prérequis que vous souhaitez ignorer.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="ignorer les vérifications des prérequis":::
 
@@ -108,12 +108,12 @@ En `.fx/configs/tasks.json` dessous`"prerequisites"``"Validate & install prerequ
 <summary><b>Utiliser votre certificat de développement</b></summary>
 
 1. Dans `.fx/configs/tasks.json`, décochez `"devCert"` sous`"prerequisites"``"Validate & install prerequisites"``"args"` >  >  .
-1. Définissez « SSL_CRT_FILE » et « SSL_KEY_FILE » dans `.env.teamsfx.local` le chemin de votre fichier de certificat et le chemin du fichier de clé.
+1. Définissez « SSL_CRT_FILE » et « SSL_KEY_FILE » dans sur `.env.teamsfx.local` le chemin d’accès au fichier de certificat et au fichier de clé.
 
 </details>
 
 <details>
-<summary><b>Personnaliser npm install args</b></summary>
+<summary><b>Personnaliser les arguments d’installation de npm</b></summary>
 
 Dans `.fx/configs/tasks.json`, définissez npmInstallArgs sous `"Install npm packages"`.
   
@@ -125,20 +125,20 @@ Dans `.fx/configs/tasks.json`, définissez npmInstallArgs sous `"Install npm pac
 <summary><b>Modifier les ports</b></summary>
 
 * Bot
-  1. Recherchez `"3978"` dans votre projet et recherchez des apparences dans `tasks.json`, `ngrok.yml` et `index.js`.
+  1. `"3978"` Recherchez dans votre projet et recherchez des apparences dans `tasks.json`, `ngrok.yml` et `index.js`.
   1. Remplacez-le par votre port.
-     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Remplacer votre port pour le bot":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Remplacer votre port par bot":::
 * Tab
   1. Dans `.fx/configs/tasks.json`, recherchez `"53000"`.
   1. Remplacez-le par votre port.
-     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Remplacer votre port par l’onglet":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Remplacez votre port par l’onglet":::
 
 </details>
 
 <details>
 <summary><b>Utiliser votre propre package d’application</b></summary>
 
-Dans `.fx/configs/tasks.json`, définissez `"appPackagePath"` sous `"Build & upload Teams manifest"` le chemin d’accès de votre package d’application.
+Dans `.fx/configs/tasks.json`, définissez `"appPackagePath"` sous `"Build & upload Teams manifest"` sur le chemin d’accès de votre package d’application.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="utiliser votre propre chemin d’accès au package d’application":::
 
@@ -147,10 +147,10 @@ Dans `.fx/configs/tasks.json`, définissez `"appPackagePath"` sous `"Build & upl
 <details>
 <summary><b>Utiliser votre propre tunnel</b></summary>
 
-1. En `.fx/configs/tasks.json` dessous `"Start Teams App Locally"`, vous pouvez mettre à jour `"Start Local tunnel"`.
+1. `"Start Teams App Locally"`Sous `.fx/configs/tasks.json` , vous pouvez mettre à jour `"Start Local tunnel"`.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Utiliser votre propre tunnel":::
-1. Lancez votre propre service de tunnel, puis mettez à jour `"botMessagingEndpoint"` vers votre propre point de terminaison de message sous `.fx/configs/tasks.json` `"Set up bot"`.
+1. Lancez votre propre service de tunnel, puis mettez à jour `"botMessagingEndpoint"` vers votre propre point de terminaison de message dans sous `.fx/configs/tasks.json` `"Set up bot"`.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="mettre à jour le point de terminaison de messagerie":::
 
@@ -172,7 +172,7 @@ Vous pouvez ajouter des variables d’environnement à `.env.teamsfx.local` fich
 
 Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer simultanément l’onglet, le bot, l’extension de message et Azure Functions. Vous pouvez mettre à jour `.vscode/launch.json` et `.vscode/tasks.json` déboguer un composant partiel. Si vous souhaitez déboguer l'onglet uniquement dans un projet tab plus bot avec Azure Functions, utilisez les étapes suivantes :
 
-1. Mettre à jour `"Attach to Bot"` et `"Attach to Backend"` à partir du composé de débogage dans `.vscode/launch.json`.
+1. Mettez à jour `"Attach to Bot"` et `"Attach to Backend"` à partir du composé de débogage dans `.vscode/launch.json`.
 
    ```json
    {
@@ -192,7 +192,7 @@ Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer si
    }
    ```
 
-2. Mettez à jour `"Start Backend"` et `"Start Bot"` à partir de Start All, tâche dans .vscode/tasks.json.
+2. Mettre à jour `"Start Backend"` et `"Start Bot"` à partir de La tâche Démarrer tout dans .vscode/tasks.json.
 
    ```json
    {
@@ -221,7 +221,7 @@ Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer si
 
 ## <a name="debug-your-teams-app-using-visual-studio"></a>Déboguer votre application Teams à l’aide de Visual Studio
 
-Teams Toolkit automatise les services de démarrage d’application, lance le débogage et charge l’application Teams. Après le débogage, vous pouvez afficher un aperçu de l’application Teams dans le client web Teams. Vous pouvez également personnaliser les paramètres de débogage pour utiliser vos points de terminaison de bot ou des variables d’environnement pour charger votre application configurée. Visual Studio vous permet de déboguer l’extension d’onglet, de bot et de message. Pendant le processus de débogage, Teams Toolkit prend en charge les fonctionnalités de débogage suivantes :
+Teams Toolkit automatise les services de démarrage d’application, lance le débogage et charge l’application Teams. Après le débogage, vous pouvez afficher un aperçu de l’application Teams dans le client web Teams. Vous pouvez également personnaliser les paramètres de débogage pour utiliser vos points de terminaison de bot ou des variables d’environnement pour charger votre application configurée. Visual Studio vous permet de déboguer l’onglet, le bot et l’extension de message. Pendant le processus de débogage, Teams Toolkit prend en charge les fonctionnalités de débogage suivantes :
 
 * Préparer les dépendances d’application Teams
 * Démarrer le débogage
@@ -237,11 +237,11 @@ Teams Toolkit automatise les services de démarrage d’application, lance le d�
 | &nbsp; | Visual Studio 2022 version 17.3 | Vous pouvez installer l’édition Entreprise de Visual Studio et installer la charge de travail « ASP.NET » et les outils de développement Microsoft Teams. |
 | &nbsp; | Toolkit Teams | Extension Visual Studio qui crée une structure de projet pour votre application. Utilisez la dernière version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams pour collaborer avec toutes les personnes avec lesquelles vous travaillez via les applications pour les conversations, les réunions, les appels, le tout au même endroit. |
-| &nbsp; | [Préparer votre client Microsoft Office 365](../concepts/build-and-test/prepare-your-o365-tenant.md) | Accès au compte Teams avec les autorisations appropriées pour installer une application. |
-| &nbsp; | [Compte de développeur Microsoft 365](/../concepts/build-and-test/prepare-your-o365-tenant) | Accès au compte Teams avec les autorisations appropriées pour installer une application. |
-| &nbsp; | Azure Tools et [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Outils Azure pour accéder aux données stockées ou déployer un backend cloud pour votre application Teams dans Azure. |
+| &nbsp; | [Préparer votre client Microsoft Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Accès au compte Teams avec les autorisations appropriées pour installer une application. |
+| &nbsp; | [Compte de développeur Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Accès au compte Teams avec les autorisations appropriées pour installer une application. |
+| &nbsp; | Outils Azure et [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Outils Azure permettant d’accéder aux données stockées ou de déployer un back-end basé sur le cloud pour votre application Teams dans Azure. |
 |&nbsp;  | **Optional** | &nbsp; |
-|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok est utilisé pour transférer des messages externes d’Azure Bot Framework vers votre ordinateur local.|
+|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok est utilisé pour transférer des messages externes d’Azure Bot Framework à votre ordinateur local.|
 
 ## <a name="key-features-of-teams-toolkit"></a>Principales fonctionnalités de Teams Shared Computer Toolkit
 
@@ -249,7 +249,7 @@ Vous pouvez voir les fonctionnalités clés suivantes du Kit de ressources Teams
 
 ### <a name="prepare-teams-app-dependencies"></a>Préparer les dépendances d’application Teams
 
-Teams Toolkit prépare les dépendances de débogage locales et inscrit votre application Teams dans le locataire de votre compte. Pour les applications Bot et Extension de message, Teams Toolkit s’inscrit et configure le bot.
+Teams Toolkit prépare les dépendances de débogage locales et inscrit votre application Teams dans le locataire de votre compte. Pour les applications Bot et Extension de message, Teams Toolkit inscrit et configure le bot.
 
 ### <a name="start-debugging"></a>Démarrer le débogage
 
@@ -257,10 +257,10 @@ Vous pouvez effectuer le débogage avec une seule opération, appuyez sur **F5**
 
 ### <a name="toggle-breakpoints"></a>Basculez les points d’arrêt.
 
-Vous pouvez basculer les points d’arrêt dans les codes sources des onglets, des bots, des extensions de message et des fonctions Azure. Les points d’arrêt s’exécutent lorsque vous interagissez avec l’application Teams dans votre navigateur web.
+Vous pouvez activer/désactiver les points d’arrêt dans les codes sources des onglets, des bots, des extensions de message et des fonctions Azure. Les points d’arrêt s’exécutent lorsque vous interagissez avec l’application Teams dans votre navigateur web.
 L’image suivante montre les points d’arrêt bascule :
 
-:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Points d’arrêt bascule de débogage local" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Basculement des points d’arrêt de débogage locaux" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
 
 ### <a name="hot-reload"></a>Recharge à chaud
 
@@ -268,7 +268,7 @@ Sélectionnez **Rechargement à chaud** pour appliquer vos modifications dans vo
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Sélectionner l’icône de rechargement à chaud":::
 
-Sélectionnez l’option **Rechargement à chaud sur l’enregistrement de fichier** dans la liste déroulante pour activer le rechargement automatique à chaud.
+Sélectionnez l’option **Rechargement à chaud enregistrer le fichier** dans la liste déroulante pour activer le rechargement automatique à chaud.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Sélectionner le rechargement à chaud lors de l’enregistrement de fichier":::
   
@@ -283,7 +283,7 @@ Sélectionnez **Arrêter le débogage** une fois le débogage local terminé.
 
 ## <a name="customize-debug-settings"></a>Personnaliser les paramètres de débogage
 
-Vous pouvez personnaliser le paramètre de débogage pour votre application Teams afin d’utiliser vos points de terminaison de bot et d’ajouter des variables d’environnement :
+Vous pouvez personnaliser le paramètre de débogage pour votre application Teams afin d’utiliser les points de terminaison de votre bot et d’ajouter des variables d’environnement :
 
 ### <a name="use-your-bot-endpoint"></a>Utiliser le point de terminaison de votre bot
 
@@ -308,17 +308,17 @@ Vous pouvez lancer l’application Teams en tant qu’application web au lieu de
 1. Sélectionnez **Propriétés** > **launchSettings.json** dans Explorateur de solutions panneau sous votre projet.
 1. Supprimez « **launchUrl »** du fichier.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Lancer des équipes en tant qu’application web en supprimant launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Lancer teams en tant qu’application web en supprimant launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
 
-1. Cliquez avec le bouton droit sur **Solution** et sélectionnez **Propriétés**.
+1. Cliquez avec le bouton droit sur **Solution** , puis sélectionnez **Propriétés**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Cliquez avec le bouton droit sur la solution et sélectionnez les propriétés" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Cliquez avec le bouton droit sur la solution et sélectionnez propriétés" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
 
-1. Sélectionnez **Configuration des propriétés** >  de configuration dans la boîte de dialogue.
-1. Désactivez la case à cocher **Déployer** .
+1. Sélectionnez **Propriétés** >  de configuration **Configuration** dans la boîte de dialogue.
+1. Décochez la case **Déployer** .
 1. Sélectionnez **OK**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Décocher le déploiement dans les propriétés de configuration" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Décochez déployer dans les propriétés de configuration." lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
 
 ::: zone-end
 

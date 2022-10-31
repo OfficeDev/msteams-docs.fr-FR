@@ -4,12 +4,12 @@ description: Configurez des autorisations et des étendues supplémentaires avec
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: onglets d'authentification des équipes Microsoft Azure Active Directory (Azure AD) API Graph Autorisation déléguée portée du jeton d'accès
-ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 11620e10ed736ce9fe88e3bb755acfbabfec3f47
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780848"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791719"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Étendre l'application d'onglet avec les autorisations et la portée de Microsoft Graph
 
@@ -221,7 +221,7 @@ Vous pouvez demander le consentement à l'aide de l'API Auth. Une autre approche
     - Au lieu de `?scope={scopes}`, utilisez `?prompt=consent&scope={scopes}`
     - Assurez-vous que `{scopes}` inclut toutes les étendues pour lesquelles vous demandez à l'utilisateur, par exemple, `Mail.Read` ou `User.Read`.
 
-    Pour gérer le consentement incrémentiel pour l’application onglet, consultez [le consentement de l’utilisateur incrémentiel et dynamique](/azure/active-directory/develop/v2-permissions-and-consent).
+    Pour gérer le consentement incrémentiel pour l’application d’onglet, consultez [Consentement utilisateur incrémentiel et dynamique](/azure/active-directory/develop/v2-permissions-and-consent).
 5. Une fois que l'utilisateur de l'application a accordé plus d'autorisations, réessayez le flux OBO pour accéder à ces autres API.
     </details>
 

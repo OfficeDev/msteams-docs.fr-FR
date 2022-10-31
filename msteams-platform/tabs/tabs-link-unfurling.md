@@ -1,26 +1,26 @@
 ---
 title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez l’affichage intermédiaire, un composant d’interface utilisateur en plein écran appelé pour exposer votre contenu web. Le déploiement de liens est utilisé pour transformer les URL en un onglet à l’aide de cartes adaptatives.
+description: Découvrez la vue de phase, un composant d’interface utilisateur plein écran appelé pour exposer votre contenu web. Le déploiement de liens est utilisé pour transformer les URL en onglet à l’aide de cartes adaptatives.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
-ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
+ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2022
-ms.locfileid: "68484919"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791565"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
-La vue d’étape est un nouveau composant d’interface utilisateur. Il vous permet d’afficher le contenu qui est ouvert en plein écran dans Teams et épinglé sous forme d’onglet.
+La vue de phase est un nouveau composant d’interface utilisateur. Il vous permet d’afficher le contenu qui est ouvert en plein écran dans Teams et épinglé en tant qu’onglet.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="stage-view"></a>Vue des étapes
 
-La vue des étapes est un composant d’interface utilisateur en plein écran que vous pouvez utiliser pour exposer votre contenu web. Le service de déploiement de liaison existant est mis à jour afin qu’il soit utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Lorsqu’un utilisateur envoie une URL dans une conversation ou un canal, l’URL est déployée vers une carte adaptative. L’utilisateur peut sélectionner **Affichage** dans la carte et épingler le contenu sous la forme d’un onglet directement à partir de la vue des étapes.
+La vue des étapes est un composant d’interface utilisateur en plein écran que vous pouvez utiliser pour exposer votre contenu web. Le service de déploiement de lien existant est mis à jour afin qu’il soit utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Lorsqu’un utilisateur envoie une URL dans une conversation ou un canal, l’URL est déployée vers une carte adaptative. L’utilisateur peut sélectionner **Affichage** dans la carte et épingler le contenu sous la forme d’un onglet directement à partir de la vue des étapes.
 
 ## <a name="advantage-of-stage-view"></a>Avantage de la vue des étapes
 
@@ -30,7 +30,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 |Vue des étapes|Module de tâche|
 |:-----------|:-----------|
-|La vue des étapes est utile lorsque vous avez un contenu riche à afficher aux utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il fournit des fonctionnalités enrichies qui permettent d’afficher votre contenu dans le canevas en plein écran.|[Le module de tâches](../task-modules-and-cards/task-modules/task-modules-tabs.md) est particulièrement utile pour afficher des messages qui requièrent l'attention de l'utilisateur, ou pour recueillir les informations nécessaires pour passer à l'étape suivante.|
+|La vue des étapes est utile lorsque vous avez un contenu riche à afficher aux utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il fournit des fonctionnalités enrichies qui vous aident à restituer votre contenu dans le canevas plein écran.|[Le module de tâches](../task-modules-and-cards/task-modules/task-modules-tabs.md) est particulièrement utile pour afficher des messages qui requièrent l'attention de l'utilisateur, ou pour recueillir les informations nécessaires pour passer à l'étape suivante.|
   
 ## <a name="invoke-stage-view"></a>Invoquer la vue de scène
 
@@ -45,9 +45,9 @@ Lorsque l'utilisateur saisit une URL sur le client de bureau Teams, le robot est
 
 Les images suivantes montrent une scène ouverte à partir d'une carte adaptative :
 
-[![Ouvrir une étape de la carte adaptative](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Capture d’écran montrant l’étape ouverte à partir de la carte adaptative."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![Ouvrir une étape](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Capture d’écran montrant l’étape d’ouverture à partir de la carte."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### <a name="example"></a>Exemple
 
@@ -90,7 +90,7 @@ Voici le processus d’appel de la vue d’étape :
 
 > [!NOTE]
 >
-> Sur les clients mobiles Teams, l’appel de la vue intermédiaire pour les applications distribuées via le [magasin Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) et l’absence d’expérience optimisée pour les appareils mobiles ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l'URL spécifié dans le `websiteUrl`paramètre de `TabInfo`l'objet.
+> Sur les clients mobiles Teams, l’appel de la vue de phase pour les applications distribuées via le [magasin Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d’une expérience optimisée pour les appareils mobiles ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l'URL spécifié dans le `websiteUrl`paramètre de `TabInfo`l'objet.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 
@@ -98,13 +98,13 @@ Pour invoquer la vue des étapes par le biais d'un lien profond depuis votre ong
 
 ### <a name="syntax"></a>Syntaxe
 
-Voici la syntaxe de lien profond :
+Voici la syntaxe du lien profond :
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
 ### <a name="examples"></a>Exemples
 
-Lorsqu’un utilisateur entre une URL, elle est déployée dans une carte adaptative.
+Lorsqu’un utilisateur entre une URL, celle-ci est déployée dans une carte adaptative.
 
 Voici des exemples de liens profonds pour invoquer la vue des étapes :
 

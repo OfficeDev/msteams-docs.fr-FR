@@ -1,18 +1,18 @@
 ---
 title: Documentation pour développeurs Microsoft Teams – Glossaire
-description: Découvrez les termes, significations et définitions courants utilisés dans la documentation du développeur Microsoft Teams.
+description: Découvrez les termes, significations et définitions courants utilisés dans la documentation des développeurs Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 74717387d83e32e240a21b83d87a89bcb4591145
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615232"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791439"
 ---
 # <a name="glossary"></a>Glossaire
 
-Termes et définitions courants utilisés dans la documentation pour développeurs Teams.
+Termes et définitions courants utilisés dans la documentation des développeurs Microsoft Teams.
 
 ## <a name="a"></a>A
 
@@ -23,7 +23,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Catalogue d’applications](../toolkit/publish.md) | Site qui stocke les applications SharePoint et Office pour l’utilisation interne d’une organisation. <br>**Voir aussi** : [SPFx](#s) |
 | [Manifeste d'application](../resources/schema/manifest-schema.md) | Le manifeste de l’application Teams décrit comment l’application s’intègre au produit Microsoft Teams. Votre manifeste doit être conforme au [schéma du manifeste](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [Package de l’application](../concepts/build-and-test/apps-package.md) | Un package d’application Teams est un fichier zip qui contient le fichier manifeste de l’application, l’icône de couleur et l’icône de contour. |
-| [Autorisation de l’application](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Une option dans une application Teams pour activer les autorisations d’appareil. Il est disponible uniquement lorsque le fichier manifeste de l’application déclare que l’application a besoin d’autorisations d’appareil. <br> **Voir aussi** : [Autorisations de l’appareil](#d) |
+| [Autorisation de l’application](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Une option dans une application Teams pour activer les autorisations d’appareil. Il est disponible uniquement lorsque le fichier manifeste de l’application déclare que l’application a besoin d’autorisations d’appareil. <br> **Voir aussi** : [Autorisations d’appareil](#d) |
 | [Étendue de l’application](../concepts/design/understand-use-cases.md#app-scope) | Zone dans Teams où les utilisateurs peuvent utiliser votre application. Les applications peuvent avoir une ou plusieurs étendues, notamment personnelles, canaux, conversations et réunions. Une application Teams peut exister entre les étendues. |
 | Bac d’application | Un bac d’application situé dans la barre inférieure d’une application mobile Teams. Il collecte toutes les applications qui sont ouvertes mais qui ne sont pas actuellement utilisées ou actives. <br>**Voir aussi** : [Teams Mobile](#t) |
 | [Ressource Azure](../toolkit/provision.md) | Un service disponible via Azure que votre application Teams peut utiliser pour le déploiement Azure. Il peut s’agir de comptes de stockage, d’applications web, de bases de données, etc. |
@@ -63,7 +63,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | Terme | Définition |
 | --- | --- |
 | [Liaisons profondes](../concepts/build-and-test/deep-links.md) | Dans une application Teams, vous pouvez créer des liens profonds vers des informations et des fonctionnalités dans Teams ou pour aider l’utilisateur à accéder au contenu de votre application. |
-|[Département de la Défense (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Les environnements DoD sont conformes aux recommandations du département de la Défense sur les exigences de sécurité, au Supplément aux règlements fédéraux d’acquisition de la défense (DFARS) et au International Traffic in Arms Regulations (ITAR).|
+|[Département de la Défense (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Les environnements DoD sont conformes aux directives relatives aux exigences de sécurité du ministère de la Défense, au supplément DFARS (Defense Federal Acquisition Regulations Supplement) et à la réglementation ITAR (International Traffic in Arms Regulations).|
 | [Documentation pour les développeurs](../concepts/build-and-test/teams-developer-portal.md) | L’outil principal pour configurer, distribuer et gérer vos applications Microsoft Teams. Avec le Portail du développeur, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’exécution, et bien plus encore. |
 | [Aperçu pour les développeurs](../resources/dev-preview/developer-preview-intro.md) | Programme public pour les développeurs qui fournit un accès anticipé aux fonctionnalités non disponibles dans Microsoft Teams. Il vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre application Microsoft Teams. |
 | Déployer | Processus de chargement du code principal et frontal pour l’application. Lors du déploiement, le code de votre application est copié dans les ressources que vous avez créées lors de l’approvisionnement. <br>**Voir aussi :** [Provision](#p) |
@@ -85,14 +85,14 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 
 | Terme | Définition |
 | --- | --- |
-| [Expérience de première exécution](../concepts/design/design-teams-app-ui-templates.md)|Une expérience de première exécution (FRE) est l’introduction d’un utilisateur à votre produit. Le FRE aide les utilisateurs à prendre en main les fonctions, les fonctionnalités et les avantages du produit, et influence les utilisateurs à revenir et à continuer à utiliser votre produit.|
+| [Expérience de première utilisation](../concepts/design/design-teams-app-ui-templates.md)|Une expérience de première utilisation (FRE) est l’introduction d’un utilisateur à votre produit. La FRE aide les utilisateurs à prendre en main les fonctions, les fonctionnalités et les avantages du produit, et influence les utilisateurs à revenir et à continuer à utiliser votre produit.|
 
 ## <a name="g"></a>G
 
 | Terme | Définition |
 | --- | --- |
-|[Cloud de la communauté gouvernementale (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| L’environnement gcc fournit la conformité avec les exigences fédérales pour les services cloud, y compris FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS) et les exigences relatives à la justice pénale et aux systèmes d’information fiscale fédéraux (types de données CJI et FTI).|
-|[Cloud de la communauté gouvernementale (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|Les environnements de haute qualité du GCC sont conformes aux directives sur les exigences de sécurité du ministère de la Défense (DoD), au Supplément aux règlements fédéraux sur les acquisitions de défense (DFARS) et au International Traffic in Arms Regulations (ITAR).<br>**Voir aussi** : [Department of Defense (DoD)](#d)|
+|[Cloud de la communauté du secteur public (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| L’environnement GCC assure la conformité aux exigences fédérales pour les services cloud, notamment FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS) et aux exigences relatives à la justice pénale et aux systèmes d’information fiscale fédéraux (types de données CJI et FTI).|
+|[Cloud de la communauté du secteur public (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|Les environnements élevés du GCC respectent les directives relatives aux exigences de sécurité du ministère de la Défense (DoD), le supplément DFARS (Defense Federal Acquisition Regulations Supplement) et la réglementation itAR (International Traffic in Arms Regulations).<br>**Voir aussi** : [Ministère de la Défense (DoD)](#d)|
 | [API Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Microsoft Graph est une API web RESTful qui vous permet d’accéder aux ressources de service Cloud Microsoft. <br>**Voir aussi** : [L’afficheur Microsoft Graph](#m) |
 | [Conversation de groupe.](../resources/bot-v3/bot-conversations/bots-conversations.md) | Fonctionnalité de conversation dans laquelle un utilisateur peut discuter avec un bot dans un paramètre de groupe à l’aide de @mention pour appeler le bot. <br>**Voir aussi** : [Conversation un-à-un](#o) ; [Bot de conversation](#c) |
 
