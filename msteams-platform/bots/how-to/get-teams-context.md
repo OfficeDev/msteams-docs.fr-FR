@@ -1,16 +1,16 @@
 ---
 title: Obtenir le contexte spécifique à Teams pour votre bot
 author: surbhigupta
-description: Obtenez le contexte spécifique à Teams pour votre bot, récupérez le profil utilisateur, obtenez un seul membre, une équipe, une liste de canaux dans les détails d’une équipe. Exemple lors de la création d’un thread de canal.
+description: Obtenez le contexte spécifique teams pour votre bot, récupérez le profil utilisateur, obtenez un seul membre, l’équipe, la liste des canaux dans les détails d’une équipe. Exemple lors de la création d’un thread de canal.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1958d45bf4fac927c32b628ea8aebc4c1c03ad46
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100139"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789988"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir le contexte spécifique à Teams pour votre bot
 
@@ -377,4 +377,5 @@ Response body
 
 ## <a name="see-also"></a>Voir aussi
 
-[Localiser votre application](../../concepts/build-and-test/apps-localization.md)
+* [Localiser votre application](../../concepts/build-and-test/apps-localization.md)
+* [Obtenir la photo de profil d’un utilisateur, d’un groupe, d’une équipe ou d’un contact Outlook](/graph/api/profilephoto-get)

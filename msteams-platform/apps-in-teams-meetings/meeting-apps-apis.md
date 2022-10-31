@@ -1,21 +1,21 @@
 ---
-title: API d’applications de réunion
+title: API des applications de réunion
 author: v-sdhakshina
-description: Dans cet article, découvrez les références d’API d’applications de réunion disponibles pour le client Teams et le Kit de développement logiciel (SDK) Bot Framework avec des exemples, des exemples de code et des codes de réponse.
+description: Dans cet article, découvrez les références d’API des applications de réunion disponibles pour le client Teams et les SDK Bot Framework avec des exemples, des exemples de code et des codes de réponse.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 79b5f58f5089ac40a12f608616dc52b90ed6ef08
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: f3d44317dbc8ea317e8fe3c5bdeb19404df75265
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615417"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789862"
 ---
-# <a name="meeting-apps-apis"></a>API d’applications de réunion
+# <a name="meeting-apps-apis"></a>API des applications de réunion
 
-L’extensibilité de la réunion fournit des API pour améliorer l’expérience de réunion. Vous pouvez effectuer les opérations suivantes à l’aide des API répertoriées :
+L’extensibilité de réunion fournit des API pour améliorer l’expérience de réunion. Vous pouvez effectuer les opérations suivantes à l’aide des API répertoriées :
 
 * Créez des applications ou intégrez des applications existantes dans le cycle de vie des réunions.
 * Utilisez des API pour informer votre application de la réunion.
@@ -28,15 +28,15 @@ Le tableau suivant fournit la liste des API disponibles dans la bibliothèque Ja
 
 |Méthode| Description| Source|
 |---|---|----|
-|[**Obtenir l’accès avec le contexte utilisateur**](#get-user-context-api)| Obtenez des informations contextuelles pour afficher du contenu pertinent dans un onglet Microsoft Teams.| [Kit de développement logiciel (SDK) de bibliothèque JavaScript Microsoft Teams](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Obtenir l’accès avec le contexte utilisateur**](#get-user-context-api)| Obtenez des informations contextuelles pour afficher du contenu pertinent dans un onglet Microsoft Teams.| [Kit de développement logiciel (SDK) de la bibliothèque JavaScript Microsoft Teams](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Obtenir des Participants**](#get-participant-api)| Récupérez les informations du participant par ID de réunion et ID de participant. | [Kit de développement logiciel (SDK) Microsoft Bot Framework](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Envoyer une notification en réunion**](#send-an-in-meeting-notification)| Fournissez des signaux de réunion à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot et permet de notifier l’action de l’utilisateur qui affiche une notification en réunion. | [Kit de développement logiciel (SDK) Microsoft Bot Framework](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Obtenir les détails de la réunion**](#get-meeting-details-api)| Obtenez les métadonnées statiques d’une réunion. | [Kit de développement logiciel (SDK) Microsoft Bot Framework](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Envoyer des légendes en temps réel**](#send-real-time-captions-api)| Envoyez des sous-titres en temps réel à une réunion en cours. | [Kit de développement logiciel (SDK) de bibliothèque JavaScript Microsoft Teams](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Partager le contenu de l’application à l’étape**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Partagez des parties spécifiques de l’application à la phase de réunion à partir du panneau côté application dans une réunion. | [Kit de développement logiciel (SDK) de bibliothèque JavaScript Microsoft Teams](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Envoyer des légendes en temps réel**](#send-real-time-captions-api)| Envoyez des sous-titres en temps réel à une réunion en cours. | [Kit de développement logiciel (SDK) de la bibliothèque JavaScript Microsoft Teams](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Partager le contenu de l’application à l’étape**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Partagez des parties spécifiques de l’application à la phase de réunion à partir du panneau côté application dans une réunion. | [Kit de développement logiciel (SDK) de la bibliothèque JavaScript Microsoft Teams](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Obtenir des événements de réunion Teams en temps réel**](#get-real-time-teams-meeting-events-api)|Récupérez les événements de réunion en temps réel, tels que l’heure de début et de fin réelle.| [Kit de développement logiciel (SDK) Microsoft Bot Framework](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Obtenir l’état audio entrant**](#get-incoming-audio-state) | Permet à une application d’obtenir le paramètre d’état audio entrant pour l’utilisateur de la réunion.| [Kit de développement logiciel (SDK) de bibliothèque JavaScript Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Activer/désactiver l’audio entrant**](#toggle-incoming-audio) | Permet à une application de désactiver le paramètre d’état audio entrant pour l’utilisateur de la réunion du son muet au son ou inversement.| [Kit de développement logiciel (SDK) de bibliothèque JavaScript Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Obtenir l’état audio entrant**](#get-incoming-audio-state) | Permet à une application d’obtenir le paramètre d’état audio entrant pour l’utilisateur de la réunion.| [Kit de développement logiciel (SDK) de la bibliothèque JavaScript Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Activer/désactiver l’audio entrant**](#toggle-incoming-audio) | Permet à une application de basculer le paramètre d’état audio entrant pour l’utilisateur de la réunion du son muet à l’activation ou inversement.| [Kit de développement logiciel (SDK) de la bibliothèque JavaScript Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obtenir l’API de contexte utilisateur
 
@@ -146,10 +146,10 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.userPrincipalName** | UPN de l’utilisateur. |
 | **user.tenantId** | ID du client Azure Active Directory. |
 | **user.userRole** | Rôle de l’utilisateur. Par exemple, « admin » ou « user ». |
-| **meeting.role** | Rôle du participant dans la réunion. Par exemple, « Organisateur » ou « Présentateur » ou « Participant ». |
+| **meeting.role** | Rôle du participant dans la réunion. Par exemple, « Organisateur », « Présentateur » ou « Participant ». |
 | **meeting.inMeeting** | Valeur indiquant si le participant est dans la réunion. |
 | **conversation.id** | ID de conversation de réunion. |
-| **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
+| **conversation.isGroup** | Boolean indiquant si la conversation a plus de deux participants. |
 
 ### <a name="response-codes"></a>Codes de réponse
 
@@ -239,13 +239,13 @@ POST /v3/conversations/{conversationId}/activities
 | Nom de la propriété | Description |
 |---|---|
 | **type** | Type d’activité. |
-| **text** | Contenu du texte du message. |
-| **summary** | Texte récapitulatif du message. |
-| **channelData.notification.alertInMeeting** | Valeur booléenne indiquant si une notification doit être affichée à l’utilisateur pendant une réunion. |
+| **text** | Contenu texte du message. |
+| **summary** | Texte récapitulative du message. |
+| **channelData.notification.alertInMeeting** | Boolean indiquant si une notification doit être affichée à l’utilisateur lors d’une réunion. |
 | **channelData.notification.externalResourceUrl** | Valeur de l’URL de ressource externe de la notification.|
 | **replyToId** | ID du message parent ou racine du thread. |
 | **APP_ID** | ID d’application déclaré dans le manifeste. |
-| **completionBotId** | ID d’application bot |
+| **completionBotId** | ID de l’application bot |
 
 ### <a name="response-codes"></a>Codes de réponse
 
@@ -353,7 +353,7 @@ Utilisez l’exemple suivant pour configurer la propriété de votre manifeste d
 > [!NOTE]
 >
 > * Le bot peut recevoir automatiquement des événements de début ou de fin de réunion à partir de toutes les réunions créées dans tous les canaux en ajoutant `ChannelMeeting.ReadBasic.Group` au manifeste pour l’autorisation RSC.
-> * Pour un appel `organizer` en tête-à-tête est l’initiateur de la conversation et pour les appels `organizer` de groupe est l’initiateur de l’appel. Pour les réunions `organizer` de canal public, il s’agit de la personne qui a créé le billet de canal.
+> * Pour un appel `organizer` en tête-à-tête est l’initiateur de la conversation et pour les appels `organizer` de groupe est l’initiateur d’appel. Pour les réunions `organizer` de canal public est la personne qui a créé le billet de canal.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -522,14 +522,14 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 
 | Nom de la propriété | Description |
 |---|---|
-| **details.id** | ID de la réunion, encodé sous forme de chaîne BASE64. |
-| **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels API Graph MS. |
+| **details.id** | ID de la réunion, encodé en tant que chaîne BASE64. |
+| **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels ms API Graph. |
 | **details.scheduledStartTime** | Heure de début planifiée de la réunion, au format UTC. |
 | **details.scheduledEndTime** | Heure de fin planifiée de la réunion, au format UTC. |
 | **details.joinUrl** | URL utilisée pour rejoindre la réunion. |
 | **details.title** | Titre de la réunion. |
-| **details.type** | Type de la réunion (OneToOneCall, GroupCall, Scheduled, Recurring, MeetNow, ChannelScheduled et ChannelRecurring). |
-| **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
+| **details.type** | Type de réunion (OneToOneCall, GroupCall, Scheduled, Recurring, MeetNow, ChannelScheduled et ChannelRecurring). |
+| **conversation.isGroup** | Boolean indiquant si la conversation a plus de deux participants. |
 | **conversation.conversationType** | Type de conversation. |
 | **conversation.id** | ID de conversation de réunion. |
 | **organizer.id** | ID d’utilisateur de l’organisateur. |
@@ -540,15 +540,15 @@ En cas de type de réunion périodique,
 
 **startDate** : spécifie la date de début de l’application du modèle. La valeur de startDate doit correspondre à la valeur de date de la propriété start sur la ressource d’événement. Notez que la première occurrence de la réunion peut ne pas se produire à cette date si elle ne correspond pas au modèle.
 
-**endDate** : spécifie la date à laquelle arrêter l’application du modèle. Notez que la dernière occurrence de la réunion peut ne pas se produire à cette date si elle ne correspond pas au modèle.
+**endDate** : spécifie la date d’arrêt de l’application du modèle. Notez que la dernière occurrence de la réunion peut ne pas se produire à cette date si elle ne correspond pas au modèle.
 
 ## <a name="send-real-time-captions-api"></a>API Envoyer des légendes en temps réel
 
-L’API envoyer des sous-titres en temps réel expose un point de terminaison POST pour les sous-titres cart (Traduction en temps réel) de l’accès aux communications Teams, sous-titres fermés de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux d’une réunion Teams quand des légendes sont activées.
+L’API d’envoi de sous-titres en temps réel expose un point de terminaison POST pour les sous-titres de traduction en temps réel (CART) d’accès aux communications Teams, les sous-titres de type humain. Le contenu textuel envoyé à ce point de terminaison apparaît aux utilisateurs finaux dans une réunion Teams quand les sous-titres sont activés.
 
 ### <a name="cart-url"></a>URL CART
 
-Vous pouvez obtenir l’URL CART pour le point de terminaison POST à partir de la page **Options** de réunion d’une réunion Teams. Pour plus d’informations, consultez [les légendes CART dans une réunion Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Vous n’avez pas besoin de modifier l’URL CART pour utiliser des légendes CART.
+Vous pouvez obtenir l’URL CART du point de terminaison POST à partir de la page **Options de réunion** d’une réunion Teams. Pour plus d’informations, consultez [les légendes CART dans une réunion Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Vous n’avez pas besoin de modifier l’URL CART pour utiliser des légendes CART.
 
 #### <a name="query-parameter"></a>Paramètre de requête
 
@@ -798,16 +798,16 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **type** | Type d’activité. |
 | **timestamp** | Date et heure locales du message, exprimées au format ISO-8601. |
 | **id** | ID de l’activité. |
-| **channelId** | Canal auquel cette activité est associée. |
+| **channelId** | Canal à lequel cette activité est associée. |
 | **serviceUrl** | URL du service où les réponses à cette activité doivent être envoyées. |
 | **from.id** | Identification de l'utilisateur qui a envoyé la demande. |
 | **from.aadObjectId** | Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
-| **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
+| **conversation.isGroup** | Boolean indiquant si la conversation a plus de deux participants. |
 | **conversation.tenantId** | ID de locataire Azure Active Directory de la conversation ou de la réunion. |
 | **conversation.id** | ID de conversation de réunion. |
 | **recipient.id** | ID de l’utilisateur qui reçoit la demande. |
 | **recipient.name** | Nom de l’utilisateur qui reçoit la demande. |
-| **entities.locale** | qui contient des métadonnées sur les paramètres régionaux. |
+| **entities.locale** | entité qui contient des métadonnées sur les paramètres régionaux. |
 | **entities.country** | entité qui contient des métadonnées sur le pays. |
 | **entities.type** | entité qui contient des métadonnées sur le client. |
 | **channelData.tenant.id** | ID du client Azure Active Directory. |
@@ -817,9 +817,9 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **Valeur. Titre** | Objet de la réunion. |
 | **Valeur. Id** | ID par défaut associé à la réunion. |
 | **Valeur. JoinUrl** | URL de participation de la réunion. |
-| **Valeur. Starttime** | Heure de début de la réunion en UTC. |
-| **Valeur. EndTime** | Heure de fin de la réunion en UTC. |
-| **locale**| Paramètres régionaux du message défini par le client. |
+| **Valeur. Starttime** | Heure de début de la réunion au format UTC. |
+| **Valeur. Heure de fin** | Heure de fin de la réunion au format UTC. |
+| **locale**| Paramètres régionaux du message définis par le client. |
 
 ## <a name="get-incoming-audio-state"></a>Obtenir l’état audio entrant
 
@@ -827,8 +827,8 @@ L’API `getIncomingClientAudioState` permet à une application d’obtenir le p
 
 > [!NOTE]
 >
-> * L’API `getIncomingClientAudioState` pour mobile est actuellement disponible en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
-> * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour la version de manifeste 1.11 et les versions antérieures.
+> * L’API `getIncomingClientAudioState` pour mobile est actuellement disponible dans [la préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
+> * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour le manifeste version 1.11 et les versions antérieures.
 
 ### <a name="manifest"></a>Manifeste
 
@@ -866,7 +866,7 @@ Le tableau suivant inclut le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois la récupération audio réussie. Le *résultat* peut contenir une valeur true ou false lorsque l’extraction audio réussit ou null en cas d’échec de la récupération audio. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false. |
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` lorsque l’extraction audio réussit. Le *résultat* peut contenir la valeur true ou false lorsque l’extraction audio réussit ou null en cas d’échec de l’extraction audio. L’audio entrant est désactivé si le résultat est true et désactivé si le résultat est false. |
   
 ### <a name="response-codes"></a>Codes de réponse
 
@@ -876,16 +876,16 @@ Le tableau suivant présente les codes de réponse :
 |---|---|
 | **500** | Erreur interne. |
 | **501** | L’API n’est pas prise en charge dans le contexte actuel.|
-| **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à être mis en scène.|
+| **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à mettre en scène.|
 
 ## <a name="toggle-incoming-audio"></a>Activer/désactiver l’audio entrant
 
-L’API `toggleIncomingClientAudio` permet à une application de désactiver le paramètre d’état audio entrant pour l’utilisateur de la réunion de désactiver le son ou inversement. L’API est disponible via le SDK client Teams.
+L’API `toggleIncomingClientAudio` permet à une application de basculer le paramètre d’état audio entrant pour l’utilisateur de la réunion du son muet à l’activation ou inversement. L’API est disponible via le SDK client Teams.
 
 > [!NOTE]
 >
-> * L’API `toggleIncomingClientAudio` pour mobile est actuellement disponible en [préversion publique des développeurs](../resources/dev-preview/developer-preview-intro.md).
-> * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour la version de manifeste 1.11 et les versions antérieures.
+> * L’API `toggleIncomingClientAudio` pour mobile est actuellement disponible dans [la préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md).
+> * Le consentement spécifique à la ressource est disponible pour la version de manifeste 1.12 et les versions ultérieures. Par conséquent, cette API ne fonctionne pas pour le manifeste version 1.11 et les versions antérieures.
 
 ### <a name="manifest"></a>Manifeste
 
@@ -923,7 +923,7 @@ Le tableau suivant inclut le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` une fois le basculement réussi. Le *résultat* peut contenir une valeur true ou false, lorsque le basculement est réussi ou null en cas d’échec du basculement. L’audio entrant est désactivé si le résultat est vrai et désactivé si le résultat est false.
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres `error` et `result`. *L’erreur* peut contenir un type `SdkError` d’erreur ou `null` lorsque le bouton bascule réussit. Le *résultat* peut contenir une valeur true ou false, lorsque le bouton bascule réussit ou null en cas d’échec du bouton bascule. L’audio entrant est désactivé si le résultat est true et désactivé si le résultat est false.
   
 ### <a name="response-code"></a>Code de réponse
 
@@ -933,16 +933,16 @@ Le tableau suivant présente les codes de réponse :
 |---|---|
 | **500** | Erreur interne. |
 | **501** | L’API n’est pas prise en charge dans le contexte actuel.|
-| **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à être mis en scène.|
+| **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à mettre en scène.|
 
 ## <a name="code-sample"></a>Exemple de code
 
 |Exemple de nom | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilité des réunions | Exemple d’extensibilité de réunion Teams pour passer des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Extensibilité des réunions | Exemple d’extensibilité de réunion Teams pour le passage de jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bulles de contenu de réunion | Exemple d’extensibilité de réunion Teams pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Panneau latéral de la réunion | Exemple d’extensibilité de réunion Teams pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Onglet Détails de la réunion | Exemple d’extensibilité de réunion Teams pour interagir avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Onglet Détails de la réunion | Exemple d’extensibilité de réunion Teams pour interagir avec l’onglet Détails dans la réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 | Exemple d’événements de réunion | Exemple d’application pour afficher des événements de réunion Teams en temps réel|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 | Exemple de recrutement de réunions |Exemple d’application pour afficher l’expérience de réunion pour le scénario de recrutement|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 | Installation de l’application à l’aide du code QR |Exemple d’application qui génère le code QR et installe l’application à l’aide du code QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
@@ -952,7 +952,8 @@ Le tableau suivant présente les codes de réponse :
 * [Flux d’authentification Teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Applications pour les réunions Teams](teams-apps-in-meetings.md)
 * [FAQ sur le Kit de développement logiciel (SDK) de Live Share](teams-live-share-overview.md)
+* [Enregistrement de réunion cloud Teams](/microsoftteams/cloud-recording)
 
 ## <a name="next-steps"></a>Prochaines étapes
 
-[Créer des onglets pour la réunion](build-tabs-for-meeting.md)
+[Onglets générer pour la réunion](build-tabs-for-meeting.md)

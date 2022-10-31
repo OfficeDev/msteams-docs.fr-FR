@@ -1,16 +1,16 @@
 ---
 title: Bots et kits de développement
 author: surbhigupta
-description: Dans cet article, découvrez les outils et les kits de développement logiciel (SDK) Bot Framework (C#, Python, Java, JavaScript) pour les bots Microsoft Teams, ainsi que ses avantages et inconvénients.
+description: Dans cet article, découvrez les outils et les kits SDK Bot Framework (C#, Python, Java, JavaScript) pour les bots Microsoft Teams, ainsi que ses avantages et inconvénients.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605018"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789897"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -52,7 +52,7 @@ Le [Bot Framework](https://dev.botframework.com/) est un kit de développement l
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots avec webhooks et connecteurs
 
-Les webhooks et les connecteurs connectent votre bot à vos services web. À l’aide de webhooks et de connecteurs, vous pouvez créer un bot pour une interaction de base, comme la création d’un workflow ou d’autres commandes simples. Elles sont disponibles uniquement dans l’équipe où vous les créez et sont destinées à des processus simples spécifiques au flux de travail de votre entreprise. Pour plus d’informations, consultez [ce que sont les webhooks et les connecteurs](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Les webhooks et les connecteurs connectent votre bot à vos services web. À l’aide de webhooks et de connecteurs, vous pouvez créer un bot pour une interaction de base, comme la création d’un workflow ou d’autres commandes simples. Elles sont disponibles uniquement dans l’équipe dans laquelle vous les créez et sont destinées à des processus simples spécifiques au flux de travail de votre entreprise. Pour plus d’informations, consultez [ce que sont les webhooks et les connecteurs](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="advantages-of-bots"></a>Avantages de la CCR
 
@@ -66,7 +66,7 @@ Les bots dans Microsoft Teams peuvent être intégrés dans une conversation à 
 
 ### <a name="in-a-channel"></a>Dans un canal
 
-Les canaux contiennent des conversations thématiques entre plusieurs personnes, même jusqu’à deux milliers. Cela donne potentiellement une portée massive à votre bot, mais les interactions individuelles doivent être concises. Les interactions multitours traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez chercher à utiliser des cartes interactives ou des modules de tâches, ou déplacer la conversation vers une conversation un-à-un pour collecter un grand nombre d’informations. Votre bot a uniquement accès aux messages où il se trouve `@mentioned`. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide d’autorisations Microsoft Graph et au niveau de l’organisation.
+Les canaux contiennent des conversations thématiques entre plusieurs personnes, même jusqu’à deux milliers. Cela donne potentiellement une portée massive à votre bot, mais les interactions individuelles doivent être concises. Les interactions multitour traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez chercher à utiliser des cartes interactives ou des modules de tâches, ou déplacer la conversation vers une conversation un-à-un pour collecter un grand nombre d’informations. Votre bot a uniquement accès aux messages où il s’agit de `@mentioned`. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide d’autorisations Microsoft Graph et au niveau de l’organisation.
 
 Les bots fonctionnent mieux dans un canal dans les cas suivants :
 
@@ -77,7 +77,7 @@ Les bots fonctionnent mieux dans un canal dans les cas suivants :
 
 ### <a name="in-a-group-chat"></a>Dans une conversation de groupe
 
-Les conversations de groupe sont des conversations non thématiques entre trois personnes au minimum. Elles impliquent généralement moins de membres qu’un canal et sont plus éphémères. À l’instar d’un canal, votre bot n’a accès qu’aux messages où il est `@mentioned` directement.
+Les conversations de groupe sont des conversations non thématiques entre trois personnes au minimum. Elles impliquent généralement moins de membres qu’un canal et sont plus éphémères. À l’instar d’un canal, votre bot n’a accès qu’aux messages où il se trouve `@mentioned` directement.
 
 Dans les cas où les bots fonctionnent mieux dans un canal, ils fonctionnent également mieux dans une conversation de groupe.
 
@@ -86,18 +86,18 @@ Dans les cas où les bots fonctionnent mieux dans un canal, ils fonctionnent ég
 Les bots de conversation interagissent traditionnellement de cette façon avec les utilisateurs. Voici quelques exemples de bots conversationnels un-à-un :
 
 * Questions et réponses Un bot
-* bots qui lancent des workflows dans d’autres systèmes.
-* bots qui racontent des blagues.
+* bots qui lancent des flux de travail dans d’autres systèmes.
+* des bots qui racontent des blagues.
 * bots qui prennent des notes.
 Avant de créer des chatbots un-à-un, déterminez si une interface basée sur une conversation est la meilleure façon de présenter vos fonctionnalités.
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
-Une boîte de dialogue étendue entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge des commandes excessives, en particulier un large éventail de commandes, ne réussit pas ou n’est pas considéré positivement par les utilisateurs.
+Une boîte de dialogue étendue entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge des commandes excessives, en particulier un large éventail de commandes, n’est pas réussi ou n’est pas vu de manière positive par les utilisateurs.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences multitours dans la conversation
 
-Une boîte de dialogue étendue nécessite que le développeur conserve l’état. Pour quitter cet état, un utilisateur doit délai d’expiration ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
+Une boîte de dialogue étendue nécessite que le développeur conserve l’état. Pour quitter cet état, un utilisateur doit expirer ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
 UTILISATEUR : planifier une réunion avec Megan.
 
@@ -117,7 +117,7 @@ BOT : quel jour ?
 
 ### <a name="maintain-a-large-knowledge-base"></a>Gérer une grande base de connaissances
 
-L’un des inconvénients des bots est qu’il est difficile de maintenir une grande base de connaissances de récupération avec des réponses non classées. Les bots sont particulièrement adaptés aux interactions courtes et rapides, sans passer en revue les longues listes à la recherche d’une réponse.
+L’un des inconvénients des bots est qu’il est difficile de maintenir une récupération volumineuse base de connaissances avec des réponses non notées. Les bots sont particulièrement adaptés aux interactions courtes et rapides, sans passer en revue les longues listes à la recherche d’une réponse.
 
 ## <a name="code-snippets"></a>Extraits de code
 
@@ -209,7 +209,8 @@ this.onMessage(async (context, next) => {
 * [Bots d’appels et réunions](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversations de robots](~/bots/how-to/conversations/conversation-basics.md)
 * [Menus de commandes Bot](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Créer des déclencheurs personnalisés dans Bot Framework Composer](/composer/how-to-create-custom-triggers)
 * [Flux d’authentification pour les bots dans Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Utiliser des modules de tâches à partir de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Publier votre bot sur Azure](/azure/bot-service/bot-builder-deploy-az-cli)
-* [Informations de référence sur les API pour le service Bot Framework Connector](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Informations de référence sur l’API pour le service Bot Framework Connector](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
