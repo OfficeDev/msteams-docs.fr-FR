@@ -3,12 +3,12 @@ title: Obtenir un contexte Teams pour votre onglet
 description: Apprenez à contexter votre onglet, le contexte de l’utilisateur, de l’équipe ou de l’entreprise, à accéder aux informations, à récupérer le contexte dans des canaux privés ou partagés et à gérer la modification du thème.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: d4dee147da2fd0091e038526ca56d66a9b80f7e5
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791544"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820107"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -286,8 +286,9 @@ L’argument `theme` dans la fonction est une chaîne avec la valeur `default`, 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Recommandations en matière de conception d’onglets](../../tabs/design/tabs.md)
-* [Onglets Teams](~/tabs/what-are-tabs.md)
-* [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Utiliser des modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Créer des onglets pour Teams](../what-are-tabs.md)
+* [Concevoir votre onglet pour Microsoft Teams](../design/tabs.md)
+* [Activer l’authentification unique (SSO) pour l’application d’onglet](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect canaux partagés](../../concepts/build-and-test/shared-channels.md)
+* [Schéma du manifeste d’application pour Teams](../../resources/schema/manifest-schema.md)
+* [Utiliser des modules de tâche dans les onglets](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

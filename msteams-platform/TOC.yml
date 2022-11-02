@@ -257,7 +257,7 @@
     - name: Créer une page de contenu
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: 'Loading indicator, personal-scoped custom tab, channel or group custom tab'
-    - name: Page Créer une configuration
+    - name: Créer une page de configuration
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Créer une page de suppression
       href: tabs/how-to/create-tab-pages/removal-page.md

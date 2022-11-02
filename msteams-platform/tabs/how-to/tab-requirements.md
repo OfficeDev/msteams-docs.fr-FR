@@ -5,12 +5,12 @@ description: Dans cet article, découvrez les prérequis pour créer un onglet p
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4471d88b7f9b0fd6364c833f6b3dd910aadb300a
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791810"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819960"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
@@ -65,5 +65,7 @@ Nous allons maintenant créer votre onglet. Toutefois, sélectionnez d’abord v
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Onglets Teams](~/tabs/what-are-tabs.md)
+* [Créer des onglets pour Teams](../what-are-tabs.md)
+* [Créer votre première application d’onglet à l’aide de JavaScript](../../sbs-gs-javascript.yml)
+* [Inscrire votre application d’onglet dans Azure AD](authentication/tab-sso-register-aad.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)

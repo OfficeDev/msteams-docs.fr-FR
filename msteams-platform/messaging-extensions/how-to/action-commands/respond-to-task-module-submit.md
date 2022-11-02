@@ -5,12 +5,12 @@ description: Découvrez comment répondre à l’action d’envoi du module de t
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
-ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
+ms.openlocfilehash: 96ba10d59eccbc95a73455641425a01a9f3f2c47
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772306"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820142"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
@@ -616,4 +616,6 @@ La section suivante est une description des entités dans le tableau `OnBehalfOf
 
 ## <a name="see-also"></a>Voir aussi
 
-[Répondre à la commande de recherche](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [Schéma du manifeste d’application pour Teams](../../../resources/schema/manifest-schema.md)
+* [Répondre à la commande de recherche](../search-commands/respond-to-search.md)
+* [Extensions de messages](../../what-are-messaging-extensions.md)

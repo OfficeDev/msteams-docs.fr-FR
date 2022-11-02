@@ -1,16 +1,16 @@
 ---
 title: Créer et envoyer un module de tâche
 author: surbhigupta
-description: Découvrez comment créer et envoyer des modules de tâches. Gérez l’action d’appel initiale et répondez avec un module de tâche à partir d’une commande d’extension de message d’action.
+description: Découvrez comment créer et envoyer des modules de tâche. Gérez l’action d’appel initiale et répondez avec un module de tâche à partir d’une commande d’extension de message d’action.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 08629f59979923a397c08809fc20b50c81a30c58
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100314"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820114"
 ---
 # <a name="create-and-send-task-module"></a>Créer et envoyer un module de tâche
 
@@ -648,7 +648,7 @@ Répondre à la requête invoquée avec un `task`objet qui contient`taskInfo` so
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Peut être `continue` soit pour présenter un formulaire, soit `message` pour une simple fenêtre contextuelle. |
+|`type`| Il peut s’agir de `continue` présenter un formulaire ou `message` d’une simple fenêtre contextuelle. |
 |`value`| Soit un `taskInfo`objet pour un formulaire`string`, soit un pour un message. |
 
 Le schéma de l'objet taskInfo est le suivant :
@@ -995,4 +995,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définir les commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Cartes](../../../task-modules-and-cards/what-are-cards.md)
+* [Sélectionneur de personnes dans les Cartes adaptatives](../../../task-modules-and-cards/cards/people-picker.md)
+* [Modules de tâche](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Schéma du manifeste d’application pour Teams](../../../resources/schema/manifest-schema.md)
+* [Définir des commandes d’action d’extension de message](define-action-command.md)
+* [Extensions de messages](../../what-are-messaging-extensions.md)

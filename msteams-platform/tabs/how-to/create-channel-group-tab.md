@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 56243743f4c26995eb5bcf30bba7eeaaeccbbedc
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791663"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820009"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>Créer un onglet de canal ou un onglet de groupe
 
@@ -680,9 +680,8 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Onglets Teams](~/tabs/what-are-tabs.md)
-* [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Créer une page de suppression](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Créer des onglets pour Teams](../what-are-tabs.md)
+* [Créer un onglet personnel](create-personal-tab.md)
+* [Documentation pour les développeurs](../../concepts/build-and-test/teams-developer-portal.md)
+* [Créer des onglets avec les Cartes adaptatives](build-adaptive-card-tabs.md)
 * [Ajouter une page SharePoint en tant qu’onglet dans Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

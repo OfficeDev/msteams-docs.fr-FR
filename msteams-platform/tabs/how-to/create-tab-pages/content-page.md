@@ -5,12 +5,12 @@ description: Découvrez la page web dans le client Teams et fait partie de l’o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4074b3bb4499cca2453a9d928a83b1cd04f5c064
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791537"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820163"
 ---
 # <a name="create-a-content-page"></a>Créer une page de contenu
 
@@ -139,8 +139,8 @@ Pour afficher l’indicateur de chargement :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Onglets Teams](~/tabs/what-are-tabs.md)
-* [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Déploiement du lien des onglets et vue de scène](~/tabs/tabs-link-unfurling.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Créer des onglets pour Teams](../../what-are-tabs.md)
+* [Créer un onglet personnel](../create-personal-tab.md)
+* [Créer un onglet de canal ou un onglet de groupe](../create-channel-group-tab.md)
+* [Schéma du manifeste d’application pour Teams](../../../resources/schema/manifest-schema.md)
 * [DevTools pour les onglets Microsoft Teams](~/tabs/how-to/developer-tools.md)

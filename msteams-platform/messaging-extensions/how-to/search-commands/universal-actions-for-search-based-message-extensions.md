@@ -1,26 +1,26 @@
 ---
 title: Actions universelles pour les extensions de message basées sur la recherche
 author: v-ypalikila
-description: Dans cet article, découvrez les actions universelles et l’actualisation automatique pour les cartes adaptatives dans les extensions de message basées sur la recherche.
+description: Dans cet article, découvrez les actions universelles et l’actualisation automatique des cartes adaptatives dans les extensions de message basées sur la recherche.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
-ms.openlocfilehash: 78b8c525b51603245fc379a826fa0cc11cbc5fd8
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 18f5b783797d69144aac82e5ebd95fc30dad57a2
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376591"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819967"
 ---
 # <a name="universal-actions-for-search-based-message-extensions"></a>Actions universelles pour les extensions de message basées sur la recherche
 
-Les cartes adaptatives dans les extensions de message basées sur la recherche prennent désormais en charge les actions universelles. Pour activer les actions universelles pour les extensions de message basées sur la recherche, l’application doit se conformer au [schéma des actions universelles pour les cartes adaptatives](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) , ainsi qu’aux exigences suivantes :
+Les cartes adaptatives dans les extensions de message basées sur la recherche prennent désormais en charge les actions universelles. Pour activer les actions universelles pour les extensions de message basées sur la recherche, l’application doit être conforme au [schéma des actions universelles pour les cartes adaptatives](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) , ainsi qu’aux exigences suivantes :
 
-1. Un bot de conversation doit être défini dans le manifeste de l’application.
-1. Si vous disposez déjà d’un bot conversationnel, vous devez utiliser le même bot que celui utilisé dans votre extension de message.
-1. Si la carte est envoyée dans un groupe, l’application doit spécifier ou `groupchat` étendre `team` son bot dans le manifeste.
+1. L’application doit avoir un bot de conversation défini dans le manifeste de l’application.
+1. Si vous avez déjà un bot conversationnel, vous devez utiliser le même bot que celui utilisé dans votre extension de message.
+1. Si la carte est envoyée dans un groupe, l’application doit spécifier `team` ou `groupchat` étendue sur son bot dans le manifeste.
 
-Exemple de schéma JSON avec `team` des valeurs :`groupchat`
+Exemple de schéma JSON avec les `team` valeurs et `groupchat` :
 
 ```json
 {
@@ -49,7 +49,7 @@ Exemple de schéma JSON avec `team` des valeurs :`groupchat`
 
 ## <a name="automatic-refresh-for-adaptive-cards-in-search-based-message-extensions"></a>Actualisation automatique des cartes adaptatives dans les extensions de message basées sur la recherche
 
-Activez l’actualisation automatique des cartes adaptatives dans les extensions de message basées sur la recherche pour garantir que les utilisateurs voient toujours les dernières informations. Pour l’activer, définissez `userIds` le tableau dans ou `8:orgid:<AAD ID>` au `29:<ID>` format dans la `refresh` propriété. Pour plus d’informations, consultez [travailler avec les actions universelles pour les cartes adaptatives](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
+Activez l’actualisation automatique des cartes adaptatives dans les extensions de message basées sur la recherche afin que les utilisateurs voient toujours les dernières informations. Pour activer, définissez `userIds` le tableau au format ou `8:orgid:<AAD ID>` dans `29:<ID>` la `refresh` propriété . Pour plus d’informations, consultez [Utiliser des actions universelles pour les cartes adaptatives](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
 
 Exemple de `userIds` tableau dans la `refresh` propriété :
 
@@ -84,9 +84,9 @@ Exemple de `userIds` tableau dans la `refresh` propriété :
 ```
 
 > [!NOTE]
-> L’actualisation automatique est activée pour tous les utilisateurs de la conversation de groupe ou du canal dont la taille est *inférieure ou égale à* 60 utilisateurs. Pour les conversations (conversation de groupe ou canal) avec plus de 60 utilisateurs, les utilisateurs peuvent utiliser le bouton Actualiser dans le menu des options de message pour obtenir le dernier résultat.
+> L’actualisation automatique est activée pour tous les utilisateurs de la conversation de groupe ou du canal avec *moins ou 60* utilisateurs. Pour les conversations (conversation de groupe ou canal) avec plus de 60 utilisateurs, les utilisateurs peuvent utiliser le bouton Actualiser dans le menu des options de message pour obtenir le résultat le plus récent.
 
-Exemple de `Action.Execute` la `refresh` propriété :
+Exemple de `Action.Execute` dans la `refresh` propriété :
 
 ```json
     {
@@ -116,18 +116,19 @@ Exemple de `Action.Execute` la `refresh` propriété :
 
 ## <a name="just-in-time-install"></a>Installation juste-à-temps
 
-JIT (Juste-à-temps) vous permet d’installer une extension de carte ou de message pour plusieurs utilisateurs dans une conversation de groupe ou un canal. Pour prendre en charge les actions universelles dans les extensions de message basées sur la recherche, votre bot est ajouté à la conversation où la carte (avec `Action.Execute`) est envoyée par l’utilisateur.
+Juste-à-temps (JIT) vous permet d’installer une extension de carte ou de message pour plusieurs utilisateurs dans une conversation de groupe ou un canal. Afin de prendre en charge les actions universelles dans les extensions de message basées sur la recherche, votre bot est ajouté à la conversation où la carte (avec `Action.Execute`) est envoyée par l’utilisateur.
 
 Lorsqu’un utilisateur sélectionne une carte et l’envoie dans une conversation de groupe ou un canal, une invite d’installation **JIT** s’affiche. Une fois que l’utilisateur a sélectionné l’option **d’envoi** , l’application est ajoutée pour tous les utilisateurs de la conversation ou du canal en arrière-plan.
 
 > [!NOTE]
-> Pour les applications qui n’ont `Action.Execute` pas et `refresh` le schéma défini, l’invite d’installation n’est pas affichée aux utilisateurs.
+> Pour les applications qui n’ont `Action.Execute` pas de schéma et `refresh` définis, l’invite d’installation n’est pas affichée aux utilisateurs.
 
-Exemple de flux d’utilisateur d’installation dynamique ME et JIT :
+Exemple de flux d’utilisateur d’installation me et JIT dynamique :
 
   :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="GIF affiche le flux utilisateur pour une extension de message dynamique et une installation JIT.":::
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Extensions de messages](../../what-are-messaging-extensions.md)
+* [Cartes adaptatives](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Actions universelles pour les cartes adaptatives](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)

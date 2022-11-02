@@ -1,23 +1,23 @@
 ---
 title: Définir des commandes d’action d’extension de message
 author: surbhigupta
-description: Découvrez comment définir des commandes d’action d’extension de messagerie avec un exemple de manifeste d’application dans Microsoft Teams. Exemple (.NET, Node.js) comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’envoi du module de tâche.
+description: Découvrez comment définir des commandes d’action d’extension de messagerie avec l’exemple de manifeste d’application dans Microsoft Teams. Exemple (.NET, Node.js) comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’envoi du module de tâche.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: b4d40e3a3ba4f684a0b34fcebab21f988d79de87
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160642"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820093"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 > [!NOTE]
-> Lorsqu’une action de message est lancée, les détails de la pièce jointe ne sont pas envoyés dans le cadre de l’activité `turncontext` d’appel.
+> Lorsqu’une action de message est lancée, les détails de la pièce jointe ne sont pas envoyés dans le cadre de l’activité d’appel `turncontext` .
 
 Les commandes d’action vous permettent de présenter à vos utilisateurs une fenêtre contextuelle modale appelée module de tâche dans Teams. Le module de tâche collecte ou affiche des informations, traite l’interaction et les renvoie à Teams. Ce document vous guide sur la façon de sélectionner des emplacements d’appel de commande d’action, de créer votre module de tâche, d’envoyer un message final ou une carte, de créer une commande d’action à l’aide d’App Studio ou de le créer manuellement.
 
@@ -30,7 +30,7 @@ Avant de créer la commande d’action, vous devez décider des facteurs suivant
 Consultez la vidéo suivante pour découvrir comment définir des commandes d’action d’extension de message :
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Sélectionner des emplacements d’appel de commande d’action
@@ -63,7 +63,7 @@ L’image suivante affiche les emplacements à partir desquels la commande d’a
 
 En plus de sélectionner l’emplacement à partir duquel votre commande peut être appelée, vous devez également sélectionner comment remplir le formulaire dans le module de tâche pour vos utilisateurs. Vous disposez des trois options suivantes pour créer le formulaire rendu à l’intérieur du module de tâche :
 
-* **Liste statique des paramètres** : il s’agit de la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application rendu par le client Teams, mais vous ne pouvez pas contrôler la mise en forme dans ce cas.
+* **Liste statique des paramètres** : il s’agit de la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application que le client Teams affiche, mais dans ce cas, vous ne pouvez pas contrôler la mise en forme.
 * **Carte adaptative** : vous pouvez choisir d’utiliser une carte adaptative, qui offre un meilleur contrôle sur l’interface utilisateur, mais vous limite toujours sur les contrôles disponibles et les options de mise en forme.
 * **Vue web incorporée** : vous pouvez choisir d’incorporer une vue web personnalisée dans le module de tâche pour avoir un contrôle total sur l’interface utilisateur et les contrôles.
 
@@ -71,7 +71,7 @@ Si vous choisissez de créer le module de tâche avec une liste statique de para
 
 ## <a name="select-how-the-final-message-is-sent"></a>Sélectionner le mode d’envoi du message final
 
-Dans la plupart des cas, la commande d’action entraîne l’insertion d’une carte dans la zone de composition du message. L’utilisateur peut l’envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l’utilisateur et le bot ne peut pas modifier ou mettre à jour la carte.
+Dans la plupart des cas, la commande d’action entraîne l’insertion d’une carte dans la zone de composition du message. L’utilisateur peut l’envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l’utilisateur et le bot ne peut pas modifier ou mettre à jour davantage la carte.
 
 Si l’extension de message est appelée à partir de la zone de composition ou directement à partir d’un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l’objet `bot` au manifeste de l’application à l’aide du même ID et en définissant les étendues appropriées.
 
@@ -79,43 +79,43 @@ Si l’extension de message est appelée à partir de la zone de composition ou 
 
 To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
-* [Créer une commande d’action à l’aide du portail des développeurs](#create-an-action-command-using-developer-portal)
+* [Créer une commande d’action à l’aide du Portail des développeurs](#create-an-action-command-using-developer-portal)
 * [Créer une commande d’action manuellement](#create-an-action-command-manually)
 
-### <a name="create-an-action-command-using-developer-portal"></a>Créer une commande d’action à l’aide du portail des développeurs
+### <a name="create-an-action-command-using-developer-portal"></a>Créer une commande d’action à l’aide du Portail des développeurs
 
-Vous pouvez créer une commande d’action à l’aide **du portail des développeurs**.
+Vous pouvez créer une commande d’action à l’aide **du Portail des développeurs**.
 
 > [!NOTE]
 > La configuration requise pour créer une commande d’action est que vous avez déjà créé une extension de message. Pour plus d’informations sur la création d’une extension de message, consultez [créer une extension de message](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 Pour créer une commande d’action :
 
-1. Ouvrez **le portail des développeurs** à partir du client Microsoft Teams et sélectionnez l’onglet **Applications** . Si vous avez déjà créé votre package d’application dans le **portail des développeurs**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
-1. Après avoir importé un package d’application, sélectionnez **Extensions de message sous Fonctionnalités** de **l’application**.
+1. Ouvrez **le Portail des développeurs** à partir du client Microsoft Teams et sélectionnez l’onglet **Applications** . Si vous avez déjà créé votre package d’application dans le **Portail des développeurs**, sélectionnez dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Après avoir importé un package d’application, sélectionnez **Extensions de message** sous **Fonctionnalités de l’application**.
 1. Pour créer une extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez **l’option Créer un bot** , donnez un nom au nouveau bot, puis sélectionnez **Créer**.
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="La capture d’écran montre comment créer un bot dans le portail des développeurs.":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="La capture d’écran vous montre comment créer un bot dans le portail des développeurs.":::
 
-1. Pour utiliser un bot existant, **sélectionnez Sélectionner un bot existant** et choisissez les bots existants dans la liste déroulante ou **entrez un ID de bot** si vous avez déjà créé un ID de bot.
+1. Pour utiliser un bot existant, sélectionnez **Sélectionner un bot existant** et choisissez les bots existants dans la liste déroulante ou **sélectionnez Entrer un ID de bot** si vous avez déjà créé un ID de bot.
 
-1. Sélectionnez l’étendue du bot et **Enregistrez**.
+1. Sélectionnez l’étendue du bot, puis **Enregistrez**.
 
-1. Sélectionnez **Ajouter une commande** dans la section **Commande** pour inclure les commandes, qui déterminent le comportement de l’extension de message.
+1. Sélectionnez **Ajouter une commande** dans la section **Commande** pour inclure les commandes, ce qui détermine le comportement de l’extension de message.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Capture d’écran montrant comment ajouter une commande pour définir le comportement de l’extension de message.":::
 
-1. Sélectionnez **Action** , puis sélectionnez le type de paramètre.
+1. Sélectionnez **Action** , puis type de paramètre.
 
-1. Entrez **l’ID de commande**, **le titre de la commande** et la **description de la commande**.
+1. Entrez **ID de commande**, Titre de la **commande** et **Description de la commande**.
 
 1. Entrez tous les paramètres et sélectionnez le type d’entrée dans la liste déroulante.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Capture d’écran montrant comment ajouter un paramètre pour définir votre commande pour l’extension de message.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Capture d’écran montrant comment ajouter des paramètres pour définir votre commande pour l’extension de message.":::
 
-1. Sélectionnez **Ajouter un domaine** sous **Liens d’aperçu**.
+1. Sélectionnez **Ajouter un domaine** sous **Liens de préversion**.
 
-1. Entrez un domaine valide, puis **sélectionnez Ajouter**.
+1. Entrez domaine valide, puis sélectionnez **Ajouter**.
 
    :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Capture d’écran montrant comment ajouter un domaine valide à votre extension de messagerie pour les déploiements de liens.":::
 
@@ -125,11 +125,11 @@ Pour créer une commande d’action :
 
 **Pour ajouter des paramètres supplémentaires**
 
-1. Sélectionnez ellipse sous la section de commande, puis **sélectionnez Modifier le paramètre**.
+1. Sélectionnez ellipse sous la section de commande, puis sélectionnez **Modifier le paramètre**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Les captures d’écran montrent comment ajouter des paramètres supplémentaires pour votre extension de message.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Captures d’écran montrant comment ajouter des paramètres supplémentaires pour votre extension de message.":::
 
-1. Sélectionnez **Ajouter un paramètre** et entrez tous les paramètres.
+1. Sélectionnez **Ajouter des paramètres** et entrez tous les paramètres.
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Capture d’écran montrant comment ajouter des paramètres supplémentaires pour votre extension de message."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
@@ -155,7 +155,7 @@ Si vous utilisez une liste statique de paramètres, vous devez également ajoute
 | `parameter.title` | Cette propriété est un titre ou une étiquette de paramètre convivial court. | Oui | 1.0 |
 | `parameter.inputType` | Cette propriété est définie sur le type d’entrée requis. Les valeurs possibles incluent `text`, `textarea`, `number`, `date`, `time`, `toggle`. La valeur par défaut est définie sur `text`. | Non | 1.4 |
 
-Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l’objet `taskInfo` pour extraire votre vue web sans appeler directement votre bot. Si vous sélectionnez cette option, le comportement est similaire à celui de l’utilisation d’une liste statique de paramètres. Dans la mesure où la première interaction avec votre bot est [réponse au module de tâche envoyer l’action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si vous utilisez un `taskInfo` objet, vous devez définir le paramètre `false`sur `fetchTask` .
+Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l’objet `taskInfo` pour extraire votre vue web sans appeler directement votre bot. Si vous sélectionnez cette option, le comportement est similaire à celui de l’utilisation d’une liste statique de paramètres. Dans la mesure où la première interaction avec votre bot est [réponse au module de tâche envoyer l’action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si vous utilisez un `taskInfo` objet, vous devez définir le paramètre sur `fetchTask` `false`.
 
 | Nom de la propriété | Objectif | Est-ce obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
@@ -167,8 +167,8 @@ Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l�
 
 #### <a name="app-manifest-example"></a>Exemple de manifeste d’application
 
-Cette section n’est pas un exemple de manifeste complet. Pour le schéma complet du manifeste d’application, consultez [le schéma de manifeste de l’application](~/resources/schema/manifest-schema.md). Voici un exemple d’objet `composeExtensions` définissant deux commandes d’action :
- 
+Cette section n’est pas un exemple de manifeste complet. Pour obtenir le schéma complet du manifeste d’application, consultez [Schéma du manifeste d’application](~/resources/schema/manifest-schema.md). Voici un exemple d’objet `composeExtensions` définissant deux commandes d’action :
+
 ```json
 ...
 "composeExtensions": [
@@ -245,3 +245,11 @@ Si vous utilisez les paramètres ou une vue web incorporée avec un `taskInfo` o
 
 > [!div class="nextstepaction"]
 > [Répondre à l’action d’envoi du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Cartes](../../../task-modules-and-cards/what-are-cards.md)
+* [Modules de tâche](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Schéma du manifeste d’application pour Teams](../../../resources/schema/manifest-schema.md)
+* [Documentation pour les développeurs](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Extensions de messages](../../what-are-messaging-extensions.md)

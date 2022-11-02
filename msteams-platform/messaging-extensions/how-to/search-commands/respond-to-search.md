@@ -1,35 +1,35 @@
 ---
 title: Répondre à la commande de recherche
 author: surbhigupta
-description: Découvrez comment répondre à la commande de recherche à partir d’une extension de message dans une application Microsoft Teams. Découvrez comment répondre à la demande de l’utilisateur.
+description: Découvrez comment répondre à la commande de recherche à partir d’une extension de message dans une application Microsoft Teams. Comprendre comment répondre à la demande de l’utilisateur.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 97fe20097e98a015759ba030004fb8c0b3b5e3f9
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100559"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819946"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois que l’utilisateur a envoyé la commande de recherche, votre service web reçoit un `composeExtension/query` message d’appel qui contient un `value` objet avec les paramètres de recherche. Cet appel est déclenché avec les conditions suivantes :
+Une fois que l’utilisateur a envoyé la commande de recherche, votre service web reçoit un message d’appel `composeExtension/query` qui contient un `value` objet avec les paramètres de recherche. Cet appel est déclenché avec les conditions suivantes :
 
-* Lorsque des caractères sont entrés dans la zone de recherche.
-* `initialRun` est défini sur true dans le manifeste de votre application, vous recevez le message d’appel dès que la commande de recherche est appelée. Pour plus d’informations, consultez [la requête par défaut](#default-query).
+* Au fur et à mesure que les caractères sont entrés dans la zone de recherche.
+* `initialRun` est défini sur true dans le manifeste de votre application, vous recevez le message d’appel dès que la commande de recherche est appelée. Pour plus d’informations, consultez [requête par défaut](#default-query).
 
-Ce document vous guide sur la façon de répondre aux demandes des utilisateurs sous la forme de cartes et d’aperçus, ainsi que sur les conditions dans lesquelles Microsoft Teams émet une requête par défaut.
+Ce document vous guide sur la façon de répondre aux demandes des utilisateurs sous forme de cartes et d’aperçus, ainsi que sur les conditions dans lesquelles Microsoft Teams émet une requête par défaut.
 
-Les paramètres de requête se trouvent dans l’objet `value` de la requête, qui inclut les propriétés suivantes :
+Les paramètres de la requête se trouvent dans l’objet `value` de la requête, qui inclut les propriétés suivantes :
 
 | Nom de la propriété | Objectif |
 |---|---|
 | `commandId` | Nom de la commande appelée par l’utilisateur, correspondant à l’une des commandes déclarées dans le manifeste de l’application. |
 | `parameters` | Tableau de paramètres. Chaque objet de paramètre contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l’utilisateur. |
-| `queryOptions` | Paramètres de pagination : <br>`skip`: Nombre d’skips pour cette requête <br>`count`: nombre d’éléments à retourner. |
+| `queryOptions` | Paramètres de pagination : <br>`skip`: Nombre d’ignorer pour cette requête <br>`count`: nombre d’éléments à retourner. |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -52,7 +52,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Le JSON ci-dessous est raccourci pour mettre en surbrillance les sections les plus pertinentes.
+Le code JSON ci-dessous est raccourci pour mettre en évidence les sections les plus pertinentes.
 
 ```json
 {
@@ -79,16 +79,16 @@ Le JSON ci-dessous est raccourci pour mettre en surbrillance les sections les pl
 
 ## <a name="respond-to-user-requests"></a>Répondre aux demandes des utilisateurs
 
-Lorsque l’utilisateur exécute une requête, Microsoft Teams émet une requête HTTP synchrone à votre service. À ce stade, votre code dispose `5` de secondes pour fournir une réponse HTTP à la requête. Pendant ce temps, votre service peut effectuer une recherche supplémentaire ou toute autre logique métier nécessaire pour traiter la demande.
+Lorsque l’utilisateur effectue une requête, Microsoft Teams envoie une requête HTTP synchrone à votre service. À ce stade, votre code dispose `5` de secondes pour fournir une réponse HTTP à la requête. Pendant ce temps, votre service peut effectuer une recherche supplémentaire ou toute autre logique métier nécessaire pour traiter la requête.
 
-Votre service doit répondre avec les résultats correspondant à la requête utilisateur. La réponse doit indiquer un code d’état HTTP et `200 OK` une application valide ou un objet JSON avec les propriétés suivantes :
+Votre service doit répondre avec les résultats correspondant à la requête de l’utilisateur. La réponse doit indiquer un code d’état HTTP et `200 OK` une application ou un objet JSON valide avec les propriétés suivantes :
 
 |Nom de la propriété|Objectif|
 |---|---|
 |`composeExtension`|Enveloppe de réponse de niveau supérieur.|
-|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche une liste de résultats de recherche <br>`auth`: invite l’utilisateur à s’authentifier <br>`config`: invite l’utilisateur à configurer l’extension de message <br>`message`: affiche un message texte brut |
-|`composeExtension.attachmentLayout`|Spécifie la disposition des pièces jointes. Utilisé pour les réponses de type `result`. <br>Actuellement, les types suivants sont pris en charge : <br>`list`: liste d’objets de carte contenant des champs miniature, titre et texte <br>`grid`: Grille d’images miniatures |
-|`composeExtension.attachments`|Tableau d’objets pièce jointe valides. Utilisé pour les réponses de type `result`. <br>Actuellement, les types suivants sont pris en charge : <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche une liste de résultats de recherche <br>`auth`: invite l’utilisateur à s’authentifier <br>`config`: invite l’utilisateur à configurer l’extension de message <br>`message`: affiche un message en texte brut |
+|`composeExtension.attachmentLayout`|Spécifie la disposition des pièces jointes. Utilisé pour les réponses de type `result`. <br>Actuellement, les types suivants sont pris en charge : <br>`list`: liste d’objets de carte contenant des champs miniature, titre et texte <br>`grid`: grille d’images miniatures |
+|`composeExtension.attachments`|Tableau d’objets de pièce jointe valides. Utilisé pour les réponses de type `result`. <br>Actuellement, les types suivants sont pris en charge : <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Actions suggérées. Utilisé pour les réponses de type `auth` ou `config`. |
 |`composeExtension.text`|Message à afficher. Utilisé pour les réponses de type `message`. |
 
@@ -101,22 +101,22 @@ Teams prend en charge les types de cartes suivants :
 * [Carte Connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Pour avoir une meilleure compréhension et une meilleure vue d’ensemble des cartes, découvrez [ce qu’il s’agit de cartes](~/task-modules-and-cards/what-are-cards.md).
+Pour avoir une meilleure compréhension et une vue d’ensemble des cartes, consultez [ce que sont les cartes](~/task-modules-and-cards/what-are-cards.md).
 
-Pour savoir comment utiliser les types de miniatures et de cartes de héros, consultez [ajouter des cartes et des actions de carte](~/task-modules-and-cards/cards/cards-actions.md).
+Pour savoir comment utiliser les types de cartes miniature et héros, consultez [Ajouter des cartes et des actions de carte](~/task-modules-and-cards/cards/cards-actions.md).
 
-Pour plus d’informations sur la carte de connecteur Office 365, consultez [Utilisation des cartes de connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Pour plus d’informations sur la carte connecteur Office 365, consultez [Utilisation de cartes de connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 La liste des résultats s’affiche dans l’interface utilisateur de Microsoft Teams avec un aperçu de chaque élément. La préversion est générée de l’une des deux manières suivantes :
 
-* Utilisation de la `preview` propriété dans l’objet `attachment` . La `preview` pièce jointe ne peut être qu’un héros ou une carte miniature.
-* Extraction des propriétés de base `title``text`et `image` de l’objet`attachment`. Les propriétés de base sont utilisées uniquement si la `preview` propriété n’est pas spécifiée.
+* Utilisation de la `preview` propriété dans l’objet `attachment` . La `preview` pièce jointe ne peut être qu’une carte Hero ou Miniature.
+* Extraction des propriétés de base `title`, `text`et `image` de l’objet `attachment` . Les propriétés de base sont utilisées uniquement si la `preview` propriété n’est pas spécifiée.
 
-Pour la carte Hero ou Thumbnail, à l’exception de l’action d’appel, d’autres actions telles que bouton et appui ne sont pas prises en charge dans la carte d’aperçu.
+Pour la carte Héros ou Miniature, à l’exception de l’action d’appel, d’autres actions telles que le bouton et l’appui ne sont pas prises en charge dans la carte d’aperçu.
 
-Pour envoyer une carte adaptative ou une carte de connecteur Office 365, vous devez inclure un aperçu. La `preview` propriété doit être une carte Hero ou Miniature. Si vous ne spécifiez pas la propriété d’aperçu dans l’objet `attachment` , aucun aperçu n’est généré.
+Pour envoyer une carte adaptative ou une carte connecteur Office 365, vous devez inclure une préversion. La `preview` propriété doit être une carte Hero ou Thumbnail. Si vous ne spécifiez pas la propriété preview dans l’objet `attachment` , un aperçu n’est pas généré.
 
-Pour les cartes Hero et Thumbnail, vous n’avez pas besoin de spécifier une propriété d’aperçu. Une préversion est générée par défaut.
+Pour les cartes Héros et Miniatures, vous n’avez pas besoin de spécifier une propriété d’aperçu, une préversion est générée par défaut.
 
 ### <a name="response-example"></a>Exemple de réponse
 
@@ -383,13 +383,13 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 * * *
 
 > [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` n’est pas déclenché dans l’application Teams mobile.
+> `OnTeamsMessagingExtensionSelectItemAsync` n’est pas déclenché dans l’application d’équipes mobiles.
 
 ## <a name="default-query"></a>Requête par défaut
 
-Si vous définissez la valeur `initialRun` `true` dans le manifeste, Microsoft Teams émet une requête **par défaut** lorsque l’utilisateur ouvre l’extension de message pour la première fois. Votre service peut répondre à cette requête avec un ensemble de résultats préremplis. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant des éléments récemment consultés, des favoris ou toute autre information qui ne dépend pas de l’entrée utilisateur.
+Si vous définissez `initialRun` `true` sur dans le manifeste, Microsoft Teams émet une requête **par défaut** lorsque l’utilisateur ouvre l’extension de message pour la première fois. Votre service peut répondre à cette requête avec un ensemble de résultats préremplies. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, l’affichage des éléments récemment consultés, des favoris ou toute autre information qui ne dépend pas de l’entrée utilisateur.
 
-La requête par défaut a la même structure que n’importe quelle requête utilisateur normale, avec le `name` champ défini `initialRun` sur et `value` défini `true` sur comme indiqué dans l’objet suivant :
+La requête par défaut a la même structure que n’importe quelle requête utilisateur standard, avec le `name` champ défini `initialRun` sur et `value` défini sur `true` comme indiqué dans l’objet suivant :
 
 ```json
 {
@@ -426,4 +426,6 @@ La requête par défaut a la même structure que n’importe quelle requête uti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajouter une configuration à une extension de message](~/get-started/first-message-extension.md)
+* [Extensions de messages](../../what-are-messaging-extensions.md)
+* [Créer votre première application d’onglet à l’aide de JavaScript](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)

@@ -1,17 +1,17 @@
 ---
 title: Créer un onglet personnel
 author: laujan
-description: Apprenez à créer un onglet personnel. Sélectionnez l’environnement MVC Node.js, ASP.NET Core ou ASP.NET Core. Générez une application, ajoutez du contenu, créez un package, générez et exécutez l’application.
+description: Découvrez comment créer un onglet personnel. Sélectionnez l’environnement MVC Node.js, ASP.NET Core ou ASP.NET Core. Générez une application, ajoutez du contenu, créez un package, générez et exécutez l’application.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 5afb145bdba5639b71a7b56ac8884dc465127d35
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560735"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820002"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -131,7 +131,7 @@ Voici les étapes à suivre pour créer un onglet personnel :
 
       Choisissez ne **pas** inclure la prise en charge de l’authentification unique Azure AD pour l’onglet. La valeur par défaut est Oui, entrez **n**.
     > [!NOTE]
-    > Dans un onglet, la page d’accueil de l’onglet s’affiche uniquement lorsque l’utilisateur sélectionne le bouton Précédent (ou sort de l’onglet) et revient à la page d’accueil. L’onglet ne conserve pas l’état précédent par conception.
+    > Dans un onglet, la page d’accueil de l’onglet s’affiche uniquement lorsque l’utilisateur sélectionne le bouton Précédent (ou quitte l’onglet) et revient à la page d’accueil. L’onglet ne conserve pas ou ne conserve pas l’état précédent par conception.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Ajouter une page de contenu à l’onglet personnel
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Charger votre application dans Teams
 
 1. Accédez à Teams et sélectionnez **Applications**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Sélectionnez **Gérer vos applications** > **Charger une application** > **Charger une application personnalisée**.
+1. Sélectionnez **Gérer vos applications** > **Charger une application****Charger une application** >  charger une application personnalisée.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip, puis choisissez **Ouvrir**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Ajouter votre onglet personnel":::
@@ -371,7 +371,7 @@ Dans Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Dans Visual Studio Explorateur de solutions, **ouvrez PersonalTab.cshtml** à partir du dossier **Pages** et ajoutez `microsoftTeams.app.initialize()` les `<script>` balises.
+1. Dans Visual Studio Explorateur de solutions, ouvrez **PersonalTab.cshtml** à partir du dossier **Pages** et ajoutez `microsoftTeams.app.initialize()` les `<script>` balises.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -379,7 +379,7 @@ Dans Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-À l’invite de commandes à la racine de votre répertoire de projet, exécutez la commande suivante pour établir un tunnel sécurisé vers votre onglet :
+À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante pour établir un tunnel sécurisé dans votre onglet :
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Ouvrez **Applications** et sélectionnez **Importer une application**.
 
-1. Le nom du fichier de package d’application est `tab.zip` et il est disponible au `/bin/Debug/netcoreapp3.1/tab.zip` chemin d’accès.
+1. Le nom du fichier du package d’application est et il est `tab.zip` disponible au niveau `/bin/Debug/netcoreapp3.1/tab.zip` du chemin d’accès.
 
 1. Sélectionnez `tab.zip` et ouvrez-le dans le Developer Portal.
 
@@ -401,9 +401,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Dans **information du développeur**, ajoutez les détails requis et dans **Le site web (doit être une URL HTTPS valide)** donnez votre URL HTTPS ngrok.
 
-1. Dans **les URL d’application**, mettez à jour la stratégie `https://<yourngrokurl>/privacy` de confidentialité et les conditions d’utilisation pour `https://<yourngrokurl>/tou` sélectionner **Enregistrer**.
+1. Dans **URL d’application**, mettez à `https://<yourngrokurl>/privacy` jour la politique de confidentialité vers et les conditions d’utilisation, `https://<yourngrokurl>/tou` puis sélectionnez **Enregistrer**.
 
-1. Dans **les fonctionnalités de l’application** > , sélectionnez Application **personnelle****Créer votre premier onglet d’application personnelle**, entrez le nom et mettez à jour **l’URL de contenu** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Context** en tant que personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
+1. Dans **Fonctionnalités de l’application**, sélectionnez **Application** >  personnelle **Créer votre premier onglet d’application personnelle**, entrez le nom et mettez à jour **l’URL du contenu** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Contexte** comme personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -487,7 +487,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * **Icône de contour transparent** mesurant 32 x 32 pixels.
 * Un fichier `manifest.json` qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Teams charge le `contentUrl` fichier spécifié dans votre manifeste, l’incorpore dans un iFrame et le restitue dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet dans Teams. Teams charge le `contentUrl` spécifié dans votre manifeste, l’incorpore dans un iFrame et le restitue dans votre onglet.
 
 #### <a name="csproj"></a>.csproj
 
@@ -538,7 +538,7 @@ Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiqueme
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Dans Visual Studio Explorateur de solutions, **ouvrez PersonalTab.cshtml** à partir du dossier **Views** > **PersonalTab** et ajoutez-le `microsoftTeams.app.initialize()` à l’intérieur des `<script>` balises.
+1. Dans Visual Studio Explorateur de solutions, ouvrez **PersonalTab.cshtml** à partir du dossier **Views** > **PersonalTab** et ajoutez `microsoftTeams.app.initialize()` à l’intérieur des `<script>` balises.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -546,7 +546,7 @@ Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiqueme
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-À l’invite de commandes à la racine de votre répertoire de projet, exécutez la commande suivante pour établir un tunnel sécurisé vers votre onglet :
+À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante pour établir un tunnel sécurisé dans votre onglet :
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -570,11 +570,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Ajoutez la description courte et longue de votre application dans **Descriptions**.
 
-1. Dans **les informations du développeur**, ajoutez les détails requis et dans **Site web (doit être une URL HTTPS valide)** donnez votre URL HTTPS ngrok.
+1. Dans **Informations sur le développeur**, ajoutez les détails requis et dans **Site web (doit être une URL HTTPS valide)** indiquez votre URL HTTPS ngrok.
 
-1. Dans **les URL d’application**, mettez à jour la stratégie `https://<yourngrokurl>/privacy` de confidentialité et les conditions d’utilisation pour `https://<yourngrokurl>/tou` sélectionner **Enregistrer**.
+1. Dans **URL d’application**, mettez à `https://<yourngrokurl>/privacy` jour la politique de confidentialité vers et les conditions d’utilisation, `https://<yourngrokurl>/tou` puis sélectionnez **Enregistrer**.
 
-1. Dans **les fonctionnalités de l’application** > , sélectionnez Application **personnelle****Créer votre premier onglet d’application personnelle**, entrez le nom et mettez à jour **l’URL de contenu** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Context** en tant que personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
+1. Dans **Fonctionnalités de l’application**, sélectionnez **Application** >  personnelle **Créer votre premier onglet d’application personnelle**, entrez le nom et mettez à jour **l’URL du contenu** avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide, sélectionnez **Contexte** comme personalTab dans la liste déroulante, puis sélectionnez **Confirmer**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -596,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Réorganiser les onglets personnels statiques
 
-À compter de la version 1.7 du manifeste, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. Vous pouvez déplacer l’onglet **de conversation du bot** , qui est toujours défini par défaut sur la première position, n’importe où dans l’en-tête de l’onglet de l’application personnelle. Deux mots clés `entityId` sont déclarés, **conversations** et **à propos de**.
+À compter de la version 1.7 du manifeste, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. Vous pouvez déplacer l’onglet **de conversation du bot** , qui est toujours en première position par défaut, n’importe où dans l’en-tête d’onglet de l’application personnelle. Deux mots clés `entityId` sont déclarés, **conversations** et **à propos de**.
 
 Si vous créez un bot avec une étendue **personnel**, il apparaît par défaut à la première position de l’onglet dans une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, **conversations**. L’onglet **conversation** s’affiche sur le web ou le bureau en fonction de l’emplacement où vous ajoutez l'onglet **conversation** dans le tableau `staticTabs`.
 
@@ -625,8 +625,10 @@ Si vous créez un bot avec une étendue **personnel**, il apparaît par défaut 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Onglets Teams](~/tabs/what-are-tabs.md)
-* [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
+* [Créer des onglets pour Teams](../what-are-tabs.md)
+* [Créer un onglet de canal ou un onglet de groupe](create-channel-group-tab.md)
 * [Partager dans Teams à partir d’une application ou d’un onglet personnel](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Documentation pour les développeurs](../../concepts/build-and-test/teams-developer-portal.md)
+* [Schéma du manifeste d’application pour Teams](../../resources/schema/manifest-schema.md)
+* [Créer des onglets avec les Cartes adaptatives](build-adaptive-card-tabs.md)
+* [Onglets sur les appareils mobiles](../design/tabs-mobile.md)

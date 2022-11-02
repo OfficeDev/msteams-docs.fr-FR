@@ -1,22 +1,22 @@
 ---
 title: Construire des onglets de carte adaptatifs
 author: KirtiPereira
-description: Apprenez à créer des onglets à l’aide de cartes adaptatives où le serveur frontal est rendu avec des cartes adaptatives, le serveur principal est alimenté par un bot. Explorez les activités d’appel et gérez les envois.
+description: Apprenez à créer des onglets à l’aide de cartes adaptatives où le front-end est rendu avec des cartes adaptatives, le back-end est alimenté par un bot. Explorez les activités d’appel et gérez les envois.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 31aecc7ab7744d0b45061d2434d8709c776c52e8
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499285"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820128"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
 > [!IMPORTANT]
 >
-> Les onglets avec des cartes adaptatives ne sont actuellement pris en charge que comme applications personnelles.
+> Les onglets avec cartes adaptatives sont uniquement pris en charge en tant qu’applications personnelles.
 
 Lorsque vous développez un onglet en utilisant la méthode traditionnelle, vous pouvez rencontrer ces problèmes :
 
@@ -25,7 +25,7 @@ Lorsque vous développez un onglet en utilisant la méthode traditionnelle, vous
 * Contraintes iFrame
 * Maintenance et coûts des serveurs
 
-Les onglets de carte adaptative sont une nouvelle façon de construire des onglets dans Teams. Au lieu d’incorporer du contenu web dans un iFrame, vous pouvez afficher des cartes adaptatives dans un onglet. Tandis que le serveur frontal est rendu avec des cartes adaptatives, le back-end est alimenté par un bot. Le robot est chargé d'accepter les demandes et de répondre de manière appropriée avec la carte adaptative qui est rendue.
+Les onglets de carte adaptative sont une nouvelle façon de construire des onglets dans Teams. Au lieu d’incorporer du contenu web dans un iFrame, vous pouvez afficher des cartes adaptatives dans un onglet. Bien que le front-end soit rendu avec des cartes adaptatives, le back-end est alimenté par un bot. Le robot est chargé d'accepter les demandes et de répondre de manière appropriée avec la carte adaptative qui est rendue.
 
 Vous pouvez créer vos onglets à l'aide de modules d'interface utilisateur prêts à l'emploi, natifs des ordinateurs de bureau, du web et des téléphones mobiles. Cet article vous aide à comprendre les modifications à apporter au manifeste de l'application. L'article explique également comment l'activité d'invocation demande et envoie des informations dans l'onglet des cartes adaptatives, et son effet sur le flux de travail du module de tâches.
 
@@ -45,7 +45,7 @@ Avant de commencer à utiliser les cartes adaptatives pour construire des onglet
 Les applications personnelles qui rendent les onglets doivent inclure `staticTabs`un tableau dans leur manifeste d'application.. Les onglets de la carte adaptative sont rendus lorsque la `contentBotId`propriété est fournie dans`staticTab` la définition. Les définitions d'onglets statiques doivent contenir soit un , `contentBotId`spécifiant un onglet de carte adaptative`contentUrl`, soit un , spécifiant un onglet de contenu Web hébergé typique.
 
 > [!NOTE]
-> Cette `contentBotId`propriété est actuellement disponible dans la version manifeste 1.9 ou ultérieure.
+> La `contentBotId` propriété est disponible dans le manifeste version 1.9 ou ultérieure.
 
 Indiquez la `contentBotId`propriété avec laquelle`botId` l'onglet Carte adaptative doit communiquer. La `entityId`configuration de l'onglet de la carte adaptative est envoyée dans le `tabContext`paramètre de chaque demande d'invocation, et peut être utilisée pour différencier les onglets de la carte adaptative qui sont alimentés par le même robot. Pour plus d'informations sur les autres champs de définition des onglets statiques, voir le [schéma du manifeste](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -281,7 +281,7 @@ Le code suivant fournit des exemples de`task/fetch` demande et de réponse :
 
 ### <a name="invoke-tasksubmit"></a>Invoquer `task/submit`
 
-Le code suivant fournit des exemples de `task/submit`demande et de réponse :
+Le code suivant fournit des exemples de`task/submit` demande et de réponse :
 
 **`task/submit` demande**
 
@@ -437,9 +437,8 @@ Le code suivant montre un exemple de demande rééditée :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Carte adaptative](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [onglets Teams](~/tabs/what-are-tabs.md)
-* [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Commentaires sur l’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Créer des onglets pour Teams](../what-are-tabs.md)
+* [Onglets sur les appareils mobiles](../design/tabs-mobile.md)
+* [Cartes](../../task-modules-and-cards/what-are-cards.md)
+* [Utiliser des modules de tâche dans les onglets](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Commentaires sur l’achèvement du formulaire](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
