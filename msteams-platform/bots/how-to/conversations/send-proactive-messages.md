@@ -4,12 +4,12 @@ description: Découvrez comment envoyer des messages proactifs avec votre bot Te
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ff2a4310f2dea57fd5fd1d2550474c3361bf8a90
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 7e50719e9befd807127a1eae4022b4af67a9fc00
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791460"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819682"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -25,7 +25,7 @@ Un message proactif est un message envoyé par un bot qui ne répond pas à la d
 >
 > * Pour envoyer un message proactif, il est recommandé de commencer par [créer un bot de notification avec JavaScript](../../../sbs-gs-notificationbot.yml) ou un [exemple de notification de webhook entrant](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Pour commencer, téléchargez [l’exploration du Kit de ressources Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) . Pour plus d’informations, consultez [Documents du Kit de ressources Teams](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD). Pour les messages proactifs, les bots doivent utiliser les points de terminaison suivants pour les environnements cloud gouvernementaux : <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD). Pour les messages proactifs, les bots doivent utiliser les points de terminaison suivants pour les environnements cloud gouvernementaux : <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`
 
 Pour envoyer un message proactif à un utilisateur, à une conversation de groupe ou à une équipe, votre bot doit disposer de l’accès requis pour envoyer le message. Pour une conversation de groupe ou d’équipe, l’application contenant votre bot doit d’abord être installée à cet emplacement.
 
@@ -44,7 +44,7 @@ Les extraits de code de la section [exemples](#samples) doivent créer une conve
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Obtenir l’identifiant utilisateur, l’identification de l’équipe ou l’identification du canal
 
-Pour créer une conversation ou un thread de conversation dans un canal, vous devez disposer de l’ID correct. Vous pouvez recevoir ou récupérer cet ID de l’une des manières suivantes :
+Vous pouvez créer une conversation avec un utilisateur ou un thread de conversation dans un canal et vous devez disposer de l’ID correct. Vous pouvez recevoir ou récupérer cet ID de l’une des manières suivantes :
 
 * Lorsque votre application est installée dans un contexte particulier, vous recevez une [`onMembersAdded` activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Lorsqu’un nouvel utilisateur est ajouté à un contexte où votre application est installée, vous recevez une [`onMembersAdded`activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -60,11 +60,21 @@ Créez la conversation, une fois que vous avez les informations de l’utilisate
 
 ## <a name="create-the-conversation"></a>Créer la conversation
 
-Créez la conversation si elle n’existe pas ou si vous ne connaissez pas .`conversationId` Créez la conversation une seule fois et stockez la valeur ou l’objet `conversationId` `conversationReference` .
+Vous pouvez créer la conversation si elle n’existe pas ou si vous ne connaissez pas .`conversationId` Créez la conversation une seule fois et stockez la valeur ou l’objet `conversationId` `conversationReference` .
+
+Pour créer la conversation, vous avez besoin de `userId`, `tenantId`et `serviceUrl`.
+
+Pour `serviceUrl`, utilisez la valeur d’une activité entrante déclenchant le flux ou l’une des URL du service global. Si n’est `serviceUrl` pas disponible à partir d’une activité entrante déclenchant le scénario proactif, utilisez les points de terminaison d’URL globaux suivants :
+
+* Public: `https://smba.trafficmanager.net/teams/`
+* GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
+* GCCH : `https://smba.infra.gov.teams.microsoft.us/gcch`
+
+Pour obtenir un exemple de code, consultez l’appel `CreateConversationAsync` dans [**l’exemple**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
 
 Vous pouvez obtenir la conversation lorsque l’application est installée pour la première fois. Une fois la conversation créée, [obtenez l’ID de conversation](#get-the-conversation-id). `conversationId` est disponible dans les événements de mise à jour de conversation.
 
-Si vous n’avez pas le `conversationId`, vous pouvez [installer de manière proactive votre application à l’aide de Graph](#proactively-install-your-app-using-graph) pour obtenir le `conversationId`.
+Si vous n’avez pas le `conversationId`, vous pouvez [installer votre application de manière proactive à l’aide de Graph](#proactively-install-your-app-using-graph) pour obtenir le `conversationId`.
 
 ## <a name="get-the-conversation-id"></a>Obtenir l’identification de la conversation
 
