@@ -4,12 +4,12 @@ description: Découvrez comment envoyer un message, des actions suggérées, une
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99594722225350e102b47d7a77314212192f7820
-ms.sourcegitcommit: 75ce5a6f7540775b768f69a9cf18dac17e5055d4
+ms.openlocfilehash: 16849a9e8ed97854e91934aef9de463eb355fec5
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2022
-ms.locfileid: "68657624"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833204"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -18,7 +18,7 @@ Chaque message d’une conversation est un `Activity` objet de type `messageType
 Les conversations de base sont gérées via le connecteur Bot Framework, une seule API REST. Cette API permet à votre bot de communiquer avec Teams et d’autres canaux. Le Kit de développement logiciel (SDK) Bot Builder fournit les fonctionnalités suivantes :
 
 * Accès facile au connecteur Bot Framework.
-* Fonctionnalités supplémentaires pour gérer l’état et le flux de conversation.
+* Fonctionnalité permettant de gérer l’état et le flux de conversation.
 * Moyens simples d’incorporer des services cognitifs, tels que le traitement du langage naturel (NLP).
 
 Votre bot reçoit des messages de Teams à l’aide de la `Text` propriété et envoie un ou plusieurs messages aux utilisateurs.
@@ -460,8 +460,9 @@ Veillez à gérer ces erreurs de manière appropriée dans votre application Tea
 | 400 | **Code** : `Bad Argument` <br/> **Message** : *spécifique au scénario | Charge utile de requête non valide fournie par le bot. Pour plus d’informations, consultez le message d’erreur. | Non | Réévaluez la charge utile de la demande pour les erreurs. Consultez le message d’erreur retourné pour plus d’informations. |
 | 401 | **Code** : `BotNotRegistered` <br/> **Message** : Aucune inscription n’a été trouvée pour ce bot. | L’inscription de ce bot est introuvable. | Non | Vérifiez l’ID et le mot de passe du bot. Vérifiez que l’ID de bot (ID AAD) est inscrit dans le portail des développeurs Teams ou via l’inscription du canal de bot Azure dans Azure avec le canal « Teams » activé.|
 | 403 | **Code** : `BotDisabledByAdmin` <br/> **Message** : L’administrateur du locataire a désactivé ce bot | L’administrateur client a bloqué les interactions entre l’utilisateur et l’application bot. L’administrateur de locataire doit autoriser l’application pour l’utilisateur à l’intérieur des stratégies d’application. Pour plus [d’informations, consultez Stratégies d’application](/microsoftteams/app-policies). | Non | Arrêtez la publication dans la conversation jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation indiquant que le bot n’est plus bloqué. |
-| 403 | **Code** : `BotNotInConversationRoster` <br/> **Message** : Le bot ne fait pas partie de la liste de conversation. | Le bot ne fait pas partie de la conversation. L’application doit être réinstallée dans la conversation. | Non | Avant de tenter d’envoyer des demandes de conversation supplémentaires, attendez un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) événement, qui indique que le bot a été rajouté.|
+| 403 | **Code** : `BotNotInConversationRoster` <br/> **Message** : Le bot ne fait pas partie de la liste de conversation. | Le bot ne fait pas partie de la conversation. L’application doit être réinstallée dans la conversation. | Non | Avant de tenter d’envoyer une autre demande de conversation, attendez un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) événement, qui indique que le bot a été rajouté.|
 | 403 | **Code** : `ConversationBlockedByUser` <br/> **Message** : L’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation personnelle ou un canal via les paramètres de modération. | Non | Supprimez la conversation du cache. Arrêtez la tentative de publication dans les conversations jusqu’à ce que l’interaction avec le bot soit explicitement initiée par un utilisateur dans la conversation, ce qui indique que le bot n’est plus bloqué. |
+| 403 |**Code** : `InvalidBotApiHost` <br/> **Message** : Hôte d’API de bot non valide. Pour les locataires GCC, appelez `https://smba.infra.gcc.teams.microsoft.com`.|Le bot a appelé le point de terminaison d’API public pour une conversation qui appartient à un locataire GCC.| Non | Mettez à jour l’URL du service pour la conversation `https://smba.infra.gcc.teams.microsoft.com` et réessayez la demande.|
 | 403 | **Code** : `NotEnoughPermissions` <br/> **Message** : *spécifique au scénario | Le bot ne dispose pas des autorisations requises pour effectuer l’action demandée. | Non | Déterminez l’action requise à partir du message d’erreur. |
 | 404  | **Code** : `ActivityNotFoundInConversation` <br/> **Message** : Conversation introuvable. | L’ID de message fourni est introuvable dans la conversation. Le message n’existe pas ou il a été supprimé. | Non | Vérifiez si l’ID de message envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
 | 404  | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation n’a pas été trouvée, car elle n’existe pas ou a été supprimée. | Non | Vérifiez si l’ID de conversation envoyé est une valeur attendue. Supprimez l’ID s’il a été mis en cache. |
@@ -479,6 +480,7 @@ Les instructions générales relatives aux nouvelles tentatives pour chaque code
 
 |Code d'état | Stratégie de nouvelle tentative |
 |----------------|-----------------|
+| 403 | Réessayez en appelant l’API `https://smba.infra.gcc.teams.microsoft.com` GCC pour `InvalidBotApiHost`.|
 | 412 | Réessayez à l’aide d’un backoff exponentiel. |
 | 429 | Réessayez à l’aide `Retry-After` de l’en-tête pour déterminer le temps d’attente en secondes et entre les requêtes, le cas échéant. Sinon, réessayez à l’aide d’une interruption exponentielle avec l’ID de thread, si possible. |
 | 502 | Réessayez à l’aide d’un backoff exponentiel. |

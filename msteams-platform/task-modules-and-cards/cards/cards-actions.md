@@ -1,14 +1,14 @@
 ---
 title: Ajouter des actions de carte dans un bot
-description: Dans ce module, découvrez les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
+description: Dans ce module, découvrez ce que sont les actions de carte dans Microsoft Teams, les types d’actions et comment les utiliser dans vos bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 1111e8dfe71ad1289f5057b6cb76b98c3ca8d99b
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 77f2631ae55f5794567d83233e1311d935cefabc
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858889"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833176"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -38,8 +38,8 @@ Les cartes utilisées par les bots et les extensions de message dans Teams prenn
 
 > [!NOTE]
 >
-> * Votre bot ne reçoit aucun avis sur le bouton sélectionné.
-> * Les noms d’ordinateurs avec des nombres ne sont pas pris en charge dans l’URL.
+> * Votre bot ne reçoit aucune notification sur le bouton sélectionné.
+> * Les noms de machine avec des nombres ne sont pas pris en charge dans l’URL.
 
 Avec `openUrl`, vous pouvez créer une action avec les propriétés suivantes :
 
@@ -99,7 +99,7 @@ Avec `messageBack`, vous pouvez créer une action entièrement personnalisée av
 | `value` | Envoyé à votre bot lorsque l’action est effectuée. Vous pouvez encoder le contexte de l’action, par exemple des identificateurs uniques ou un objet JSON. |
 | `text` | Envoyé à votre bot lorsque l’action est effectuée. Utilisez cette propriété pour simplifier le développement de bots. Votre code peut vérifier une seule propriété de niveau supérieur pour distribuer la logique du bot. |
 
-La flexibilité des `messageBack` moyens que votre code ne peut pas laisser un message utilisateur visible dans l’historique tout simplement en n’utilisant `displayText`pas .
+La flexibilité de `messageBack` signifie que votre code ne peut pas laisser un message utilisateur visible dans l’historique simplement en n’utilisant `displayText`pas .
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -433,7 +433,7 @@ Vous pouvez également modifier la charge utile `Action.Submit` carte adaptative
 > [!NOTE]
 >* L’ajout de `msteams` aux données avec une action Bot Framework ne fonctionne pas avec un module de tâche de carte adaptative.
 > 
->* Principal ou désélectionné `ActionStyle` n’est pas pris en charge dans Microsoft Teams. 
+>* Les actions principales ou desctuctives `ActionStyle` ne sont pas prises en charge dans Microsoft Teams. 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartes adaptatives avec l’action messageBack
 
@@ -563,10 +563,10 @@ Le code suivant montre un exemple de Cartes adaptatives avec l’action `invoke`
 
 ## <a name="code-samples"></a>Exemples de code
 
-|S.no|Carte| description|.NET|Javascript|Python|Java|
+|S.no|Carte| description|.NET|JavaScript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
-|1|Utilisation de cartes|Présente tous les types de cartes, y compris la miniature, l’audio, le média, etc. S’appuie sur Welcomeing user + multi-prompt bot en présentant une carte avec des boutons dans le message de bienvenue qui routent vers la boîte de dialogue appropriée.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
-|2|Cartes adaptatives|Montre comment la boîte de dialogue à plusieurs tours peut utiliser une carte pour obtenir une entrée utilisateur pour le nom et l’âge.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+|1|Utilisation de cartes|Présente tous les types de cartes, y compris la miniature, l’audio, le média, etc. S’appuie sur l’utilisateur accueillant + bot à plusieurs invites en présentant une carte avec des boutons dans le message d’accueil qui acheminent vers la boîte de dialogue appropriée.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Cartes adaptatives|Montre comment la boîte de dialogue multitour peut utiliser une carte pour obtenir une entrée utilisateur pour le nom et l’âge.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
 > Les éléments multimédias ne sont pas pris en charge pour la carte adaptative dans Teams

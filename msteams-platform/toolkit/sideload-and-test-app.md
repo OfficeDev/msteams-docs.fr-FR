@@ -1,21 +1,21 @@
 ---
-title: Charger et tester une application dans l’environnement Teams
+title: Chargement indépendant et test de l’application dans l’environnement Teams
 author: zyxiaoyuer
-description: Dans ce module, découvrez comment charger et tester une application dans un environnement différent
+description: Dans ce module, découvrez comment charger une version test et tester l’application dans un environnement différent
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: ee1d3ee3a4f545a6c988c421fb18626a4a7276b7
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 721b3a30bcc8c2fa49bb06491f4ab24bbeb844fd
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617216"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833001"
 ---
-# <a name="sideload-and-test-app-in-teams-environment"></a>Charger et tester une application dans l’environnement Teams
+# <a name="sideload-and-test-app-in-teams-environment"></a>Chargement indépendant et test de l’application dans l’environnement Teams
 
-Après avoir ajouté une connexion d’API, vous pouvez tester la connexion d’API dans l’environnement local du Kit de ressources Teams et déployer votre application dans le cloud. Dans le pipeline CI/CD, après avoir configuré avec une plateforme différente, vous devez créer un principal de service Azure pour provisionner et déployer des ressources.
+Après avoir ajouté la connexion d’API, vous pouvez tester la connexion d’API dans l’environnement local teams Toolkit et déployer votre application dans le cloud. Dans le pipeline CI/CD, après avoir été configuré avec une autre plateforme, vous devez créer un principal de service Azure pour provisionner et déployer des ressources.
 
 Dans cette section, vous allez découvrir
 
@@ -27,13 +27,13 @@ Dans cette section, vous allez découvrir
 
 Les étapes suivantes permettent de tester la connexion d’API dans l’environnement local du Kit de ressources Teams :
 
- 1. **Exécuter l’installation de npm**
+ 1. **Exécuter npm install**
 
-    Exécutez `npm install` sous `bot` ou `api` dossier pour installer les packages ajoutés.
+    Exécutez `npm install` sous `bot` le dossier ou `api` pour installer les packages ajoutés.
 
  2. **Ajouter des informations d’identification d’API aux paramètres de l’application locale**
 
-    Teams Toolkit ne demande pas d’informations d’identification, mais laisse des espaces réservés dans le fichier de paramètres de l’application locale. Remplacez les espaces réservés par les informations d’identification appropriées pour accéder à l’API. Le fichier de paramètres de l’application locale est le `.env.teamsfx.local` fichier dans le ou `api` le `bot` dossier.
+    Teams Toolkit ne demande pas d’informations d’identification, mais laisse des espaces réservés dans le fichier de paramètres de l’application locale. Remplacez les espaces réservés par les informations d’identification appropriées pour accéder à l’API. Le fichier de paramètres de l’application locale est le `.env.teamsfx.local` fichier dans le `bot` dossier ou `api` .
 
  3. **Utiliser le client d’API pour effectuer des demandes d’API**
 
@@ -45,16 +45,16 @@ Les étapes suivantes permettent de tester la connexion d’API dans l’environ
 
  4. **Générer des requêtes http(s) vers l’API cible (avec Axios)**
 
-    Le client d’API généré est un client d’API Axios. Utilisez le client Axios pour effectuer des demandes à l’API.
+    Le client d’API généré est un client d’API Axios. Utilisez le client Axios pour effectuer des requêtes à l’API.
 
      > [!Note]
-     > [Axios](https://www.npmjs.com/package/axios) est un package nodejs populaire qui vous aide avec les requêtes http.s. Pour plus d’informations sur la façon d’effectuer des requêtes http(s), consultez [l’exemple de documentation Axios](https://axios-http.com/docs/example) pour savoir comment créer des http(s).
+     > [Axios](https://www.npmjs.com/package/axios) est un package nodejs populaire qui vous aide avec les requêtes http(s). Pour plus d’informations sur la façon d’effectuer des requêtes http(s), consultez [l’exemple de documentation Axios](https://axios-http.com/docs/example) pour apprendre à créer des http(s).
 
 ## <a name="deploy-your-application-to-azure"></a>Déployer votre application sur Azure
 
 Pour déployer votre application sur Azure, vous devez ajouter l’authentification aux paramètres de l’application pour l’environnement approprié. Par exemple, votre API peut avoir des informations d’identification différentes pour `dev` et `prod`. En fonction des besoins de l’environnement, configurez Teams Toolkit.
 
-Teams Toolkit configure votre environnement local. L’exemple de code bootstrapped contient des commentaires qui vous indiquent les paramètres d’application que vous devez configurer. Pour plus d’informations sur les paramètres de l’application, consultez [Ajouter des paramètres d’application](https://github.com/OfficeDev/TeamsFx/wiki/%5BDocument%5D-Add-app-settings)
+Teams Toolkit configure votre environnement local. L’exemple de code de stratégie de démarrage contient des commentaires qui vous indiquent les paramètres d’application que vous devez configurer. Pour plus d’informations sur les paramètres d’application, consultez [Ajouter des paramètres d’application](https://github.com/OfficeDev/TeamsFx/wiki/%5BDocument%5D-Add-app-settings).
 
 ## <a name="provision-and-deploy-cicd-resources"></a>Provisionner et déployer des ressources CI/CD
 
@@ -63,7 +63,7 @@ Pour provisionner et déployer des ressources ciblant Azure dans CI/CD, vous dev
 Procédez comme suit pour créer des principaux de service Azure :
 
 1. Inscrivez une application Microsoft Azure Active Directory (Azure AD) dans un seul locataire.
-2. Attribuez un rôle à votre application Azure AD pour accéder à votre abonnement Azure. Le rôle `Contributor` est conseillé.
+2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
 3. Créez un secret d’application Azure AD.
 
 > [!TIP]
@@ -77,4 +77,4 @@ Pour plus d’informations, consultez [Instructions relatives aux principaux de 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Publier des applications Teams à l’aide du Kit de ressources Teams](publish.md)
+[Publier des applications Teams à l’aide du Kit de ressources Teams](publish.md)
