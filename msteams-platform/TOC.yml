@@ -301,7 +301,7 @@
           href: bots/how-to/conversations/conversation-messages.md
           displayName: 'Picture messages, attribution for bot message, status code responses, app localization using bot and tab.'
           items:
-            - name: Recevoir tous les messages de canal avec RSC
+            - name: Recevoir tous les messages de conversation avec RSC
               href: bots/how-to/conversations/channel-messages-with-rsc.md
         - name: Créer un menu commandes
           href: bots/how-to/create-a-bot-commands-menu.md
@@ -320,6 +320,8 @@
           href: bots/how-to/update-and-delete-bot-messages.md
         - name: Demander les en-têtes du bot
           href: bots/how-to/conversations/request-headers-of-the-bot.md
+        - name: Bot de flux de travail dans Teams
+          href: bots/how-to/conversations/workflow-bot-in-teams.md
     - name: Obtenir le contexte spécifique à Teams pour votre bot
       href: bots/how-to/get-teams-context.md
       displayName: Fetch roster or user profile
