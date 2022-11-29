@@ -62,6 +62,14 @@
       displayName: 'HTTPs, localhost, host your Teams app'
     - name: Planifier des onglets réactifs pour Teams mobile
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    - name: Planifier l’analytique pour votre application Teams
+      items:
+        - name: Présentation
+          href: concepts/design/overview-analytics.md
+        - name: Stratégier et décider ce qu’il faut mesurer
+          href: concepts/design/strategize-measure.md
+        - name: Planifier l’instrumentation du code à l’aide du service d’analyse
+          href: concepts/design/plan-code-instrumentation.md
     - name: Planifier la monétisation de votre application
       href: concepts/design/plan-to-monetize.md
       displayName: 'Subscription, In-app purchases, Free trials, Test preview'
@@ -145,7 +153,7 @@
                   href: toolkit/AAD-manifest-customization.md
             - name: Déboguer votre Teams application
               items:
-                - name: Vue d’ensemble
+                - name: Présentation
                   href: toolkit/debug-overview.md
                 - name: Déboguer votre application Teams localement
                   href: toolkit/debug-local.md
